@@ -1,0 +1,98 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+%va sempre messo article per "program documentation"
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{titlesec}
+
+\usepackage{emptypage}                     
+% pagine vuote senza testatina e piede di pagina
+
+%\usepackage{hyperref}                     
+% collegamenti ipertestuali
+
+\usepackage{fancyhdr}
+% pacchetto per intestazione e pie pagina
+
+\pagestyle{fancy}
+
+
+% \\ indica interruzione di riga
+
+% compilate 2 volte per documenti con indice
+
+% {\em qui testo in corsivo}
+% {\bfseries qui testo in grossetto}
+
+%LISTE NUMERATE
+%\begin{enumerate}
+%\item primo
+%\item secondo
+%\item terzo
+%\end{enumerate}
+
+%LISTE PUNTATE
+%\begin{itemize}
+%\item primo
+%\item secondo
+%\item \dots
+%\end{itemize}
+
+%TABELLA
+%\begin{tabular}{|c|c|c|}
+%indica una tabella con 3 colonne e pos. testo centrale. La barra verticale ( | ) indica che vi e' una linea divisoria verticale tra le celle.
+%\hline	linea separatrice orizzontale
+%testo1& testo2& testo3\\
+% & segna la fine del testo nella cella , \\ indica il fine della riga 
+
+%GRAFICI
+%\begin{figure}
+%\includegraphics{filegrafico}
+%comando per includere le immagini (controllare i formati)
+%\caption{didascalia}
+%\label{nome}
+%\end{figure}
+
+
+\lhead{Nome Gruppo}
+\chead{}
+\rhead{Nome Capitolo}
+\lfoot{Nome Documento}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document} 
+
+\title{Documento}
+\author{SWEg Group}
+\date{}
+\maketitle
+
+
+\tableofcontents
+%crea indice automaticamente
+\thispagestyle{empty}
+
+\newpage
+
+
+
+\section{Titolo del paragrafo}
+\subsection{Titolo del sottoparagrafo}
+Testo Testo Testo.\\
+Altro Testo Altro Testo.\\
+\\
+Testo distanziato. Testo distanziato. 
+
+\section{Titolo del paragrafo 2}
+\subsection{Titolo del sottoparagrafo 2}
+Testo Testo Testo 2.\\
+Altro Testo Altro Testo 2.\\
+\\
+Testo distanziato 2. Testo distanziato 2. 
+
+
+
+\end{document}

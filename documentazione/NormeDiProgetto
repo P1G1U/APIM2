@@ -1,0 +1,111 @@
+1. Introduzione
+
+1.1 scopo del documento
+Questo documento ha l'obiettivo di definire le regole che i membri del gruppo SWEG seguiranno nello sviluppo del progetto.
+Ogni componente del gruppo e' tenuto a leggere e seguire le norme qui contenute per ottimizzare il lavoro, uniformare tutti i documenti e minimizzare gli errori. 
+In particolare verranno specificate le norme per: 
+-interazioni tra i membri del gruppo e componenti esterni
+-stesura dei documenti e relative convenzioni
+-ambiente di lavoro
+-stesura del codice.
+
+1.2 Glossario
+Al fine di evitare ambiguita' e ottimizzare la comprensione dei documenti, viene incluso un Glossario, nel quale saranno inseriti i termini tecnici, acronimi e parole che necessitano di essere chiarite.
+Ogni parola inserita nel Glossario sara' contrassegnata da una "G" maiuscola a pedice.
+
+1.3 Riferimenti
+
+
+2 Comunicazioni Riunioni
+
+2.1 Comunicazioni
+
+2.1.1 Comunicazioni interne
+Per le comunicazioni interne e' stato creato un gruppo su Telegram (G a pedice), un'app di instant messaging.
+
+2.1.2 Comunicazioni esterne
+Per le comunicazioni esterne e' stata creata la casella di posta sweg.group@gmail.com. Questo puo' essere l'unico canale utilizzabile. Solo il Project Manager puo' avere delle interazioni con l'esterno, sara' poi compito suo riferire il contenuto delle discussioni agli altri componenti del gruppo.
+
+2.2 Riunioni
+
+2.2.1 Interne
+Le convocazioni alle riunioni sono notificate dal Project Manager e confermate informalmente dai componenti del gruppo. Ogni membro e' tenuto a partecipare a meno di una giustificazione valida. Una riunione e' fissata per discutere di argomenti di interesse generale di tutti i componenti. E' pero' possibile che ci sia la necessita' di effettuare delle riunioni alle quali non e' richiesta la presenza di tutti i membri ma solo di specifiche persone; in questo caso il Project Manager autorizza l'incontro e poi vi prenderanno parte solo le persone interessate, le quali dovranno poi informare gli altri componenti del gruppo delle decisioni prese.
+
+2.2.2 Esterne
+E' compito del Project Manager fissare degli incontri con il proponete ed il committente. Tutti i membri del gruppo ne devono essere informati. Ad ogni incontro verra' scelto un segretario il quale avra' il compito di redigere un verbale che verra' poi inviato a tutti i componenti.
+Ogni verbale redatto dovra' avere la seguente composizione: 
+-Data e ora
+-Luogo
+-Partecipanti interni
+-Partecipanti esterni
+-Argomenti trattati
+-Domande e risposte
+
+3 Documenti
+
+3.1 Template
+Per facilitare ed unificare la redazione della documentazione e' stato creato un template apposito in LATEX.
+
+3.2 Stile del testo
+• Grassetto: Deve essere applicato alle parole significative che devono 	essere messe in risalto. Va applicato ai titoli e agli elementi che 		costituiscono un elenco che sono seguiti da una descrizione;
+• Monospace: va utilizzato per indicare percorsi dei file, codice, comandi;
+• Corsivo: va utilizzato per indicare termini in lingua inglese e nomi dei   		file;
+• Maiuscolo: va usato per scrivere gli acronimi;
+• Glossario: viene utilizzato per le parole che hanno una corrispondenza nel 		glossario;
+• LATEX: ogni riferimento a LATEX (G pedice) va scritto utilizzando il 		comando \LaTeX. 
+
+3.3 Convenzioni tipografiche
+// vanno inseriti i comandi usati in latex
+
+3.4 Formati
+• Date: saranno espresse nel formato italiano gg/mm/aaaa dove:
+– gg: indica il giorno, va scritto sempre con 2 cifre;
+– mm: rappresenta il mese, va scritto sempre con 2 cifre;
+– aaaa: indica l’anno, va scritto sempre con 4 cifre.
+
+• Anni accademici: si userà il formato aaaa1-aaaa2 dove:
+– aaaa1: indica l’anno solare di inizio, va scritto sempre con 4 cifre;
+– aaaa2: indica l’anno solare di fine, va scritto sempre con 4 cifre;
+
+• Orari: verranno espressi secondo lo standard ISO 8601 HH:MM dove:
+– HH: indica le ore, va scritto sempre con 2 cifre;
+– MM: indica i minuti, va scritto sempre con 2 cifre;   
+
+• URL: link ad un indirizzo web deve essere scritto con un font di colore blu;
+
+• Sigle: i nomi dei documenti potranno essere sostituiti dalle rispettive 
+sigle:
+– AdR ad indicare il documento “Analisi dei Requisiti”;
+– PdP ad indicare il documento “Piano di Progetto”;
+– PdQ ad indicare il documento “Piano di Qualifica”;
+– NdP ad indicare il documento “Norme di Progetto”;
+– Gl ad indicare il documento “Glossario”;
+– ST ad indicare il documento “Specifica Tecnica”;
+– SdF ad indicare il documento “Studio di Fattibilità”. 
+
+3.5 Struttura del documento
+
+3.5.1 Frontespizio
+Il frontespizio di ogni documento dovra' essere cosi' strutturato:
+-Nome e logo del gruppo;
+-Nome del progetto;
+-Titolo del documento;
+-Versione del documento;
+-Nome e cognome dei redattori del documento;
+-Nome e cognome dei revisori del documento;
+-Uso del documento;
+-Destinatari del documento;
+
+3.5.2 Diario delle  modifiche
+La seconda pagina deve essere una tabella contenente i cambiamenti che sono stati effettuati nel documento. Deve essere cosi' strutturata:
+-Modifica: descrizione delle modifiche effettuate;
+-Nome: nome e cognome dell'autore delle modifiche;
+-Data: il giorno nel quale sono state apportate le modifiche;
+-Versione: la versione del documento dopo la modifica;
+La tabella e' ordinata per data in ordine decrescente, in modo che la prima riga sia l'ultima modifica eseguita, e quindi corrisponda alla versione attuale del documento.
+
+3.5.3 Indice
+La pagine successiva al diario delle modifiche deve essere l'indice del documento. Ogni documento tranne i verbali devev contenere l'indice che serve a dare una visione globale degli argomenti trattati.
+
+3.5.4 Formattazione generale
+
