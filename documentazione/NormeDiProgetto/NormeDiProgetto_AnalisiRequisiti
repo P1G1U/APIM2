@@ -1,0 +1,49 @@
+5. Analisi dei Requisiti
+
+5.1 Studio di Fattibilità e Analisi dei Rischi
+Dopo aver indetto le riunioni e stabilito i vari ruoli gli Analisti valuteranno capacità e preferenze del progetto che gioveranno alla completa realizzazione degli obbiettivi. È quindi compito di questi ultimi, sulla base di quanto deciso, redigere uno Studio di Fattibilità con:
+
+-Contributi agli obbiettivi dell’organizzazione
+-Ingegnerizzare con la tecnologia corrente entro il budget
+-Intregazione con altri sistemi usati
+
+5.2 Documento Analisi dei Requisiti
+Sempre gli Analisti hanno compito di redigere l’ Analisi dei Requisiti. Comunicheranno poi al project manager il bisogno di negoziare e chiarire con il committente punti meno chiari del capitolato.
+
+5.2.1 Classificazione dei Requisiti
+Ogni requisito può essere provvisto di più sotto-requisiti. I requisiti vengono organizzati in forma gerarchica.
+Al compimento di tutti i moduli che compongono il requisito padre questo viene soddisfatto.
+La notazione da utilizzare è quella che segue: 
+
+<0|1|2><F|P|Q|V>-X<.Y<.Z> > 
+
+Dove le seguenti sigle indicano:0: obbligatorio 
+1: desiderabile2: opzionaleHanno diverso tipo:F: requisito funzionale 
+P: requisito prestazionale 
+Q: requisito di qualitàV: requisito dichiarativi(vincoli)Tale parte indica il codice identificativo di ogni requisito.
+E’ espresso in modo gerarchico ed univoco.X: requisito di primo livello 
+Y: sotto-requisitoZ: sotto-requisito di un sotto-requisitoI campi Y e Z possono essere assenti.
+
+Si ricorda che per ogni requisito c’è bisogno di una descrizione e riportare le dipendenze che ha verso altri. I requisiti non devono comunque essere in conflitto tra loro.
+
+5.2.2 Allocazione e Modellazione concettuale del sistema
+Il team Analisti, dopo aver preso visione nello specifico del capitolato e aver fatto emergere i requisiti , procede con la costruzione dei diagrammi dei casi d’uso ( UC ). 
+Nello specifico é richiesto:
+-Titolo del caso d’uso sintetico
+-Attori Principali
+-Attori Secondari, nel caso vi fossero.
+Descrizione del caso con:
+-Scenario principale
+-Scenari/o alternativo se presenti.
+-Precondizione
+-Postcondizione
+-Requisiti del caso d’uso ricavati
+
+Il caso d’uso sarà sempre associato da un grafico specializzato. Si è scelto uno standard ibrido tra UML 2.x e 1.x con le funzioni principali che racchiudono le due versioni di linguaggio.
+
+5.3 Tracciamento 
+Il tracciamento dimostra completezza ed economicità della soluzione. Se tracciati tutti i requisiti conseguentemente:
+-Possiamo soddisfarli
+-Nessuna funzionalità sarà superflua
+-Nessun comportamento è ingiustificato
+E’ nostro compito automatizzare il processo con software adeguato.

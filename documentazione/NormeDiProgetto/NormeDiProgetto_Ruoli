@@ -1,0 +1,51 @@
+4. Ruoli
+
+4.1 Ruoli all’interno del progetto
+Ad ogni componente è assegnato un ruolo all’interno del progetto che varia a seconda di regole che sono riportate in seguito. Importante è la nessun conflitto di interesse infatti non è possibile validare il processo progettato o realizzato. Può però capitare che si svolgano più compiti nello stesso periodo causa carenza di personale. Importante è la flessibilità all’interno del team per diminuire i tempi di scambio mansione.
+Ogni membro a qualunque ruolo ha il diritto di rafforzare la sua funzione con corsi e il dovere di specializzarsi con ricerca ed esperienze personali. 
+
+4.1.1 Project Manager
+Titolare di responsabilità decisionale. Rappresenta il progetto di fronte al fornitore e al committente. Tale figura è garante unico dell’avvio, pianificazione, svolgimento, controllo e chiusura di un progetto. In particolare :
+-Pianifica riunioni e compiti
+-Gestisce i ruoli
+-Ruolo consultivo e preventivo
+-Capacità tecniche e conosce bene gli strumenti utili
+-Controllo, coordinamento con relazioni esterne
+-Approvazione documenti
+
+4.1.2 Amministratore
+Responsabilità di cura dei processi. In dettaglio : 
+-Gestione delle risorse e delle infrastrutture
+-Ispettore di versioni e configurazioni
+-Risolutore di difficoltà di processi
+
+4.1.3 Analista
+Il ruolo principale dell’analista è l’attuazione dei requisiti. Quindi comprendere il problema in ogni sfaccettatura. Senza l’obbligo di trovare una soluzione. Tra le sue competenze : 
+-Cogliere il problema
+-Conoscere il dominio del quesito
+-Vasta esperienza professionale
+
+4.1.4 Progettista
+Il compito del progettista è quello di realizzare e seguire la manutenzione del prodotto. E’ di fatto un attuatole : 
+-Risolve il problema
+-Definisce cosa viene costruito e come 
+-Ampia conoscenza nei linguaggi e delle risorse utilizzate
+-Esegue una soluzione attuabile e comprensibile
+
+4.1.5 Programmatore
+Il programmatore è la mano che muove crea il progetto. Il suo compito principale è infatti la realizzazione e la manutenzione del prodotto. Come il progettista anche nel suo ambito è un attuatole :
+-Segue i piani progettati e attua il disegno previsto
+-Implementa test di verifica automatica per il suo codice
+-Il codice che scrivere deve essere versionato e documentato
+
+4.1.6 Verificatore 
+Al termine del lavoro eseguito dagli altri membri del team il verificatore esegue un controllo tramite analisi statica del ticket . Questa può essere attuata tramite Walkthrough o Ispection. Nel secondo caso la check list è redata concordata insieme al Project Manager. 
+-Controlla siano rispettati gli standard aderiti nel progetto
+-Assicura la conformità del prodotto in ogni fase del ciclo di vita
+
+4.1.7 Responsabile Qualità
+Non è richiesto tale ruolo all’interno del team e non sarà interpretato nella rotazione. Molto spesso è incaricato un ente fuori dall’azienda. In questo caso è compito del committente.
+
+4.2 Sistema rotativo dei ruoli
+Il progetto a scopo didattico ha l’obbligo di far interpretare ogni ruolo a tutti i partecipanti del team. Per il momento assumiamo un modello agile di tipo scrum per eseguire i compiti (o ticket). Quindi dopo aver costruito una prima check list in gruppo ogni obbiettivo viene risolto da un sottogruppo in cui il primo che preferisce eseguirlo assume il ruolo di project manager e vaglia oggettivamente ogni sfaccettatura per risolvere il backlog richiedendo le risorse di cui ha bisogno.
+
