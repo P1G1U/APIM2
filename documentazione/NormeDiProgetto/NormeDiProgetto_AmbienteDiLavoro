@@ -1,0 +1,43 @@
+8. Ambiente di Lavoro
+
+8.1 Sistema Operativo
+Il progetto e l’insieme delle applicazioni di supporto non sono progettate su un particolare sistema operativo. I componenti del team avranno quindi la possibilità di installare i propri client dei mezzi in qualunque macchina: Windows , Mac OS X, Linux
+
+8.2 Applicativo Guida
+Si è stato scelto per il coordinamento : 
+-Applicazione web Asana
+-Repository Git e GUI destinata
+-Comunicazione tramite Telegram.
+
+8.3 Ticket-ing
+Il web applicativo Asana è stato scelto per la comunicazione e il ticketing. 
+E’ prediletto questa piattaforma per la sua versione sia web sia mobile. 
+Collegato tramite mail così da avere una notifica sui compiti seguiti.
+Oltre ovviamente a essere gratuito Asana offre la possibilità di collegare direttamente file e link su ogni singolo ticket. 
+Cosa infine forse più importante è l’associazione al calendario così da avere sotto controllo migliore gli eventi datati.
+
+8.4 Documentazione
+Per la documentazione inizialmente si redige una prima stesura su un documento semplice in qualsiasi text editor per poi elaborarlo in linguaggio latex.
+
+8.4.1 Latex
+E’ stato scelto di scrivere i documenti in linguaggio latex perché: 
+-Inerente al nostro percorso di studi essendo un linguaggio compilabile. Si usa di più la mente logica che serve a costruire un programma informatico.
+-I documenti scritti con il mark-up di Latex posso venire composti direttamente in pdf, oltre ad altri formati.
+-Sono più precisi gli automatismi di creazione di indice e l’impaginazione.
+
+8.4.2 Editor
+L’editor di testo utilizzato multipiattaforma è TexStudio. Programma efficiente con compilazione rapida. Offre una insieme di mezzi per velocizzare e facilitare la creazione della documentazione.
+
+8.4.3 Diagrammi UML
+
+8.4.4 Verifica
+
+8.5 Pianificazione
+
+8.5.1 Diagrammi
+
+8.5.2 Attività
+
+8.6 Versionamento
+
+8.7 Altri Programmi
