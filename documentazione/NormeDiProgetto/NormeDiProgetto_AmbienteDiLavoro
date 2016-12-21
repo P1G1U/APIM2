@@ -39,5 +39,24 @@ L’editor di testo utilizzato multipiattaforma è TexStudio. Programma efficien
 8.5.2 Attività
 
 8.6 Versionamento
+Il software di versionamento scelto è Git. Le motivazioni a base della scelta è perché con Git:
+-Strutturato come un File System
+-Salva uno snapshot del progetto a ogni commit
+-Veloce e Distribuito avendo in locale la copia della repository per ogni utente
+-Sfrutta facilmente le operazioni di merge e branch
+Oltre al fatto che è stato già usato da alcuni membri del team.
+
+All’interno della repository vi sono due macro sezioni . La sezione documentazione e la sezione progetto.
+
+8.6.1 Repository documentazione
+La repository della documentazione è composta dalle varie cartelle :
+-AnalisiDeiRequisiti-Glossario 
+-NormeDiProgetto
+-PianoDiProgetto
+-PianoDiQualifica-StudioDiFattibilità
+-Verbali-template
+I file all’interno possono essere di qualsiasi genere. Anche appunti. Nella capitolo della documentazione è stato trattata il modo in cui crearli ed elaborarli. 
+
+8.6.2 Repository Progetto
 
 8.7 Altri Programmi
