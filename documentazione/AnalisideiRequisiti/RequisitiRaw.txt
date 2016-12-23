@@ -1,0 +1,26 @@
+1. ApiMarket deve permettere di registrare le api di un microservizio attraverso la registrazione e pubblicazione della sua interfaccia (obbl)
+	1.1 ApiMarket deve permettere la creazione di profili utente univoci tramite cui registrare le proprie API e acquistare ApiKey (obbl)
+		1.1.1 ApiMarket deve controllare i dati inseriti durante la registrazione di un nuovo utente, e fornire un messaggio di errore
+		in caso di dati già esistenti.(desid)
+		1.1.2 ApiMarket deve fornire una funzionalità per il recupero delle password nel caso questa venga smarrita dall'utente. (facolt)
+		1.1.3 Apimarket deve fornire all'utente registrato una pagina in cui modificare i proprio dati inseriti al momento della registrazione. (facolt)
+		1.1.4 ApiMarket deve fornire delle funzionalità di monitoramento da parte dell'utente delle sue API, per quanto concerne vendite, guadagni e statistiche di utilizzo. (desid)
+2.ApiMarket deve permettere di consultare le API di un mcroservizio e la documentazione relativa. (obbl)
+	?2.1 APIMarket deve permettere all'utente di caricare la documentazione assieme alla propria API, e deve assicurarsi che lo faccia. (obbl)
+	2.2 ApiMarket deve permettere la modifica della documentazione da parte dell'utente proprietario dell'API. (obbl)
+	2.3 APIMarket deve permettere a tutti gli utenti la ricerca delle API caricate nel sito dagli utenti registrati. (obbl)
+		2.3.1 APIMarket deve permetter di eseguire ricerche filtrate e ordinate per categoria, prezzo, prestazioni... (facolt)
+3.APIMarket deve associare una APIKey d'uso per ogni API registrata e per ogni utente che decide di acquistarla. (obbl)
+	3.1 Ciascuna APIKey deve essere unica e può essere usata dall'utente che l'ha acquistata per accedere alla API a cui è collegata. (obbl)
+		3.1.1 Se la policy di acquisto di una APIKey termina e non viene rinnovata la APIKey cessa di funzionare e non permette più l'utilizzo dell'API a cui è collegata. (obbl)
+		3.1.2 Ogni APIKey permette uno scambio di dati giornaliero limitato. Se la quantità di dati scambiati supera la soglia la APIKey cessa di funcionare fino al giorno successivo. (facolt)
+	3.2 Se la APIKey è contraffatta o non valida allora la chiamata all'API viene bloccata dall'APIMaket. (obbl)
+	3.3 Ciascun utente registrato può possedere più APIKey, e può monitorare le prestazioni, la durata della licenza ed eventuali aggiornamenti dell'API nella sua pagina utente per mezzo delle APIKey.(desider)
+		?3.3.1 L'utente riceve dall'APIMaryet un avvisouna settimana prima della scadenza di una APIKey da lui acquistata, o prima dell'esaurimento di traffico acquistato. (facolt)
+4.ApiMarket deve fornire funzionalità di monitoramento delle API da parte di utenti esterni in base alle APIKey rilasciate. (obbl)
+	4.1 APIMarket deve fornire per ogni API un servizio che monitora il numero di crash dell'API tra tutte le APIkey rilasciate. (obbl)
+	4.2 APIMarket deve fornire statistiche su numeri di volte che una API viene utilizzata tramite APIKey (obbl)
+	4.3 APIMerket deve fornure statistiche riguardo alla qantità di traffico media scambiata dall'API tramite APIKey (desider).
+		
+	
+	
