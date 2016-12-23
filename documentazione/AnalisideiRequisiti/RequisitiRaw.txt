@@ -14,7 +14,7 @@
 		1.5.1 APIMarket deve permettere all'utente registrato che ha caricato un'API di modificare il i tipi di policy di vendita della sua API (facolt)
 	1.6 APIMarket deve permettere di impostare un testo introduttivo che descriva la sua API al momento del caricamento della sua interfaccia. (obbl)
 		1.6.1 APIMarket deve permettere all'utente registrato che ha caricato un'API di modificare il il testo introduttivo che descrive la sua API. (obbl)
-2.ApiMarket deve permettere di consultare le API di un mcroservizio e la documentazione relativa. (obbl)
+2.ApiMarket deve permettere di consultare le API di un microservizio e la documentazione relativa. (obbl)
 	?2.1 APIMarket deve permettere all'utente di caricare la documentazione assieme alla propria API, e deve assicurarsi che lo faccia. (obbl)
 	2.2 ApiMarket deve permettere la modifica della documentazione da parte dell'utente proprietario dell'API. (obbl)
 	2.3 APIMarket deve permettere a tutti gli utenti la ricerca delle API caricate nel sito dagli utenti registrati. (obbl)
@@ -27,7 +27,7 @@
 	3.3 Ciascun utente registrato può possedere più APIKey, e può monitorare le prestazioni, la durata della licenza ed eventuali aggiornamenti dell'API nella sua pagina utente per mezzo delle APIKey.(desider)
 		?3.3.1 L'utente riceve dall'APIMarket un avviso una settimana prima della scadenza di una APIKey da lui acquistata, o prima dell'esaurimento di traffico acquistato. (facolt)
 4.ApiMarket deve fornire funzionalità di monitoramento delle API da parte di utenti esterni in base alle APIKey rilasciate. (obbl)
-	4.1 APIMarket deve fornire per ogni API un servizio che monitora il numero di crash dell'API tra tutte le APIkey rilasciate. (obbl)
+	4.1 APIMarket deve fornire per ogni API un servizio che monitori il numero di crash dell'API tra tutte le APIkey rilasciate. (obbl)
 	4.2 APIMarket deve fornire statistiche su numeri di volte che una API viene utilizzata tramite APIKey (obbl)
 	4.3 APIMerket deve fornure statistiche riguardo alla qantità di traffico media scambiata dall'API tramite APIKey (desider).
 5. APIMarket deve permettere ad ogni utente loggato che abbia registrato l'interfaccia di un'API, di poterla rimuovere da APIMarket. (obbl)
