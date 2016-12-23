@@ -31,6 +31,14 @@
 	4.2 APIMarket deve fornire statistiche su numeri di volte che una API viene utilizzata tramite APIKey (obbl)
 	4.3 APIMerket deve fornure statistiche riguardo alla qantità di traffico media scambiata dall'API tramite APIKey (desider).
 5. APIMarket deve permettere ad ogni utente loggato che abbia registrato l'interfaccia di un'API, di poterla rimuovere da APIMarket. (obbl)
-		
-	
+6. APIMarket deve fornire al committente del capitolato un account Admin con poteri di Super-User. (obbl)
+    6.1 Un utente Admin deve poter eseguire qualuque funzione che può eseguire un Utente registrato. (obbl)
+    6.2 Un utente Admin deve avere la possibilità di modificare i dati anagrafici di qualsiasi utente. (facolt)
+    6.3 Un utente Admin deve poter eliminare un commento di qualsiasi utente (facolt)
+    6.4 Un utente Admin deve poter eliminare qualsiasi utente. (obbl)
+    6.5 Un utente Admin deve poter modificare i dati di una API la cui interfaccia è stata caricata su APIMarket. (obbl)
+    6.6 Un utente Admin deve avere la possibilità di modificare la documentazione relativa ad una API sull'APIMarket. (obbl)
+    6.7 Un utente Admin deve poter elimindare una API da APIMarket (obbl)
+    6.8 Un utente Admin deve poter ricercare qualunque utente tramite una barra di ricerca dedicata (facolt)
+    
 	
