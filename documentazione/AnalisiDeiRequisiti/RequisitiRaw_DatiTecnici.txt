@@ -9,13 +9,13 @@
 	5.2 Ricerca per utente autenticato.	(obbl)
 		5.2.1	Selezione dei Tag.	(facolt)
 		5.2.2	Selezione della Categoria.	(facolt)
-		5.2.3	Ricerca tramite parametri (desider)
-	5.3 Avvio ricerca
+		5.2.3	Ricerca tramite parametri. (desider)
+	5.3 Avvio ricerca.
 	5.4 Visualizzazione risultati ricerca.	(obbl)
-		5.4.1 Visualizzazione principale (obblig)	//titolo o descrizione
+		5.4.1 Visualizzazione principale. (obblig)	//titolo o descrizione
 		5.4.2 Visualizzazioni per autori.	(desider)
 		5.4.3 Visualizzazione per documentazione.	(desider)
-	5.5 Selezione Microservizio
+	5.5 Selezione Microservizio.
 
 6. Visualizzazione della API.	(obbl)
 	6.1 Visualizzazione Generica.	(obbl)
@@ -23,14 +23,14 @@
 	6.3 Visualizza Dati Tecnici. 	(obbl)
 	6.5 Visualizza Autore.		(obbl)
 	6.4 Possibilità di Acquisto.	(obbl)
-		6.5 Acquisto Utente non autenticato	(desider)
-		6.6 Acquisto Utente autenticato	(obbl)
-			6.6.1 Inserimento Dati Di fatturazione e carta (obbl)
+		6.5 Acquisto Utente non autenticato.	(desider)
+		6.6 Acquisto Utente autenticato.	(obbl)
+			6.6.1 Inserimento Dati Di fatturazione e carta. (obbl)
 			6.6.2 Elaborazione Acquisto.	(obbl)
 			6.6.3 Conferma Acquisto.	(obbl)	
 
 7. Gestione Account.(obbl)
-	7.1 Gestioni Informazioni Personali (obbl)
-	7.1.1 Visualizza Account (obbl)
+	7.1 Gestioni Informazioni Personali. (obbl)
+	7.1.1 Visualizza Account. (obbl)
 	7.1.1
 		
