@@ -5,6 +5,15 @@
 		1.1.2 ApiMarket deve fornire una funzionalità per il recupero delle password nel caso questa venga smarrita dall'utente. (facolt)
 		1.1.3 Apimarket deve fornire all'utente registrato una pagina in cui modificare i proprio dati inseriti al momento della registrazione. (facolt)
 		1.1.4 ApiMarket deve fornire delle funzionalità di monitoramento da parte dell'utente delle sue API, per quanto concerne vendite, guadagni e statistiche di utilizzo. (desid)
+	1.2 APIMarket deve fornire un sistema di notifiche che permetta all'utente fornitore dell'API di avvisare i fruitori della sua API, e permetta di comunicare loro gli aggiornamenti. (desider)
+	1.3 APIMarket deve permettere di impostare un nome per la sua API al momento del caricamento della sua interfaccia. (obbl)
+		1.3.1 APIMarket deve permettere all'utente registrato che ha caricato un'API di modificare il nome della sua API (facolt)
+	1.4 APIMarket deve permettere di impostare un prezzo per la sua API al momento del caricamento della sua interfaccia. (obbl)
+		1.4.1 APIMarket deve permettere all'utente registrato che ha caricato un'API di modificare il prezzo della sua API (desider)
+	1.5 APIMarket deve permettere di impostare i dipi di policy di vendita con cui vuole rendere disponibile la sua API al momento del caricamento della sua interfaccia. (desider)
+		1.5.1 APIMarket deve permettere all'utente registrato che ha caricato un'API di modificare il i tipi di policy di vendita della sua API (facolt)
+	1.6 APIMarket deve permettere di impostare un testo introduttivo che descriva la sua API al momento del caricamento della sua interfaccia. (obbl)
+		1.6.1 APIMarket deve permettere all'utente registrato che ha caricato un'API di modificare il il testo introduttivo che descrive la sua API. (obbl)
 2.ApiMarket deve permettere di consultare le API di un mcroservizio e la documentazione relativa. (obbl)
 	?2.1 APIMarket deve permettere all'utente di caricare la documentazione assieme alla propria API, e deve assicurarsi che lo faccia. (obbl)
 	2.2 ApiMarket deve permettere la modifica della documentazione da parte dell'utente proprietario dell'API. (obbl)
@@ -21,6 +30,7 @@
 	4.1 APIMarket deve fornire per ogni API un servizio che monitora il numero di crash dell'API tra tutte le APIkey rilasciate. (obbl)
 	4.2 APIMarket deve fornire statistiche su numeri di volte che una API viene utilizzata tramite APIKey (obbl)
 	4.3 APIMerket deve fornure statistiche riguardo alla qantità di traffico media scambiata dall'API tramite APIKey (desider).
+5. APIMarket deve permettere ad ogni utente loggato che abbia registrato l'interfaccia di un'API, di poterla rimuovere da APIMarket. (obbl)
 		
 	
 	
