@@ -25,7 +25,7 @@
 		3.1.2 Ogni APIKey permette uno scambio di dati giornaliero limitato. Se la quantità di dati scambiati supera la soglia la APIKey cessa di funcionare fino al giorno successivo. (facolt)
 	3.2 Se la APIKey è contraffatta o non valida allora la chiamata all'API viene bloccata dall'APIMaket. (obbl)
 	3.3 Ciascun utente registrato può possedere più APIKey, e può monitorare le prestazioni, la durata della licenza ed eventuali aggiornamenti dell'API nella sua pagina utente per mezzo delle APIKey.(desider)
-		?3.3.1 L'utente riceve dall'APIMaryet un avvisouna settimana prima della scadenza di una APIKey da lui acquistata, o prima dell'esaurimento di traffico acquistato. (facolt)
+		?3.3.1 L'utente riceve dall'APIMarket un avviso una settimana prima della scadenza di una APIKey da lui acquistata, o prima dell'esaurimento di traffico acquistato. (facolt)
 4.ApiMarket deve fornire funzionalità di monitoramento delle API da parte di utenti esterni in base alle APIKey rilasciate. (obbl)
 	4.1 APIMarket deve fornire per ogni API un servizio che monitora il numero di crash dell'API tra tutte le APIkey rilasciate. (obbl)
 	4.2 APIMarket deve fornire statistiche su numeri di volte che una API viene utilizzata tramite APIKey (obbl)
