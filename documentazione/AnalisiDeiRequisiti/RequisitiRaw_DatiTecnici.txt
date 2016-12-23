@@ -12,10 +12,10 @@
 		5.2.3	Ricerca tramite parametri. (desider)
 	5.3 Avvio ricerca.
 	5.4 Visualizzazione risultati ricerca.	(obbl)
-		5.4.1 Visualizzazione principale. (obblig)	//titolo o descrizione
+		5.4.1 Visualizzazione principale. (obbl)	//titolo o descrizione
 		5.4.2 Visualizzazioni per autori.	(desider)
 		5.4.3 Visualizzazione per documentazione.	(desider)
-	5.5 Selezione Microservizio.
+		5.4.3 Selezione API.	(obbl)
 
 6. Visualizzazione della API.	(obbl)
 	6.1 Visualizzazione Generica.	(obbl)
@@ -23,14 +23,69 @@
 	6.3 Visualizza Dati Tecnici. 	(obbl)
 	6.5 Visualizza Autore.		(obbl)
 	6.4 Possibilità di Acquisto.	(obbl)
-		6.5 Acquisto Utente non autenticato.	(desider)
-		6.6 Acquisto Utente autenticato.	(obbl)
-			6.6.1 Inserimento Dati Di fatturazione e carta. (obbl)
-			6.6.2 Elaborazione Acquisto.	(obbl)
-			6.6.3 Conferma Acquisto.	(obbl)	
+		6.4.1 Acquisto Utente non autenticato.	(desider)
+		6.4.2 Acquisto Utente autenticato.	(obbl)
+			6.4.2.1 Inserimento Dati Di fatturazione e carta. (obbl)
+			6.6.2.2 Elaborazione Acquisto.	(obbl)
+			6.6.2.3 Conferma Acquisto.	(obbl)
+	6.5 Visualizzazione API simili	(facolt)
+	6.6 Visualizzazione API compatibili (facolt)
 
-7. Gestione Account.(obbl)
-	7.1 Gestioni Informazioni Personali. (obbl)
-	7.1.1 Visualizza Account. (obbl)
-	7.1.1
-		
+7. Visualizza Account.(obbl)
+	7.1 Visualizza informazioni personali. (obbl)
+		7.1.1	Modifica informazioni personali. (obbl)
+			… //tutti i particolari di modifica
+	7.2 Visualizza APIs.	(obbl)
+		7.2.1	Gestisci API.	(obbl)
+			… //tutti i particolari per la gestione
+	7.3 Visualizza Statistiche. (obbl)
+
+
+8. Importare Nuova API.	(obbl)
+	8.1 Inserie Titolo. (obbl)
+	8.2 Inserire Descrizione. (obbl)
+	8.3 Inserire Tag. (facolt)
+	8.4 Inserire Requisiti. (facolt)
+	8.5 Inserire Risultati. (facolt)
+	8.6 Importare File. (obbl)
+		… //tutti i particolari per caricare i file
+	8.7 Importare Documentazione. (obbl)
+		… //tutti i particolari per importare la documentazione
+	8.8 Imposta prezzo (obbl)
+		… //tutti i particolari vari sulla gestione del prezzo (MOLTI)
+		8.8.x Gestione Policy APIKey
+			… // tutti i particolare di scelta della Policy APIKey
+	8.8 Policy Insermento
+	8.10 Caricamento API nel gateway. (obbl)
+	8.11 Inserimento.	(obbl)
+	8.11.1 Errore Inserimento.	(obbl)
+	8.11.2 Conferma Inserimento.	(obbl)
+	8.11.2.1 Generazione APIKey.	(obbl)
+
+9. Modifica API.	(obbl)
+	8.1 Modificare Titolo. (obbl)
+	8.2 Modificare Descrizione. (obbl)
+	8.3 Modificare Tag. (facolt)
+		8.3.1 Rimuovi Tag.
+		8.3.2 Inserisci Tag.
+	8.4 Modificare Requisiti. (facolt)
+	8.5 Modificare Risultati. (facolt)
+	8.6 Modificare File. (obbl)
+		8.6.1 Eliminare File. (obbl)
+			… //tutti i particolari per eliminare i file
+	8.7 Modificare Documentazione. (obbl)
+		8.7.1 Elimina Documentazione. (obbl)
+		… //altro
+	8.8 Modifica prezzo. (obbl)
+		… //tutti i particolari vari sulla modifica del prezzo
+	8.8 Policy Modifica.
+	8.9 Caricamento modifiche API nel gateway. (obbl)
+	8.9.1 Errore Modifica.	(obbl)
+	8.9.2 Conferma Inserimento. (obbl)
+	8.9.2.1 Generazione nuova APIKey.
+
+
+
+
+	
+	
