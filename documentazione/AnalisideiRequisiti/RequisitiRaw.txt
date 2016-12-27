@@ -19,7 +19,7 @@
 	    1.1.4 La registrazione di un nuovo utente deve richiedere lo username. (obbl)
 	        1.1.4.1 Lo username deve essere composto di caratteri alfanumerici, inoltre deve essere composto da un minimo di 4 caratteri ad un massimo di 30. (fac)
 	        1.1.4.2 Lo username deve essere unico all'interno del sistema. (obbl)
-	   1.1.5 APIMarket deve controllare i dati inseriti in fase di registrazione e deve fornire un messaggio di errore nel non siano conformi. (des)
+	   1.1.5 APIMarket deve controllare i dati inseriti in fase di registrazione e deve fornire un messaggio di errore nel caso non siano conformi. (des)
 	        1.1.5.1 Il sistema deve visualizzare un errore di inserimento Nome durante la registrazione. (des)
 	        1.1.5.2 Il sistema deve visualizzare un errore di inserimento Cognome durante la registrazione. (des)
 	        1.1.5.3 Il sistema deve visualizzare un errore di inserimento Numero di telefono durante la registrazione. (des)
@@ -39,18 +39,23 @@
 	    1.2.3 APIMarket deve mostrare un errore all'utente nel caso l'autenticazione non vada a buon fine. (des)
 	        1.2.3.1 APIMarket deve mostrare un errore e bloccare l'autenticazione nel caso il nome utente o la sua email siano errati.
 	        1.2.3.2 APIMarket deve mostrare un errore e bloccare l'autenticazione nel c
-	    1.1.8 ApiMarket deve fornire una funzionalità per il recupero delle password nel caso questa venga smarrita dall'utente. (facolt)
-		1.1.3 Apimarket deve fornire all'utente registrato una pagina in cui modificare i proprio dati inseriti al momento della registrazione. (facolt)
-		1.1.4 ApiMarket deve fornire delle funzionalità di monitoramento da parte dell'utente delle sue API, per quanto concerne vendite, guadagni e statistiche di utilizzo. (desid)
-	1.2 APIMarket deve fornire un sistema di notifiche che permetta all'utente fornitore dell'API di avvisare i fruitori della sua API, e permetta di comunicare loro gli aggiornamenti. (desider)
-	1.3 APIMarket deve permettere di impostare un nome per la sua API al momento del caricamento della sua interfaccia. (obbl)
+	1.3 APIMarket deve fornire un sistema di notifiche che permetta all'utente fornitore dell'API di avvisare i fruitori della sua API, e permetta di comunicare loro gli aggiornamenti. (desider)
+	1.4 APIMarket deve permettere di impostare un nome per la sua API al momento del caricamento della sua interfaccia. (obbl)
 		1.3.1 APIMarket deve permettere all'utente registrato che ha caricato un'API di modificare il nome della sua API (facolt)
-	1.4 APIMarket deve permettere di impostare un prezzo per la sua API al momento del caricamento della sua interfaccia. (obbl)
+		1.3.2 APIMarket deve mostrare un errore all'utente registrato qualora tenti di caricare una API e non inserisca un nome valido.
+	1.5 APIMarket deve permettere di impostare un prezzo per la sua API al momento del caricamento della sua interfaccia. (obbl)
 		1.4.1 APIMarket deve permettere all'utente registrato che ha caricato un'API di modificare il prezzo della sua API (desider)
-	1.5 APIMarket deve permettere di impostare i dipi di policy di vendita con cui vuole rendere disponibile la sua API al momento del caricamento della sua interfaccia. (desider)
-		1.5.1 APIMarket deve permettere all'utente registrato che ha caricato un'API di modificare il i tipi di policy di vendita della sua API (facolt)
-	1.6 APIMarket deve permettere di impostare un testo introduttivo che descriva la sua API al momento del caricamento della sua interfaccia. (obbl)
-		1.6.1 APIMarket deve permettere all'utente registrato che ha caricato un'API di modificare il il testo introduttivo che descrive la sua API. (obbl)
+		1.4.2 APIMarket deve dare la possibilità all'utente registrato di rendere gratuita una sua API caricata.
+	1.6 APIMarket deve permettere di impostare i dipi di policy di vendita con cui vuole rendere disponibile la sua API al momento del caricamento della sua interfaccia. (desider)
+		1.5.1 L'utente deve avere la possibilità di settare una policy di vendita a consumo di traffico.
+		1.5.2 L'utente deve avere la possibilità di settare una policy di vendita a scadenza.
+		1.5.3 L'utente deve avere la possibilità di settare una policy di vendita a numero di accessi.
+		1.5.4 APIMarket deve permettere all'utente registrato che ha caricato un'API di modificare il i tipi di policy di vendita della sua API (facolt)
+	1.7 APIMarket deve permettere di impostare un testo introduttivo che descriva la sua API al momento del caricamento della sua interfaccia. (obbl)
+		1.6.1 APIMarket deve permettere all'utente registrato che ha caricato un'API di modificare  il testo introduttivo che descrive la sua API. (obbl)
+	1.8 ApiMarket deve fornire una funzionalità per il recupero delle password nel caso questa venga smarrita dall'utente. (facolt)
+	1.9 Apimarket deve fornire all'utente registrato una pagina in cui modificare i proprio dati inseriti al momento della registrazione. (facolt)
+	1.10 ApiMarket deve fornire delle funzionalità di monitoramento da parte dell'utente delle sue API, per quanto concerne vendite, guadagni e statistiche di utilizzo. (desid)
 2.ApiMarket deve permettere di consultare le API di un microservizio e la documentazione relativa. (obbl)
 	2.1 APIMarket deve permettere all'utente di caricare la documentazione assieme alla propria API, e deve assicurarsi che lo faccia. (obbl)
 		2.2 La documentazione deve sottolineare servizi richiesti. (desid)
@@ -59,22 +64,21 @@
 	2.3 APIMarket deve permettere a tutti gli utenti la ricerca delle API caricate nel sito dagli utenti registrati. (obbl)
 		2.3.1 APIMarket deve permetter di eseguire ricerche filtrate e ordinate per categoria, prezzo, prestazioni... (facolt)
 3.APIMarket deve associare una APIKey d'uso per ogni API registrata e per ogni utente che decide di acquistarla. (obbl)
-	3.1 Ciascuna APIKey deve essere unica e può essere usata dall'utente che l'ha acquistata per accedere alla API a cui è collegata. (obbl)
-		3.1.1 Se la policy di acquisto di una APIKey termina e non viene rinnovata la APIKey cessa di funzionare e non permette più l'utilizzo dell'API a cui è collegata. (obbl)
-		3.1.2 Ogni APIKey permette uno scambio di dati giornaliero limitato. Se la quantità di dati scambiati supera la soglia la APIKey cessa di funcionare fino al giorno successivo. (facolt)
-		3.1.3 L’APIKey è formata da un HASH che comprende la versione e generata casualmente. (obbl)
-	3.2 Se la APIKey è contraffatta o non valida allora la chiamata all'API viene bloccata dall'APIMaket. (obbl)
-	3.3 Ciascun utente registrato può possedere più APIKey, e può monitorare le prestazioni, la durata della licenza ed eventuali aggiornamenti dell'API nella sua pagina utente per mezzo delle APIKey.(desider)
-<<<<<<< Updated upstream
-		?3.3.1 L'utente riceve dall'APIMarket un avviso una settimana prima della scadenza di una APIKey da lui acquistata, o prima dell'esaurimento di traffico acquistato. (facolt)
-=======
-		?3.3.1 L'utente riceve dall'APIMaryet un avviso una settimana prima della scadenza di una APIKey da lui acquistata, o prima dell'esaurimento di traffico acquistato. (facolt)
->>>>>>> Stashed changes
+	3.1 Un utente registrato deve poter acquistare una APIKey visitando la pagina che descrive quell'api. (obbl)
+	 3.1.1 Un utente registrato che vuole acquistare una APIKey di una API deve terminare la procedura di acquisto. (obbl)
+		3.1.1.1 Un utente registrato per completare la procedura d'acquisto deve inserire un numero di carta di credito (obbl)
+		3.1.1.2 //procedura per acquistare API
+	3.2 Ciascuna APIKey deve essere unica e può essere usata dall'utente che l'ha acquistata per accedere alla API a cui è collegata. (obbl)
+		3.2.1 Se la policy di acquisto di una APIKey termina e non viene rinnovata la APIKey cessa di funzionare e non permette più l'utilizzo dell'API a cui è collegata. (obbl)
+		3.2.2 Ogni APIKey permette uno scambio di dati giornaliero limitato. Se la quantità di dati scambiati supera la soglia la APIKey cessa di funcionare fino al giorno successivo. (facolt)
+	3.3 Se la APIKey è contraffatta o non valida allora la chiamata all'API viene bloccata dall'APIMaket. (obbl)
+	3.4 Ciascun utente registrato può possedere più APIKey, e può monitorare le prestazioni, la durata della licenza ed eventuali aggiornamenti dell'API nella sua pagina utente per mezzo delle APIKey.(desider)
+		?3.3.1 L'utente riceve dall'APIMaryet un avvisouna settimana prima della scadenza di una APIKey da lui acquistata, o prima dell'esaurimento di traffico acquistato. (facolt)
+4.ApiMarket deve fornire funzionalità di monitoramento delle API da parte di utenti esterni in base alle APIKey rilasciate. (obbl)
+	4.1 APIMarket deve fornire per ogni API un servizio che monitora il numero di crash dell'API tra tutte le APIkey rilasciate. (obbl)
+	4.2 APIMarket deve fornire statistiche su numeri di volte che una API viene utilizzata tramite APIKey (obbl)
+	4.3 APIMerket deve fornure statistiche riguardo alla qantità di traffico media scambiata dall'API tramite APIKey (desider).
 5. APIMarket deve permettere ad ogni utente loggato che abbia registrato l'interfaccia di un'API, di poterla rimuovere da APIMarket. (obbl)
-<<<<<<< HEAD
-
-	
-=======
 6. APIMarket deve fornire al committente del capitolato un account Admin con poteri di Super-User. (obbl)
     6.1 Un utente Admin deve poter eseguire qualuque funzione che può eseguire un Utente registrato. (obbl)
     6.2 Un utente Admin deve avere la possibilità di modificare i dati anagrafici di qualsiasi utente. (facolt)
@@ -84,6 +88,3 @@
     6.6 Un utente Admin deve avere la possibilità di modificare la documentazione relativa ad una API sull'APIMarket. (obbl)
     6.7 Un utente Admin deve poter elimindare una API da APIMarket (obbl)
     6.8 Un utente Admin deve poter ricercare qualunque utente tramite una barra di ricerca dedicata (facolt)
-    
->>>>>>> origin/master
-	
