@@ -1,21 +1,22 @@
-4.ApiMarket deve fornire funzionalità di monitoramento delle API da parte di utenti esterni in base alle APIKey rilasciate. (obbl)
+4. ApiMarket deve fornire funzionalità di monitoramento delle API da parte di utenti esterni in base alle APIKey rilasciate. (obbl)
 	4.1 APIMarket deve fornire per ogni API un servizio che monitori il numero di crash dell'API tra tutte le APIkey rilasciate. (obbl)
 	4.2 APIMarket deve fornire statistiche su numeri di volte che una API viene utilizzata tramite APIKey. (obbl)
 	4.3 APIMerket deve fornure statistiche riguardo alla qantità di traffico media scambiata dall'API tramite APIKey. (desider)
 
 
-5.Ricerca	(obbl)
+5. APIMarket deve avere la possibilità di ricercare API caricate dagli utenti registrati o Utenti. (obbl)
 	5.1 Ricerca per utente non autenticato.	(obbl)
 	5.2 Ricerca per utente autenticato.	(obbl)
 		5.2.1	Selezione dei Tag.	(facolt)
 		5.2.2	Selezione della Categoria.	(facolt)
-		5.2.3	Ricerca tramite parametri. (desider)
+		5.2.3	Ricerca avanzata tramite filtri che impostano dati tecnici. (desider)	// prezzo, prestazioni, ecc
 	5.3 Avvio ricerca.
 	5.4 Visualizzazione risultati ricerca.	(obbl)
 		5.4.1 Visualizzazione principale. (obbl)	//titolo o descrizione
 		5.4.2 Visualizzazioni per autori.	(desider)
 		5.4.3 Visualizzazione per documentazione.	(desider)
 		5.4.3 Selezione API.	(obbl)
+
 
 6. Visualizzazione della API.	(obbl)
 	6.1 Visualizzazione Generica.	(obbl)
@@ -85,6 +86,8 @@
 	8.9.2.1 Generazione nuova APIKey.
 
 10. Ogni API ha collegata una APIKey univoca.	(obbl)
+
+
 
 
 
