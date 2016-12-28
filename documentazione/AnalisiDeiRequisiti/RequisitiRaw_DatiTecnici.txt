@@ -4,7 +4,7 @@
 	4.3 APIMerket deve fornure statistiche riguardo alla qantità di traffico media scambiata dall'API tramite APIKey. (desider)
 
 
-5. APIMarket deve avere la possibilità di ricercare API caricate dagli utenti registrati o Utenti. (obbl)
+5. APIMarket deve avere la possibilità di ricercare API caricate dagli Utenti Registrati o Utenti. (obbl)
 	5.1 Ricerca per utente non autenticato.	(obbl)
 	5.2 Ricerca per utente autenticato.	(obbl)
 		5.2.1	Selezione dei Tag.	(facolt)
@@ -42,13 +42,13 @@
 	7.3 Visualizza Statistiche. (obbl)
 
 
-8. Importare Nuova API.	(obbl)
+8. Registrare Nuova API.	(obbl)
 	8.1 Inserie Titolo. (obbl)
 	8.2 Inserire Descrizione. (obbl)
 	8.3 Inserire Tag. (facolt)
 	8.4 Inserire Requisiti. (facolt)
 	8.5 Inserire Risultati. (facolt)
-	8.6 Importare File. (obbl)
+	8.6 Registrare File. (obbl)
 		… //tutti i particolari per caricare i file
 	8.7 Importare Documentazione. (obbl)
 		… //tutti i particolari per importare la documentazione
