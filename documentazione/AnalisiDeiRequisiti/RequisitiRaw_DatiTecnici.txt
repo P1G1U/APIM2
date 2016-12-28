@@ -84,6 +84,7 @@
 	8.9.2 Conferma Inserimento. (obbl)
 	8.9.2.1 Generazione nuova APIKey.
 
+10. Ogni API ha collegata una APIKey univoca.	(obbl)
 
 
 

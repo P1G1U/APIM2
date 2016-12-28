@@ -31,7 +31,7 @@
 		1.1.7 APIMarket deve mostrare un messaggio di conferma per l'avvenuta registrazione. (desid)
 		    1.1.7.1 APIMarket deve mostrare un messaggio che inviti l'utente a controllare la sua casella email per verificare la presenza di un link di verifica. (fac)
 		1.1.8 APIMarket deve terminare la registrazione utente solo una volta che l'utente ha premuto sul link di conferma inviato nella sua email. (fac)
-		    1.1.8.1 APIMarket deve fornire la pssibilità di reinviare la mail di conferma. (fac)
+		    1.1.8.1 APIMarket deve fornire la possibilità di reinviare la mail di conferma. (fac)
 		    1.1.8.2 APIMarket deve fornire la possibilità di modificare l'indirizzo email al quale inviare la mail di conferma. (fac)
 	1.2 APIMarket deve permettere l'autenticazione di un utente registrato. (obbl)
 	    1.2.1 L'autenticazione di un utente registrato deve richiedere il nome utente o in alternativa la sua email. (obbl)
@@ -46,7 +46,7 @@
 	1.5 APIMarket deve permettere di impostare un prezzo per la sua API al momento del caricamento della sua interfaccia. (obbl)
 		1.4.1 APIMarket deve permettere all'utente registrato che ha caricato un'API di modificare il prezzo della sua API (desider)
 		1.4.2 APIMarket deve dare la possibilità all'utente registrato di rendere gratuita una sua API caricata.
-	1.6 APIMarket deve permettere di impostare i dipi di policy di vendita con cui vuole rendere disponibile la sua API al momento del caricamento della sua interfaccia. (desider)
+	1.6 APIMarket deve permettere di impostare i tipi di policy di vendita con cui vuole rendere disponibile la sua API al momento del caricamento della sua interfaccia. (desider)
 		1.5.1 L'utente deve avere la possibilità di settare una policy di vendita a consumo di traffico.
 		1.5.2 L'utente deve avere la possibilità di settare una policy di vendita a scadenza.
 		1.5.3 L'utente deve avere la possibilità di settare una policy di vendita a numero di accessi.
@@ -70,7 +70,7 @@
 		3.1.1.2 //procedura per acquistare API
 	3.2 Ciascuna APIKey deve essere unica e può essere usata dall'utente che l'ha acquistata per accedere alla API a cui è collegata. (obbl)
 		3.2.1 Se la policy di acquisto di una APIKey termina e non viene rinnovata la APIKey cessa di funzionare e non permette più l'utilizzo dell'API a cui è collegata. (obbl)
-		3.2.2 Ogni APIKey permette uno scambio di dati giornaliero limitato. Se la quantità di dati scambiati supera la soglia la APIKey cessa di funcionare fino al giorno successivo. (facolt)
+		3.2.2 Ogni APIKey permette uno scambio di dati giornaliero limitato. Se la quantità di dati scambiati supera la soglia la APIKey cessa di funzionare fino al giorno successivo. (facolt)
 	3.3 Se la APIKey è contraffatta o non valida allora la chiamata all'API viene bloccata dall'APIMaket. (obbl)
 	3.4 Ciascun utente registrato può possedere più APIKey, e può monitorare le prestazioni, la durata della licenza ed eventuali aggiornamenti dell'API nella sua pagina utente per mezzo delle APIKey.(desider)
 		?3.3.1 L'utente riceve dall'APIMaryet un avvisouna settimana prima della scadenza di una APIKey da lui acquistata, o prima dell'esaurimento di traffico acquistato. (facolt)
