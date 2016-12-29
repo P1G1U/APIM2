@@ -1,0 +1,143 @@
+% !TeX spellcheck = it_IT
+\documentclass[12pt,a4paper,titlepage]{article}
+%va sempre messo article per "program documentation"
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{titlesec}
+
+\usepackage{emptypage}                     
+% pagine vuote senza testatina e piede di pagina
+
+%\usepackage{hyperref}                     
+% collegamenti ipertestuali
+
+\usepackage{fancyhdr}
+% pacchetto per intestazione e pie pagina
+
+\pagestyle{fancy}
+
+
+% \\ indica interruzione di riga
+
+% compilate 2 volte per documenti con indice
+
+% {\em qui testo in corsivo}
+% {\bfseries qui testo in grossetto}
+
+%LISTE NUMERATE
+%\begin{enumerate}
+%\item primo
+%\item secondo
+%\item terzo
+%\end{enumerate}
+
+%LISTE PUNTATE
+%\begin{itemize}
+%\item primo
+%\item secondo
+%\item \dots
+%\end{itemize}
+
+%TABELLA
+%\begin{tabular}{|c|c|c|}
+%indica una tabella con 3 colonne e pos. testo centrale. La barra verticale ( | ) indica che vi e' una linea divisoria verticale tra le celle.
+%\hline	linea separatrice orizzontale
+%testo1& testo2& testo3\\
+% & segna la fine del testo nella cella , \\ indica il fine della riga 
+
+%GRAFICI
+%\begin{figure}
+%\includegraphics{filegrafico}
+%comando per includere le immagini (controllare i formati)
+%\caption{didascalia}
+%\label{nome}
+%\end{figure}
+
+
+\lhead{SWEg Group}
+\chead{}
+\rhead{Nome Capitolo}
+\lfoot{Analisi dei Requisiti}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+\title{ANALISI DEI REQUISITI}
+\author{SWEg Group}
+\date{}
+\maketitle
+
+\begin{tabular}{|l|c|c|c|}
+\hline
+{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
+\hline
+Creazione Raw Documento & Gianluca Crivellaro & 21/12/2016 & 0.0.1 \\
+\hline
+Modifica Raw & Gianluca Crivellaro & 22/12/2016 & 0.0.2 \\
+\hline
+Aggiunti Requisiti & Sebastiano Marchesini & 23/12/2016 & 0.0.3 \\
+\hline
+Aggiunti Requisiti Estesi Concordati & Gianluca Crivellaro & 27/12/2016 & 0.0.4 \\
+\hline
+Iniziata Stesura Documento (Introduzione) & Sebastiano Marchesini &  28/12/2016 & 0.1.0 \\
+\hline
+\end{tabular}
+\newpage
+
+\tableofcontents
+%crea indice automaticamente
+\thispagestyle{empty}
+
+\newpage
+
+
+
+\section{Introduzione}
+\subsection{Scopo del Documento}
+Tale documento ha lo scopo di studiare e modellare concettualmente il problema che si pone con APIM. Posizionando le componeti (o ambiti) a scopo di allocazione dei requisiti. Alcuni dei requisiti specificandoli con il diagramma dei casi d'uso.\\
+Vi deve essere la certezza di non aver lasciato dimenticato nessuno tra i bisogno espliciti e i bisogni impliciti. Questo implica che non vi sia ambiguità tra i requisiti.\\
+Bisogna sempre tener conto di portare al massimo possibile la granularità del problema, senza però confonderlo e renderlo impossibile da verificare. Questo per rendere il requisito decidibile.\\
+E' infine bene tener presente otto semplici qualità di selezione dei requisiti:
+\begin{itemize}
+\item Non Ambigui
+\item Corretti
+\item Completi
+\item Verificabili
+\item Consistenti
+\item Modificabili
+\item Tracciabili
+\item Ordinati per Rilevanza
+\end{itemize}
+\subsection{Scopo del Prodotto}
+L'obbiettivo è creare un'infrastruttura che permetta la distribuzione digitale e la gestione dei diritti digitali di microservizi. Creati e importati da diversi utenti che possono interfacciarsi tra loro.\\
+Viene usata per gestire e distribuire una vasta gamma di microservizi (alcuni esclusivi) e il loro relativo supporto. Tutte queste operazioni sono effettuate via Internet.\\
+E' inoltre possibile il monitoraggio di ogni API grazie alle tecnologie fornite dal prodotto.\\ 
+\subsection{Glossario}
+Alla fine di evitare ambiguità e mantenere la consistenza il Glossario è un documento unico e consultabile separatamente. \\
+Un glossario è una raccolta di termini di un ambito specifico e circoscritto. In questo caso per raccogliere termini desueti e specialistici inerenti al progetto. 
+\\
+\subsection{Riferimenti Normativi}
+\subsubsection{Normativi}
+\item \textbf{Norme di Progetto}:	"Norme di Progetto v1.0.0".
+\item \textbf{Capitolato d'appalto C1}:	API Market per microservizi	\href{www.math.unipd.it/~tullio/IS-1/2016/Progetto/C1.pdf}{www.math.unipd.it/~tullio/IS-1/2016/Progetto/C1.pdf}. 
+\item \textbf{Verbali}:
+\subsubsection{Informativi}
+\item \textbf{Studio di Fattibilità}: "Studio di Fattibilità v.1.0.0".
+\item \textbf{IEEE 830-1998}: Recommended Practice for Software Requirements Specifica- tions
+\href{http://en.wikipedia.org/wiki/Software_requirements_specification}{http://en.wikipedia.org/wiki/Software_requirements_specification}.
+
+
+\section{Titolo del paragrafo 2}
+\subsection{Titolo del sottoparagrafo 2}
+Testo Testo Testo 2.\\
+Altro Testo Altro Testo 2.\\
+\\
+Testo distanziato 2. Testo distanziato 2. 
+
+
+
+\end{document}
