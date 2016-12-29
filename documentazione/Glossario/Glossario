@@ -17,6 +17,8 @@ Branch
 Merge
 Repository
 Documentazione
+Microservizio
+Monolite
 API
 APIMarket
 Tag
@@ -38,3 +40,8 @@ Bisogni Implici -> Fonte: Dominio
 Bisogni Esplici -> Fonte: Capitolato D’Appalto
 Capitolato D’Appalto
 Dominio
+Registrare
+Efficaci
+Efficienti
+Misurabili
+Infrastruttura
