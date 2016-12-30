@@ -1,0 +1,193 @@
+% !TeX spellcheck = it_IT
+\documentclass[12pt,a4paper,titlepage]{article}
+%va sempre messo article per "program documentation"
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\usepackage{emptypage}                     
+% pagine vuote senza testatina e piede di pagina
+
+%\usepackage{hyperref}                     
+% collegamenti ipertestuali
+
+\usepackage{fancyhdr}
+% pacchetto per intestazione e pie pagina
+
+\pagestyle{fancy}
+
+
+% \\ indica interruzione di riga
+
+% compilate 2 volte per documenti con indice
+
+% {\em qui testo in corsivo}
+% {\bfseries qui testo in grossetto}
+
+%LISTE NUMERATE
+%\begin{enumerate}
+%\item primo
+%\item secondo
+%\item terzo
+%\end{enumerate}
+
+%LISTE PUNTATE
+%\begin{itemize}
+%\item primo
+%\item secondo
+%\item \dots
+%\end{itemize}
+
+%TABELLA
+%\begin{tabular}{|c|c|c|}
+%indica una tabella con 3 colonne e pos. testo centrale. La barra verticale ( | ) indica che vi e' una linea divisoria verticale tra le celle.
+%\hline	linea separatrice orizzontale
+%testo1& testo2& testo3\\
+% & segna la fine del testo nella cella , \\ indica il fine della riga 
+
+%GRAFICI
+%\begin{figure}
+%\includegraphics{filegrafico}
+%comando per includere le immagini (controllare i formati)
+%\caption{didascalia}
+%\label{nome}
+%\end{figure}
+
+
+
+
+\begin{document}
+
+\title{NORME DI PROGETTO}
+\author{SWEg Group}
+\date{}
+\maketitle
+
+\lhead{SWEg Group}
+\chead{}
+\lfoot{Norme Di Progetto}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+\rhead{Registro Modifiche}
+\section{Registro Modifiche}
+\small %rippicciolisce il testo
+\begin{tabular}{|l|c|c|c|}
+\hline
+{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
+\hline
+Creazione Documento & Piergiorgio Danieli & 12/12/2016 & 0.0.1 \\
+\hline
+Aggiunti  & Sebastiano Marchesini & 12/12/2016 & 0.0.2 \\
+\hline
+Aggiunti & Piergiorgio Danieli & 13/12/2016 & 0.0.3 \\
+\hline
+Aggiunti & Sebastiano Marchesini & 14/12/2016 & 0.0.4 \\
+\hline 
+Aggiunti & Piergiorgio Danieli & 15/12/2016 & 0.0.5 \\
+\hline
+Aggiunti & Sebastiano Marchesini & 15/12/2016 & 0.0.6 \\
+\hline
+Stesura Iniziale & Sebastiano Marchesini & 30/12/2016 & 0.1.0 \\
+\hline
+
+\end{tabular}
+\normalsize	%lo riporta a forma normale
+\newpage
+
+\tableofcontents
+%crea indice automaticamente
+\thispagestyle{empty}
+
+\newpage
+
+
+
+\rhead{Introduzione}
+\section{Introduzione}
+\subsection{Scopo del Documento}
+Questo documento ha l'obiettivo di definire le regole che i membri del gruppo \textit{SWEG} seguiranno nello sviluppo del progetto.\\
+Ogni componente del team e' tenuto a leggere e seguire le norme qui contenute per ottimizzare il lavoro, uniformare tutti i documenti e minimizzare gli errori.\\
+In particolare verrano specificate le norme per:
+\begin{itemize}
+\item interazioni tra i membri del gruppo e componenti esterni
+\item stesura dei documenti e relative convenzioni
+\item ambiente di lavoro
+\item stesura del codice.
+\end{itemize}
+
+\subsection{Glossario}
+Al fine di evitare ambiguità e ottimizzare la comprensione dei documenti, viene incluso un Glossario, nel quale saranno inseriti i termini tecnici, acronimi e parole che necessitano di essere chiarite.\\
+Un glossario è una raccolta di termini di un ambito specifico e circoscritto. In questo caso per raccogliere termini desueti e specialistici inerenti al progetto. 
+
+\subsection{Riferimenti}
+%DA METTERE QUALCOSA QUI
+
+\newpage
+
+\rhead{Comunicazioni e Riunioni}
+\section{Comunicazioni e Riunioni}
+
+\subsection{Comunicazioni Interne ed Esterne}
+\subsubsection{Interne}
+Per le comunicazioni interne è stato creato un gruppo su \textit{Telegram}, un'app di messaggistica istantanea.
+\subsubsection{Esterne}
+Per le comunicazioni esterne è stata creata la casella di posta \textit{sweg.group@gmail.com}.\\ 
+Questo può essere l'unico canale utilizzabile. Solo il \textit{Project Manager} può avere delle interazioni con l'esterno, sarà poi compito suo riferire il contenuto delle discussioni agli altri componenti del gruppo.
+
+\subsection{Riunioni}
+\subsubsection{Interne}
+Le convocazioni alle riunioni sono notificate dal \textit{Project Manager} e confermate informalmente dai componenti del gruppo. Ogni membro è tenuto a partecipare a meno di una giustificazione valida. Una riunione e' fissata per discutere di argomenti di interesse generale di tutti i componenti. E' pero' possibile che ci sia la necessità di effettuare delle riunioni alle quali non e' richiesta la presenza di tutti i membri ma solo di alcuni di essi; in questo caso il \textit{Project Manager} autorizza l'incontro e poi vi prenderanno parte solo le persone interessate, le quali dovranno poi informare gli altri componenti del gruppo delle decisioni prese.
+\subsubsection{Esterne}
+E' compito del \textit{Project Manager} fissare degli incontri con il proponete ed il committente.\\
+Tutti i membri del gruppo ne devono essere informati. Ad ogni incontro verrà scelto un 
+segretario il quale avrà il compito di redigere un verbale che verrà poi inviato a tutti
+i componenti.\\
+Ogni verbale redatto dovrà avere la seguente composizione: 
+\begin{enumerate}
+\item Data e ora
+\item Luogo
+\item Partecipanti interni
+\item Partecipanti esterni
+\item Argomenti trattati
+\item Domande e risposte
+
+\newpage
+
+\rhead{Documenti}
+\section{Documenti}
+
+\subsection{Template}
+Per facilitare ed unificare la redazione della documentazione e' stato creato un 
+template apposito in \Latex.
+
+\subsubsection{Stile del testo}
+\item \textbf{Grossetto}: Deve essere applicato alle parole significative che devono essere messe in risalto;
+\item \textbf{Corsivo}: va utilizzato per indicare termini in lingua inglese e nomi dei file;
+\item \textbf{Maiuscolo}: va usato per scrivere gli acronimi;
+\item \textbf{Latex}: ogni riferimento a \Latex va scritto utilizzando il comando \ Latex
+ 
+
+\subsection{Convenzioni tipografiche}
+
+ 
+\subsection{Vincoli generali}
+Per utilizzare le funzionalità della piattaforma è obbligatorio avere una connessione internet.
+%è necessario elencare i vincoli presenti sulle tecnologie richieste e sui sistemi operativi (anche browser) supportati. 
+\newpage
+
+\rhead{Casi d'uso}
+\section{Caso d'uso}
+L'analisi del capitolato, il dibattito tra gli Analisti e l'incontro con ItalianaSoftware ha portato alla creazione dei casi d'uso che seguono. Si è cercato anche di studiare piattaforme sociale e di scambio simili come \textit{Steam}, \textit{Google Play} e \textit{GitHub}.\\
+Le fonti su cui si ricavano quindi i casi d'uso sono sia impliciti, derivanti dallo studio del dominio, sia espliciti, come il capitolato d'appalto.
+Ogni caso d?uso ha un codice univoco gerarchico, nella forma: \\
+UC[codice univoco del padre].[codice progressivo di livello] \\
+Il codice progressivo puo? includere diversi livelli di gerarchia separati da un punto.\\
+\subsection{Caso d'uso Generale: APIM}
+
+
+
+\end{document}

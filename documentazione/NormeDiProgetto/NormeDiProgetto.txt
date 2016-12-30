@@ -1,0 +1,347 @@
+1. Introduzione
+
+1.1 scopo del documento
+Questo documento ha l'obiettivo di definire le regole che i membri del gruppo SWEG seguiranno nello sviluppo del progetto.
+Ogni componente del gruppo e' tenuto a leggere e seguire le norme qui contenute per ottimizzare
+il lavoro, uniformare tutti i documenti e minimizzare gli errori. 
+In particolare verranno specificate le norme per: 
+-interazioni tra i membri del gruppo e componenti esterni
+-stesura dei documenti e relative convenzioni
+-ambiente di lavoro
+-stesura del codice.
+
+1.2 Glossario
+Al fine di evitare ambiguita' e ottimizzare la comprensione dei documenti,
+viene incluso un Glossario, nel quale saranno inseriti i termini tecnici, acronimi 
+e parole che necessitano di essere chiarite.
+Ogni parola inserita nel Glossario sara' contrassegnata da una "G" maiuscola a pedice.
+
+1.3 Riferimenti
+
+
+2 Comunicazioni Riunioni
+
+2.1 Comunicazioni
+
+2.1.1 Comunicazioni interne
+Per le comunicazioni interne e' stato creato un gruppo su Telegram, 
+un'app di messaggistica istantanea.
+
+2.1.2 Comunicazioni esterne
+Per le comunicazioni esterne e' stata creata la casella di posta sweg.group@gmail.com. 
+Questo puo' essere l'unico canale utilizzabile. Solo il Project Manager puo' avere delle
+interazioni con l'esterno, sara' poi compito suo riferire il contenuto delle discussioni 
+agli altri componenti del gruppo.
+
+2.2 Riunioni
+
+2.2.1 Interne
+Le convocazioni alle riunioni sono notificate dal Project Manager e 
+confermate informalmente dai componenti del gruppo. Ogni membro e' tenuto a partecipare 
+a meno di una giustificazione valida. Una riunione e' fissata per discutere di argomenti 
+di interesse generale di tutti i componenti. E' pero' possibile che ci sia la necessita' 
+di effettuare delle riunioni alle quali non e' richiesta la presenza di tutti i membri 
+ma solo di alcuni di essi; in questo caso il Project Manager autorizza l'incontro e poi
+vi prenderanno parte solo le persone interessate, le quali dovranno poi informare gli altri 
+componenti del gruppo delle decisioni prese.
+
+2.2.2 Esterne
+E' compito del Project Manager fissare degli incontri con il proponete ed il committente.
+Tutti i membri del gruppo ne devono essere informati. Ad ogni incontro verra' scelto un 
+segretario il quale avra' il compito di redigere un verbale che verra' poi inviato a tutti
+i componenti.
+Ogni verbale redatto dovra' avere la seguente composizione: 
+-Data e ora
+-Luogo
+-Partecipanti interni
+-Partecipanti esterni
+-Argomenti trattati
+-Domande e risposte
+
+3 Documenti
+
+3.1 Template
+Per facilitare ed unificare la redazione della documentazione e' stato creato un 
+template (G a pedice) apposito in LATEX (G a pedice).
+
+3.2 Stile del testo
+• Grassetto: Deve essere applicato alle parole significative che devono essere messe in risalto.
+	Va applicato ai titoli e agli elementi che costituiscono un elenco che sono seguiti 
+	da una descrizione;
+• Monospace: va utilizzato per indicare percorsi dei file, codice, comandi;
+• Corsivo: va utilizzato per indicare termini in lingua inglese e nomi dei file;
+• Maiuscolo: va usato per scrivere gli acronimi;
+• LATEX: ogni riferimento a LATEX (G pedice) va scritto utilizzando il comando \LaTeX. 
+
+3.3 Convenzioni tipografiche
+// vanno inseriti i comandi usati in latex
+
+3.4 Formati
+• Date: saranno espresse nel formato italiano gg/mm/aaaa dove:
+– gg: indica il giorno, va scritto sempre con 2 cifre;
+– mm: rappresenta il mese, va scritto sempre con 2 cifre;
+– aaaa: indica l’anno, va scritto sempre con 4 cifre.
+
+• Anni accademici: si userà il formato aaaa1-aaaa2 dove:
+– aaaa1: indica l’anno solare di inizio, va scritto sempre con 4 cifre;
+– aaaa2: indica l’anno solare di fine, va scritto sempre con 4 cifre;
+
+• Orari: verranno espressi secondo lo standard ISO 8601 HH:MM dove:
+– HH: indica le ore, va scritto sempre con 2 cifre;
+– MM: indica i minuti, va scritto sempre con 2 cifre;   
+
+• URL: collegamento ad un indirizzo web deve essere scritto con un font di colore blu;
+
+• Sigle: i nomi dei documenti potranno essere sostituiti dalle rispettive 
+sigle:
+– AdR ad indicare il documento “Analisi dei Requisiti”;
+– PdP ad indicare il documento “Piano di Progetto”;
+– PdQ ad indicare il documento “Piano di Qualifica”;
+– NdP ad indicare il documento “Norme di Progetto”;
+– Gl ad indicare il documento “Glossario”;
+– ST ad indicare il documento “Specifica Tecnica”;
+– SdF ad indicare il documento “Studio di Fattibilità”. 
+
+3.5 Struttura del documento
+
+3.5.1 Frontespizio
+Il frontespizio di ogni documento dovra' essere cosi' strutturato:
+-Nome e logo del gruppo;
+-Nome del progetto;
+-Titolo del documento;
+-Versione del documento;
+-Nome e cognome dei redattori del documento;
+-Nome e cognome dei revisori del documento;
+-Uso del documento;
+-Destinatari del documento;
+
+3.5.2 Diario delle  modifiche
+La seconda pagina deve essere una tabella contenente i cambiamenti che sono stati 
+effettuati nel documento. Deve essere cosi' strutturata:
+-Modifica: descrizione delle modifiche effettuate;
+-Nome: nome e cognome dell'autore delle modifiche;
+-Data: il giorno nel quale sono state apportate le modifiche;
+-Versione: la versione del documento dopo la modifica;
+La tabella e' ordinata per data in ordine decrescente, in modo che la prima riga 
+sia l'ultima modifica eseguita, e quindi corrisponda alla versione attuale del documento.
+
+3.5.3 Indice
+La pagine successiva al diario delle modifiche deve essere l'indice del documento.
+Ogni documento tranne i verbali deve contenere l'indice che serve a dare una visione globale 
+degli argomenti trattati.
+
+3.5.4 Formattazione generale
+Tutte le altre pagine del documento dovranno rispettare la struttura di base che segue:
+- Logo del gruppo: sarà posizionato sempre in alto a sinistra;
+- Sezione corrente: nell'intestazione deve comparire il numero ed il nome della sezione in cui ci si trova.
+	Questa informazione sarà in alto a destra;
+- Numero di pagina: compare a piè di pagina, a destra;
+
+Ogni pagina deve rispettare i seguenti margini: 
+-Superiore: cm;
+-Inferiore: cm;
+-Destro: cm;
+-Sinistro: cm;
+
+3.6 Classificazione documenti
+
+3.6.1 Documenti formali
+Tutti i documenti che sono stati approvati dal Project Manager sono da ritenersi formali. 
+Se un documento formale viene modificato, deve essere successivamente approvato nuovamente
+dal Project Manager. 
+
+3.6.2 Documenti informali
+Sono quei documenti che non sono stati approvati del Project Manager, poiché non lo necessitano
+e quindi sono ad esclusivo uso interno, o perché sono ancora in fase di sviluppo e verranno 
+approvati successivamente.
+
+3.7 Componenti grafiche
+
+3.7.1 Tabelle
+Tutte le tabelli presenti nella documentazione necessitano di una didascalia che le descrive brevemente
+e che porta un numero progressivo in modo da identificarla univocamente.
+
+3.7.2 Immagini
+Le immagini come le tabelle dovranno essere accompagnate da una didascalia ed un numero progressivo
+che le identifica.
+
+3.8 Intestazione file di documentazione
+Ogni file di documentazione dovrà iniziare con la seguente intestazione:
+-%FILE: nome del file;
+-%PERCORSO: /PercorsoDelFile/NomeDelDocumento/;
+-%DATA CREAZIONE: gg/mm/aa;
+-%AUTORE: SWEg;
+-%EMAIL: sweg.group@gmail.com;
+
+7 Procedure di sviluppo
+In questa sezione verranno descritte le procedure che tutti i componenti del gruppo sono tenuti a seguire
+per ottenere un risultato soddisfacente degli obiettivi stabiliti dal Piano di qualifica v1.0.0
+
+7.1 Gestione di progetto
+Il Project Manager ha la responsabilità di gestire l'intero progetto. Dovrà utilizzare gli
+strumenti in suo possesso per:
+-Coordinare e pianificare le attività;
+-Coordinare e gestire le risorse umane;
+-Analizzare i rischi;
+-Elaborare e monitorare i dati d'avanzamento;
+
+7.1.1 Pianificazione delle attività:
+Per ogni periodo di lavoro il Project Manager deve stabilire le seguenti attività:
+-Creare un calendario lavorativo;
+-Inserire le attività da svolgere;
+-Inserire eventuali dipendenze delle attività;
+-Inserire le milestone (G a pedice) indicante il termine previsto delle attività;
+-Assegnare ad ogni attività le risorse necessarie;
+
+7.1.2 Coordinamento delle attività
+Una volta pianificate le attività, il Project Manager le assegna ad ognuno dei membri atrraverso
+l'ausilio offerto da Asana (G a pedice). Ogni componente può quindi verificare quali attività 
+gli sono state assegnate e modificarne lo stato, facendo in modo che il Project Manager possa 
+seguire con facilità i progressi effettuati.
+
+7.1.3 Analisi dei rischi
+Durante tutto l'avanzamento del progetto il Project Manager ha il compito di valutare eventuali
+rischi che possono venirsi a creare e che sono descritti nel Piano di Progetto v0.0.1 attuando 
+le adeguate contromisure descritte.
+
+7.1.4 Elaborazione dei dati
+Il Project Manager dovrà creare eventuali grafici esplicativi dell'andamento del progetto, e 
+riportarli nel Piano di Progetto v0.0.01.
+
+7.2 Verifica
+In questa sezione verranno descritte le tecniche e le strategie che dovranno utilizzare i Verificatori
+durante il loro lavoro, in modo da uniformare le attività ed ottenre il miglior risultato possibile
+
+7.2.1 Tecniche di analisi
+I Verificatori dovranno utilizzare le seguenti tecniche per svolgere al meglio il proprio compito:
+-Walkthrough (G a pedice): consiste in una lettura del documento/codice cercando errori ed
+ anomalie a largo spettro senza un'idea precisa del tipo di errori che si potranno trovare. 
+ Ogni errore verrà discusso con gli autori per evitare incompresioni e per valutare insieme
+ le modifiche da apportare. Il walkthrough (G a pedice) è necessario nelle prime fasi dello sviluppo, quando 
+ ancora non è del tutto chiaro quali siano gli errori possibili. Utilizzando questa tecnica più
+ volte è possibile scrivere una lista degli errori più comuni.
+-Inspection: l'inspection si basa sulla lettura mirata del documento/codice. Questa fase
+ è facilitata dall'utilizzo della lista stilata durante la fase di walkthrough. In questo modo 
+ si cercano gli errori maggiormente fatti. Con l'acquisizione di esperienza la lista di controllo 
+ verrà estesa, rendendo questa fase sempre più efficace.
+-Analisi dinamica: questa analisi si applica solo al prodotto software e viene svolta 
+ durante l'esecuzione del codice. Per questo tipo di analisi vengono utilizzati degli appositi test 
+ per verificare il funzionamento e rilevare possibili erori d'implementazione.
+ Questi test devono essere utili e ripetibili. Sono definiti 
+ ripetibili quando uno stesso test, con gli stessi dati in input, sullo stesso hardware e 
+ con lo stesso software, produce lo stesso risultato.
+-Test di unità: questo test verifica che ogni singola unità di software funzioni correttamente.
+ Con questo test si verifica la correttezza di tutti i moduli base che compongono il 
+ software, limitando così gli errori d'implementazione.
+-Test di integrazione: questo test verifica che due moduli testati durante il test precedente,
+ funzioni anche quando vengono assemblati insieme. E' possibile in questo modo scovare
+ degli errori che precedentemente erano sfuggiti. 
+-Test di sistema: consiste nella validazione dei prodotti software. Viene eseguito soltanto 
+ quando si raggiunge una versione che può essere definitiva. Viene quindi verificata
+ la copertura completa dei requisiti da parte del prodotto.
+-Test di regressione: viene eseguito immediatamente dopo che una componente è stata 
+ modificata. Di fatto consiste nel eseguire nuovamente tutti i test precedenti per vrificare 
+ che le modifiche permettano ancora ai moduli di funzionare nel modo previsto. 
+-Test di accettazione: coincide con il collaudo del software in presenza del proponente. 
+ Se questo test ha esito positivo, il prodotto sarà considerato abbastanza maturo da 
+ permettere il rilascio.
+ 
+7.2.2 Lista di controllo
+Durante la fase di walkthrough sono stati rilevati questi come errori più frequenti:
+-Norme stilistiche:
+	-Un elemento dell'elenco inzia con lettera minuscola;
+	-
+	-
+	-
+-Italiano:
+	-Scorretto utilizzo di accenti acuti e gravi;
+	-
+	-
+-Latex:
+	-Termini presenti nel glossario ma non segnati con l'apposito comando nel documento o viceversa
+	-
+-Tracciamento requisiti:
+	-Ad ogni caso deve corrispondere almeno un elemento;
+	-
+-UML:
+	-Direzione delle frecce dei diagrammi errate;
+	-
+
+7.2.3 Verifica documenti
+Il Verificatore nei documenti dovrà verificare:
+-Controllare nel diario delle modifiche i cambiamenti avvenuti dall'ultima volta;
+-Cercare eventuali errori nelle parti che sono state modificate del documento;
+-Fare un resoconto degli errori riscontarti, in modo che il Project Manager possa
+ creare un ticket per la correzione;
+-Aggiornare il registro delle modifiche e la versione del documento.
+
+7.2.4 Verifica requuisiti
+Il verificatore, nel controllare i requisiti dovrà porre la propria attenzione su:
+-Correttezza ortografica e lessicale del testo;
+-Atomicità dei requisiti foglia.
+
+7.2.5 Verifica diagrammi UML
+Nel controllare i diagrammi UML(G a pedice), il Verificatore dovrà prestare attenzione a questi elementi:
+-Correttezza ortografica e lessicale del testo;
+-Correttezza del formalismo grafico utilizzato;
+-Correttezza logica del programma.
+
+8 Ambiente di lavoro
+
+8.1 Sistema operativo
+Non è stato imposto nessun obbliglo di un sistema operativo particolare per i membri del gruppo.
+Gli strumenti di lavoro locali sono scelti in modo da essere disponibili sui sistemi Windows(G apedice),
+Mac OS X (G a pedice) e Linux (G a pedice).
+
+8.2 Documentazione
+
+8.2.1 Latex
+Abbiamo deciso di utilizzare Latex (G a pedice) come linguaggio per la stesura dei documenti.
+I motivi che ci hanno portato a questa scelta sono i seguenti: 
+-Fornisce un insieme di procedure e tecniche di creazione, impaginazione e produzione di documenti;
+-Mette a disposizione mezzi per l'automazione della maggior parte della composizione tipografica;
+-E' distribuito con una licenza di software libero;
+-Permette di definire template;
+-Consente di suddividere il documento in file separati.
+
+8.2.2 Editor
+L'editor di testo utilizzato è 
+
+8.2.3 Diagrammi UML
+La creazione di diagrammi UML viene effettuata con 
+
+8.2.4 Verifica
+Tutti i documenti creati con Latex dovranno essere sottoposti ad un controllo ortografico 
+per eliminare eventuali errori.
+
+8.3 Pianificazione
+
+8.3.1 Diagrammi
+Per la pianificazione delle attività è stato scelto il software 
+
+8.3.2 Attività
+Asana è un'applicazione web e mobile che permette la suddivisione delle attività in modo
+strutturato. Offre un'organizzazione ad albero (G a pedice) suddivisa in questo modo:
+-Creare più Workspace (G a pedice);
+-Creare Project (G a pedice) all'interno di Workspace;
+-Creare Task (G a pedice) all'interno di un Project;
+-Creare Sub-Task (G a pedice) all'interno di un Task.
+Alcune delle funzionalità offerte sono:
+-Assegnare un TAsk ad uno o più individui;
+-Assegnare una data di scadenza;
+-Vedere le attività in scadenza sul calendario;
+-Seguire lo stato di avanzamento dei Task;
+-Avere un riepilogo dei Task;
+-Riceve e-mail automatiche con l'aggiornameto dei Task che si seguono.
+I nome delle etichette relativi ai Task dovranno seguire la seguente forma
+		[elemento di interesse] messaggio
+-Elemento di interesse: si riferisce al documento o all'ambito al quale appartiene 
+ il Task. Nel caso un cui si tratti di un documento, dovranno essere messe le iniziali del suo nome.
+ Ad esempio NdP, per indicare Norme di Progetto. Nel secondo caso si userà il nome completo dell'ambito
+ che si sta trattando. In entrambi i casi viene utilizzata la lettera maiuscola.
+-Messaggio: breve messaggio quanto più esaustivo possibile per inidcare la problematica 
+ da risolvere o il compito da eseguire.
+ 
+8.3.3 Altri strumenti
+
+ 
