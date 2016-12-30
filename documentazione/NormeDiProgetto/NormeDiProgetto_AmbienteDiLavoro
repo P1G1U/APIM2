@@ -21,9 +21,12 @@ Per la documentazione inizialmente si redige una prima stesura su un documento s
 
 8.4.1 Latex
 E’ stato scelto di scrivere i documenti in linguaggio latex perché: 
--Inerente al nostro percorso di studi essendo un linguaggio compilabile. Si usa di più la mente logica che serve a costruire un programma informatico.
--I documenti scritti con il mark-up di Latex posso venire composti direttamente in pdf, oltre ad altri formati.
--Sono più precisi gli automatismi di creazione di indice e l’impaginazione.
+-Inerente al nostro percorso di studi essendo un linguaggio compilabile. Si usa di più la mente logica che serve a costruire un programma informatico;
+-I documenti scritti con il mark-up di Latex posso venire composti direttamente in pdf, oltre ad altri formati;
+-Sono più precisi gli automatismi di creazione di indice e l’impaginazione;
+-E' distribuito con una licenza di software libero;
+-Permette di definire template;
+-Consente di suddividere il documento in file separati.
 
 8.4.2 Editor
 L’editor di testo utilizzato multipiattaforma è TexStudio. Programma efficiente con compilazione rapida. Offre una insieme di mezzi per velocizzare e facilitare la creazione della documentazione.
@@ -33,12 +36,37 @@ Per la creazione dei diagrammi UML si è preso riferimento l’applicazione usat
 Progettato per il design dei principali grafici a uso informatico.
 
 8.4.4 Verifica
+Tutti i documenti creati con Latex sono automaticamente controllati con uno script per il controllo ortografico.
+
 
 8.5 Pianificazione
 
-8.5.1 Diagrammi
+8.3.1 Diagrammi
+Per la pianificazione delle attività è stato scelto il software 
 
-8.5.2 Attività
+8.3.2 Attività
+Asana è un'applicazione web e mobile che permette la suddivisione delle attività in modo
+strutturato. Offre un'organizzazione ad albero (G a pedice) suddivisa in questo modo:
+-Creare più Workspace (G a pedice);
+-Creare Project (G a pedice) all'interno di Workspace;
+-Creare Task (G a pedice) all'interno di un Project;
+-Creare Sub-Task (G a pedice) all'interno di un Task.
+Alcune delle funzionalità offerte sono:
+-Assegnare un TAsk ad uno o più individui;
+-Assegnare una data di scadenza;
+-Vedere le attività in scadenza sul calendario;
+-Seguire lo stato di avanzamento dei Task;
+-Avere un riepilogo dei Task;
+-Riceve e-mail automatiche con l'aggiornameto dei Task che si seguono.
+I nome delle etichette relativi ai Task dovranno seguire la seguente forma
+		[elemento di interesse] messaggio
+-Elemento di interesse: si riferisce al documento o all'ambito al quale appartiene 
+ il Task. Nel caso un cui si tratti di un documento, dovranno essere messe le iniziali del suo nome.
+ Ad esempio NdP, per indicare Norme di Progetto. Nel secondo caso si userà il nome completo dell'ambito
+ che si sta trattando. In entrambi i casi viene utilizzata la lettera maiuscola.
+-Messaggio: breve messaggio quanto più esaustivo possibile per inidcare la problematica 
+ da risolvere o il compito da eseguire.
+
 
 8.6 Versionamento
 Il software di versionamento scelto è Git. Le motivazioni a base della scelta è perché con Git:

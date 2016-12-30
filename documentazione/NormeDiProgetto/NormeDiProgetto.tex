@@ -165,21 +165,21 @@ Ogni verbale redatto dovrà avere la seguente composizione:
 
 \subsection{Template}
 Per facilitare ed unificare la redazione della documentazione e' stato creato un 
-template apposito in \Latex.
+template apposito in \LaTeX.
 
 \subsubsection{Stile del testo}
 \begin{itemize}
 \item \textbf{Grossetto}: Deve essere applicato alle parole significative che devono essere messe in risalto;
 \item \textbf{Corsivo}: va utilizzato per indicare termini in lingua inglese e nomi dei file;
 \item \textbf{Maiuscolo}: va usato per scrivere gli acronimi;
-\item \textbf{Latex}: ogni riferimento a \Latex va scritto utilizzando il comando \ Latex
+\item \textbf{Latex}: ogni riferimento a \LaTeX va scritto utilizzando il comando \_LaTeX .
 \end{itemize}
 
 \subsection{Convenzioni tipografiche}
 %COMANDI IN LATEX
  
 \subsection{Formati}
-\begin{itemsize}
+\begin{itemize}
 	\item \textbf{Date}: saranno espresse nel formato italiano gg/mm/aaaa dove:
 	\begin{itemize}
 		\item gg : indica il giorno, va scritto sempre con 2 cifre;
@@ -211,6 +211,7 @@ template apposito in \Latex.
 		\item ST ad indicare il documento ?Specifica Tecnica?;
 		\item SdF ad indicare il documento ?Studio di Fattibilità?.
 	\end{itemize}
+\end{itemize}
 	
 \subsection{Struttura del documento}
 \subsubsection{Frontespizio}
@@ -281,6 +282,365 @@ Ogni file di documentazione dovrà iniziare con la seguente intestazione:
 	\item \%EMAIL: sweg.group@gmail.com;
 \end{itemize}
 
+\newpage
+
+\rhead{Ruoli}
+\section{Ruoli}
+\subsection{Ruoli all'interno del progetto}
+Ad ogni componente è assegnato un ruolo all'interno del progetto che varia a seconda di regole che sono riportate in seguito. Importante è la nessun conflitto di interesse infatti non è possibile validare il processo progettato o realizzato. Può però capitare che si svolgano più compiti nello stesso periodo causa carenza di personale. Importante è la flessibilità all'interno del team per diminuire i tempi di scambio mansione.\\
+Ogni membro a qualunque ruolo ha il diritto di rafforzare la sua funzione con corsi e il dovere di specializzarsi con ricerca ed esperienze personali.
+\subsubsection{Project Manager} 
+Titolare di responsabilità decisionale. Rappresenta il progetto di fronte al fornitore e al committente. Tale figura è garante unico dell'avvio, pianificazione, svolgimento, controllo e chiusura di un progetto. In particolare :
+\begin{itemize}
+	\item Pianifica riunioni e compiti;
+	\item Gestisce i ruoli;
+	\item Ruolo consultivo e preventivo;
+	\item Capacità tecniche e conosce bene gli strumenti utili;
+	\item Controllo, coordinamento con relazioni esterne;
+	\item Approvazione documenti.
+\end{itemize}
+\subsubsection{Amministratore} 
+Responsabilità di cura dei processi. In dettaglio : 
+\begin{itemize}
+	\item Gestione delle risorse e delle infrastrutture
+	\item Ispettore di versioni e configurazioni
+	\item Risolutore di difficoltà di processi
+\end{itemize}
+\subsubsection{Analista} 
+Il ruolo principale dell'analista è l'attuazione dei requisiti. Quindi comprendere il problema in ogni sfaccettatura. Senza l'obbligo di trovare una soluzione. Tra le sue competenze : 
+\begin{itemize}
+	\item Cogliere il problema
+	\item Conoscere il dominio del quesito
+	\item Vasta esperienza professionale
+\end{itemize}
+\subsubsection{Progettista} 
+Il compito del progettista è quello di realizzare e seguire la manutenzione del prodotto. E' di fatto un attuatore : 
+\begin{itemize}
+	\item Risolve il problema
+	\item Definisce cosa viene costruito e come 
+	\item Ampia conoscenza nei linguaggi e delle risorse utilizzate
+	\item Esegue una soluzione attuabile e comprensibile
+\end{itemize}
+\subsubsection{Programmatore} 
+Il programmatore è la mano che muove crea il progetto. Il suo compito principale è infatti la realizzazione e la manutenzione del prodotto. Come il progettista anche nel suo ambito è un attuatole :
+\begin{itemize}
+	\item Segue i piani progettati e attua il disegno previsto
+	\item Implementa test di verifica automatica per il suo codice
+	\item Il codice che scrivere deve essere versionato e documentato comprensibile
+\end{itemize}
+\subsubsection{Verificatore} 
+Al termine del lavoro eseguito dagli altri membri del team il verificatore esegue un controllo tramite analisi statica del ticket . Questa può essere attuata tramite \textit{Walkthrough} o \textit{Ispection}. Nel secondo caso la check list è redata concordata insieme al \textit{Project Manager}. 
+\begin{itemize}
+	\item Controlla siano rispettati gli standard aderiti nel progetto
+	\item Assicura la conformità del prodotto in ogni fase del ciclo di vita
+\end{itemize}
+\subsubsection{Responsabile Qualità} 
+Non è richiesto tale ruolo all'interno del team e non sarà interpretato nella rotazione. Molto spesso è incaricato un ente fuori dall'azienda. In questo caso è compito del committente.
+
+\subsection{Sistema rotativo dei ruoli}
+Il progetto a scopo didattico ha l'obbligo di far interpretare ogni ruolo a tutti i partecipanti del team. Per il momento assumiamo un modello agile di tipo \textit{scrum} per eseguire i compiti (o \textit{ticket}). Quindi dopo aver costruito una prima check list in gruppo ogni obbiettivo viene risolto da un sottogruppo in cui il primo che preferisce eseguirlo assume il ruolo di \textit{Project Manager} e vaglia oggettivamente ogni sfaccettatura per risolvere il \textit{backlog} richiedendo le risorse di cui ha bisogno.
+
+\subsection{Costi Ruoli}
+Ciascun ruolo e mansione ha un peso diverso nel progetto e quindi un costo. Che deve rientrare nel \textit{budget} pattuito dal committente $XXXXXX$ . Non specificato nel nostro caso.
+\subsubsection{Tabella Costi}
+%TABELLA COSTI MANCANTE
 
 
+
+\newpage
+
+\rhead{Analisi dei Requisiti}
+\section{Analisi dei Requisiti}
+\subsection{Studio di Fattibilità e Analisi dei Rischi}
+Dopo aver indetto le riunioni e stabilito i vari ruoli gli \textit{Analisti} valuteranno capacità e preferenze del progetto che gioveranno alla completa realizzazione degli obbiettivi. E? quindi compito di questi ultimi, sulla base di quanto deciso, redigere uno \textit{Studio di Fattibilità} con:
+\begin{itemize}
+	\item Contributi agli obbiettivi dell'organizzazione
+	\item Ingegnerizzare con la tecnologia corrente entro il \textit{budget}
+	\item Integrazione con altri sistemi usati
+\end{itemize}
+
+\subsection{Documento Analisi dei Requisiti}
+Sempre gli \textit{Analisti} hanno compito di redigere l' \textit{Analisi dei Requisiti}. Comunicheranno poi al \textit{Project Manager} il bisogno di negoziare e chiarire con il committente punti meno chiari del capitolato.
+\subsubsection{Classificazione dei requisiti}
+Ogni requisito può essere provvisto di più sotto-requisiti. I requisiti vengono organizzati in forma gerarchica.\\
+Al compimento di tutti i moduli che compongono il requisito padre questo viene soddisfatto.\\
+La notazione da utilizzare e? quella che segue:
+\begin{center}
+\textbf{	<0|1|2><F|P|Q|V>-X<.Y<.Z>> }
+\end{center}
+
+Dove le seguenti sigle indicano:
+\begin{trivlist}
+	\item \textbf{0}: obbligatorio
+	\item \textbf{1}: desiderabile
+	\item \textbf{2}: opzionale
+\end{trivlist} 
+Hanno diverso tipo:
+\begin{trivlist}
+	\item \textbf{F}: requisito funzionale
+	\item \textbf{P}: requisito prestazionale
+	\item \textbf{Q}: requisito di qualità
+	\item \textbf{V}: requisito dichiarativi(vincoli)
+\end{trivlist} 
+Tale parte indica il codice identificativo di ogni requisito.\\
+E' espresso in modo gerarchico ed univoco.
+\begin{trivlist}
+	\item \textbf{X}: requisito di primo livello
+	\item \textbf{Y}: sotto-requisito
+	\item \textbf{Z}: sotto-requisito di un sotto-requisito
+\end{trivlist} 
+I campi Y e Z possono essere assenti.\\
+\\
+Si ricorda che per ogni requisito c'è bisogno di una descrizione e riportare le dipendenze che ha verso altri. I requisiti non devono comunque essere in conflitto tra loro.
+
+\subsubsection{Allocazione e modellazione concettuale del sistema}
+Il team \textit{Analisti}, dopo aver preso visione nello specifico del capitolato e aver fatto emergere i requisiti , procede con la costruzione dei diagrammi dei casi d'uso ( \textit{UC} ). 
+Nello specifico é richiesto:
+\begin{itemize}
+	\item \textbf{Titolo} del caso d'uso sintetico
+	\item \textbf{Attori Principali}
+	\item \textbf{Attori Secondari}, nel caso vi fossero.
+\end{itemize}
+Descrizione del caso con:
+\begin{itemize}
+	\item \textbf{Scenario principale}
+	\item \textbf{Scenari/o alternativo}, se presenti
+	\item \textbf{Precondizione}
+	\item \textbf{Postcondizione}
+	\item \textbf{Requisiti del caso d'uso ricavati}
+\end{itemize}
+Il caso d'uso sarà sempre associato da un grafico specializzato. Si è scelto uno standard ibrido tra \textit{UML 2.x e 1.x} con le funzioni principali che racchiudono le due versioni di linguaggio.
+
+\subsection{Tracciamento}
+Il tracciamento dimostra completezza ed economicità della soluzione. Se tracciati tutti i requisiti conseguentemente:
+\begin{itemize}
+	\item Possiamo soddisfarli
+	\item Nessuna funzionalità sarà superflua
+	\item Nessun comportamento è ingiustificato
+\end{itemize}
+E' nostro compito automatizzare il processo con software adeguato.
+
+\newpage
+
+\rhead{Procedure di sviluppo}
+\section{Procedure di sviluppo}
+In questa sezione verranno descritte le procedure che tutti i componenti del gruppo sono tenuti a seguire
+per ottenere un risultato soddisfacente degli obiettivi stabiliti dal Piano di qualifica v1.0.0 .
+\subsection{Gestione di progetto}
+Il \textit{Project Manager} ha la responsabilità di gestire l'intero progetto. Dovrà utilizzare gli
+strumenti in suo possesso per:
+\begin{itemize}
+	\item Coordinare e pianificare le attività;
+	\item Coordinare e gestire le risorse umane;
+	\item Analizzare i rischi;
+	\item Elaborare e monitorare i dati d'avanzamento;
+\end{itemize}
+\subsubsection{Pianificazione delle attività}
+Per ogni periodo di lavoro il \textit{Project Manager} deve stabilire le seguenti attività:
+\begin{itemize}
+	\item Creare un calendario lavorativo;
+	\item Inserire le attività da svolgere;
+	\item Inserire eventuali dipendenze delle attività;
+	\item Inserire le \textit{milestone} indicante il termine previsto delle attività;
+	\item Assegnare ad ogni attività le risorse necessarie;
+\end{itemize}
+\subsubsection{Coordinamento delle attività}
+Una volta pianificate le attività, il \textit{Project Manager} le assegna ad ognuno dei membri attraverso
+l'ausilio offerto da \textit{Asana}. Ogni componente può quindi verificare quali attività 
+gli sono state assegnate e modificarne lo stato, facendo in modo che il \textit{Project Manager} possa 
+seguire con facilità i progressi effettuati.
+\subsubsection{Analisi dei rischi}
+Durante tutto l'avanzamento del progetto il \textit{Project Manager} ha il compito di valutare eventuali
+rischi che possono venirsi a creare e che sono descritti nel \textit{Piano di Progetto} v1.0.0 attuando 
+le adeguate contromisure descritte.
+\subsubsection{Elaborazione dei dati}
+Il \textit{Project Manager} dovrà creare eventuali grafici esplicativi dell'andamento del progetto, e 
+riportarli nel \textit{Piano di Progetto} v1.0.0.
+\subsection{Verifica}
+In questa sezione verranno descritte le tecniche e le strategie che dovranno utilizzare i \textit{Verificatori}
+durante il loro lavoro, in modo da uniformare le attività ed ottenre il miglior risultato possibile.
+\subsubsection{Tecniche di analisi}
+I Verificatori dovranno utilizzare le seguenti tecniche per svolgere al meglio il proprio compito:
+\begin{itemize}
+	\item \textbf{Walkthrough}: consiste in una lettura del documento/codice cercando errori ed
+	anomalie a largo spettro senza un'idea precisa del tipo di errori che si potranno trovare.\\ 
+	Ogni errore verrà discusso con gli autori per evitare incomprensioni e per valutare insieme
+	le modifiche da apportare. Il \textit{walkthrough} è necessario nelle prime fasi dello sviluppo, quando 
+	ancora non è del tutto chiaro quali siano gli errori possibili. Utilizzando questa tecnica più
+	volte è possibile scrivere una lista degli errori più comuni.
+	\item \textbf{Inspection}: l'\textit{inspection} si basa sulla lettura mirata del documento/codice. Questa fase è facilitata dall'utilizzo della lista stilata durante la fase di \textit{walkthrough}. In questo modo 
+	si cercano gli errori maggiormente fatti. Con l'acquisizione di esperienza la lista di controllo 
+	verrà estesa, rendendo questa fase sempre più efficace.
+	\item \textbf{Analisi dinamica}: questa analisi si applica solo al prodotto software e viene svolta 
+	durante l'esecuzione del codice. Per questo tipo di analisi vengono utilizzati degli appositi test 
+	per verificare il funzionamento e rilevare possibili errori d'implementazione.\\
+	Questi \textit{test} devono essere utili e ripetibili. Sono definiti 
+	ripetibili quando uno stesso test, con gli stessi dati in input, sullo stesso hardware e 
+	con lo stesso software, produce lo stesso risultato.
+	\subitem \textbf{Test di unità}: questo \textit{test} verifica che ogni singola unità di software funzioni correttamente.
+	Con questo test si verifica la correttezza di tutti i moduli base che compongono il 
+	software, limitando così gli errori d'implementazione.
+	\subitem \textbf{Test di integrazione}: questo test verifica che due moduli testati durante il test precedente,
+	funzioni anche quando vengono assemblati insieme. E' possibile in questo modo scovare
+	degli errori che precedentemente erano sfuggiti. 
+	\subitem \textbf{Test di sistema}: consiste nella validazione dei prodotti software. Viene eseguito soltanto 
+	quando si raggiunge una versione che può essere definitiva. Viene quindi verificata
+	la copertura completa dei requisiti da parte del prodotto.
+	\subitem \textbf{Test di regressione}: viene eseguito immediatamente dopo che una componente è stata 
+	modificata. Di fatto consiste nel eseguire nuovamente tutti i test precedenti per verificare 
+	che le modifiche permettano ancora ai moduli di funzionare nel modo previsto. 
+	\subitem \textbf{Test di accettazione}: coincide con il collaudo del software in presenza del proponente. 
+	Se questo test ha esito positivo, il prodotto sarà considerato abbastanza maturo da 
+	permettere il rilascio.
+\end{itemize}
+\subsubsection{Lista di controllo}	%DA COMPLETARE
+Durante la fase di \textit{walkthrough} sono stati rilevati questi come errori più frequenti:
+\begin{itemize}
+\item Norme Stilistiche:
+	\begin{itemize}
+		\item Un elemento dell'elenco inizia con lettera minuscola;
+		\item
+		\item
+	\end{itemize}
+\item Italiano:
+	\begin{itemize}
+		\item Scorretto utilizzo di accenti acuti e gravi;
+		\item Punteggiatura nelle liste;
+		\item
+	\end{itemize}
+\item \LaTeX:
+	\begin{itemize}
+		\item
+	\end{itemize}
+\item UML:
+	\begin{itemize}
+		\item Direzione delle frecce del diagramma errate;
+		\item 
+	\end{itemize}	
+\end{itemize}
+\subsubsection{Verifica documenti}
+Il \textit{Verificatore} nei documenti dovrà verificare:
+\begin{itemize}
+	\item Controllare nel diario delle modifiche i cambiamenti avvenuti dall'ultima volta;
+	\item Cercare eventuali errori nelle parti che sono state modificate del documento;
+	\item Fare un resoconto degli errori riscontarti, in modo che il \textit{Project Manager} possa creare un \textit{ticket} per la correzione;
+	\item Aggiornare il registro delle modifiche e la versione del documento.
+\end{itemize}
+\subsubsection{Verifica requisiti}
+Il verificatore, nel controllare i requisiti dovrà porre la propria attenzione su:
+\begin{itemize}
+	\item Correttezza ortografica e lessicale del testo;
+	\item Atomicità dei requisiti foglia.
+\end{itemize}
+\subsubsection{Verifica diagrammi UML}
+Nel controllare i diagrammi \textit{UML}, il \textit{Verificatore} dovrà prestare attenzione a questi elementi:
+\begin{itemize}
+	\item Correttezza ortografica e lessicale del testo;
+	\item Correttezza del formalismo grafico utilizzato;
+	\item Correttezza logica del programma.
+\end{itemize}
+
+\newpage
+
+\rhead{Ambiente di lavoro}
+\section{Ambiente di lavoro}
+\subsection{Sistema operativo}
+Il progetto e l?insieme delle applicazioni di supporto non sono progettate su un particolare sistema operativo. I componenti del team avranno quindi la possibilità di installare i propri \textit{client} dei mezzi in qualunque macchina: \textit{Windows} , \textit{Mac OS X}, \textit{Linux}.
+
+\subsection{Applicativo Guida}
+Si è stato scelto per il coordinamento : 
+\begin{itemize}
+	\item Applicativo web Asana;
+	\item Repository Git;
+	\item Comunicazione tramite Telegram. 
+\end{itemize}
+
+\subsection{Ticket-ing}
+Il web applicativo Asana è stato scelto per la comunicazione e il ticketing. \\
+E' prediletto questa piattaforma per la sua versione sia web sia mobile. \\
+Collegato tramite mail così da avere una notifica sui compiti seguiti.\\
+Oltre ovviamente a essere gratuito Asana offre la possibilità di collegare direttamente file e link su ogni singolo ticket. \\
+Cosa infine forse più importante è l'associazione al calendario così da avere sotto controllo migliore gli eventi datati.
+
+\subsection{Documentazione}
+Per la documentazione inizialmente si redige una prima stesura su un documento semplice in qualsiasi text editor per poi elaborarlo in linguaggio \LaTeX.
+
+\subsubsection{Latex}
+E' stato scelto di scrivere i documenti in linguaggio \LaTeX perché:
+\begin{itemize}
+	\item nerente al nostro percorso di studi essendo un linguaggio compilabile. Si usa di più la mente logica che serve a costruire un programma informatico;
+	\item I documenti scritti con il mark-up di Latex posso venire composti direttamente in pdf, oltre ad altri formati;
+	\item Sono più precisi gli automatismi di creazione di indice e l'impaginazione;
+	\item E' distribuito con una licenza di software libero;
+	\item Permette di definire template;
+	\item Consente di suddividere il documento in file separati.
+\end{itemize} 
+\subsubsection{Edior}
+L'editor di testo utilizzato multipiattaforma è \textit{TexStudio}. Programma efficiente con compilazione rapida. Offre una insieme di mezzi per velocizzare e facilitare la creazione della documentazione.
+\subsubsection{Diagrammi UML}
+Per la creazione dei diagrammi \textit{UML} si è preso riferimento l'applicazione usata dal professore nelle ore di lezione. Inserendo la mail concessaci dell'università è possibile avere una versione gratuita del software \textit{Astah}.\\
+Progettato per il design dei principali grafici a uso informatico.
+\subsubsection{Verifica}
+Tutti i documenti creati con \LaTeX sono automaticamente controllati con uno script per il controllo ortografico.
+
+\subsection{Pianificazione}
+\subsubsection{Diagrammi}
+Per la pianificazione delle attività è stato scelto il software %DA COMPLETARE
+\subsubsection{Attività}
+\textit{Asana} è un'applicazione web e mobile che permette la suddivisione delle attività in modo
+strutturato. Offre un'organizzazione ad albero suddivisa in questo modo:
+\begin{itemize}
+	\item Creare più \textbf{Workspace};
+	\item Creare \textit{Project} all'interno di \textit{Workspace};
+	\item Creare \textit{Task} all'interno di un \textit{Project};
+	\item Creare \textit{Sub-Task} all'interno di un \textit{Task}.
+\end{itemize}
+Alcune delle funzionalità offerte sono:
+\begin{itemize}
+	\item Assegnare un \textit{Task} ad uno o più individui;
+	\item Assegnare una data di scadenza;
+	\item Vedere le attività in scadenza sul calendario;
+	\item Seguire lo stato di avanzamento dei \textit{Task};
+	\item Avere un riepilogo dei \textit{Task};
+	\item Riceve e-mail automatiche con l'aggiornameto dei Task che si seguono.
+\end{itemize}
+I nome delle etichette relativi ai Task dovranno seguire la seguente forma [elemento di interesse][messaggio]:
+\begin{itemize}
+	\item \textbf{Elemento di interesse}: si riferisce al documento o all'ambito al quale appartiene 
+	il Task. Nel caso un cui si tratti di un documento, dovranno essere messe le iniziali del suo nome.\\
+	Ad esempio NdP, per indicare \textit{Norme di Progetto}. Nel secondo caso si userà il nome completo dell'ambito
+	che si sta trattando. In entrambi i casi viene utilizzata la lettera maiuscola.
+	\item \textbf{Messaggio}: breve messaggio quanto più esaustivo possibile per indicare la problematica da risolvere o il compito da eseguire.
+\end{itemize}
+
+\subsection{Versionamento}
+Il software di versionamento scelto è \textit{Git}. Le motivazioni a base della scelta è perché con \textit{Git}:
+\begin{itemize}
+	\item Strutturato come un File System;
+	\item Salva uno snapshot del progetto a ogni commit;
+	\item Veloce e Distribuito avendo in locale la copia della repository per ogni utente;
+	\item Sfrutta facilmente le operazioni di merge e branch;
+	\item Oltre al fatto che è stato già usato da alcuni membri del team.
+\end{itemize}
+All'interno della \textit{repository} vi sono due macro sezioni . La sezione documentazione e la sezione progetto.
+
+\subsection{Repository}
+\subsubsection{Repository documentazione}
+La \textit{repository} della documentazione è composta dalle varie cartelle :
+\begin{itemize}
+	\item AnalisiDeiRequisiti
+	\item Glossario 
+	\item NormeDiProgetto
+	\item PianoDiProgetto
+	\item PianoDiQualifica
+	\item StudioDiFattibilità
+	\item Verbali
+\end{itemize}
+I file all'interno possono essere di qualsiasi genere. Anche appunti. Nella capitolo della documentazione è stato trattata il modo in cui crearli ed elaborarli. 
+
+\subsubsection{Repository progetto}
+%MANCA QUESTA PARTE
+
+
+%MANCA TUTTA LA PARTE DI VERSIONAMENTO
 \end{document}
