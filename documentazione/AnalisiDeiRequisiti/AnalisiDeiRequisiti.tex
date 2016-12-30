@@ -6,6 +6,9 @@
 \usepackage[latin1]{inputenc}
 \usepackage{titlesec}
 \usepackage{hyperref}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=1cm,right=1cm]{geometry}
+\usepackage{soulutf8,color}
+
 
 \usepackage{emptypage}                     
 % pagine vuote senza testatina e piede di pagina
@@ -137,12 +140,12 @@ Un glossario è una raccolta di termini di un ambito specifico e circoscritto. In
 \begin{itemize}
 \item \textbf{Norme di Progetto}:	"Norme di Progetto v1.0.0".
 \item \textbf{Capitolato d'appalto C1}:	API Market per microservizi \\
-\url{www.math.unipd.it/~tullio/IS-1/2016/Progetto/C1.pdf}. 
+\textcolor{blue}{\url{www.math.unipd.it/~tullio/IS-1/2016/Progetto/C1.pdf}}. 
 \item \textbf{Verbali}:
 \subsubsection{Informativi}
 \item \textbf {Studio di Fattibilità}: "Studio di Fattibilità v.1.0.0".
 \item \textbf{IEEE 830-1998}: Recommended Practice for Software Requirements Specifica- tions \\
-\url{https://en.wikipedia.org/wiki/Software_requirements_specification}.
+\textcolor{blue}{\url{https://en.wikipedia.org/wiki/Software_requirements_specification}}.
 \end{itemize}
 
 \newpage
@@ -171,9 +174,12 @@ Il prodotto è soprattutto proiettato a degli utenti secondo noi esperti nelle te
 Dimestichezza nell'utilizzo di browser che sia esso da smartphone o da notebook. \\
 \subsubsection{Tipologia di Utenti}
 Saranno 3 i principali tipi di utenti che andranno a popolare i nostri casi d'uso a seconda del livello di autenticazione nella piattaforma:
-\item \textit{Utente non Autenticato}: è un utente che può visitare i microservizi in forma anonime a senza registrazione. Sarà limitato nelle impostazioni di ricerca, non potrà accedere alla funzionalità sociali e di compravendita delle API.
-\item \textit{Utente Autenticato}: dopo essersi registrato nel data base della piattaforma l'utente autenticato ha accesso completo alle funzionalità offerte al pubblico. Può cambiare le proprie referenze, accumulare monete virtuali e avere pieno accesso alla parte sociale. 
-\item \textit{Amministratore}:l'amministratore può modificare i profili di tutti gli utenti, modificare tutti i microservizi caricati e ha accesso a una pagina sulle statistiche del sito. Ha le funzionalità più estese e si è nominati personalmente.
+\begin{itemize}
+	\item \textit{Utente non Autenticato}: è un utente che può visitare i microservizi in forma anonime a senza registrazione. Sarà limitato nelle impostazioni di ricerca, non potrà accedere alla funzionalità sociali e di compravendita delle API.
+	\item \textit{Utente Autenticato}: dopo essersi registrato nel data base della piattaforma l'utente autenticato ha accesso completo alle funzionalità offerte al pubblico. Può cambiare le proprie referenze, accumulare monete virtuali e avere pieno accesso alla parte sociale. 
+	\item \textit{Amministratore}:l'amministratore può modificare i profili di tutti gli utenti, modificare tutti i microservizi caricati e ha accesso a una pagina sulle statistiche del sito. Ha le funzionalità più estese e si è nominati personalmente. 
+\end{itemize}
+
  
 
 \subsection{Piattaforma di esecuzione}
@@ -191,7 +197,7 @@ L'analisi del capitolato, il dibattito tra gli Analisti e l'incontro con Italian
 Le fonti su cui si ricavano quindi i casi d'uso sono sia impliciti, derivanti dallo studio del dominio, sia espliciti, come il capitolato d'appalto.
 Ogni caso d?uso ha un codice univoco gerarchico, nella forma: \\
 UC[codice univoco del padre].[codice progressivo di livello] \\
-Il codice progressivo puo? includere diversi livelli di gerarchia separati da un punto.\\
+Il codice progressivo può includere diversi livelli di gerarchia separati da un punto.\\
 \subsection{Caso d'uso Generale: APIM}
 
 

@@ -4,6 +4,9 @@
 \usepackage[T1]{fontenc}
 \usepackage[latin1]{inputenc}
 \usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=1cm,right=1cm]{geometry}
+\usepackage{soulutf8,color}
 
 \usepackage{emptypage}                     
 % pagine vuote senza testatina e piede di pagina
@@ -70,6 +73,21 @@
 \date{}
 \maketitle
 
+\lhead{SWEg Group}
+\chead{}
+\lfoot{Analisi dei Requisiti}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+\rhead{Registro Modifiche}
+
+\section{Registro Modifiche}
+\small %rippicciolisce il testo
+\begin{tabular}{|l|c|c|c|}
+\hline
+{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
+\end{tabular}
 
 \tableofcontents
 %crea indice automaticamente
@@ -88,9 +106,11 @@ Testo distanziato. Testo distanziato.
 
 \section{Titolo del paragrafo 2}
 \subsection{Titolo del sottoparagrafo 2}
+\subsubsection{Titolo del paragrafino}
 Testo Testo Testo 2.\\
 Altro Testo Altro Testo 2.\\
 \\
+\subsubsection{Titolo paragrafino 2}
 Testo distanziato 2. Testo distanziato 2. 
 
 

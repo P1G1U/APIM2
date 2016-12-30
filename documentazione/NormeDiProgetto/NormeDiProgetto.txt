@@ -158,7 +158,7 @@ approvati successivamente.
 3.7 Componenti grafiche
 
 3.7.1 Tabelle
-Tutte le tabelli presenti nella documentazione necessitano di una didascalia che le descrive brevemente
+Tutte le tabelle presenti nella documentazione necessitano di una didascalia che le descrive brevemente
 e che porta un numero progressivo in modo da identificarla univocamente.
 
 3.7.2 Immagini

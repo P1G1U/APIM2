@@ -6,6 +6,9 @@
 \usepackage[latin1]{inputenc}
 \usepackage{titlesec}
 \usepackage{hyperref}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
+\usepackage{soulutf8,color}
+
 
 \usepackage{emptypage}                     
 % pagine vuote senza testatina e piede di pagina
@@ -154,7 +157,7 @@ Ogni verbale redatto dovrà avere la seguente composizione:
 \item Partecipanti esterni
 \item Argomenti trattati
 \item Domande e risposte
-
+\end{enumerate}
 \newpage
 
 \rhead{Documenti}
@@ -165,28 +168,118 @@ Per facilitare ed unificare la redazione della documentazione e' stato creato un
 template apposito in \Latex.
 
 \subsubsection{Stile del testo}
+\begin{itemize}
 \item \textbf{Grossetto}: Deve essere applicato alle parole significative che devono essere messe in risalto;
 \item \textbf{Corsivo}: va utilizzato per indicare termini in lingua inglese e nomi dei file;
 \item \textbf{Maiuscolo}: va usato per scrivere gli acronimi;
 \item \textbf{Latex}: ogni riferimento a \Latex va scritto utilizzando il comando \ Latex
- 
+\end{itemize}
 
 \subsection{Convenzioni tipografiche}
-
+%COMANDI IN LATEX
  
-\subsection{Vincoli generali}
-Per utilizzare le funzionalità della piattaforma è obbligatorio avere una connessione internet.
-%è necessario elencare i vincoli presenti sulle tecnologie richieste e sui sistemi operativi (anche browser) supportati. 
-\newpage
+\subsection{Formati}
+\begin{itemsize}
+	\item \textbf{Date}: saranno espresse nel formato italiano gg/mm/aaaa dove:
+	\begin{itemize}
+		\item gg : indica il giorno, va scritto sempre con 2 cifre;
+		\item mm : rappresenta il mese, va scritto sempre con 2 cifre;
+		\item aaaa : rappresenta l'anno, va scritto sempre con 4 cifre. 
+	\end{itemize}
+	
+	\item \textbf{Anni accademici}: si userà il formato aaaa1-aaaa2 dove:
+	\begin{itemize}
+		\item aaaa1: indica l'anno solare di inizio, va scritto sempre con 4 cifre;
+		\item aaaa2: indica l'anno solare di fine, va scritto sempre con 4 cifre.
+	\end{itemize}
 
-\rhead{Casi d'uso}
-\section{Caso d'uso}
-L'analisi del capitolato, il dibattito tra gli Analisti e l'incontro con ItalianaSoftware ha portato alla creazione dei casi d'uso che seguono. Si è cercato anche di studiare piattaforme sociale e di scambio simili come \textit{Steam}, \textit{Google Play} e \textit{GitHub}.\\
-Le fonti su cui si ricavano quindi i casi d'uso sono sia impliciti, derivanti dallo studio del dominio, sia espliciti, come il capitolato d'appalto.
-Ogni caso d?uso ha un codice univoco gerarchico, nella forma: \\
-UC[codice univoco del padre].[codice progressivo di livello] \\
-Il codice progressivo puo? includere diversi livelli di gerarchia separati da un punto.\\
-\subsection{Caso d'uso Generale: APIM}
+	\item \textbf{Orari}: verranno espressi secondo lo standard \textit{ISO 8601} HH:MM dove:
+	\begin{itemize}
+		\item HH: indica le ore, va scritto sempre con 2 cifre;
+		\item MM: indica i minuti, va scritto sempre con 2 cifre.
+	\end{itemize}
+
+	\item \textbf{URL}: collegamento ad un indirizzo web deve essere scritto con un font di colore blu;
+	
+	\item \textbf{Sigle}: i nomi dei documenti potranno essere sostituiti dalle rispettive sigle:
+	\begin{itemize}
+		\item AdR ad indicare il documento ?Analisi dei Requisiti?;
+		\item PdP ad indicare il documento ?Piano di Progetto?;
+		\item PdQ ad indicare il documento ?Piano di Qualifica?;
+		\item NdP ad indicare il documento ?Norme di Progetto?;
+		\item Gl ad indicare il documento ?Glossario?;
+		\item ST ad indicare il documento ?Specifica Tecnica?;
+		\item SdF ad indicare il documento ?Studio di Fattibilità?.
+	\end{itemize}
+	
+\subsection{Struttura del documento}
+\subsubsection{Frontespizio}
+Il frontespizio di ogni documento dovrà essere così strutturato:
+\begin{itemize}
+	\item Nome e logo del gruppo;
+	\item Nome del progetto;
+	\item Titolo del documento;
+	\item Versione del documento;
+	%AGGIUNGERE ALLA PRIMA PAGINA QUESTO
+	\item Nome e cognome dei redattori del documento;
+	\item Nome e cognome dei revisori del documento;
+	\item Uso del documento;
+	\item Destinatari del documento.
+\end{itemize}
+\subsubsection{Diario delle modifiche}
+La seconda pagina deve essere una tabella contenente i cambiamenti che sono stati 
+effettuati nel documento. Deve essere così strutturata:
+\begin{itemize}
+	\item Modifica: descrizione delle modifiche effettuate;
+	\item Nome: nome e cognome dell'autore delle modifiche;
+	\item Data: il giorno nel quale sono state apportate le modifiche;
+	\item Versione: la versione del documento dopo la modifica;
+\end{itemize}
+La tabella è ordinata per data in ordine decrescente, in modo che la prima riga 
+sia l'ultima modifica eseguita, e quindi corrisponda alla versione attuale del documento.
+\subsubsection{Indice}
+La pagine successiva al diario delle modifiche deve essere l'indice del documento.
+Ogni documento tranne i verbali deve contenere l'indice che serve a dare una visione globale degli argomenti trattati.\\
+L'indice è autogenerato con un comando di \LaTeX .
+\subsubsection{Formattazione generale}
+Tutte le altre pagine del documento dovranno rispettare la struttura di base che segue:
+\begin{itemize}
+	\item Logo del gruppo: sarà posizionato sempre in alto a sinistra;
+	\item Sezione corrente: nell'intestazione deve comparire il numero ed il nome della sezione in cui ci si trova. Questa informazione sarà in alto a destra;
+	\item Numero di pagina: compare a piè di pagina, a destra.
+\end{itemize} 
+Ogni pagina deve rispettare i seguenti margini: 
+\begin{itemize}
+	\item Superiore: 2cm;
+	\item Inferiore: 2cm;
+	\item Destro: 1cm;
+	\item Sinistro: 1cm;
+\end{itemize}
+
+\subsection{Classificazione documenti}
+\subsubsection{Documenti formali}
+Tutti i documenti che sono stati approvati dal \textit{Project Manager} sono da ritenersi formali.\\ 
+Se un documento formale viene modificato, deve essere successivamente approvato nuovamente
+dal \textit{Project Manager}. 
+\subsubsection{Documenti informali}
+Sono quei documenti che non sono stati approvati del Project Manager, poiché non lo necessitano e quindi sono ad esclusivo uso interno, o perché sono ancora in fase di sviluppo e verranno 
+approvati successivamente.
+
+\subsection{Componenti grafiche}
+\subsubsection{Tabelle}
+Tutte le tabelle presenti nella documentazione necessitano di una didascalia che le descrive brevemente e che porta un numero progressivo in modo da identificarla univocamente.
+\subsubsection{Immagini}
+Le immagini come le tabelle dovranno essere accompagnate da una didascalia ed un numero progressivo che le identifica.
+
+\subsection{Intestazione file di documentazione}
+Ogni file di documentazione dovrà iniziare con la seguente intestazione:
+\begin{itemize}
+	\item \%FILE: nome del file;
+	\item \%PERCORSO: /PercorsoDelFile/NomeDelDocumento/;
+	\item \%DATA CREAZIONE: gg/mm/aa;
+	\item \%AUTORE: SWEg;
+	\item \%EMAIL: sweg.group@gmail.com;
+\end{itemize}
 
 
 
