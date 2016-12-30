@@ -5,6 +5,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[latin1]{inputenc}
 \usepackage{titlesec}
+\usepackage{hyperref}
 
 \usepackage{emptypage}                     
 % pagine vuote senza testatina e piede di pagina
@@ -55,14 +56,7 @@
 %\end{figure}
 
 
-\lhead{SWEg Group}
-\chead{}
-\rhead{Nome Capitolo}
-\lfoot{Analisi dei Requisiti}
-\cfoot{}
-\rfoot{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
+
 
 \begin{document}
 
@@ -71,6 +65,16 @@
 \date{}
 \maketitle
 
+\lhead{SWEg Group}
+\chead{}
+\lfoot{Analisi dei Requisiti}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\rhead{Registro Modifiche}
+\section{Registro Modifiche}
+\small %rippicciolisce il testo
 \begin{tabular}{|l|c|c|c|}
 \hline
 {\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
@@ -83,9 +87,16 @@ Aggiunti Requisiti & Sebastiano Marchesini & 23/12/2016 & 0.0.3 \\
 \hline
 Aggiunti Requisiti Estesi Concordati & Gianluca Crivellaro & 27/12/2016 & 0.0.4 \\
 \hline
-Iniziata Stesura Documento (Introduzione) & Sebastiano Marchesini &  28/12/2016 & 0.1.0 \\
+Stesura Documento (Introduzione) & Sebastiano Marchesini &  28/12/2016 & 0.1.0 \\
 \hline
+Creazione dei Grafici & Pietro Lonardi e Gianluca C. & 29/12/2016 & 0.1.1 \\
+\hline
+Stesura Documento (Descrizione Generale \& Casi d'Uso) & Sebastiano Marchesini & 30/12/2016 & 0.1.2 \\
+\hline
+
+
 \end{tabular}
+\normalsize	%lo riporta a forma normale
 \newpage
 
 \tableofcontents
@@ -96,6 +107,7 @@ Iniziata Stesura Documento (Introduzione) & Sebastiano Marchesini &  28/12/2016 
 
 
 
+\rhead{Introduzione}
 \section{Introduzione}
 \subsection{Scopo del Documento}
 Tale documento ha lo scopo di studiare e modellare concettualmente il problema che si pone con APIM. Posizionando le componeti (o ambiti) a scopo di allocazione dei requisiti. Alcuni dei requisiti specificandoli con il diagramma dei casi d'uso.\\
@@ -122,30 +134,58 @@ Un glossario è una raccolta di termini di un ambito specifico e circoscritto. In
 \\
 \subsection{Riferimenti Normativi}
 \subsubsection{Normativi}
+\begin{itemize}
 \item \textbf{Norme di Progetto}:	"Norme di Progetto v1.0.0".
-\item \textbf{Capitolato d'appalto C1}:	API Market per microservizi	\href{www.math.unipd.it/~tullio/IS-1/2016/Progetto/C1.pdf}{www.math.unipd.it/~tullio/IS-1/2016/Progetto/C1.pdf}. 
+\item \textbf{Capitolato d'appalto C1}:	API Market per microservizi \\
+\url{www.math.unipd.it/~tullio/IS-1/2016/Progetto/C1.pdf}. 
 \item \textbf{Verbali}:
 \subsubsection{Informativi}
-\item \textbf{Studio di Fattibilità}: "Studio di Fattibilità v.1.0.0".
-\item \textbf{IEEE 830-1998}: Recommended Practice for Software Requirements Specifica- tions
-\href{http://en.wikipedia.org/wiki/Software_requirements_specification}{http://en.wikipedia.org/wiki/Software_requirements_specification}.
+\item \textbf {Studio di Fattibilità}: "Studio di Fattibilità v.1.0.0".
+\item \textbf{IEEE 830-1998}: Recommended Practice for Software Requirements Specifica- tions \\
+\url{https://en.wikipedia.org/wiki/Software_requirements_specification}.
+\end{itemize}
 
+\newpage
+
+\rhead{Descrizione Generale}
 \section{Descrizione Generale}
 \subsection{Obbiettivi del prodotto}
 L'obbiettivo primario del prodotto é di dare ad ogni utente la possibilità di registrare il proprio microservizio in una piattaforma dedicata. In questo modo è possibile la vendita (o condivisione) con gli altri utenti della comunità regolata da politiche di compravendita specifiche e flessibili a seconda dello scopo dell'API o del volere del tecnico. \\
 L'obbiettivo è quindi quello di incentivare la programmazione a microservizi e, oltre a spingere i gruppi più piccoli nel progettare per il mercato virtuale, pensare sempre di più a delle migliori architetture flessibili invece che veri e propri programmi. Si vuole abbandonare i vecchi programmi monolite per entrare in una realtà fatta di sistemi divisi in moduli, la nuova sfida progettuale sarà quindi unire i vari microservizi (o API) per costruire un prodotto completo.
 \subsection{Funzioni del prodotto}
 SWEg Group si impegna in particolar modo alle sottoscritte funzioni del prodotto :
-\item \textbf{Registrare le API di un microservizio}: dando la possibilità di caricare un interfaccia e documentando la propria progettazione.
-\item \textbf{Permetta di consultare le API}: con un sistema di ricerca designato e filtrato anche con dati tecnici . Anche se con minori funzionalità anche un utente non registrato alla piattaforma può vagliare le varie API. Per ogni api sarà inoltre possibile un consulto dei suoi dati tecnici.
+\begin{itemize}
+\item \textbf{Registrare le API di un microservizio}:	dando la possibilità di caricare un interfaccia e documentando la propria progettazione.
+\item \textbf{Permetta di consultare le API}:	con un sistema di ricerca designato e filtrato anche con dati tecnici . Anche se con minori funzionalità anche un utente non registrato alla piattaforma può vagliare le varie API. Per ogni api sarà inoltre possibile un consulto dei suoi dati tecnici.
 \item \textbf{Permetta di associare diverse API key}: così da regolare le politiche di scambio dei microservizi. Le API key sono lo strumento principale di collegamento tra la API e il suo utilizzatore. Grazie a queste l'infrastruttura potrà regolare le scadenze , l'utilizzo e procedimento oltre ad avere un ID univoco per la monitorizzazione. 
-\item \textbf{Permetta di monitorare l'utilizzo delle API}: già accennato nei punti precedenti. Vogliamo che tale infrastruttura tenga conto di particolari dati tecnici di ogni API per renderle così misurabili in termini di efficacia ed efficienza. Oltre che a così avere un sistema automatizzato per il confronto tra i vari microservizi.
-\item \textbf{Blocchi le chiamate di utenti in possesso di API key scadute e/o non valide}: è la sottolineatura di uno dei motivi di esistenza delle API key. Punto focale per la regolamentazione dello scambio è la possibilità di acquisto in base
+\item \textbf{Permetta di monitorare l'utilizzo delle API}:	già accennato nei punti precedenti. Vogliamo che tale infrastruttura tenga conto di particolari dati tecnici di ogni API per renderle così misurabili in termini di efficacia ed efficienza. Oltre che a così avere un sistema automatizzato per il confronto tra i vari microservizi.
+\item \textbf{Blocchi le chiamate di utenti in possesso di API key scadute e/o non valide}:	è la sottolineatura di uno dei motivi di esistenza delle API key. Punto focale per la regolamentazione dello scambio è la possibilità di acquisto delle chiavi secondo tempo, mole di scambio di dati , eccetera. I dati tecnici per le policy di durata e validità saranno descritte in seguito, ma queste decideranno se è ancora attiva una chiave o meno.
+\item \textbf{Permetta di visualizzare i dati tecnici d'uso delle singole API}:	dopo aver monitorato ogni singola API è possibile fare la stima e produrre un elaborato tecnico dei valori di quest'ultima. E' compito dell'API Market rendere disponibile questa funzionalità. Da parte nostra vi sarà un vaglio tra le principali e caratteristiche di interesse da dover riportare. E' da parte nostra desiderabile anche la possibilità di poter visualizzare direttamente il confronto dei risultati delle caratteristiche per scegliere il microservizio migliore.
+\\
+\item \textbf{Permettere di gestire una moneta virtuale per la compravendita delle API}:	il metodo di acquisto principale è comunque la moneta reale. Che può trasformarsi automaticamente in moneta virtuale con un cambio di 1:1. E' possibile quindi tenere un conto personale flessibile per poter reinvestire o ritirare il contante virtuale. 
+\item \textbf{Permetta di confrontare i dati tecnici delle API tra loro}:	già accennato in uno dei punti precedenti. Per una migliore visione e per scegliere il microservizio più adatto ai nostri scopi vorremo una sezione specifica di confronto dei dati tecnici. Sarà nostro compito grazie al monitoraggio avere un rapporto aggiornato e reale dell'andamento dell'API.
+\item \textbf{Permetta una gestione social}:	vogliamo che quindi anche gli utenti abbiamo le loro statistiche per essere valutati. Desiderabile un programma di messaggistica interno per una comunicazione diretta e veloce. Tutto è quindi classificabile, la valutazione degli utenti delle API crea delle classifiche stimolando la concorrenza e il desiderio di popolare il market di più microservizi. Vi saranno quindi graduatorie per genere grazie alle personali esperienze e ai dati tecnici da favorire l'interazione tra gli attori della piattaforma.
+\end{itemize}
 \subsection{Caratteristiche degli utenti}
+Il prodotto è soprattutto proiettato a degli utenti secondo noi esperti nelle tecnologie impiegate. Abbiamo all'unisono prestabilito con il proponente del capitolato che è compito dell'utente creare l'interfaccia adeguata a registrare il microservizio nel market. Questo ci assicura una minima competenza nella programmazione e quindi nell'uso di tecnologie informatiche.
+Dimestichezza nell'utilizzo di browser che sia esso da smartphone o da notebook.  
 
 \subsection{Piattaforma di esecuzione}
-
+Il prodotto finale è fruibile da qualsiasi piattaforma che disponga di un browser per la navigazione web. Sarà però garantito il corretto e perfetto funzionamento solo con alcune versioni e particolari browser. \\
+La parte di back end invece sarà %BOH DITEMI VOI NON SO.
+ 
 \subsection{Vincoli generali}
+Per utilizzare le funzionalità della piattaforma è obbligatorio avere una connessione internet.
+%è necessario elencare i vincoli presenti sulle tecnologie richieste e sui sistemi operativi (anche browser) supportati. 
+\newpage
+
+\rhead{Casi d'uso}
+\section{Caso d'uso}
+L'analisi del capitolato, il dibattito tra gli Analisti e l'incontro con ItalianaSoftware ha portato alla creazione dei casi d'uso che seguono. Si è cercato anche di studiare piattaforme sociale e di scambio simili come \textit{Steam} e \textin{Google Play}.\\
+Le fonti su cui si ricavano quindi i casi d'uso sono sia impliciti, derivanti dallo studio del dominio, sia espliciti, come il capitolato d'appalto.
+Ogni caso d?uso ha un codice univoco gerarchico, nella forma: \\
+UC[codice univoco del padre].[codice progressivo di livello] \\
+Il codice progressivo puo? includere diversi livelli di gerarchia separati da un punto.\\
 
 
 \end{document}
