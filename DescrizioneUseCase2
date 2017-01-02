@@ -1,0 +1,158 @@
+UC 2: Client Utente auteticato
+
+Attore: Utente auteticato
+Scopo e descrizione: La pagina offre tutti i servizi che un utente auteticato può vantare, quindi oltre alla consultazione delle statistiche riferite ad altri utenti presenti nel market e alla consultazione delle API, egli può: - modificare i propri dati; - Consultare le proprie statistiche; - Monitorare l'andamento delle sue API caricate nel market; - Acquistare APIKey delle API; - Lasciare commenti; - Caricare nuove API. Ovviamente ha anche la possibilità di disconnettersi dal sistema
+Precondizione: Il sistema attende che l'utente si identifichi attraverso lo username e la password di cui è in possesso
+Postcondizione: Il sistema ritorna la pagina con con tutti i servizi che un utente auteticato può godere
+
+UC 2.1: Consultazione utenti (UL)
+
+Attore: Utente auteticato
+Scopo e descrizione: UC 1.4
+Scenario alternativo: UC 1.4
+Precondizione: UC 1.4
+Postcondizione: UC 1.4
+
+UC 2.2: Consultazione API (UL)
+
+Attore: Utente auteticato
+Scopo e descrizione: UC 1.3
+Scenario alternativo: UC 1.3
+Precondizione: UC 1.3
+Postcondizione: UC 1.3
+
+UC 2.2.1: Acquisto API Key
+
+Attore: Utente auteticato
+Scopo e descrizione: L'utente ha la possibilità di utilizzare il microservizio richiesto attraverso l'acquisto di una API Key che gli servirà per poter accedere all'API al momento della chiamata
+Scenario alternativo: L'acquisto non va a buon fine a causa di una di queste possibilità: - L'utente non ha ancora registrato un metodo di pagamento; - L'acquisto effettivo non è andato a buon fine;
+Precondizione: Il sistema attende che l'utente scelga l'API
+Postcondizione: L'acquisto è andato a buon fine e quindi il sistema associa l'APIKey all'utente e alla API
+
+UC 2.2.1.1: Confermare dati metodo di pagamento
+
+Attore: Utente autenticato
+Scopo e descrizione: Viene richiesto all'utente di confermare il metodo di pagamento
+Scenario alternativo: L'utente non ha ancora inserito un metodo di pagamento per cui viene portato allo UC 2.4.2
+Precondizione: Il sistema attende conferma del metodo di pagamento
+Postcondizione: Il sistema ha ricevuto conferma da parte dell'utente del metodo di pagamento
+
+UC 2.2.1.2: Confermare acquisto
+
+Attore: Utente autenticato
+Scopo e descrizione: L'utente viene informato dal sistema che l'acquisto è andato a buon fine
+Scenario alternativo: L'acquisto non è andato a buon fine e quindi viene visualizzato su schermo un messaggio di errore
+Precondizione: Il sistema attende la conferma di acquisto
+Postcondizione: Il sistema informa l'utente che l'acquisto è andato a buon fine, genera l'APIKey e l'associa all'utente e all'API 
+
+UC 2.2.2: Commentare API
+
+Attore: Utente auteticato
+Scopo e descrizione: L'utente auteticato ha la possibilità di lasciare una valutazione e un commento dell'API presente nel market
+Precondizione: Il sistema attende che l'utente inserisca un commento sull'API
+Postcondizione: Il sistema associa il commento e il rating lasciati dall'utente sull'API
+
+UC 2.3: Caricamento API
+
+Attore: Utente auteticato
+Scopo e descrizione: La pagina che permette ad ogni utente auteticato di poter caricare un API all'interno del market
+Scenario alternativo: L'API che l'utente ha tentato di caricare nel market non era conforme agli standard e quindi non viene accettata
+Precondizione: Il sistema in attesa del caricamento di un API nel market da parte dell'utente
+Postcondizione: Il sistema ha caricato l'API dell'utente nel market
+
+UC 2.3.1: Carica API su market
+
+Autore: Utente auteticato 
+Scopo e descrizione: L'utente carica il codice dell'API nel market
+Scenario alternativo: - Errore durante il caricamento dovuto ad un problema tecnico; - L'API che si sta tentando di caricare non è conforme agli standard presenti nel market;
+Precondizione: Il sistema attende il caricamento del codice
+Postcondizione: Il sistema ha ricevuto il codice dell'interfaccia dell'API
+
+UC 2.3.2: Caricamento documentazione API
+
+Attore: Utente auteticato
+Scopo e descrizione: L'utente carica la documentazione inerente all'API
+Scenario alternativo: UC 2.3.1
+Precondizione: Il sistema in attesa del caricamento della documentazione
+Postcondizione: Il sistema ha ricevuto la documentazione inerente all'API e l'associa ad essa
+
+UC 2.3.3: Imposta policy
+
+Attore: Utente auteticato
+Scopo e descrizione: L'utente imposta la policy di vendita dell'API caricata
+Precondizione: Il sistema in attesa dell'inserimento dell'utente
+Postcondizione: Il sistema riceve le direttive di policy da impostare sull'API caricata
+
+UC 2.3.4: Inserimento dati API
+
+Attore: Utente auteticato
+Scopo e descrizione: L'utente inserisce le informazioni dell'API che verranno consultate dagli altri utenti (loggati e non). I dati saranno: - Nome identificativo; - Prezzo; - Breve descrizione; - Logo;
+Precondizione: Il sistema attende l'inserimento dei dati dell'utente
+Postcondizione: Il sistema associa i dati inseriti all'API caricata
+
+UC 2.4: Consultazione e modifica dei propri dati
+
+Attore: Utente auteticato
+Scopo e descrizione: Un utente ha la possibilità di visualizzare i dati che sono riferiti al suo profilo e, nel caso ne abbia la necessità, può anche modificarli. All'interno di questi dati si trova anche il metodo di pagamento che l'utente ha scelto
+Precondizione: Il sistema attende una risposta dall'utente dalla home page dell'utente auteticato
+Postcondizione: Il sistema visualizza su schermo tutte le informazioni inerenti al proprio profilo personale dell'utente
+
+UC 2.4.1: Modifica dati personali
+
+Attore: Utente auteticato
+Scopo e descrizione: L'utente può avere la necessità di cambiare qualche campo riferito al suo profilo, quindi il sistema offre questa possibilità
+Precondizione: Il sistema attende l'inserimento delle nuove informazioni che l'utente vuole modificare
+Postcondizione: Il sistema ha modificato i campi richiesti dall'utente
+
+UC 2.4.1.1: Modifica nome
+
+Attore: Utente autenticato
+Scopo e descrizione: UC 1.1.1.1
+Scenario alternativo: UC 1.1.1.1
+Precondizione: UC 1.1.1.1
+Postcondizione: UC 1.1.1.1
+
+UC 2.4.1.1: Modifica cognome
+
+Attore: Utente autenticato
+Scopo e descrizione: UC 1.1.1.2
+Scenario alternativo: UC 1.1.1.2
+Precondizione: UC 1.1.1.2
+Postcondizione: UC 1.1.1.2
+
+UC 2.4.1.3: Modifica telefono
+
+Attore: Utente autenticato
+Scopo e descrizione: UC 1.1.1.3
+Scenario alternativo: UC 1.1.1.3
+Precondizione: UC 1.1.1.3
+Postcondizione: UC 1.1.1.3
+
+UC 2.4.1.4: Modifica paese
+
+Attore: Utente autenticato
+Scopo e descrizione: UC 1.1.1.4
+Scenario alternativo: UC 1.1.1.4
+Precondizione: UC 1.1.1.4
+Postcondizione: UC 1.1.1.4
+
+UC 2.4.2: Modifica dati di pagamento
+
+Attore: Utente auteticato
+Scopo e descrizione: L'utente ha la possibilità di modificare il proprio metodo di pagamento nei confronti del market, o magari un cambio di conto a cui associare il proprio profilo
+Precondizione: Il sistema attende che l'utente scelga un nuovo metodo di pagamento, o un nuovo conto da associare
+Postcondizione: Il sistema dopo aver validato il nuovo metodo di pagamento lo associa all'utente
+
+UC 2.4.3: Modifica dati di API
+
+Attore: Utente auteticato
+Scopo e descrizione: L'utente ha la possibilità di modificare la documentazione o la policy di vendita delle API da lui caricate
+Precondizione: Il sistema attende che l'utente inserisca i dati dell'API che vuole modificare
+Postcondizione: Il sistema associa i nuovi dati alla suddetta API
+
+UC 2.5: Log Out
+
+Attore: Utente autenticato
+Scopo e descrizione: L'utente ha la possibilità di disconnetere il suo profilo dal sistema
+Precondizione: L'utente ha acceduto alla sessione del sistema
+Postcondizione: Il sistema ha disconnesso l'utente dalla sessione a cui apparteneva
