@@ -47,8 +47,8 @@ Postcondizione: Il sistema informa l'utente che l'acquisto è andato a buon fine
 
 UC 2.2.2: Commentare API
 
-Attore: Utente auteticato
-Scopo e descrizione: L'utente auteticato ha la possibilità di lasciare una valutazione e un commento dell'API presente nel market
+Attore: Utente autenticato
+Scopo e descrizione: L'utente autenticato ha la possibilità di lasciare una valutazione e un commento dell'API presente nel market
 Precondizione: Il sistema attende che l'utente inserisca un commento sull'API
 Postcondizione: Il sistema associa il commento e il rating lasciati dall'utente sull'API
 
