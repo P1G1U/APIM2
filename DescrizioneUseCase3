@@ -1,7 +1,7 @@
 UC 3: Client Utente admin
 
 Attore: Utente admin
-Scopo e descrizione: Un utente admin è un utente autenticato che oltre che a godere dei vantaggi di un normale utente, egli può anche: - Controllare le statisteche generali del sito; - Modificare informazioni di altri utenti; - Modificare tutte le API; - Effettuare ricerca di utenti sul DB.
+Scopo e descrizione: Un utente admin è un utente autenticato che oltre che a godere dei vantaggi di un normale utente, egli può anche: - Controllare le statistiche generali del sito; - Modificare informazioni di altri utenti; - Modificare tutte le API; - Effettuare ricerca di utenti sul DB.
 Precondizione: Il sistema attende che l'utente si autentichi attraverso lo username e la password
 Postcondizione: Il sistema ritorna la pagina iniziale di un utente admin
 
@@ -16,7 +16,7 @@ UC 3.2: Ricerca utente (Admin)
 
 Attore: Utente admin
 Scopo e descrizione: Un utente admin ha la possibilità di interrogare il DB per ricevere informazioni riguardanti utenti presenti nel market
-Precondizione: Il suistema attenda la chiamata da parte dell'utente
+Precondizione: Il sistema attende la chiamata da parte dell'utente
 Postcondizione: Dopo aver interrogato il DB, il sistema ritorna su schermo le informazioni richieste riguardanti l'utente o gli utenti presenti nel DB
 
 UC 3.3: Modifica utente (Admin)
