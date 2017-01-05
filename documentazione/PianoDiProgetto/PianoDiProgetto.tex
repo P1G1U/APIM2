@@ -311,32 +311,64 @@ Per un miglior avanzamento del progetto , si è effettuata un attenta analisi dei
 	\item \textbf{Pianificazione di controllo}: crea modi per controllare i rischi così da evitarli preventivamente;
 	\item \textbf{Mitigazione}: fondare un piano di eventualità per smussare gli effetti collaterali di un rischio nel caso avvenisse. Tale fase è richiesta solo dove necessario da rischi difficili da controllare.
 \end{enumerate}
-Ogni rischio identificato è stato descritto con: nome, probabilità di occorrenza, grado di pericolosità, descrizione, strategie per la rilevazione e contromisure. Ciascun rischio verrà nel tempo monitorato e ne verrà aggiornato l'effettivo riscontro con l'avanzamento del progetto nella seguente maxi-tabella:
+Ogni rischio identificato è stato descritto con: nome, probabilità di occorrenza, grado di pericolosità, ruolo che può identificarlo e contromisure. Di seguito la descrizione di ogni singolo:\\
 
-\newpage
+\begin{center}
+\textbf{Livello Tecnico}
+\end{center}
+\begin{itemize}
+	\item \textbf{Tecnologie Adottate}: Incompatibilità tra le tecnologie adottate e le proprie conoscenze o con le tecnologie di altri membri del gruppo.
+	\item \textbf{Rottura Hardware}: Rottura del sistema di archiviazione o degli strumenti per realizzazione del progetto.	
+\end{itemize}
+\begin{center}
+	\textbf{Livello Personale}
+\end{center}
+\begin{itemize}
+	\item \textbf{Problemi dei singoli}: Impegni personali e necessità per altre materie sono all'ordine del giorno. Non è possibile prevedere il problema con largo anticipo.
+	\item \textbf{Problemi tra componenti}: Crearsi di un clima instabile e di tensione all'interno del gruppo produce difficoltà di collaborazione. 
+	\item \textbf{Inesperienza}: Inesperienza nell'uso della tecnologia e conoscenza generica della progettazione e analisi. Ragionevole in un gruppo di studenti. 
+\end{itemize}
+\begin{center}
+	\textbf{Livello organizzativo e valutazione dei costi}
+\end{center}
+\begin{itemize}
+	\item \textbf{Valutazione Efficienza}: Sbagliata la stima delle tempistiche e dei costi nel piano. Provoca uno slittamento generale. Nel caso di dipendenze anche grave per tutto il team.  
+\end{itemize}
+\begin{center}
+	\textbf{Livello dei requisiti}
+\end{center}
+\begin{itemize}
+	\item \textbf{Comprensione Requisiti}: Errata analisi dei requisiti e visione diversa tra Analista e Proponente di un obbiettivo. Se tempestiva è facile la soluzione.
+\end{itemize}
+
+Ciascun rischio verrà nel tempo monitorato e ne verrà aggiornato l'effettivo riscontro con l'avanzamento del progetto nella seguente tabella:
+
+
 
 \begin{landscape}
 \small
-	\begin{tabular}{|c|c|c|c|c|c|}
+{\renewcommand\arraystretch{1.2}
+	\begin{tabular}{|c|c|c|c|c|}
 		\hline 
-		\textbf{Nome} & \textbf{Occorrenza} & \textbf{Pericolosità} & \textbf{Descrizione} & \textbf{Rilevazione} & \textbf{Contromisure} \\ 
+		\textbf{Nome} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Ruolo} & \textbf{Contromisure} \\ 
 		\hline 
-		\multicolumn{6}{|c|}{\textbf{Livello Tecnologico}} \\  
-		\textit{Tecnologie Adottate} & Media & Alta & \minitab[c]{Incompatibilità tra le tecnologie \\ adottate e le proprie conoscenze}  & Project Manager & \minitab[c]{Ciascun membro del team ha il dovere di informarsi con l'ausilio \\ di documentazione anche fornita dal Responsabile} \\ 
-		\textit{Rottura Hardware} & Bassa & Bassa & \minitab[c]{Rottura del sistema di archiviazione \\ o degli strumenti per realizzazione del progetto} & Singolo Componente & \minitab[c]{Si risolve utilizzando strumenti forniti \\ dall'università in sostituzione a quelli personali} \\ 
+		\multicolumn{5}{|c|}{\textbf{Livello Tecnologico}} \\  
+		\textit{Tecnologie Adottate} & Media & Alta  & Responsabile & \minitab[c]{Ciascun membro del team ha il dovere di informarsi con l'ausilio \\ di documentazione anche fornita dal Responsabile} \\ 
+		\textit{Rottura Hardware} & Bassa & Bassa & Singolo & \minitab[c]{Si risolve utilizzando strumenti forniti \\ dall'università in sostituzione a quelli personali} \\ 
 		\hline 
-		\multicolumn{6}{|c|}{\textbf{Livello Personale}} \\  
-		\textit{Problemi dei singoli} & Media & Media & \minitab[c]{Impegni personali e necessità per altre \\materie sono all'ordine del giorno} & Singolo Componente & Subito dopo la comunicazione sarà il Project Manager a rielaborare le mansioni e l'organizzazione del gruppo \\  
-		\textit{Probelmi tra componenti} & Bassa & Alta & \minitab[c]{Crearsi di un clima instabile all'interno del gruppo e\\ difficioltà di collaborazione} & Project Manager, Singolo Componente & Il Project Manager può ridistribuire i ruoli affinché non vi sia dipendenze tra i litiganti o dimettersi \\ 
-		\textit{Inesperienza} & Alta & Alta & \minitab[c]{Inesperienza nell'uso della tecnologia e\\ conoscenza generica della progettazione e analisi} & Singolo Componente & Impegno del singolo per informarsi e aggiornarsi lasciando libertà di tempo aggiuntivo nel caso vi siano difficoltà \\ 
+		\multicolumn{5}{|c|}{\textbf{Livello Personale}} \\  
+		\textit{Problemi dei singoli} & Media & Media & Singolo & \minitab[c]{Subito dopo la comunicazione sarà il Responsabile\\ a rielaborare le mansioni e l'organizzazione del gruppo} \\  
+		\textit{Problemi tra componenti} & Bassa & Alta & \minitab[c]{Responsabile\\Singolo}& \minitab[c]{Il Responsabile può ridistribuire i ruoli affinché \\non vi sia dipendenze tra i litiganti o dimettersi} \\ 
+		\textit{Inesperienza} & Alta & Alta & Singolo & \minitab[c]{Impegno del singolo per informarsi e \\aggiornarsi lasciando libertà di tempo aggiuntivo nel caso vi siano difficoltà} \\ 
 		\hline 
-		\multicolumn{6}{|c|}{\textbf{Livello organizzativo e valutazione dei costi}} \\ 
-		\textit{Valutazione Efficenza} & Alta & Media & Sbagliata la stima delle tempistiche e dei costi nel piano & Project Manager , Analista , Singolo Componente & Riprogettazione immediata nel piano organizzativo e, se necessario, cambiamento delle priorità \\ 
+		\multicolumn{5}{|c|}{\textbf{Livello organizzativo e valutazione dei costi}} \\ 
+		\textit{Valutazione Efficienza} & Alta & Media & \minitab[c]{Responsabile\\Analista\\Singolo} & \minitab[c]{Riprogettazione immediata nel piano organizzativo e\\, se necessario, cambiamento delle priorità} \\ 
 		\hline 
-		\multicolumn{6}{|c|}{\textbf{Livello dei requisiti}} \\ 
-		\textit{Comprensione Requisiti} & Media & Medio & \minitab[c]{Errata analisi dei requisiti e\\ visione diversa tra Analista e Proponente di un obbiettivo} & Progettista , Verificatore , Singolo Componente & Riunione e comunicazione tra le parti con correzzioni al piano \\ 
+		\multicolumn{5}{|c|}{\textbf{Livello dei requisiti}} \\ 
+		\textit{Comprensione Requisiti} & Media & Medio & \minitab[c]{Progettista\\Verificatore\\Singolo}& Riunione e comunicazione tra le parti con correzioni al piano \\ 
 		\hline 
 	\end{tabular} 
+}
 \normalsize
 \end{landscape}
 
