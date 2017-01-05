@@ -1,0 +1,214 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+%va sempre messo article per "program documentation"
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{titlesec}
+\usepackage{emptypage}   
+\usepackage {hyperref}    
+\usepackage{indentfirst}              
+% pagine vuote senza testatina e piede di pagina
+%\usepackage{hyperref}                     
+% collegamenti ipertestuali
+\usepackage{fancyhdr}
+% pacchetto per intestazione e pie pagina
+\pagestyle{fancy}
+% \\ indica interruzione di riga
+% compilate 2 volte per documenti con indice
+% {\em qui testo in corsivo}
+% {\bfseries qui testo in grossetto}
+%LISTE NUMERATE
+%\begin{enumerate}
+%\item prim
+%\item secondo
+%\item terzo
+%\end{enumerate}
+%LISTE PUNTATE
+%\begin{itemize}
+%\item primo
+%\item secondo
+%\item \dots
+%\end{itemize}
+%TABELLA
+%\begin{tabular}{|c|c|c|}
+%indica una tabella con 3 colonne e pos. testo centrale. La barra verticale ( | ) indica che vi e' una linea divisoria verticale tra le celle.
+%\hline	linea separatrice orizzontale
+%testo1& testo2& testo3\\
+% & segna la fine del testo nella cella , \\ indica il fine della riga 
+%GRAFICI
+%\begin{figure}
+%\includegraphics{filegrafico}
+%comando per includere le immagini (controllare i formati)
+%\caption{didascalia}
+%\label{nome}
+%\end{figure}
+\lhead{SWEg}
+\chead{}
+\rhead{APIM: An API Market Platform}
+\lfoot{Piano di Qualifica}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document} 
+	\title{Piano di qualifica}
+	\author{SWEg Group}
+	\date{04/01/2017}
+	\maketitle
+	\tableofcontents
+	%crea indice automaticamente
+	\thispagestyle{empty}
+	\newpage
+	\section{Introduzione}
+	\subsection{Scopo del documento}
+	Lo scopo del \textit{Piano di Qualifica} è di descrivere le strategie di verifica e validazione adottate dal gruppo SWEg al fine di perseguire obiettivi qualitativi per il progetto APIMarket.
+	\subsection{Scopo del Prodotto}
+	Lo scopo del progetto è la realizzazione di un applicazione web che gestisca e monitori microservizi, muniti di un'interfaccia Jolie. In particolare APIMarket deve permettere di vendere, acquistare e monitorare microservizi tramite la piattaforma. 
+	\subsection{Glossario}
+	Per evitare il più possibile ambiguità legate al linguaggio, e per favorire la comprensione del documento i termini tecnici e gli acronimi che necessitano di descrizione saranno seguiti da una "g" in pedice e riportati nel documento \textit{Glossario v1.0.0}.
+	\subsection{Riferimenti}
+	\subsubsection{Normativi}
+	\begin{itemize}
+		\item \textbf{Norme di Progetto:} \textit{Norme di Progetto v1.0.0};
+		\item \textbf{Capitolato d'appalto C1:} APIM: An API\textsubscript{g} Market Platform\\
+			\url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/Capitolati.html}
+	\end{itemize}
+	\subsubsection{Informativi}
+	\begin{itemize}
+		\item \textbf{Piano di Progetto:} \textit{Piano di Progetto v1.0.0};
+		\item \textbf{Slide di Ingegneria del Software:}\\ 
+			\url{http://www.math.unipd.it/~tullio/IS-1/2016/};
+		\item \textbf{SWEBOK - Version 3 (2004)}: capitolo 11 - Software Quality\\
+			\url{https://www.computer.org/web/swebok};
+		\item \textbf{ISO\textsubscript{g}/IEC\textsubscript{g} TR 15504:} Software process assessment:\\
+			\url{https://en.wikipedia.org/wiki/ISO/IEC_15504};
+		\item \textbf{ISO\textsubscript{g}/IEC\textsubscript{g} 9126: Product quality}:\\
+			\url{https://en.wikipedia.org/wiki/ISO/IEC_9126};
+	\end{itemize} 
+	
+	\section{Definizione obiettivi di qualità}
+	Il gruppo SWEg si impegna a rispettare il modello di standard definito in ISO\textsubscript{g}/IEC\textsubscript{g}0126, il quale ha le seguenti qualità:
+		\subsection{Funzionalità}
+		Il sistema prodotto deve garantire tutte le funzionalità indicate nel documento \textit{"Analisi dei Requisiti v1.0.0"}. L'implementazione dei requisiti deve essere più completa ed economica possibile.
+		\begin{itemize}
+			\item \textbf{Misura:} viene usata come unità di misura la quantità di requisiti mappati in componenti del sistema create e funzionanti;
+			\item \textbf{Metrica:} la sufficienza è stabilita nel soddisfacimento di tutti i requisiti obbligatori;
+			\item \textbf{Strumenti:} perché questa qualità sia soddisfatta il sistema deve superare tutti i test previsti.
+		\end{itemize}
+		\subsection{Affidabilità}
+		Il sistema si deve dimostrare robusto e di facile ripristino in caso di errori.
+		\begin{itemize}
+			\item \textbf{Misura:} l'unità di misura sarà la quantità di esecuzioni del sistema andati a buon fine;
+			\item \textbf{Metrica:} le esecuzioni dovranno soddisfare la più ampia gamma di funzionalità previste;
+			\item \textbf{Strumenti:} da definire.
+		\end{itemize}
+		\subsection{Usabilità}
+		Il sistema prodotto deve risultare di semplice utilizzo per l'utente. Questo sistema deve allo stesso tempo soddisfare tutte le necessità dell'utente.
+		\begin{itemize}
+			\item \textbf{Misura:}
+			\item \textbf{Metrica:}
+			\item \textbf{Strumenti:}
+		\end{itemize}
+		\subsection{Efficienza}
+		Il sistema deve fornire tutte le funzionalità nel più breve tempo possibile, con il minimo utilizzo di risorse.
+		\begin{itemize}
+			\item \textbf{Misura:} tempi di latenza per ottenere una risposta dall'applicazione web in condizioni normali o in caso di sovraccarico della rete;
+			\item \textbf{Metrica:}la sufficienza viene stimata come un tempo di latenza minore del 20\% su rete via cavo o Wi-Fi e del 30\% su reti cellulari rispetto alla media dei tempi di latenza del server web;
+			\item \textbf{Strumenti:} si veda il documento \textit{"Norme di Progetto v1.0.0"}.
+		\end{itemize}
+		\subsection{Manutenibilità}
+		Il sistema prodotto deve essere comprensibile ed estensibile in modo facile e verificabile.
+		\begin{itemize}
+			\item \textbf{Misura:} l'unità di misura utilizzata saranno le metriche sul codice descritte nella sezione Misure;
+			\item \textbf{Metrica:} le metriche che verranno rispettate sono descritte nella sezione Metriche;
+			\item \textbf{Strumenti:} si veda il documento \textit{"Norme di Progetto v1.0.0"}.
+		\end{itemize}
+		\subsection{Portabilità}
+		Il sistema deve essere più portabile possibile. Il sito deve essere visitabile da più browser possibili. Il sito deve essere sviluppato con sistemi che abbiano le varie componenti tecnologiche di tipo standard. Con il termine "standard" si intente che i contenuti devono poter essere utilizzati su più sistemi operativi possibile e su più ambienti di lavoro possibile.
+			\begin{itemize}
+				\item \textbf{Misura:} il front end deve aderire agli standard W3C;
+				\item \textbf{Metrica:} se il software avrà la sufficienza in tutte le metriche descritte nella sezione "Metriche", allora il sito avrà le caratteristiche di portabilità descritte;
+				\item \textbf{Strumenti:} si veda il documento \textit{"Norme di Progetto v1.0.0"}.
+			\end{itemize}
+		\subsection{Altre qualità}
+	\section{Visione generale delle strategie di verifica}
+	\subsection{Procedure di controllo di qualità di processo}
+	La qualità dei processi verrà garantita dall'applicazione del principio PDCA\textsubscript{g}. Grazie a questo principio sarà possibile garantire non solo il controllo e la correttezza, ma anche il miglioramento costante della qualità di tutti i processi. Come conseguenza diretta si otterrà il miglioramento del prodotto.
+	
+	Per avere controllo dei processi, e di conseguenza qualità, è necessario che:
+	\begin{itemize}
+		\item vi sia controllo sull'operato dei membri del team e sui processi;
+		\item i processi siano pianificati in modo dettagliato;
+		\item le risorse siano ripartite in modo chiaro.
+	\end{itemize}
+	L'attuazione di questi punti è descritta nel documento \textit{"Piano di progetto v1.0.0"}. Inoltre l'analisi contante della qualità del prodotto permette di monitorare in modo indiretto la qualità dei processi: se il prodotto è di bassa qualità sicuramente il processo è migliorabile.
+	
+	Per valutare la qualità di un processo E' fondamentale che questa sia quantificata, le metriche per fare ciò sono descritte nella sezione....
+	
+	\subsection{Procedure di controllo di qualità di prodotto}
+	Il controllo di qualità dei prodotti verrà garantito dai seguenti processi:
+	\begin{itemize}
+		\item \textbf{Software Quality Assurance} (SQA\textsubscript{g}): assicura che i processi siano appropriati per il progetto, che siano correttamente implementati. Prevede l'attuazione di tecniche di analisi statica e dinamica, descritte nel documento \textit{"Norme di Progetto v1.0.0"};
+		\item \textbf{verifica:} è il processo che controlla la coerenza e la correttezza dei prodotti dei processi. La verifica verrà eseguita costantemente durante tutta la durata del progetto. I risultati delle attività di verifica sono elencati nell'Appendice A.
+		\item \textbf{validazione:} ovvero la conferma che il sistema soddisfi i requisiti e sia conforme alle attese.
+	\end{itemize}
+
+	\subsection{Organizzazione}
+	Il processo di verifica inizia nel momento in cui la versione del prodotto di un processo cambia. Il diario delle modifiche aiuta a monitorare solo le sezioni che sono state modificate, ottimizzando così i tempi di verifica. 
+	
+	Viene verificata sia la qualità del processo che del prodotto da esso compiuto.
+	
+	Ogni fase del progetto, descritta nel documento \textit{"Piano di progetto v1.0.0"} produce un prodotto diverso, quindi necessita di diverse attività di verifica:
+	\begin{itemize}
+		\item \textbf{Analisi:} in questa fase si verifica che i processi e la documentazione prodotta rispetti il le norme definite nel documento \textit{"Norme di Progetto v1.0.0"}
+		\item \textbf{Analisi di Dettaglio:}...
+		\item \textbf{Analisi Architetturale:}...
+	\end{itemize}
+	\subsection{Pianificazione strategica e temporale}
+	E' essenziale che l'attività di verifica sia sistematica e organizzata, al fine di evitare la propagazione di errori e ottimizzare i tempi di sviluppo, per rispettare le scadenze elencate nel documento \textit{Piano di Progetto v1.0.0}.
+	
+	Ogni fase di redazione di documenti e di codifica deve essere preceduta da una fase di studio preliminare, al fine di ridurre la possibilità di errori di natura concettuale o tecnica, e favorendo l'attività dei verificatori.
+	
+	In seguito vengono riportate le scadenze fissate:
+	\begin{itemize}
+		\item \textbf{Revisioni formali:}
+			\begin{itemize}
+				\item \textbf{Revisione dei Requisiti:} 24/01/2017;
+				\item \textbf{Revisione di Accettazione:} 27/06/2017
+			\end{itemize}
+		\item \textbf{Revisioni di progresso:}
+			\begin{itemize}
+				\item \textbf{Revisione di Progettazione:} 13/03/2017
+				\item \textbf{Revisione di Qualifica:} 15/05/2017
+			\end{itemize}
+	\end{itemize}
+	\subsection{Responsabilità}
+	Al fine di garantire un processo di verifica efficace ed efficiente vengono attribuite delle responsabilità all'interno del gruppo di progetto. 
+	
+	I ruoli che intervengono nel processo di verifica sono il \textit{Project Manager} e il \textit{Verificatore.}. La suddivione dei compiti è descritta nel documento \textit{"Norme di Progetto v1.0.0"}.
+	\subsection{Risorse}
+	Per realizzare il prodotto sono necessarie le seguenti risorse:
+	\begin{itemize}
+		\item \textbf{Risorse umane:} vengono descritte dettagliatamente nel documento \textit{"Piano di Progetto v1.0.0"}.
+		\begin{itemize}
+			\item Project Manager;
+			\item Amministratore;
+			\item Analista;
+			\item Progettista;
+			\item Programmatore;
+			\item Verificatore.
+		\end{itemize}
+		\item \textbf{Risorse software:} sono necessari strumenti software per:
+		\begin{itemize}
+			\item scrivere la documentazione in formato \LaTeX\textsubscript{g};
+			\item creare diagrammi \textit{UML}\textsubscript{g};
+			\item automatizzare le verifiche;
+			\item sviluppare nei linguaggi di programmazione scelti;
+			\item analizzare il codice scritto;
+			\item gestione dei test sul codice.
+		\end{itemize}
+		\item \textbf{Risorse hardware:} sono necessari computer con caratteristiche descritti nel documento \textit{"Norme di Progetto v1.0.0"}. 
+	\end{itemize}
+	\subsection{Misure e metriche}
+	
+\end{document}
