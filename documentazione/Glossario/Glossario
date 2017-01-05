@@ -45,8 +45,8 @@ Raw
 Componenti (o Ambiti)
 Diagramma dei Casi D’Uso
 UC
-Bisogni Implici -> Fonte: Dominio
-Bisogni Esplici -> Fonte: Capitolato D’Appalto
+Bisogni Implichi -> Fonte: Dominio
+Bisogni Espliciti -> Fonte: Capitolato D’Appalto
 Capitolato D’Appalto
 Dominio
 Registrare
@@ -81,3 +81,21 @@ Workspace
 Project
 Task
 Sub-Task
+Revisione
+RR
+RP
+RQ
+RA
+Cascata 
+Ritorno Incrementale
+BackLog
+Modello Agile
+Scrum
+Milestone
+Analisi Statica 
+Analisi Dinamica
+Test
+Test di Unità
+Test di Integrazione
+Test di Sistema
+Collaudo

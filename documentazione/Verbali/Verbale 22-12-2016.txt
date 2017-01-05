@@ -1,0 +1,25 @@
+Verbale dell'incontro del 22/12/2016
+Presenti: 	SWEg group
+			Gruppo capitolato C1
+			Professor Tullio Vardanega
+			Dott. Claudio Guidi
+
+Nel giorno 22/12/2016 si è svolto un incontro nell'aula della Torre Archimede 1bc45
+tra i gruppi che hanno deciso di svolgere il capitolato
+C1 ed il (proponente/committente). 
+Si è svolto tramite skype ed aveva lo scopo di un primo incontro tra le parti e per una breve 
+introduzione al linguaggio Jolie, che verrà usato per svolgere almeno una parte di progetto.
+Il dott. Guidi ha introdotto per circa un'ora il linguaggio agli studenti mostrando qualche esempio.
+Dopodichè i due gruppi hanno avuto la possibilità di fare qualche domanda al dott. Guidi per 
+cercare di capire meglio le richieste e quindi svolgere al meglio il progetto.
+Le domande che sono state poste sono:
+-bisogna definire un'architettuta comune ai due gruppi? La risposta è stata affermativa. I due 
+	gruppi (o alcuni membri di essi) dovranno quindi lavorare insieme per definire un'architettura comune;
+-chi sono gli utenti di questo API Market? Gli utenti sono sia i developer che caricano le API, 
+	sia gli user, cioè chi compra ed utilizza le API;
+-come gestire il gateway? In questo caso il dott. Guidi ha proposto di poter snellire il traffico
+	del gateway utilizzando dei microservizi messi a disposizione dell'utente;
+-cosa sono esattamente gli SLA? Sono i Service Level Agreement, cioè la modalità
+	di erogazione della API (durata, numero di chiamate, traffico dati) e vengono gestite dal Market;
+Queste sono state le principali questione che sono state sollevate e risolte durante questo primo
+incotro.

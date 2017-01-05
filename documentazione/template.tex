@@ -80,14 +80,16 @@
 \rfoot{\thepage}
 \renewcommand{\headrulewidth}{0.2pt}
 \renewcommand{\footrulewidth}{0.2pt}
-\rhead{Registro Modifiche}
 
+\rhead{Registro Modifiche}
 \section{Registro Modifiche}
 \small %rippicciolisce il testo
+{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
 \begin{tabular}{|l|c|c|c|}
 \hline
 {\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
 \end{tabular}
+}
 
 \tableofcontents
 %crea indice automaticamente
@@ -96,7 +98,7 @@
 \newpage
 
 
-
+\rhead{Titolo del paragrafo}
 \section{Titolo del paragrafo}
 \subsection{Titolo del sottoparagrafo}
 Testo Testo Testo.\\
@@ -104,6 +106,9 @@ Altro Testo Altro Testo.\\
 \\
 Testo distanziato. Testo distanziato. 
 
+\newpage
+
+\rhead{Titolo del paragrafo 2}
 \section{Titolo del paragrafo 2}
 \subsection{Titolo del sottoparagrafo 2}
 \subsubsection{Titolo del paragrafino}

@@ -78,26 +78,28 @@
 \rhead{Registro Modifiche}
 \section{Registro Modifiche}
 \small %rippicciolisce il testo
+
+{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
 \begin{tabular}{|l|c|c|c|}
 \hline
 {\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
 \hline
 Creazione Documento & Piergiorgio Danieli & 12/12/2016 & 0.0.1 \\
 \hline
-Aggiunti  & Sebastiano Marchesini & 12/12/2016 & 0.0.2 \\
+Aggiunti Ruoli  & Sebastiano Marchesini & 12/12/2016 & 0.0.2 \\
 \hline
-Aggiunti & Piergiorgio Danieli & 13/12/2016 & 0.0.3 \\
+Aggiunte Procedure di Sviluppo & Piergiorgio Danieli & 13/12/2016 & 0.0.3 \\
 \hline
-Aggiunti & Sebastiano Marchesini & 14/12/2016 & 0.0.4 \\
+Aggiunti Analisi dei Requisiti & Sebastiano Marchesini & 14/12/2016 & 0.0.4 \\
 \hline 
-Aggiunti & Piergiorgio Danieli & 15/12/2016 & 0.0.5 \\
+Aggiunto Ambiente di Lavoro & Piergiorgio Danieli & 15/12/2016 & 0.0.5 \\
 \hline
-Aggiunti & Sebastiano Marchesini & 15/12/2016 & 0.0.6 \\
+Aggiunto Versionamento & Sebastiano Marchesini & 15/12/2016 & 0.0.6 \\
 \hline
 Stesura Iniziale & Sebastiano Marchesini & 30/12/2016 & 0.1.0 \\
 \hline
-
 \end{tabular}
+}
 \normalsize	%lo riporta a forma normale
 \newpage
 
@@ -114,7 +116,7 @@ Stesura Iniziale & Sebastiano Marchesini & 30/12/2016 & 0.1.0 \\
 \subsection{Scopo del Documento}
 Questo documento ha l'obiettivo di definire le regole che i membri del gruppo \textit{SWEG} seguiranno nello sviluppo del progetto.\\
 Ogni componente del team e' tenuto a leggere e seguire le norme qui contenute per ottimizzare il lavoro, uniformare tutti i documenti e minimizzare gli errori.\\
-In particolare verrano specificate le norme per:
+In particolare verranno specificate le norme per:
 \begin{itemize}
 \item interazioni tra i membri del gruppo e componenti esterni
 \item stesura dei documenti e relative convenzioni
@@ -289,7 +291,7 @@ Ogni file di documentazione dovrà iniziare con la seguente intestazione:
 \subsection{Ruoli all'interno del progetto}
 Ad ogni componente è assegnato un ruolo all'interno del progetto che varia a seconda di regole che sono riportate in seguito. Importante è la nessun conflitto di interesse infatti non è possibile validare il processo progettato o realizzato. Può però capitare che si svolgano più compiti nello stesso periodo causa carenza di personale. Importante è la flessibilità all'interno del team per diminuire i tempi di scambio mansione.\\
 Ogni membro a qualunque ruolo ha il diritto di rafforzare la sua funzione con corsi e il dovere di specializzarsi con ricerca ed esperienze personali.
-\subsubsection{Project Manager} 
+\subsubsection{Project Manager (PM)} 
 Titolare di responsabilità decisionale. Rappresenta il progetto di fronte al fornitore e al committente. Tale figura è garante unico dell'avvio, pianificazione, svolgimento, controllo e chiusura di un progetto. In particolare :
 \begin{itemize}
 	\item Pianifica riunioni e compiti;
@@ -299,21 +301,21 @@ Titolare di responsabilità decisionale. Rappresenta il progetto di fronte al for
 	\item Controllo, coordinamento con relazioni esterne;
 	\item Approvazione documenti.
 \end{itemize}
-\subsubsection{Amministratore} 
+\subsubsection{Amministratore (AM))} 
 Responsabilità di cura dei processi. In dettaglio : 
 \begin{itemize}
 	\item Gestione delle risorse e delle infrastrutture
 	\item Ispettore di versioni e configurazioni
 	\item Risolutore di difficoltà di processi
 \end{itemize}
-\subsubsection{Analista} 
+\subsubsection{Analista (AN)} 
 Il ruolo principale dell'analista è l'attuazione dei requisiti. Quindi comprendere il problema in ogni sfaccettatura. Senza l'obbligo di trovare una soluzione. Tra le sue competenze : 
 \begin{itemize}
 	\item Cogliere il problema
 	\item Conoscere il dominio del quesito
 	\item Vasta esperienza professionale
 \end{itemize}
-\subsubsection{Progettista} 
+\subsubsection{Progettista (PL)} 
 Il compito del progettista è quello di realizzare e seguire la manutenzione del prodotto. E' di fatto un attuatore : 
 \begin{itemize}
 	\item Risolve il problema
@@ -321,14 +323,14 @@ Il compito del progettista è quello di realizzare e seguire la manutenzione del 
 	\item Ampia conoscenza nei linguaggi e delle risorse utilizzate
 	\item Esegue una soluzione attuabile e comprensibile
 \end{itemize}
-\subsubsection{Programmatore} 
+\subsubsection{Programmatore (PR)} 
 Il programmatore è la mano che muove crea il progetto. Il suo compito principale è infatti la realizzazione e la manutenzione del prodotto. Come il progettista anche nel suo ambito è un attuatole :
 \begin{itemize}
 	\item Segue i piani progettati e attua il disegno previsto
 	\item Implementa test di verifica automatica per il suo codice
 	\item Il codice che scrivere deve essere versionato e documentato comprensibile
 \end{itemize}
-\subsubsection{Verificatore} 
+\subsubsection{Verificatore (VR)} 
 Al termine del lavoro eseguito dagli altri membri del team il verificatore esegue un controllo tramite analisi statica del ticket . Questa può essere attuata tramite \textit{Walkthrough} o \textit{Ispection}. Nel secondo caso la check list è redata concordata insieme al \textit{Project Manager}. 
 \begin{itemize}
 	\item Controlla siano rispettati gli standard aderiti nel progetto
