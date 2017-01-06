@@ -8,7 +8,7 @@
 \usepackage{hyperref}
 \usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
 \usepackage{soulutf8,color}
-
+\usepackage{eurosym}
 
 \usepackage{emptypage}                     
 % pagine vuote senza testatina e piede di pagina
@@ -128,8 +128,24 @@ In particolare verranno specificate le norme per:
 Al fine di evitare ambiguità e ottimizzare la comprensione dei documenti, viene incluso un Glossario, nel quale saranno inseriti i termini tecnici, acronimi e parole che necessitano di essere chiarite.\\
 Un glossario è una raccolta di termini di un ambito specifico e circoscritto. In questo caso per raccogliere termini desueti e specialistici inerenti al progetto. 
 
-\subsection{Riferimenti}
-%DA METTERE QUALCOSA QUI
+\subsection{Riferimenti}	%DA COMPLETARE
+\subsubsection{Normativi}
+\begin{itemize}
+	\item \textbf{ISO/IEC 12207:2008}
+	\item \textbf{Norme di Progetto}: \\
+	"Norme di Progetto v1.0.0".
+\end{itemize}
+\subsubsection{Informativi}
+\begin{itemize}
+	\item \textbf{Metriche di Progetto}: \\
+	\textcolor{blue}{\url{https://it.wikipedia.org/wiki/Metriche_di_progetto}}.
+	\item \textbf{Modello incrementale}: \\
+	\textcolor{blue}{\url{https://it.wikipedia.org/wiki/Modello_incrementale}}.
+	\item \textbf{Modello incrementale}: \\
+	\textcolor{blue}{\url{https://it.wikipedia.org/wiki/Metodologia_agile}}.
+	\item \textbf{Gestione di progetto}: \\
+	\textcolor{blue}{\url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/L04.pdf}}.
+\end{itemize}
 
 \newpage
 
@@ -171,14 +187,35 @@ template apposito in \LaTeX.
 
 \subsubsection{Stile del testo}
 \begin{itemize}
-\item \textbf{Grossetto}: Deve essere applicato alle parole significative che devono essere messe in risalto;
+\item \textbf{Grassetto}: Deve essere applicato alle parole significative che devono essere messe in risalto;
 \item \textbf{Corsivo}: va utilizzato per indicare termini in lingua inglese e nomi dei file;
 \item \textbf{Maiuscolo}: va usato per scrivere gli acronimi;
-\item \textbf{Latex}: ogni riferimento a \LaTeX va scritto utilizzando il comando \_LaTeX .
+\item \textbf{Latex}: ogni riferimento a \LaTeX va scritto utilizzando il comando (slash)LaTeX .
 \end{itemize}
 
 \subsection{Convenzioni tipografiche}
-%COMANDI IN LATEX
+I principali comandi utilizzati in \LaTeX sono indicati sotto per argomento.\\ Per le liste:
+\begin{itemize}
+	\item \verb=\begin{itemize} \end{itemize}= dove tra i due comandi posso mettere i vari punti di una lista;
+	\item gli oggetti della lista si indicano col comando \verb=\item=;
+	\item vi possono essere vari tipi di liste : \verb|itemize| puntata, \verb|enumerate| numerata e \verb|trivlist| vuota.
+\end{itemize}
+Per le tabelle:
+\begin{itemize}
+	\item \verb|\renewcommand\arraystretch{1.2}| allarga ogni riga dello spazio indicato. La tabella va racchiusa tra parentesi graffe;
+	\item \verb=\begin{tabular}{|c|c|c|} \end{tabular}= indica una tabella con 3 colonne e pos. testo centrale. La barra verticale ( | ) indica che vi e' una linea divisoria verticale tra le celle;
+	\item \verb|\hline| indica una linea separatrice orizzontale;
+	\item \verb|&| è il simbolo separatore tra le celle orizzontalmente;
+	\item \verb|\\| passa alla riga successiva della tabella.
+\end{itemize}
+Per le immagini:
+\begin{itemize}
+	\item \verb|\begin{figure} \end{figure}| inizio e fine di una sezione con figure;
+	\item \verb|\centering| imposta centrale la figura;
+	\item \verb|\includegraphics{filegrafico}| comando per includere le immagini, importante è controllare il formato;
+	\item \verb|\caption{didascalia}| inserisce una didascalia sotto l'immagine;
+	\item \verb|\label{nome}| imposta il nome della tabella.
+\end{itemize} 
  
 \subsection{Formati}
 \begin{itemize}
@@ -343,9 +380,27 @@ Non è richiesto tale ruolo all'interno del team e non sarà interpretato nella ro
 Il progetto a scopo didattico ha l'obbligo di far interpretare ogni ruolo a tutti i partecipanti del team. Per il momento assumiamo un modello agile di tipo \textit{scrum} per eseguire i compiti (o \textit{ticket}). Quindi dopo aver costruito una prima check list in gruppo ogni obbiettivo viene risolto da un sottogruppo in cui il primo che preferisce eseguirlo assume il ruolo di \textit{Project Manager} e vaglia oggettivamente ogni sfaccettatura per risolvere il \textit{backlog} richiedendo le risorse di cui ha bisogno.
 
 \subsection{Costi Ruoli}
-Ciascun ruolo e mansione ha un peso diverso nel progetto e quindi un costo. Che deve rientrare nel \textit{budget} pattuito dal committente $XXXXXX$ . Non specificato nel nostro caso.
+Ciascun ruolo e mansione ha un peso diverso nel progetto e quindi un costo. Che deve rientrare nel \textit{budget} pattuito dal committente $9300,00$\footnote{Il calcolo del budjet per noi gruppo composto da 5 persone è stato calcolato proporzionalmente al costo di 7 persone arrotondato per eccesso.} . Non specificato nel nostro caso.\\
 \subsubsection{Tabella Costi}
-%TABELLA COSTI MANCANTE
+
+
+{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
+	\begin{tabular}{|l|c|}
+		\hline
+		\textbf{Responsabile/Project Manager} & \euro 30,00 \\
+		\hline
+		\textbf{Amministratore} & \euro 20,00 \\
+		\hline
+		\textbf{Analista} & \euro 25,00 \\
+		\hline
+		\textbf{Progettista} & \euro 22,00 \\
+		\hline
+		\textbf{Programmatore} & \euro 15,00 \\
+		\hline
+		\textbf{Verificatore} & \euro 15,00 \\
+		\hline
+\end{tabular}}
+\vspace{0.5cm}
 
 
 
@@ -424,6 +479,23 @@ E' nostro compito automatizzare il processo con software adeguato.
 
 \newpage
 
+\rhead{Processi Primari}
+\section{Processi Primari}
+Si è scelto di seguire e reinterpretare per i processi primari lo \textbf{Standard ISO/IEC 12207}. Tenendo delle basi comuni ma essendo più flessibile su alcuni processi, raggruppandoli e rinominandoli.\\
+I processi primari esistono all'esistenza del processo, contengono il nocciolo dei processi coinvolti nella creazione di un prodotto software. E sono divisi in sei processi principali:
+\begin{itemize}
+	\item Acquisizione
+	\item Fornitura
+	\item Sviluppo
+	\item Gestione operativa (utilizzo)
+	\item Manutenzione
+\end{itemize}
+\subsection{Fornitura}
+
+\subsection{Sviluppo}
+Per processi di sviluppo si è scelto di rielaborare quelli descritti nello standard. Di seguito indichiamo la dichiarazione.\\
+
+
 \rhead{Procedure di sviluppo}
 \section{Procedure di sviluppo}
 In questa sezione verranno descritte le procedure che tutti i componenti del gruppo sono tenuti a seguire
@@ -500,14 +572,14 @@ Durante la fase di \textit{walkthrough} sono stati rilevati questi come errori p
 \begin{itemize}
 \item Norme Stilistiche:
 	\begin{itemize}
-		\item Un elemento dell'elenco inizia con lettera minuscola;
-		\item
+		\item un elemento dell'elenco inizia con lettera minuscola;
+		\item usare descrizioni opportune
 		\item
 	\end{itemize}
 \item Italiano:
 	\begin{itemize}
-		\item Scorretto utilizzo di accenti acuti e gravi;
-		\item Punteggiatura nelle liste;
+		\item scorretto utilizzo di accenti acuti e gravi;
+		\item punteggiatura nelle liste;
 		\item
 	\end{itemize}
 \item \LaTeX:
@@ -516,9 +588,33 @@ Durante la fase di \textit{walkthrough} sono stati rilevati questi come errori p
 	\end{itemize}
 \item UML:
 	\begin{itemize}
-		\item Direzione delle frecce del diagramma errate;
+		\item direzione delle frecce del diagramma errate;
+		\item specificare la versione;
+		\item evitare interfacce con funzioni;
 		\item 
-	\end{itemize}	
+	\end{itemize}
+\item Diagrammi dei Package:	
+	\begin{itemize}
+		\item relazioni tra package;
+		\item diagrammi troppo vasti e con troppe specifiche;
+		\item corretti tipi di relazioni;
+		\item utilizzare solo notazioni standard.
+	\end{itemize}
+\item Interfacce:
+	\begin{itemize}
+		\item nomi delle classi specifici;
+		\item colori per gruppi di classi omogenee.
+	\end{itemize}
+\item Diagrammi di attività:
+	\begin{itemize}
+		\item uso dettagliato;
+		\item i verbi devono indicare azioni;
+		\item non usare fork e join insieme.
+	\end{itemize}
+\item Design pattern:
+	\begin{itemize}
+		\item deve essere sempre contestualizzato, la descrizione non basta.
+	\end{itemize}
 \end{itemize}
 \subsubsection{Verifica documenti}
 Il \textit{Verificatore} nei documenti dovrà verificare:
@@ -542,6 +638,16 @@ Nel controllare i diagrammi \textit{UML}, il \textit{Verificatore} dovrà prestar
 	\item Correttezza logica del programma.
 \end{itemize}
 
+\subsection{Validazione}
+Il principio assoluto è scrivere documenti e programmi verificabili. Dopo un serie de verifiche che seguono tutto il ciclo di vita del prodotto la validazione è il verdetto finale che lo rende pubblicabile senza timore.\\
+Quindi vorremo la validazione sia  autoavverante. \\
+Il \textit{testing}, negli approcci dinamici, prevede esecuzione del software o prototipi al fine di scoprire difetti e assicura quindi la validazione del programma.\\
+Al momento non avendo prodotto software, e quindi impossibile eseguire dei test, si è scelto come regala generale una doppia revisione, anche a seconda del testo. Per doppia revisione si intende :
+\begin{itemize}
+	\item Temporale : cioè il documento è revisionato più volte nel corso del tempo se importante, anche se non completato;
+	\item Umana : cioè al completamento ogni atto è controllato da due membri del team diversi e che non l'abbiano redato (per evitare conflitti d'interesse). 
+\end{itemize}
+Questa scelta è al momento il metodo di validazione del gruppo.
 \newpage
 
 \rhead{Ambiente di lavoro}
@@ -578,7 +684,8 @@ E' stato scelto di scrivere i documenti in linguaggio \LaTeX perché:
 	\item Consente di suddividere il documento in file separati.
 \end{itemize} 
 \subsubsection{Edior}
-L'editor di testo utilizzato multipiattaforma è \textit{TexStudio}. Programma efficiente con compilazione rapida. Offre una insieme di mezzi per velocizzare e facilitare la creazione della documentazione.
+L'editor di testo utilizzato multi-piattaforma è \textit{TexStudio}. Programma efficiente con compilazione rapida. Offre una insieme di mezzi per velocizzare e facilitare la creazione della documentazione.\\
+E' stato aggiunto il dizionario italiano per una correzione immediata e automatica di errori ortografici.
 \subsubsection{Diagrammi UML}
 Per la creazione dei diagrammi \textit{UML} si è preso riferimento l'applicazione usata dal professore nelle ore di lezione. Inserendo la mail concessaci dell'università è possibile avere una versione gratuita del software \textit{Astah}.\\
 Progettato per il design dei principali grafici a uso informatico.
@@ -587,7 +694,17 @@ Tutti i documenti creati con \LaTeX sono automaticamente controllati con uno scr
 
 \subsection{Pianificazione}
 \subsubsection{Diagrammi}
-Per la pianificazione delle attività è stato scelto il software %DA COMPLETARE
+Per la pianificazione delle attività è stato scelto il software \textit{Instagantt}. Software web per la pianificazione delle attività tramite diagramma Gantt. \\
+E' stata scelta tale applicazione perché compatibile con il sistema di ticketing offerto da \textit{Asana}. Infatti ogni attività e il suo responsabile è direttamente collegato al diagramma. \\
+Le principali funzioni sono:
+\begin{itemize}
+	\item data di inizio e fine dell'attività;
+	\item gruppi e sottogruppi di attività;
+	\item milestone e date importanti;
+	\item segnare lo stato di un'attività;
+	\item colorare attività per suddividerle (es. urgenza o tipologia);
+	\item impostare dipendenze tra le attività.
+\end{itemize}
 \subsubsection{Attività}
 \textit{Asana} è un'applicazione web e mobile che permette la suddivisione delle attività in modo
 strutturato. Offre un'organizzazione ad albero suddivisa in questo modo:
@@ -638,10 +755,10 @@ La \textit{repository} della documentazione è composta dalle varie cartelle :
 	\item StudioDiFattibilità
 	\item Verbali
 \end{itemize}
-I file all'interno possono essere di qualsiasi genere. Anche appunti. Nella capitolo della documentazione è stato trattata il modo in cui crearli ed elaborarli. 
-
+I file all'interno possono essere di qualsiasi genere. Anche appunti. Nella capitolo della documentazione è stato trattata il modo in cui crearli ed elaborarli.  \\
 \subsubsection{Repository progetto}
-%MANCA QUESTA PARTE
+
+Non avendo ancora iniziato il progetto non vi è ancora una sezione dedicata alle cartelle dei file.\\
 
 
 %MANCA TUTTA LA PARTE DI VERSIONAMENTO

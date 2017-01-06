@@ -16,7 +16,7 @@ Walkthrough
 Ispection
 Script
 Backlog
-Ticket
+Ticket (Ticketing)
 Scrum
 Budget
 File System
@@ -33,6 +33,7 @@ APIMarket
 Tag
 Categoria
 Documentazione
+Instagantt
 Dati Tecnici -> API
 Autore
 Account
@@ -45,6 +46,9 @@ Raw
 Componenti (o Ambiti)
 Diagramma dei Casi D’Uso
 UC
+Fork
+Join
+Package
 Bisogni Implichi -> Fonte: Dominio
 Bisogni Espliciti -> Fonte: Capitolato D’Appalto
 Capitolato D’Appalto

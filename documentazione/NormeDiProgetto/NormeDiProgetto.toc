@@ -16,62 +16,62 @@
 \contentsline {subsection}{\numberline {4.1}Template}{6}{subsection.4.1}
 \contentsline {subsubsection}{\numberline {4.1.1}Stile del testo}{6}{subsubsection.4.1.1}
 \contentsline {subsection}{\numberline {4.2}Convenzioni tipografiche}{6}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Formati}{6}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.3}Formati}{7}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Struttura del documento}{7}{subsection.4.4}
 \contentsline {subsubsection}{\numberline {4.4.1}Frontespizio}{7}{subsubsection.4.4.1}
-\contentsline {subsubsection}{\numberline {4.4.2}Diario delle modifiche}{7}{subsubsection.4.4.2}
-\contentsline {subsubsection}{\numberline {4.4.3}Indice}{7}{subsubsection.4.4.3}
-\contentsline {subsubsection}{\numberline {4.4.4}Formattazione generale}{7}{subsubsection.4.4.4}
+\contentsline {subsubsection}{\numberline {4.4.2}Diario delle modifiche}{8}{subsubsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.3}Indice}{8}{subsubsection.4.4.3}
+\contentsline {subsubsection}{\numberline {4.4.4}Formattazione generale}{8}{subsubsection.4.4.4}
 \contentsline {subsection}{\numberline {4.5}Classificazione documenti}{8}{subsection.4.5}
 \contentsline {subsubsection}{\numberline {4.5.1}Documenti formali}{8}{subsubsection.4.5.1}
-\contentsline {subsubsection}{\numberline {4.5.2}Documenti informali}{8}{subsubsection.4.5.2}
-\contentsline {subsection}{\numberline {4.6}Componenti grafiche}{8}{subsection.4.6}
-\contentsline {subsubsection}{\numberline {4.6.1}Tabelle}{8}{subsubsection.4.6.1}
-\contentsline {subsubsection}{\numberline {4.6.2}Immagini}{8}{subsubsection.4.6.2}
-\contentsline {subsection}{\numberline {4.7}Intestazione file di documentazione}{8}{subsection.4.7}
-\contentsline {section}{\numberline {5}Ruoli}{9}{section.5}
-\contentsline {subsection}{\numberline {5.1}Ruoli all'interno del progetto}{9}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Project Manager}{9}{subsubsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.2}Amministratore}{9}{subsubsection.5.1.2}
-\contentsline {subsubsection}{\numberline {5.1.3}Analista}{9}{subsubsection.5.1.3}
-\contentsline {subsubsection}{\numberline {5.1.4}Progettista}{10}{subsubsection.5.1.4}
-\contentsline {subsubsection}{\numberline {5.1.5}Programmatore}{10}{subsubsection.5.1.5}
-\contentsline {subsubsection}{\numberline {5.1.6}Verificatore}{10}{subsubsection.5.1.6}
-\contentsline {subsubsection}{\numberline {5.1.7}Responsabile Qualit\`a}{10}{subsubsection.5.1.7}
-\contentsline {subsection}{\numberline {5.2}Sistema rotativo dei ruoli}{10}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Costi Ruoli}{10}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}Tabella Costi}{11}{subsubsection.5.3.1}
-\contentsline {section}{\numberline {6}Analisi dei Requisiti}{12}{section.6}
-\contentsline {subsection}{\numberline {6.1}Studio di Fattibilit\`a e Analisi dei Rischi}{12}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Documento Analisi dei Requisiti}{12}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}Classificazione dei requisiti}{12}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}Allocazione e modellazione concettuale del sistema}{13}{subsubsection.6.2.2}
-\contentsline {subsection}{\numberline {6.3}Tracciamento}{13}{subsection.6.3}
-\contentsline {section}{\numberline {7}Procedure di sviluppo}{14}{section.7}
-\contentsline {subsection}{\numberline {7.1}Gestione di progetto}{14}{subsection.7.1}
-\contentsline {subsubsection}{\numberline {7.1.1}Pianificazione delle attivit\`a}{14}{subsubsection.7.1.1}
-\contentsline {subsubsection}{\numberline {7.1.2}Coordinamento delle attivit\`a}{14}{subsubsection.7.1.2}
-\contentsline {subsubsection}{\numberline {7.1.3}Analisi dei rischi}{14}{subsubsection.7.1.3}
-\contentsline {subsubsection}{\numberline {7.1.4}Elaborazione dei dati}{14}{subsubsection.7.1.4}
-\contentsline {subsection}{\numberline {7.2}Verifica}{14}{subsection.7.2}
-\contentsline {subsubsection}{\numberline {7.2.1}Tecniche di analisi}{15}{subsubsection.7.2.1}
-\contentsline {subsubsection}{\numberline {7.2.2}Lista di controllo}{15}{subsubsection.7.2.2}
-\contentsline {subsubsection}{\numberline {7.2.3}Verifica documenti}{16}{subsubsection.7.2.3}
-\contentsline {subsubsection}{\numberline {7.2.4}Verifica requisiti}{16}{subsubsection.7.2.4}
-\contentsline {subsubsection}{\numberline {7.2.5}Verifica diagrammi UML}{16}{subsubsection.7.2.5}
-\contentsline {section}{\numberline {8}Ambiente di lavoro}{17}{section.8}
-\contentsline {subsection}{\numberline {8.1}Sistema operativo}{17}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Applicativo Guida}{17}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Ticket-ing}{17}{subsection.8.3}
-\contentsline {subsection}{\numberline {8.4}Documentazione}{17}{subsection.8.4}
-\contentsline {subsubsection}{\numberline {8.4.1}Latex}{17}{subsubsection.8.4.1}
-\contentsline {subsubsection}{\numberline {8.4.2}Edior}{18}{subsubsection.8.4.2}
-\contentsline {subsubsection}{\numberline {8.4.3}Diagrammi UML}{18}{subsubsection.8.4.3}
-\contentsline {subsubsection}{\numberline {8.4.4}Verifica}{18}{subsubsection.8.4.4}
-\contentsline {subsection}{\numberline {8.5}Pianificazione}{18}{subsection.8.5}
-\contentsline {subsubsection}{\numberline {8.5.1}Diagrammi}{18}{subsubsection.8.5.1}
-\contentsline {subsubsection}{\numberline {8.5.2}Attivit\`a}{18}{subsubsection.8.5.2}
-\contentsline {subsection}{\numberline {8.6}Versionamento}{19}{subsection.8.6}
-\contentsline {subsection}{\numberline {8.7}Repository}{19}{subsection.8.7}
-\contentsline {subsubsection}{\numberline {8.7.1}Repository documentazione}{19}{subsubsection.8.7.1}
-\contentsline {subsubsection}{\numberline {8.7.2}Repository progetto}{19}{subsubsection.8.7.2}
+\contentsline {subsubsection}{\numberline {4.5.2}Documenti informali}{9}{subsubsection.4.5.2}
+\contentsline {subsection}{\numberline {4.6}Componenti grafiche}{9}{subsection.4.6}
+\contentsline {subsubsection}{\numberline {4.6.1}Tabelle}{9}{subsubsection.4.6.1}
+\contentsline {subsubsection}{\numberline {4.6.2}Immagini}{9}{subsubsection.4.6.2}
+\contentsline {subsection}{\numberline {4.7}Intestazione file di documentazione}{9}{subsection.4.7}
+\contentsline {section}{\numberline {5}Ruoli}{10}{section.5}
+\contentsline {subsection}{\numberline {5.1}Ruoli all'interno del progetto}{10}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Project Manager (PM)}{10}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Amministratore (AM))}{10}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}Analista (AN)}{10}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.4}Progettista (PL)}{11}{subsubsection.5.1.4}
+\contentsline {subsubsection}{\numberline {5.1.5}Programmatore (PR)}{11}{subsubsection.5.1.5}
+\contentsline {subsubsection}{\numberline {5.1.6}Verificatore (VR)}{11}{subsubsection.5.1.6}
+\contentsline {subsubsection}{\numberline {5.1.7}Responsabile Qualit\`a}{11}{subsubsection.5.1.7}
+\contentsline {subsection}{\numberline {5.2}Sistema rotativo dei ruoli}{11}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Costi Ruoli}{11}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Tabella Costi}{12}{subsubsection.5.3.1}
+\contentsline {section}{\numberline {6}Analisi dei Requisiti}{13}{section.6}
+\contentsline {subsection}{\numberline {6.1}Studio di Fattibilit\`a e Analisi dei Rischi}{13}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Documento Analisi dei Requisiti}{13}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Classificazione dei requisiti}{13}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}Allocazione e modellazione concettuale del sistema}{14}{subsubsection.6.2.2}
+\contentsline {subsection}{\numberline {6.3}Tracciamento}{14}{subsection.6.3}
+\contentsline {section}{\numberline {7}Procedure di sviluppo}{15}{section.7}
+\contentsline {subsection}{\numberline {7.1}Gestione di progetto}{15}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Pianificazione delle attivit\`a}{15}{subsubsection.7.1.1}
+\contentsline {subsubsection}{\numberline {7.1.2}Coordinamento delle attivit\`a}{15}{subsubsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.3}Analisi dei rischi}{15}{subsubsection.7.1.3}
+\contentsline {subsubsection}{\numberline {7.1.4}Elaborazione dei dati}{15}{subsubsection.7.1.4}
+\contentsline {subsection}{\numberline {7.2}Verifica}{15}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Tecniche di analisi}{16}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2}Lista di controllo}{16}{subsubsection.7.2.2}
+\contentsline {subsubsection}{\numberline {7.2.3}Verifica documenti}{17}{subsubsection.7.2.3}
+\contentsline {subsubsection}{\numberline {7.2.4}Verifica requisiti}{17}{subsubsection.7.2.4}
+\contentsline {subsubsection}{\numberline {7.2.5}Verifica diagrammi UML}{17}{subsubsection.7.2.5}
+\contentsline {section}{\numberline {8}Ambiente di lavoro}{18}{section.8}
+\contentsline {subsection}{\numberline {8.1}Sistema operativo}{18}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Applicativo Guida}{18}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Ticket-ing}{18}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Documentazione}{18}{subsection.8.4}
+\contentsline {subsubsection}{\numberline {8.4.1}Latex}{18}{subsubsection.8.4.1}
+\contentsline {subsubsection}{\numberline {8.4.2}Edior}{19}{subsubsection.8.4.2}
+\contentsline {subsubsection}{\numberline {8.4.3}Diagrammi UML}{19}{subsubsection.8.4.3}
+\contentsline {subsubsection}{\numberline {8.4.4}Verifica}{19}{subsubsection.8.4.4}
+\contentsline {subsection}{\numberline {8.5}Pianificazione}{19}{subsection.8.5}
+\contentsline {subsubsection}{\numberline {8.5.1}Diagrammi}{19}{subsubsection.8.5.1}
+\contentsline {subsubsection}{\numberline {8.5.2}Attivit\`a}{19}{subsubsection.8.5.2}
+\contentsline {subsection}{\numberline {8.6}Versionamento}{20}{subsection.8.6}
+\contentsline {subsection}{\numberline {8.7}Repository}{20}{subsection.8.7}
+\contentsline {subsubsection}{\numberline {8.7.1}Repository documentazione}{20}{subsubsection.8.7.1}
+\contentsline {subsubsection}{\numberline {8.7.2}Repository progetto}{20}{subsubsection.8.7.2}
