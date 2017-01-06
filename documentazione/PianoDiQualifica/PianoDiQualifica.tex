@@ -42,10 +42,13 @@
 %\caption{didascalia}
 %\label{nome}
 %\end{figure}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \lhead{SWEg}
 \chead{}
 \rhead{APIM: An API Market Platform}
-\lfoot{Piano di Qualifica}
+\lfoot{Piano di Qualifica v1.0.0}
 \cfoot{}
 \rfoot{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
@@ -61,11 +64,11 @@
 	\newpage
 	\section{Introduzione}
 	\subsection{Scopo del documento}
-	Lo scopo del \textit{Piano di Qualifica} Ë di descrivere le strategie di verifica e validazione adottate dal gruppo SWEg al fine di perseguire obiettivi qualitativi per il progetto APIMarket.
+	Lo scopo del \textit{Piano di Qualifica} √® di descrivere le strategie di verifica e validazione adottate dal gruppo SWEg al fine di perseguire obiettivi qualitativi per il progetto APIMarket.
 	\subsection{Scopo del Prodotto}
-	Lo scopo del progetto Ë la realizzazione di un applicazione web che gestisca e monitori microservizi, muniti di un'interfaccia Jolie. In particolare APIMarket deve permettere di vendere, acquistare e monitorare microservizi tramite la piattaforma. 
+	Lo scopo del progetto √® la realizzazione di un applicazione web che gestisca e monitori microservizi, muniti di un'interfaccia Jolie. In particolare APIMarket deve permettere di vendere, acquistare e monitorare microservizi tramite la piattaforma. 
 	\subsection{Glossario}
-	Per evitare il pi˘ possibile ambiguit‡ legate al linguaggio, e per favorire la comprensione del documento i termini tecnici e gli acronimi che necessitano di descrizione saranno seguiti da una "g" in pedice e riportati nel documento \textit{Glossario v1.0.0}.
+	Per evitare il pi√π possibile ambiguit√† legate al linguaggio, e per favorire la comprensione del documento i termini tecnici e gli acronimi che necessitano di descrizione saranno seguiti da una "g" in pedice e riportati nel documento \textit{Glossario v1.0.0}.
 	\subsection{Riferimenti}
 	\subsubsection{Normativi}
 	\begin{itemize}
@@ -86,88 +89,88 @@
 			\url{https://en.wikipedia.org/wiki/ISO/IEC_9126};
 	\end{itemize} 
 	
-	\section{Definizione obiettivi di qualit‡}
-	Il gruppo SWEg si impegna a rispettare il modello di standard definito in ISO\textsubscript{g}/IEC\textsubscript{g}0126, il quale ha le seguenti qualit‡:
-		\subsection{Funzionalit‡}
-		Il sistema prodotto deve garantire tutte le funzionalit‡ indicate nel documento \textit{"Analisi dei Requisiti v1.0.0"}. L'implementazione dei requisiti deve essere pi˘ completa ed economica possibile.
+	\section{Definizione obiettivi di qualit√†}
+	Il gruppo SWEg si impegna a rispettare il modello di standard definito in ISO\textsubscript{g}/IEC\textsubscript{g}0126, il quale ha le seguenti qualit√†:
+		\subsection{Funzionalit√†}
+		Il sistema prodotto deve garantire tutte le funzionalit√† indicate nel documento \textit{"Analisi dei Requisiti v1.0.0"}. L'implementazione dei requisiti deve essere pi√π completa ed economica possibile.
 		\begin{itemize}
-			\item \textbf{Misura:} viene usata come unit‡ di misura la quantit‡ di requisiti mappati in componenti del sistema create e funzionanti;
-			\item \textbf{Metrica:} la sufficienza Ë stabilita nel soddisfacimento di tutti i requisiti obbligatori;
-			\item \textbf{Strumenti:} perchÈ questa qualit‡ sia soddisfatta il sistema deve superare tutti i test previsti.
+			\item \textbf{Misura:} viene usata come unit√† di misura la quantit√† di requisiti mappati in componenti del sistema create e funzionanti;
+			\item \textbf{Metrica:} la sufficienza √® stabilita nel soddisfacimento di tutti i requisiti obbligatori;
+			\item \textbf{Strumenti:} perch√© questa qualit√† sia soddisfatta il sistema deve superare tutti i test previsti.
 		\end{itemize}
-		\subsection{Affidabilit‡}
+		\subsection{Affidabilit√†}
 		Il sistema si deve dimostrare robusto e di facile ripristino in caso di errori.
 		\begin{itemize}
-			\item \textbf{Misura:} l'unit‡ di misura sar‡ la quantit‡ di esecuzioni del sistema andati a buon fine;
-			\item \textbf{Metrica:} le esecuzioni dovranno soddisfare la pi˘ ampia gamma di funzionalit‡ previste;
+			\item \textbf{Misura:} l'unit√† di misura sar√† la quantit√† di esecuzioni del sistema andati a buon fine;
+			\item \textbf{Metrica:} le esecuzioni dovranno soddisfare la pi√π ampia gamma di funzionalit√† previste;
 			\item \textbf{Strumenti:} da definire.
 		\end{itemize}
-		\subsection{Usabilit‡}
-		Il sistema prodotto deve risultare di semplice utilizzo per l'utente. Questo sistema deve allo stesso tempo soddisfare tutte le necessit‡ dell'utente.
+		\subsection{Usabilit√†}
+		Il sistema prodotto deve risultare di semplice utilizzo per l'utente. Questo sistema deve allo stesso tempo soddisfare tutte le necessit√† dell'utente.
 		\begin{itemize}
 			\item \textbf{Misura:}
 			\item \textbf{Metrica:}
 			\item \textbf{Strumenti:}
 		\end{itemize}
 		\subsection{Efficienza}
-		Il sistema deve fornire tutte le funzionalit‡ nel pi˘ breve tempo possibile, con il minimo utilizzo di risorse.
+		Il sistema deve fornire tutte le funzionalit√† nel pi√π breve tempo possibile, con il minimo utilizzo di risorse.
 		\begin{itemize}
 			\item \textbf{Misura:} tempi di latenza per ottenere una risposta dall'applicazione web in condizioni normali o in caso di sovraccarico della rete;
 			\item \textbf{Metrica:}la sufficienza viene stimata come un tempo di latenza minore del 20\% su rete via cavo o Wi-Fi e del 30\% su reti cellulari rispetto alla media dei tempi di latenza del server web;
 			\item \textbf{Strumenti:} si veda il documento \textit{"Norme di Progetto v1.0.0"}.
 		\end{itemize}
-		\subsection{Manutenibilit‡}
+		\subsection{Manutenibilit√†}
 		Il sistema prodotto deve essere comprensibile ed estensibile in modo facile e verificabile.
 		\begin{itemize}
-			\item \textbf{Misura:} l'unit‡ di misura utilizzata saranno le metriche sul codice descritte nella sezione Misure;
+			\item \textbf{Misura:} l'unit√† di misura utilizzata saranno le metriche sul codice descritte nella sezione Misure;
 			\item \textbf{Metrica:} le metriche che verranno rispettate sono descritte nella sezione Metriche;
 			\item \textbf{Strumenti:} si veda il documento \textit{"Norme di Progetto v1.0.0"}.
 		\end{itemize}
-		\subsection{Portabilit‡}
-		Il sistema deve essere pi˘ portabile possibile. Il sito deve essere visitabile da pi˘ browser possibili. Il sito deve essere sviluppato con sistemi che abbiano le varie componenti tecnologiche di tipo standard. Con il termine "standard" si intente che i contenuti devono poter essere utilizzati su pi˘ sistemi operativi possibile e su pi˘ ambienti di lavoro possibile.
+		\subsection{Portabilit√†}
+		Il sistema deve essere pi√π portabile possibile. Il sito deve essere visitabile da pi√π browser possibili. Il sito deve essere sviluppato con sistemi che abbiano le varie componenti tecnologiche di tipo standard. Con il termine "standard" si intente che i contenuti devono poter essere utilizzati su pi√π sistemi operativi possibile e su pi√π ambienti di lavoro possibile.
 			\begin{itemize}
 				\item \textbf{Misura:} il front end deve aderire agli standard W3C;
-				\item \textbf{Metrica:} se il software avr‡ la sufficienza in tutte le metriche descritte nella sezione "Metriche", allora il sito avr‡ le caratteristiche di portabilit‡ descritte;
+				\item \textbf{Metrica:} se il software avr√† la sufficienza in tutte le metriche descritte nella sezione "Metriche", allora il sito avr√† le caratteristiche di portabilit√† descritte;
 				\item \textbf{Strumenti:} si veda il documento \textit{"Norme di Progetto v1.0.0"}.
 			\end{itemize}
-		\subsection{Altre qualit‡}
+		\subsection{Altre qualit√†}
 	\section{Visione generale delle strategie di verifica}
-	\subsection{Procedure di controllo di qualit‡ di processo}
-	La qualit‡ dei processi verr‡ garantita dall'applicazione del principio PDCA\textsubscript{g}. Grazie a questo principio sar‡ possibile garantire non solo il controllo e la correttezza, ma anche il miglioramento costante della qualit‡ di tutti i processi. Come conseguenza diretta si otterr‡ il miglioramento del prodotto.
+	\subsection{Procedure di controllo di qualit√† di processo}
+	La qualit√† dei processi verr√† garantita dall'applicazione del principio PDCA\textsubscript{g}. Grazie a questo principio sar√† possibile garantire non solo il controllo e la correttezza, ma anche il miglioramento costante della qualit√† di tutti i processi. Come conseguenza diretta si otterr√† il miglioramento del prodotto.
 	
-	Per avere controllo dei processi, e di conseguenza qualit‡, Ë necessario che:
+	Per avere controllo dei processi, e di conseguenza qualit√†, √® necessario che:
 	\begin{itemize}
 		\item vi sia controllo sull'operato dei membri del team e sui processi;
 		\item i processi siano pianificati in modo dettagliato;
 		\item le risorse siano ripartite in modo chiaro.
 	\end{itemize}
-	L'attuazione di questi punti Ë descritta nel documento \textit{"Piano di progetto v1.0.0"}. Inoltre l'analisi contante della qualit‡ del prodotto permette di monitorare in modo indiretto la qualit‡ dei processi: se il prodotto Ë di bassa qualit‡ sicuramente il processo Ë migliorabile.
+	L'attuazione di questi punti √® descritta nel documento \textit{"Piano di progetto v1.0.0"}. Inoltre l'analisi contante della qualit√† del prodotto permette di monitorare in modo indiretto la qualit√† dei processi: se il prodotto √® di bassa qualit√† sicuramente il processo √® migliorabile.
 	
-	Per valutare la qualit‡ di un processo E' fondamentale che questa sia quantificata, le metriche per fare ciÚ sono descritte nella sezione....
+	Per valutare la qualit√† di un processo E' fondamentale che questa sia quantificata, le metriche per fare ci√≤ sono descritte nella sezione....
 	
-	\subsection{Procedure di controllo di qualit‡ di prodotto}
-	Il controllo di qualit‡ dei prodotti verr‡ garantito dai seguenti processi:
+	\subsection{Procedure di controllo di qualit√† di prodotto}
+	Il controllo di qualit√† dei prodotti verr√† garantito dai seguenti processi:
 	\begin{itemize}
 		\item \textbf{Software Quality Assurance} (SQA\textsubscript{g}): assicura che i processi siano appropriati per il progetto, che siano correttamente implementati. Prevede l'attuazione di tecniche di analisi statica e dinamica, descritte nel documento \textit{"Norme di Progetto v1.0.0"};
-		\item \textbf{verifica:} Ë il processo che controlla la coerenza e la correttezza dei prodotti dei processi. La verifica verr‡ eseguita costantemente durante tutta la durata del progetto. I risultati delle attivit‡ di verifica sono elencati nell'Appendice A.
+		\item \textbf{verifica:} √® il processo che controlla la coerenza e la correttezza dei prodotti dei processi. La verifica verr√† eseguita costantemente durante tutta la durata del progetto. I risultati delle attivit√† di verifica sono elencati nell'Appendice A.
 		\item \textbf{validazione:} ovvero la conferma che il sistema soddisfi i requisiti e sia conforme alle attese.
 	\end{itemize}
 
 	\subsection{Organizzazione}
-	Il processo di verifica inizia nel momento in cui la versione del prodotto di un processo cambia. Il diario delle modifiche aiuta a monitorare solo le sezioni che sono state modificate, ottimizzando cosÏ i tempi di verifica. 
+	Il processo di verifica inizia nel momento in cui la versione del prodotto di un processo cambia. Il diario delle modifiche aiuta a monitorare solo le sezioni che sono state modificate, ottimizzando cos√¨ i tempi di verifica. 
 	
-	Viene verificata sia la qualit‡ del processo che del prodotto da esso compiuto.
+	Viene verificata sia la qualit√† del processo che del prodotto da esso compiuto.
 	
-	Ogni fase del progetto, descritta nel documento \textit{"Piano di progetto v1.0.0"} produce un prodotto diverso, quindi necessita di diverse attivit‡ di verifica:
+	Ogni fase del progetto, descritta nel documento \textit{"Piano di progetto v1.0.0"} produce un prodotto diverso, quindi necessita di diverse attivit√† di verifica:
 	\begin{itemize}
 		\item \textbf{Analisi:} in questa fase si verifica che i processi e la documentazione prodotta rispetti il le norme definite nel documento \textit{"Norme di Progetto v1.0.0"}
 		\item \textbf{Analisi di Dettaglio:}...
 		\item \textbf{Analisi Architetturale:}...
 	\end{itemize}
 	\subsection{Pianificazione strategica e temporale}
-	E' essenziale che l'attivit‡ di verifica sia sistematica e organizzata, al fine di evitare la propagazione di errori e ottimizzare i tempi di sviluppo, per rispettare le scadenze elencate nel documento \textit{Piano di Progetto v1.0.0}.
+	E' essenziale che l'attivit√† di verifica sia sistematica e organizzata, al fine di evitare la propagazione di errori e ottimizzare i tempi di sviluppo, per rispettare le scadenze elencate nel documento \textit{Piano di Progetto v1.0.0}.
 	
-	Ogni fase di redazione di documenti e di codifica deve essere preceduta da una fase di studio preliminare, al fine di ridurre la possibilit‡ di errori di natura concettuale o tecnica, e favorendo l'attivit‡ dei verificatori.
+	Ogni fase di redazione di documenti e di codifica deve essere preceduta da una fase di studio preliminare, al fine di ridurre la possibilit√† di errori di natura concettuale o tecnica, e favorendo l'attivit√† dei verificatori.
 	
 	In seguito vengono riportate le scadenze fissate:
 	\begin{itemize}
@@ -182,10 +185,10 @@
 				\item \textbf{Revisione di Qualifica:} 15/05/2017
 			\end{itemize}
 	\end{itemize}
-	\subsection{Responsabilit‡}
-	Al fine di garantire un processo di verifica efficace ed efficiente vengono attribuite delle responsabilit‡ all'interno del gruppo di progetto. 
+	\subsection{Responsabilit√†}
+	Al fine di garantire un processo di verifica efficace ed efficiente vengono attribuite delle responsabilit√† all'interno del gruppo di progetto. 
 	
-	I ruoli che intervengono nel processo di verifica sono il \textit{Project Manager} e il \textit{Verificatore.}. La suddivione dei compiti Ë descritta nel documento \textit{"Norme di Progetto v1.0.0"}.
+	I ruoli che intervengono nel processo di verifica sono il \textit{Project Manager} e il \textit{Verificatore.}. La suddivione dei compiti √® descritta nel documento \textit{"Norme di Progetto v1.0.0"}.
 	\subsection{Risorse}
 	Per realizzare il prodotto sono necessarie le seguenti risorse:
 	\begin{itemize}
@@ -210,5 +213,56 @@
 		\item \textbf{Risorse hardware:} sono necessari computer con caratteristiche descritti nel documento \textit{"Norme di Progetto v1.0.0"}. 
 	\end{itemize}
 	\subsection{Misure e metriche}
+	Qui di seguito vengono elencate le misure e le metriche che verranno adottate nel processo di verifica. Il processo di verifica deve essere verificabile e quantificato secondo metriche stabilite a priori.
+	
+	Vi possono essere due tipologie di range nell'accettazione dei risultati di un processo di verifica:
+	\begin{itemize}
+		\item \textbf{Accettazione:} √® il livello minimo che il prodotto deve raggiungere per superare il test;
+		\item \textbf{Ottimale:} √® il livello in cui dovrebbe posizionarsi la misurazione. In caso questo valore non venga raggiunto sono necessarie verifiche aggiuntive.
+	\end{itemize}
+		\subsubsection{Metriche per i processi}
+			\paragraph{Schedule Variance (SV)}
+			Indica se si √® in linea, in anticipo o in ritardo rispetto alla schedulazione delle attivit√† di progetto pianificate nella baseline. √à un indicatore di efficacia soprattutto nei confronti del Cliente. Se SV > 0 significa che il progetto sta producendo con maggior velocit√† a quanto pianificato, viceversa se negativo.
+			\\ \\
+			\textbf{Parametri utilizzati:}
+			\begin{itemize}
+				\item \textbf{Range di accettazione:} $\geq$ -(preventivo fase*5\%);
+				\item \textbf{Range ottimale:} $\geq0$.
+			\end{itemize}
+			\paragraph{Budget Variance (BV)}
+			Indica se alla data corrente si √® speso di pi√π o di meno rispetto a quanto previsto a budget alla data corrente. √à un indicatore che ha un valore unicamente contabile e finanziario. Se BV > 0 significa che il progetto sta spendendo il proprio budget con minor velocit√† di quanto pianificato, viceversa se negativo. 
+			\\ \\
+			\textbf{Parametri utilizzati:}
+			\begin{itemize}
+				\item \textbf{Range di accettazione:}$\geq$-(preventivo fase*10\%);
+				\item \textbf{Range ottimale:}$\geq0$.
+			\end{itemize}
+		\subsubsection{Metriche per i documenti}
+			\paragraph{Gulpease}
+			L'indice Gulpease √® un indice, sviluppato per valutare la lingua italiana, che valuta la complessit√† e la leggibilit√† del testo. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anzich√© in sillabe, semplificandone il calcolo automatico. L'indice di Gulpease considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.
+			
+			L'indice √® calcolato con la seguente formula:
+			\[89+\frac{300*(\textit{numero delle frasi})-10*(\textit{numero delle lettere)}}{(\textit{numero delle parole})}\]
+			
+			I risultati sono compresi tra 0 e 100, dove il valore "100" indica la leggibilit√† pi√π alta e "0" la leggibilit√† pi√π bassa. In generale risulta che testi con un indice:
+			\begin{itemize}
+				\item inferiore a 80 sono difficili da leggere per chi ha la licenza elementare;
+				\item inferiore a 60 sono difficili da leggere per chi ha la licenza media;
+				\item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
+			\end{itemize}
+			Va notato che questo indice non considera che il testo sia comprensibile o meno, in effetti anche una frase con parole casuali potrebbe avere un ottimo indice Gulpease. I documenti perci√≤ vanno valutati da un essere umano per rendere le frasi semplici ma comprensibili.
+			\\ \\
+			\textbf{Parametri utilizzati:}
+			\begin{itemize}
+				\item \textbf{Range di accettazione:} [40 - 100];
+				\item \textbf{Range ottimale:} [50 - 100].
+			\end{itemize}
+			\paragraph{Complessit√† ciclomatica}
+			\paragraph{Rapporto linee di commeneto su linee di codice}
+			\paragraph{Numero di livelli di annidamento}
+			\paragraph{Numero di campi dati per classe}
+			\paragraph{Accoppiamento}
+			\paragraph{Validazione W3C}
+			
 	
 \end{document}
