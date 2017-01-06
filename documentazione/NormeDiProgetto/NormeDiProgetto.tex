@@ -98,6 +98,10 @@ Aggiunto Versionamento & Sebastiano Marchesini & 15/12/2016 & 0.0.6 \\
 \hline
 Stesura Iniziale & Sebastiano Marchesini & 30/12/2016 & 0.1.0 \\
 \hline
+Stesura Completa & Sebastiano Marchesini & 02/12/2016 & 0.1.1 \\
+\hline
+Aggiunti Punti nella Lista di Controllo & Sebastiano Marchesini & 05/12/2016 & 0.1.2 \\
+\hline
 \end{tabular}
 }
 \normalsize	%lo riporta a forma normale
@@ -242,7 +246,7 @@ Per le immagini:
 	
 	\item \textbf{Sigle}: i nomi dei documenti potranno essere sostituiti dalle rispettive sigle:
 	\begin{itemize}
-		\item AdR ad indicare il documento ?Analisi dei Requisiti?;
+		\item AdR ad indicare il documento "Analisi dei Requisiti?;
 		\item PdP ad indicare il documento ?Piano di Progetto?;
 		\item PdQ ad indicare il documento ?Piano di Qualifica?;
 		\item NdP ad indicare il documento ?Norme di Progetto?;
@@ -491,10 +495,51 @@ I processi primari esistono all'esistenza del processo, contengono il nocciolo d
 	\item Manutenzione
 \end{itemize}
 \subsection{Fornitura}
+Formato dai :
+\begin{itemize}
+	\item Bandi del Fornitore
+	\item Accordo Contrattuale
+	\item Fornitura di Rilascio del Prodotto
+	\item Accettazione del Prodotto
+\end{itemize}
+\subsubsection{Obbiettivo}
+Il processo riguarda le azioni che deve svolgere il \textit{Fornitore}, a partire dalla stesura dell'offerta tecnico-economica dopo aver scelto il capitolato adeguato, sino alla realizzazione ed alla consegna della fornitura.\\
+\subsubsection{Attivazione del processo}
+Il processo è attivato dal \textit{Fornitore} a fronte della decisione di predisporre un?offerta per rispondere alla richiesta di presentazione di una proposta da parte di un?Amministrazione. Il processo prosegue quindi con la sottoscrizione del contratto con il team con la determinazione delle procedure e delle risorse necessarie a gestire ed assicurare la corretta esecuzione della capitolato e con lo svolgimento di tutte le attività previste nell'\textit{Analisi dei Requisiti v1}.
+\subsubsection{Attività e prodotti}
+Nello schema che segue si fornisce una rappresentazione delle attività del processo di Fornitura che riguardano la fase precedente la sottoscrizione del contratto. Le attività che il gruppo deve svolgere a valle della sottoscrizione del contratto, ricadono nell'ambito degli altri processi primari, organizzativi e di supporto del ciclo di vita della fornitura.
+\begin{itemize}
+	\item (Superamento delle materie che creano propedeuticità);
+	\item Studio personale della materia Ingegneria del Software;
+	\item Registrazione e creazione del gruppo tramite documento condiviso;
+	\item Analisi del capitolato scelto in comune accordo;
+\end{itemize}
+\subsubsection{Preparazione della Risposta}
+In risposta alla richiesta di una proposta da parte di un?azienda, il gruppo predispone un?offerta in cui definisce modi, tempi e costi per realizzare del progetto, nel rispetto dei requisiti specificati (offerte tecnico-economiche, organigramma, ecc.).
+Il risultato delle attività e? l?offerta tecnico-economica che e? vincolante per il team e diviene parte integrante della baseline di contratto.
+\subsubsection{Riesame e sottoscrizione del contratto}
+In caso di superamento della Revisione dei Requisiti , il team deve negoziare e sottoscrivere il contratto con l'ente.
+E? parte integrante dell?attività un riesame del contratto da sottoscrivere, al fine di assicurare che i requisiti siano adeguatamente definiti e documentati, che eventuali scostamenti tra i requisiti riportati nel capitolato e quelli riportati nell'offerta siano risolti
+\subsubsection{Chiusura del processo}
+Il processo di Fornitura si conclude con il completamento da parte del gruppo di tutte le attività previste in esecuzione del contratto.
 
 \subsection{Sviluppo}
-Per processi di sviluppo si è scelto di rielaborare quelli descritti nello standard. Di seguito indichiamo la dichiarazione.\\
+Il metodo a \textit{cascata sequenziale} è il modello utilizzato per ogni passaggio nel processo di sviluppo. Il \textit{Responsabile di Progetto} granula ogni attività per poi rendere il modello agile di tipo \textit{scrum}. Si rimanda al \textit{Piano di Progetto v1} per i dettagli.\\
+La specifica data che indica il passaggio tra il medesimo processo ed il successivo è regolata dai giorni di consegna e rilascio della correzione del capitolato. Tranne nella presentazione dei capitolati e inizio delle attività, vi sarà certamente un integrazione su ogni documento dettata dalle correzioni riportate dal \textit{Committente}.
+Per processi di sviluppo si è scelto di rielaborare quelli descritti nello standard ISO. Di seguito indichiamo la dichiarazione e le rielaborazioni.\\
+Ricordiamo inoltre che ogni processo ha inevitabilmente una o più fasi di verifica.
+\subsubsection{Analisi}
+E' la prima attività di studio e di stesura dei documenti. Dopo un primo incontro con i membri del team e il team concorrente si stabiliscono i ruoli e si dividono i compiti come già menzionato o come descritto nel Piano di Progetto. E' un processo lungo e lascia le basi per le future versioni.
+\subsubsection{Analisi in dettaglio}
+Questo processo si concentra sul documento di Analisi dei Requisiti. Punto focale per la stipulazione del contratto con il \textit{Committente}. \\Il gruppo provvederà a una scrematura dei requisiti. Una divisione in accordo con il gruppo concorrente. Potrà inoltre porre delle domande all'azienda per migliorare la comprensione del capitolato e diminuire le possibilità di fallimento.
+\subsubsection{Progettazione Architetturale} 
+Progettazione non specifica e soluzioni delle principali requisiti accordati. \\ Redazione di nuovi documenti volti a illustrare scelte progettuali che il prodotto deve avere.
+\subsubsection{Progettazione di Dettaglio e Codifica}
+Ogni parte del progetto in questa fase è definita e progettata. Il sistema è modulato in ogni minima soluzione. Resta solo la codifica e la verifica del codice. 
+\subsubsection{Validazione e Collaudo}
+La ricomposizione di ogni parte del progetto e la prova tramite \textit{Analisi Dinamica}. Revisione completa di ogni documento e parte. Collaudo e validazione di ogni struttura e componente progettuale daranno il via libera alla consegna finale del prodotto.
 
+\newpage
 
 \rhead{Procedure di sviluppo}
 \section{Procedure di sviluppo}
@@ -567,7 +612,7 @@ I Verificatori dovranno utilizzare le seguenti tecniche per svolgere al meglio i
 	Se questo test ha esito positivo, il prodotto sarà considerato abbastanza maturo da 
 	permettere il rilascio.
 \end{itemize}
-\subsubsection{Lista di controllo}	%DA COMPLETARE
+\subsubsection{Lista di controllo}	%DA AGGIORNARE
 Durante la fase di \textit{walkthrough} sono stati rilevati questi come errori più frequenti:
 \begin{itemize}
 \item Norme Stilistiche:
@@ -584,7 +629,9 @@ Durante la fase di \textit{walkthrough} sono stati rilevati questi come errori p
 	\end{itemize}
 \item \LaTeX:
 	\begin{itemize}
-		\item
+		\item controllo spaziatura delle tabelle (prima, nel mezzo e dopo);
+		\item controllo delle liste;
+		\item termini non evidenziati (corsivo e/o grassetto);
 	\end{itemize}
 \item UML:
 	\begin{itemize}
@@ -709,7 +756,7 @@ Le principali funzioni sono:
 \textit{Asana} è un'applicazione web e mobile che permette la suddivisione delle attività in modo
 strutturato. Offre un'organizzazione ad albero suddivisa in questo modo:
 \begin{itemize}
-	\item Creare più \textbf{Workspace};
+	\item Creare più \textit{Workspace};
 	\item Creare \textit{Project} all'interno di \textit{Workspace};
 	\item Creare \textit{Task} all'interno di un \textit{Project};
 	\item Creare \textit{Sub-Task} all'interno di un \textit{Task}.
