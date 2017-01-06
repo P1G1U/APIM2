@@ -324,10 +324,56 @@ Il codice progressivo può includere diversi livelli di gerarchia separati da un
 	\caption{Ricerca}
 \end{figure}
 \begin{itemize}
-	\item \textbf{Attori: };
-	\item \textbf{Scopo e descrizione: };
-	\item \textbf{Scenario alternativo: };
-	\item \textbf{Precondizione: };
-	\item \textbf{Postcondizione: }.
+	\item \textbf{Attori: }Utente non autenticato e Utente autenticato;
+	\item \textbf{Scopo e descrizione: }L'utente ricerca nella barra di ricerca il nome di un microservizio e clicca il bottone di conferma;
+	\item \textbf{Precondizione: }Il sistema attende l'invio di una frase di ricerca;
+	\item \textbf{Postcondizione: }Il sistema ha esaminato la frase di ricerca e restituisce una pagina di risultati della ricerca.
+\end{itemize}
+\subsection{Caso d'uso UC3.1: Inserimento parole di ricerca}
+\begin{itemize}
+	\item \textbf{Attori: }Utente non autenticato e Utente autenticato;
+	\item \textbf{Scopo e descrizione: }L'utente scrive nella barra di ricerca la frase che vuole ricercare;
+	\item \textbf{Precondizione: }Il sistema attende l'inserimento di una frase di ricerca;
+	\item \textbf{Postcondizione: }L'utente ha terminato di inserire la frase di ricerca.
+\end{itemize}
+\subsection{Caso d'uso UC3.2: Configurazione ricerca}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{UseCase/ConfigurazioneRicerca}
+	\caption{Configurazione ricerca}
+\end{figure}
+\begin{itemize}
+	\item \textbf{Attori: }Utente non autenticato e Utente autenticato;
+	\item \textbf{Scopo e descrizione: }L'utente seleziona la modalità con cui vuole eseguire la ricerca;
+	\item \textbf{Precondizione: }L'utente non ha ancora scelto nessun metodo di ricerca;
+	\item \textbf{Postcondizione: }L'utente ha scelto un metodo di ricerca.
+\end{itemize}
+\subsection{Caso d'uso UC3.2.1: Ricerca per tag}
+\begin{itemize}
+	\item \textbf{Attori: }Utente non autenticato e Utente autenticato;
+	\item \textbf{Scopo e descrizione: }L'utente sceglie di cercare all'interno di una categoria precisa di API;
+	\item \textbf{Precondizione: }L'utente non ha ancora scelto la configurazione ricerca;
+	\item \textbf{Postcondizione: }L'utente ha scelto il tag su cui effettuare la ricerca.
+\end{itemize}
+\subsection{Caso d'uso UC3.2.2: Ricerca per nome API}
+\begin{itemize}
+	\item \textbf{Attori: }Utente non autenticato e Utente autenticato;
+	\item \textbf{Scopo e descrizione: }L'utente sceglie di cercare tra tutti i nomi dei microservizi del database;
+	\item \textbf{Precondizione: }L'utente non ha ancora scelto la configurazione ricerca;
+	\item \textbf{Postcondizione: }L'utente ha scelto la modalità di ricerca per nome API.
+\end{itemize}
+\subsection{Caso d'uso UC3.2.3: Ricerca per nome utente}
+\begin{itemize}
+	\item \textbf{Attori: }Utente non autenticato e Utente autenticato;
+	\item \textbf{Scopo e descrizione: }L'utente sceglie di ricercare API tramite il nome utente dell'autore;
+	\item \textbf{Precondizione: }L'utente non ha ancora scelto la configurazione ricerca;
+	\item \textbf{Postcondizione: }L'utente ha scelto la modalità di ricerca per nome dell'autore.
+\end{itemize}
+\subsection{Caso d'uso UC3.3: Avvio ricerca}
+\begin{itemize}
+	\item \textbf{Attori: }Utente non autenticato e Utente autenticato;
+	\item \textbf{Scopo e descrizione: }L'utente ha impostato la ricerca e preme il tasto per l'avvio della ricerca;
+	\item \textbf{Precondizione: }L'utente ha finito di impostare la ricerca;
+	\item \textbf{Postcondizione: }L'utente ha avviato la ricerca.
 \end{itemize}
 \end{document}
