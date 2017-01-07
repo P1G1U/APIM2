@@ -10,21 +10,78 @@
 \usepackage{multirow}
 \usepackage{eurosym} %per il simbolo dell' \euro
 \usepackage{fancyhdr} %intestazioni
+\usepackage{graphicx}
 
 
 \usepackage[acronym]{glossaries}
-\newglossaryentry{parola}{name=parola,description={Si spiega da sÃ©}}
+\newglossaryentry{parola}{name=parola,description={Si spiega da sè}}
 \newacronym{guit}{GuIT{}}{Gruppo Utilizzatori Italiani di \LaTeX}
 \addto\captionsitalian{\renewcommand{\glossaryname}{Glossario}}
 \makeglossaries
 
+%----------------------------------------------------------- INIZIO TEMPLATE TITOLO
+
+\usepackage{xcolor} % Importa i colori per la prima pagina
+\usepackage{fix-cm} % Permette l'incremento del font oltre misura
+
+\setlength{\oddsidemargin}{-25mm} % Adjust margins to center the colored title box
+\setlength{\evensidemargin}{0mm} % Margins on even pages - only necessary if adding more content to this template
+
+\newcommand{\HRule}[1]{\hfill \rule{0.2\linewidth}{#1}} % Horizontal rule at the bottom of the page, adjust width here
+
+\definecolor{grey}{rgb}{0.9,0.9,0.9} % Colore del box del titolo
 
 \begin{document}
+	
+	\thispagestyle{empty} % Toglie il numero della pagina nella prima pagina
+	
+	%----------------------------------------------------------------------------------------
+	%	TITLE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\colorbox{grey}{
+		\parbox[t]{1.0\linewidth}{
+			\centering \fontsize{50pt}{80pt}\selectfont % Il primo è la grandezza del font, il secondo lo spazio lasciato
+			\vspace*{0.7cm} % Spazio dall'inizio del box al titolo
+		
+				\raggedleft
+				\includegraphics[width=0.7\linewidth]{../../LogoSWEgGroupSFONDOVUOTO}
+			
+			\hfill Glossario \\
+			
+			\vspace*{0.7cm} % Spazio dalla fine del testo alla fine del box
+		}
+	}
+	
+	%----------------------------------------------------------------------------------------
+	
+	\vfill % Spazio dalla fine del box alle altre informazioni
+	
+	%----------------------------------------------------------------------------------------
+	%	Informazioni sul documento
+	%----------------------------------------------------------------------------------------
+	
+	{\centering \large 
+		\hfill \textbf{Versione} 1.0.0 \\
+		\hfill \textbf{Redazione} Sebastiano Marchesini \\
+		\hfill \textbf{Verifica} ??? \\
+		\hfill \textbf{Responsabile} Sebastiano Marchesini \\
+		\hfill \textbf{Uso} Interno \\
+		\hfill \textbf{Destinato} SWEg Group \\ 
+		
+		\HRule{1pt}
+	
+	\textbf{Sommario} \\
+	Testo destinato alla comprensione di sigle, inglesismi e termini tecnici all'interno dei documenti.
 
-\title{GLOSSARIO}
-\author{SWEg Group}
-\date{}
-\maketitle
+	} % Linea orizzontale di estetica
+
+
+	%----------------------------------------------------------------------------------------
+	
+	\clearpage % Parta bianca finale della pagina
+
+%----------------------------------------------------------- FINE TEMPLATE TITOLO
 
 \lhead{SWEg Group}
 \chead{}

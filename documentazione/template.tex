@@ -7,6 +7,7 @@
 \usepackage{hyperref}
 \usepackage[a4paper,top=2cm,bottom=2cm,left=1cm,right=1cm]{geometry}
 \usepackage{soulutf8,color}
+\usepackage{graphicx}
 
 \usepackage{emptypage}                     
 % pagine vuote senza testatina e piede di pagina
@@ -66,12 +67,69 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
-\begin{document} 
+%----------------------------------------------------------- INIZIO TEMPLATE TITOLO
 
-\title{Documento}
-\author{SWEg Group}
-\date{}
-\maketitle
+\usepackage{xcolor} % Importa i colori per la prima pagina
+\usepackage{fix-cm} % Permette l'incremento del font oltre misura
+
+\setlength{\oddsidemargin}{-25mm} % Adjust margins to center the colored title box
+\setlength{\evensidemargin}{0mm} % Margins on even pages - only necessary if adding more content to this template
+
+\newcommand{\HRule}[1]{\hfill \rule{0.2\linewidth}{#1}} % Horizontal rule at the bottom of the page, adjust width here
+
+\definecolor{grey}{rgb}{0.9,0.9,0.9} % Colore del box del titolo
+
+\begin{document}
+	
+	\thispagestyle{empty} % Toglie il numero della pagina nella prima pagina
+	
+	%----------------------------------------------------------------------------------------
+	%	TITLE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\colorbox{grey}{
+		\parbox[t]{1.0\linewidth}{
+			\centering \fontsize{50pt}{80pt}\selectfont % Il primo è la grandezza del font, il secondo lo spazio lasciato
+			\vspace*{0.7cm} % Spazio dall'inizio del box al titolo
+			
+			\raggedleft
+			\includegraphics[width=0.7\linewidth]{../../LogoSWEgGroupSFONDOVUOTO}
+			
+			\hfill Titoloxxx \\
+			
+			\vspace*{0.7cm} % Spazio dalla fine del testo alla fine del box
+		}
+	}
+	
+	%----------------------------------------------------------------------------------------
+	
+	\vfill % Spazio dalla fine del box alle altre informazioni
+	
+	%----------------------------------------------------------------------------------------
+	%	Informazioni sul documento
+	%----------------------------------------------------------------------------------------
+	
+	{\centering \large 
+		\hfill \textbf{Versione} x.x.x \\
+		\hfill \textbf{Redazione} xxx \\
+		\hfill \textbf{Verifica} xxx \\
+		\hfill \textbf{Responsabile} xxx \\
+		\hfill \textbf{Uso} Interno o Esterno\\
+		\hfill \textbf{Destinato} xxxx \\ 
+		
+		\HRule{1pt}
+		
+		\textbf{Sommario} \\
+		Scrivere una semplice descrizione
+		
+	} % Linea orizzontale di estetica
+	
+	
+	%----------------------------------------------------------------------------------------
+	
+	\clearpage % Parta bianca finale della pagina
+	
+%----------------------------------------------------------- FINE TEMPLATE TITOLO
 
 \lhead{SWEg Group}
 \chead{}
