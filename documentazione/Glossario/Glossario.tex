@@ -1,0 +1,241 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+%va sempre messo article per "program documentation"
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=1cm,right=1cm]{geometry}
+\usepackage{soulutf8,color}
+\usepackage{multirow}
+\usepackage{eurosym} %per il simbolo dell' \euro
+\usepackage{fancyhdr} %intestazioni
+
+
+\usepackage[acronym]{glossaries}
+\newglossaryentry{parola}{name=parola,description={Si spiega da sÃ©}}
+\newacronym{guit}{GuIT{}}{Gruppo Utilizzatori Italiani di \LaTeX}
+\addto\captionsitalian{\renewcommand{\glossaryname}{Glossario}}
+\makeglossaries
+
+
+\begin{document}
+
+\title{GLOSSARIO}
+\author{SWEg Group}
+\date{}
+\maketitle
+
+\lhead{SWEg Group}
+\chead{}
+\lfoot{Glossario}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+\tableofcontents
+%crea indice automaticamente
+\thispagestyle{empty}
+
+\newpage
+
+
+\rhead{Introduzione}
+\section{Introduzione}
+\subsection{Scopo del Documento}
+Un glossario è una raccolta di termini di un ambito specifico e circoscritto. In alcuni casi il termine glossario è utilizzato per indicare la raccolta e relativa spiegazione dei termini desueti o specialistici utilizzati in un libro (generalmente collocato alla fine del testo), nel nostro caso la documentazione. \\
+ 
+\subsection{Riferimenti}
+Come riferimenti per i termini del glossario si è utilizzato
+\begin{itemize}
+	\item \textbf{Wikipedia}: \\
+	\textcolor{blue}{\url{https://it.wikipedia.org/}}.
+	\item \textbf{Dizionario Treccani}: \\
+	\textcolor{blue}{\url{http://www.treccani.it/vocabolario/}}.
+	\item \textbf{Dispense fornite dal corso Ingegneria del Software 2016}: \\
+	\textcolor{blue}{\url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense}}.
+		\item \textbf{Siti ufficiali delle software-house}: \\
+\end{itemize}
+
+\newpage	
+
+\rhead{A}	
+\section{A}
+\begin{trivlist}
+\item \textbf{Account} : Il complesso dei dati identificativi di un utente, che gli consentono l'accesso a un servizio telematico.
+\item \textbf{Amministratore} : È responsabile dell'efficienza e dell'operatività dell'ambiente di sviluppo, della redazione e attuazione di piani e procedure di Gestione per la Qualità. Controlla versioni e configurazioni del prodotto. Gestisce l'archivio della documentazione di progetto. Collabora alla redazione del Piano di Progetto. Redige le Norme di Progetto per conto del Responsabile.
+\item \textbf{Analisi Dinamica} : Processo di valutazione di un sistema software o di un suo componente basato sulla osservazione del suo comportamento in esecuzione.
+\item \textbf{Analisi Statica} : Non richiede l'esecuzione del prodotto. Studia le caratteristiche del codice sorgente e della documentazione
+\item \textbf{Analista} : È responsabile delle attività di analisi. Redige lo Studio di Fattibilità (documento interno al gruppo) e l'Analisi dei Requisiti.
+\item \textbf{API} : È l'acronimo di Application Programming Interface, nonché di Application Program Interface.
+\item \textbf{APIkey} : È una chiave generata dal sistema che permette ad un utente di utilizzare una determinata API.
+\item \textbf{APIMarket (o APIM)} :È l'acronimo di API Market ed è anche l'acronimo titolo del capitolato scelto.
+\item \textbf{Asana} : Asana è una applicazione web e mobile progettata per aiutare i team monitorare il loro lavoro.
+\item \textbf{Astah} : Astah è uno strumento di progettazione del software che supporta UML, ERD, DFD, Diagramma di Flusso, Mindmap, SysML, GSN e altri.
+\item \textbf{Attori} : Rappresenta un ruolo coperto da un certo insieme di entità interagenti col sistema (inclusi utenti umani, altri sistemi software, dispositivi hardware e così via). Un ruolo corrisponde a una certa famiglia di interazioni correlate che l'attore intraprende col sistema. Usato nei diagrammi UML.
+\end{trivlist}
+
+\rhead{B}	
+\section{B}
+\begin{trivlist}
+\item \textbf{Back End (BE)} : Parte del sistema che permette l'effettivo funzionamento delle iterazioni con l'utente.
+\item \textbf{Backlog} : Operazione in attesa di essere eseguita. Prodotta dal Project Manager.
+\item \textbf{Bisogni Espliciti} : Derivanti dal capitolato d'appalto sono effitavamente i bisogni del cliente.
+\item \textbf{Bisogni Implichi} : Derivati dal dominio sono bisogni tratti da standard di qualità e altro.
+\item \textbf{Branch} : Comando di Git adibito a creare un nuovo ramo. Dove è possibile fare modifiche senza modificare il ramo principale: master.
+\item \textbf{Browsers} : Particolare programma per navigare in Internet che inoltra la richiesta di un documento alla rete e ne consente la visualizzazione una volta arrivato.
+\item \textbf{Budget} : Disponibilità finanziaria. Bilancio preventivato.
+\end{trivlist}
+
+\rhead{C}	
+\section{C}
+\begin{trivlist}
+\item \textbf{Capitolato D'Appalto} : Il capitolato è un documento tecnico che vi fa riferimento per definire in quella sede le specifiche tecniche delle opere che andranno ad eseguirsi per effetto del contratto stesso, di cui è solitamente parte integrante.
+\item \textbf{Cascata} : Il modello a cascata (waterfall model in inglese) o ciclo di vita a cascata (waterfall lifecycle) è il più tradizionale modello di ciclo di vita del software. Le fasi sono sequenziali e distinte.
+\item \textbf{Collaudo} : Controllo, validazione dei requisiti tecnologici del progetto in rapporto a una tabella di caratteristiche singolarmente o universalmente prestabilite.
+\item \textbf{Committente} : È la figura che commissiona un lavoro, indipendentemente dall'entità o dall'importo.
+\end{trivlist}
+
+\rhead{D}	
+\section{D}
+\begin{trivlist}
+\item \textbf{Dati Tecnici} : In riferimento alle API i dati tecnici sono i dati prelevati dall'interfaccia gateway per poi essere catalogati e confrontati.
+\item \textbf{Diagramma dei Casi D'Uso (UML)} : Sono diagrammi dedicati alla descrizione delle funzioni o servizi offerti da un sistema, così come sono percepiti e utilizzati dagli attori che interagiscono col sistema stesso. Sono impiegati soprattutto nel contesto della Use Case View (vista dei casi d'uso) di un modello, e in tal caso si possono considerare come uno strumento di rappresentazione dei requisiti funzionali di un sistema.
+\item \textbf{Documentazione} : L'insieme dei documenti da presentare insieme al progetto fisico. Comprendono in particolare : Analisi dei Requisiti, Piano di Qualifica, Piano di Progetto, Norme di Progetto.
+\end{trivlist}
+
+\rhead{E}	
+\section{E}
+\begin{trivlist}
+\item \textbf{Efficaci} : Conformi alle attese.
+\item \textbf{Efficienti} : Contenimento dei consumi per raggiungere un obiettivo (diminuire costi e tempi).
+\end{trivlist}
+
+\rhead{F}	
+\section{F}
+\begin{trivlist}
+\item \textbf{File System} : Indica informalmente un meccanismo con il quale i file sono posizionati e organizzati o su un dispositivo di archiviazione o su una memoria di massa, come un disco rigido o un CD-ROM e, in casi eccezionali, anche sulla RAM.
+\item \textbf{Fork} : 
+\item \textbf{Fornitore} : Nel nostro caso il fornitore è il professore che si pone da tramite tra noi e l'azienda.
+\item \textbf{Front End (FE)} : La parte visibile all'utente e con cui egli può interagire (interfaccia utente).
+\end{trivlist}
+
+\rhead{G}	
+\section{G}
+\begin{trivlist}
+\item \textbf{Git} : Git è un software di controllo versione distribuito utilizzabile da interfaccia a riga di comando, creato da Linus Torvalds nel 2005.
+\item \textbf{Google Play} : Google Play, detto anche Google Play Store, è un negozio virtuale online di applicazioni, brani musicali, pellicole cinematografiche, libri e riviste sviluppato da Google Inc. principalmente per offrire servizi ai dispositivi mobili Android.
+\item \textbf{GUI} : Significato di GUI. Graphic user interface, Interfaccia grafica costituita da icone, finestre e tasti selezionabili attraverso il mouse.
+\end{trivlist}
+
+\rhead{I}	
+\section{I}
+\begin{trivlist}
+\item \textbf{Inspection} : Parte dell'analisi statica modello che cerca gli errori più probabili tramite check-list . C'è bisogno della definizione di una lista di controllo.
+\item \textbf{Instagantt} : È una web app per la creazione di diagrammi di Gantt che aiutano visivamente intendono pianificazioni dei progetti con il team.
+\item \textbf{ItalianaSoftware} : ItalianaSoftware è la società che ha ideato Jolie. Fornisce soluzioni microservizi e prodotti come strumenti amministrazione microservizi e SAP
+\end{trivlist}
+
+\rhead{J}	
+\section{J}
+\begin{trivlist}
+\item \textbf{Join} : 
+\end{trivlist}
+
+\rhead{L}	
+\section{L}
+\begin{trivlist}
+\item \textbf{Latex} : È un linguaggio di markup usato per la preparazione di testi basato sul programma di composizione tipografica TEX.
+\item \textbf{Linux} : È una famiglia di sistemi operativi di tipo Unix-like, rilasciati sotto varie possibili distribuzioni, aventi la caratteristica comune di utilizzare come nucleo il kernel Linux.
+\end{trivlist}
+
+\rhead{M}	
+\section{M}
+\begin{trivlist}
+\item \textbf{Mac Os X} : È il sistema operativo sviluppato da Apple Inc. per i computer Macintosh.
+\item \textbf{Marge} : 
+\item \textbf{Microservizio} : Nati essenzialmente come soluzione al problema dell?integrazione tra macrosistemi operanti su piattaforme differenti; sono nati cioè con l?obiettivo di fare interoperare in modo organico e non occasionale sistemi tra loro differenti. 
+\item \textbf{Milestone} : Indica importanti traguardi intermedi nello svolgimento del progetto.
+\item \textbf{Misurabile} : Che può essere misurato, suscettibile di valutazione quantitativa in rapporto a una unità di misura.
+\item \textbf{Modello Agile} : Metodo di sviluppo software che propone un approccio meno strutturato e focalizzato sull'obiettivo di consegnare al cliente, in tempi brevi e frequentemente , software funzionante e di qualità.
+\item \textbf{Monitoramento} : Rilevazione o verifica effettuata con l'uso di uno strumento specifico.
+\item \textbf{Monolite} : Vecchio sistema e/o programma realizzato con molte dipendendze e poco flessibile.
+\end{trivlist}
+
+\rhead{P}	
+\section{P}
+\begin{trivlist}
+\item \textbf{Package} : Pacchetto. Di solito usato come termine specifico nel linguaggio Java.
+\item \textbf{Piattaforma} : Un ambiente di esecuzione che comprende hardware e sistema operativo ed eventualmente elementi middleware specifici, application server ed altri strumenti di supporto all'esecuzione di programmi.
+\item \textbf{Policy} : Si intende la politica pubblica, "reale", contrapposta alla politics che invece soggiace a meri rapporti di forza, su basi ideologica, tra forze politiche e leader.
+\item \textbf{Progettista} : È responsabile delle attività di progettazione. Redige Specifica Tecnica, Definizione di Prodotto e la parte programmatica del Piano di Qualifica.
+\item \textbf{Programmatore} : È responsabile delle attività di codifica miranti alla realizzazione del prodotto e delle componenti di ausilio necessarie per l'esecuzione delle prove di verifica e validazione.
+\item \textbf{Project Manager} : O Responsabile di Progetto. È il responsabile ultimo, per conto del suo gruppo, dei risultati del progetto. Elabora ed emana piani e scadenze. Approva l'emissione di documenti. Coordina le attività del gruppo, si relaziona con il controllo di qualità interno al progetto. Redige Organigramma e Piano di Progetto. Approva l'Offerta e i relativi allegati.
+\item \textbf{Proponente} : In genere l'azienda che propone il capitolato. Nel nostro caso Italiana Software.
+\end{trivlist}
+
+\rhead{R}	
+\section{R}
+\begin{trivlist}
+\item \textbf{Raw} : Crudo. Si usa nel contesto di documento o file crudo , con errori grossolani quindi.
+\item \textbf{Repository} : È un ambiente di un sistema informativo, in cui vengono gestiti i metadati. Nel nostro contesto si utilizza spesso per indicare lo spazio GIT.
+\item \textbf{Revisione} : Esame o controllo, per lo più periodico, inteso a verificare il grado dell'efficienza, della funzionalità, della corrispondenza a determinati requisiti, in quanto può implicare apporto di modifiche o di correzioni.
+\item \textbf{Revisione dei Requisiti (RR)} : Primo processo manuale che coinvolge team misti. Comprende tra i documenti singolari Studio di Fattibilità e Analisi dei Requisiti.
+\item \textbf{Revisione di Accettazione (RA)} : Collaudo del sistema per accettazione della parte committente. Accertamento del soddisfacimento di tutti i requisiti utente pattutiti in RR.
+\item \textbf{Revisione di Progettazione (RP)} : Può essere di due tipi : Minima (Min) e Massiama (Max). Rispettivamente accertano la realizzabilità e si accordano sulle caratteristiche del prodotto da realizzare. I documenti da presentare specifici sono : nella minima la Specifica Tecnica, mentre nella massima la Definizione del Prodotto
+\item \textbf{Revisione di Qualifica (RQ)} : Revisione dell'esito finale di qualifiche delle verifiche e attivazione di validazione.
+\item \textbf{Ritorno Incrementale} : È un modello di sviluppo di un progetto software basato sulla successione di passi. Non vi sono iterazioni e lo si usa quando si ha una chiara visione dell'intero progetto. L'uso di questo modello di sviluppo favorisce la creazione di prototipi, ovvero parti di applicazione funzionanti, che a loro volta favoriscono il dialogo con il cliente e la validazione dei requisiti.  
+\end{trivlist}
+
+\rhead{S}	
+\section{S}
+\begin{trivlist}
+\item \textbf{Script} : "Simile ad un programma normale ma con una complessità relativamente bassa. Si integraz in un processo di configurazione automatica del sistema, in una pagina web, o comunque per svolgere mansioni accessorie e molto specifiche;
+una certa linearità. Manca di una propria interfaccia grafica e richiama altri programmi per svolgere operazioni più sofisticate."
+\item \textbf{Scrum} : I Team Scrum sono auto-organizzati e cross-funzionali: scelgono come meglio compiere il lavoro organizzandosi e coordinandosi al proprio interno e hanno tutte le competenze necessarie per realizzare il lavoro senza dover dipendere da nessuno al di fuori del team. Il modello di team in Scrum è progettato per ottimizzare la flessibilità, la creatività e la produttività. I Team Scrum rilasciano i prodotti in modo iterativo e incrementale, massimizzando le opportunità di feedback. I rilasci incrementali di prodotto ?Fatto? garantiscono che una versione potenzialmente utile del prodotto funzionante sia sempre disponibile.
+\item \textbf{Sistema Operativo} : È un insieme di componenti software, che rende operativi (da cui il nome) computer, apparati e dispositivi informatici.
+\item \textbf{Statistiche} : Sono dati calcolati su un utente della piattaforma. Servono a rendere confrontabili e misurabili le caratteristice dell'utente per una visione social e pià amministrabile dell'infrastruttura.
+\item \textbf{Steam} : Piattaforma online molto simile ad un mercato di videogiochi dove è possibile interagire con altri utenti, acquistare giochi e caricarne propri.
+\item \textbf{Sub-Task} : Sotto attività.
+\end{trivlist}
+
+\rhead{T}	
+\section{T}
+\begin{trivlist}
+\item \textbf{Tag} : Sequenza di caratteri con cui si marcano gli elementi di un file per successive elaborazioni.
+\item \textbf{Task} : Attività.
+\item \textbf{Team} : Gruppo di lavoro.
+\item \textbf{Telegram} : Programma di messaggistica istantanea che si basa su numero di telefono e/o id. Può essere utilizzata su piattaforma mobile e non. 
+\item \textbf{Template} : Modello predefinito che consente di creare o inserire contenuti di diverso tipo in un documento.
+\item \textbf{Test} : Collaudo del software (detto anche testing o software testing secondo le denominazioni inglesi) è un procedimento, che fa parte del ciclo di vita del software, utilizzato per individuare le carenze di correttezza, completezza e affidabilità delle componenti software in corso di sviluppo.
+\item \textbf{Test di Integrazione} : Test che mira alla correttezza delle interfacce.
+\item \textbf{Test di Sistema} : Test di più alto livello che mira all'affidabilità , sicurezza e alle prestazioni.
+\item \textbf{Test di Unità} : Test di più basso livello che mirano alla correttezza delle interfacce.
+\item \textbf{TexStudio} : È una piattaforma di sviluppo per il linguaggio LaTex che aggevola il programmatore a stilare la documentazione.
+\item \textbf{Ticket (Ticketing)} : Un trouble ticket indica letteralmente una richiesta di assistenza, tracciata da un sistema informatico di gestione delle richieste di assistenza, che per metonimia viene indicato con lo stesso termine.
+\end{trivlist}
+
+\rhead{U}	
+\section{U}
+\begin{trivlist}
+\item \textbf{Use Case (UC)} : Definizione inglese per idicare i Casi D'Uso. UCD non indicato nel progetto indica gli Use Case Diagram.
+\end{trivlist}
+
+\rhead{V}	
+\section{V}
+\begin{trivlist}
+\item \textbf{Verificatore} : È responsabile delle attività di verifica. Redige la parte retrospettiva del Piano di Qualifica che illustra l'esito e la completezza delle verifiche e delle prove effettuate secondo il piano.
+\item \textbf{Versionamento} : l controllo versione (versioning) è la gestione di versioni multiple di un insieme di informazioni. Gli strumenti software per il controllo versione sono ritenuti molto spesso necessari per la maggior parte dei progetti di sviluppo software.
+\end{trivlist}
+
+\rhead{W}	
+\section{W}
+\begin{trivlist}
+\item \textbf{Walkthrough} : Medoto per rivelare la presenza di difetti. Più lento di Ispector , esegue una lettura critica (a largo spettro) del codice. Percorrere il codice simulandone possibili esecuzioni o il documento completamente.
+\item \textbf{Windows} : Microsoft Windows (abbreviazioni comunemente utilizzate: "Windows" o "Win") è una famiglia di ambienti operativi e sistemi operativi dedicati ai personal computer, alle workstation, ai server e agli smartphone.
+\item \textbf{Workspace} : Ambiente di lavoro.
+\end{trivlist}
+
+\end{document}
+
