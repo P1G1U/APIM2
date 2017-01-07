@@ -6,9 +6,10 @@
 \usepackage[latin1]{inputenc}
 \usepackage{titlesec}
 \usepackage{hyperref}
-\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=1cm,right=1cm]{geometry}
 \usepackage{soulutf8,color}
 \usepackage{eurosym}
+\usepackage{graphicx}
 
 \usepackage{emptypage}                     
 % pagine vuote senza testatina e piede di pagina
@@ -58,12 +59,67 @@
 %\label{nome}
 %\end{figure}
 
-\begin{document}
+%----------------------------------------------------------- INIZIO TEMPLATE TITOLO
 
-\title{NORME DI PROGETTO}
-\author{SWEg Group}
-\date{}
-\maketitle
+\usepackage{xcolor} % Importa i colori per la prima pagina
+\usepackage{fix-cm} % Permette l'incremento del font oltre misura
+
+\newcommand{\HRule}[1]{\hfill \rule{0.2\linewidth}{#1}} % Horizontal rule at the bottom of the page, adjust width here
+
+\definecolor{grey}{rgb}{0.9,0.9,0.9} % Colore del box del titolo
+
+\begin{document}
+	
+	\thispagestyle{empty} % Toglie il numero della pagina nella prima pagina
+	
+	%----------------------------------------------------------------------------------------
+	%	TITLE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\colorbox{grey}{
+		\parbox[t]{1.0\linewidth}{
+			\centering \fontsize{50pt}{80pt}\selectfont % Il primo è la grandezza del font, il secondo lo spazio lasciato
+			\vspace*{0.7cm} % Spazio dall'inizio del box al titolo
+			
+			\raggedleft
+			\includegraphics[width=0.7\linewidth]{../../LogoSWEgGroupSFONDOVUOTO}
+			
+			\hfill Norme di Progetto \\
+			
+			\vspace*{0.7cm} % Spazio dalla fine del testo alla fine del box
+		}
+	}
+	
+	%----------------------------------------------------------------------------------------
+	
+	\vfill % Spazio dalla fine del box alle altre informazioni
+	
+	%----------------------------------------------------------------------------------------
+	%	Informazioni sul documento
+	%----------------------------------------------------------------------------------------
+	
+	{\centering \large 
+		\hfill \textbf{Versione} 1.0.0 \\
+		\hfill \textbf{Redazione} Sebastiano Marchesini \\
+		\hfill Piergiorgio Danieli
+		\hfill \textbf{Verifica} Alberto Gelmi \\
+		\hfill \textbf{Responsabile} Sebastiano Marchesini \\
+		\hfill \textbf{Uso} Interno \\
+		\hfill \textbf{Destinato} SWEg Group \\ 
+		
+		\HRule{1pt}
+		
+		\textbf{Sommario} \\
+		Questo documento ha l'obiettivo di definire le regole che i membri del gruppo seguiranno nello sviluppo del progetto.
+		
+	} % Linea orizzontale di estetica
+	
+	
+	%----------------------------------------------------------------------------------------
+	
+	\clearpage % Parta bianca finale della pagina
+	
+	%----------------------------------------------------------- FINE TEMPLATE TITOLO
 
 \lhead{SWEg Group}
 \chead{}
@@ -95,9 +151,11 @@ Aggiunto Versionamento & Sebastiano Marchesini & 15/12/2016 & 0.0.6 \\
 \hline
 Stesura Iniziale & Sebastiano Marchesini & 30/12/2016 & 0.1.0 \\
 \hline
-Stesura Completa & Sebastiano Marchesini & 02/12/2016 & 0.1.1 \\
+Stesura Completa & Sebastiano Marchesini & 02/01/2017 & 0.1.1 \\
 \hline
-Aggiunti Punti nella Lista di Controllo & Sebastiano Marchesini & 05/12/2016 & 0.1.2 \\
+Aggiunti Punti nella Lista di Controllo & Sebastiano Marchesini & 05/01/2017 & 0.1.2 \\
+\hline
+Verifica & Alberto Gelmi & 06/01/2017 & 0.1.3 \\
 \hline
 \end{tabular}
 }
