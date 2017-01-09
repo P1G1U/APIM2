@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+%va sempre messo article per "program documentation"
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
+\usepackage{soulutf8,color}
+\usepackage{graphicx}
+
+\usepackage{emptypage}                     
+% pagine vuote senza testatina e piede di pagina
+
+%\usepackage{hyperref}                     
+% collegamenti ipertestuali
+
+\usepackage{fancyhdr}
+% pacchetto per intestazione e pie pagina
+
+\pagestyle{fancy}
+
+
+
+\lhead{\includegraphics[width=0.2\linewidth]{../../LogoSWEgGroup}}
+\chead{}
+\lfoot{Verbale}
+\rhead{22/12/2016}
+\cfoot{}
+\rfoot{Piergiorgio Danieli}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+
+\begin{document}
+
+\section*{Verbale n°1}
+
+\subsection*{Data e Ora:}
+\begin{center}
+\textbf{22/12/2016 16:00}
+\subsection*{Luogo:}
+\textbf{Torre Archimede 1bc45}
+\end{center}
+
+\subsection*{Partecipanti Interni:}
+\begin{itemize}
+	\item Tutto il team SWEg Group
+\end{itemize}
+
+\subsection*{Partecipanti Esterni:}
+\begin{itemize}
+	\item NetBreak (Team Studenti)
+	\item Professor Tullio Vardanega
+	\item Dott. Claudio Guidi 
+\end{itemize}
+
+\subsection*{Argomenti Trattati}
+Nel giorno 22/12/2016 si è svolto un incontro nell'aula della Torre Archimede 1bc45tra i gruppi che hanno deciso di svolgere il capitolatoC1 ed il (proponente/committente).\\
+Si è svolto tramite skype ed aveva lo scopo di un primo incontro tra le parti e per una breve introduzione al linguaggio Jolie, che verrà usato per svolgere almeno una parte di progetto.\\
+Il dott. Guidi ha introdotto per circa un'ora il linguaggio agli studenti mostrando qualche esempio.\\
+In seguito i due gruppi hanno avuto la possibilità di fare qualche domanda al dott. Guidi per 
+cercare di capire meglio le richieste e quindi svolgere al meglio il progetto.
+
+\subsection*{Domande e Risposte}
+\begin{enumerate}
+	\item \textit{Bisogna definire un'architettuta comune ai due gruppi?}\\
+	\hspace{35pt}La risposta è stata affermativa. I due gruppi (o alcuni membri di essi) dovranno quindi lavorare insieme per definire un'architettura comune.
+	\item \textit{Chi sono gli utenti di questo API Market?}\\
+	\hspace{35pt}Gli utenti sono sia i developer che caricano le API, sia gli user, cioè chi compra ed utilizza le API.
+	\item \textit{Come gestire il gateway?}\\
+	\hspace{35pt}In questo caso il dott. Guidi ha proposto di poter snellire il trafficodel gateway utilizzando dei microservizi messi a disposizione dell'utente.
+	\item \textit{Cosa sono esattamente gli SLA?}\\
+	\hspace{35pt}Sono i Service Level Agreement, cioè la modalitàdi erogazione della API (durata, numero di chiamate, traffico dati) e vengono gestite dal Market;
+\end{enumerate}
+
+\end{document}
