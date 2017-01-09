@@ -673,7 +673,6 @@ Durante la fase di \textit{walkthrough} sono stati rilevati questi come errori p
 	\begin{itemize}
 		\item un elemento dell'elenco inizia con lettera minuscola;
 		\item usare descrizioni opportune
-		\item
 	\end{itemize}
 \item Italiano:
 	\begin{itemize}
@@ -717,7 +716,7 @@ Durante la fase di \textit{walkthrough} sono stati rilevati questi come errori p
 	\end{itemize}
 \end{itemize}
 \subsubsection{Verifica documenti}
-Il \textit{Verificatore} nei documenti dovrà verificare:
+Il \textit{Verificatore} nei documenti dovrà:
 \begin{itemize}
 	\item Controllare nel diario delle modifiche i cambiamenti avvenuti dall'ultima volta;
 	\item Cercare eventuali errori nelle parti che sono state modificate del documento;
@@ -740,9 +739,9 @@ Nel controllare i diagrammi \textit{UML}, il \textit{Verificatore} dovrà presta
 
 \subsection{Validazione}
 Il principio assoluto è scrivere documenti e programmi verificabili. Dopo un serie de verifiche che seguono tutto il ciclo di vita del prodotto la validazione è il verdetto finale che lo rende pubblicabile senza timore.\\
-Quindi vorremo la validazione sia  autoavverante. \\
+Quindi vorremo che la validazione sia  autoavverante. \\
 Il \textit{testing}, negli approcci dinamici, prevede esecuzione del software o prototipi al fine di scoprire difetti e assicura quindi la validazione del programma.\\
-Al momento non avendo prodotto software, e quindi impossibile eseguire dei test, si è scelto come regola generale una doppia revisione, anche a seconda del testo. Per doppia revisione si intende :
+Al momento, non avendo prodotto software e quindi non potendo eseguire dei test, si è scelto come regola generale di utilizzare una doppia revisione, a seconda del testo. Per doppia revisione si intende :
 \begin{itemize}
 	\item Temporale: cioè il documento è revisionato più volte nel corso del tempo se importante, anche se non completato;
 	\item Umana: cioè al completamento ogni atto è controllato da due membri del team diversi e che non l'abbiano redato (per evitare conflitti d'interesse). 
@@ -823,7 +822,7 @@ Alcune delle funzionalità offerte sono:
 	\item Avere un riepilogo dei \textit{Task};
 	\item Riceve e-mail automatiche con l'aggiornameto dei \textit{Task} che si seguono.
 \end{itemize}
-I nome delle etichette relativi ai Task dovranno seguire la seguente forma [elemento di interesse][messaggio]:
+I nomi delle etichette relativi ai Task dovranno seguire la seguente forma [elemento di interesse][messaggio]:
 \begin{itemize}
 	\item \textbf{Elemento di interesse}: si riferisce al documento o all'ambito al quale appartiene 
 	il Task. Nel caso un cui si tratti di un documento, dovranno essere messe le iniziali del suo nome.\\
@@ -843,6 +842,8 @@ Il software di versionamento scelto è \textit{Git}. Le motivazioni a base della
 \end{itemize}
 All'interno della \textit{repository} vi sono due macro sezioni. La sezione documentazione e la sezione progetto.\\
 Convenzionalmente abbiamo deciso che la versione v X.5.0 è la prima versione verificata completamente del documento dopo il supposto completamento. 
+
+\newpage
 
 \subsection{Repository}
 \subsubsection{Repository documentazione}
