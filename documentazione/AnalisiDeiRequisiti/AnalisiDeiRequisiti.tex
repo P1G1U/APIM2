@@ -76,10 +76,10 @@
 	\subsection{Scopo del Documento}
 	Tale documento ha lo scopo di studiare e modellare concettualmente il problema che si pone con APIM. Posizionando le componeti (o ambiti) a scopo di allocazione dei requisiti. Alcuni dei requisiti specificandoli con il diagramma dei casi d'uso.
 	
-	Vi deve essere la certezza di non aver dimenticato nessuno tra i bisogno espliciti ed i bisogni impliciti. Questo implica che non vi sia ambiguità tra i requisiti.
+	Vi deve essere la certezza di non aver dimenticato nessuno tra i bisogno espliciti ed i bisogni impliciti. Inoltre non devono esserci ambiguità tra i requisiti.
 	Bisogna sempre tener conto di portare al massimo possibile la granularità del problema, senza però confonderlo e renderlo impossibile da verificare. Questo per rendere il requisito decidibile.
 	
-	E' infine bene tener presente otto semplici qualità di selezione dei requisiti:
+	È infine bene tener presente otto semplici qualità di selezione dei requisiti:
 	\begin{itemize}
 		\item Non Ambigui
 		\item Corretti
@@ -91,10 +91,10 @@
 		\item Ordinati per Rilevanza
 	\end{itemize}
 	\subsection{Scopo del Prodotto}
-	L'obbiettivo è creare un'infrastruttura che permetta la distribuzione digitale e la gestione dei diritti digitali di microservizi. Creati ed importati da diversi utenti che possono interfacciarsi tra loro.
+	L'obiettivo è creare un'infrastruttura che permetta la distribuzione digitale e la gestione dei diritti digitali di microservizi. Creati e importati da diversi utenti che possono interfacciarsi tra loro.
 	
 	Viene usata per gestire e distribuire una vasta gamma di microservizi (alcuni esclusivi) ed il loro relativo supporto. Tutte queste operazioni sono effettuate via Internet.
-	E' inoltre possibile il monitoraggio di ogni API grazie alle tecnologie fornite dal prodotto. 
+	È inoltre possibile il monitoraggio di ogni API grazie alle tecnologie fornite dal prodotto. 
 	\subsection{Glossario}
 	Alla fine di evitare ambiguità e mantenere la consistenza il Glossario è un documento unico e consultabile separatamente.
 	
@@ -117,9 +117,9 @@
 	\rhead{Descrizione Generale}
 	\section{Descrizione Generale}
 	\subsection{Obbiettivi del prodotto}
-	L'obbiettivo primario del prodotto é di dare ad ogni utente la possibilità di registrare il proprio microservizio in una piattaforma dedicata. In questo modo è possibile la vendita (o condivisione) con gli altri utenti della comunità regolata da politiche di compravendita specifiche e flessibili a seconda dello scopo dell'API o del volere del tecnico. 
+	L'obiettivo primario del prodotto è di dare ad ogni utente la possibilità di registrare il proprio microservizio in una piattaforma dedicata. In questo modo è possibile la vendita (o condivisione) con gli altri utenti della comunità regolata da politiche di compravendita specifiche e flessibili a seconda dello scopo dell'API o del volere del tecnico. 
 	
-	L'obbiettivo è quindi quello di incentivare la programmazione a microservizi e, oltre a spingere i gruppi più piccoli nel progettare per il mercato virtuale, pensare sempre di più a delle migliori architetture flessibili invece che veri e propri programmi. Si vogliono abbandonare i vecchi programmi monolite per entrare in una realtà fatta di sistemi divisi in moduli, la nuova sfida progettuale sarà quindi unire i vari microservizi (o API) per costruire un prodotto completo.
+	L'obiettivo è quindi quello di incentivare la programmazione a microservizi e, oltre a spingere i gruppi più piccoli nel progettare per il mercato virtuale, pensare sempre di più a delle migliori architetture flessibili. Si vogliono abbandonare i vecchi programmi monolitici per entrare in una realtà fatta di sistemi divisi in moduli, la nuova sfida progettuale sarà quindi unire i vari microservizi (o API) per costruire un prodotto completo.
 	\subsection{Funzioni del prodotto}
 	SWEg Group si impegna in particolar modo alle sottoscritte funzioni del prodotto :
 	\begin{enumerate}
@@ -128,20 +128,21 @@
 		\item \textbf{Permetta di associare diverse API key}: così da regolare le politiche di scambio dei microservizi. Le API key sono lo strumento principale di collegamento tra la API ed il suo utilizzatore. Grazie a queste l'infrastruttura potrà regolare le scadenze, l'utilizzo ed il procedimento oltre ad avere un ID univoco per la monitorizzazione. 
 		\item \textbf{Permetta di monitorare l'utilizzo delle API}:	già accennato nei punti precedenti. Vogliamo che tale infrastruttura tenga conto di particolari dati tecnici di ogni API per renderle così misurabili in termini di efficacia ed efficienza. Oltre che ad avere così un sistema automatizzato per il confronto tra i vari microservizi.
 		\item \textbf{Blocchi le chiamate di utenti in possesso di API key scadute e/o non valide}:	è la sottolineatura di uno dei motivi di esistenza delle API key. Punto focale per la regolamentazione dello scambio è la possibilità di acquisto delle chiavi secondo tempo, mole di scambio di dati , eccetera. I dati tecnici per le policy di durata e validità saranno descritte in seguito, ma queste decideranno se è ancora attiva una chiave o meno.
-		\item \textbf{Permetta di visualizzare i dati tecnici d'uso delle singole API}:	dopo aver monitorato ogni singola API è possibile fare la stima e produrre un elaborato tecnico dei valori di quest'ultima. E' compito dell'API Market rendere disponibile questa funzionalità. Da parte nostra vi sarà un vaglio tra le principali caratteristiche di interesse da dover riportare. E' da parte nostra desiderabile anche la possibilità di poter visualizzare direttamente il confronto dei risultati delle caratteristiche per scegliere il microservizio migliore.
-		\item \textbf{Permettere di gestire una moneta virtuale per la compravendita delle API}:	il metodo di acquisto principale è comunque la moneta reale. Che può trasformarsi automaticamente in moneta virtuale con un cambio di 1:1. E' possibile quindi tenere un conto personale flessibile per poter reinvestire o ritirare il contante virtuale. 
-		\item \textbf{Permetta di confrontare i dati tecnici delle API tra loro}:	già accennato in uno dei punti precedenti. Per una migliore visione e per scegliere il microservizio più adatto ai nostri scopi vorremo una sezione specifica di confronto dei dati tecnici. Sarà nostro compito grazie al monitoraggio avere un rapporto aggiornato e reale dell'andamento dell'API.
-		\item \textbf{Permetta una gestione social}:	vogliamo che quindi anche gli utenti abbiamo le loro statistiche per essere valutati. Desiderabile un programma di messaggistica interno per una comunicazione diretta e veloce. Tutto è quindi classificabile, la valutazione degli utenti delle API crea delle classifiche stimolando la concorrenza ed il desiderio di popolare il market di più microservizi. Vi saranno quindi graduatorie per genere grazie alle personali esperienze ed ai dati tecnici da favorire l'interazione tra gli attori della piattaforma.
+		\item \textbf{Permetta di visualizzare i dati tecnici d'uso delle singole API}:	dopo aver monitorato ogni singola API è possibile fare la stima e produrre un elaborato tecnico dei valori di quest'ultima. È compito dell'API Market rendere disponibile questa funzionalità. Da parte nostra vi sarà un vaglio tra le principali e caratteristiche di interesse da dover riportare. È desiderabile da parte nostra anche la possibilità di poter visualizzare direttamente il confronto dei risultati delle caratteristiche per scegliere il microservizio migliore.
+		\item \textbf{Permettere di gestire una moneta virtuale per la compravendita delle API}:	il metodo di acquisto principale è comunque la moneta reale, la quale può trasformarsi automaticamente in moneta virtuale con un cambio di 1:1. È possibile quindi tenere un conto personale flessibile per poter reinvestire o ritirare il contante virtuale. 
+		\item \textbf{Permetta di confrontare i dati tecnici delle API tra loro}:	già accennato in uno dei punti precedenti. Per una migliore visione e per scegliere il microservizio più adatto ai nostri scopi vorremmo una sezione specifica di confronto dei dati tecnici. Sarà nostro compito grazie al monitoraggio avere un rapporto aggiornato e reale dell'andamento dell'API.
+		\item \textbf{Permetta una gestione social}:	vogliamo che quindi anche gli utenti abbiano le loro statistiche per essere valutati. Desiderabile un programma di messaggistica interno per una comunicazione diretta e veloce. Tutto è quindi classificabile, la valutazione degli utenti delle API crea delle classifiche stimolando la concorrenza e il desiderio di popolare il market di più microservizi. Vi saranno quindi graduatorie per genere grazie alle personali esperienze e ai dati tecnici, per favorire l'interazione tra gli attori della piattaforma.
 	\end{enumerate}
 	\subsection{Caratteristiche degli utenti}
-	Il prodotto è soprattutto proiettato a degli utenti secondo noi esperti nelle tecnologie impiegate. Abbiamo all'unisono prestabilito con il proponente del capitolato che è compito dell'utente creare l'interfaccia adeguata a registrare il microservizio nel market. Questo ci assicura una minima competenza nella programmazione e quindi nell'uso di tecnologie informatiche e abbiano dimestichezza nell'utilizzo di browser che sia esso da smartphone o da notebook.
+	Il prodotto è soprattutto proiettato a degli utenti esperti nelle tecnologie impiegate. Abbiamo prestabilito, concordamente con il proponente del capitolato, che è compito dell'utente creare l'interfaccia adeguata a registrare il microservizio nel market. Questo ci assicura una minima competenza nella programmazione e quindi nell'uso di tecnologie informatiche.
 	
+	Dimestichezza nell'utilizzo di browser che sia esso da smartphone o da notebook. 
 	\subsubsection{Tipologia di Utenti}
 	Saranno 3 i principali tipi di utenti che andranno a popolare i nostri casi d'uso a seconda del livello di autenticazione nella piattaforma:
 	\begin{itemize}
 		\item \textit{Utente non Autenticato}: è un utente che può visitare i microservizi in forma anonima a senza registrazione. Sarà limitato nelle impostazioni di ricerca, non potrà accedere alla funzionalità sociali e di compravendita delle API.
-		\item \textit{Utente Autenticato}: dopo essersi registrato nel data base della piattaforma l'utente autenticato ha accesso completo alle funzionalità offerte al pubblico. Può cambiare le proprie referenze, accumulare monete virtuali e avere pieno accesso alla parte sociale. 
-		\item \textit{Amministratore}:l'amministratore può modificare i profili di tutti gli utenti, modificare tutti i microservizi caricati ed ha accesso ad una pagina sulle statistiche del sito. Ha le funzionalità più estese e si è nominati personalmente. 
+		\item \textit{Utente Autenticato}: dopo essersi registrato nel database della piattaforma l'utente autenticato ha accesso completo alle funzionalità offerte al pubblico. Può cambiare le proprie referenze, accumulare monete virtuali e avere pieno accesso alla parte sociale. 
+		\item \textit{Amministratore}: l'amministratore può modificare i profili di tutti gli utenti, modificare tutti i microservizi caricati e ha accesso a una pagina sulle statistiche del sito. Ha le funzionalità più estese e si è nominati personalmente. 
 	\end{itemize}
 	
 	
@@ -383,7 +384,7 @@
 	\begin{itemize}
 		\item \textbf{Attori: }Utente non autenticato;
 		\item \textbf{Scopo e descrizione: }L'utente ha inserito un indirizzo email non valido o già esistente nel database. Gli viene quindi notificato l'errore.
-		\item \textbf{Precondizione: }I'utente ha inserito l'indirizzo email errato;
+		\item \textbf{Precondizione: }L'utente ha inserito l'indirizzo email errato;
 		\item \textbf{Postcondizione: }Il sistema ha mostrato all'utente un messaggio di errore appropriato.
 	\end{itemize}
 	\subsection{Caso d'uso UC1.9: Visualizza errore carta di credito}
@@ -601,7 +602,7 @@
 	\label{UC5.6}
 	\begin{itemize}
 		\item \textbf{Attori: }Utente Admin;
-		\item \textbf{Scopo e descrizione: }L'utente Admin che visiona la pagina di un altro utente vedendo tutti i dati dell'utente. In particolare, oltre a quelli già visti da un semplice Utente >utenticato, un Utente Admin può visualizzare:
+		\item \textbf{Scopo e descrizione: }L'utente Admin che visiona la pagina di un altro utente vedendo tutti i dati dell'utente. In particolare, oltre a quelli già visti da un semplice Utente autentautenticato, un Utente Admin può visualizzare:
 		\begin{itemize}
 			\item Indirizzo email;
 			\item numero di telefono;
@@ -687,7 +688,7 @@
 	\label{UC6.4}
 	\begin{itemize}
 		\item \textbf{Attori: }Utente autenticato;
-		\item \textbf{Scopo e descrizione: }L'utente autenticato vuole acquistare una APIKey, quindi preme sul pulsante di acquisto. Viene reindirizzato nella pagina di conferma di acquisto nel caso abbia un numero di APICredits sufficiente, altrimenti viene condotto nella pagina per l'acquisto di APICredits. Se Ha un numero di APICredits sufficiente e conferma l'acquisto allora il sistema scala gli APICredits dal suo account e gli fornisce una APIKey per quel microservizio.
+		\item \textbf{Scopo e descrizione: }L'utente autenticato vuole acquistare una APIKey, quindi preme sul pulsante di acquisto. Viene reindirizzato nella pagina di conferma di acquisto nel caso abbia un numero di APICredits sufficiente, altrimenti viene condotto nella pagina per l'acquisto di APICredits. Se ha un numero di APICredits sufficiente e conferma l'acquisto allora il sistema scala gli APICredits dal suo account e gli fornisce una APIKey per quel microservizio.
 		\item \textbf{Precondizione: }L'utente autenticato ha cliccato sul pulsante per acquistare una APIKey nella pagina di un microservizio;
 		\item \textbf{Postcondizione: }L'utente è in possesso dell'APIKey o è stato condotto nella pagina per l'acquisto di APICredits.
 	\end{itemize}
@@ -703,7 +704,7 @@
 	\label{UC6.6}
 	\begin{itemize}
 		\item \textbf{Attori: }Utente autenticato;
-		\item \textbf{Scopo e descrizione: }L'utente vuole visualizzare le statistiche prestazionali di un microservizio, quindi clicca sul link apposito. Viene visualizzata una pagina con le statistiche cercate. In particolare viene mostrato:
+		\item \textbf{Scopo e descrizione: }L'utente vuole visualizzare le statistiche prestazionali di un microservizio, quindi clicca sul link apposito. Viene quindi visualizzata una pagina con le statistiche cercate. In particolare viene mostrato:
 		\begin{itemize}
 			\item Tempo medio di risposta;
 			\item Dati medi scambiati mensilmente;
@@ -825,9 +826,9 @@
 	\end{figure}
 	\begin{itemize}
 		\item \textbf{Attori: }Utente autenticato;
-		\item \textbf{Scopo e descrizione: }L'utente autenticato che visiona il suo profilo ha accesso ad una pagina in cui sono elencate tutti i microservizi da lui registrati, e per ciascuno di essi statistiche che descrivano le sue attività. Può inoltre registrare nuovi microservizi;
+		\item \textbf{Scopo e descrizione: }L'utente autenticato che visiona il suo profilo ha accesso ad una pagina in cui sono elencati tutti i microservizi da lui registrati, e per ciascuno di essi statistiche che descrivano le proprie attività. Può inoltre registrare nuovi microservizi;
 		\item \textbf{Precondizione: }L'utente è sulla sua pagina profilo;
-		\item \textbf{Postcondizione: }Il sistema ha mostrato all'utente tutte le informazioni sui microservizi da lui caricati, e gli ha permesso di registrare i microservizi che voleva registrare.
+		\item \textbf{Postcondizione: }Il sistema ha mostrato all'utente tutte le informazioni sui microservizi da lui caricati e gli ha permesso di registrare i microservizi che voleva registrare.
 	\end{itemize}
 	\subsection{Caso d'uso UC8.4.1: Visualizzazione API caricate}
 	\label{UC8.4.1}
@@ -849,14 +850,14 @@
 		\item \textbf{Scopo e descrizione: }L'utente può visionare tutte le statistiche relative ad un particolare microservizio che ha registrato. In particolare:
 		\begin{itemize}
 			\item Numero di APIKey vendute;
-			\item Il guadagno totalo prodotto dal microservizio;
+			\item Il guadagno totale prodotto dal microservizio;
 			\item Il guadagno medio mensile prodotto dal microservizio;
 			\item L'elenco degli utenti in possesso di una APIKey relativa al microservizio;
 			\item Il traffico totale prodotto dal microservizio attraverso l'API Gateway;
 			\item Il traffico medio mensile prodotto dal microservizio attraverso l'API Gateway;
 			\item L'indice di valutazione degli utenti relativo al microservizio;
-			\item L'elenco di tutti commenti degli utenti relativi al microservizio;
-			\item L'elenco dei crash commessi dal suo microservizio e notificati dall'API Gateway;
+			\item L'elenco di tutti i commenti degli utenti relativi al microservizio;
+			\item L'elenco dei crash del suo microservizio e notificati dall'API Gateway;
 			\item Il tempo medio di risposta al netto del tempo di risposta dell'API Gateway;
 			\item Il numero di chiamate totali al microservizio tramite APIKeys;
 			\item il numero di chiamate medio mensile al microservizio tramite APIKeys.
@@ -904,7 +905,7 @@
 	\label{UC8.4.2.2}
 	\begin{itemize}
 		\item \textbf{Attori: }Utente autenticato;
-		\item \textbf{Scopo e descrizione: }L'utente che vuole caricare un microservizio deve scrivere una descrizione che ne descriva lo scopo generale. Deve inoltre scrivere alcuni tag che categorizzino il suo microservizio e descrivano il suo scopo. Può scrivere da un minimo di tre ad un massimo di dieci tag.
+		\item \textbf{Scopo e descrizione: }L'utente che vuole caricare un microservizio deve scrivere una descrizione che ne illustri lo scopo generale. Deve inoltre scrivere alcuni tag che categorizzino il suo microservizio e ne descrivano lo scopo. Può scrivere da un minimo di tre ad un massimo di dieci tag.
 		\item \textbf{Precondizione: }L'utente è nella pagina di registrazione di una nuova interfaccia di microservizio;
 		\item \textbf{Postcondizione: }Il sistema ha permesso all'utente di inserire una descrizione per il suo microservizio.
 	\end{itemize}
@@ -912,7 +913,7 @@
 	\label{UC8.4.2.3}
 	\begin{itemize}
 		\item \textbf{Attori: }Utente autenticato;
-		\item \textbf{Scopo e descrizione: }L'utente che vuole caricare un microservizio deve inserire tutte le modalità di pagamento che desidera impostare. In particolare deve essere possibile per l'utente selezionare le seguenti policy di vendita e il relativo costo:
+		\item \textbf{Scopo e descrizione: }L'utente che vuole caricare un microservizio deve inserire tutte le modalità di pagamento che desidera impostare. In particolare deve essere possibile per l'utente selezionare le seguenti policy di vendita ed il relativo costo:
 		\begin{itemize}
 			\item A scambio di dati;
 			\item A numero di accessi
@@ -1045,7 +1046,7 @@
 	\end{trivlist} 
 	I campi Y e Z possono essere assenti.\\
 	\\
-	Si ricorda che per ogni requisito c'è bisogno di una descrizione e riportare le dipendenze che ha verso altri. I requisiti non devono comunque essere in conflitto tra loro.
+	Si ricorda che per ogni requisito c'è bisogno di una descrizione e di riportare le dipendenze che ha verso gli altri. I requisiti non devono comunque essere in conflitto tra loro.
 	\newpage
 	\subsection{Requisiti Funzionali}
 	{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
