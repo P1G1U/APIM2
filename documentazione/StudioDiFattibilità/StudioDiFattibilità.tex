@@ -1,0 +1,278 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+%va sempre messo article per "program documentation"
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=1cm,right=1cm]{geometry}
+\usepackage{soulutf8,color}
+\usepackage{graphicx}
+
+\usepackage{emptypage}                     
+% pagine vuote senza testatina e piede di pagina
+
+%\usepackage{hyperref}                     
+% collegamenti ipertestuali
+
+\usepackage{fancyhdr}
+% pacchetto per intestazione e pie pagina
+
+\pagestyle{fancy}
+
+
+% \\ indica interruzione di riga
+
+% compilate 2 volte per documenti con indice
+
+% {\em qui testo in corsivo}
+% {\bfseries qui testo in grossetto}
+
+%LISTE NUMERATE
+%\begin{enumerate}
+%\item primo
+%\item secondo
+%\item terzo
+%\end{enumerate}
+
+%LISTE PUNTATE
+%\begin{itemize}
+%\item primo
+%\item secondo
+%\item \dots
+%\end{itemize}
+
+%TABELLA
+%\begin{tabular}{|c|c|c|}
+%indica una tabella con 3 colonne e pos. testo centrale. La barra verticale ( | ) indica che vi e' una linea divisoria verticale tra le celle.
+%\hline	linea separatrice orizzontale
+%testo1& testo2& testo3\\
+% & segna la fine del testo nella cella , \\ indica il fine della riga 
+
+%GRAFICI
+%\begin{figure}
+%\includegraphics{filegrafico}
+%comando per includere le immagini (controllare i formati)
+%\caption{didascalia}
+%\label{nome}
+%\end{figure}
+
+
+\lhead{Nome Gruppo}
+\chead{}
+\rhead{Nome Capitolo}
+\lfoot{Nome Documento}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+%----------------------------------------------------------- INIZIO TEMPLATE TITOLO
+
+\usepackage{xcolor} % Importa i colori per la prima pagina
+\usepackage{fix-cm} % Permette l'incremento del font oltre misura
+
+
+\newcommand{\HRule}[1]{\hfill \rule{0.2\linewidth}{#1}} % Horizontal rule at the bottom of the page, adjust width here
+
+\definecolor{grey}{rgb}{0.9,0.9,0.9} % Colore del box del titolo
+
+\begin{document}
+	
+	\thispagestyle{empty} % Toglie il numero della pagina nella prima pagina
+	
+	%----------------------------------------------------------------------------------------
+	%	TITLE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\colorbox{grey}{
+		\parbox[t]{1.0\linewidth}{
+			\centering \fontsize{50pt}{80pt}\selectfont % Il primo è la grandezza del font, il secondo lo spazio lasciato
+			\vspace*{0.7cm} % Spazio dall'inizio del box al titolo
+			
+			\raggedleft
+			\includegraphics[width=0.7\linewidth]{../../../LogoSWEgGroupSFONDOVUOTO}
+			
+			\hfill Studio di Fattibilità \\
+			
+			\vspace*{0.7cm} % Spazio dalla fine del testo alla fine del box
+		}
+	}
+	
+	%----------------------------------------------------------------------------------------
+	
+	\vfill % Spazio dalla fine del box alle altre informazioni
+	
+	%----------------------------------------------------------------------------------------
+	%	Informazioni sul documento
+	%----------------------------------------------------------------------------------------
+	
+	{\centering \large 
+		\hfill \textbf{Versione} 0.5.0 \\
+		\hfill \textbf{Redazione} Alberto Gelmi \\
+		\hfill Pietro Lonardi \\
+		\hfill \textbf{Verifica} Sebastiano Marchesini \\
+		\hfill \textbf{Responsabile} Alberto Gelmi \\
+		\hfill \textbf{Uso} Interno\\
+		\hfill \textbf{Destinato} SWEg Group\\ 
+		
+		\HRule{1pt}
+		
+		\textbf{Sommario} \\
+		Scrivere una semplice descrizione
+		
+	} % Linea orizzontale di estetica
+	
+	
+	%----------------------------------------------------------------------------------------
+	
+	\clearpage % Parta bianca finale della pagina
+	
+%----------------------------------------------------------- FINE TEMPLATE TITOLO
+
+\lhead{\includegraphics[width=0.2\linewidth]{../../../LogoSWEgGroup}}
+\chead{}
+\lfoot{Studio di Fattibilità}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+\rhead{Registro Modifiche}
+\section{Registro Modifiche}
+\small %rippicciolisce il testo
+{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
+\begin{tabular}{|l|c|c|c|}
+\hline
+{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
+\hline
+Verifica & Sebastiano Marchesini & 09/01/2017 & 0.5.0 \\
+\hline
+Stesura seconda parte del documento & Pietro Lonardi & 27/12/2016 & 0.0.2 \\
+\hline
+Stesura prima parte del documento & Alberto Gelmi & 26/12/2016 & 0.0.1 \\
+\hline
+
+\end{tabular}
+}
+
+\newpage
+
+\tableofcontents
+%crea indice automaticamente
+\thispagestyle{empty}
+
+\newpage
+
+
+\rhead{Introduzione}
+\section{Introduzione}
+
+\subsection{Scopo del documento}
+Questo documento ha come scopo di esporre le diverse considerazioni che sono state fatte dal team in occasione della scelta del capitolato C1.
+
+\subsection{Scopo del prodotto}
+Lo scopo del progetto è la creazione di un API market per la compravendita di microservizi. L'applicativo dovrà permettere dunque la registrazione e la consultazione delle API e della relativa documentazione tecnica. Ad esse saranno associare diverse API keys per ogni API e utente, le quali hanno lo scopo di monitorare l'utilizzo e verificare lo stato di pagamento.
+
+\subsection{Glossario}
+Al fine di evitare ambiguità e ottimizzare la comprensione dei documenti, viene incluso un Glossario, nel quale saranno inseriti i termini tecnici, acronimi e parole che necessitano di essere chiarite.\\
+Un glossario è una raccolta di termini di un ambito specifico e circoscritto. In questo caso per raccogliere termini desueti e specialistici inerenti al progetto. 
+
+\subsection{Riferimenti}
+\subsubsection{Normativi}
+\begin{itemize}
+	\item \textbf{Norme di Progetto}: \\
+	"Norme di Progetto v1.0.0".
+\end{itemize}
+\subsubsection{Informativi}:	%DA COMPLETARE
+\begin{itemize}
+	\item 
+\end{itemize} 
+
+\newpage
+
+\rhead{Capitolato C1 - API Market}
+\section{Capitolato C1 - API Market}
+\subsection{Descrizione}
+Il prodotto consiste di un'applicazione web dalla quale l'utente potrà accedere alle funzionalità di compravendita dei microservizi. Tale applicazione si dovrà interfacciare con un database contenente i profili utente ed un sistema di gestione delle Keys, affinché venga garantito l'utilizzo legale delle API. Inoltre vanno raccolti dati riguardanti l'utilizzo e le prestazioni dei singoli microservizi.
+
+\subsection{Studio del dominio}
+Data la forte espansione e il successo che l'architettura a microservizi sta ottenendo, e considerato anche l'interesse che varie importanti aziende stanno dimostrando a riguardo, è molto probabile che questo paradigma veda una diffusione notevole nei prossimi anni. Per questo motivo la creazione di una piattaforma che promuova la sua diffusione.
+\subsubsection{Dominio applicativo} %PUNTI DA COMPLETARE
+\begin{itemize}
+	\item \textbf{Criptografia}: gestione delle chiavi per la messa in vendita e l'utilizzo dei microservizi;
+	\item \textbf{Basi di Dati}: Creazione di un database che dovrà raccogliere e conservare le informazioni riguardanti gli utenti, le chiavi , le interfacce delle API e i dati raccolti a partire dall'analisi sulle esecuzioni dei servizi.
+\end{itemize}
+\subsubsection{Dominio Tecnologico}
+\begin{itemize}
+	\item Conoscenza di MySQL;
+	\item Conoscenza di servizi REST;
+	\item Conoscenza di linguaggi web (HTML, CSS, Javascript);
+	\item Conoscenza di Jolie
+\end{itemize}
+
+\subsection{Valutazione del capitolato}
+\subsubsection{Valutazione generale }
+Il gruppo ha dimostrato grande ed immediato interesse per questo capitolato in quanto rappresenta un'opportunità per studiare un nuovo paradigma di programmazione e lavorare su un prodotto ritenuto molto promettente. 
+\subsubsection{Potenziali criticità}
+\begin{itemize}
+	\item Il paradigma di programmazione a servizi è una novità per i membri del team, e dunque sarà necessario studiarlo per tempo.
+	\item Il gruppo ha scarse conoscenze di criptografia, cosa che invece ha un'importanza rilevante in più parti del capitolato.
+\end{itemize}
+
+\newpage
+
+\rhead{Confronto con gli altri capitolati}
+\section{Confronto con gli altri capitolati}
+
+\subsection{Capitolato C2 - Assistente Virtuale}
+\subsubsection{Valutazione generale}
+Il capitolato richiede la realizzazione web di un assistente vocale che si interfacci con un cliente. Deve segnalare al personale dell'ufficio dell'arrivo dell'ospite fornendo un'attività di accoglienza.\\
+Le tecnologie suggerite dal proponente sono in parte conosciute dei membri del team e perciò questo ha influito in parte alla scelta del team di scartare questo capitolato in quanto non avrebbe arricchito il bagaglio di conoscenze del team, inoltre l'ambito dell'assistenza virtuale è poco stimolante per i membri.
+\subsubsection{Potenziali rischi}
+\begin{itemize}
+	\item Alto rischio sullo sviluppo dell'assistente virtuale in quanto poca conoscenza nel settore da parte di tutto il team e poca conoscenza del linguaggio che il proponente ha consigliato per lo sviluppo (NodeJS).
+\end{itemize}
+
+\subsection{Capitolato C3 - DeGeOP A Designer and Geo-localizer Web App for Organizational Plants}
+\subsubsection{Valutazione generale}
+Il gruppo ha ritenuto poco interessante questo capitolato, anche se ha riconosciuto che il mercato per questo software sarebbe ampio e già ben delineato. \\
+Questo contratto richiede lo sviluppo di un'applicazione web per il riconoscimento del rischio a cui le infrastrutture dei clienti finali potrebbero essere soggette, inoltre l'applicazione deve essere anche utilizzabile da smartphone e tablet.
+\subsubsection{Potenziali rischi}
+\begin{itemize}
+	\item La portabilità dell'applicazione è una delle chiavi fondamentali per la riuscita del progetto e quindi deve essere ben studiato il front end dell'applicazione;
+	\item  Il proponente nella presentazione del capitolato è sembrato superficiale in alcuni aspetti che, in fase di sviluppo, potrebbero diventare un problema per il team.
+\end{itemize}
+
+\subsection{Capitolato C4 - eBread: Applicazione di lettura per dislessici}
+\subsubsection{Valutazione generale}
+Questo capitolato è molto interessante, richiede di sviluppare una applicazione per aiutare la lettura di testi da parte di persone con problemi di dislessia.\\ 
+Si suddivide in una parte di sviluppo di API per la corretta formattazione del testo e una parte di sintesi vocale per facilitare all'utente la lettura. Il team non ha scelto questo capitolato per mancanza di interesse nei confronti del prodotto finale.
+\subsubsection{Potenziali rischi}
+\begin{itemize}
+	\item Dato che il prodotto deve essere poi utilizzato in diversi ambienti, la portabilità gioca un ruolo fondamentale nello sviluppo, inoltre viene richiesta la conoscenza di diversi linguaggi di programmazione nei diversi ambiti;
+	\item Poca conoscenza da parte dei membri nella programmazione per dispositivi mobile.
+\end{itemize}
+
+\subsection{Capitolato C5 - Interactive Bubbles}
+\subsubsection{Valutazione generale}
+Il capitolato richiede di sviluppare un'infrastruttura per lo scambio di messaggi tra utenti, con l'aggiunta di "bolle interattive", ovvero messaggi che al loro interno contengano di più del semplice testo o traccia audio.\\
+Il proponente ha proposto idee su cosa potrebbero contenere queste "bolle" ad esempio: sondaggi, una liste cliccabili, o un caricamento di file. Il team ha scartato questo progetto in quanto non è stata fatta una determinata richiesta su come il prodotto finale deve essere, ma è stata data una vaga idea del risultato finale lasciando molta incertezza su cosa debba essere alla fine il risultato.
+\subsubsection{Potenziali rischi}
+\begin{itemize}
+	\item Scarsa comprensione del team di cosa viene richiesto nel capitolato potrebbe portare ad una modifica anche importante del progetto in fase di sviluppo;
+	\item Il mercato per questo prodotto è molto competitivo perciò si pensa che anche se l'idea delle bolle sia innovativa, non riuscirà a interessare un buon numero di utenti.
+\end{itemize}
+
+\subsection{SWEDesigner: editor di diagrammi UML con generazione di codice}
+\subsubsection{Valutazione Generale}
+Il proponente richiede di realizzare un software in grado di generare codice attraverso dei diagrammi di UML. \\
+Il team ha scartato questo progetto in quanto l'onere di conoscenze richieste è molto elevato per il gruppo rispetto agli altri capitolati tenendo conto il fatto di essere con un numero inferiore di componenti rispetto lo standard.
+\subsubsection{Potenziali rischi}
+\begin{itemize}
+	\item Alta criticità del progetto risiede nel fatto che il problema non è ancora stato risolto perciò potrebbe essere molto complesso consegnare il prodotto entro i tempi pattuiti;
+	\item Il proponente ha concesso la sua completa disponibilità, ma il team è poco sicuro della riuscita del progetto.
+\end{itemize}
+
+
+\end{document}

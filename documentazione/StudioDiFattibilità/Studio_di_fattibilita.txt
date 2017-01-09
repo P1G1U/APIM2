@@ -77,6 +77,7 @@ Questo capitolato è molto interessante, richiede di sviluppare una applicazione
 3.3.2 Potenziali Rischi
 - Dato che il prodotto deve essere poi utilizzato in diversi ambienti, la portabilità gioca un ruolo fondamentale nello sviluppo, inoltre viene richiesta la conoscienza di diversi linguaggi di programmazione nei diversi ambiti
 - Poca conoscenza da parte dei membri nella programmazione per dispositivi mobile
+
 3.4 Capitolato C5 - Interactive Bubbles
 3.4.1 Valutazione Generale
 Il capitolato richiede di sviluppare un provider per lo scambio di messaggi tra utenti, con l'aggiunta di "bolle interattive", ovvero messaggi che al loro interno contengano di più del semplice testo o traccia audio. Il proponente ha proposto idee su cosa potrebbero contenere queste "bolle" ad esempio: un poll, una todo list, o un caricamento di file. Il team ha scartato questo progetto in quanto non è stata fatta una determinata richiesta su come il prodotto finale deve essere, ma è stata data una vaga idea del risultato finale lasciando molta incertezza su cosa debba essere alla fine il risultato.
