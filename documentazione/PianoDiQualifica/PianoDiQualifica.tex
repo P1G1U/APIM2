@@ -1,7 +1,7 @@
 \documentclass[12pt,a4paper,titlepage]{article}
 \usepackage[italian]{babel}
 \usepackage[T1]{fontenc}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{titlesec}
 \usepackage{hyperref}
 \usepackage[a4paper,top=2cm,bottom=2cm,left=1cm,right=1cm]{geometry}
@@ -84,10 +84,11 @@
 	
 	{\centering \large 
 		\hfill \textbf{Versione} 1.0.0 \\
-		\hfill \textbf{Redazione} Crivellaro Gianluca \\
+		\hfill \textbf{Redazione} Gianluca Crivellaro \\
 		\hfill Piergiorgio Danieli \\
-		\hfill \textbf{Verifica} Pietro Lonardi  \\
-		\hfill \textbf{Responsabile} Sebastiano Marchesini \\
+		\hfill \textbf{Verifica} Pietro Lonardi \\
+		\hfill \textbf{Validazione} Sebastiano Marchesini \\
+		\hfill \textbf{Responsabile} Gianluca Crivellaro \\
 		\hfill \textbf{Uso} Esterno \\
 		\hfill \textbf{Destinato} ItalianaSoftware S.r.l \\
 		\hfill Prof. Vardanega Tullio \\
@@ -106,6 +107,7 @@
 	\clearpage % Parta bianca finale della pagina
 	
 	%----------------------------------------------------------- FINE TEMPLATE TITOLO
+	
 \lhead{\includegraphics[width=0.2\linewidth]{../../LogoSWEgGroup}}
 \chead{}
 \lfoot{Piano di Qualifica}
@@ -113,28 +115,28 @@
 \rfoot{\thepage}
 \renewcommand{\headrulewidth}{0.2pt}
 \renewcommand{\footrulewidth}{0.2pt}
+		
+\rhead{Registro Modifiche}
+\section{Registro Modifiche}
+\small %rippicciolisce il testo
 	
-	\rhead{Registro Modifiche}
-	\section{Registro Modifiche}
-	\small %rippicciolisce il testo
-	{\renewcommand\arraystretch{1.2}
-		\begin{table}
-			\centering
-			\begin{tabular}{|l|c|c|c|}
-				\hline
-				{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
-				\hline
-				Correzioni Verifica & Lonardi Pietro & 10/01/2017 & 0.3.0 \\
-				\hline
-				Stesura del documento & Crivellaro Gianluca & 04/01/2017 & 0.2.0 \\
-				\hline
-				Stesura introduzione & Danieli Piergiorgio & 04/01/2017 & 0.1.0 \\
-				\hline
-				Studio dei riferimenti & Crivellaro Gianluca & 02/01/2017 & 0.0.1 \\
-				\hline
-			\end{tabular}
-		\end{table}
-	}
+{\renewcommand\arraystretch{1.2}
+		\begin{tabular}{|l|c|c|c|}
+			\hline
+			{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
+			\hline
+			Validazione & Sebastiano Marchesini & 10/01/2017 & 1.0.0 \\
+			\hline
+			Verifica & Lonardi Pietro & 10/01/2017 & 0.5.0 \\
+			\hline
+			Stesura del documento & Crivellaro Gianluca & 04/01/2017 & 0.2.0 \\
+			\hline
+			Stesura introduzione & Danieli Piergiorgio & 04/01/2017 & 0.1.0 \\
+			\hline
+			Studio dei riferimenti & Crivellaro Gianluca & 02/01/2017 & 0.0.1 \\
+			\hline
+		\end{tabular}
+}
 	\newpage
 	
 	\tableofcontents
@@ -144,25 +146,32 @@
 	\section{Introduzione}
 	\subsection{Scopo del documento}
 	Lo scopo del \textit{Piano di Qualifica} è di descrivere le strategie di verifica e validazione adottate dal gruppo SWEg al fine di perseguire obiettivi qualitativi per il progetto APIMarket.
+	
 	\subsection{Scopo del Prodotto}
-	Lo scopo del progetto è la realizzazione di un applicazione web che gestisca e monitori microservizi, muniti di un'interfaccia Jolie. In particolare APIMarket deve permettere di vendere, acquistare e monitorare microservizi tramite la piattaforma. 
+	Lo scopo del progetto è la realizzazione di un applicazione web che gestisca e monitori microservizi, muniti di un'interfaccia Jolie. In particolare APIMarket deve permettere di vendere, acquistare e monitorare microservizi tramite la piattaforma.
+	
 	\subsection{Glossario}
-	Per evitare il più possibile ambiguità legate al linguaggio, e per favorire la comprensione del documento i termini tecnici e gli acronimi che necessitano di descrizione saranno seguiti da una "g" in pedice e riportati nel documento \textit{Glossario v1.0.0}.
+	Al fine di evitare ambiguità e ottimizzare la comprensione dei documenti, viene incluso un Glossario, nel quale saranno inseriti i termini tecnici, acronimi e parole che necessitano di essere chiarite.\\
+	Un glossario è una raccolta di termini di un ambito specifico e circoscritto. In questo caso per raccogliere termini desueti e specialistici inerenti al progetto.
+	
 	\subsection{Riferimenti}
 	\subsubsection{Normativi}
 	\begin{itemize}
-		\item \textbf{Norme di Progetto:} \textit{Norme di Progetto v1.0.0};
-		\item \textbf{Capitolato d'appalto C1:} APIM: An API\textsubscript{g} Market Platform\\
+		\item \textbf{Norme di Progetto}:\\
+		\textit{Norme di Progetto v1.0.0};
+		\item \textbf{Capitolato d'appalto C1}: APIM: An API\textsubscript{g} Market Platform\\
 			\textcolor{blue}{\url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/Capitolati.html}}
 	\end{itemize}
+
 	\subsubsection{Informativi}
 	\begin{itemize}
-		\item \textbf{Piano di Progetto:} \textit{Piano di Progetto v1.0.0};
-		\item \textbf{Slide di Ingegneria del Software:}\\ 
+		\item \textbf{Piano di Progetto}:\\
+		\textit{Piano di Progetto v1.0.0};
+		\item \textbf{Slide di Ingegneria del Software}:\\ 
 			\textcolor{blue}{\url{http://www.math.unipd.it/~tullio/IS-1/2016/}};
 		\item \textbf{SWEBOK - Version 3 (2004)}: capitolo 11 - Software Quality\\
 			\textcolor{blue}{\url{https://www.computer.org/web/swebok}};
-		\item \textbf{ISO\textsubscript{g}/IEC\textsubscript{g} TR 15504:} Software process assessment:\\
+		\item \textbf{ISO\textsubscript{g}/IEC\textsubscript{g} TR 15504}: Software process assessment:\\
 			\textcolor{blue}{\url{https://en.wikipedia.org/wiki/ISO/IEC_15504}};
 		\item \textbf{ISO\textsubscript{g}/IEC\textsubscript{g} 9126: Product quality}:\\
 			\textcolor{blue}{\url{https://en.wikipedia.org/wiki/ISO/IEC_9126}};
@@ -173,117 +182,118 @@
 	\newpage
 	\rhead{Definizione obiettivi di qualità}
 	\section{Definizione obiettivi di qualità}
-	Il gruppo SWEg si impegna a rispettare il modello di standard definito in ISO\textsubscript{g}/IEC\textsubscript{g}0126, il quale ha le seguenti qualità:
+	Il gruppo SWEg si impegna a rispettare il modello di standard definito in ISO/IEC 0126, il quale ha le seguenti qualità:
 		\subsection{Funzionalità}
 		Il sistema prodotto deve garantire tutte le funzionalità indicate nel documento \textit{"Analisi dei Requisiti v1.0.0"}. L'implementazione dei requisiti deve essere più completa ed economica possibile.
 		\begin{itemize}
-			\item \textbf{Misura:} viene usata come unità di misura la quantità di requisiti mappati in componenti del sistema create e funzionanti;
-			\item \textbf{Metrica:} la sufficienza è stabilita nel soddisfacimento di tutti i requisiti obbligatori;
-			\item \textbf{Strumenti:} perché questa qualità sia soddisfatta il sistema deve superare tutti i test previsti.
+			\item \textbf{Misura}: viene usata come unità di misura la quantità di requisiti mappati in componenti del sistema create e funzionanti;
+			\item \textbf{Metrica}: la sufficienza è stabilita nel soddisfacimento di tutti i requisiti obbligatori;
+			\item \textbf{Strumenti}: perché questa qualità sia soddisfatta il sistema deve superare tutti i test previsti.
 		\end{itemize}
+	
 		\subsection{Affidabilità}
 		Il sistema si deve dimostrare robusto e di facile ripristino in caso di errori.
 		\begin{itemize}
-			\item \textbf{Misura:} l'unità di misura sarà la quantità di esecuzioni del sistema andati a buon fine;
-			\item \textbf{Metrica:} le esecuzioni dovranno soddisfare la più ampia gamma di funzionalità previste;
-			\item \textbf{Strumenti:} da definire.
+			\item \textbf{Misura}: l'unità di misura sarà la quantità di esecuzioni del sistema andati a buon fine;
+			\item \textbf{Metrica}: le esecuzioni dovranno soddisfare la più ampia gamma di funzionalità previste;
+			\item \textbf{Strumenti}: da definire.
 		\end{itemize}
+	
 		\subsection{Usabilità}
 		Il sistema prodotto deve risultare di semplice utilizzo per l'utente. Questo sistema deve allo stesso tempo soddisfare tutte le necessità dell'utente.
 		\begin{itemize}
-			\item \textbf{Misura:} i dieci punti dell'euristica di Nielsen\textsubscript{g};
-			\item \textbf{Metrica:} la sufficienza è stabilita dal soddisfacimento del numero minimo di punti;
-			\item \textbf{Strumenti:} perché questa qualità sia soddisfatta il sistema deve superare tutti i test previsti.
+			\item \textbf{Misura}: i dieci punti dell'euristica di Nielsen;
+			\item \textbf{Metrica}: la sufficienza è stabilita dal soddisfacimento del numero minimo di punti;
+			\item \textbf{Strumenti}: perché questa qualità sia soddisfatta il sistema deve superare tutti i test previsti.
 		\end{itemize}
+	
 		\subsection{Efficienza}
 		Il sistema deve fornire tutte le funzionalità nel più breve tempo possibile, con il minimo utilizzo di risorse.
 		\begin{itemize}
-			\item \textbf{Misura:} tempi di latenza per ottenere una risposta dall'applicazione web in condizioni normali o in caso di sovraccarico della rete;
-			\item \textbf{Metrica:}la sufficienza viene stimata come un tempo di latenza minore del 20\% su rete via cavo o Wi-Fi e del 30\% su reti cellulari rispetto alla media dei tempi di latenza del server web;
-			\item \textbf{Strumenti:} si veda il documento \textit{"Norme di Progetto v1.0.0"}.
+			\item \textbf{Misura}: tempi di latenza per ottenere una risposta dall'applicazione web in condizioni normali o in caso di sovraccarico della rete;
+			\item \textbf{Metrica}: la sufficienza viene stimata come un tempo di latenza minore del 20\% su rete via cavo o Wi-Fi e del 30\% su reti cellulari rispetto alla media dei tempi di latenza del server web;
+			\item \textbf{Strumenti}: si veda il documento \textit{"Norme di Progetto v1.0.0"}.
 		\end{itemize}
+	
 		\subsection{Manutenibilità}
 		Il sistema prodotto deve essere comprensibile ed estensibile in modo facile e verificabile.
 		\begin{itemize}
-			\item \textbf{Misura:} l'unità di misura utilizzata saranno le metriche sul codice descritte nella sezione \nameref{MisureMetriche};
-			\item \textbf{Metrica:} le metriche che verranno rispettate sono descritte nella sezione \nameref{MisureMetriche};
-			\item \textbf{Strumenti:} si veda il documento \textit{"Norme di Progetto v1.0.0"}.
+			\item \textbf{Misura}: l'unità di misura utilizzata saranno le metriche sul codice descritte nella sezione \nameref{MisureMetriche};
+			\item \textbf{Metrica}: le metriche che verranno rispettate sono descritte nella sezione \nameref{MisureMetriche};
+			\item \textbf{Strumenti}: si veda il documento \textit{"Norme di Progetto v1.0.0"}.
 		\end{itemize}
+	
 		\subsection{Portabilità}
-		Il sistema deve essere più portabile possibile. Il sito deve essere visitabile da più browser possibili. Il sito deve essere sviluppato con sistemi che abbiano le varie componenti tecnologiche di tipo standard. Con il termine "standard" si intente che i contenuti devono poter essere utilizzati su più sistemi operativi possibile e su più ambienti di lavoro possibile.
+		Il sistema deve essere più portabile possibile. Il sito deve essere visitabile da più browser possibili. Il sito deve essere sviluppato con sistemi che abbiano le varie componenti tecnologiche di tipo standard. Con il termine "standard" si intente che i contenuti devono poter essere utilizzati su più sistemi operativi e ambienti di lavoro possibili.
 			\begin{itemize}
-				\item \textbf{Misura:} il front end deve aderire agli standard W3C;
-				\item \textbf{Metrica:} se il software avrà la sufficienza in tutte le metriche descritte nella sezione \nameref{MisureMetriche}, allora il sito avrà le caratteristiche di portabilità descritte;
-				\item \textbf{Strumenti:} si veda il documento \textit{"Norme di Progetto v1.0.0"}.
+				\item \textbf{Misura}: il front end deve aderire agli standard W3C;
+				\item \textbf{Metrica}: se il software avrà la sufficienza in tutte le metriche descritte nella sezione \nameref{MisureMetriche}, allora il sito avrà le caratteristiche di portabilità descritte;
+				\item \textbf{Strumenti}: si veda il documento \textit{"Norme di Progetto v1.0.0"}.
 			\end{itemize}
+		
 		\subsection{Altre qualità}
 		Saranno inoltre importanti per il prodotto le seguenti qualità:
 		\begin{itemize}
 			\item \textbf{Semplicità}: si ottiene tramite la realizzazione del prodotto nel modo più semplice, senza tralasciare la qualità;
-			\item \textbf{Incapsulamento:} applicare le tecniche di incapsulamento per aumentare la manutenibilità e la possibilità di riuso del codice. L'interazione sarà possibile tramite interfacce;
-			\item \textbf{Coesione:} riguarda le funzionalità che collaborano tra di loro per ottenere uno stesso obiettivo. Devono risiedere nello stesso componente, e come scopo hanno quello di ridurre l'indice di dipendenza, favorire la semplicità e la manutenibilità.
+			\item \textbf{Incapsulamento}: applicare le tecniche di incapsulamento per aumentare la manutenibilità e la possibilità di riuso del codice. L'interazione sarà possibile tramite interfacce;
+			\item \textbf{Coesione}: riguarda le funzionalità che collaborano tra di loro per ottenere uno stesso obiettivo. Devono risiedere nello stesso componente, e come scopo hanno quello di ridurre l'indice di dipendenza, favorire la semplicità e la manutenibilità.
 		\end{itemize}
+	
 	\newpage
 	\rhead{Visione generale delle strategie di verifica}
 	\section{Visione generale delle strategie di verifica}
 	\subsection{Procedure di controllo di qualità di processo}
-	La qualità dei processi verrà garantita dall'applicazione del principio PDCA\textsubscript{g}. Grazie a questo principio sarà possibile garantire non solo il controllo e la correttezza, ma anche il miglioramento costante della qualità di tutti i processi. Come conseguenza diretta si otterrà il miglioramento del prodotto.
-	
+	La qualità dei processi verrà garantita dall'applicazione del principio PDCA. Grazie a questo principio sarà possibile garantire non solo il controllo e la correttezza, ma anche il miglioramento costante della qualità di tutti i processi. Come conseguenza diretta si otterrà il miglioramento del prodotto.\\
 	Per avere controllo dei processi, e di conseguenza qualità, è necessario che:
 	\begin{itemize}
 		\item vi sia controllo sull'operato dei membri del team e sui processi;
 		\item i processi siano pianificati in modo dettagliato;
 		\item le risorse siano ripartite in modo chiaro.
 	\end{itemize}
-	L'attuazione di questi punti è descritta nel documento \textit{"Piano di progetto v1.0.0"}. Inoltre l'analisi costante della qualità del prodotto permette di monitorare in modo indiretto la qualità dei processi: se il prodotto è di bassa qualità sicuramente il processo è migliorabile.
-	
-	Per valutare la qualità di un processo è fondamentale che questa sia quantificata, le metriche per fare ciò sono descritte nella sezione....
+	L'attuazione di questi punti è descritta nel documento \textit{"Piano di progetto v1.0.0"}. Inoltre l'analisi costante della qualità del prodotto permette di monitorare in modo indiretto la qualità dei processi: se il prodotto è di bassa qualità sicuramente il processo è migliorabile.\\
+	Per valutare la qualità di un processo è fondamentale che questa sia quantificata, le metriche per fare ciò sono descritte nella sezione \nameref{MisureMetriche}.
 	
 	\subsection{Procedure di controllo di qualità di prodotto}
 	Il controllo di qualità dei prodotti verrà garantito dai seguenti processi:
 	\begin{itemize}
-		\item \textbf{Software Quality Assurance} (SQA\textsubscript{g}): assicura che i processi siano appropriati per il progetto, che siano correttamente implementati. Prevede l'attuazione di tecniche di analisi statica e dinamica, descritte nel documento \textit{"Norme di Progetto v1.0.0"};
-		\item \textbf{Verifica:} è il processo che controlla la coerenza e la correttezza dei prodotti dei processi. La verifica verrà eseguita costantemente durante tutta la durata del progetto.
-		\item \textbf{Validazione:} ovvero la conferma che il sistema soddisfi i requisiti e sia conforme alle attese.
+		\item \textbf{Software Quality Assurance (SQA)}: assicura che i processi siano appropriati per il progetto, che siano correttamente implementati. Prevede l'attuazione di tecniche di analisi statica e dinamica, descritte nel documento \textit{"Norme di Progetto v1.0.0"};
+		\item \textbf{Verifica}: è il procedimento che controlla la coerenza e la correttezza dei prodotti dei processi. La verifica verrà eseguita costantemente durante tutta la durata del progetto;
+		\item \textbf{Validazione}: ovvero la conferma che il sistema soddisfi i requisiti e sia conforme alle attese.
 	\end{itemize}
 
 	\subsection{Organizzazione}
-	Il processo di verifica inizia nel momento in cui la versione del prodotto di un processo cambia. Il diario delle modifiche aiuta a monitorare solo le sezioni che sono state modificate, ottimizzando così i tempi di verifica. 
-	
-	Viene verificata sia la qualità del processo che del prodotto da esso compiuto.
-	
+	Il processo di verifica inizia nel momento in cui la versione del prodotto di un processo cambia. Il diario delle modifiche aiuta a monitorare solo le sezioni che sono state modificate, ottimizzando così i tempi di verifica.\\
+	Viene verificata sia la qualità del processo che del prodotto da esso compiuto.\\
 	Ogni fase del progetto, descritta nel documento \textit{"Piano di progetto v1.0.0"} produce un prodotto diverso, quindi necessita di diverse attività di verifica:
 	\begin{itemize}
-		\item \textbf{Analisi:} in questa fase si verifica che i processi e la documentazione prodotta rispettino le norme definite nel documento \textit{"Norme di Progetto v1.0.0"}
-		\item \textbf{Analisi di Dettaglio:}...
-		\item \textbf{Analisi Architetturale:}...
+		\item \textbf{Analisi e Analisi di Dettaglio}: in questa fase si verifica che i processi e la documentazione prodotta rispettino le norme definite nel documento \textit{"Norme di Progetto v1.0.0"} e i tempi prestabiliti nel \textit{"Piano di Progetto v1.0.0"};
 	\end{itemize}
+
 	\subsection{Pianificazione strategica e temporale}
-	È essenziale che l'attività di verifica sia sistematica ed organizzata, al fine di evitare la propagazione di errori ed ottimizzare i tempi di sviluppo, per rispettare le scadenze elencate nel documento \textit{Piano di Progetto v1.0.0}.
-	
-	Ogni fase di redazione di documenti e di codifica deve essere preceduta da una fase di studio preliminare, al fine di ridurre la possibilità di errori di natura concettuale o tecnica, e favorendo l'attività dei verificatori.
-	
+	È essenziale che l'attività di verifica sia sistematica ed organizzata, al fine di evitare la propagazione di errori ed ottimizzare i tempi di sviluppo, per rispettare le scadenze elencate nel documento \textit{Piano di Progetto v1.0.0}.\\
+	Ogni fase di redazione di documenti e di codifica deve essere preceduta da una fase di studio preliminare, al fine di ridurre la possibilità di errori di natura concettuale o tecnica, e favorendo l'attività dei verificatori.\\
 	In seguito vengono riportate le scadenze fissate:
 	\begin{itemize}
-		\item \textbf{Revisioni formali:}
+		\item \textbf{Revisioni formali}:
 			\begin{itemize}
-				\item \textbf{Revisione dei Requisiti:} 24/01/2017;
-				\item \textbf{Revisione di Accettazione:} 27/06/2017
+				\item \textbf{Revisione dei Requisiti}: 24/01/2017;
+				\item \textbf{Revisione di Accettazione}: 27/06/2017.
 			\end{itemize}
-		\item \textbf{Revisioni di progresso:}
+		\item \textbf{Revisioni di progresso}:
 			\begin{itemize}
-				\item \textbf{Revisione di Progettazione:} 13/03/2017
-				\item \textbf{Revisione di Qualifica:} 15/05/2017
+				\item \textbf{Revisione di Progettazione}: 13/03/2017.
+				\item \textbf{Revisione di Qualifica}: 15/05/2017.
 			\end{itemize}
 	\end{itemize}
-	\subsection{Responsabilità}
-	Al fine di garantire un processo di verifica efficace ed efficiente vengono attribuite delle responsabilità all'interno del gruppo di progetto. 
 	
-	I ruoli che intervengono nel processo di verifica sono il \textit{Project Manager} e il \textit{Verificatore}. La suddivione dei compiti è descritta nel documento \textit{"Norme di Progetto v1.0.0"}.
+	\subsection{Responsabilità}
+	Al fine di garantire un processo di verifica efficace ed efficiente vengono attribuite delle responsabilità all'interno del gruppo di progetto.\\
+	I ruoli che intervengono nel processo di verifica sono il \textit{Project Manager} e il \textit{Verificatore}. La suddivisione dei compiti è descritta nel documento \textit{"Norme di Progetto v1.0.0"}.
+	
 	\subsection{Risorse}
 	Per realizzare il prodotto sono necessarie le seguenti risorse:
 	\begin{itemize}
-		\item \textbf{Risorse umane:} vengono descritte dettagliatamente nel documento \textit{"Piano di Progetto v1.0.0"}.
+		\item \textbf{Risorse umane}: vengono descritte dettagliatamente nel documento \textit{"Piano di Progetto v1.0.0"}. E sono:
 		\begin{itemize}
 			\item Project Manager;
 			\item Amministratore;
@@ -292,68 +302,67 @@
 			\item Programmatore;
 			\item Verificatore.
 		\end{itemize}
-		\item \textbf{Risorse software:} sono necessari strumenti software per:
+		\item \textbf{Risorse software}: sono necessari strumenti software. In particolare per:
 		\begin{itemize}
-			\item scrivere la documentazione in formato \LaTeX\textsubscript{g};
-			\item creare diagrammi \textit{UML}\textsubscript{g};
+			\item scrivere la documentazione in formato \LaTeX;
+			\item creare diagrammi \textit{UML};
 			\item automatizzare le verifiche;
 			\item sviluppare nei linguaggi di programmazione scelti;
 			\item analizzare il codice scritto;
-			\item gestione dei test sul codice.
+			\item gestire i test che effettueremo sul codice.
 		\end{itemize}
-		\item \textbf{Risorse hardware:} sono necessari computer con caratteristiche descritte nel documento \textit{"Norme di Progetto v1.0.0"}. 
+		\item \textbf{Risorse hardware}: sono necessari computer aventi applicativi descritti nel documento \textit{"Norme di Progetto v1.0.0"}. 
 	\end{itemize}
+
 	\subsection{Tecniche di analisi}
 		\subsubsection{Analisi statica}
-		L'analisi statica è l'analisi eseguita senza una effettiva esecuzione dei programmi. Viene eseguita quindi sia al codice che ai documenti durante tutta la fase di sviluppo. 
-		
+		L'analisi statica è l'analisi eseguita senza una effettiva esecuzione dei programmi. Viene eseguita quindi sia sul codice che sui documenti durante tutta la fase di sviluppo.\\
 		Può essere applicata nei seguenti modi:
 		\begin{itemize}
-			\item \textbf{Walkthrough:} è una lettura del documento da verificare cercando errori senza un'idea precisa di cosa si sta cercando. È utile nelle prime fasi di sviluppo per stilare una lista degli errori più frequenti da condividere con il gruppo,
-			\item \textbf{Inspection:} è una ricerca mirata degli errori che sono stati evidenziati nella lista di controllo, che può essere espansa qualora se ne palesi la necessità.
+			\item \textbf{Walkthrough}: è una lettura del documento da verificare cercando errori senza un'idea precisa di cosa si sta cercando. È utile nelle prime fasi di sviluppo per stilare una lista degli errori più frequenti da condividere con il gruppo,
+			\item \textbf{Inspection}: è una ricerca mirata degli errori che sono stati evidenziati nella lista di controllo, che può essere espansa qualora se ne palesi la necessità.
 		\end{itemize}
+	
 		\subsubsection{Analisi dinamica}
 		L'analisi dinamica viene eseguita sulle componenti software, testando il comportamento dell'applicativo. I test, per essere attendibili, devono essere ripetibili nello stesso ambiente e con gli stessi input.
-		
 		I tipi di test che verranno eseguiti saranno:
 		\begin{itemize}
-			\item \textbf{Test di unità:} consiste nel controllo dei moduli che costituiscono l'applicativo;
-			\item \textbf{Test di integrazione:} consiste nella verifica che i moduli, una volta collegati tra loro, diano il risultato previsto. Verifica inoltre il corretto funzionamento di librerie\textsubscript{g} e framework\textsubscript{g} esterni;
-			\item \textbf{Test di sistema:} consiste nella validazione del prodotto software, una volta giunto ad uno stadio definitivo.
-			\item \textbf{Test di regressione:} consiste nell'eseguire a cascata tutti i test collegati ad una componente appena modificata;
-			\item \textbf{Test di accettazione:} consiste nel collaudo del software con il proponente prima del rilascio.
-			
+			\item \textbf{Test di unità}: consiste nel controllo dei moduli che costituiscono l'applicativo;
+			\item \textbf{Test di integrazione}: consiste nella verifica che i moduli, una volta collegati tra loro, diano il risultato previsto. Verifica inoltre il corretto funzionamento di librerie e framework esterni;
+			\item \textbf{Test di sistema}: consiste nella validazione del prodotto software, una volta giunto ad uno stadio definitivo;
+			\item \textbf{Test di regressione}: consiste nell'eseguire a cascata tutti i test collegati ad una componente appena modificata;
+			\item \textbf{Test di accettazione}: consiste nel collaudo del software con il proponente prima del rilascio.
 		\end{itemize}
+	
 	\subsection{Misure e metriche}
 	\label{MisureMetriche}
-	Qui di seguito vengono elencate le misure e le metriche che verranno adottate nel processo di verifica. Il processo di verifica deve essere verificabile e quantificato secondo metriche stabilite a priori.
-	
+	Qui di seguito vengono elencate le misure e le metriche che verranno adottate nel processo di verifica. Il processo di verifica deve essere verificabile e quantificato secondo metriche stabilite a priori.\\
 	Vi possono essere due tipologie di range nell'accettazione dei risultati di un processo di verifica:
 	\begin{itemize}
-		\item \textbf{Accettazione:} è il livello minimo che il prodotto deve raggiungere per superare il test;
-		\item \textbf{Ottimale:} è il livello in cui dovrebbe posizionarsi la misurazione. In caso questo valore non venga raggiunto sono necessarie verifiche aggiuntive.
+		\item \textbf{Accettazione}: è il livello minimo che il prodotto deve raggiungere per superare il test;
+		\item \textbf{Ottimale}: è il livello in cui dovrebbe posizionarsi la misurazione. In caso questo valore non venga raggiunto sono necessarie verifiche aggiuntive.
 	\end{itemize}
+
 		\subsubsection{Metriche per i processi}
 			\paragraph{Schedule Variance (SV)}
-			Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella baseline. È un indicatore di efficacia soprattutto nei confronti del Cliente. Se SV > 0 significa che il progetto sta producendo con maggior velocità a quanto pianificato, viceversa se negativo.
-			\\ \\
-			\textbf{Parametri utilizzati:}
+			Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella baseline. È un indicatore di efficacia soprattutto nei confronti del Cliente. Se SV > 0 significa che il progetto sta producendo con maggior velocità a quanto pianificato, viceversa se negativo.\\
+			\textbf{Parametri utilizzati}:
 			\begin{itemize}
-				\item \textbf{Range di accettazione:} $\geq$ -(preventivo fase*5\%);
-				\item \textbf{Range ottimale:} $\geq0$.
+				\item \textbf{Range di accettazione}: $\geq$ -(preventivo fase*5\%);
+				\item \textbf{Range ottimale}: $\geq0$.
 			\end{itemize}
+		
 			\paragraph{Budget Variance (BV)}
-			Indica se alla data corrente si è speso di più o di meno rispetto a quanto previsto a budget alla data corrente. È un indicatore che ha un valore unicamente contabile e finanziario. Se BV > 0 significa che il progetto sta spendendo il proprio budget con minor velocità di quanto pianificato, viceversa se negativo. 
-			\\ \\
-			\textbf{Parametri utilizzati:}
+			Indica se alla data corrente si è speso di più o di meno rispetto a quanto previsto a budget alla data corrente. È un indicatore che ha un valore unicamente contabile e finanziario. Se BV > 0 significa che il progetto sta spendendo il proprio budget con minor velocità di quanto pianificato, viceversa se negativo. \\
+			\textbf{Parametri utilizzati}:
 			\begin{itemize}
-				\item \textbf{Range di accettazione:}$\geq$-(preventivo fase*10\%);
-				\item \textbf{Range ottimale:}$\geq0$.
+				\item \textbf{Range di accettazione}:$\geq$-(preventivo fase*10\%);
+				\item \textbf{Range ottimale}:$\geq0$.
 			\end{itemize}
+		
 		\subsubsection{Metriche per i documenti}
 			\paragraph{Gulpease}
-			L'indice Gulpease è un indice, sviluppato per valutare la lingua italiana, che valuta la complessità e la leggibilità del testo. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. L'indice di Gulpease considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.
-			
+			L'indice Gulpease è un indice, sviluppato per valutare la lingua italiana, che valuta la complessità e la leggibilità del testo. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. L'indice di Gulpease considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.\\
 			L'indice è calcolato con la seguente formula:
 			\[89+\frac{300*(\textit{numero delle frasi})-10*(\textit{numero delle lettere)}}{(\textit{numero delle parole})}\]
 			
@@ -363,80 +372,78 @@
 				\item inferiore a 60 sono difficili da leggere per chi ha la licenza media;
 				\item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
 			\end{itemize}
-			Va notato che questo indice non considera che il testo sia comprensibile o meno, in effetti anche una frase con parole casuali potrebbe avere un ottimo indice Gulpease. I documenti perciò vanno valutati da un essere umano per rendere le frasi semplici ma comprensibili.
-			\\ \\
-			\textbf{Parametri utilizzati:}
+			Va notato che questo indice non considera che il testo sia comprensibile o meno, in effetti anche una frase con parole casuali potrebbe avere un ottimo indice Gulpease. I documenti perciò vanno valutati da un essere umano per rendere le frasi semplici ma comprensibili.\\
+			\textbf{Parametri utilizzati}:
 			\begin{itemize}
-				\item \textbf{Range di accettazione:} [40 - 100];
-				\item \textbf{Range ottimale:} [50 - 100].
+				\item \textbf{Range di accettazione}: [40 - 100];
+				\item \textbf{Range ottimale}: [50 - 100].
 			\end{itemize}
+		
 			\paragraph{Metriche per il software}
+			
 			\paragraph{Complessità ciclomatica}
-			La complessità ciclomatica è una metrica software utilizzata per misurare la complessità di un programma. Misura direttamente il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso.
-			
-			La complessità ciclomatica è calcolata utilizzando il grafo di controllo di flusso del programma: i nodi del grafo corrispondono a gruppi indivisibili di istruzioni, mentre gli archi connettono due nodi se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo gruppo.
-			
-			Alti valori di questo indice indicano che il codice è poco manutenibile e difficile da testare, mentre valori bassi potrebbero indicare una scarsa efficienza nei metodi. 
-			\\ \\
-			\textbf{Parametri utilizzati:}
+			La complessità ciclomatica è una metrica software utilizzata per misurare la complessità di un programma. Misura direttamente il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso.\\
+			La complessità ciclomatica è calcolata utilizzando il grafo di controllo di flusso del programma: i nodi del grafo corrispondono a gruppi indivisibili di istruzioni, mentre gli archi connettono due nodi se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo gruppo.\\
+			Alti valori di questo indice indicano che il codice è poco manutenibile e difficile da testare, mentre valori bassi potrebbero indicare una scarsa efficienza nei metodi.\\
+			\textbf{Parametri utilizzati}:
 			\begin{itemize}
-				\item \textbf{Range di accettazione:} [1 - 15];
-				\item \textbf{Range ottimale:} [1 - 10].
+				\item \textbf{Range di accettazione}: [1 - 15];
+				\item \textbf{Range ottimale}: [1 - 10].
 			\end{itemize}
-			\paragraph{Rapporto linee di commeneto su linee di codice}
-			Affinché il codice sia più facilmente comprensibile e manutenibile è necessario che sia adeguatamente commentato.
-			\\ \\
-			\textbf{Parametri utilizzati:}
+		
+			\paragraph{Rapporto linee di commento su linee di codice}
+			Affinché il codice sia più facilmente comprensibile e manutenibile è necessario che sia adeguatamente commentato.\\
+			\textbf{Parametri utilizzati}:
 			\begin{itemize}
-				\item \textbf{Range di accettazione:} [>0.2];
-				\item \textbf{Range ottimale:} [>0.3].
+				\item \textbf{Range di accettazione}: [>0.2];
+				\item \textbf{Range ottimale}: [>0.3].
 			\end{itemize}
+		
 			\paragraph{Numero di livelli di annidamento}
-			Indica il livello di annidamento delle strutture di controllo. Un numero troppo elevato può comportare difficoltà nella verifica e nella manutenibilità del codice.
-			\\ \\
-			\textbf{Parametri utilizzati:}
+			Indica il livello di annidamento delle strutture di controllo. Un numero troppo elevato può comportare difficoltà nella verifica e nella manutenibilità del codice.\\
+			\textbf{Parametri utilizzati}:
 			\begin{itemize}
-				\item \textbf{Range di accettazione:[0-6]}
-				\item \textbf{Range ottimale:[0-4]}
+				\item \textbf{Range di accettazione}: [0-6];
+				\item \textbf{Range ottimale}: [0-4].
 			\end{itemize}
+		
 			\paragraph{Numero di campi dati per classe}
-			Una classe con troppi campi dati potrebbe essere poco specializzata e quindi mal progettata. Una classe poco specializzata inoltre è anche poco manutenibile.
-			\\ \\
-			\textbf{Parametri utilizzati:}
+			Una classe con troppi campi dati potrebbe essere poco specializzata e quindi mal progettata. Una classe poco specializzata inoltre è anche poco manutenibile.\\
+			\textbf{Parametri utilizzati}:
 			\begin{itemize}
-				\item \textbf{Range di accettazione:[0-15]}
-				\item \textbf{Range ottimale:[1-8]}
+				\item \textbf{Range di accettazione}: [0-15];
+				\item \textbf{Range ottimale}: [1-8].
 			\end{itemize}
+		
 			\paragraph{Accoppiamento}
 			L'indice di accoppiamento è il risultato di due indici:
 			\begin{itemize}
-				\item \textbf{Accoppiamento afferente:} è il numero di classi esterne ad un package che dipendono da classi interne ad esso. Un valore troppo elevato indica un altro grado di dipendenza, che potrebbe portare a criticità nel caso di modifiche.
-				\item \textbf{Accoppiamento efferente:} è il numero di classi interne al package dipendenti da classi esterne. Un valore troppo alto è sintomo di scarsa progettazione.
+				\item \textbf{Accoppiamento afferente}: è il numero di classi esterne ad un package che dipendono da classi interne ad esso. Un valore troppo elevato indica un altro grado di dipendenza, che potrebbe portare a criticità nel caso di modifiche;
+				\item \textbf{Accoppiamento efferente}: è il numero di classi interne al package dipendenti da classi esterne. Un valore troppo alto è sintomo di scarsa progettazione.
 			\end{itemize}			
 			Il calcolo dell'indice di stabilità, ottenuto unendo Accoppiamento afferente e Accoppiamento efferente avviene secondo la seguente formula:
 			\[I=\frac{Ce}{Ca+Ce}\]
+			
 			\paragraph{Validazione W3C}
-			Una pagina web per essere accessibile ed usabile deve essere valida secondo le norme del W3C. L'applicativo web deve superare tutti i test del validatore automatico W3C per quanto riguarda gli errori gravi, deve inoltre evitare quanti più warning possibili.
-			\\ \\
+			Una pagina web per essere accessibile ed usabile deve essere valida secondo le norme del W3C. L'applicativo web deve superare tutti i test del validatore automatico W3C per quanto riguarda gli errori gravi, deve inoltre evitare quanti più warning possibili.\\
 			\textbf{Parametri utilizzati:}
 			\begin{itemize}
-				\item \textbf{Range di accettazione:[0-5]}
-				\item \textbf{Range ottimale:[0-0]}
+				\item \textbf{Range di accettazione}: [0-5];
+				\item \textbf{Range ottimale}: [0-0].
 			\end{itemize}
 			\paragraph{Euristica di Nielsen}
-			Le euristiche di Nielsen sono 10 euristiche studiate per controllare in modo metodico l'usabilità di un sito web, derivano dall'applicazione di tecniche di analisi fattoriale su 249 problemi di usabilità. Sono semplici da applicare e mostrano benefici nelle fasi iniziali di un progetto, ma sono informali e non sono automatizzabili in quanto richiedono un giudizio umano. Essendo parametri non completamente oggettivi, può capitare che alcune pagine siano usabili anche non rispettando tutte le euristiche, si è quindi posto un limite minimo di 6 euristiche rispettate.
-			\\ \\
+			Le euristiche di Nielsen sono 10 euristiche studiate per controllare in modo metodico l'usabilità di un sito web, derivano dall'applicazione di tecniche di analisi fattoriale su 249 problemi di usabilità. Sono semplici da applicare e mostrano benefici nelle fasi iniziali di un progetto, ma sono informali e non sono automatizzabili in quanto richiedono un giudizio umano. Essendo parametri non completamente oggettivi, può capitare che alcune pagine siano usabili anche non rispettando tutte le euristiche, si è quindi posto un limite minimo di 6 euristiche rispettate.\\
 			\textbf{Parametri utilizzati:}
 			\begin{itemize}
-				\item \textbf{Range di accettazione: 6/10}
-				\item \textbf{Range ottimale: 10/10}
+				\item \textbf{Range di accettazione}: 6/10;
+				\item \textbf{Range ottimale}: 10/10.
 			\end{itemize}
 			
 	\newpage
 	\rhead{Gestione amministrativa della revisione}
 	\section{Gestione amministrativa della revisione}
 		\subsection{Comunicazione e risoluzione delle anomalie}
-		Quando un verificatore trovi un'anomalia dovrà aprire un nuovo ticket secondo le modalità ripostate nel documento \textit{"Norme di Progetto v1.0.0"}. Un'anomalia corrisponde a:
+		Quando un verificatore trova un'anomalia dovrà aprire un nuovo ticket e avvisare il responsabile del documento. Un'anomalia corrisponde a:
 		\begin{itemize}
 			\item Un errore ortografico;
 			\item Una violazione delle norme tipografiche definite nel documento \textit{"Norme di Progetto v1.0.0"}; 
@@ -448,8 +455,7 @@
 	\newpage
 	\rhead{Resoconto delle attività di verifica}
 	\section{Resoconto delle attività di verifica}
-	Nel periodo antecedente la consegna di ogni revisione i documenti ed i processi vengono verificati. I documenti vengono verificati tramite la procedura del walkthrough; in seguito sono state avviate le procedure per la notifica descritta nel documento \textit{"Norme di Progetto v1.0.0"}. 
-	
+	Nel periodo antecedente la consegna di ogni revisione i documenti ed i processi vengono verificati e validati. I documenti vengono verificati tramite la procedura del walkthrough; in seguito sono state avviate le procedure per la notifica descritta nel documento \textit{"Norme di Progetto v1.0.0"}.\\
 	Una volta individuati gli errori, vengono trattati nel seguente modo:
 	\begin{itemize}
 		\item Correzione degli errori individuati;
