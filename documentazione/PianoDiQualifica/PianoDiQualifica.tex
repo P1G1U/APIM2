@@ -1,31 +1,122 @@
 \documentclass[12pt,a4paper,titlepage]{article}
 \usepackage[italian]{babel}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
 \usepackage{titlesec}
-\usepackage{emptypage}   
-\usepackage[hidelinks]{hyperref} 
+\usepackage{hyperref}
 \usepackage[a4paper,top=2cm,bottom=2cm,left=1cm,right=1cm]{geometry}
-\usepackage{indentfirst}              
+\usepackage{soulutf8,color}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{eurosym} %per il simbolo dell' \euro
+\usepackage{emptypage}                     
+% pagine vuote senza testatina e piede di pagina
+%\usepackage{hyperref}                     
+% collegamenti ipertestuali
 \usepackage{fancyhdr}
-\usepackage{soulutf8, color}
+% pacchetto per intestazione e pie pagina
 \pagestyle{fancy}
-\setcounter{secnumdepth}{4}
-\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-\lhead{SWEg}
+% \\ indica interruzione di riga
+% compilate 2 volte per documenti con indice
+% {\em qui testo in corsivo}
+% {\bfseries qui testo in grossetto}
+%LISTE NUMERATE
+%\begin{enumerate}
+%\item primo
+%\item secondo
+%\item terzo
+%\end{enumerate}
+%LISTE PUNTATE
+%\begin{itemize}
+%\item primo
+%\item secondo
+%\item \dots
+%\end{itemize}
+%TABELLA
+%\begin{tabular}{|c|c|c|}
+%indica una tabella con 3 colonne e pos. testo centrale. La barra verticale ( | ) indica che vi è una linea divisoria verticale tra le celle.
+%\hline	linea separatrice orizzontale
+%testo1& testo2& testo3\\
+% & segna la fine del testo nella cella , \\ indica il fine della riga 
+\newcommand{\minitab}[2][1]{\begin{tabular}#1 #2\end{tabular}}
+%GRAFICI
+%\begin{figure}
+%\includegraphics{filegrafico}
+%comando per includere le immagini (controllare i formati)
+%\caption{didascalia}
+%\label{nome}
+%\end{figure}
+%----------------------------------------------------------- INIZIO TEMPLATE TITOLO
+\usepackage{xcolor} % Importa i colori per la prima pagina
+\usepackage{fix-cm} % Permette l'incremento del font oltre misura
+\newcommand{\HRule}[1]{\hfill \rule{0.2\linewidth}{#1}} % Horizontal rule at the bottom of the page, adjust width here
+\definecolor{grey}{rgb}{0.9,0.9,0.9} % Colore del box del titolo
+\begin{document}
+	
+	\thispagestyle{empty} % Toglie il numero della pagina nella prima pagina
+	
+	%----------------------------------------------------------------------------------------
+	%	TITLE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\colorbox{grey}{
+		\parbox[t]{1.0\linewidth}{
+			\centering \fontsize{50pt}{80pt}\selectfont % Il primo è la grandezza del font, il secondo lo spazio lasciato
+			\vspace*{0.7cm} % Spazio dall'inizio del box al titolo
+			
+			\raggedleft
+			\includegraphics[width=0.7\linewidth]{../../LogoSWEgGroupSFONDOVUOTO}
+			
+			\hfill Piano di Qualifica \\
+			
+			\vspace*{0.7cm} % Spazio dalla fine del testo alla fine del box
+		}
+	}
+	
+	%----------------------------------------------------------------------------------------
+	
+	\vfill % Spazio dalla fine del box alle altre informazioni
+	
+	%----------------------------------------------------------------------------------------
+	%	Informazioni sul documento
+	%----------------------------------------------------------------------------------------
+	
+	{\centering \large 
+		\hfill \textbf{Versione} 1.0.0 \\
+		\hfill \textbf{Redazione} Crivellaro Gianluca \\
+		\hfill Piergiorgio Danieli \\
+		\hfill \textbf{Verifica} Pietro Lonardi  \\
+		\hfill \textbf{Responsabile} Sebastiano Marchesini \\
+		\hfill \textbf{Uso} Esterno \\
+		\hfill \textbf{Destinato} ItalianaSoftware S.r.l \\
+		\hfill Prof. Vardanega Tullio \\
+		\hfill Prof. Cardin Riccardo \\ 
+		
+		\HRule{1pt}
+		
+		\textbf{Sommario} \\
+		Questo documento ha l'obiettivo di misurare l'efficienza e pianificare i processi del progetto.
+		
+	} % Linea orizzontale di estetica
+	
+	
+	%----------------------------------------------------------------------------------------
+	
+	\clearpage % Parta bianca finale della pagina
+	
+	%----------------------------------------------------------- FINE TEMPLATE TITOLO
+\lhead{\includegraphics[width=0.2\linewidth]{../../LogoSWEgGroup}}
 \chead{}
-\rhead{APIM: An API Market Platform}
-\lfoot{\textbf{Piano di Qualifica v1.0.0}}
+\lfoot{Piano di Qualifica}
 \cfoot{}
 \rfoot{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
-\begin{document} 
-	\title{Piano di qualifica}
-	\author{SWEg Group}
-	\date{04/01/2017}
-	\maketitle
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+	
+	\rhead{Registro Modifiche}
+	\section{Registro Modifiche}
+	\small %rippicciolisce il testo
 	{\renewcommand\arraystretch{1.2}
 		\begin{table}
 			\centering
@@ -33,11 +124,13 @@
 				\hline
 				{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
 				\hline
-				Studio dei riferimenti & Crivellaro Gianluca & 2/01/2017 & 0.0.1 \\
-				\hline
-				Stesura introduzione & Piergiorgio Danieli & 04/01/2017 & 0.1.0 \\
+				Correzioni Verifica & Lonardi Pietro & 10/01/2017 & 0.3.0 \\
 				\hline
 				Stesura del documento & Crivellaro Gianluca & 04/01/2017 & 0.2.0 \\
+				\hline
+				Stesura introduzione & Danieli Piergiorgio & 04/01/2017 & 0.1.0 \\
+				\hline
+				Studio dei riferimenti & Crivellaro Gianluca & 02/01/2017 & 0.0.1 \\
 				\hline
 			\end{tabular}
 		\end{table}
@@ -47,6 +140,7 @@
 	\tableofcontents
 	\thispagestyle{empty}
 	\newpage
+	\rhead{Introduzione}
 	\section{Introduzione}
 	\subsection{Scopo del documento}
 	Lo scopo del \textit{Piano di Qualifica} è di descrivere le strategie di verifica e validazione adottate dal gruppo SWEg al fine di perseguire obiettivi qualitativi per il progetto APIMarket.
@@ -76,6 +170,8 @@
 			\textcolor{blue}{\url{http://www.far.unito.it/usabilita/Cap5.htm}}
 	\end{itemize} 
 	
+	\newpage
+	\rhead{Definizione obiettivi di qualità}
 	\section{Definizione obiettivi di qualità}
 	Il gruppo SWEg si impegna a rispettare il modello di standard definito in ISO\textsubscript{g}/IEC\textsubscript{g}0126, il quale ha le seguenti qualità:
 		\subsection{Funzionalità}
@@ -127,6 +223,8 @@
 			\item \textbf{Incapsulamento:} applicare le tecniche di incapsulamento per aumentare la manutenibilità e la possibilità di riuso del codice. L'interazione sarà possibile tramite interfacce;
 			\item \textbf{Coesione:} riguarda le funzionalità che collaborano tra di loro per ottenere uno stesso obiettivo. Devono risiedere nello stesso componente, e come scopo hanno quello di ridurre l'indice di dipendenza, favorire la semplicità e la manutenibilità.
 		\end{itemize}
+	\newpage
+	\rhead{Visione generale delle strategie di verifica}
 	\section{Visione generale delle strategie di verifica}
 	\subsection{Procedure di controllo di qualità di processo}
 	La qualità dei processi verrà garantita dall'applicazione del principio PDCA\textsubscript{g}. Grazie a questo principio sarà possibile garantire non solo il controllo e la correttezza, ma anche il miglioramento costante della qualità di tutti i processi. Come conseguenza diretta si otterrà il miglioramento del prodotto.
@@ -145,8 +243,8 @@
 	Il controllo di qualità dei prodotti verrà garantito dai seguenti processi:
 	\begin{itemize}
 		\item \textbf{Software Quality Assurance} (SQA\textsubscript{g}): assicura che i processi siano appropriati per il progetto, che siano correttamente implementati. Prevede l'attuazione di tecniche di analisi statica e dinamica, descritte nel documento \textit{"Norme di Progetto v1.0.0"};
-		\item \textbf{verifica:} è il processo che controlla la coerenza e la correttezza dei prodotti dei processi. La verifica verrà eseguita costantemente durante tutta la durata del progetto.
-		\item \textbf{validazione:} ovvero la conferma che il sistema soddisfi i requisiti e sia conforme alle attese.
+		\item \textbf{Verifica:} è il processo che controlla la coerenza e la correttezza dei prodotti dei processi. La verifica verrà eseguita costantemente durante tutta la durata del progetto.
+		\item \textbf{Validazione:} ovvero la conferma che il sistema soddisfi i requisiti e sia conforme alle attese.
 	\end{itemize}
 
 	\subsection{Organizzazione}
@@ -333,6 +431,9 @@
 				\item \textbf{Range di accettazione: 6/10}
 				\item \textbf{Range ottimale: 10/10}
 			\end{itemize}
+			
+	\newpage
+	\rhead{Gestione amministrativa della revisione}
 	\section{Gestione amministrativa della revisione}
 		\subsection{Comunicazione e risoluzione delle anomalie}
 		Quando un verificatore trovi un'anomalia dovrà aprire un nuovo ticket secondo le modalità ripostate nel documento \textit{"Norme di Progetto v1.0.0"}. Un'anomalia corrisponde a:
@@ -343,6 +444,9 @@
 			\item Un'incongruenza del codice con il design prodotto;
 			\item L'uscita dal range di accettazione degli indici di misurazione.
 		\end{itemize}
+	
+	\newpage
+	\rhead{Resoconto delle attività di verifica}
 	\section{Resoconto delle attività di verifica}
 	Nel periodo antecedente la consegna di ogni revisione i documenti ed i processi vengono verificati. I documenti vengono verificati tramite la procedura del walkthrough; in seguito sono state avviate le procedure per la notifica descritta nel documento \textit{"Norme di Progetto v1.0.0"}. 
 	
