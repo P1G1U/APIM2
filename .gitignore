@@ -20,3 +20,11 @@ documentazione/Glossario/Glossario.acn
 documentazione/NormeDiProgetto/NormeDiProgetto.toc
 
 documentazione/PianoDiProgetto/PianoDiProgetto.toc
+
+*.aux
+
+*.log
+
+*.out
+
+*.gz
