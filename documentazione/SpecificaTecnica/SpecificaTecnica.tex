@@ -1,0 +1,224 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+%va sempre messo article per "program documentation"
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=1cm,right=1cm]{geometry}
+\usepackage{soulutf8,color}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{eurosym} %per il simbolo dell' \euro
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{url}
+
+\usepackage{emptypage} 
+% pagine vuote senza testatina e piede di pagina
+
+%\usepackage{hyperref} 
+% collegamenti ipertestuali
+
+\usepackage{fancyhdr}
+% pacchetto per intestazione e pie pagina
+
+\pagestyle{fancy}
+\usepackage{lastpage}
+
+
+% PARTE DESTINATA ALLE NESTED BOXES:
+\usepackage[usestackEOL]{stackengine}[2013-11-09]
+\def\stackalignment{l}
+\setstackgap{L}{1.4\baselineskip}
+\fboxsep=4pt\relax
+
+
+%rinomino table of contents
+\renewcommand{\contentsname}{Contenuti:}
+\renewcommand{\listfigurename}{Lista delle figure}
+\renewcommand{\listtablename}{Lista delle tabelle}
+
+\newcommand{\docs}{./sezioni/}
+%posizione immagini per il documento corrente 
+\newcommand{\docsImg}{./sezioni/img/}
+
+
+
+% \\ indica interruzione di riga
+
+% compilate 2 volte per documenti con indice
+
+% {\em qui testo in corsivo}
+% {\bfseries qui testo in grossetto}
+
+%LISTE NUMERATE
+%\begin{enumerate}
+%\item primo
+%\item secondo
+%\item terzo
+%\end{enumerate}
+
+%LISTE PUNTATE
+%\begin{itemize}
+%\item primo
+%\item secondo
+%\item \dots
+%\end{itemize}
+
+%TABELLA
+%\begin{tabular}{|c|c|c|}
+%indica una tabella con 3 colonne e pos. testo centrale. La barra verticale ( | ) indica che vi è una linea divisoria verticale tra le celle.
+%\hline	linea separatrice orizzontale
+%testo1& testo2& testo3\\
+% & segna la fine del testo nella cella, \\ indica il fine della riga 
+
+\newcommand{\minitab}[2][1]{\begin{tabular}#1 #2\end{tabular}}
+
+%GRAFICI
+%\begin{figure}
+%\includegraphics{filegrafico}
+%comando per includere le immagini (controllare i formati)
+%\caption{didascalia}
+%\label{nome}
+%\end{figure}
+
+%----------------------------------------------------------- INIZIO TEMPLATE TITOLO
+
+\usepackage{xcolor} % Importa i colori per la prima pagina
+\usepackage{fix-cm} % Permette l'incremento del font oltre misura
+
+\newcommand{\HRule}[1]{\hfill \rule{0.2\linewidth}{#1}} % Horizontal rule at the bottom of the page, adjust width here
+
+\definecolor{grey}{rgb}{0.9,0.9,0.9} % Colore del box del titolo
+
+\begin{document}
+	
+	\thispagestyle{empty} % Toglie il numero della pagina nella prima pagina
+	
+	%----------------------------------------------------------------------------------------
+	%	TITLE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\colorbox{grey}{
+		\parbox[t]{0.91\linewidth}{
+			\centering \fontsize{50pt}{80pt}\selectfont % Il primo è la grandezza del font, il secondo lo spazio lasciato
+			\vspace*{0.7cm} % Spazio dall'inizio del box al titolo
+			
+			\raggedleft
+			\includegraphics[width=\linewidth]{../../LogoSWEgGroupSFONDOVUOTO}
+			
+			\hfill Specifica Tecnica \\
+			
+			\vspace*{0.7cm} % Spazio dalla fine del testo alla fine del box
+		}
+	}
+	
+	%----------------------------------------------------------------------------------------
+	
+	\vfill % Spazio dalla fine del box alle altre informazioni
+	
+	%----------------------------------------------------------------------------------------
+	%	Informazioni sul documento
+	%----------------------------------------------------------------------------------------
+	
+	{\centering \large 
+		\hfill \textbf{Versione} 1.0.0 \\		
+		\hfill \textbf{Data di Rilascio} XX/XX/2017 \\ 
+		\hfill \textbf{Redazione} 	Gianluca Crivellaro \\
+		\hfill						Piergiorgio Danieli \\
+		\hfill						Sebastiano Marchesini \\
+		\hfill \textbf{Validazione} Pietro Lonardi \\
+		\hfill \textbf{Responsabile}Alberto Gelmi \\
+		\hfill \textbf{Uso} 		Esterno \\
+		\hfill \textbf{Destinato} 	ItalianaSoftware S.r.l \\
+		\hfill						Prof. Vardanega Tullio \\ 
+		\hfill						Prof. Cardin Riccardo \\
+		
+		\HRule{1pt}
+		
+		\textbf{Sommario} \\
+		Questo documento descrive la specifica tecnica e l'architettura del prodotto sviluppato.
+		
+	} % Linea orizzontale di estetica
+	
+	
+	%----------------------------------------------------------------------------------------
+	
+	\clearpage % Parta bianca finale della pagina
+	
+	%----------------------------------------------------------- FINE TEMPLATE TITOLO
+	
+	\lhead{\includegraphics[width=0.2\linewidth]{../../LogoSWEgGroup}}
+	\chead{}
+	\lfoot{Specifica Tecnica}
+	\cfoot{}
+	\rfoot{\thepage\ di \pageref{LastPage}} %compilare due volte per avere il numero di pagine totali
+	\renewcommand{\headrulewidth}{0.2pt}
+	\renewcommand{\footrulewidth}{0.2pt}
+	
+	\rhead{Registro Modifiche}
+	\section{Registro Modifiche}
+	\small %rippicciolisce il testo
+	
+	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
+		\begin{tabular}{|l|c|c|c|}
+			\hline
+			{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
+			\hline
+			0.0.1 & Impostazione documento & Sebastiano Marchesini & 14/02/2017 \\
+			\hline
+		\end{tabular}
+	}
+	\normalsize
+	
+	\newpage
+	
+	\thispagestyle{empty}
+	\tableofcontents
+	%crea indice automaticamente
+	\listoftables
+	\listoffigures
+
+	\newpage
+
+	\rhead{Introduzione}
+	\input{\docs Introduzione.tex}
+	\newpage
+	\rhead{Tecnologie Utilizzate}
+	\input{\docs TecnologieUtilizzate.tex}
+	\newpage
+	\rhead{Descrizione Architettura}
+	\input{\docs DescrizioneArchitettura.tex}
+	\newpage
+	\rhead{Architettura Front End}
+	\input{\docs ArchitetturaFrontEnd.tex}
+	\newpage  
+	\rhead{Architettura Back End} 
+	\input{\docs ArchitetturaBackEnd.tex}
+	\newpage
+	\rhead{Architettura Data Base}
+	\input{\docs ArchitetturaDataBase.tex}
+	\newpage
+	\rhead{Design Pattern}
+	\input{\docs DesignPattern.tex}
+	\newpage
+	\rhead{Diagramma Attività}
+	\input{\docs DiagrammaAttivita.tex}
+	\newpage
+	\rhead{Tracciamento}
+	\input{\docs Tracciamento.tex}
+	\newpage
+	%Appendice
+	\rhead{APPENDICE - Descrizione Design Pattern}
+	\input{\docs DescrizioneDesignPattern.tex}
+	\newpage
+	\rhead{APPENDICE - MockUp}
+	\input{\docs MockUp.tex}
+	%\newpage
+	%\appendix
+	
+	%\bibliography{../bibliografia}
+
+\end{document}
