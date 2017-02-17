@@ -1,67 +1,55 @@
-\section{Titolo}{
-	Testo:
-	\begin{itemize}\itemsep1pt
-		\item lista;
-		\item lista.
-	\end{itemize} 
-	
-	\subsection{SottoTitolo}{
-		Testo.
-		
-		\begin{figure}[ht]
-			%serie figure
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura1.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 1}
-				\label{Titolo Figura 1}
-			\end{subfigure}
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura2.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 2}
-				\label{Titolo Figura 2}
-			\end{subfigure}
-			\\
-			\\
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura3.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 3}
-				\label{Titolo Figura 3}
-			\end{subfigure}
-		\end{figure}
+\section{Descrizione Design Pattern}{
+	\subsection{Design Pattern Architetturali}{
+			\subsubsection{Pattern Architetturale a Microservizi}{
+				\begin{figure}[ht]
+					\centering
+					\includegraphics{\docsImg ArchitetturaMicroservizi.png}
+					\caption{Illustrazione Architettura a Microservizi}
+					\label{Illustrazione Architettura a Microservizi}
+				\end{figure}
+				Il pattern architetturale a microservizi è un pattern innovativo che va a sostituire la vecchia filosofia dei sistemi monolitici dedicato e alle architettura orientate ai servizi.
+				\begin{itemize}\itemsep1pt
+					\item \textbf{Descrizione Generale} : il primo concetto che caratterizza il pattern è l'idea di unità separate distribuite. Questo aumenta la scalabilità e un alto grado di disaccoppiamento all'interno della nostra applicazione. Forse il fattore più importante è pensare al microservizio non come componente dell'architettura ma come servizio in se, che può variare la propria granularità da un singolo modulo a gran parte dell'applicazione.\\
+					Un altro concetto chiave all'interno del modello microservices architettura è che si tratta di un'architettura distribuita, il che significa che tutti i componenti all'interno dell'architettura sono completamente disaccoppiati da un altro e sono accessibili attraverso una sorta di protocollo di accesso remoto.\\
+					L'architettura stessa si è evoluta da problemi riscontrati in altri modelli e non è in attesa che un problema si verifichi. In particolare si è evoluta da due principali pattern architetturali: le applicazioni monolitiche sviluppate utilizzando il modello di architettura a strati e applicazioni distribuite sviluppate attraverso l'architettura modello orientato ai servizi.\\
+					In generale, nell'architettura a microservizi, ogni singolo servizio è autonomo rispetto agli altri, di conseguenza può raggiungere l’ambiente di produzione in modo indipendente dagli altri, testato e distribuito, senza che tale attività abbia effetti drammatici sul resto del sistema. Disporre di un processo di deployment snello e veloce consente di poter aggiungere o modificare funzionalità di un sistema software in modo efficace ed efficiente, rispondendo alle necessità di mercato e utenti sempre più esigenti.\\
+					L'altro percorso evolutivo che ha portato al modello architetturale a microservizi proviene da problemi rilevati con le applicazioni di attuazione dell'architettura modello orientato ai servizi (\textit{SOA}\pedice{G}). Mentre il modello SOA è molto potente e offre livelli senza precedenti di astrazione, connettività eterogenea, orchestrazione dei servizi, e la promessa di allineare gli obiettivi di business con funzionalità IT, è comunque complesso, costoso, onnipresente, difficile da capire e mettere in atto, e di solito è eccessivo per la maggior parte delle applicazioni.\\
+					\item \textbf{Considerazioni} : Robustezza, miglior scalabilità, erogazione continua. Con piccole componenti miglioriamo la distribuzione e questo risolve i problemi delle applicazioni monolitiche e SOA. Abbiamo una disponibilità di servizio continua.\\
+					Sorgono i problemi della distribuzione e della disponibilità dei sistemi remoti. Non si può utilizzare nel caso abbiamo bisogno di un orchestratore, a meno che non rimanga all'interno di un microservizio, e nemmeno nel caso abbiamo bisogno di transazionalità.
+					\item \textbf{Analisi del Pattern} :
+					\small %rippicciolisce il testo
+					{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
+						\begin{tabular}{|l|c|l|}
+							\hline
+							{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
+							\hline
+							\textit{Agilità} & + & Cambiamenti isolati , veloci e di facile sviluppo \\
+							\hline
+							\textbf{Implementazione} & + & Di natura singolare e univoca quindi facili da implementare \\
+							\hline
+							\textbf{Testabilità} & + & Visto l'isolamento delle funzioni business il test può essere più specifico. Piccola possibilità di regressione \\
+							\hline
+							\textbf{Performance} & - & Essendo per la maggior parte nella rete è difficile mantenere delle prestazioni massime e costanti \\
+							\hline
+							\textbf{Scalabilità} & + & Ogni componente può essere separato e quindi vi è la massima scalabilità \\
+							\hline
+							\textbf{Sviluppo} & + & Piccoli e isolati componenti facilitano lo sviluppo \\
+							\hline
+						\end{tabular}
+					}
+				\end{itemize}
+		}
+		\subsubsection{Model View Controller (penso boh)}{
+				
+		}
 	}
-	\subsection{SottoTitolo}{
-		Testo.
-	\\
-		Testo.
-		\begin{figure}[ht]
-			\centering
-			\includegraphics{\docsImg figura.png}
-			\caption{Testo figura}
-			\label{Testo figura}
-		\end{figure}
+	\subsection{Design Pattern Creazionali}{
+				
+	}
+	\subsection{Design Pattern strutturali}{
 		
-		Testo.
-		\\
-		Testo:
-		\begin{itemize}\itemsep1pt
-			\item lista; con:
-			\begin{itemize}\itemsep1pt
-				\item sottolista
-				\item \textbf{testogrossetto}: da da da;
-				\item \textit{Testo corsivo}.\\ 
-				Ancora testo.
-				\item testo.
-			\end{itemize}
-			\item Continua la lista di prima.
-		\end{itemize}
-		}
-	\subsection{Sottotitolo}{
-		Testo.
-		\subsubsection{SottoSottoTitolo}{
-			Testo \url{http://www.url.com/}.
-		}
+	}
+	\subsection{Design Pattern comportamentali}{
+		
 	}
 }
