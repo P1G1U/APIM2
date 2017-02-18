@@ -1,69 +1,53 @@
-\section{Titolo}{
-	
-	%PER LE TABELLE DI TRACCIAMENTO VEDI ANALISI REQUISITI E PIANO DI PROGETTO CHE HANNO MOLTE TABELLE
-	Testo:
-	\begin{itemize}\itemsep1pt
-		\item lista;
-		\item lista.
-	\end{itemize} 
-	
-	\subsection{SottoTitolo}{
-		Testo.
-		
-		\begin{figure}[ht]
-			%serie figure
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura1.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 1}
-				\label{Titolo Figura 1}
-			\end{subfigure}
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura2.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 2}
-				\label{Titolo Figura 2}
-			\end{subfigure}
-			\\
-			\\
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura3.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 3}
-				\label{Titolo Figura 3}
-			\end{subfigure}
-		\end{figure}
-	}
-	\subsection{SottoTitolo}{
-		Testo.
-		\\
-		Testo.
-		\begin{figure}[ht]
-			\centering
-			\includegraphics{\docsImg figura.png}
-			\caption{Testo figura}
-			\label{Testo figura}
-		\end{figure}
-		
-		Testo.
-		\\
-		Testo:
-		\begin{itemize}\itemsep1pt
-			\item lista; con:
+\section{Tecnologie Utilizzate}{
+	In questa sezione illustreremo le tecnologie e i linguaggi utilizzati nel progetto, indicando pro e contro delle scelte utilizzate.
+	\subsection{Linguaggi}{
+		\subsubsection{HTML5}{
+			HTML è la particella elementare di Internet: il linguaggio di markup che dà vita ai siti Web statici. HTML5 è la versione 5 di questo linguaggio. HTML5 apre le porte a una nuova serie di funzioni per contenuti interattivi e animati che funzionano universalmente su qualsiasi piattaforma o tipo di dispositivo.
+			\textbf{Vantaggi :}
 			\begin{itemize}\itemsep1pt
-				\item sottolista
-				\item \textbf{testogrossetto}: da da da;
-				\item \textit{Testo corsivo}.\\ 
-				Ancora testo.
-				\item testo.
+				\item Funziona su la maggior parte dei computer e sui dispositivi mobili;
+				\item Video e animazioni supportati senza plug-in\pedice{G} esterni;
+				\item Pensiero indirizzato sempre più al web semantico e HTML5 ne è portavoce;
+				\item Maggior flessibilità e potenzialità rispetto alle precedenti versioni.
 			\end{itemize}
-			\item Continua la lista di prima.
-		\end{itemize}
-	}
-	\subsection{Sottotitolo}{
-		Testo.
-		\subsubsection{SottoSottoTitolo}{
-			Testo \url{http://www.url.com/}.
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Visualizzazione non uniforme sulle versioni precedenti dei browser o su Internet Explorer\pedice{G};
+				\item Strumenti non completamente sviluppati. C'è bisogno di un linguaggio di supporto per le pagine dinamiche.
+			\end{itemize}
+		}
+		\subsubsection{CSS3}{
+			Il CSS è un linguaggio con il quale formattare le pagine Web. Un file CSS viene normalemente chiamato un foglio di stile, e va associato ad una o più pagine Web. I fogli di stile nel progetto saranno rigorosamente esterni. CSS3 aggiorna le funzionalità e le componenti stilistiche.
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Separata la struttura del sito dalla presentazione;
+				\item Più facile progettazione di accessibilità;
+				\item Template unico per varie pagine senza ripetizione;
+				\item Facile la modifica in caso di cambiamento;
+				\item Grafica accattivante per gli utenti.
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item I browser più datati hanno una non corretta interpretazione dei CSS;
+				\item Maggiore attenzione sulla psicologia di marketing grafico posta verso l'utente.
+			\end{itemize}
+		}
+		\subsubsection{Javascript}{
+			La caratteristica principale di Javascript, è quella di essere un linguaggio di scripting. Ci permetterà di eseguire particolari operazioni grazie alla flessibilità di questo linguaggio orientato agli oggetti ed eventi. Tali funzioni di script possono essere opportunamente inserite in file HTML, in pagine JSP o in appositi file separati con estensione .js poi richiamati nella logica di business.
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Possibilità di rendere dinamiche le pagine web e di estendere funzionalità;
+				\item Il linguaggio di scripting è più sicuro ed affidabile perché in chiaro e da interpretare, quindi può essere filtrato;
+				\item Gli script hanno limitate capacità, per ragioni di sicurezza, per cui non è possibile fare tutto con Javascript, ma occorre abbinarlo ad altri linguaggi evoluti, ( come Jolie );
+				\item Il codice Javascript viene eseguito sul client per cui il server non è sollecitato più del dovuto e la velocità dell'applicazione complessiva è migliore;
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Il è visibile e può essere letto da chiunque;
+				\item La mancanza di tipizzazione del linguaggio potrebbe indurre a commettere errori nel codice e rendere più difficile la progettazione dei test.
+			\end{itemize}
+		}
+		\subsubsection{Jolie}{
 		}
 	}
 }
