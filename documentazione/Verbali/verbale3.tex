@@ -1,0 +1,73 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+%va sempre messo article per "program documentation"
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
+\usepackage{soulutf8,color}
+\usepackage{graphicx}
+\usepackage{emptypage}                     
+% pagine vuote senza testatina e piede di pagina
+%\usepackage{hyperref}                     
+% collegamenti ipertestuali
+\usepackage{fancyhdr}
+% pacchetto per intestazione e pie pagina
+\pagestyle{fancy}
+\lhead{\includegraphics[width=0.2\linewidth]{../../LogoSWEgGroup}}
+\chead{}
+\lfoot{Verbale}
+\rhead{16/02/2017}
+\cfoot{}
+\rfoot{Piergiorgio Danieli}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+\begin{document}
+\section{Verbale n 3}
+\subsection{Data e ora}
+\begin{center}
+\textbf{16/02/2017 14:00}
+\subsection{Luogo}
+\textbf{Aula in Residenza Studenti via Tiepolo 54}
+\end{center}
+\subsection{Partecipanti Interni}
+\begin{itemize}
+	\item Team SWEg Group
+\end{itemize}
+\subsection{Partecipanti Esterni}
+\begin{itemize}
+	\item NetBreak (Team Studenti)
+	\item Dott. Claudio Guidi
+\end{itemize}
+\subsection{Argomenti Trattati}
+In data 16/02/2017 si è svolto un incontro tra i due gruppi che hanno scelto di svolgere il capitolato C1 ed il proponente. L'incontro si è svolto in una aula della residenza studenti di via Tiepolo, vista l'impossibilità di prenotare un'aula in Torre Archimede.
+Si è svolto tramite skype. Inizialmente i due gruppi si sono confrontati, in assenza del proponente, su alcune idee ed alcuni dubbi. In seguito il dott. Guidi ha risposto a tali quesiti che saranno elencati di seguito. La chiamata skype con il dott. Guidi è iniziata alle 14.30 circa ed è terminata alle 16.00 circa. Al termine i due gruppi si sono nuovamente confrontati per cercare di avere le idee più chiare. Ne è emerso che abbiamo stabilito di utilizzare di comune accordo un databse realzionale, cambiando quindi quella che era la nostra idea  iniziale, perché dopo un'attenta analisi questo modello ci è sembrato più funzionale al nostro progetto. Le altre decisioni che sono state prese sono:
+\begin{itemize}
+	\item Gateway centralizzato;
+	\item Le policy di vendita delle API saranno a tempo (con limite di host), a consumo di traffico ed a chiamte;
+	\item Si assume che nel browser javascript sia sempre attivo;
+	\item Nel caso di microservizi usati per creare altri microservizi sarà un problema dello sviluppatore che li mette insieme preoccuparsi di acquistare i microservizi che gli servono con una policy adeguata;
+	\item Il cliente finale (chi acquista i microservizi) può utilizzare un giudizio (ad esempio delle stelle) per valutare le API;
+	\item Tutto l'applicativo, ove possibile, sarà sviluppato in Jolie;
+	\item Dovrà essere presente nel databasde un ID Transizione per avere uno storico delle transizioni e per facilitare il controllo nel caso di più transizioni di uno stesso utente e nel caso si debba rigenerare una key smarrita.
+\end{itemize}
+Al termine sono sorti altri dubbi che verranno chiariti in seguito, in un altro incontro con il proponente.
+\subsection{Domande e Risposte}
+\begin{enumerate}
+	\item \textit{Un utente deve autenticarsi ogni volta che utilizza una API acquistata?}\\
+	\hspace{35pt}Verranno attribuiti dei token che permetteranno all'utente di non doversi autenticare ogni volta.
+	\item \textit{Il gateway deve essere interpellato sia all'andata che al ritorno in una chiamata di un microservizio?}\\
+	\hspace{35pt}La risposta è affermativa.
+	\item \textit{I microservizi saranno su server privati e ne verrà caricata solo l'interfaccia?}
+	\hspace{35pt}In questo caso bisogna trovare un meccanismo di difesa per i clienti finali, come permettere gli abbonamenti con una data di scadenza solo ai fornitori di microservizi che siano affidabili.
+	\item \textit{Come fare a monitorare che una key non sia stata trasferita ad altri?}
+	\hspace{35pt}Bisogna avere una reportistica di come e quando vengono utilizzate le key.
+	\item \textit{Il sito si aspetta di avere un guadagno?}
+	\hspace{35pt}Si presume si possa avere una percentuale sulle transazioni che avvengono.
+	\item \textit{Ci verrà messo a disposizione un server dal proponente per testare il nostro sistema?}
+	\hspace{35pt}Probabilmente si.
+	\item \textit{Come generare le key?}
+	\hspace{35pt} Non è importante l'algoritmo di creazione, è stata data scelta libera, basta che non siano sequenziali o in qualche modo replicabili.
+\end{enumerate}
+\end{document}
