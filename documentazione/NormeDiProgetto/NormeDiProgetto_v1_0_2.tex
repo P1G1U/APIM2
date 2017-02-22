@@ -119,8 +119,6 @@
 			\hline
 			{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
 			\hline
-			Verifica delle correzioni apportate & Lonardi Pietro & 22/02/2017 & 1.1.0
-			\hline
 			Aggiunta procedura di verifica & Piergiorgio Danieli & 22/02/2017 & 1.0.2
 			\hline
 			Correzioni & Piergiorgio Danieli & 15/02/2017 & 1.0.1 \\
@@ -778,27 +776,12 @@ Nel controllare i diagrammi \textit{UML}, il \textit{Verificatore} dovrà presta
 	\subsubsection{Misure e metriche}
 	\label{MisureMetriche}
 	Qui di seguito vengono elencate le misure e le metriche che verranno adottate nel processo di verifica. Il processo di verifica deve essere verificabile e quantificato secondo metriche stabilite a priori.\\
-	Vi possono essere due tipologie di range nell'accettazione dei risultati di un processo di verifica:
-	\begin{itemize}
-		\item \textbf{Accettazione}: è il livello minimo che il prodotto deve raggiungere per superare il test;
-		\item \textbf{Ottimale}: è il livello in cui dovrebbe posizionarsi la misurazione. In caso questo valore non venga raggiunto sono necessarie verifiche aggiuntive.
-	\end{itemize}
 		\subsubsection{Misure e metriche - Metriche per i processi}
 			\paragraph{Schedule Variance (SV)}
 			Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella baseline. È un indicatore di efficacia soprattutto nei confronti del Cliente. Se SV > 0 significa che il progetto sta producendo con maggior velocità a quanto pianificato, viceversa se negativo.\\
-			\textbf{Parametri utilizzati}:
-			\begin{itemize}
-				\item \textbf{Range di accettazione}: $\geq$ -(preventivo fase*5\%);
-				\item \textbf{Range ottimale}: $\geq0$.
-			\end{itemize}
 		
 			\paragraph{Budget Variance (BV)}
 			Indica se alla data corrente si è speso di più o di meno rispetto a quanto previsto a budget alla data corrente. È un indicatore che ha un valore unicamente contabile e finanziario. Se BV > 0 significa che il progetto sta spendendo il proprio budget con minor velocità di quanto pianificato, viceversa se negativo. \\
-			\textbf{Parametri utilizzati}:
-			\begin{itemize}
-				\item \textbf{Range di accettazione}:$\geq$-(preventivo fase*10\%);
-				\item \textbf{Range ottimale}:$\geq0$.
-			\end{itemize}
 		
 		\subsubsection{Misure e metriche - Metriche per i documenti}
 			\paragraph{Gulpease}
@@ -806,18 +789,8 @@ Nel controllare i diagrammi \textit{UML}, il \textit{Verificatore} dovrà presta
 			L'indice è calcolato con la seguente formula:
 			\[89+\frac{300*(\textit{numero delle frasi})-10*(\textit{numero delle lettere)}}{(\textit{numero delle parole})}\]
 			
-			I risultati sono compresi tra 0 e 100, dove il valore "100" indica la leggibilità più alta e "0" la leggibilità più bassa. In generale risulta che testi con un indice:
-			\begin{itemize}
-				\item inferiore a 80 sono difficili da leggere per chi ha la licenza elementare;
-				\item inferiore a 60 sono difficili da leggere per chi ha la licenza media;
-				\item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
-			\end{itemize}
+			I risultati sono compresi tra 0 e 100, dove il valore "100" indica la leggibilità più alta e "0" la leggibilità più bassa. 
 			Va notato che questo indice non considera che il testo sia comprensibile o meno, in effetti anche una frase con parole casuali potrebbe avere un ottimo indice Gulpease. I documenti perciò vanno valutati da un essere umano per rendere le frasi semplici ma comprensibili.\\
-			\textbf{Parametri utilizzati}:
-			\begin{itemize}
-				\item \textbf{Range di accettazione}: [40 - 100];
-				\item \textbf{Range ottimale}: [50 - 100].
-			\end{itemize}
 		
 			\subsubsection{Misure e metriche - Metriche per il software}
 			
@@ -825,35 +798,15 @@ Nel controllare i diagrammi \textit{UML}, il \textit{Verificatore} dovrà presta
 			La complessità ciclomatica è una metrica software utilizzata per misurare la complessità di un programma. Misura direttamente il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso.\\
 			La complessità ciclomatica è calcolata utilizzando il grafo di controllo di flusso del programma: i nodi del grafo corrispondono a gruppi indivisibili di istruzioni, mentre gli archi connettono due nodi se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo gruppo.\\
 			Alti valori di questo indice indicano che il codice è poco manutenibile e difficile da testare, mentre valori bassi potrebbero indicare una scarsa efficienza nei metodi.\\
-			\textbf{Parametri utilizzati}:
-			\begin{itemize}
-				\item \textbf{Range di accettazione}: [1 - 15];
-				\item \textbf{Range ottimale}: [1 - 10].
-			\end{itemize}
-		
+	
 			\paragraph{Rapporto linee di commento su linee di codice}
 			Affinché il codice sia più facilmente comprensibile e manutenibile è necessario che sia adeguatamente commentato.\\
-			\textbf{Parametri utilizzati}:
-			\begin{itemize}
-				\item \textbf{Range di accettazione}: [>0.2];
-				\item \textbf{Range ottimale}: [>0.3].
-			\end{itemize}
 		
 			\paragraph{Numero di livelli di annidamento}
 			Indica il livello di annidamento delle strutture di controllo. Un numero troppo elevato può comportare difficoltà nella verifica e nella manutenibilità del codice.\\
-			\textbf{Parametri utilizzati}:
-			\begin{itemize}
-				\item \textbf{Range di accettazione}: [0-6];
-				\item \textbf{Range ottimale}: [0-4].
-			\end{itemize}
 		
 			\paragraph{Numero di campi dati per classe}
 			Una classe con troppi campi dati potrebbe essere poco specializzata e quindi mal progettata. Una classe poco specializzata inoltre è anche poco manutenibile.\\
-			\textbf{Parametri utilizzati}:
-			\begin{itemize}
-				\item \textbf{Range di accettazione}: [0-15];
-				\item \textbf{Range ottimale}: [1-8].
-			\end{itemize}
 		
 			\paragraph{Accoppiamento}
 			L'indice di accoppiamento è il risultato di due indici:
@@ -866,18 +819,9 @@ Nel controllare i diagrammi \textit{UML}, il \textit{Verificatore} dovrà presta
 			
 			\paragraph{Validazione W3C}
 			Una pagina web per essere accessibile ed usabile deve essere valida secondo le norme del W3C. L'applicativo web deve superare tutti i test del validatore automatico W3C per quanto riguarda gli errori gravi, deve inoltre evitare quanti più warning possibili.\\
-			\textbf{Parametri utilizzati:}
-			\begin{itemize}
-				\item \textbf{Range di accettazione}: [0-5];
-				\item \textbf{Range ottimale}: [0-0].
-			\end{itemize}
+
 			\paragraph{Euristica di Nielsen}
 			Le euristiche di Nielsen sono 10 euristiche studiate per controllare in modo metodico l'usabilità di un sito web, derivano dall'applicazione di tecniche di analisi fattoriale su 249 problemi di usabilità. Sono semplici da applicare e mostrano benefici nelle fasi iniziali di un progetto, ma sono informali e non sono automatizzabili in quanto richiedono un giudizio umano. Essendo parametri non completamente oggettivi, può capitare che alcune pagine siano usabili anche non rispettando tutte le euristiche, si è quindi posto un limite minimo di 6 euristiche rispettate.\\
-			\textbf{Parametri utilizzati:}
-			\begin{itemize}
-				\item \textbf{Range di accettazione}: 6/10;
-				\item \textbf{Range ottimale}: 10/10.
-			\end{itemize}
 
 \subsection{Validazione}
 Il principio assoluto è scrivere documenti e programmi verificabili. Dopo una serie di verifiche che seguono tutto il ciclo di vita del prodotto la validazione è il verdetto finale che lo rende pubblicabile senza timore.\\
