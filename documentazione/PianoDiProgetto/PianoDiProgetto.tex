@@ -26,6 +26,7 @@
 \usepackage{lastpage}
 
 
+% \textsubscript{g} per indicare termini nel glossario
 
 % \\ indica interruzione di riga
 
@@ -140,11 +141,16 @@
 	\rhead{Registro Modifiche}
 	\section{Registro Modifiche}
 	\small %rippicciolisce il testo
-	
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
 		\begin{tabular}{|l|c|c|c|}
 			\hline
 			{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
+			\hline
+			1.0.9 & Inserimento e calcolo dei capitoli : Distribuzione del Lavoro & Sebastiano Marchesini & 31/01/2017  \\
+			\hline
+			1.0.8 & \minitab[c]{Inserimento delle WBS e \\ spiegazione di cosa sono e cosa servono capitolo} & Sebastiano Marchesini & 30/01/2017 \\
+			\hline
+			1.0.7 & \minitab[c]{Motivazione del consultivo di periodo non conforme alla progettazione} & Sebastiano Marchesini & 30/01/2017 \\
 			\hline
 			1.0.6 & \minitab[c]{Approfondimento e correzione del Capitolo 4 \\ Cambio illustrazione e approfondimento} & Sebastiano Marchesini & 28/01/2017 \\
 			\hline
@@ -293,6 +299,8 @@
 		\item Piano di Qualifica v3;
 		\item Definizione del prodotto.
 	\end{itemize}
+	
+	Il nostro team è impegnato alla consegna obbligatoria di uno dei due tipi di revisione e intende sostenere l'RPmin, consegnando il documento di Specifica Tecnica.
 	
 	\subsubsection{Revisione di Qualifica}
 	La revisione di qualifica evidenzia che il prodotto sembri funzionare. \\
@@ -468,7 +476,7 @@
 	
 		Il \textit{modello di processo incrementale} combina alcuni aspetti del modello a cascata applicati a sottoinsiemi del prodotto finale. Il modello incrementale consiste nell'applicare più sequenze lineari, scalate nel tempo. Ogni sequenza lineare produce uno "stadio" operativo del software scalato nel tempo.\\
 		Il modello a processo incrementale è essenzialmente iterativo, grazie alla pianificazione della sequenza degli stadi inoltre si può controllare i rischi di natura tecnica.\\
-		Ogni processo è caratterizzato da una personale \textit{milestone} che rappresenta la data di un traguardo. Ha durata pari a 1 giorno e coincide con la consegna dei documenti in vista della successiva revisione o l?approvazione di quanto fatto a monte del periodo. Nei diagrammi di pianificazione è indicata con delle linee rosse sul giorno prestabilito.
+		Ogni processo è caratterizzato da una personale \textit{milestone} che rappresenta la data di un traguardo. Ha durata pari a 1 giorno e coincide con la consegna dei documenti in vista della successiva revisione o l'approvazione di quanto fatto a monte del periodo. Nei diagrammi di pianificazione è indicata con delle linee rosse sul giorno prestabilito.
 		\subsection{Scelte di alto livello}
 			Completato il periodo di analisi, viene disegnata l?architettura logico-funzionale del sistema software.Vengono, cioè, effettuate le scelte ?di alto livello? relative alla strutturazione del sistema in (macro)parti distinte (sottosistemi), definite le responsabilità di ciascun sottosistema, le modalità di dialogo (interfacce) tra i diversi sottosistemi, i dati trattati dai componenti.
 			Definizione quindi delle priorità di realizzazione:
@@ -490,14 +498,16 @@
 		\item \textbf{Progettazione di Dettaglio e Codifica} (PDC);
 		\item \textbf{Validazione e Collaudo} (VC);
 	\end{enumerate}
-	Ogni macro-fase è poi stata suddivisa in attività più piccole, alle quali sono state associate una o più risorse. \\
+	Ogni macro-periodo è poi stata suddivisa in attività più piccole, alle quali sono state associate una o più risorse. \\
 	Per facilità di scomposizione si è scelta una semplice divisione:
 	\begin{itemize}
 		\item \textbf{Per capitoli}: ogni documento presenta dei capitoli prestabiliti e quindi un singolo può completare uno o più capitoli del documento.
 		\item \textbf{Per azione}: a seconda di cui il singolo è specializzato ricopre un'attività inerente al suo ruolo. (Es: Esperto di produce un template, ecc...);
 		\item \textbf{Verifica}: ogni documento e azione ha bisogno di verifica obbligatoria. Quindi è assegnata ai componenti in cui non vi è conflitto di interesse sulla stesura da parte del \textit{Project Manager}.
 	\end{itemize} 
-	La scomposizione non è segnata negli schemi. 
+	La scomposizione non è segnata negli schemi.\\
+	Riportiamo inoltre la \textit{work breakdown structure}\textsubscript{g} detta anche struttura di scomposizione del lavoro (traduzione letterale) o struttura analitica di progetto, si intende l'elenco di tutte le attività di un progetto. Sono usate dal Project Manager per aiutarlo nella suddivisione e nel calcolo dei costi di ogni parte del progetto. Inoltre aiutano i componenti nella comprensione dei compiti dei ruoli e dei doveri.
+	Per il glossario la tempistica di stesura è non quantificabile (n.q.) in quanto ogni componente del team dà il suo contributo durante tutta l'elaborazione de prodotto.
 	
 	
 	\subsection{Analisi}
@@ -519,7 +529,7 @@
 		\item \textbf{Glossario v1.0.0}: viene scritto in modo incrementale da chi redige i documenti. Contiene la spiegazione di alcuni termini utilizzati. Viene redatto in parallelo a tutti i documenti ed è aggiornato ad ogni termine che necessita di una spiegazione;
 		\item \textbf{Lettera di presentazione}: documento presentato al committente che permette al gruppo di partecipare alla gara d'appalto per il capitolato.
 	\end{enumerate}
-	In questa macro-fase i ruoli maggiormente coinvolti sono: \textit{Responsabile}, \textit{Amministratore}, \textit{Analista}. \\
+	In questa macro-periodo i ruoli maggiormente coinvolti sono: \textit{Responsabile}, \textit{Amministratore}, \textit{Analista}. \\
 	Per facilità di rappresentazione lo schema è riportato insieme all' \textit{Analisi in Dettaglio}.
 	
 	\subsection{Analisi in dettaglio}
@@ -529,12 +539,117 @@
 	\\
 	I ruoli maggiormente coinvolti sono il \textit{Responsabile}, l'\textit{Amministratore} e l'\textit{Analista}. \\
 	
-	\begin{figure}[htbp]
+	\begin{figure}[p]
 		\centering
 		\includegraphics[width=1\linewidth]{"Gantt Analisi"}
 		\caption{Analisi e Analisi in Dettaglio}
 		\label{fig:gantt-progettazione-architetturale}
 	\end{figure}
+
+	\begin{figure}[p]
+		\centering
+		\includegraphics[width=0.6\linewidth]{"WBSAnalisi"}
+		\caption{Work Breakdown Structure Analisi}
+		\label{fig:WBSAnalisi}
+	\end{figure}
+
+	\subsubsection{Distribuzione del lavoro}{
+		\small
+			{\renewcommand\arraystretch{1.1} %aumenta l'altezza di ogni riga
+			\begin{tabular}{|c|l|r|c|}
+				\hline
+				{\textbf{Codice}}&{\textbf{Attività}}&{\textbf{Ruolo}}&{\textbf{Ore + Verifica}}\\
+				\hline
+				\textbf{AN1} & \textbf{Norme di Progetto} & & \textbf{8,5 + 3} \\
+				
+				AN1.1 & Introduzione & Amministratore & 1 \\
+				
+				AN1.2 & Procedure di Sviluppo & Project Manager & 1 \\
+				
+				AN1.3 & Documenti & Amministratore & 1,5 \\
+				
+				AN1.4 & Analisi dei Requisiti & Project Manager & 1 \\
+				
+				AN1.5 & Ruoli & Project Manager & 1 \\
+				
+				AN1.6 & Ambiente di Lavoro & Project Manager & 1 \\
+				
+				AN1.7 & Comunicazioni e Riunioni & Project Manager & 1 \\
+				
+				AN1.8 & Versionamento & Project Manager & 1 \\
+				
+				AN1.9 &	Verifica & Verificatore & 3 \\
+				\hline
+				\textbf{AN2} & \textbf{Piano di Qualifica} & & \textbf{11 + 3,5} \\
+				
+				AN2.1 & Gestione Amministrativa & Amministratore & 1,5 \\
+				
+				AN2.2 & Introduzione & Amministratore & 1 \\
+				
+				AN2.3 & Definizione degli Obbiettivi & Definizione degli Obbiettivi & 3 \\
+				
+				AN2.4 & Visione generale delle Strategia di Verifica & Amministratore & 3,5 \\
+				
+				AN2.5 & Resoconto delle Attività di Verifica & Amministratore & 2 \\
+				
+				AN2.6 & Verifica & Verificatore & 3,5 \\
+				\hline
+				\textbf{AN3} & \textbf{Piano di Progetto} & & \textbf{13 + 4} \\
+				
+				AN3.1 & Introduzione & Amministratore & 1 \\
+				
+				AN3.2 & Scadenze & Project Manager & 1 \\
+				
+				AN3.3 & Analisi dei Rischi & \minitab[r]{Analista \\ Project Manager} & 2,5 \\
+				
+				AN3.4 & Modello di Sviluppo & Project Manager & 1 \\
+				
+				AN3.5 & Pianificazione del Progetto & Project Manager & 2 \\
+				
+				AN3.6 & Preventivo & \minitab[r]{Analista \\ Project Manager} & 3 \\
+				
+				AN3.7 & Preventivo a Finire & Project Manager & 2 \\
+				
+				AN3.8 & Consultivo di Periodo & Project Manager & 0,5 \\
+				
+				AN3.9 & Verifica & Verificatore & 4 \\
+				\hline
+				\textbf{AN4} & \textbf{Studio Di Fattibilità} & & \textbf{9,5 + 3} \\
+				
+				AN4.1 & Capitolato C1 - API Market & Analista & 3,5 \\
+				
+				AN4.2 & Introduzione & Amministratore & 1 \\
+				
+				AN4.3 & Confronto con gli altri Capitolati & Analista & 5 \\
+				
+				AN4.4 & Verifica & Verificatore & 3 \\
+				\hline
+				\textbf{AN5} & \textbf{Analisi dei Requisiti} & & \textbf{49,5 + 16,5} \\
+				
+				AN5.1 & Introduzione & Amministratore & 1 \\
+				
+				AN5.2 & Analisi del Capitolato & Analisti & 10 \\
+				
+				AN5.3 & Descrizione Generale & Analista & 3 \\
+				
+				AN5.4 & Casi d'uso & Analisti & 20 \\
+				
+				AN5.5 & Grafici UML & Analisti & 15,5 \\
+				
+				AN5.6 & Verifica & Verificatore & 16,5 \\
+				\hline
+				\textbf{AN6} & \textbf{Glossario} & & \textbf{n.q. + 1} \\
+				
+				AN6.1 & Introduzione & Amministratore & 0.5 \\
+				 
+				AN6.2 & Stesura & & n.q. \\
+						
+				AN6.3 & Verifica & Verificatore & 1 \\
+				\hline	
+			\end{tabular}
+		}
+		\normalsize
+	}
 	
 	\subsection{Progettazione Architetturale}
 	\begin{center}\textit{Periodo: dal 25-01-2017 al 13-03-2017}\end{center}
@@ -547,12 +662,87 @@
 	Le figure maggiormente coinvolte sono il \textit{Responsabile}, l'\textit{Amministratore}, il \textit{Progettista}, l'\textit{Analista}
 	ed il \textit{Verificatore}. \\
 	
-	\begin{figure}[h!tbp]
+	\begin{figure}[p]
 		\centering
 		\includegraphics[width=1\linewidth]{"Gantt Progettazione Architetturale"}
 		\caption{Progettazione Architetturale}
 		\label{fig:gantt-progettazione-architetturale}
 	\end{figure}
+
+	\begin{figure}[p]
+		\centering
+		\includegraphics[width=0.8\linewidth]{"WBSArchitetturale"}
+		\caption{Work Breakdown Structure Progettazione Architetturale}
+		\label{fig:WBSArchitetturale}
+	\end{figure}
+
+	\subsubsection{Distribuzione del lavoro}{
+		\small
+		{\renewcommand\arraystretch{1.1} %aumenta l'altezza di ogni riga
+			\begin{tabular}{|c|l|r|c|}
+				\hline
+				{\textbf{Codice}}&{\textbf{Attività}}&{\textbf{Ruolo}}&{\textbf{Ore + Verifica}}\\
+				\hline
+				\textbf{PA1} & \textbf{Norme di Progetto} & & \textbf{4 + 1.5 } \\
+				
+				PA1.1 & Incremento & Project Manager & 4 \\
+				
+				PA1.2 &	Verifica & Verificatore & 1.5 \\
+				\hline
+				\textbf{PA2} & \textbf{Piano di Qualifica} & & \textbf{10.5 + 3.5 } \\
+				
+				PA2.1 & Incremento & Amministratore & 3.75 \\
+				
+				PA2.2 & Pianificazione dei Test & Amministratore & 6.75 \\
+				
+				PA2.3 & Verifica & Verificatore & 3.5 \\
+				\hline
+				\textbf{PA3} & \textbf{Piano di Progetto} & & \textbf{9 + 3} \\
+				
+				PA3.1 & Incremento & Project Manager & 8.5 \\
+				
+				PA3.2 & Consultivo di Periodo & Project Manager & 0.5 \\
+				
+				PA3.3 & Verifica & Verificatore &  \\
+				\hline
+				\textbf{PA4} & \textbf{Analisi dei Requisiti (+SdF)} & & \textbf{2 + } \\
+				
+				PA4.1 & Incremento & Analista & 2 \\
+				
+				PA4.2 & Verifica & Verificatore & 3 \\
+				\hline
+				\textbf{PA5} & \textbf{Specifica Tecnica} & & \textbf{112.5 + 37 } \\
+				
+				PA5.1 & Introduzione & Amministratore & 1 \\
+				
+				PA5.2 & Definizione del Prodotto & Progettisti & 25 \\
+				PA5.2.1 & Architettura Generale & Progettisti & 5.5 \\
+				PA5.2.2 & Metodo e Formalismo & Progettisti & 19.5 \\
+				
+				PA5.3 & Strumenti e Tecnologie & Progettisti & 6 \\
+				
+				PA5.4 & Design Pattern & Progettisti & 13.5 \\
+				
+				PA5.5 & Descrizione Singoli Componenti & Progettisti & 21 \\
+				
+				PA5.6 & Stima di Fattibilità e Risorse & \minitab[r]{Progettisti \\ Analisti} & 20 \\
+				
+				PA5.7 & Tracciamento & & 26 \\
+				PA5.7.1 & Componenti - Requisiti & \minitab[r]{Progettisti \\ Analisti} & 13 \\
+				PA5.7.2 & Requisiti - Componenti & \minitab[r]{Progettisti \\ Analisti} & 13 \\
+				
+				PA5.8 & Verifica & Verificatore & 37 \\
+				\hline
+				\textbf{PA6} & \textbf{Glossario} & & \textbf{n.q. + 0.5 } \\
+				
+				PA6.1 & Stesura & & n.q. \\
+				
+				PA6.2 & Verifica & Verificatore & 0.5 \\
+				\hline	
+			\end{tabular}
+		}
+		\normalsize
+	}
 	
 	\subsection{Progettazione di Dettaglio e Codifica}
 	\textit{\begin{center} Periodo: dal 14-03-2017 al 17-04-2015 \end{center}}
@@ -561,25 +751,99 @@
 	\begin{itemize}
 		\item \textbf{Definizione di Prodotto}: viene definita la struttura in modo approfondito e le varie relazioni dei vari componenti del prodotto, basandosi sul documento di
 		\textit{Specifica Tecnica};
-		\item \textbf{Codifica}: in questa fase inizia lo sviluppo del codice da parte dei programmatori, che devono seguire quanto riportato nel documento \textit{Definizione di Prodotto};
+		\item \textbf{Codifica}: inizia lo sviluppo del codice da parte dei programmatori, che devono seguire quanto riportato nel documento \textit{Definizione di Prodotto};
 		\item \textbf{Manuale utente}: questo documento ha lo scopo di fornire delle linee guida per l'utilizzo del sistema;
 		\item \textbf{Incremento e Verifica}: tutti i documenti verranno aggiornati in base al risultato della \textit{Revisione di Progettazione}.
 	\end{itemize}
 	I ruoli coinvolti sono il \textit{Responsabile}, l'\textit{Amministratore}, il \textit{Progettista}, il \textit{Verificatore}
 	ed il \textit{Programmatore}.\\
 	
-	\begin{figure}
+	\begin{figure}[p]
 		\centering
 		\includegraphics[width=1\linewidth]{"Gantt Progettazione di Dettaglio"}
 		\caption{Progettazione di Dettaglio e Codifica}
 		\label{fig:gantt-progettazione-di-dettaglio}
 	\end{figure}
-	
+
+	\begin{figure}[p]
+		\centering
+		\includegraphics[width=0.9\linewidth]{"WBSCodifica"}
+		\caption{Work Breakdown Structure Progettazione di Dettaglio e Codifica}
+		\label{fig:WBSCodifica}
+	\end{figure}
+
+	\subsubsection{Distribuzione del lavoro}{
+		\small
+		{\renewcommand\arraystretch{1.1} %aumenta l'altezza di ogni riga
+			\begin{tabular}{|c|l|r|c|}
+				\hline
+				{\textbf{Codice}}&{\textbf{Attività}}&{\textbf{Ruolo}}&{\textbf{Ore + Verifica}}\\
+				\hline
+				\textbf{PD1} & \textbf{Norme di Progetto} & & \textbf{1.5 + 1} \\
+				
+				PD1.1 & Incremento & Project Manager & 1.5 \\
+				
+				PD1.2 &	Verifica & Verificatore & 1 \\
+				\hline
+				\textbf{PD2} & \textbf{Piano di Qualifica} & & \textbf{9 + 5} \\
+				
+				PD2.1 & Incremento & Amministratore & 4 \\
+				
+				PD2.2 & Pianificazione dei Test & Amministratore & 5 \\
+				
+				PD2.3 & Verifica & Verificatore & 5 \\
+				\hline
+				\textbf{PD3} & \textbf{Piano di Progetto} & & \textbf{3.5 + 2} \\
+				
+				PD3.1 & Incremento & Project Manager & 3 \\
+				
+				PD3.2 & Consultivo di Periodo & Project Manager & 0.5 \\
+				
+				PD3.3 & Verifica & Verificatore & 2 \\
+				\hline
+				\textbf{PD4} & \textbf{Specifica Tecnica} & & \textbf{78 + 44} \\
+				
+				PD4.1 & Incremento & Progettista & 6 \\
+				
+				PD4.2 & Definizione del Prodotto & Progettisti & 59 \\
+				PD4.2.1 & Standard di Progetto & Progettisti & 29.5 \\
+				PD4.2.2 & Specifica delle Componenti & Progettisti & 29.5 \\
+				
+				PD4.3 & Tracciamento & & 13 \\
+				PD4.3.1 & Requisiti - Componenti & \minitab[r]{Progettisti \\ Analisti} & 13 \\
+				
+				PD4.4 & Verifica & Verificatore &  \\
+				\hline
+				\textbf{PD5} & \textbf{Resoconto Attività} & & \textbf{16 + 0} \\
+				
+				PD5.1 & Analisi Statica & Verificatori & 8 \\
+				
+				PD5.2 & Analisi Dinamica & Verificatori & 8 \\
+				\hline
+				\textbf{PD6} & \textbf{Manuale Utente} & & \textbf{15 + 8.5} \\
+				
+				PD6.1 & Stesura & Programmatore & 15 \\
+				
+				PD6.2 & Verifica & Verificatore &  \\
+				\hline
+				\textbf{PD7} & \textbf{Codifica} & Programmatori & \textbf{86} \\
+				\hline
+				\textbf{PD8} & \textbf{Glossario} & & \textbf{n.q. + 0.5 } \\
+				
+				PD8.1 & Stesura & & n.q. \\
+				
+				PD8.2 & Verifica & Verificatore & 0.5 \\
+				\hline	
+			\end{tabular}
+		}
+		\normalsize
+	}
+		
 	
 	\subsection{Validazione e Collaudo}
 	\textit{\begin{center} Periodo: dal 18-04-2017 al 14-05-2015 \end{center}}
 	Questa macro-sequenza riunisce tutti i test dalla più piccola quantità di software che conviene testare da sola al progetto complessivamente.\\
-	Ogni esame è correlato di un \textit{Analisi Statica} e \textit{Analisi Dinamica} che coincidono in modo complementare con una fase di progettazione e/o realizzazione.\\
+	Ogni esame è correlato di un \textit{Analisi Statica} e \textit{Analisi Dinamica} che coincidono in modo complementare con un periodo di progettazione e/o realizzazione.\\
 	Vi è l'obbligo di utilizzo di metodi automatici per la realizzazione dei test, onde evitare errori umani . Se nel corso del progetto si è svolta una verifica passo per passo, la validazione è spontanea. \\ 
 	Rappresenta l'atto conclusivo delle varie attività di verifica realizzate nei singoli processi del ciclo di vita.
 	Le attività sono:
@@ -592,24 +856,84 @@
 	\end{enumerate}
 	I ruoli coinvolti sono il \textit{Responsabile}, l'\textit{Amministratore}, il \textit{Progettista} ed il \textit{Verificatore}.
 	
-	\begin{figure}
+	\begin{figure}[p]
 		\centering
 		\includegraphics[width=1\linewidth]{"Gantt Validazione e Collaudo"}
 		\caption{Validazione e Collaudo}
 		\label{fig:gantt-validazione-e-collaudo}
 	\end{figure}
-	
-	
+
+	\begin{figure}[p]
+		\centering
+		\includegraphics[width=1\linewidth]{"WBSValidazione"}
+		\caption{Work Breakdown Structure Validazione e Collaudo}
+		\label{fig:WBSValidazione}
+	\end{figure}
+
+	\subsubsection{Distribuzione del lavoro}{
+		\small
+		{\renewcommand\arraystretch{1.1} %aumenta l'altezza di ogni riga
+			\begin{tabular}{|c|l|r|c|}
+				\hline
+				{\textbf{Codice}}&{\textbf{Attività}}&{\textbf{Ruolo}}&{\textbf{Ore + Verifica}}\\
+				\hline
+				\textbf{VA1} & \textbf{Norme di Progetto} & & \textbf{1.5 + 3 } \\
+				
+				VA1.1 & Incremento & Project Manager & 1.5 \\
+				
+				VA1.2 &	Verifica & Verificatore & 3 \\
+				\hline
+				\textbf{PD2} & \textbf{Piano di Qualifica} & & \textbf{7 + 5 } \\
+				
+				VA2.1 & Incremento & Amministratore & 7 \\
+				
+				VA2.2 & Verifica & Verificatore & 5 \\
+				\hline
+				\textbf{VA3} & \textbf{Piano di Progetto} & & \textbf{3 + 4 } \\
+				
+				VA3.1 & Incremento & Project Manager & 2.5 \\
+				
+				VA3.2 & Consultivo di Periodo & Project Manager & 0.5 \\
+				
+				VA3.3 & Verifica & Verificatore & 4 \\
+				\hline
+				\textbf{VA4} & \textbf{Specifica Tecnica} & & \textbf{5.5 + 5 } \\
+				
+				VA4.1 & Incremento & Progettista & 2.75 \\
+				
+				VA4.2 & Definizione del Prodotto & Progettisti & 2,75 \\
+				VA4.2.1 & Incremento & Progettisti & 2,75 \\
+				
+				VA4.3 & Verifica & Verificatore & 5 \\
+				\hline
+				\textbf{VA5} & \textbf{Glossario} & & \textbf{n.q. + 1} \\
+				
+				VA5.1 & Stesura & & n.q. \\
+				
+				VA5.2 & Verifica & Verificatore & 1 \\
+				\hline
+				\textbf{VA6} & \textbf{Manuale Utente} & & \textbf{3 + 4} \\
+				
+				VA6.1 & Incremento & Programmatore & 3 \\
+				
+				VA6.2 & Verifica & Verificatore & 4 \\
+				\hline
+				\textbf{VA7} & \textbf{Collaudo} & \minitab[l]{ Programmatore \\ Verificatore } & \textbf{5} \\
+				\hline
+			\end{tabular}
+		}
+		\normalsize
+	}
 	\newpage
 	
 	\rhead{Preventivo}
 	\section{Preventivo}
-	Qui vengono presentati, per ogni fase del progetto, le ore preventivate di impiego per i vari ruoli coinvolti.\\
+	Qui vengono presentate le ore preventivate di impiego per i vari ruoli coinvolti.\\
 	Si ricorda che il periodo di \textit{Analisi dei Requisiti} e \textit{Analisi Dettaglio} non sono a carico del committente e quindi non saranno considerate nel calcolo delle ore totali da retribuire. \\
 	Costi e sigle delle tabelle fanno riferimento al capitolo \textit{Ruoli} del documento: \textit{Norme di Progetto v2.0.0}.
 	
 	\subsection{Analisi}
-	Nella fase di analisi non vi sono ore di \textit{Codifica}, eseguite dal \textit{Programmatore}, e di \textit{Progettazione}, eseguite dal \textit{Progettista}. Questo perché Analisi e Progettazione non sono mai simultaneamente attive. \\
+	Nel periodo di analisi non vi sono ore di \textit{Codifica}, eseguite dal \textit{Programmatore}, e di \textit{Progettazione}, eseguite dal \textit{Progettista}. Questo perché Analisi e Progettazione non sono mai simultaneamente attive. \\
 	Durante il periodo di Analisi le ore tra i ruoli sono state divise nel modo seguente: \\
 	
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
@@ -661,7 +985,7 @@
 			\hline  
 	\end{tabular}} 
 
-	\begin{figure}[h]
+	\begin{figure}[p]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"CiambellaAnalisi"}
 		\caption{Percentuale Ruoli Analisi e Analisi in Dettaglio}
@@ -670,8 +994,8 @@
 	
 	
 	\subsection{Progettazione Architetturale}
-	Anche in questa fase viene meno un ruolo del team che può svolgere solo una funzione: quella del \textit{Programmatore}. Trovare soluzioni alle analisi rilevate non è suo compito ma solo di tradurre in linguaggio di programmazione le decisione del \textit{Progettista}.\\
-	Nel periodo riguardante la fase di Progettazione Architetturale le ore tra i ruoli sono stati divisi nel seguente modo:\\
+	Anche in questo periodo viene meno un ruolo del team che può svolgere solo una funzione: quella del \textit{Programmatore}. Trovare soluzioni alle analisi rilevate non è suo compito ma solo di tradurre in linguaggio di programmazione le decisione del \textit{Progettista}.\\
+	Nel periodo riguardante la Progettazione Architetturale le ore tra i ruoli sono stati divisi nel seguente modo:\\
 	
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
 		\small
@@ -696,7 +1020,7 @@
 			\hline 
 	\end{tabular}} 
 
-	\begin{figure}[h]
+	\begin{figure}[p]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"CiambellaProgettazione"}
 		\caption{Percentuale Ruoli Progettazione Architetturale}
@@ -706,7 +1030,7 @@
 	
 	\subsection{Progettazione di Dettaglio e Codifica}
 	Oramai tutta l'analisi è completata e quindi il ruolo dell'\textit{Analista} è praticamente sostituito dal \textit{Progettista}. Inoltre la codifica apre le porte alla programmazione effettiva e quindi al ruolo di \textit{Programmatore}.\\
-	Durante la fase di Progettazione di Dettaglio e Codifica le ore tra i ruoli sono stai divisi come segue:
+	Durante la Progettazione di Dettaglio e Codifica le ore tra i ruoli sono stai divisi come segue:
 	\\
 	
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
@@ -732,7 +1056,7 @@
 			\hline  
 	\end{tabular}} 
 
-	\begin{figure}[h]
+	\begin{figure}[p]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"CiambellaCodifica"}
 		\caption{Percentuale Ruoli Progettazione in Dettaglio e Codifica}
@@ -741,7 +1065,7 @@
 
 	
 	\subsection{Validazione e Collaudo}
-	Nella fase di Validazione e Collaudo le ore tra i ruoli sono state divise nel seguente modo:
+	Nel periodo di Validazione e Collaudo le ore tra i ruoli sono state divise nel seguente modo:
 	\\
 	
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
@@ -767,7 +1091,7 @@
 			\hline
 	\end{tabular}}
 
-	\begin{figure}[h]
+	\begin{figure}[p]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"CiambellaValidazioneCollaudo"}
 		\caption{Percentuale Ruoli Validazione e Collaudo}
@@ -823,7 +1147,7 @@
 
 	Tale progettazione ha portato al seguente grafico percentuale di proporzione dei ruoli:
 	
-	\begin{figure}[h]
+	\begin{figure}[p]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"GraficoTortaRuoliFinale"}
 		\caption{Percentuale Ore Ruoli Totale}
@@ -834,34 +1158,41 @@
 	
 	\rhead{Consuntivo di Periodo}
 	\section{Consuntivo di Periodo}
-	Riepiloga i risultati di un dato periodo di attività e verrà aggiornato nel corso del progetto per dare una rendiconto preciso ed effettivo del lavoro svolto. \\
-	\subsection{Analisi e Analisi Dettaglio}
+		Riepiloga i risultati di un dato periodo di attività e verrà aggiornato nel corso del progetto per dare una rendiconto preciso ed effettivo del lavoro svolto. \\
+		\subsection{Analisi e Analisi Dettaglio}{
 	
-	{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
-		\begin{tabular}{|c|c|c|c|c|c|c|c|}
-			\hline 
-			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore Effettive per Ruolo}} & \textbf{Ore Totali} \\ 
-			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \\ 
-			\hline
-			Sebastiano Marchesini & 8 & 10(+1) & 5 &  &  & 4(+1) & 27(+2) \\ 
-			\hline 
-			Gianluca Crivellaro & 1 &  & 24(+2) &  &  & 3 & 28(+2) \\ 
-			\hline 
-			Pietro Lonardi &  & 1 & 6 &  &  & 9(+2) & 17(+2) \\ 
-			\hline 
-			Alberto Gelmi &  &  & 9(-2) &  &  & 8 & 17(-2) \\ 
-			\hline 
-			Piergiorgio Danieli & 5 & 5 & 2 &  &  & 5 & 17(+0) \\ 
-			\hline 
-			\multicolumn{7}{r|}{TOTALE  :} & 106(+4) \\ 
-	\end{tabular}} 
+		{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
+			\begin{tabular}{|c|c|c|c|c|c|c|c|}
+				\hline 
+				\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore Effettive per Ruolo}} & \textbf{Ore Totali} \\ 
+				& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \\ 
+				\hline
+				Sebastiano Marchesini & 8 & 10(+1) & 5 &  &  & 4(+1) & 27(+2) \\ 
+				\hline 
+				Gianluca Crivellaro & 1 &  & 24(+2) &  &  & 3 & 28(+2) \\ 
+				\hline 
+				Pietro Lonardi &  & 1 & 6 &  &  & 9(+2) & 17(+2) \\ 
+				\hline 
+				Alberto Gelmi &  &  & 9(-2) &  &  & 8 & 17(-2) \\ 
+				\hline 
+				Piergiorgio Danieli & 5 & 5 & 2 &  &  & 5 & 17(+0) \\ 
+				\hline 
+				\multicolumn{7}{r|}{TOTALE  :} & 106(+4) \\ 
+		\end{tabular}} 
+		
+		\begin{figure}[p]
+			\centering
+			\includegraphics[width=0.7\linewidth]{"ConsultivoAnalisi"}
+			\caption{Grafico Consultivo di Analisi e Analisi Dettaglio}
+			\label{fig:consultivo-analisi}
+		\end{figure} 
 	
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.7\linewidth]{"ConsultivoAnalisi"}
-		\caption{Grafico Consultivo di Analisi e Analisi Dettaglio}
-		\label{fig:consultivo-analisi}
-	\end{figure} 
+	Si è notato che c'è voluto più tempo del previsto sia nella verifica (fatti su più livelli) sia nell'amministrazione dei documenti. Gianluca si è impegnato molto nella ricerca dei requisiti e nella stesura degli stessi, più di Alberto che causa impegni di studio ha ceduto alcuni compiti. In generale è soddisfacente l'uso delle ore totali progettate per tale periodo.	\\
+	Tale variante non va a impattare sul preventivo a finire in quanto l'analisi e l'analisi specifica non è un costo effettivo che ricade sul cliente finale.
+	}
+		
+
+	
 	
 	
 	\newpage
@@ -876,8 +1207,6 @@
 		\item le ore di \textit{Analisi} e \textit{Analisi in Dettaglio} precedenti alla \textit{Revisione dei Requisiti};
 		\item correzioni alle inadempienze gravi segnalate nella revisione.
 	\end{itemize}
-	
-	\subsection{Preventivo Finale}
 	\subsubsection{Tabella preventiva per Ruolo}
 	\begin{center}
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
@@ -901,7 +1230,7 @@
 		\end{tabular}
 	} 
 	\vspace{0.7cm}
-	\begin{figure}[h]
+	\begin{figure}[p]
 		\centering
 		\includegraphics[width=1\linewidth]{"TortaIncisioneCosti"}
 		\caption{Percentuale di Incidenza del Costo di ogni Ruolo}
@@ -910,7 +1239,7 @@
 		
 	\end{center}
 
-	\subsubsection{Tabella preventiva per periodo}
+	\subsubsection{Tabella preventiva per periodo a finire}
 	\begin{center}
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
 		\begin{tabular}{|c|c|c|}
