@@ -1,0 +1,146 @@
+%FUNZIONE ESEMPI
+\usepackage{mdframed,xcolor}
+\newcounter{esempio}
+\newenvironment{esempio}[1]{\begin{mdframed}[margin=\parindent,leftmargin=0pt,rightmargin=0pt,linewidth=0pt,backgroundcolor=mygrayone]
+							\refstepcounter{esempio}\vspace*{-4.75pt}\leavevmode\kern-\parindent{\fboxrule=0pt \fcolorbox{white}{mygraytwo}{%
+							\color{white}\spacedallcaps{Esempio}\enspace\theesempio}}%
+							\enspace#1\\*[\medskipamount]}
+							{\end{mdframed}}
+
+\section{Integrazione tra Tecnologie}{
+	Il prodotto prende in mano più linguaggi e tecnologie, in questa sezione andremo a spiegare come si interfacciano e gli aspetti di integrazione.
+	\subsection{HTML5 -> CSS3}{
+		Ogni pagina HTML5 e foglio di stile (CSS3) saranno unici e separati. I due linguaggi sono strettamente collegati perché il primo definisce la struttura e il secondo lo stile della pagina web in questa iterazione non propriamente dinamica. HTML5 infatti è scelto in particolare per le funzione semantiche e piccoli tools per facilitare le form di input.\\
+		All'interno della pagina HTML selezionata per farla interagire con la pagina css avremo un link con la seguente signatura :
+		\begin{esempio}{HTML5 -> Esempio}\label{ese:Integrazione HTML5 CSS3}
+			<html>
+			<head>
+			\textbf{<link href="stile.css" rel="stylesheet" type="text/css">}
+			</head>
+			<body>
+			[...]
+			</html>
+		\end{esempio}
+		Riportiamo il riferimento al manuale html per la specifica degli attributi.
+		
+		%MANCANO CLASSI E ID
+	}
+	\subsection{HTML5 -> Javascript}{
+		
+	}
+	
+			
+		
+		\subsubsection{HTML5}{
+			HTML è la particella elementare di Internet: il linguaggio di markup che dà vita ai siti Web statici. HTML5 è la versione 5 di questo linguaggio. HTML5 apre le porte a una nuova serie di funzioni per contenuti interattivi e animati che funzionano universalmente su qualsiasi piattaforma o tipo di dispositivo.
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Funziona su la maggior parte dei computer e sui dispositivi mobili;
+				\item Video e animazioni supportati senza plug-in\textsubscript{g} esterni;
+				\item Pensiero indirizzato sempre più al web semantico e HTML5 ne è portavoce;
+				\item Maggior flessibilità e potenzialità rispetto alle precedenti versioni.
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Visualizzazione non uniforme sulle versioni precedenti dei browser o su Internet Explorer\textsubscript{g};
+				\item Strumenti non completamente sviluppati. C'è bisogno di un linguaggio di supporto per le pagine dinamiche.
+			\end{itemize}
+		}
+		\subsubsection{CSS3}{
+			Il CSS è un linguaggio con il quale formattare le pagine Web. Un file CSS viene normalemente chiamato un foglio di stile, e va associato ad una o più pagine Web. I fogli di stile nel progetto saranno rigorosamente esterni. CSS3 aggiorna le funzionalità e le componenti stilistiche.
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Separata la struttura del sito dalla presentazione;
+				\item Più facile progettazione di accessibilità;
+				\item Template unico per varie pagine senza ripetizione;
+				\item Facile la modifica in caso di cambiamento;
+				\item Grafica accattivante per gli utenti.
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item I browser più datati hanno una non corretta interpretazione dei CSS;
+				\item Maggiore attenzione sulla psicologia di marketing grafico posta verso l'utente.
+			\end{itemize}
+		}
+		\subsubsection{Javascript}{
+			La caratteristica principale di Javascript, è quella di essere un linguaggio di scripting. Ci permetterà di eseguire particolari operazioni grazie alla flessibilità di questo linguaggio orientato agli oggetti ed eventi. Tali funzioni di script possono essere opportunamente inserite in file HTML, in pagine JSP o in appositi file separati con estensione .js poi richiamati nella logica di business.
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Possibilità di rendere dinamiche le pagine web e di estendere funzionalità;
+				\item Il linguaggio di scripting è più sicuro ed affidabile perché in chiaro e da interpretare, quindi può essere filtrato;
+				\item Gli script hanno limitate capacità, per ragioni di sicurezza, per cui non è possibile fare tutto con Javascript, ma occorre abbinarlo ad altri linguaggi evoluti, ( come Jolie );
+				\item Il codice Javascript viene eseguito sul client per cui il server non è sollecitato più del dovuto e la velocità dell'applicazione complessiva è migliore;
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Il è visibile e può essere letto da chiunque;
+				\item La mancanza di tipizzazione del linguaggio potrebbe indurre a commettere errori nel codice e rendere più difficile la progettazione dei test.
+			\end{itemize}
+		}
+		\subsubsection{Jolie}{
+			Jolie fissa i concetti di programmazione di microservizi come funzionalità del linguaggio native: gli elementi di base del software non sono oggetti o funzioni, ma piuttosto servizi che possono sempre essere trasferiti e replicati in base alle esigenze. Distribuzione e riusabilità si raggiungono con la semplice progettazione e codifica.\\
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Linguaggio orientato agli oggetti, basato su Java, con tutti i vantaggi dei linguaggi ad oggetti;
+				\item Linguaggio nato appositamente per i microservizi che è punto focale del nostro progetto;
+				\item Funziona perfettamente sia in locale sia in remoto, il codice non altera la logica dei programmi;
+				\item I servizi possono scambiare dati utilizzando diversi protocolli, non vi è uno specifico e possono essere diversi d'entrata che in uscita;
+				\item Essendo un codice orientato ai microservizi ogni prodotto creato può essere riutilizzato;
+				\item È dotato nativamente di primitive per workflow, questo rende il codice fluido per le esigenze, evitando le variabili computazionali soggette a errori per verificare ciò che è accaduto finora in un calcolo;
+				\item Jolie è dotato di una solida semantica per la gestione di errori della programmazione parallela. Possiamo  aggiornare il comportamento dei gestori degli errori in fase di esecuzione;
+				\item Implementa Leonardo\textsubscript{g}: servizio Jolie che agisce come un server web in grado di interagire con le applicazioni web scritte in diverse tecnologie (JSON, XML, AJAX, GWT). 
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Non compatibile con tutti i linguaggi e ancora in fase di prototipazione l'iterazione con database non relazionali;
+				\item Linguaggio nuovo e non usato in ogni suo ramo e sfaccettatura, manca infatti documentazione completa ed esaustiva.
+			\end{itemize}
+		}
+		\subsubsection{SQL}{
+			SQL è il linguaggio che andremo ad usare per quanto riguarda la parte di database della nostra applicazione web. Jolie offre dei comandi semplici e si interfacciano comodamente con il linguaggio per basi di dati relazionali.\\
+			È un linguaggio standardizzato per database basati sul modello relazionale (RDBMS) progettato per:
+			\begin{itemize}
+				\item creare e modificare schemi di database (DDL - Data Definition Language);
+				\item inserire, modificare e gestire dati memorizzati (DML - Data Manipulation Language);
+				\item interrogare i dati memorizzati (DQL - Data Query Language);
+				\item creare e gestire strumenti di controllo ed accesso ai dati (DCL - Data Control Language).
+			\end{itemize}
+			Nonostante il nome, non si tratta dunque solo di un semplice linguaggio di interrogazione, ma alcuni suoi sottoinsiemi si occupano della creazione, della gestione e dell'amministrazione del database.\\
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Già implementato e studiato per il nostro linguaggio cardine Jolie;
+				\item Già a conoscenza della totalità del team;
+				\item Elastico e integrato da tempo nelle applicazione web;
+				\item Molto veloce e permette di gestire un alto numero di operazioni/secondo;
+				\item Se ben programmato in principio avvantaggia maggiormente la lettura, importante per l'applicazione web;
+				
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Gestisce operazioni non troppo complicate;
+				\item Limitato su basi di dati troppo grandi;
+				\item Difficile riadattamento nel caso di modifica della struttura del database.
+			\end{itemize}
+		}
+	}
+	\subsection{Frameworks}{
+		
+		
+	}
+	\subsection{Librerie}{
+		\subsubsection{Leonardo: il web server di Jolie}{
+			%DA RIVEDERE
+			Leonardo è un server web sviluppata in puro Jolie. È molto flessibile e può scalare da un semplice contenuto statico HTML fino a sostenere un complesso servizio web dinamico.\\
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Scritto interamente in Jolie e facilmente implementabile nel prodotto;
+				\item Si interfaccia con HTML, JQuery;
+				\item Permette l'uso dei Cookies\textsubscript{g}.	
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Non è estendibile con qualsiasi linguaggio anche se vi sono già molti prototipi.
+			\end{itemize}
+		}
+	}
+}
