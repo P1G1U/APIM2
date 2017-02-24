@@ -66,11 +66,51 @@
 				\item Linguaggio nuovo e non usato in ogni suo ramo e sfaccettatura, manca infatti documentazione completa ed esaustiva.
 			\end{itemize}
 		}
+		\subsubsection{SQL}{
+			SQL è il linguaggio che andremo ad usare per quanto riguarda la parte di database della nostra applicazione web. Jolie offre dei comandi semplici e si interfacciano comodamente con il linguaggio per basi di dati relazionali.\\
+			È un linguaggio standardizzato per database basati sul modello relazionale (RDBMS) progettato per:
+			\begin{itemize}
+				\item creare e modificare schemi di database (DDL - Data Definition Language);
+				\item inserire, modificare e gestire dati memorizzati (DML - Data Manipulation Language);
+				\item interrogare i dati memorizzati (DQL - Data Query Language);
+				\item creare e gestire strumenti di controllo ed accesso ai dati (DCL - Data Control Language).
+			\end{itemize}
+			Nonostante il nome, non si tratta dunque solo di un semplice linguaggio di interrogazione, ma alcuni suoi sottoinsiemi si occupano della creazione, della gestione e dell'amministrazione del database.\\
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Già implementato e studiato per il nostro linguaggio cardine Jolie;
+				\item Già a conoscenza della totalità del team;
+				\item Elastico e integrato da tempo nelle applicazione web;
+				\item Molto veloce e permette di gestire un alto numero di operazioni/secondo;
+				\item Se ben programmato in principio avvantaggia maggiormente la lettura, importante per l'applicazione web;
+				
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Gestisce operazioni non troppo complicate;
+				\item Limitato su basi di dati troppo grandi;
+				\item Difficile riadattamento nel caso di modifica della struttura del database.
+			\end{itemize}
+		}
 	}
 	\subsection{Frameworks}{
+		
 	
 	}
 	\subsection{Librerie}{
-	
+		\subsubsection{Leonardo: il web server di Jolie}{
+			%DA RIVEDERE
+			Leonardo è un server web sviluppata in puro Jolie. È molto flessibile e può scalare da un semplice contenuto statico HTML fino a sostenere un complesso servizio web dinamico.\\
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Scritto interamente in Jolie e facilmente implementabile nel prodotto;
+				\item Si interfaccia con HTML, JQuery;
+				\item Permette l'uso dei Cookies\textsubscript{g}.	
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Non è estendibile con qualsiasi linguaggio anche se vi sono già molti prototipi.
+			\end{itemize}
+		}
 	}
 }
