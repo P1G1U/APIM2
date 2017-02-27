@@ -123,17 +123,19 @@
 {\renewcommand\arraystretch{1.2}
 		\begin{tabular}{|l|c|c|c|}
 			\hline
-			{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
+			{\textbf{Ver.}}&{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}\\
 			\hline
-			Validazione & Sebastiano Marchesini & 10/01/2017 & 1.0.0 \\
+			1.0.1 & Correzzione delle metriche e misure & Lonardi Pietro & 27/02/2017 \\
 			\hline
-			Verifica & Lonardi Pietro & 10/01/2017 & 0.5.0 \\
+			1.0.0 & Validazione & Sebastiano Marchesini & 10/01/2017 \\
 			\hline
-			Stesura del documento & Crivellaro Gianluca & 04/01/2017 & 0.2.0 \\
+			0.5.0 & Verifica & Lonardi Pietro & 10/01/2017 \\
 			\hline
-			Stesura introduzione & Danieli Piergiorgio & 04/01/2017 & 0.1.0 \\
+			0.2.0 & Stesura del documento & Crivellaro Gianluca & 04/01/2017 \\
 			\hline
-			Studio dei riferimenti & Crivellaro Gianluca & 02/01/2017 & 0.0.1 \\
+			0.1.0 & Stesura introduzione & Danieli Piergiorgio & 04/01/2017 \\
+			\hline
+			0.0.1 & Studio dei riferimenti & Crivellaro Gianluca & 02/01/2017 \\
 			\hline
 		\end{tabular}
 }
@@ -336,7 +338,7 @@
 	
 	\subsection{Misure e metriche}
 	\label{MisureMetriche}
-	Qui di seguito vengono elencate le misure e le metriche che verranno adottate nel processo di verifica. Il processo di verifica deve essere verificabile e quantificato secondo metriche stabilite a priori.\\
+	Qui di seguito vengono elencate le misure e le metriche che verranno adottate nel processo di verifica. Il processo di verifica deve essere verificabile e quantificato secondo metriche stabilite a priori, che posso essere consultate nelle \textit{Norme di progetto v.1.0.0}.\\
 	Vi possono essere due tipologie di range nell'accettazione dei risultati di un processo di verifica:
 	\begin{itemize}
 		\item \textbf{Accettazione}: è il livello minimo che il prodotto deve raggiungere per superare il test;
@@ -345,7 +347,6 @@
 
 		\subsubsection{Metriche per i processi}
 			\paragraph{Schedule Variance (SV)}
-			Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella baseline. È un indicatore di efficacia soprattutto nei confronti del Cliente. Se SV > 0 significa che il progetto sta producendo con maggior velocità a quanto pianificato, viceversa se negativo.\\
 			\textbf{Parametri utilizzati}:
 			\begin{itemize}
 				\item \textbf{Range di accettazione}: $\geq$ -(preventivo fase*5\%);
@@ -353,7 +354,6 @@
 			\end{itemize}
 		
 			\paragraph{Budget Variance (BV)}
-			Indica se alla data corrente si è speso di più o di meno rispetto a quanto previsto a budget alla data corrente. È un indicatore che ha un valore unicamente contabile e finanziario. Se BV > 0 significa che il progetto sta spendendo il proprio budget con minor velocità di quanto pianificato, viceversa se negativo. \\
 			\textbf{Parametri utilizzati}:
 			\begin{itemize}
 				\item \textbf{Range di accettazione}:$\geq$-(preventivo fase*10\%);
@@ -362,17 +362,6 @@
 		
 		\subsubsection{Metriche per i documenti}
 			\paragraph{Gulpease}
-			L'indice Gulpease è un indice, sviluppato per valutare la lingua italiana, che valuta la complessità e la leggibilità del testo. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. L'indice di Gulpease considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.\\
-			L'indice è calcolato con la seguente formula:
-			\[89+\frac{300*(\textit{numero delle frasi})-10*(\textit{numero delle lettere)}}{(\textit{numero delle parole})}\]
-			
-			I risultati sono compresi tra 0 e 100, dove il valore "100" indica la leggibilità più alta e "0" la leggibilità più bassa. In generale risulta che testi con un indice:
-			\begin{itemize}
-				\item inferiore a 80 sono difficili da leggere per chi ha la licenza elementare;
-				\item inferiore a 60 sono difficili da leggere per chi ha la licenza media;
-				\item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
-			\end{itemize}
-			Va notato che questo indice non considera che il testo sia comprensibile o meno, in effetti anche una frase con parole casuali potrebbe avere un ottimo indice Gulpease. I documenti perciò vanno valutati da un essere umano per rendere le frasi semplici ma comprensibili.\\
 			\textbf{Parametri utilizzati}:
 			\begin{itemize}
 				\item \textbf{Range di accettazione}: [40 - 100];
@@ -382,9 +371,6 @@
 			\paragraph{Metriche per il software}
 			
 			\paragraph{Complessità ciclomatica}
-			La complessità ciclomatica è una metrica software utilizzata per misurare la complessità di un programma. Misura direttamente il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso.\\
-			La complessità ciclomatica è calcolata utilizzando il grafo di controllo di flusso del programma: i nodi del grafo corrispondono a gruppi indivisibili di istruzioni, mentre gli archi connettono due nodi se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo gruppo.\\
-			Alti valori di questo indice indicano che il codice è poco manutenibile e difficile da testare, mentre valori bassi potrebbero indicare una scarsa efficienza nei metodi.\\
 			\textbf{Parametri utilizzati}:
 			\begin{itemize}
 				\item \textbf{Range di accettazione}: [1 - 15];
@@ -392,7 +378,6 @@
 			\end{itemize}
 		
 			\paragraph{Rapporto linee di commento su linee di codice}
-			Affinché il codice sia più facilmente comprensibile e manutenibile è necessario che sia adeguatamente commentato.\\
 			\textbf{Parametri utilizzati}:
 			\begin{itemize}
 				\item \textbf{Range di accettazione}: [>0.2];
@@ -400,7 +385,6 @@
 			\end{itemize}
 		
 			\paragraph{Numero di livelli di annidamento}
-			Indica il livello di annidamento delle strutture di controllo. Un numero troppo elevato può comportare difficoltà nella verifica e nella manutenibilità del codice.\\
 			\textbf{Parametri utilizzati}:
 			\begin{itemize}
 				\item \textbf{Range di accettazione}: [0-6];
@@ -408,31 +392,20 @@
 			\end{itemize}
 		
 			\paragraph{Numero di campi dati per classe}
-			Una classe con troppi campi dati potrebbe essere poco specializzata e quindi mal progettata. Una classe poco specializzata inoltre è anche poco manutenibile.\\
 			\textbf{Parametri utilizzati}:
 			\begin{itemize}
 				\item \textbf{Range di accettazione}: [0-15];
 				\item \textbf{Range ottimale}: [1-8].
 			\end{itemize}
 		
-			\paragraph{Accoppiamento}
-			L'indice di accoppiamento è il risultato di due indici:
-			\begin{itemize}
-				\item \textbf{Accoppiamento afferente}: è il numero di classi esterne ad un package che dipendono da classi interne ad esso. Un valore troppo elevato indica un altro grado di dipendenza, che potrebbe portare a criticità nel caso di modifiche;
-				\item \textbf{Accoppiamento efferente}: è il numero di classi interne al package dipendenti da classi esterne. Un valore troppo alto è sintomo di scarsa progettazione.
-			\end{itemize}			
-			Il calcolo dell'indice di stabilità, ottenuto unendo Accoppiamento afferente e Accoppiamento efferente avviene secondo la seguente formula:
-			\[I=\frac{Ce}{Ca+Ce}\]
-			
 			\paragraph{Validazione W3C}
-			Una pagina web per essere accessibile ed usabile deve essere valida secondo le norme del W3C. L'applicativo web deve superare tutti i test del validatore automatico W3C per quanto riguarda gli errori gravi, deve inoltre evitare quanti più warning possibili.\\
 			\textbf{Parametri utilizzati:}
 			\begin{itemize}
 				\item \textbf{Range di accettazione}: [0-5];
 				\item \textbf{Range ottimale}: [0-0].
 			\end{itemize}
+			
 			\paragraph{Euristica di Nielsen}
-			Le euristiche di Nielsen sono 10 euristiche studiate per controllare in modo metodico l'usabilità di un sito web, derivano dall'applicazione di tecniche di analisi fattoriale su 249 problemi di usabilità. Sono semplici da applicare e mostrano benefici nelle fasi iniziali di un progetto, ma sono informali e non sono automatizzabili in quanto richiedono un giudizio umano. Essendo parametri non completamente oggettivi, può capitare che alcune pagine siano usabili anche non rispettando tutte le euristiche, si è quindi posto un limite minimo di 6 euristiche rispettate.\\
 			\textbf{Parametri utilizzati:}
 			\begin{itemize}
 				\item \textbf{Range di accettazione}: 6/10;
