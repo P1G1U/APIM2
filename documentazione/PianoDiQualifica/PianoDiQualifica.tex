@@ -1,22 +1,25 @@
 \documentclass[12pt,a4paper,titlepage]{article}
+%va sempre messo article per "program documentation"
 \usepackage[italian]{babel}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
 \usepackage{titlesec}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage[a4paper,top=2cm,bottom=2cm,left=1cm,right=1cm]{geometry}
 \usepackage{soulutf8,color}
 \usepackage{multirow}
 \usepackage{lscape}
 \usepackage{graphicx}
 \usepackage{eurosym} %per il simbolo dell' \euro
-\usepackage{emptypage}                     
+\usepackage{emptypage} 
 % pagine vuote senza testatina e piede di pagina
-%\usepackage{hyperref}                     
+%\usepackage{hyperref} 
 % collegamenti ipertestuali
 \usepackage{fancyhdr}
 % pacchetto per intestazione e pie pagina
 \pagestyle{fancy}
+\usepackage{lastpage}
+% \textsubscript{g} per indicare termini nel glossario
 % \\ indica interruzione di riga
 % compilate 2 volte per documenti con indice
 % {\em qui testo in corsivo}
@@ -38,7 +41,7 @@
 %indica una tabella con 3 colonne e pos. testo centrale. La barra verticale ( | ) indica che vi è una linea divisoria verticale tra le celle.
 %\hline	linea separatrice orizzontale
 %testo1& testo2& testo3\\
-% & segna la fine del testo nella cella , \\ indica il fine della riga 
+% & segna la fine del testo nella cella, \\ indica il fine della riga 
 \newcommand{\minitab}[2][1]{\begin{tabular}#1 #2\end{tabular}}
 %GRAFICI
 %\begin{figure}
@@ -52,6 +55,8 @@
 \usepackage{fix-cm} % Permette l'incremento del font oltre misura
 \newcommand{\HRule}[1]{\hfill \rule{0.2\linewidth}{#1}} % Horizontal rule at the bottom of the page, adjust width here
 \definecolor{grey}{rgb}{0.9,0.9,0.9} % Colore del box del titolo
+\appendix
+\include{Appendice}
 \begin{document}
 	
 	\thispagestyle{empty} % Toglie il numero della pagina nella prima pagina
@@ -84,6 +89,7 @@
 	
 	{\centering \large 
 		\hfill \textbf{Versione} 1.0.0 \\
+		\hfill \textbf{Data di rilascio} XX/XX/2017
 		\hfill \textbf{Redazione} Gianluca Crivellaro \\
 		\hfill Piergiorgio Danieli \\
 		\hfill \textbf{Verifica} Pietro Lonardi \\
@@ -97,7 +103,7 @@
 		\HRule{1pt}
 		
 		\textbf{Sommario} \\
-		Questo documento ha l'obiettivo di misurare l'efficienza e pianificare i processi del progetto.
+		Questo documento ha l'obiettivo di fornire un metodo per misurare la qualità del prodotto.
 		
 	} % Linea orizzontale di estetica
 	
@@ -108,24 +114,25 @@
 	
 	%----------------------------------------------------------- FINE TEMPLATE TITOLO
 	
-\lhead{\includegraphics[width=0.2\linewidth]{../../LogoSWEgGroup}}
-\chead{}
-\lfoot{Piano di Qualifica}
-\cfoot{}
-\rfoot{\thepage}
-\renewcommand{\headrulewidth}{0.2pt}
-\renewcommand{\footrulewidth}{0.2pt}
-		
-\rhead{Registro Modifiche}
-\section{Registro Modifiche}
-\small %rippicciolisce il testo
+	\lhead{\includegraphics[width=0.2\linewidth]{../../LogoSWEgGroup}}
+	\chead{}
+	\lfoot{Piano Di Qualifica}
+	\cfoot{}
+	\rfoot{\thepage\ di \pageref{LastPage}} %compilare due volte per avere il numero di pagine totali
+	\renewcommand{\headrulewidth}{0.2pt}
+	\renewcommand{\footrulewidth}{0.2pt}
 	
-{\renewcommand\arraystretch{1.2}
+	\rhead{Registro Modifiche}
+	\section{Registro Modifiche}
+	\small %rippicciolisce il testo
+	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
 		\begin{tabular}{|l|c|c|c|}
 			\hline
 			{\textbf{Ver.}}&{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}\\
 			\hline
-			1.0.1 & Correzzione delle metriche e misure & Lonardi Pietro & 27/02/2017 \\
+			1.0.2 & Stesura dell'appendice & Lonardi Pietro & 22/02/2017
+			\hline
+			1.0.1 & Correzzione delle metriche e misure & Lonardi Pietro & 21/02/2017 \\
 			\hline
 			1.0.0 & Validazione & Sebastiano Marchesini & 10/01/2017 \\
 			\hline
@@ -138,19 +145,24 @@
 			0.0.1 & Studio dei riferimenti & Crivellaro Gianluca & 02/01/2017 \\
 			\hline
 		\end{tabular}
-}
+	}
+	\normalsize
+	
 	\newpage
 	
 	\tableofcontents
+	%crea indice automaticamente
 	\thispagestyle{empty}
+	
 	\newpage
+
 	\rhead{Introduzione}
 	\section{Introduzione}
 	\subsection{Scopo del documento}
-	Lo scopo del \textit{Piano di Qualifica} è di descrivere le strategie di verifica e validazione adottate dal gruppo SWEg al fine di perseguire obiettivi qualitativi per il progetto APIMarket.
+	Lo scopo del \textit{Piano di Qualifica} è di descrivere le strategie di verifica e validazione adottate dal gruppo SWEg al fine di perseguire obiettivi qualitativi per il progetto APIMarket\textsubscript{g}.
 	
 	\subsection{Scopo del Prodotto}
-	Lo scopo del progetto è la realizzazione di un applicazione web che gestisca e monitori microservizi, muniti di un'interfaccia Jolie. In particolare APIMarket deve permettere di vendere, acquistare e monitorare microservizi tramite la piattaforma.
+	Lo scopo del progetto è la realizzazione di un applicazione web che gestisca e monitori microservizi, muniti di un'interfaccia Jolie. In particolare APIMarket\textsubscript{g} deve permettere di vendere, acquistare e monitorare microservizi tramite la piattaforma.
 	
 	\subsection{Glossario}
 	Al fine di evitare ambiguità e ottimizzare la comprensione dei documenti, viene incluso un Glossario, nel quale saranno inseriti i termini tecnici, acronimi e parole che necessitano di essere chiarite.\\
@@ -184,7 +196,7 @@
 	\newpage
 	\rhead{Definizione obiettivi di qualità}
 	\section{Definizione obiettivi di qualità}
-	Il gruppo SWEg si impegna a rispettare il modello di standard definito in ISO/IEC 0126, il quale ha le seguenti qualità:
+	Il gruppo SWEg si impegna a rispettare il modello di standard definito in ISO/IEC 9126, il quale ha le seguenti qualità:
 		\subsection{Funzionalità}
 		Il sistema prodotto deve garantire tutte le funzionalità indicate nel documento \textit{"Analisi dei Requisiti v1.0.0"}. L'implementazione dei requisiti deve essere più completa ed economica possibile.
 		\begin{itemize}
@@ -220,8 +232,8 @@
 		\subsection{Manutenibilità}
 		Il sistema prodotto deve essere comprensibile ed estensibile in modo facile e verificabile.
 		\begin{itemize}
-			\item \textbf{Misura}: l'unità di misura utilizzata saranno le metriche sul codice descritte nella sezione \nameref{MisureMetriche};
-			\item \textbf{Metrica}: le metriche che verranno rispettate sono descritte nella sezione \nameref{MisureMetriche};
+			\item \textbf{Misura}: l'unità di misura utilizzata saranno le metriche sul codice descritte nel documento \textit{"Norme di Progetto v1.0.0"} ;
+			\item \textbf{Metrica}: le metriche che verranno rispettate sono descritte nel documento \textit{"Norme di Progetto v1.0.0"};
 			\item \textbf{Strumenti}: si veda il documento \textit{"Norme di Progetto v1.0.0"}.
 		\end{itemize}
 	
@@ -229,7 +241,7 @@
 		Il sistema deve essere più portabile possibile. Il sito deve essere visitabile da più browser possibili. Il sito deve essere sviluppato con sistemi che abbiano le varie componenti tecnologiche di tipo standard. Con il termine "standard" si intente che i contenuti devono poter essere utilizzati su più sistemi operativi e ambienti di lavoro possibili.
 			\begin{itemize}
 				\item \textbf{Misura}: il front end deve aderire agli standard W3C;
-				\item \textbf{Metrica}: se il software avrà la sufficienza in tutte le metriche descritte nella sezione \nameref{MisureMetriche}, allora il sito avrà le caratteristiche di portabilità descritte;
+				\item \textbf{Metrica}: se il software avrà la sufficienza in tutte le metriche descritte nel documento \textit{"Norme di Progetto v1.0.0"}, allora il sito avrà le caratteristiche di portabilità descritte;
 				\item \textbf{Strumenti}: si veda il documento \textit{"Norme di Progetto v1.0.0"}.
 			\end{itemize}
 		
@@ -252,8 +264,10 @@
 		\item i processi siano pianificati in modo dettagliato;
 		\item le risorse siano ripartite in modo chiaro.
 	\end{itemize}
-	L'attuazione di questi punti è descritta nel documento \textit{"Piano di progetto v1.0.0"}. Inoltre l'analisi costante della qualità del prodotto permette di monitorare in modo indiretto la qualità dei processi: se il prodotto è di bassa qualità sicuramente il processo è migliorabile.\\
-	Per valutare la qualità di un processo è fondamentale che questa sia quantificata, le metriche per fare ciò sono descritte nella sezione \nameref{MisureMetriche}.
+	L'attuazione di questi punti è descritta nel documento \textit{"Piano di Progetto v1.0.0"}. Inoltre l'analisi costante della qualità del prodotto permette di monitorare in modo indiretto la qualità dei processi: se il prodotto è di bassa qualità sicuramente il processo è migliorabile.\\
+	Per valutare la qualità di un processo è fondamentale che questa sia quantificata, le metriche per fare ciò sono descritte nel documento \textit{"Norme di Progetto v1.0.0"}.\\
+	
+	Per monitorare costantemente lo stato del processo il gruppo fa affidamento alle direttive fornite dallo standard ISO/IEC 15504 che tratta esattamente di come identificare lo stato di maturazione di un processo in modo da poter agire per migliorarlo nel caso sia necessario. Per approfondimenti si riporta alla documentazione linkata ai riferimenti all'inizio di questo documento.\\
 	
 	\subsection{Procedure di controllo di qualità di prodotto}
 	Il controllo di qualità dei prodotti verrà garantito dai seguenti processi:
@@ -269,28 +283,17 @@
 	Ogni fase del progetto, descritta nel documento \textit{"Piano di progetto v1.0.0"} produce un prodotto diverso, quindi necessita di diverse attività di verifica:
 	\begin{itemize}
 		\item \textbf{Analisi e Analisi di Dettaglio}: in questa fase si verifica che i processi e la documentazione prodotta rispettino le norme definite nel documento \textit{"Norme di Progetto v1.0.0"} e i tempi prestabiliti nel \textit{"Piano di Progetto v1.0.0"};
+	    \item \textbf{Progettazzione Achitetturale}; anche in questa fase sono presenti documenti perciò verranno effettuate le stesse verifiche della precedente fase, ovviamente sulle modifiche riportate nei documenti già esistenti e inoltre sui nuovi che vorranno prodotti. In questa fase non viene ancora steso codice perciò non verrà applicata un'analisi dinamica;
+	    \item \textbf{Programmazzione in Dettaglio e Codifica}: in questa fase si effettuerà una verifica sempre sui documenti che verranno stesi, sui vecchi documenti che subiranno modifiche e infine anche al codice che verrà prodotto attravero gli strumenti definiti nel documento \textit{"Norme di Progetto v1.0.0"}.
 	\end{itemize}
 
 	\subsection{Pianificazione strategica e temporale}
 	È essenziale che l'attività di verifica sia sistematica ed organizzata, al fine di evitare la propagazione di errori ed ottimizzare i tempi di sviluppo, per rispettare le scadenze elencate nel documento \textit{Piano di Progetto v1.0.0}.\\
 	Ogni fase di redazione di documenti e di codifica deve essere preceduta da una fase di studio preliminare, al fine di ridurre la possibilità di errori di natura concettuale o tecnica, e favorendo l'attività dei verificatori.\\
-	In seguito vengono riportate le scadenze fissate:
-	\begin{itemize}
-		\item \textbf{Revisioni formali}:
-			\begin{itemize}
-				\item \textbf{Revisione dei Requisiti}: 24/01/2017;
-				\item \textbf{Revisione di Accettazione}: 27/06/2017.
-			\end{itemize}
-		\item \textbf{Revisioni di progresso}:
-			\begin{itemize}
-				\item \textbf{Revisione di Progettazione}: 13/03/2017.
-				\item \textbf{Revisione di Qualifica}: 15/05/2017.
-			\end{itemize}
-	\end{itemize}
 	
 	\subsection{Responsabilità}
 	Al fine di garantire un processo di verifica efficace ed efficiente vengono attribuite delle responsabilità all'interno del gruppo di progetto.\\
-	I ruoli che intervengono nel processo di verifica sono il \textit{Project Manager} e il \textit{Verificatore}. La suddivisione dei compiti è descritta nel documento \textit{"Norme di Progetto v1.0.0"}.
+	I ruoli che intervengono nel processo di verifica sono il \textit{Project Manager} e il \textit{Verificatore}, inoltre l'\txtbf{Ammiistratore} ha il compito di assicurarsi che i processi di verifica vengano fatti in modo ottimale. La suddivisione dei compiti è descritta nel documento \textit{"Norme di Progetto v1.0.0"}.
 	
 	\subsection{Risorse}
 	Per realizzare il prodotto sono necessarie le seguenti risorse:
@@ -436,4 +439,33 @@
 		\item Applicazione del ciclo PDCA.
 	\end{itemize}
 	Successivamente viene applicato il metodo inspection ai diagrammi dei casi d'uso.
+	
+	\newpage
+	\rhead{Risultati RR}
+	\section{Appendice}
+	\subsection{Risultati al termine delle consegne}
+	In questa ultima sezione verranno riportati i risultati che vengono misurati dalle metriche definite nel documento \textit{"Norme di Progetto v1.0.0"} inoltre verranno contestualizzati secondo i range ottimali e di accettazzione definiti in questo documento.\\
+	
+	\subection{Analisi e analisi in dettaglio}
+	In questa fase è stata prodotta solo documentazione riguardante il progetto perciò saranno solo presenti esclusivamente metriche e misurazioni riguardanti i documenti.\\
+	Di seguito è riportata una tabella che contiene i documenti con il rispettivo valore che è risultato dall'indice di Gulpease:
+	\begin{tabular}{|c|c|}
+    	{\textbf{Nome documento}}&{\textbf{Valore Indice}}\\
+    	\hline
+    	Analisi dei Requisiti & 55\\
+    	\hline
+    	Norme di Progetto & 48\\
+    	\hline
+    	Piano di Progetto & 45\\
+    	\hline
+    	Piano di Quaifica & 49\\
+    	\hline
+    	Studio di Fattibilità & 43\\
+    \end{tabular}
+    Ogni documento rientra nel range di accettazzione, ma solo l'AdR rientra in quello ottimale. Una possibile spiegazione a questo fatto potrebbe essere che i termini utilizzati nei documenti sono molto specifici all'ambiente informatico e quindi il documento in se risulta difficilmente comprensibile 
+    per un lettore che non sia abituato a questi termini.\\
+    Ciò nonostante il gruppo si ritiene soddisfatto dei risultati ottenuti dall'indice anche se non hanno protato ad un range ottimale, considerando che alcuni dei documenti verranno modificati durante il procedere del progetto, i dati ottenuti possono migliorare e questo è ciò che il gruppo si impone di migliorare.\\
+    
+    Secondo ISO/IEC 15504 il processo di documentazione è allo stadio 1 in quanto i documenti potrebbero non soddisfare le esigenze e richiederebbero un ulteriore rivisitazione e correzione ove richiesto\\ 
+    
 \end{document}
