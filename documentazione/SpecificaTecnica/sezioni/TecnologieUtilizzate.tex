@@ -94,7 +94,54 @@
 		}
 	}
 	\subsection{Frameworks}{
-		
+		\subsubsection{AngularJS}{
+			{AngularJS}\textsubscript{g} è un framework JavaScript per lo sviluppo di applicazioni Web client side. Pur essendo relativamente giovane (la versione 1.0 è stata rilasciata nel 2012), il progetto ha riscosso un notevole successo dovuto all'approccio di sviluppo proposto e all'infrastruttura fornita che incoraggia l’organizzazione del codice e la separazione dei compiti nei vari componenti.\\
+			Per raggiungere questo obiettivo, AngularJS da un lato esalta e potenzia l’approccio dichiarativo del HTML nella definizione dell'interfaccia grafica, dall'altro fornisce strumenti per la costruzione di un’architettura modulare e testabile della logica applicativa di un’applicazione.\\
+			Angular fornisce tutto quanto occorre per creare applicazioni moderne che sfruttano le più recenti tecnologie, come ad esempio le Single Page Application, cioè applicazioni le cui risorse vengono caricate dinamicamente su richiesta, senza necessità di ricaricare l’intera pagina. Tra le principali funzionalità a supporto dello sviluppo di tali applicazioni segnaliamo:
+			\begin{itemize}
+				\item il binding bidirezionale (two-way binding)
+				\item la dependency injection
+				\item il supporto al pattern MVC
+				\item il supporto ai moduli
+				\item la separazione delle competenze
+				\item la testabilità del codice
+				\item la riusabilità dei componenti
+			\end{itemize}
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Estremamente espressivo, leggibile e di facile implementazione. Un'evoluzione all'HTML per facilitare le applicazioni web;
+				\item È completamente estensibile e funziona bene con altre librerie. Ogni funzione può essere modificato o sostituito in base alle esigenze del flusso di lavoro di sviluppo;
+				\item Integrazione perfetta con uno dei pattern scelti (che nei prossimi capitoli illustriamo) Model View ViewModel;
+				\item Data-Binding Bidirezionale di AngularJS gestisce la sincronizzazione tra il DOM e il modello, e viceversa;
+				\item AngularJS ha un sottosistema integrato di Independence Injection\textsubscript{g} che aiuta lo sviluppatore a creare un'applicazione facile da sviluppare, capire e provare; 
+				\item Utilizza le direttive\textsubscript{g}, cioè possono essere usate per creare tag HTML personalizzati che funzionano come nuovi widget personali. Possono anche essere usati per "decorare" elementi con un comportamento e manipolare attributi DOM in un modo interessante.
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Framework che si deve usare completamente e non si può lasciare spazio all'incomprensione;
+				\item Non vi sono IDE specifici o dedicati gratuiti;
+				\item Non vi sono delle linee guida internazionali, ma solo spunti vari nel web.
+			\end{itemize}
+		}
+		\subsubsection{Spring Framework - Spring Boot}{
+			Il progetto Spring Boot permette di semplificare, e di molto, lo sviluppo di applicazioni basate sul framework Spring.\\
+			La Spring Framework è un framework applicativo e inverte i controlli del contenitore per la piattaforma Java. Le funzionalità di base del framework possono essere utilizzate da qualsiasi applicazione Java, ma ci sono delle estensioni per la creazione di applicazioni web. 
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Pur essendo molto ampio, grazie alla sua modularità si può scegliere di integrare solo alcune parti all'interno del progetto;
+				\item Open Source\textsubscript{g};
+				\item Basato su piattaforma Java, già conosciuta dei membri del gruppo;
+				\item Adatto per le RESTful web service framework;
+				\item Semplifica le sviluppo delle applicazioni basate su Spring;
+				\item Risolve il problema di quali librerie Spring utilizzare e quale versione;
+				\item Risolve il problema dell'individuazione e configurazione di tutti i bean che saranno gestiti dal framework e necessari alla nostra applicazione. 
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Poca documentazione ufficiale (il sito contiene una solo pagina funzionante!);
+				\item Poca o nulla conoscenza da parte del gruppo;
+			\end{itemize}
+	}
 	
 	}
 	\subsection{Librerie}{
@@ -110,6 +157,48 @@
 			\textbf{Svantaggi :}
 			\begin{itemize}\itemsep1pt
 				\item Non è estendibile con qualsiasi linguaggio anche se vi sono già molti prototipi.
+			\end{itemize}
+		}
+		\subsubsection{Highcharts}{
+			È una libreria JavaScript che permette di gestire e inserire grafici all'interno della nostra applicazione web. La utilizziamo in particolare per mostrare le statistiche generiche del sito agli amministratori e i dati di interesse per i microservizi offerti dagli utenti. \\
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Compatibilità con tutti i browser moderni, sia desktop che mobile;
+				\item Interfacciamento semplice con Angular grazie a delle direttive;
+				\item Aggiornamento dei grafici in tempo reale;
+				\item Possibilità di esportare i grafici in vari formati;
+				\item Open source, quindi personalizzabile. E gratuito per fini non commerciali.
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Non è compatibile con vecchie versioni di AngularJS;
+				\item Non è mai stata utilizzata dai membri del gruppo.
+			\end{itemize}
+		}
+		\subsubsection{Angular Material}{
+			Angular Material è l’implementazione del Material Design in AngularJS. Fornisce un insieme di componenti per l’interfaccia utente riutilizzabili, testati e accessibili, basati sul Material Design\textsubscript{g}. \\
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Compatibilità con tutti i browser moderni, sia desktop che mobile;
+				\item Facile relazionarsi con AngularJS essendo la sua implementazione;
+				\item Documentazione e informazioni più volte usate e prodotte, oltre che esempi specifici.
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Anche questa tecnologia come AngularJS non è stata usata all'interno del gruppo e richiede particolare attenzione;
+				\item Tecnologia non definitiva e in continuo aggiornamento.
+			\end{itemize}
+		}
+		\subsubsection{Highcharts-ng}{
+			È una direttiva AngularJS per Highcharts. Servirà nella pratica ad usare le due librerie nel framework scelto.\\
+			\textbf{Vantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item Ausilio integrale della libreria Highcharts;
+				\item La documentazione presenta eventi ed è possibile comunicare direttamente con l'ideatore.
+			\end{itemize}
+			\textbf{Svantaggi :}
+			\begin{itemize}\itemsep1pt
+				\item È una tecnologia in continuo sviluppo migliorata dagli utenti, ha possibili variazioni e aggiornamenti.
 			\end{itemize}
 		}
 	}
