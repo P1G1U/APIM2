@@ -62,7 +62,7 @@
 						\hline
 						\textbf{Scalabilità} & + & All'aggiunta di classi e elementi basta estendere la classe agevolmente\\
 						\hline
-						\textbf{Sviluppo} & + & %MANCA \\
+						\textbf{Sviluppo} & n.q. & %INCOMPLETO \\
 						\hline
 					\end{tabular}
 				}
@@ -70,7 +70,47 @@
 		}
 	
 		\subsubsection{Model View ViewModel}{
-			%MANCA
+			\begin{figure}[ht]
+				\centering
+				\includegraphics{\docsImg ArchitetturaMVVM.png}
+				\caption{Illustrazione Model View ViewModel}
+				\label{Illustrazione Model View ViewModel}
+			\end{figure}
+			Il Model–view–viewmodel (MVVM) è un pattern software architetturale o schema di progettazione software. È una variante del pattern "Presentation Model design" di Martin Fowler.
+			\begin{itemize}\itemsep1pt
+				\item \textbf{Descrizione Generale} : Lo MVVM astrae lo stato di "view" (visualizzazione) e il comportamento. Sebbene, dove il modello di "presentazione" astrae una vista (crea un view model ) in una maniera che non dipende da una specifica piattaforma interfaccia utente. In pratica separa lo sviluppo dell'interfaccia utente dalla business logic\textsubscript{g}.\\
+				Le componenti sono le seguenti:
+				\begin{itemize}
+					\item Il \textbf{Model} rappresenta il punto di accesso ai dati. Trattasi di una o più classi che leggono dati dal DB, oppure da un servizio Web di qualsivoglia natura.
+					\item La \textbf{View} rappresenta la vista dell'applicazione, l'interfaccia grafica che mostrerà i dati.
+					\item Il \textbf{ViewModel} è il punto di incontro tra la View e il Model: i dati ricevuti da quest’ultimo sono elaborati per essere presentati e passati alla View.
+				\end{itemize}
+				Il fulcro del funzionamento di questo pattern è la creazione di un componente, il ViewModel appunto, che rappresenta tutte le informazioni e i comportamenti della corrispondente View. La View si limita infatti, a visualizzare graficamente quanto esposto dal ViewModel, a riflettere in esso i suoi cambi di stato oppure ad attivarne dei comportamenti.
+				\item \textbf{Considerazioni} : L'utente interagisce solo ed unicamente con li View. E la comunicazione di stato è comunicata al ViewModel. Come risposta al cambio di stato o all'attivazione di un metodo il ViewModel invia un segnale o esegue un operazione sul Model e aggiorna il proprio stato. Il nuovo stato del ViewModel si riflette sulla View.\\
+				È da sottolineare il fatto che il ViewModel mantiene nel proprio stato non solo le informazioni recuperate attraverso il Model, ma anche lo stato attuale della visualizzazione: ciò gli consente di essere del tutto disaccoppiato dalla View. Inoltre il processo step-by-step descritto in precedenza risulta essere un “two-way”, funziona cioè in entrambe le direzioni.\\
+				AngularJS implementa un modello basato su questa visione del pattern e utilizza HTML come linguaggio di templating, non richiede operazioni di DOM refresh e controlla attivamente le azioni utente ed eventi nel browser. 
+				\item \textbf{Analisi del Pattern} :
+				\small %rippicciolisce il testo
+				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
+					\begin{tabular}{|l|c|l|}
+						\hline
+						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
+						\hline
+						\textit{Agilità} & + & È il classico pattern a 3 elementi ed è ideologia di agilità \\
+						\hline
+						\textbf{Implementazione} & + & Avendo netta distinzione tra gli elementi è facile l'implementazione e mantenerlo\\
+						\hline
+						\textbf{Testabilità} & + & Lo Unit Testing nel MVVM dove le componenti siano "separate" contribuisce alla progettazione di unità di test efficaci.\\
+						\hline
+						\textbf{Performance} & + & Rispetto al classico modello MVC è più snello e quindi a confronto è più veloce \\
+						\hline
+						\textbf{Scalabilità} & + & Possono essere modificati implementati differentemente essendo separati\\
+						\hline
+						\textbf{Sviluppo} & + & Ogni singolo elemento del team può concentrarsi allo sviluppo di ogni diverso elemento \\
+						\hline
+					\end{tabular}
+				}
+			\end{itemize}
 		}
 	}
 	\subsection{Design Pattern Creazionali}{
