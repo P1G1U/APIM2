@@ -1,0 +1,49 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+%va sempre messo article per "program documentation"
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
+\usepackage{soulutf8,color}
+\usepackage{graphicx}
+\usepackage{emptypage}                     
+% pagine vuote senza testatina e piede di pagina
+%\usepackage{hyperref}                     
+% collegamenti ipertestuali
+\usepackage{fancyhdr}
+% pacchetto per intestazione e pie pagina
+\pagestyle{fancy}
+\lhead{\includegraphics[width=0.2\linewidth]{../../LogoSWEgGroup.png}}
+\chead{}
+\lfoot{Verbale n5}
+\rhead{01/03/2017}
+\cfoot{}
+\rfoot{Piergiorgio Danieli}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+\begin{document}
+\section*{Verbale n5}
+\subsection*{Data e Ora}
+\begin{center}
+\textbf{01/03/2017 10:45}
+\end{center}
+\subsection*{Partecipanti Interni}
+\begin{itemize}
+	\item Team SWEg group
+\end{itemize}
+\subsection*{Partecipanti Esterni}
+\begin{itemize}
+	\item Dott. Riccardo Cardin
+\end{itemize}
+\subsection*{Argomenti Trattati}
+In data 01/03/2017 si e' svolto un breve incontro tra il dott. Cardin ed il team SWEg group. Al termine della presentazioni delle RPMax il dott. Cardin ha risposto ad alcune domande del team che sono riporatte di seguito. L'incontro e' durato solamente 10 minuti circa. Al termine ci siamo riuniti per discutere di quello che avevano appreso dalle risposte ai quesiti. Abbiamo inoltre discusso del database da implementare per il nostro sistema. Abbiamo poi parlato e discusso del modo migliore per monitorare e registrare il traffico derivante dalle chiamate ai microservizi. In seguito abbiamo trattato in modo approfondito lo sviluppo ddel back-end e del front-end.
+\subsection*{Domande e Risposte}
+\begin{enumerate}
+	\item \textit{Quali framework ci consiglia di utilizzare?}\\
+	\hspace{35pt}Ci e' stato consigliato di utilizzare \textit{spring boot} oppure \textit{angularjs}.
+	\item \textit{Come facciamo a monitorare il traffico dati dei microservizi?}\\
+	\hspace{35pt}Attraverso delle courier.
+\end{enumerate}
+\end{document}
