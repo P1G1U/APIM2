@@ -1,13 +1,15 @@
 \section{Descrizione Design Pattern}{
 	\subsection{Design Pattern Architetturali}{
 			\subsubsection{Pattern Architetturale a Microservizi}{
+				Il pattern architetturale a microservizi è un pattern innovativo che va a sostituire la vecchia filosofia dei sistemi monolitici dedicato e alle architettura orientate ai servizi.
+				
 				\begin{figure}[ht]
 					\centering
 					\includegraphics{\docsImg ArchitetturaMicroservizi.png}
 					\caption{Illustrazione Architettura a Microservizi}
 					\label{Illustrazione Architettura a Microservizi}
 				\end{figure}
-				Il pattern architetturale a microservizi è un pattern innovativo che va a sostituire la vecchia filosofia dei sistemi monolitici dedicato e alle architettura orientate ai servizi.
+			
 				\begin{itemize}\itemsep1pt
 					\item \textbf{Descrizione Generale} : il primo concetto che caratterizza il pattern è l'idea di unità separate distribuite. Questo aumenta la scalabilità e un alto grado di disaccoppiamento all'interno della nostra applicazione. Forse il fattore più importante è pensare al microservizio non come componente dell'architettura ma come servizio in se, che può variare la propria granularità da un singolo modulo a gran parte dell'applicazione.\\
 					Un altro concetto chiave all'interno del modello microservices architettura è che si tratta di un'architettura distribuita, il che significa che tutti i componenti all'interno dell'architettura sono completamente disaccoppiati da un altro e sono accessibili attraverso una sorta di protocollo di accesso remoto.\\
@@ -41,6 +43,7 @@
 		}
 		\subsubsection{Data Access Object (DAO)}{
 			Il DAO (Data Access Object) è un pattern architetturale per la gestione della persistenza: si tratta fondamentalmente di una classe con relativi metodi che rappresenta un'entità tabellare di un database relazionale.
+			
 			\begin{itemize}\itemsep1pt
 				\item \textbf{Descrizione Generale} : Usata principalmente in applicazioni web (come ad esempio Java EE), per stratificare e isolare l'accesso ad una tabella tramite query (poste all'interno dei metodi della classe) ovvero al data layer da parte della business logic creando un maggiore livello di astrazione ed una più facile manutenibilità. I metodi del DAO con le rispettive query dentro verranno così richiamati dalle classi della business logic.
 				\item \textbf{Considerazioni} : Le Data Access Objects si fanno carico di gestire il codice SQL, mentre tutto ciò é trasparente rispetto alle corrispondenti classi di dominio e di controllo.\\ 
@@ -70,13 +73,15 @@
 		}
 	
 		\subsubsection{Model View ViewModel}{
+			Il Model–view–viewmodel (MVVM) è un pattern software architetturale o schema di progettazione software. È una variante del pattern "Presentation Model design" di Martin Fowler.
+			
 			\begin{figure}[ht]
 				\centering
 				\includegraphics{\docsImg ArchitetturaMVVM.png}
 				\caption{Illustrazione Model View ViewModel}
 				\label{Illustrazione Model View ViewModel}
 			\end{figure}
-			Il Model–view–viewmodel (MVVM) è un pattern software architetturale o schema di progettazione software. È una variante del pattern "Presentation Model design" di Martin Fowler.
+			
 			\begin{itemize}\itemsep1pt
 				\item \textbf{Descrizione Generale} : Lo MVVM astrae lo stato di "view" (visualizzazione) e il comportamento. Sebbene, dove il modello di "presentazione" astrae una vista (crea un view model ) in una maniera che non dipende da una specifica piattaforma interfaccia utente. In pratica separa lo sviluppo dell'interfaccia utente dalla business logic\textsubscript{g}.\\
 				Le componenti sono le seguenti:
@@ -115,14 +120,16 @@
 	}
 	\subsection{Design Pattern Creazionali}{
 		\subsubsection{Abstract Factory}{
+			L'Abstract Factory fornisce un'interfaccia per creare famiglie di oggetti connessi o dipendenti tra loro, in modo che non ci sia necessità da parte dei client di specificare i nomi delle classi concrete all'interno del proprio codice.
+			In questo modo si permette che un sistema sia indipendente dall'implementazione degli oggetti concreti e che il client, attraverso l'interfaccia, utilizzi diverse famiglie di prodotti.
+			
 			\begin{figure}[ht]
 				\centering
 				\includegraphics{\docsImg AbstractFactory.png}
 				\caption{Illustrazione Pattern Abstract Factory}
 				\label{Illustrazione Pattern Abstract Factory}
 			\end{figure}
-			L'Abstract Factory fornisce un'interfaccia per creare famiglie di oggetti connessi o dipendenti tra loro, in modo che non ci sia necessità da parte dei client di specificare i nomi delle classi concrete all'interno del proprio codice.
-			In questo modo si permette che un sistema sia indipendente dall'implementazione degli oggetti concreti e che il client, attraverso l'interfaccia, utilizzi diverse famiglie di prodotti.
+			
 			\begin{itemize}\itemsep1pt
 				\item \textbf{Descrizione Generale} : Il pattern Abstract Factory definisce un'interfaccia con una serie di metodi per creare una famiglia di prodotti correlati. La famiglia di oggetti correlati è definita attraverso una serie di tipi di elementi. L'attuazione dei tipi di prodotto è delegata a un insieme di sottoclassi di elementi concreti. La creazione delle classi di prodotto concrete è attuato per serie di classi factory concrete. Il pattern Abstract Factory rinvia la creazione degli elementi concreti alle classi "di fabbrica" concrete che implementa l'Abstract Factory. L'oggetto client è disaccoppiato dalle classi di prodotti e le classi di fabbrica attraverso l'interfaccia Abstract Factory. Il nucleo del pattern Abstract Factory è quello di creare un gruppo di oggetti correlati che potrebbero avere diverse implementazioni. Il sistema è quindi indipendente dell'attuazione dei tipi di prodotto. Il pattern Abstract Factory permette anche il sistema per sostituire un insieme di classi di prodotti correlati con un altro set, cambiando la classe fabbrica.
 				\item \textbf{Considerazioni} : Questo pattern è utile quando si vuole un sistema indipendente da come gli oggetti vengono creati, composti e rappresentati. Si vuole permettere la configurazione del sistema come scelta tra diverse famiglie di prodotti. I prodotti che sono organizzati in famiglie siano vincolati ad essere utilizzati con prodotti della stessa famiglia. Si vuole infine fornire una libreria di classi mostrando solo le interfacce e nascondendo le implementazioni.
@@ -151,13 +158,15 @@
 		}
 	
 		\subsubsection{Dependency Injection}{
+			Dependency Injection (DI) è un design pattern della programmazione orientata agli oggetti il cui scopo è quello di semplificare lo sviluppo e migliorare la testabilità di software di grandi dimensioni.
+			
 			\begin{figure}[ht]
 				\centering
 				\includegraphics{\docsImg CreazionaleDI.png}
 				\caption{Illustrazione Pattern Dependency Injection}
 				\label{Illustrazione Pattern Dependency Injection}
 			\end{figure}
-			Dependency Injection (DI) è un design pattern della programmazione orientata agli oggetti il cui scopo è quello di semplificare lo sviluppo e migliorare la testabilità di software di grandi dimensioni.\\
+		
 			\begin{itemize}\itemsep1pt
 				\item \textbf{Descrizione Generale} : Per utilizzare tale design pattern è sufficiente dichiarare le dipendenze che un componente necessita (dette anche interface contracts). Quando il componente verrà istanziato, un iniettore si prenderà carico di risolvere le dipendenze (attuando dunque l'inversione del controllo). Se è la prima volta che si tenta di risolvere una dipendenza l'injector istanzierà il componente dipendente, lo salverà in un contenitore di istanze e lo ritornerà. Se non è la prima volta, allora ritornerà la copia salvata nel contenitore. Una volta risolte tutte le dipendenze, il controllo può tornare al componente applicativo.
 				\item \textbf{Considerazioni} : È stata scelta la Dependency Injection perchè ci sono molti riferimenti e esempi con AngularJS. Con il linguaggio è legata anche la pratica della minificazione\textsubscript{g} del codice, processo per ridurre la dimensione del codice. Se infatti non si adottasse questo accorgimento, durante il processo che riduce la lunghezza del nome delle variabili si verrebbero a perdere i riferimenti ai nomi dei componenti che rappresentano le dipendenze.\\
@@ -188,13 +197,15 @@
 	}
 	\subsection{Design Pattern Strutturali}{
 		\subsection{Facade}{
+			Letteralmente facade significa "facciata", ed infatti nella programmazione ad oggetti indica un oggetto che permette, attraverso un'interfaccia più semplice, l'accesso a sottosistemi che espongono interfacce complesse e molto diverse tra loro, nonché a blocchi di codice complessi.
+			
 			\begin{figure}[ht]
 				\centering
 				\includegraphics{\docsImg StrutturaleFacade.png}
 				\caption{Illustrazione Pattern Facade}
 				\label{Illustrazione Pattern Facade}
 			\end{figure}
-			Letteralmente facade significa "facciata", ed infatti nella programmazione ad oggetti indica un oggetto che permette, attraverso un'interfaccia più semplice, l'accesso a sottosistemi che espongono interfacce complesse e molto diverse tra loro, nonché a blocchi di codice complessi.
+			
 			\begin{itemize}\itemsep1pt
 				\item \textbf{Descrizione Generale} : Fornisce un interfaccia unica e semplice per un sottosistema complesso. Questo porta a una strutturazione ordinata di un sistema di sottoinsiemi. Questo diminuisce la complessità del sistema avendo una figura intermedia anche se aumenta la dipendenza dei sottoinsiemi; semplificando le dipendenze però non mantiene il principio di information-hiding mostrando funzionalità che sarebbero nascoste dai sottogruppi.
 				\item \textbf{Considerazioni} : Facade si usa quando si vuole semplicemente comunicare con un sottosistema di elementi. Si usa oltre per interfacciarsi a un sistema difficile, quando il sistema sottostante è veramente complesso e difficile da comprendere. Facade fa anche da punto di comunicazione per ogni livello dello strato software oppure perché le astrazioni e le implementazioni di un sottosistema sono strettamente accoppiati.\\
@@ -225,7 +236,46 @@
 	}
 	\subsection{Design Pattern Comportamentali}{
 		\subsubsection{Command}{
+			Nella programmazione ad oggetti, il Command pattern è uno dei pattern fondamentali, definiti originariamente dalla "gang of four"\textsubscript{g}. Fa parte della tipologia dei pattern comportamentali cioè rispondono alle domande: 
+			\begin{itemize}
+				\item In che modo un oggetto svolge la sua funzione?
+				\item In che modo diversi oggetti collaborano tra loro?
+			\end{itemize}
 		
+			\begin{figure}[ht]
+				\centering
+				\includegraphics{\docsImg ComportamentaleCommand.png}
+				\caption{Illustrazione Pattern Command}
+				\label{Illustrazione Pattern Command}
+			\end{figure}
+		
+			\begin{itemize}\itemsep1pt
+				\item \textbf{Descrizione Generale} :  Incapsula una richiesta (callback\textsubscript{g}) in un oggetto, così il client sia indipendente dalle richieste. Questo per gestire richieste (toolkit) di cui non si conoscono i particolari ed è qui che interviene l'interfaccia (come classe astratta Command) che ne definisce le proprietà per eseguire la richiesta.\\
+				Parametrizzazione di oggetti sull'azione da eseguire. Specifica, accordare ed eseguire richieste molteplici volte. Se necessario supporto anche delle operazioni di annullamento e ripristino. Oltre a supportare la transizione con un comando equivalente ad un operazione atomica.
+				\item \textbf{Considerazioni} : L'accoppiamento tra oggetto invocante e quelle che portano a termine l'operazione è più lasco. È il Command che svolge operazioni differenti e può essere tranquillamente esteso con tutti i pregi del caso.\\
+				Così si forma il binding  fra il ricevente e l'azione da eseguire. L'oggetto dell'operazione non è deciso al momento della creazione delle azioni ma a tempo di esecuzione. È possibile incapsulare un'azione in modo che questa sia atomica. È così possibile implementare un paradigma basato su transazioni in cui un insieme di operazioni è svolto in toto o per nulla. Il Command può memorizzare lo stato precedente alla sua esecuzione, ripristinandolo qualora l'operazione debba essere annullata. E infine non meno importante è possibile rendere asincrona la scelta dei comandi rispetto alla loro esecuzione. Un certo numero di command possono essere consumati da un altro oggetto che li riceve in un tempo diverso dalla loro selezione.
+				\item \textbf{Analisi del Pattern} : 
+				\small %rippicciolisce il testo
+				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
+					\begin{tabular}{|l|c|l|}
+						\hline
+						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
+						\hline
+						\textit{Agilità} & + & Con chiamate asincrone è possibile eseguire più richieste agilmente anche se con un passaggio in più. E il client manda solamente la richiesta. \\
+						\hline
+						\textbf{Implementazione} & + & Buona l'implementazione che unisce varie sottoclassi di creazione in una unica \\
+						\hline
+						\textbf{Testabilità} & - & Pecca del pattern è che deve essere implementato prima del test e difficile sostituzione \\
+						\hline
+						\textbf{Performance} & + &  Senza la necessità per il cliente di essere a conoscenza dell'esistenza di funzioni particolari e in maniera asincrona il command lavora ad alte prestazioni. \\
+						\hline
+						\textbf{Scalabilità} & + & Non è per niente complesso e scalare aggiungere command. \\
+						\hline
+						\textbf{Sviluppo} & - & Lo sviluppo del command richiede una complessa riflessione oltre che alla creazione di più classi per implementarlo al meglio.\\
+						\hline
+					\end{tabular}
+				}
+			\end{itemize}
 		}
 	}
 }
