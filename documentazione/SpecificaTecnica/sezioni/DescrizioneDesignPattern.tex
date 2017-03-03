@@ -173,24 +173,24 @@
 				\item \textbf{Descrizione Generale} : Per utilizzare tale design pattern è sufficiente dichiarare le dipendenze che un componente necessita (dette anche interface contracts). Quando il componente verrà istanziato, un iniettore si prenderà carico di risolvere le dipendenze (attuando dunque l'inversione del controllo). Se è la prima volta che si tenta di risolvere una dipendenza l'injector istanzierà il componente dipendente, lo salverà in un contenitore di istanze e lo ritornerà. Se non è la prima volta, allora ritornerà la copia salvata nel contenitore. Una volta risolte tutte le dipendenze, il controllo può tornare al componente applicativo.
 				\item \textbf{Considerazioni} : È stata scelta la Dependency Injection perchè ci sono molti riferimenti e esempi con AngularJS. Con il linguaggio è legata anche la pratica della minificazione\textsubscript{g} del codice, processo per ridurre la dimensione del codice. Se infatti non si adottasse questo accorgimento, durante il processo che riduce la lunghezza del nome delle variabili si verrebbero a perdere i riferimenti ai nomi dei componenti che rappresentano le dipendenze.\\
 				La dependency injection è un design pattern che delega ad un’entità esterna il compito di individuare e fornire una risorsa di cui un oggetto ha bisogno. Nel nostro caso, se un componente Angular, come ad esempio un controller, ha bisogno delle funzionalità di messe a disposizione da un servizio non deve fare altro che specificare il suo nome tra i parametri della sua definizione.
-				\item \textbf{Analisi del Pattern} : %DA COMPLETARE
+				\item \textbf{Analisi del Pattern} :
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
 					\begin{tabular}{|l|c|l|}
 						\hline
 						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 						\hline
-						\textit{Agilità} & + & È nella definizione del pattern creazionale la possibilità di creare oggetti a partire da qualsiasi classe. \\
+						\textit{Agilità} & -/+ & Non è molto flessibile, ma si può migliorare sostanzialmente con un interfaccia. Inoltre disaccoppia facilmente le classi. \\
 						\hline
-						\textbf{Implementazione} & + & Singola istanza della factory. Semplicità di aggiungere una nuova famiglia. Difficile però aggiungere un'interfaccia. \\
+						\textbf{Implementazione} & -/+ & Attenzione che creare istanze di classe può diventare ingombrante, soprattutto quando le classi crescono di responsabilità e cominciano ad avere troppe dipendenze. \\
 						\hline
-						\textbf{Testabilità} & +/- & Isolamento di tipo concreto e quindi facilmente verificabile. Nella modifica c'è bisogno di una riverifica generale. \\
+						\textbf{Testabilità} & + & La DI associata ad AngularJS promuove la testabilità del framework e del pattern. \\
 						\hline
-						\textbf{Performance} & n.q. & Dipende tutto dall'implementazione della classe su cui si vuole fare la factory. \\
+						\textbf{Performance} & + & Si occupa il pattern insieme al framework AngularJS delle "iniezioni" di dipendenze senza che badiamo noi alle performance, dobbiamo scegliere solo l'implementazione migliore. \\
 						\hline
-						\textbf{Scalabilità} & - & Aggiungere nuove famiglie di prodotti è difficile perché l’insieme di prodotti gestiti è legato all'interfaccia della factory. \\
+						\textbf{Scalabilità} & + & Migliorando la modularità del codice è più facile un approccio scalabile al pattern. \\
 						\hline
-						\textbf{Sviluppo} & + & L'interfaccia di per se è di facile implementazione e compare in un unico punto del codice. \\
+						\textbf{Sviluppo} & - & Sviluppo delle DI associato ad AngularJS è complesso e per niente scontato. \\
 						\hline
 					\end{tabular}
 				}
@@ -212,7 +212,7 @@
 				\item \textbf{Descrizione Generale} : Fornisce un interfaccia unica e semplice per un sottosistema complesso. Questo porta a una strutturazione ordinata di un sistema di sottoinsiemi. Questo diminuisce la complessità del sistema avendo una figura intermedia anche se aumenta la dipendenza dei sottoinsiemi; semplificando le dipendenze però non mantiene il principio di information-hiding mostrando funzionalità che sarebbero nascoste dai sottogruppi.
 				\item \textbf{Considerazioni} : Facade si usa quando si vuole semplicemente comunicare con un sottosistema di elementi. Si usa oltre per interfacciarsi a un sistema difficile, quando il sistema sottostante è veramente complesso e difficile da comprendere. Facade fa anche da punto di comunicazione per ogni livello dello strato software oppure perché le astrazioni e le implementazioni di un sottosistema sono strettamente accoppiati.\\
 				Vi è quindi un disaccoppiamento tra sottosistemi e client creando così una divisione a noi tanto cara come l'idea a microservizi, nascondendo così i livelli tra l'astrazione e l'implementazione. Così si crea una stratificazione di sistema.
-				\item \textbf{Analisi del Pattern} : %DA COMPLETARE
+				\item \textbf{Analisi del Pattern} :
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
 					\begin{tabular}{|l|c|l|}
@@ -221,15 +221,15 @@
 						\hline
 						\textit{Agilità} & - & Non riduce le dipendenze ma le concentra con un unico elemento Facade. \\
 						\hline
-						\textbf{Implementazione} & + & Semplifica i sottosistemi con un interfaccia unica. \\
+						\textbf{Implementazione} & + & Semplifica i sottosistemi con un interfaccia unica. Quindi aiuta a ridurre la complessità.  \\
 						\hline
-						\textbf{Testabilità} & + & Più facile la testabilià nel caso di driver. \\
+						\textbf{Testabilità} & +/- & La filosofia facade ispira un test automatizzato specifico denominato facade-test che è più di un test di unità, ma non abbastanza come un test di integrazione . \\
 						\hline
-						\textbf{Performance} & - & Sistema centrato. Se manca il facade il sistema crolla. \\
+						\textbf{Performance} & - & Sistema centrato. Se manca il facade il sistema crolla rende instabile e non performante il pattern. \\
 						\hline
-						\textbf{Scalabilità} & + & Aggiungere nuove famiglie di prodotti è semplice, basta collegarlo al facade. \\
+						\textbf{Scalabilità} & + & Aggiungere nuove famiglie di prodotti è semplice, basta collegarlo all'interfaccia facade senza sforzo. \\
 						\hline
-						\textbf{Sviluppo} & n.q. & Interfaccia di facile implementazione, dipende dalla complessità del sottosistema lo sviluppo. \\
+						\textbf{Sviluppo} & n.q. & Interfaccia di facile implementazione; dipende dalla complessità del sottosistema lo sviluppo. \\
 						\hline
 					\end{tabular}
 				}
