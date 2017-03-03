@@ -1,67 +1,221 @@
-\section{Titolo}{
-	Testo:
-	\begin{itemize}\itemsep1pt
-		\item lista;
-		\item lista.
-	\end{itemize} 
+\section{Architettura Database}{
+	In questa sezione viene descritta la progettazione del database che conterra' tutte le informazioni utili al nostro sistema. Abbiamo scelto di utilizzare un database relazionale.
 	
-	\subsection{SottoTitolo}{
-		Testo.
+	\subsection{Progettazione concettuale}{
+		Nella progettazione concettuale viene modellata la realta' da rappresentare. Sono state individuate le classi e le relazioni tra di esse, definendo cosi' la struttura che avra' il database.
 		
 		\begin{figure}[ht]
 			%serie figure
 			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura1.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 1}
-				\label{Titolo Figura 1}
+				\includegraphics{"ProgettazioneConcettuale"}
+				\caption{Progettazione Concettuale}
+				\label{Fig. Progettazione Concettuale}
 			\end{subfigure}
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura2.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 2}
-				\label{Titolo Figura 2}
-			\end{subfigure}
+			
+			\subsubsection{Schema concettuale}
+			
+			\subsubsection{Classi}
+			\textit{Users}\\
+			Questa e' l'entita' che rappresenta tutti gli utenti che utilizzeranno il software, siano essi utenti normali o amministratori. Questa entita' come si vede dallo schema e' superclase di Utenti e di Admin. Gli attributi sono: 
+			\begin{center}
+			\begin{tabular}{lccc}
+				&Attributo&Tipo&Vincolo\\
+				Username&String&PRIMARY KEY\\
+				Password&String& \\
+				Nome&String& \\
+				Cognome&String& \\
+				DataNascita&Date& \\
+				Mail&String& \\
+				SaldoCoin&Double& \\
+				IsAdmin
+			\end{tabular}
+			\end{center} \\
+			\textit{Utenti}\\
+			Questa entita' rappresenta gli utenti normali che utilizzeranno la piattaforma. E' una sottoclasse di \textbf{Users} e quindi eredita i suoi attributi.  \\
+			\textit{Admin}\\
+			Questa entita' invece rappresenta gli amministratori che gestiranno la piattaforma. Come la precedente e' una sottocalsse di textbf{Users} e ne eredita gli attributi. \\
+			\textit{API}\\
+			Questa entita' rappresenta le API presenti nel sistema. Gli attributi sono:
+			\begin{center}
+			\begin{tabular}{lccc}
+				&Attributo&Tipo&Vincolo\\
+				Nome API&String&PRIMARY KEY\\
+				LinkFile&String& \\
+				LinkPdf&String& \\
+				NumeroVoti&Int& \\
+				RatingMedio&Double& \\
+				TempoMedioRisposta&double& \\
+				TotaleChiamate&Int& \\
+				Traffico&Double& \\
+				TempoRispostaTotale&Double& \\
+			\end{tabular}
+			\end{center}
+			In particolare in questa tabella sono contenute le statistiche di ogni API come il \textbf{Tempo Medio Risposta}, il \textbf{Traffico} di dati che comporta l'tilizzo di quel microservizio, il numero \textbf{Totale Chiamate} e il \textbf{Tempo Risposta Totale}. \\
+			\textit{Chiavi}\\
+			Questa entita' rappresenta le chiavi che verranno assegnate ad un utente quando acquista un microservizio per potervi accedere ed utilizzarlo. Gli attributi sono: \\
+			\begin{center}
+			\begin{tabular}{lccc}
+				&Attributo&Tipo&Vincolo\\
+				Key&String&PRIMARY KEY\\
+				DataScadenza&Date& \\
+				MaxByte&Double& \\
+				TempoUso&Double& \\
+			\end{tabular}
+			\end{center}
+			In particolare gli attributi \textbf{DataScadenza, MaxByte e TempoUso} sono i limiti entro i quali la chiave puo' essere utilizzata. Secondo la policy di acquisto di un microservizio, al raggiungimento di tale limite la chiave scadra' e non permettera' piu' l'utilizzo di tale microservizio.
+			\textit{Commenti}\\
+			Questa entita' rappresenta i commenti ed il voto  che gli utenti possono lasciare su ogni microservizio che hanno utilizzato. Gli attributi sono:
+			\begin{center}
+			\begin{tabular}{lccc}
+				&Attributo&Tipo&Vincolo\\
+				IdCommento&Int&PRIMARY KEY\\
+				Testo&String& \\
+				Rating&Int& \\
+			\end{tabular}
+			\end{center}
+			In particolare textbf{Rating} sara' il giudizio che l'utente lascera' del microservizio utilizzato. \\
+			
+			\textit{Categorie}
+			Questa entita' rappresenta la suddivisione in categorie dei vari microservizi. L'amministratore puo' aggiungere o togliere categorie a propria scelta. Gli attributi sono: 
+			\begin{center}
+			\begin{tabular}{lccc}
+				&Attributo&Tipo&Vincolo\\
+				IdCategoria&Int&PRIMARY KEY\\
+				Categoria&String& \\			
+			\end{tabular}
+			\end{center}\\
+			
+			\textit{Acquisti}
+			Questa entita' contiene lo storico degli acquisti effettuati dagli utenti.
+			\begin{center}
+			\begin{tabular}{lccc}
+				&Attributo&Tipo&Vincolo\\
+				IdAcquisto&Int&PRIMARY KEY\\
+			\end{tabular}
+			\end{center}
+	\subsubsection{Associazioni}
+		\begin{itemize}
+			\item\textit{Users-Acquisto}: molteplicita'n - 1. Un utente puo' acquistare uno o piu' microservizi, un microservizio puo' esser acquistata da uno o piu' utenti.
+			\item\textbf{Users-API}: molteplicita' 1 - n. Un utente puo' mettere a disposizione uno o piu' microservizi, mentre un microservizio e' inserito nel database dal un solo utente.
+			\item\textbf{Users-Commenti}: molteplicita' 1 - n. Un utente puo' lasciare diversi commenti in diverse API, mentre un commento e' lasciato per forza da un solo utente;
+			\item\textbf{API-Commenti}: molteplicita' 1 - n. Una API puo' avere diversi commenti, ma un commento puo' essere lasciato su una sola API.	
+			\item\textbf{Acquisto-Chiavi}: molteplicita' 1 - 1. Ogni acquisto avra' associata la propria chiave. 
+			\item\textbf{API - Chiavi}: molteplicita' 1 - n. Una API avra' ad essa associate piu' chiavi, mentre una chiave appartiene ad una sola API.
+			\item\textbf{API-Categorire}: molteplicita' 1 - n. Ad una categoria appartengono una o piu' API, mentre una API appartiene ad una sola categoria.
+			\item\textbf{Users-Chiavi}: molteplicita' 1 -n. Un utente puo' possedere una o piu' chiavi, mentre una chiave sara' associata ad un solo utente.
+		\end{itemize}				
+								
 			\\
 			\\
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura3.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 3}
-				\label{Titolo Figura 3}
-			\end{subfigure}
-		\end{figure}
 	}
-	\subsection{SottoTitolo}{
-		Testo.
-	\\
-		Testo.
+	\subsection{Progettazione logico-relazionale}{
+		La progettazione logico-relazionale segue la progettazione concettuale. Da qui le classi o entita' verranno chiamate relazioni. In questa fase vengono inserite in ogni relazione le chiavi esterne per rappresentare le gerarchie e le associazioni.
+		\subsubsection{Schema logico-relazionale}
 		\begin{figure}[ht]
 			\centering
-			\includegraphics{\docsImg figura.png}
-			\caption{Testo figura}
-			\label{Testo figura}
-		\end{figure}
+			\includegraphics{"ProgettazioneLogica"}
+			\caption{Progettazione Logica}
+			\label{Fig. Progettazione Logica}
+		\end{figure} \\
+		\subsubsection{Gerarchie}
+		\textbf{Users - Utenti - Admin}: La gerarchia e' stat implementata come tabella unica. La due sottoclassi \textbf{Utenti} e \textbf{Admin} sono comprese nella superclasse \textbf{Users}. Viene solamente aggiunto un attributo discriminante per distinguere un utente normale da un amministratore.\\
+		\subsubsection{Relazioni}
+		\textbf{Categorie}\\
+		Gli attributi sono: \\
+			\begin{center}
+			\begin{tabular}{lccc}
+				&Attributo&Tipo&Vincolo\\
+				IdCategoria&Int&PRIMARY KEY\\
+				Categoria&Varchar& \\
+			\end{tabular}
+			\end{center}\\
+			
+		\textbf{Users}\\
+			Relazione creata dall'implementazione tramite tabella unica della gerarchia Users - Utenti - Admin. Gli attributi sono:
+			\begin{center}
+			\begin{tabular}{lccc}
+				&Attributo&Tipo&Vincolo\\
+				Username&Varchar&PRIMARY KEY\\
+				Password&Varchar& \\				
+				Nome&Varchar& \\
+				Cognome&Varchar& \\
+				DataNascita&Date& \\				
+				Mail&Varchar& \\
+				SaldoCoin&Double& \\
+				IsAdmin&Boolean& \\
+				NomeAPI&Varchar&FOREIGN KEY\\
+			\end{tabular}
+			\end{center} \\					
+			
+		\textbf{API}\\
+			Gli attributi sono:
+			\begin{center}
+			\begin{tabular}{lccc}
+				&Attributo&Tipo&Vincolo\\
+				NomeAPI&Varchar&PRIMARYKEY\\
+				LinkFile&Varchar& \\
+				LinkPdf&Varchar& \\
+				NumeroVoti&Int& \\
+				RatingMedio&Double& \\
+				TempoMedioRisposta&Double& \\
+				TotaleChiamate&Int& \\
+				Traffico&Doule& \\
+				TempoRispostaTotale&Double& \\
+				Username&Varchar&FOREING KEY\\
+				Categoria&Varchar&FOREIGN KEY\\
+			\end{tabular}
+			\end{center}\\
+			
+		\textbf{Commenti}\\
+			Gli attributi sono:
+			\begin{center}
+			\begin{tabular}{lccc}
+				&Attributo&Tipo&Vincolo\\
+				IdCommento&Int&PRIMARY KEY\\
+				Testo&Varchar& \\
+				Rating&Int& \\
+				Username&Varchar&FOREIGN KEY\\
+				NomeAPI&Varchar&FOREIGN KEY\\
+			\end{tabular}
+			\end{center}\\
 		
-		Testo.
-		\\
-		Testo:
-		\begin{itemize}\itemsep1pt
-			\item lista; con:
-			\begin{itemize}\itemsep1pt
-				\item sottolista
-				\item \textbf{testogrossetto}: da da da;
-				\item \textit{Testo corsivo}.\\ 
-				Ancora testo.
-				\item testo.
-			\end{itemize}
-			\item Continua la lista di prima.
-		\end{itemize}
+		\textbf{Chiavi}
+			Questa tabella si crea dalla relazione tra Users e API. Rappresenta l'acquisto da parte di un utente di un microservizio. All'utente viene assegnata una chiave con la quale poter accedere al microservizio. Gli attributi sono:
+			\begin{center}
+			\begin{tabular}{lccc}
+				&Atttributo&Tipo&Vincolo\\
+				Key&Varchar&PRIMARY KEY\\
+				DataScadenza&Date& \\
+				MaxByte&Double& \\
+				TempoUso&Time& \\
+				Username&Varchar&FOREIGN KEY\\
+				NomeAPI&Varchar&FOREIGNKEY\\			
+			\end{tabular}
+			\end{center}\\
+			In perticolare, la \textbf{DataScadenza} indica la data fino alla quale e' stato acquistato il microservizio; similmente \textbf{MaxByte} e \textbf{TempoUso} stanno ad indicare rispettivamente il traffico massimo ed il tempo massimo con i quali si puo' usufruire del microservizio in base al contratto d'acquisto stipulato.\\
+			
+		\textbf{Acquisti}\\
+		Gli attributi sono: \\
+		\begin{center}
+		\begin{tabular}{lccc}
+			&Attributo&Tipo&Vincolo\\
+			IdAcquisto&Int&PRIMARY KEY\\
+			Username&Varchar&FOREIGN KEY\\
+			Key&Varchar&FOREIGN KEY\\
+		\end{tabular}
+		\end{center}\\
+			
+		\textbf{Crea}
+			Questa tabella viene a crearsi dalla relazione tra Users e API. Rappresenta il caricamento nel sistema di un microservizio da parte di un utente. Gli attributi sono:
+			\begin{center}
+			\begin{tabular}{lccc}
+				&Attributo&Tipo&Vincolo\\
+				IdMS&Int&PRIMARY KEY\\
+				NomeAPI&Varchar&FOREIGN KEY\\
+				Username&Varchar&FOREIGN KEY\\			
+			\end{tabular}
+			\end{center}
+			
 		}
-	\subsection{Sottotitolo}{
-		Testo.
-		\subsubsection{SottoSottoTitolo}{
-			Testo \url{http://www.url.com/}.
-		}
-	}
+	
 }
