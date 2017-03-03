@@ -3,9 +3,9 @@
 			\subsubsection{Pattern Architetturale a Microservizi}{
 				Il pattern architetturale a microservizi è un pattern innovativo che va a sostituire la vecchia filosofia dei sistemi monolitici dedicato e alle architettura orientate ai servizi.
 				
-				\begin{figure}[ht]
+				\begin{figure}[h]
 					\centering
-					\includegraphics{\docsImg ArchitetturaMicroservizi.png}
+					\includegraphics[width=0.7\linewidth]{\docsImg ArchitetturaMicroservizi.png}
 					\caption{Illustrazione Architettura a Microservizi}
 					\label{Illustrazione Architettura a Microservizi}
 				\end{figure}
@@ -18,22 +18,23 @@
 					L'altro percorso evolutivo che ha portato al modello architetturale a microservizi proviene da problemi rilevati con le applicazioni di attuazione dell'architettura modello orientato ai servizi (\textit{SOA}\pedice{G}). Mentre il modello SOA è molto potente e offre livelli senza precedenti di astrazione, connettività eterogenea, orchestrazione dei servizi, e la promessa di allineare gli obiettivi di business con funzionalità IT, è comunque complesso, costoso, onnipresente, difficile da capire e mettere in atto, e di solito è eccessivo per la maggior parte delle applicazioni.\\
 					\item \textbf{Considerazioni} : Robustezza, miglior scalabilità, erogazione continua. Con piccole componenti miglioriamo la distribuzione e questo risolve i problemi delle applicazioni monolitiche e SOA. Abbiamo una disponibilità di servizio continua.\\
 					Sorgono i problemi della distribuzione e della disponibilità dei sistemi remoti. Non si può utilizzare nel caso abbiamo bisogno di un orchestratore, a meno che non rimanga all'interno di un microservizio, e nemmeno nel caso abbiamo bisogno di transazionalità.
-					\item \textbf{Analisi del Pattern} :
+					\item \textbf{Analisi del Pattern} : \hfill
+
 					\small %rippicciolisce il testo
 					{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-						\begin{tabular}{|l|c|l|}
+						\begin{tabular}{|l|c|c|}
 							\hline
 							{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 							\hline
-							\textit{Agilità} & + & Cambiamenti isolati , veloci e di facile sviluppo \\
+							\textbf{Agilità} & + & \minitab[c]{Cambiamenti isolati , veloci e di facile sviluppo} \\
 							\hline
-							\textbf{Implementazione} & + & Di natura singolare e univoca quindi facili da implementare \\
+							\textbf{Implementazione} & + & \minitab[c]{Di natura singolare e univoca quindi facili da implementare} \\
 							\hline
-							\textbf{Testabilità} & + & Visto l'isolamento delle funzioni business il test può essere più specifico. Piccola possibilità di regressione \\
+							\textbf{Testabilità} & + & \minitab[c]{Visto l'isolamento delle funzioni business il test \\ può essere più specifico. Piccola possibilità di regressione} \\
 							\hline
-							\textbf{Performance} & - & Essendo per la maggior parte nella rete è difficile mantenere delle prestazioni massime e costanti \\
+							\textbf{Performance} & - & \minitab[c]{Essendo per la maggior parte nella rete è difficile \\mantenere delle prestazioni massime e costanti} \\
 							\hline
-							\textbf{Scalabilità} & + & Ogni componente può essere separato e quindi vi è la massima scalabilità \\
+							\textbf{Scalabilità} & + & \minitab[c]{Ogni componente può essere separato e\\ quindi vi è la massima scalabilità} \\
 							\hline
 							\textbf{Sviluppo} & + & Piccoli e isolati componenti facilitano lo sviluppo \\
 							\hline
@@ -44,30 +45,33 @@
 		\subsubsection{Data Access Object (DAO)}{
 			Il DAO (Data Access Object) è un pattern architetturale per la gestione della persistenza: si tratta fondamentalmente di una classe con relativi metodi che rappresenta un'entità tabellare di un database relazionale.
 			
+			%MANCA GRAFICO
+						
 			\begin{itemize}\itemsep1pt
 				\item \textbf{Descrizione Generale} : Usata principalmente in applicazioni web (come ad esempio Java EE), per stratificare e isolare l'accesso ad una tabella tramite query (poste all'interno dei metodi della classe) ovvero al data layer da parte della business logic creando un maggiore livello di astrazione ed una più facile manutenibilità. I metodi del DAO con le rispettive query dentro verranno così richiamati dalle classi della business logic.\\ 
 				Anche se questo modello di progettazione è ugualmente applicabile alla maggior parte dei linguaggi di programmazione, dei software tipati che hanno bisogno di persistenza e la maggior parte delle tipologie di basi di dati, ha il vantaggio di cooperare perfettamente con Java e i data base relazionali.
 				\item \textbf{Considerazioni} : Le Data Access Objects si fanno carico di gestire il codice SQL, mentre tutto ciò é trasparente rispetto alle corrispondenti classi di dominio e di controllo.\\ 
 				A livello di logica dell'applicazione siamo fortemente orientati agli oggetti: ragioniamo solo in termini di Domain Objects, cioè dei concetti pertinenti al dominio dell'applicazione, e non possiamo mai utilizzare i metodi di accesso diretto alla base dati forniti dai DAO. \\
 				Tutti i dettagli dell'archiviazione sono nascosti mantenendo nascoste le informazioni, questo dà pregio al pattern per i nostri scopi.
-				\item \textbf{Analisi del Pattern} :
+				\item \textbf{Analisi del Pattern} : \hfill
+				
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-					\begin{tabular}{|l|c|l|}
+					\begin{tabular}{|l|c|c|}
 						\hline
 						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 						\hline
-						\textit{Agilità} & -/+ & Semplice da gestire ma l'obbligo di innescare query multiple lo rende meno snello. \\
+						\textbf{Agilità} & -/+ &  \minitab[c]{Semplice da gestire ma l'obbligo di innescare\\ query multiple lo rende meno snello.} \\
 						\hline
-						\textbf{Implementazione} & + & Facile l'implementazione perché è relativamente semplice e rigoroso separare due parti dell'applicazione. \\
+						\textbf{Implementazione} & + &  \minitab[c]{Facile l'implementazione perché è relativamente semplice e\\ rigoroso separare due parti dell'applicazione.} \\
 						\hline
-						\textbf{Testabilità} & + & Unit Test il codice è facilitato sostituendo il DAO con un Double Test nel collaudo, rendendo così i test non dipendi dal Data-Base persistente. \\
+						\textbf{Testabilità} & + & \minitab[c]{Unit Test il codice è facilitato sostituendo il DAO\\ con un Double Test nel collaudo, rendendo così i test\\ non dipendi dal Data-Base persistente.} \\
 						\hline
-						\textbf{Performance} & - & Vi è un costo aggiuntivo ad ogni chiamata al server e aumento di complessità. \\
+						\textbf{Performance} & - &  \minitab[c]{Vi è un costo aggiuntivo ad ogni chiamata\\ al server e aumento di complessità.} \\
 						\hline
-						\textbf{Scalabilità} & + & Eventuali modifiche al DB possono essere implementate da sole , senza che il resto dell'applicazione è interessata. \\
+						\textbf{Scalabilità} & + &  \minitab[c]{Eventuali modifiche al DB possono\\ essere implementate da sole , senza che\\ il resto dell'applicazione è interessata.} \\
 						\hline
-						\textbf{Sviluppo} & - & Obbliga gli sviluppatori a innescare query multiple sul database che potrebbero essere recuperate con una unica. \\
+						\textbf{Sviluppo} & - &  \minitab[c]{Obbliga gli sviluppatori a innescare query multiple sul\\ database che potrebbero essere recuperate con una unica.} \\
 						\hline
 					\end{tabular}
 				}
@@ -77,9 +81,9 @@
 		\subsubsection{Model View ViewModel}{
 			Il Model–view–viewmodel (MVVM) è un pattern software architetturale o schema di progettazione software. È una variante del pattern "Presentation Model design" di Martin Fowler.
 			
-			\begin{figure}[ht]
+			\begin{figure}[h]
 				\centering
-				\includegraphics{\docsImg ArchitetturaMVVM.png}
+				\includegraphics[width=0.9\linewidth]{\docsImg ArchitetturaMVVM.png}
 				\caption{Illustrazione Model View ViewModel}
 				\label{Illustrazione Model View ViewModel}
 			\end{figure}
@@ -96,24 +100,25 @@
 				\item \textbf{Considerazioni} : L'utente interagisce solo ed unicamente con li View. E la comunicazione di stato è comunicata al ViewModel. Come risposta al cambio di stato o all'attivazione di un metodo il ViewModel invia un segnale o esegue un operazione sul Model e aggiorna il proprio stato. Il nuovo stato del ViewModel si riflette sulla View.\\
 				È da sottolineare il fatto che il ViewModel mantiene nel proprio stato non solo le informazioni recuperate attraverso il Model, ma anche lo stato attuale della visualizzazione: ciò gli consente di essere del tutto disaccoppiato dalla View. Inoltre il processo step-by-step descritto in precedenza risulta essere un “two-way”, funziona cioè in entrambe le direzioni.\\
 				AngularJS implementa un modello basato su questa visione del pattern e utilizza HTML come linguaggio di templating, non richiede operazioni di DOM refresh e controlla attivamente le azioni utente ed eventi nel browser. 
-				\item \textbf{Analisi del Pattern} :
+				\item \textbf{Analisi del Pattern} : \hfill
+				
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-					\begin{tabular}{|l|c|l|}
+					\begin{tabular}{|l|c|c|}
 						\hline
 						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 						\hline
-						\textit{Agilità} & + & È il classico pattern a 3 elementi ed è ideologia di agilità \\
+						\textbf{Agilità} & + & È il classico pattern a 3 elementi ed è ideologia di agilità \\
 						\hline
-						\textbf{Implementazione} & + & Avendo netta distinzione tra gli elementi è facile l'implementazione e mantenerlo\\
+						\textbf{Implementazione} & + &  \minitab[c]{Avendo netta distinzione tra gli elementi è facile\\ l'implementazione e mantenerlo.}\\
 						\hline
-						\textbf{Testabilità} & + & Lo Unit Testing nel MVVM dove le componenti siano "separate" contribuisce alla progettazione di unità di test efficaci.\\
+						\textbf{Testabilità} & + &  \minitab[c]{Lo Unit Testing nel MVVM dove le componenti\\ siano "separate" contribuisce alla progettazione\\ di unità di test efficaci.}\\
 						\hline
-						\textbf{Performance} & + & Rispetto al classico modello MVC è più snello e quindi a confronto è più veloce \\
+						\textbf{Performance} & + &  \minitab[c]{Rispetto al classico modello MVC è più snello e\\ quindi a confronto è più veloce.}\\
 						\hline
-						\textbf{Scalabilità} & + & Possono essere modificati implementati differentemente essendo separati\\
+						\textbf{Scalabilità} & + &  \minitab[c]{Possono essere modificati implementati\\differentemente essendo separati.} \\
 						\hline
-						\textbf{Sviluppo} & + & Ogni singolo elemento del team può concentrarsi allo sviluppo di ogni diverso elemento \\
+						\textbf{Sviluppo} & + &  \minitab[c]{Ogni singolo elemento del team può concentrarsi\\allo sviluppo di ogni diverso elemento.} \\
 						\hline
 					\end{tabular}
 				}
@@ -125,9 +130,9 @@
 			L'Abstract Factory fornisce un'interfaccia per creare famiglie di oggetti connessi o dipendenti tra loro, in modo che non ci sia necessità da parte dei client di specificare i nomi delle classi concrete all'interno del proprio codice.
 			In questo modo si permette che un sistema sia indipendente dall'implementazione degli oggetti concreti e che il client, attraverso l'interfaccia, utilizzi diverse famiglie di prodotti.
 			
-			\begin{figure}[ht]
+			\begin{figure}[h]
 				\centering
-				\includegraphics{\docsImg AbstractFactory.png}
+				\includegraphics[width=0.6\linewidth]{\docsImg AbstractFactory.png}
 				\caption{Illustrazione Pattern Abstract Factory}
 				\label{Illustrazione Pattern Abstract Factory}
 			\end{figure}
@@ -135,24 +140,25 @@
 			\begin{itemize}\itemsep1pt
 				\item \textbf{Descrizione Generale} : Il pattern Abstract Factory definisce un'interfaccia con una serie di metodi per creare una famiglia di prodotti correlati. La famiglia di oggetti correlati è definita attraverso una serie di tipi di elementi. L'attuazione dei tipi di prodotto è delegata a un insieme di sottoclassi di elementi concreti. La creazione delle classi di prodotto concrete è attuato per serie di classi factory concrete. Il pattern Abstract Factory rinvia la creazione degli elementi concreti alle classi "di fabbrica" concrete che implementa l'Abstract Factory. L'oggetto client è disaccoppiato dalle classi di prodotti e le classi di fabbrica attraverso l'interfaccia Abstract Factory. Il nucleo del pattern Abstract Factory è quello di creare un gruppo di oggetti correlati che potrebbero avere diverse implementazioni. Il sistema è quindi indipendente dell'attuazione dei tipi di prodotto. Il pattern Abstract Factory permette anche il sistema per sostituire un insieme di classi di prodotti correlati con un altro set, cambiando la classe fabbrica.
 				\item \textbf{Considerazioni} : Questo pattern è utile quando si vuole un sistema indipendente da come gli oggetti vengono creati, composti e rappresentati. Si vuole permettere la configurazione del sistema come scelta tra diverse famiglie di prodotti. I prodotti che sono organizzati in famiglie siano vincolati ad essere utilizzati con prodotti della stessa famiglia. Si vuole infine fornire una libreria di classi mostrando solo le interfacce e nascondendo le implementazioni.
-				\item \textbf{Analisi del Pattern} :
+				\item \textbf{Analisi del Pattern} : \hfill
+				
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-					\begin{tabular}{|l|c|l|}
+					\begin{tabular}{|l|c|c|}
 						\hline
 						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 						\hline
-						\textit{Agilità} & + & È nella definizione del pattern creazionale la possibilità di creare oggetti a partire da qualsiasi classe. \\
+						\textbf{Agilità} & + &  \minitab[c]{È nella definizione del pattern creazionale\\la possibilità di creare oggetti\\a partire da qualsiasi classe.} \\
 						\hline
-						\textbf{Implementazione} & + & Singola istanza della factory. Semplicità di aggiungere una nuova famiglia. Difficile però aggiungere un'interfaccia. \\
+						\textbf{Implementazione} & + &  \minitab[c]{Singola istanza della factory.\\Semplicità di aggiungere una nuova famiglia.\\Difficile però aggiungere un'interfaccia.} \\
 						\hline
-						\textbf{Testabilità} & +/- & Isolamento di tipo concreto e quindi facilmente verificabile. Nella modifica c'è bisogno di una riverifica generale. \\
+						\textbf{Testabilità} & +/- &  \minitab[c]{Isolamento di tipo concreto e quindi facilmente verificabile.\\ Nella modifica c'è\\bisogno di una riverifica generale.} \\
 						\hline
-						\textbf{Performance} & n.q. & Dipende tutto dall'implementazione della classe su cui si vuole fare la factory. \\
+						\textbf{Performance} & n.q. &  \minitab[c]{Dipende tutto dall'implementazione della classe\\su cui si vuole fare la factory.} \\
 						\hline
-						\textbf{Scalabilità} & - & Aggiungere nuove famiglie di prodotti è difficile perché l’insieme di prodotti gestiti è legato all'interfaccia della factory. \\
+						\textbf{Scalabilità} & - &  \minitab[c]{Aggiungere nuove famiglie di prodotti\\è difficile perché l’insieme di prodotti gestiti\\è legato all'interfaccia della factory.}\\
 						\hline
-						\textbf{Sviluppo} & + & L'interfaccia di per se è di facile implementazione e compare in un unico punto del codice. \\
+						\textbf{Sviluppo} & + &  \minitab[c]{L'interfaccia di per se è di facile\\implementazione e compare in un unico punto del codice.} \\
 						\hline
 					\end{tabular}
 				}
@@ -162,7 +168,7 @@
 		\subsubsection{Dependency Injection}{
 			Dependency Injection (DI) è un design pattern della programmazione orientata agli oggetti il cui scopo è quello di semplificare lo sviluppo e migliorare la testabilità di software di grandi dimensioni.
 			
-			\begin{figure}[ht]
+			\begin{figure}[h]
 				\centering
 				\includegraphics{\docsImg CreazionaleDI.png}
 				\caption{Illustrazione Pattern Dependency Injection}
@@ -173,24 +179,25 @@
 				\item \textbf{Descrizione Generale} : Per utilizzare tale design pattern è sufficiente dichiarare le dipendenze che un componente necessita (dette anche interface contracts). Quando il componente verrà istanziato, un iniettore si prenderà carico di risolvere le dipendenze (attuando dunque l'inversione del controllo). Se è la prima volta che si tenta di risolvere una dipendenza l'injector istanzierà il componente dipendente, lo salverà in un contenitore di istanze e lo ritornerà. Se non è la prima volta, allora ritornerà la copia salvata nel contenitore. Una volta risolte tutte le dipendenze, il controllo può tornare al componente applicativo.
 				\item \textbf{Considerazioni} : È stata scelta la Dependency Injection perchè ci sono molti riferimenti e esempi con AngularJS. Con il linguaggio è legata anche la pratica della minificazione\textsubscript{g} del codice, processo per ridurre la dimensione del codice. Se infatti non si adottasse questo accorgimento, durante il processo che riduce la lunghezza del nome delle variabili si verrebbero a perdere i riferimenti ai nomi dei componenti che rappresentano le dipendenze.\\
 				La dependency injection è un design pattern che delega ad un’entità esterna il compito di individuare e fornire una risorsa di cui un oggetto ha bisogno. Nel nostro caso, se un componente Angular, come ad esempio un controller, ha bisogno delle funzionalità di messe a disposizione da un servizio non deve fare altro che specificare il suo nome tra i parametri della sua definizione.
-				\item \textbf{Analisi del Pattern} :
+				\item \textbf{Analisi del Pattern} : \hfill
+				
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-					\begin{tabular}{|l|c|l|}
+					\begin{tabular}{|l|c|c|}
 						\hline
 						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 						\hline
-						\textit{Agilità} & -/+ & Non è molto flessibile, ma si può migliorare sostanzialmente con un interfaccia. Inoltre disaccoppia facilmente le classi. \\
+						\textbf{Agilità} & -/+ &  \minitab[c]{Non è molto flessibile,\\ ma si può migliorare sostanzialmente con un interfaccia.\\Inoltre disaccoppia facilmente le classi.} \\
 						\hline
-						\textbf{Implementazione} & -/+ & Attenzione che creare istanze di classe può diventare ingombrante, soprattutto quando le classi crescono di responsabilità e cominciano ad avere troppe dipendenze. \\
+						\textbf{Implementazione} & -/+ &  \minitab[c]{Attenzione che creare istanze di classe può diventare ingombrante,\\ soprattutto quando le classi\\ crescono di responsabilità e cominciano ad avere troppe dipendenze.} \\
 						\hline
-						\textbf{Testabilità} & + & La DI associata ad AngularJS promuove la testabilità del framework e del pattern. \\
+						\textbf{Testabilità} & + &  \minitab[c]{La DI associata ad AngularJS promuove la testabilità\\del framework e del pattern.}\\
 						\hline
-						\textbf{Performance} & + & Si occupa il pattern insieme al framework AngularJS delle "iniezioni" di dipendenze senza che badiamo noi alle performance, dobbiamo scegliere solo l'implementazione migliore. \\
+						\textbf{Performance} & + &  \minitab[c]{Si occupa il pattern insieme al framework AngularJS\\delle "iniezioni" di dipendenze senza\\che badiamo noi alle performance,\\dobbiamo scegliere solo l'implementazione migliore.} \\
 						\hline
-						\textbf{Scalabilità} & + & Migliorando la modularità del codice è più facile un approccio scalabile al pattern. \\
+						\textbf{Scalabilità} & + &  \minitab[c]{Migliorando la modularità del codice è più facile\\un approccio scalabile al pattern.}\\
 						\hline
-						\textbf{Sviluppo} & - & Sviluppo delle DI associato ad AngularJS è complesso e per niente scontato. \\
+						\textbf{Sviluppo} & - &  \minitab[c]{Sviluppo delle DI associato ad AngularJS\\ è complesso e per niente scontato.}\\
 						\hline
 					\end{tabular}
 				}
@@ -201,7 +208,7 @@
 		\subsection{Facade}{
 			Letteralmente facade significa "facciata", ed infatti nella programmazione ad oggetti indica un oggetto che permette, attraverso un'interfaccia più semplice, l'accesso a sottosistemi che espongono interfacce complesse e molto diverse tra loro, nonché a blocchi di codice complessi.
 			
-			\begin{figure}[ht]
+			\begin{figure}[h]
 				\centering
 				\includegraphics{\docsImg StrutturaleFacade.png}
 				\caption{Illustrazione Pattern Facade}
@@ -212,24 +219,25 @@
 				\item \textbf{Descrizione Generale} : Fornisce un interfaccia unica e semplice per un sottosistema complesso. Questo porta a una strutturazione ordinata di un sistema di sottoinsiemi. Questo diminuisce la complessità del sistema avendo una figura intermedia anche se aumenta la dipendenza dei sottoinsiemi; semplificando le dipendenze però non mantiene il principio di information-hiding mostrando funzionalità che sarebbero nascoste dai sottogruppi.
 				\item \textbf{Considerazioni} : Facade si usa quando si vuole semplicemente comunicare con un sottosistema di elementi. Si usa oltre per interfacciarsi a un sistema difficile, quando il sistema sottostante è veramente complesso e difficile da comprendere. Facade fa anche da punto di comunicazione per ogni livello dello strato software oppure perché le astrazioni e le implementazioni di un sottosistema sono strettamente accoppiati.\\
 				Vi è quindi un disaccoppiamento tra sottosistemi e client creando così una divisione a noi tanto cara come l'idea a microservizi, nascondendo così i livelli tra l'astrazione e l'implementazione. Così si crea una stratificazione di sistema.
-				\item \textbf{Analisi del Pattern} :
+				\item \textbf{Analisi del Pattern} : \hfill
+				
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-					\begin{tabular}{|l|c|l|}
+					\begin{tabular}{|l|c|c|}
 						\hline
 						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 						\hline
-						\textit{Agilità} & - & Non riduce le dipendenze ma le concentra con un unico elemento Facade. \\
+						\textbf{Agilità} & - &  \minitab[c]{Non riduce le dipendenze ma le concentra\\ con un unico elemento Facade.} \\
 						\hline
-						\textbf{Implementazione} & + & Semplifica i sottosistemi con un interfaccia unica. Quindi aiuta a ridurre la complessità.  \\
+						\textbf{Implementazione} & + &  \minitab[c]{Semplifica i sottosistemi\\ con un interfaccia unica.\\Quindi aiuta a ridurre la complessità.}  \\
 						\hline
-						\textbf{Testabilità} & +/- & La filosofia facade ispira un test automatizzato specifico denominato facade-test che è più di un test di unità, ma non abbastanza come un test di integrazione . \\
+						\textbf{Testabilità} & +/- &  \minitab[c]{La filosofia facade ispira un test automatizzato\\specifico denominato facade-test\\che è più di un test di unità,\\ma non abbastanza come un test di integrazione.} \\
 						\hline
-						\textbf{Performance} & - & Sistema centrato. Se manca il facade il sistema crolla rende instabile e non performante il pattern. \\
+						\textbf{Performance} & - & \minitab[c]{Sistema centrato.\\Se manca il facade il sistema crolla rende\\instabile e non performante il pattern.}\\
 						\hline
-						\textbf{Scalabilità} & + & Aggiungere nuove famiglie di prodotti è semplice, basta collegarlo all'interfaccia facade senza sforzo. \\
+						\textbf{Scalabilità} & + & \minitab[c]{Aggiungere nuove famiglie di prodotti è semplice,\\basta collegarlo all'interfaccia facade senza sforzo.}\\
 						\hline
-						\textbf{Sviluppo} & n.q. & Interfaccia di facile implementazione; dipende dalla complessità del sottosistema lo sviluppo. \\
+						\textbf{Sviluppo} & n.q. &  \minitab[c]{Interfaccia di facile implementazione;\\dipende dalla complessità del sottosistema lo sviluppo.}\\
 						\hline
 					\end{tabular}
 				}
@@ -244,9 +252,9 @@
 				\item In che modo diversi oggetti collaborano tra loro?
 			\end{itemize}
 		
-			\begin{figure}[ht]
+			\begin{figure}[h]
 				\centering
-				\includegraphics{\docsImg ComportamentaleCommand.png}
+				\includegraphics[width=0.8\linewidth]{\docsImg ComportamentaleCommand.png}
 				\caption{Illustrazione Pattern Command}
 				\label{Illustrazione Pattern Command}
 			\end{figure}
@@ -256,24 +264,25 @@
 				Parametrizzazione di oggetti sull'azione da eseguire. Specifica, accordare ed eseguire richieste molteplici volte. Se necessario supporto anche delle operazioni di annullamento e ripristino. Oltre a supportare la transizione con un comando equivalente ad un operazione atomica.
 				\item \textbf{Considerazioni} : L'accoppiamento tra oggetto invocante e quelle che portano a termine l'operazione è più lasco. È il Command che svolge operazioni differenti e può essere tranquillamente esteso con tutti i pregi del caso.\\
 				Così si forma il binding  fra il ricevente e l'azione da eseguire. L'oggetto dell'operazione non è deciso al momento della creazione delle azioni ma a tempo di esecuzione. È possibile incapsulare un'azione in modo che questa sia atomica. È così possibile implementare un paradigma basato su transazioni in cui un insieme di operazioni è svolto in toto o per nulla. Il Command può memorizzare lo stato precedente alla sua esecuzione, ripristinandolo qualora l'operazione debba essere annullata. E infine non meno importante è possibile rendere asincrona la scelta dei comandi rispetto alla loro esecuzione. Un certo numero di command possono essere consumati da un altro oggetto che li riceve in un tempo diverso dalla loro selezione.
-				\item \textbf{Analisi del Pattern} : 
+				\item \textbf{Analisi del Pattern} : \hfill
+				
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-					\begin{tabular}{|l|c|l|}
+					\begin{tabular}{|l|c|c|}
 						\hline
 						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 						\hline
-						\textit{Agilità} & + & Con chiamate asincrone è possibile eseguire più richieste agilmente anche se con un passaggio in più. E il client manda solamente la richiesta. \\
+						\textbf{Agilità} & + &  \minitab[c]{Con chiamate asincrone è possibile eseguire\\più richieste agilmente anche se con un passaggio in più.\\E il client manda solamente la richiesta.} \\
 						\hline
-						\textbf{Implementazione} & + & Buona l'implementazione che unisce varie sottoclassi di creazione in una unica \\
+						\textbf{Implementazione} & + &  \minitab[c]{Buona l'implementazione che unisce varie\\sottoclassi di creazione in una unica.}\\
 						\hline
-						\textbf{Testabilità} & - & Pecca del pattern è che deve essere implementato prima del test e difficile sostituzione \\
+						\textbf{Testabilità} & - &  \minitab[c]{Pecca del pattern è che deve essere implementato\\prima del test e difficile sostituzione.}\\
 						\hline
-						\textbf{Performance} & + &  Senza la necessità per il cliente di essere a conoscenza dell'esistenza di funzioni particolari e in maniera asincrona il command lavora ad alte prestazioni. \\
+						\textbf{Performance} & + &   \minitab[c]{Senza la necessità per il cliente di essere\\a conoscenza dell'esistenza di funzioni particolari\\e in maniera asincrona il command lavora ad alte prestazioni.} \\
 						\hline
-						\textbf{Scalabilità} & + & Non è per niente complesso e scalare aggiungere command. \\
+						\textbf{Scalabilità} & + &  Non è per niente complesso e scalare aggiungere command. \\
 						\hline
-						\textbf{Sviluppo} & - & Lo sviluppo del command richiede una complessa riflessione oltre che alla creazione di più classi per implementarlo al meglio.\\
+						\textbf{Sviluppo} & - &  \minitab[c]{Lo sviluppo del command richiede una complessa riflessione\\ oltre che alla creazione\\di più classi per implementarlo al meglio.}\\
 						\hline
 					\end{tabular}
 				}
