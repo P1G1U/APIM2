@@ -45,9 +45,11 @@
 			Il DAO (Data Access Object) è un pattern architetturale per la gestione della persistenza: si tratta fondamentalmente di una classe con relativi metodi che rappresenta un'entità tabellare di un database relazionale.
 			
 			\begin{itemize}\itemsep1pt
-				\item \textbf{Descrizione Generale} : Usata principalmente in applicazioni web (come ad esempio Java EE), per stratificare e isolare l'accesso ad una tabella tramite query (poste all'interno dei metodi della classe) ovvero al data layer da parte della business logic creando un maggiore livello di astrazione ed una più facile manutenibilità. I metodi del DAO con le rispettive query dentro verranno così richiamati dalle classi della business logic.
+				\item \textbf{Descrizione Generale} : Usata principalmente in applicazioni web (come ad esempio Java EE), per stratificare e isolare l'accesso ad una tabella tramite query (poste all'interno dei metodi della classe) ovvero al data layer da parte della business logic creando un maggiore livello di astrazione ed una più facile manutenibilità. I metodi del DAO con le rispettive query dentro verranno così richiamati dalle classi della business logic.\\ 
+				Anche se questo modello di progettazione è ugualmente applicabile alla maggior parte dei linguaggi di programmazione, dei software tipati che hanno bisogno di persistenza e la maggior parte delle tipologie di basi di dati, ha il vantaggio di cooperare perfettamente con Java e i data base relazionali.
 				\item \textbf{Considerazioni} : Le Data Access Objects si fanno carico di gestire il codice SQL, mentre tutto ciò é trasparente rispetto alle corrispondenti classi di dominio e di controllo.\\ 
-				A livello di logica dell'applicazione siamo fortemente orientati agli oggetti: ragioniamo solo in termini di Domain Objects, cioè dei concetti pertinenti al dominio dell'applicazione, e non possiamo mai utilizzare i metodi di accesso diretto alla base dati forniti dai DAO. %INCOMPLETO SECONDO ME
+				A livello di logica dell'applicazione siamo fortemente orientati agli oggetti: ragioniamo solo in termini di Domain Objects, cioè dei concetti pertinenti al dominio dell'applicazione, e non possiamo mai utilizzare i metodi di accesso diretto alla base dati forniti dai DAO. \\
+				Tutti i dettagli dell'archiviazione sono nascosti mantenendo nascoste le informazioni, questo dà pregio al pattern per i nostri scopi.
 				\item \textbf{Analisi del Pattern} :
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
@@ -55,17 +57,17 @@
 						\hline
 						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 						\hline
-						\textit{Agilità} & + & Facile da sviluppare e modificare nel caso di aggiunta di funzioni \\
+						\textit{Agilità} & -/+ & Semplice da gestire ma l'obbligo di innescare query multiple lo rende meno snello. \\
 						\hline
-						\textbf{Implementazione} & + & Si crea una classe DAO per ogni classe che rappresenta entità del dominio di applicazione \\
+						\textbf{Implementazione} & + & Facile l'implementazione perché è relativamente semplice e rigoroso separare due parti dell'applicazione. \\
 						\hline
-						\textbf{Testabilità} & + & Si testa in seguito alla costruzione del DB. Mantenendo separate le componenti è semplice da testare \\
+						\textbf{Testabilità} & + & Unit Test il codice è facilitato sostituendo il DAO con un Double Test nel collaudo, rendendo così i test non dipendi dal Data-Base persistente. \\
 						\hline
-						\textbf{Performance} & n.q. & Estende il database, quindi le performance derivano dalla sua costruzione \\
+						\textbf{Performance} & - & Vi è un costo aggiuntivo ad ogni chiamata al server e aumento di complessità. \\
 						\hline
-						\textbf{Scalabilità} & + & All'aggiunta di classi e elementi basta estendere la classe agevolmente\\
+						\textbf{Scalabilità} & + & Eventuali modifiche al DB possono essere implementate da sole , senza che il resto dell'applicazione è interessata. \\
 						\hline
-						\textbf{Sviluppo} & n.q. & %INCOMPLETO \\
+						\textbf{Sviluppo} & - & Obbliga gli sviluppatori a innescare query multiple sul database che potrebbero essere recuperate con una unica. \\
 						\hline
 					\end{tabular}
 				}
