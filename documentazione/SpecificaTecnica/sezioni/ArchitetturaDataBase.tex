@@ -15,7 +15,7 @@
 			\subsubsection{Schema concettuale}
 			
 			\subsubsection{Classi}
-			\textit{Users}\\
+			\textit{User}\\
 			Questa e' l'entita' che rappresenta tutti gli utenti che utilizzeranno il software, siano essi utenti normali o amministratori. Questa entita' come si vede dallo schema e' superclase di Utenti e di Admin. Gli attributi sono: 
 			\begin{center}
 			\begin{tabular}{lccc}
@@ -26,14 +26,15 @@
 				Cognome&String& \\
 				DataNascita&Date& \\
 				Mail&String& \\
+				Bio&String& \\
 				SaldoCoin&Double& \\
-				IsAdmin
+				IsAdmin\\
 			\end{tabular}
 			\end{center} \\
 			\textit{Utenti}\\
-			Questa entita' rappresenta gli utenti normali che utilizzeranno la piattaforma. E' una sottoclasse di \textbf{Users} e quindi eredita i suoi attributi.  \\
+			Questa entita' rappresenta gli utenti normali che utilizzeranno la piattaforma. E' una sottoclasse di \textbf{Users} e quindi eredita i suoi attributi. In particolare il campo \textbf{Bio} contiene una piccola biografia con valutazione dell'utente.  \\
 			\textit{Admin}\\
-			Questa entita' invece rappresenta gli amministratori che gestiranno la piattaforma. Come la precedente e' una sottocalsse di textbf{Users} e ne eredita gli attributi. \\
+			Questa entita' invece rappresenta gli amministratori che gestiranno la piattaforma. Come la precedente e' una sottocalsse di textbf{Users} e ne eredita gli attributi. Per gli admin è stato aggiunto il campo \textb{IsAdmin} per verificare quando un utente che accede è un amministratore. \\
 			\textit{API}\\
 			Questa entita' rappresenta le API presenti nel sistema. Gli attributi sono:
 			\begin{center}
@@ -51,7 +52,7 @@
 			\end{tabular}
 			\end{center}
 			In particolare in questa tabella sono contenute le statistiche di ogni API come il \textbf{Tempo Medio Risposta}, il \textbf{Traffico} di dati che comporta l'tilizzo di quel microservizio, il numero \textbf{Totale Chiamate} e il \textbf{Tempo Risposta Totale}. \\
-			\textit{Chiavi}\\
+			\textit{Key}\\
 			Questa entita' rappresenta le chiavi che verranno assegnate ad un utente quando acquista un microservizio per potervi accedere ed utilizzarlo. Gli attributi sono: \\
 			\begin{center}
 			\begin{tabular}{lccc}
@@ -95,14 +96,14 @@
 			\end{center}
 	\subsubsection{Associazioni}
 		\begin{itemize}
-			\item\textit{Users-Acquisto}: molteplicita'n - 1. Un utente puo' acquistare uno o piu' microservizi, un microservizio puo' esser acquistata da uno o piu' utenti.
-			\item\textbf{Users-API}: molteplicita' 1 - n. Un utente puo' mettere a disposizione uno o piu' microservizi, mentre un microservizio e' inserito nel database dal un solo utente.
-			\item\textbf{Users-Commenti}: molteplicita' 1 - n. Un utente puo' lasciare diversi commenti in diverse API, mentre un commento e' lasciato per forza da un solo utente;
+			\item\textit{User-Acquisto}: molteplicita'n - 1. Un utente puo' acquistare uno o piu' microservizi, un microservizio puo' esser acquistata da uno o piu' utenti.
+			\item\textbf{User-API}: molteplicita' 1 - n. Un utente puo' mettere a disposizione uno o piu' microservizi, mentre un microservizio e' inserito nel database dal un solo utente.
+			\item\textbf{User-Commenti}: molteplicita' 1 - n. Un utente puo' lasciare diversi commenti in diverse API, mentre un commento e' lasciato per forza da un solo utente;
 			\item\textbf{API-Commenti}: molteplicita' 1 - n. Una API puo' avere diversi commenti, ma un commento puo' essere lasciato su una sola API.	
-			\item\textbf{Acquisto-Chiavi}: molteplicita' 1 - 1. Ogni acquisto avra' associata la propria chiave. 
-			\item\textbf{API - Chiavi}: molteplicita' 1 - n. Una API avra' ad essa associate piu' chiavi, mentre una chiave appartiene ad una sola API.
+			\item\textbf{Acquisto-Key}: molteplicita' 1 - 1. Ogni acquisto avra' associata la propria chiave. 
+			\item\textbf{API - Key}: molteplicita' 1 - n. Una API avra' ad essa associate piu' chiavi, mentre una chiave appartiene ad una sola API.
 			\item\textbf{API-Categorire}: molteplicita' 1 - n. Ad una categoria appartengono una o piu' API, mentre una API appartiene ad una sola categoria.
-			\item\textbf{Users-Chiavi}: molteplicita' 1 -n. Un utente puo' possedere una o piu' chiavi, mentre una chiave sara' associata ad un solo utente.
+			\item\textbf{Users-Key}: molteplicita' 1 -n. Un utente puo' possedere una o piu' chiavi, mentre una chiave sara' associata ad un solo utente.
 		\end{itemize}				
 								
 			\\
@@ -118,7 +119,7 @@
 			\label{Fig. Progettazione Logica}
 		\end{figure} \\
 		\subsubsection{Gerarchie}
-		\textbf{Users - Utenti - Admin}: La gerarchia e' stat implementata come tabella unica. La due sottoclassi \textbf{Utenti} e \textbf{Admin} sono comprese nella superclasse \textbf{Users}. Viene solamente aggiunto un attributo discriminante per distinguere un utente normale da un amministratore.\\
+		\textbf{User - Utenti - Admin}: La gerarchia e' stat implementata come tabella unica. La due sottoclassi \textbf{Utenti} e \textbf{Admin} sono comprese nella superclasse \textbf{Users}. Viene solamente aggiunto un attributo discriminante per distinguere un utente normale da un amministratore.\\
 		\subsubsection{Relazioni}
 		\textbf{Categorie}\\
 		Gli attributi sono: \\
@@ -131,7 +132,7 @@
 			\end{center}\\
 			
 		\textbf{Users}\\
-			Relazione creata dall'implementazione tramite tabella unica della gerarchia Users - Utenti - Admin. Gli attributi sono:
+			Relazione creata dall'implementazione tramite tabella unica della gerarchia User - Utenti - Admin. Gli attributi sono:
 			\begin{center}
 			\begin{tabular}{lccc}
 				&Attributo&Tipo&Vincolo\\
@@ -141,6 +142,7 @@
 				Cognome&Varchar& \\
 				DataNascita&Date& \\				
 				Mail&Varchar& \\
+				Bio&Varchar& \\
 				SaldoCoin&Double& \\
 				IsAdmin&Boolean& \\
 				NomeAPI&Varchar&FOREIGN KEY\\
@@ -179,7 +181,7 @@
 			\end{tabular}
 			\end{center}\\
 		
-		\textbf{Chiavi}
+		\textbf{Key}
 			Questa tabella si crea dalla relazione tra Users e API. Rappresenta l'acquisto da parte di un utente di un microservizio. All'utente viene assegnata una chiave con la quale poter accedere al microservizio. Gli attributi sono:
 			\begin{center}
 			\begin{tabular}{lccc}
