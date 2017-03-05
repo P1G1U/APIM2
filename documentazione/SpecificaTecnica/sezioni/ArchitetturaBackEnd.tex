@@ -1,67 +1,799 @@
-\section{Titolo}{
-	Testo:
-	\begin{itemize}\itemsep1pt
-		\item lista;
-		\item lista.
-	\end{itemize} 
-	
-	\subsection{SottoTitolo}{
-		Testo.
-		
-		\begin{figure}[ht]
-			%serie figure
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura1.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 1}
-				\label{Titolo Figura 1}
-			\end{subfigure}
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura2.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 2}
-				\label{Titolo Figura 2}
-			\end{subfigure}
-			\\
-			\\
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura3.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 3}
-				\label{Titolo Figura 3}
-			\end{subfigure}
-		\end{figure}
-	}
-	\subsection{SottoTitolo}{
-		Testo.
-	\\
-		Testo.
-		\begin{figure}[ht]
-			\centering
-			\includegraphics{\docsImg figura.png}
-			\caption{Testo figura}
-			\label{Testo figura}
-		\end{figure}
-		
-		Testo.
-		\\
-		Testo:
-		\begin{itemize}\itemsep1pt
-			\item lista; con:
-			\begin{itemize}\itemsep1pt
-				\item sottolista
-				\item \textbf{testogrossetto}: da da da;
-				\item \textit{Testo corsivo}.\\ 
-				Ancora testo.
-				\item testo.
-			\end{itemize}
-			\item Continua la lista di prima.
-		\end{itemize}
-		}
-	\subsection{Sottotitolo}{
-		Testo.
-		\subsubsection{SottoSottoTitolo}{
-			Testo \url{http://www.url.com/}.
-		}
-	}
+\section{Architettura Back End}{
+  \begin{figure}[ht]
+    %serie figure
+    \begin{subfigure}[b]{0.5\textwidth}
+      \includegraphics[width=\textwidth]{\docsImg seriefigura1.png}
+      %\vspace{-40pt}
+      \caption{Titolo Figura 1}
+      \label{Titolo Figura 1}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.5\textwidth}
+      \includegraphics[width=\textwidth]{\docsImg seriefigura2.png}
+      %\vspace{-40pt}
+      \caption{Titolo Figura 2}
+      \label{Titolo Figura 2}
+    \end{subfigure}
+    \\
+    \\
+    \begin{subfigure}[b]{0.5\textwidth}
+      \includegraphics[width=\textwidth]{\docsImg seriefigura3.png}
+      %\vspace{-40pt}
+      \caption{Titolo Figura 3}
+      \label{Titolo Figura 3}
+    \end{subfigure}
+  \end{figure}
+  \subsection{com.apim.server}{
+    \subsubsection{Informazioni sul Package}
+        \begin{figure}[ht]
+          \centering
+          \includegraphics{\docsImg figura.png}
+          \caption{Testo figura}
+          \label{Testo figura}
+        \end{figure}
+        Contiene il back end dell'applicazione.
+        \subsubsection{Package contenuti}
+        \begin{itemize} \itemsep1pt
+        \item *.controllers;
+        \item *.services;
+        \item *.dao;
+        \item *.entities;
+        \end{itemize}
+        \subsubsection{Relazione tra le componenti interne}
+        Di seguito sono illustrate le relazioni tra le componenti dell'applicazione.
+  }
+  \subsection{com.apim.server.controllers}{
+    \subsubsection{Informazioni sul Package}
+        \begin{figure}[ht]
+          \centering
+          \includegraphics{\docsImg figura.png}
+          \caption{Testo figura}
+          \label{Testo figura}
+        \end{figure}
+        Package contenente le classi che espongono le funzioni  chiamabili dall'utente;
+        \subsubsection{Classi}
+        \begin{itemize} \itemsep1pt
+        \item \textbf{UserController}
+        \begin{itemize}
+        \item \textbf{Descrizione:} Questa classe contiene i metodi invocabili da un utente normale;
+        \item \textbf{Relazione con altre classi:}
+        \begin{itemize}
+        \item com.apim.server.services.user.*;
+        \end{itemize}
+        \end{itemize}
+        \item \textbf{AdminController}
+        \begin{itemize}
+        \item \textbf{Descrizione:} Questa classe contiene i metodi invocabili da un utente amministratore;
+        \item \textbf{Relazione con altre classi:}
+        \begin{itemize}
+        \item com.apim.server.services.admin.*;
+        \end{itemize}
+        \end{itemize}
+        \item \textbf{SharedController}
+        \begin{itemize}
+        \item \textbf{Descrizione:} Questa classe contiene i metodi invocabili sia da un utente normale che da un amministratore;
+        \item \textbf{Relazione con altre classi:}
+        \begin{itemize}
+        \item com.apim.server.services.shared.*;
+        \end{itemize}
+        \end{itemize}
+        \end{itemize}
+  }
+  \subsection{com.apim.server.services}{
+    \subsubsection{Informazioni sul Package}
+     \begin{figure}[ht]
+       \centering
+       \includegraphics{\docsImg figura.png}
+       \caption{Testo figura}
+       \label{Testo figura}
+     \end{figure}
+     Package contenente le classi che si occupano di implementare in Java le funzionalità dei microservizi Jolie responsabili di ricevere le richieste dai controllers e inoltrarle al livello sottostante. Inoltre ogni Service implementerà l'interfaccia IService contenuta in questo package.
+     \subsubsection{Packages contenuti}
+     \begin{itemize}
+       \item com.apim.server.services.gateway;
+       \item com.apim.server.services.keyManager;
+       \item com.apim.server.services.dataAnalysis;
+       \item com.apim.server.services.user;
+       \item com.apim.server.services.admin;
+       \item com.apim.server.services.shared;
+     \end{itemize}
+     \subsubsection{Classi}
+     \begin{itemize} \itemsep1pt
+       \item \textbf{IService}
+       \begin{itemize}
+         \item \textbf{Descrizione:} Interfaccia che verrà implementata da ogni Service;
+         \item \textbf{Relazione con altre classi:}
+         \begin{itemize}
+           \item com.apim.server.gateway.*;
+           \item com.apim.server.keyManager.*;
+           \item com.apim.server.dataAnalysis.*;
+           \item com.apim.server.user.*;
+           \item com.apim.server.admin.*;
+           \item com.apim.server.shared.*;
+         \end{itemize}
+       \end{itemize}
+     \end{itemize}
+     \subsubsection{Interazioni con altri componenti}
+     \begin{itemize}
+       \item com.apim.server.services.controllers;
+       \item com.apim.server.services.gateway;
+       \item com.apim.server.services.keyManager;
+       \item com.apim.server.services.dataAnalysis;
+       \item com.apim.server.services.user;
+       \item com.apim.server.services.admin;
+       \item com.apim.server.services.shared;
+     \end{itemize}
+  \subsection{com.apim.server.gateway}{
+    \subsubsection{Informazioni sul Package}
+      \begin{figure}[ht]
+        \centering
+        \includegraphics{\docsImg figura.png}
+        \caption{Testo figura}
+        \label{Testo figura}
+      \end{figure}
+      Package  contenente le classi che implementano le funzionalità del gateway;
+      \subsubsection{Classi}
+      \begin{itemize} \itemsep1pt
+      \item \textbf{ServiceGateway}
+      \begin{itemize}
+      \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a verificare la presenza della API invocata nel database;
+      \item \textbf{Relazione con altre classi:}
+      \begin{itemize}
+      \item com.apim.server.keyManager.*;
+      \item com.apim.server.dao.DAOFactory;
+      \item com.apim.server.dataAnalysis.*;
+      \item com.apim.server.entities.User;
+      \item com.apim.server.entities.API;
+      \item com.apim.server.entities.Key;
+      \end{itemize}
+      \end{itemize}
+      \end{itemize}
+      \subsubsection{Interazioni con altri componenti}
+      \begin{itemize}
+      \item com.apim.server.services.controllers;
+      \item com.apim.server.services.entities;
+      \item com.apim.server.services.keyManager;
+      \item com.apim.server.services.dataAnalysis;
+      \end{itemize}
+  }
+      \subsection{com.apim.server.dataAnalysis}{
+  \subsubsection{Informazioni sul Package}
+    \begin{figure}[ht]
+      \centering
+      \includegraphics{\docsImg figura.png}
+      \caption{Testo figura}
+      \label{Testo figura}
+    \end{figure}
+    Package  contenente le classi che implementano le funzionalità di analisi dei dati;
+    \subsubsection{Classi}
+    \begin{itemize} \itemsep1pt
+    \item \textbf{ServiceAnalyzer}
+    \begin{itemize}
+    \item \textbf{Descrizione:} Questa classe contiene i metodi necessari all'analisi dei pacchetti JSON ritornati dal server del micro servizio, al fine di recuperare dati, quali dimensione, tempo di risposta, eccetera;
+    \item \textbf{Relazione con altre classi:}
+    \begin{itemize}
+    \item com.apim.server.dao.DAOFactory;
+    \item com.apim.server.entities.User;
+    \item com.apim.server.entities.API;
+    \item com.apim.server.entities.Key;
+    \end{itemize}
+    \end{itemize}
+    \end{itemize}
+    \subsubsection{Interazioni con altri componenti}
+    \begin{itemize}
+    \item com.apim.server.services.controllers;
+    \item com.apim.server.services.entities;
+    \item com.apim.server.services.gateway;
+    \end{itemize}
+  }
+    \subsection{com.apim.server.keyManager}{
+    \subsubsection{Informazioni sul Package}
+        \begin{figure}[ht]
+          \centering
+          \includegraphics{\docsImg figura.png}
+          \caption{Testo figura}
+          \label{Testo figura}
+        \end{figure}
+        Package contenente le classi che implementano le funzionalità di gestione delle keys;
+        \subsubsection{Classi}
+        \begin{itemize} \itemsep1pt
+          \item \textbf{ServiceKeygen}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari alla creazione di una nuova key;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+            \item com.apim.server.dao.DAOFactory;
+            \item com.apim.server.entities.User;
+            \item com.apim.server.entities.API;
+            \item com.apim.server.entities.Key;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceDecodeKey}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari alla decodifica di una Key inviata dall'utente;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+            \item com.apim.server.dao.DAOFactory;
+            \item com.apim.server.entities.User;
+            \item com.apim.server.entities.API;
+            \item com.apim.server.entities.Key;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceCheckKey}
+            \begin{itemize}
+              \item \textbf{Descrizione:} Questa classe contiene i metodi necessari alla verifica della validità della key, ossia correttamente associata ad un microservizio e non scaduta;
+              \item \textbf{Relazione con altre classi:}
+              \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.User;
+              \item com.apim.server.entities.Key;
+              \end{itemize}
+            \end{itemize}
+          \end{itemize}
+          \subsubsection{Interazioni con altri componenti}
+          \begin{itemize}
+          \item com.apim.server.services.entities;
+          \item com.apim.server.services.gateway;
+          \end{itemize}
+  }
+    \subsection{com.apim.server.user}{
+    \subsubsection{Informazioni sul Package}
+        \begin{figure}[ht]
+          \centering
+          \includegraphics{\docsImg figura.png}
+          \caption{Testo figura}
+          \label{Testo figura}
+        \end{figure}
+        Package  contenente le classi che implementano le funzionalità disponibili per un utente normale;
+        \subsubsection{Classi}
+        \begin{itemize} \itemsep1pt
+          \item \textbf{ServiceSignIn}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessaria alla registrazione dell'utente;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.User;
+              \item com.apim.server.entities.UserController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceBuy}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari ad acquistare una API dal market;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.User;
+              \item com.apim.server.entities.Acquisto;
+              \item com.apim.server.entities.API;
+              \item com.apim.server.entities.Key;
+              \item com.apim.server.controllers.UserController;
+            \end{itemize}
+          \end{itemize}
+       \end{itemize}
+       \subsubsection{Interazioni con altri componenti}
+          \begin{itemize}
+            \item com.apim.server.services.controllers;
+            \item com.apim.server.services.entities;
+            \item com.apim.server.services.gateway;
+          \end{itemize}    
+  }
+     \subsection{com.apim.server.admin}{
+    \subsubsection{Informazioni sul Package}
+        \begin{figure}[ht]
+          \centering
+          \includegraphics{\docsImg figura.png}
+          \caption{Testo figura}
+          \label{Testo figura}
+        \end{figure}
+        Package  contenente le classi che implementano le funzionalità disponibili per un utente amministratore;
+        \subsubsection{Classi}
+        \begin{itemize} \itemsep1pt
+          \item \textbf{ServiceSearchUser}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessaria alla ricerca di un profilo utente da parte di un amministratore;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.User;
+              \item com.apim.server.entities.AdminController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceViewUserAdmin}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a visualizzare i dettagli di un utente da parte di un amministratore;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.User;
+              \item com.apim.server.entities.AdminController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceEditProfileAdmin}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a modificare i dettagli di un utente da parte di un amministratore;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.User;
+              \item com.apim.server.entities.AdminController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceEditAPIAdmin}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a modificare i dettagli di una API da parte di un amministratore;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.API;
+              \item com.apim.server.entities.Categoria;
+              \item com.apim.server.entities.AdminController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceDeleteAPIAdmin}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a rimuovere una API dal market da parte di un amministratore;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.API;
+              \item com.apim.server.entities.AdminController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceEditComment}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a modificare un Commento;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.API;
+              \item com.apim.server.entities.Comment;
+              \item com.apim.server.entities.AdminController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceDeleteComment}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a rimuovere un Commento;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.Comment;
+              \item com.apim.server.entities.AdminController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceInsertCategoria}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari alla creazione di una nuova categoria;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.Categoria;
+              \item com.apim.server.entities.AdminController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceEditCategoria}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a modificare una Categoria;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.Categoria;
+              \item com.apim.server.entities.AdminController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceDeleteCategoria}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a rimuovere una Categoria;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.Categoria;
+              \item com.apim.server.entities.AdminController;
+            \end{itemize}
+          \end{itemize}
+       \end{itemize}
+       \subsubsection{Interazioni con altri componenti}
+          \begin{itemize}
+            \item com.apim.server.services.controllers;
+            \item com.apim.server.services.entities;
+          \end{itemize}
+          
+       \subsection{com.apim.server.shared}{
+    \subsubsection{Informazioni sul Package}
+        \begin{figure}[ht]
+          \centering
+          \includegraphics{\docsImg figura.png}
+          \caption{Testo figura}
+          \label{Testo figura}
+        \end{figure}
+        Package  contenente le classi che implementano le funzionalità disponibili sia ad un utente normale che ad un utente amministratore;
+        \subsubsection{Classi}
+        \begin{itemize} \itemsep1pt
+          \item \textbf{ServiceLogin}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari ad eseguire il login;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.User;
+              \item com.apim.server.entities.SharedController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceSearch}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari alla ricerca di una API da parte di un utente;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.User;
+              \item com.apim.server.entities.SharedController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceViewSearch}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a visualizzare i risultati di una ricerca da parte di un utente;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.API;
+              \item com.apim.server.entities.SharedController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceViewUser}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a visualizzare le informazioni generali di un utente, quali ad esempio il suo rating;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.User;
+              \item com.apim.server.entities.SharedController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceViewAPI}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari alla visualizzazione dei dettagli di una API da parte di un utente;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.API;
+              \item com.apim.server.entities.SharedController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceLogout}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari ad un utente per eseguire il logout;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.SharedController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceEditProfile}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a modificare il proprio profilo utente;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.User;
+              \item com.apim.server.entities.SharedController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceViewStats}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a Visualizzare le statistiche di una particolare API;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.API;
+              \item com.apim.server.entities.SharedController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceInsertAPI}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a inserire una nuova API nel market ed associarla al proprio profilo;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.User;
+              \item com.apim.server.entities.API;
+              \item com.apim.server.entities.Categoria;
+              \item com.apim.server.entities.SharedController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceEditAPI}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a rimuovere una Categoria;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.API;
+              \item com.apim.server.entities.Categoria;
+              \item com.apim.server.entities.SharedController;
+            \end{itemize}
+          \end{itemize}
+           \item \textbf{ServiceDeleteAPI}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a rimuovere una API associata al proprio profilo dal market;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.API;
+              \item com.apim.server.entities.SharedController;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{ServiceInsertComment}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a inserire un nuovo Commento nel market ed associarlo ad una API;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+              \item com.apim.server.entities.API;
+              \item com.apim.server.entities.Comment;
+              \item com.apim.server.entities.User;
+              \item com.apim.server.entities.SharedController;
+            \end{itemize}
+          \end{itemize}
+       \end{itemize}
+       \subsubsection{Interazioni con altri componenti}
+          \begin{itemize}
+            \item com.apim.server.services.controllers;
+            \item com.apim.server.services.entities;
+          \end{itemize}
+          
+          
+          \subsection{com.apim.server.dao}{
+    \subsubsection{Informazioni sul Package}
+        \begin{figure}[ht]
+          \centering
+          \includegraphics{\docsImg figura.png}
+          \caption{Testo figura}
+          \label{Testo figura}
+        \end{figure}
+       Package  contenente le classi utilizzate per accedere direttamente al database;
+        \subsubsection{Classi}
+        \begin{itemize} \itemsep1pt
+          \item \textbf{IDAOFactory}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Interfaccia per la creazione degli oggetti che andranno ad eseguire l'accesso diretto al database;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{DAOFactory}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Implementazione di IDAOFactory;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.IDAOFactory;
+              \item com.apim.server.user.*;
+              \item com.apim.server.admin.*;
+              \item com.apim.server.shared.*;
+              \item com.apim.server.gateway.*;
+              \item com.apim.server.keymanager.*;
+              \item com.apim.server.dataanalysys.*;
+              \item com.apim.server.dao.DAOAPI;
+              \item com.apim.server.dao.DAOUser;
+              \item com.apim.server.dao.DAOComment;
+              \item com.apim.server.dao.DAOPeople;
+              \item com.apim.server.dao.DAOKey;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{IDAOGeneric}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Interfaccia che rappresenta un Data Access object generico;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOGeneric;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{DAOGeneric}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Implementazione di IDAOGeneric;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.IDAOGeneric;
+              \item com.apim.server.dao.DAOAPI;
+              \item com.apim.server.dao.DAOUser;
+              \item com.apim.server.dao.DAOComment;
+              \item com.apim.server.dao.DAOPeople;
+              \item com.apim.server.dao.DADAOKeyOUser;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{IDAOAPI}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe esegue l'accesso alla tabella API del database;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{DAOAPI}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Implementazione di IDAOAPI;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.entities.*;
+              \item com.apim.server.dao.IDAOAPI;
+              \item com.apim.server.dao.DAOGeneric;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{IDAOUser}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe esegue l'accesso alla tabella User del database;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{DAOUser}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Implementazione di IDAOUser;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.entities.*;
+              \item com.apim.server.dao.IDAOUser;
+              \item com.apim.server.dao.DAOGeneric;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{IDAOComment}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe esegue l'accesso alla tabella Comment del database;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{DAOComment}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Implementazione di IDAOComment;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.entities.*;
+              \item com.apim.server.dao.IDAOComment;
+              \item com.apim.server.dao.DAOGeneric;
+            \end{itemize}
+          \end{itemize}
+           \item \textbf{IDAOPeople}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe esegue l'accesso alla tabella People del database;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{DAOPeople}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Implementazione di IDAOPeople;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.entities.*;
+              \item com.apim.server.dao.IDAOPeople;
+              \item com.apim.server.dao.DAOGeneric;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{IDAOKey}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe esegue l'accesso alla tabella Key del database;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.dao.DAOFactory;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{DAOKey}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Implementazione di IDAOKey;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.entities.*;
+              \item com.apim.server.dao.IDAOKey;
+              \item com.apim.server.dao.DAOGeneric;
+            \end{itemize}
+          \end{itemize}
+       \end{itemize}
+       \subsubsection{Interazioni con altri componenti}
+          \begin{itemize}
+            \item com.apim.server.services.controllers;
+            \item com.apim.server.services.entities;
+          \end{itemize}
+          
+          
+          \subsection{com.apim.server.entities}{
+    \subsubsection{Informazioni sul Package}
+        \begin{figure}[ht]
+          \centering
+          \includegraphics{\docsImg figura.png}
+          \caption{Testo figura}
+          \label{Testo figura}
+        \end{figure}
+       Package contenente le classi che rappresentano le entità del database;
+        \subsubsection{Classi}
+        \begin{itemize} \itemsep1pt
+          \item \textbf{IEntity}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Interfaccia che rappresenta un'entità generica;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.entities.User;
+              \item com.apim.server.entities.API;
+              \item com.apim.server.entities.Key;
+              \item com.apim.server.entities.Comment;
+              \item com.apim.server.entities.Acquisto;
+              \item com.apim.server.entities.Categoria;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{IEntityFactory}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Interfaccia responsabile per la creazione di entità;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.entities.EntityFactory;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{EntityFactory}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Implementazione di IEntityFactory;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.entities.User;
+              \item com.apim.server.entities.API;
+              \item com.apim.server.entities.Key;
+              \item com.apim.server.entities.Comment;
+              \item com.apim.server.entities.Acquisto;
+              \item com.apim.server.entities.Categoria;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{User}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe rappresenta l'entità User del database;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.entities.IEntity;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{API}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe rappresenta l'entità API del database;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.entities.IEntity;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{Key}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe rappresenta l'entità Key del database;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.entities.IEntity;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{Comment}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe rappresenta l'entità Comment del database;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.entities.IEntity;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{Acquisto}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe rappresenta l'entità Acquisto del database;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.entities.IEntity;
+            \end{itemize}
+          \end{itemize}
+          \item \textbf{Categoria}
+          \begin{itemize}
+            \item \textbf{Descrizione:} Questa classe rappresenta l'entità Categoria del database;
+            \item \textbf{Relazione con altre classi:}
+            \begin{itemize}
+              \item com.apim.server.entities.IEntity;
+            \end{itemize}
+          \end{itemize}
+       \end{itemize}
+       \subsubsection{Interazioni con altri componenti}
+          \begin{itemize}
+            \item com.apim.server.services.controllers;
+            \item com.apim.server.services.entities;
+          \end{itemize}
 }
