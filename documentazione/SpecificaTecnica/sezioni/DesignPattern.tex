@@ -10,8 +10,8 @@
 	\subsection{Design Pattern Architetturali}
 		\subsubsection{Microservizi}
 			\begin{itemize}
-				\item\textbf{Scopo dell'utilizzo}:
-				\item\textbf{Contesto d'utilizzo}:
+				\item\textbf{Scopo dell'utilizzo}: Questo pattern è orientato ai microservizi, cioè permette di implementare unità separate distribuite;
+				\item\textbf{Contesto d'utilizzo}: 
 			\end{itemize}
 			\begin{figure}
 				\centering
@@ -20,10 +20,10 @@
 				\label{Fig. Architettura a microservizi}
 			\end{fiigure} \\
 
-		\subsubsection{MVVM}
+		\subsubsection{Model View View Model - MVVM}
 			\begin{itemize}
 				\item \textbf{Scopo dell'utilizzo}: Permette di separare lo sviluppo della view dal comportamento;
-				\item \textbf{Contesto d'utilizzo}:
+				\item \textbf{Contesto d'utilizzo}: Verrà usato questo pattern per lo sviluppo del front-end. Abbiamo scelto il framework AngularJS, il quale si presta bene all'adozione della famiglia di pattern MV. L'utilizzo di questi strumenti ci permette di separare la logica di business del front-end dalla sua rappresentazione grafica.
 			\end{itemize}
 			\begin{figure}[h]{0.5}
 				\centering
@@ -36,8 +36,8 @@
 
 		\subsubsection{Data Access Object - DAO }
 		\begin{itemize}\itemsep1pt
-				\item \textbf{Scopo dell'utilizzo}: Fornisce un'interfaccia per l'interazione con uno specifico tipo di database o in generale qualche sistema di persistenza. I vantaggi che ne derivano sono un totale disaccoppiamento tra la logica di business ed il database.
-				\item \textbf{Contesto dell'utilizzo}:
+				\item \textbf{Scopo dell'utilizzo}: Fornisce un'interfaccia per l'interazione con uno specifico tipo di database o in generale qualche sistema di persistenza. I vantaggi che ne derivano sono un totale disaccoppiamento tra la logica di business ed il database;
+				\item \textbf{Contesto dell'utilizzo}: Questo pattern è stato scelto per la sua facilità di cooperare con Java ed i database relazionali. Crea una classe per ogni entità presente nel nostro sistema. Ognuna di questa classi conterrà poi dei metodi che le permetteranno di interagire con il database, dandole la possibilità, ad esempio, di inserire, modificare, rimuovere, aggiornare e ricercare dei dati.
 		\end{itemize}
 		\begin{figure}[h]{0.5}
 			\centering
@@ -49,8 +49,8 @@
 		
 		\subsubsection{Abstract Factory }
 		\begin{itemize}\itemsep1pt
-			\item \textbf{Scopo dell'utilizzo}: Fornisce un'interfaccia per creare famiglie di oggetti connessi o dipendenti fra loro, in modo che non ci sia necessità da parte del client di specificare i nome delle classi concrete all'interno del proprio codice.
-			\item \textbf{Contestodell'utilizzo}:
+			\item \textbf{Scopo dell'utilizzo}: Fornisce un'interfaccia per creare famiglie di oggetti connessi o dipendenti fra loro, in modo che non ci sia necessità da parte del client di specificare i nome delle classi concrete all'interno del proprio codice;
+			\item \textbf{Contesto dell'utilizzo}: Questo pattern è stato implementato per permettere di istanziare i data access object adeguati rispetto al database voluto, permettendo quindi una facile espansione futura. 
 		\end{itemize}
 		\begin{figure}[h]{0.5}
 			\centering
@@ -76,7 +76,7 @@
 
 		\subsubsection{Facade} 
 		 \begin{itemize}
-		 		\item\textbf{Scopo dell'utilizzo}: Fornisce un'interfaccia unica semplice per un sottosistema complesso, strutturando il sistema in sottoinsiemi.
+		 		\item\textbf{Scopo dell'utilizzo}: Fornisce un'interfaccia unica semplice per un sottosistema complesso, strutturando il sistema in sottoinsiemi;
 		 		\item\textbf{Contesto dell'utilizzo}: 
 		 \end{itemize}		 	
 		\begin{figure}[h]{0.5}
