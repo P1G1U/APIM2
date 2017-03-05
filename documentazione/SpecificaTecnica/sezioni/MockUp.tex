@@ -31,16 +31,49 @@
 	}
 	
 	\subsection{Profilo}{
-		La seguente pagina che vogliamo presentare è la sezione profilo. Come da standard il link presenta il nome in grassetto \\
+		La seguente pagina che vogliamo presentare è la sezione profilo. Come da standard il link presenta il nome in grassetto.\\
 		\begin{figure}[ht]
 			\centering
 			\includegraphics{\docsImg PrototipoProfilo.png}
 			\caption{Idea di visione della Pagina profilo}
 			\label{PrototipoProfilo}
 		\end{figure}
-		La prima pagina offre un menù con le principali operazioni che l'utente finale può eseguire. Notiamo oltre al principale "header" che non è cambiato due sezioni della pagina:
+		La prima pagina offre un menù con le principali operazioni che l'utente finale può eseguire. Notiamo oltre al principale "header" che non è cambiato; due sezioni della pagina:
 		\begin{itemize}
-			\item 
+			\item La parte a sinistra con che comprende l'anagrafe del nostro profilo. Con i principali dati che distinguano la parte sociale della nostra applicazione. 
+			\begin{itemize}
+				\item Un'immagine profilo caricata precedentemente;
+				\item Nome;
+				\item Cognome;
+				\item UserId;
+				\item ContoCorrente;
+				\item BIO.
+			\end{itemize}
+			\item Nella parte più estesa invece una serie di microservizi a noi collegati. Prima troviamo dei sotto-menù del nostro profilo, ancora non studiati dettagliatamente.\\
+			Subito sottostante in questo esempio abbiamo una visione panoramica dei microservizi. Uno in particolare a cui è scaduta la chiave e quindi inutilizzabile; gli altri due che potrebbero essere intesi come acquistato e caricato. Vediamo che anche qui ritornano le categorie a cui appartengono i microservizi, con altre informazioni come il rating (con il numero di commenti) e il simbolo che indica il numero delle connessioni. Quest'ultimo è molto generico, l'idea finale del prodotto sarà più preciso e completo, può presentare anche il numero di byte trasmessi o numero di keys vendute. 
+		\end{itemize}	
+	}	
+	
+	\subsection{Ricerca}{
+		Ricerca è una pagina utilizzata dagli utenti autenticati per selezionare, studiare e informarsi su una stringa preimpostata.\\
+		\begin{figure}[ht]
+			\centering
+			\includegraphics{\docsImg PrototipoRicerca.png}
+			\caption{Idea di visione della Pagina Ricerca}
+			\label{PrototipoRicerca}
+		\end{figure}
+		Intendiamo come stringa qualsiasi cosa, non per forza una parola che si associ a un microservizio ma anche un utente o una riferimento alla documentazione.\\
+		A differenza delle pagine precedenti la form della ricerca è situata appena sotto l'header, al centro e con un formato ingrandito. Capiamo automaticamente che è il punto focale della sezione.\\
+		Anche qui la struttura del nostro prodotto è principalmente divisa in due colonne per non distrarre il consumatore finale. Ne descriviamo quindi in due porzioni:
+		\begin{itemize}
+			\item La parte sinistra è una parte di raffinamento della ricerca. Possiamo quindi perfezionarla con due diversi sotto-elenchi:
+			\begin{itemize}
+				\item Il primo ti riporta a dove è presente la stringa tra le varie entità del database. Non sono per niente definitive, anzi. Ma si può immaginare che sicuramente una stringa riporterà al titolo di un microservizio , alla documentazione e a un utente. Perché veri e propri contenitori di attributi String.
+				\item Il secondo, come di consueto nell'applicazione, riporta alle categorie/tipologie che i nostri microservizi possono riportare. Al momento non ancora ideati lasciando una vaga intestazione.
+				\item Abbiamo pensato che la ricerca può essere ulteriormente affinata tramite link a una sezione di ricerca avanzata. Ma non è un requisito che ci siamo posti obbligatorio.
+			\end{itemize} 
+			\item Nel contenitore principale invece troviamo una lista ordinata verticalmente (a differenza della Profilo) che presenta anche qui una visione generica dei microservizi. Verranno messi al primo posto i servizi più attinenti alla ricerca, probabilmente con all'interno del nome la stringa cercata.\\ 
+			Un resoconto generico darà al consumatore finale la possibilità di farsi un idea del microservizio. In rosso e con un simbolo esclamativo un microservizio sconsigliato per inattività.  
 		\end{itemize}	
 	}		
 }
