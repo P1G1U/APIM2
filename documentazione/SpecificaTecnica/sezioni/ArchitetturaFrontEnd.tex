@@ -1,67 +1,239 @@
-\section{Titolo}{
-	Testo:
-	\begin{itemize}\itemsep1pt
-		\item lista;
-		\item lista.
-	\end{itemize} 
-	
-	\subsection{SottoTitolo}{
-		Testo.
-		
-		\begin{figure}[ht]
-			%serie figure
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura1.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 1}
-				\label{Titolo Figura 1}
-			\end{subfigure}
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura2.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 2}
-				\label{Titolo Figura 2}
-			\end{subfigure}
-			\\
-			\\
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura3.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 3}
-				\label{Titolo Figura 3}
-			\end{subfigure}
-		\end{figure}
-	}
-	\subsection{SottoTitolo}{
-		Testo.
-	\\
-		Testo.
-		\begin{figure}[ht]
-			\centering
-			\includegraphics{\docsImg figura.png}
-			\caption{Testo figura}
-			\label{Testo figura}
-		\end{figure}
-		
-		Testo.
-		\\
-		Testo:
-		\begin{itemize}\itemsep1pt
-			\item lista; con:
-			\begin{itemize}\itemsep1pt
-				\item sottolista
-				\item \textbf{testogrossetto}: da da da;
-				\item \textit{Testo corsivo}.\\ 
-				Ancora testo.
-				\item testo.
-			\end{itemize}
-			\item Continua la lista di prima.
-		\end{itemize}
+\section{Architettura Front end}{
+	Il package com.apim è il package che contiene l'applicazione...	
+	\subsection{com.apim.client}{
+		\subsubsection{Informazioni sul package}{
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[width=0.7\textwidth]{percorso}
+				\caption{Schema package Client}
+			\end{figure}
 		}
-	\subsection{Sottotitolo}{
-		Testo.
-		\subsubsection{SottoSottoTitolo}{
-			Testo \url{http://www.url.com/}.
+		\subsubsection {Package contenuti}{
+			\begin{itemize}
+				\item *.model;
+				\item *.view;
+				\item *.modelView.
+			\end{itemize}
+		}
+	}
+	\subsection{com.apim.client.view}{
+		\subsubsection{Informazioni sul package}{
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[width=0.7\textwidth]{percorso}
+				\caption{Schema package client - view}
+			\end{figure}
+		}
+		\subsubsection{Package contenuti}{
+			\begin{itemize}
+				\item com.apim.client.view.user;
+				\item com.apim.client.view.search;
+				\item com.apim.client.view.admin.
+			\end{itemize}
+		}
+		\subsubsection{Interazione con altri componenti}{
+			\begin{itemize}
+				\item com.apim.client.modelView;
+			\end{itemize}
+		}
+		\subsubsection{Classi}{
+			\begin{itemize}
+				\item \textbf{Home}
+					\begin{itemize}
+						\item \textbf{Descrizione:}  template HTML che forma la pagina principale dell'applicazione.
+						\item \textbf{Relazioni con altre classi:}
+						\begin{itemize}
+							\item com.apim.client.viewModel.navigation.ShowHome.
+						\end{itemize}
+					\end{itemize}
+				\item \textbf{Login}
+					\begin{itemize}
+						\item \textbf{Descrizione:}  template HTML che compone la pagina di login.
+						\item \textbf{Relazioni con altre classi:}
+						\begin{itemize}
+							\item com.apim.client.viewModel.navigation.ShowLogin.
+						\end{itemize}
+					\end{itemize}
+				\item \textbf{pwdRecover}
+					\begin{itemize}
+						\item \textbf{Descrizione:}  template HTML che compone la pagina per il recupero della password.
+						\item \textbf{Relazioni con altre classi:}
+						\begin{itemize}
+							\item com.apim.client.viewModel.navigation.ShowRecovery.
+						\end{itemize}
+					\end{itemize}
+				\item \textbf{Registration}
+					\begin{itemize}
+						\item \textbf{Descrizione:}  template HTML che forma la pagina per la registrazione al sistema.
+						\item \textbf{Relazioni con altre classi:}
+						\begin{itemize}
+							\item com.apim.client.viewModel.navigation.ShowRegistration.
+						\end{itemize}
+					\end{itemize}
+			\end{itemize}
+		}
+	}
+	\subsection{com.apim.client.view.user}{
+		\subsubsection{Informazione sul package}{
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[width=0.7\textwidth]{percorso}
+				\caption{Schema package view.user}
+			\end{figure}
+			Questo package contiene i template html relativi alle pagine a cui può accedere un utente che ha già effettuato login.
+		}
+		\subsubsection{Interazione con altri componenti}{
+			\begin{itemize}
+				\item com.apim.client.modelView;
+			\end{itemize}
+		}
+		\subsubsection{Classi}{
+			\begin{itemize}
+				\item \textbf{ApiPage}
+					\begin{itemize}
+						\item \textbf{Descrizione:} contiene i template html relativi alla pagina delle API registrate dall'utente.
+						\item \textbf{Relazioni con altre classi:}
+						\begin{itemize}
+							\item com.apim.client.viewModel.user.ShowApiPage;
+						\end{itemize}
+					\end{itemize}
+				\item \textbf{ApiStat}
+					\begin{itemize}
+						\item \textbf{Descrizione:} contiene i template html relativi alla pagina delle statistiche di un'API registrata dall'utente.
+						\item \textbf{Relazioni con altre classi:}
+						\begin{itemize}
+							\item com.apim.client.viewModel.user.ShowApiStat;
+						\end{itemize}
+					\end{itemize}
+				\item \textbf{UserPage}
+					\begin{itemize}
+						\item \textbf{Descrizione:} contiene i template html relativi alla pagina principale dell'utente registrato.
+						\item \textbf{Relazioni con altre classi:}
+						\begin{itemize}
+							\item com.apim.client.viewModel.user.ShowUserPage;
+						\end{itemize}
+					\end{itemize}
+				\item \textbf{NewAPI}
+					\begin{itemize}
+						\item \textbf{Descrizione:} contiene i template html relativi alla pagina che permette all'utente registrato di registrare una nuova API.
+						\item \textbf{Relazioni con altre classi:}
+						\begin{itemize}
+							\item com.apim.client.viewModel.user.ShowNewApi;
+						\end{itemize}
+					\end{itemize}
+				\item \textbf{Credits}
+				\begin{itemize}
+					\item \textbf{Descrizione:} contiene i template html relativi alla pagina che permette all'utente registrato di aggiungere APICredits al suo account.
+					\item \textbf{Relazioni con altre classi:}
+					\begin{itemize}
+						\item com.apim.client.viewModel.user.ShowBuyCredits;
+					\end{itemize}
+				\end{itemize}
+			\end{itemize}
+		}
+	}
+	\subsection{com.apim.client.view.search}{
+		\subsubsection{Informazione sul package}{
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[width=0.7\textwidth]{percorso}
+				\caption{Schema package client - view}
+			\end{figure}
+			Questo package contiene i template html relativi alla ricerca.
+		}
+		\subsubsection{Interazione con altri componenti}{
+			\begin{itemize}
+				\item com.apim.client.viewModel;
+			\end{itemize}
+		}
+		\subsubsection{Classi}{
+			\begin{itemize}
+				\item \textbf{Result}
+					\begin{itemize}
+						\item \textbf{Descrizione:} Classe che contiene il template html della pagina dei risultati di ricerca.
+						\item \textbf{Relazioni con altre classi:}
+							\begin{itemize}
+								\item com.apim.client.viewModel.navigation.showSearch;
+							\end{itemize}
+					\end{itemize}
+				\item \textbf{Item}
+					\begin{itemize}
+						\item \textbf{Descrizione:} Classe che contiene il template html della pagina di un API pubblicata.
+						\item \textbf{Relazioni con altre classi:}
+							\begin{itemize}
+								\item com.apim.client.viewModel.navigation.showItemSearch;
+								\item com.apim.client.viewModel.navigation.showItemComments;
+							\end{itemize}
+					\end{itemize}	
+				\item \textbf{BuyApi}
+					\begin{itemize}
+						\item \textbf{Descrizione:} Classe che contiene il template html della pagina di acquisto di una APIKey.
+						\item \textbf{Relazioni con altre classi:}
+						\begin{itemize}
+							\item com.apim.client.viewModel.navigation.showItemBuy;
+						\end{itemize}
+					\end{itemize}	
+			\end{itemize}
+		}
+	}
+	\subsection{com.apim.client.view.admin}{
+		\subsubsection{Informazione sul package}{
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[width=0.7\textwidth]{percorso}
+				\caption{Schema package client - view}
+			\end{figure}
+			Questo package contiene i template html per le pagine relative all'admin.
+		}
+		\subsubsection{Classi}{
+			\begin{itemize}
+				\item \textbf{SearchUser}
+					\begin{itemize}
+						\item \textbf{Descrizione:} Classe che contiene il template html della pagina dei risultati di ricerca utenti.
+						\item \textbf{Relazioni con altre classi:}
+						\begin{itemize}
+							\item com.apim.client.viewModel.admin.showUserSearch;
+						\end{itemize}
+					\end{itemize}
+				\item \textbf{SiteStatPage}
+					\begin{itemize}
+						\item \textbf{Descrizione:} Classe che contiene il link html alla pagina di Analytics delle statistiche del sito.
+						\item \textbf{Relazioni con altre classi:}
+						\begin{itemize}
+							\item com.apim.client.viewModel.admin.ShowStatPage;
+						\end{itemize}
+					\end{itemize}	
+			\end{itemize}
 		}
 	}
 }
+	\subsection{com.apim.client.}{
+		\subsubsection{Informazione sul package}{
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[width=0.7\textwidth]{percorso}
+				\caption{Schema package client - view}
+			\end{figure}
+		}
+		\subsubsection{Package contenuti}{
+			\begin{itemize}
+				\item 
+			\end{itemize}
+		}
+		\subsubsection{Interazione con altri componenti}{
+			\begin{itemize}
+				\item com.apim.client.;
+			\end{itemize}
+		\subsubsection{Classi}
+			\begin{itemize}
+				\item \textbf{}
+					\begin{itemize}
+						\item \textbf{Descrizione:}
+						\item \textbf{Relazioni con altre classi:}
+						\begin{itemize}
+							\item com.apim.client.;
+						\end{itemize}
+					\end{itemize}
+			\end{itemize}
+		}
+	}
