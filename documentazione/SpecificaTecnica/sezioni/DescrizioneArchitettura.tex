@@ -6,63 +6,28 @@
 	    ad un livello molto basilare dove potranno essere identificate le singole classi e le loro sottoclassi, queste ultime verranno trattate nello specifico all'interno della fase della Progettazzione in dettaglio. 
 	    Partiremo quindi ad analizzare il rapporto che é presente tra i vari package per poi espandere i package ed analizzare nello specifico da cosa sono formati, che lavoro svolgono e come comunicano tra di loro,
 	    quindi passeremo ad analizzare le classi che ne fanno parte, ovvero i metodi che contengono, il loro funzionamento e l'obiettivo per cui sono state sviluppate. Verranno poi mostrati dei design pattern utilizzati
-	    e mostrati alcuni esempi degli stessi nell'appendice A.	Il Proponente ha chiesto esplicitamente che venisse utillizzato all'intrno del progetto il linguaggio Jolie\textsubscript{g}, un linguaggio da lui sviluppato,
+	    e mostrati alcuni esempi degli stessi nell'appendice A.	Il Proponente\textsubscript{g} ha chiesto esplicitamente che venisse utillizzato all'interno del progetto il linguaggio Jolie\textsubscript{g}, un linguaggio da lui sviluppato,
 	    e ha messo a disposizione anche Leonardo\textsubscript{g}, percui nella fase di progettazzione il team ha dovuto integrare questa tecnologia al resto del progetto.
 		
-		\begin{figure}[ht]
-			%serie figure
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura1.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 1}
-				\label{Titolo Figura 1}
-			\end{subfigure}
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura2.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 2}
-				\label{Titolo Figura 2}
-			\end{subfigure}
-			\\
-			\\
-			\begin{subfigure}[b]{0.5\textwidth}
-				\includegraphics[width=\textwidth]{\docsImg seriefigura3.png}
-				%\vspace{-40pt}
-				\caption{Titolo Figura 3}
-				\label{Titolo Figura 3}
-			\end{subfigure}
-		\end{figure}
 	}
 	\subsection{Architettura generale}{
-		Testo.
-	\\
-		Testo.
+		Il Proponente\textsubscript{g} nel presentare il capitolato ha riportato un'architettura di massima che rappresenterà come dovrà essere il prodotto finale. Tale architettura è la seguente:
+	
 		\begin{figure}[ht]
 			\centering
-			\includegraphics{\docsImg figura.png}
-			\caption{Testo figura}
-			\label{Testo figura}
+			\includegraphics{\docsImg Architettura.bmp}
+			\caption{Architettura di massima del progetto}
+			\label{Architettura di massima del progetto}
 		\end{figure}
 		
-		Testo.
-		\\
-		Testo:
-		\begin{itemize}\itemsep1pt
-			\item lista; con:
-			\begin{itemize}\itemsep1pt
-				\item sottolista
-				\item \textbf{testogrossetto}: da da da;
-				\item \textit{Testo corsivo}.\\ 
-				Ancora testo.
-				\item testo.
-			\end{itemize}
-			\item Continua la lista di prima.
-		\end{itemize}
-		}
-	\subsection{Sottotitolo}{
-		Testo.
-		\subsubsection{SottoSottoTitolo}{
-			Testo \url{http://www.url.com/}.
-		}
-	}
+		L'APIMarket\textsubscript{g} dovrà permettere ad un utente di caricare una API\textsubscript{g}, deve poter acquistare APIKey\textsubscript{g} che gli permettano di utilizzare API\textsubscript{g} già presenti nell'APIMarket\textsubscript{g} e infine avere la possibilità di monitorare i dati riferiti alle API\textsubscript{g}.
+		L'architettura sopra riportata rappresenta una possibile soluzione di come deve essere il prodotto finale: attraverso un APIGateway\textsubscript{g} è possibile controllare che le API\textsubscript{g} caricate siano conformi a 
+		standard che verranno concordati con il Proponente\textsubscript{g}, sempre l'APIGateway\textsubscript{g} si occuperà di gestire acquisto e la validazione dell'APIKey\textsubscript{g} in possesso dell'utente (o che desidera acquistare), infine 
+		sarà sempre lui a monitorare le chiamate alle API\textsubscript{g} e a fornire i dati necessari richiesti.
+		Per interfacciare l'utente all'APIGateway\textsubscript{g} è necessaria un'interfaccia. Per definire l'interfaccia il team ha optato per un'architettura MVVM (Model-View-ViewModel) che si discosta dall'architettura MVC
+		in quanto in questa architettura esiste un collegamento bilaterale tra la \textit{View} e la \textit{Model} e questo comporta che ogni modifica che viene effettuata sull'una, va a modificare anche i parametri dell'altra.
+		La scelta dell'utilizzo di questa architettura nei confronti di una architettura MVC viene trattata nel capitolo riguardante il Front-end\textsubscript{g}.
+		Il Proponente\textsubscript{g} ha espressamente chiesto che il team usufruisse di una tecnologia da lui creata, ovvero Jolie\textsubscript{g}, perciò il team ha deciso di sviluppare il Back-end\textsubscript{g} secondo un'architettura a microservizi così da poter 
+		sfruttare a pieno le potenzialità di questa tecnologia. 
+		
 }
