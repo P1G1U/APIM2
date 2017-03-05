@@ -21,17 +21,17 @@
 			\begin{tabular}{lccc}
 				&Attributo&Tipo&Vincolo\\
 				Username&String&PRIMARY KEY\\
-				Password&String& \\
-				Nome&String& \\
-				Cognome&String& \\
-				DataNascita&Date& \\
-				Mail&String& \\
-				NumeroCarta&String& \\
-				Indirizzo&String& \\
-				Telefono&String& \\
-				Bio&String& \\
-				SaldoCoin&Double& \\
-				IsAdmin\\
+				Password&String&null\\
+				Nome&String&null \\
+				Cognome&String&null \\
+				DataNascita&Date&null\\
+				Mail&String&null \\
+				NumeroCarta&String&null \\
+				Indirizzo&String&null \\
+				Telefono&String&null \\
+				Bio&String&null \\
+				SaldoCoin&Double&null \\
+				IsAdmin&Bool&null\\
 			\end{tabular}
 			\end{center} \\
 			\textit{Utenti}\\
@@ -44,14 +44,14 @@
 			\begin{tabular}{lccc}
 				&Attributo&Tipo&Vincolo\\
 				Nome API&String&PRIMARY KEY\\
-				LinkFile&String& \\
-				LinkPdf&String& \\
-				NumeroVoti&Int& \\
-				RatingMedio&Double& \\
-				TempoMedioRisposta&double& \\
-				TotaleChiamate&Int& \\
-				Traffico&Double& \\
-				TempoRispostaTotale&Double& \\
+				LinkFile&String&null\\
+				LinkPdf&String&null \\
+				NumeroVoti&Int&null \\
+				RatingMedio&Double&null \\
+				TempoMedioRisposta&double&null \\
+				TotaleChiamate&Int&null \\
+				Traffico&Double&null \\
+				TempoRispostaTotale&Double&null \\
 			\end{tabular}
 			\end{center}
 			In particolare in questa tabella sono contenute le statistiche di ogni API come il \textbf{Tempo Medio Risposta}, il \textbf{Traffico} di dati che comporta l'tilizzo di quel microservizio, il numero \textbf{Totale Chiamate} e il \textbf{Tempo Risposta Totale}. \\
@@ -61,9 +61,9 @@
 			\begin{tabular}{lccc}
 				&Attributo&Tipo&Vincolo\\
 				Key&String&PRIMARY KEY\\
-				DataScadenza&Date& \\
-				MaxByte&Double& \\
-				TempoUso&Double& \\
+				DataScadenza&Date&null \\
+				MaxByte&Double&null \\
+				TempoUso&Double&null \\
 			\end{tabular}
 			\end{center}
 			In particolare gli attributi \textbf{DataScadenza, MaxByte e TempoUso} sono i limiti entro i quali la chiave puo' essere utilizzata. Secondo la policy di acquisto di un microservizio, al raggiungimento di tale limite la chiave scadra' e non permettera' piu' l'utilizzo di tale microservizio.
@@ -73,8 +73,8 @@
 			\begin{tabular}{lccc}
 				&Attributo&Tipo&Vincolo\\
 				IdCommento&Int&PRIMARY KEY\\
-				Testo&String& \\
-				Rating&Int& \\
+				Testo&String&null \\
+				Rating&Int&null \\
 			\end{tabular}
 			\end{center}
 			In particolare textbf{Rating} sara' il giudizio che l'utente lascera' del microservizio utilizzato. \\
@@ -85,7 +85,7 @@
 			\begin{tabular}{lccc}
 				&Attributo&Tipo&Vincolo\\
 				IdCategoria&Int&PRIMARY KEY\\
-				Categoria&String& \\			
+				Categoria&String&null \\			
 			\end{tabular}
 			\end{center}\\
 			
@@ -130,7 +130,7 @@
 			\begin{tabular}{lccc}
 				&Attributo&Tipo&Vincolo\\
 				IdCategoria&Int&PRIMARY KEY\\
-				Categoria&Varchar& \\
+				Categoria&Varchar&null \\
 			\end{tabular}
 			\end{center}\\
 			
@@ -140,17 +140,17 @@
 			\begin{tabular}{lccc}
 				&Attributo&Tipo&Vincolo\\
 				Username&Varchar&PRIMARY KEY\\
-				Password&Varchar& \\				
-				Nome&Varchar& \\
-				Cognome&Varchar& \\
-				DataNascita&Date& \\				
-				Mail&Varchar& \\
-				NumeroCarta&Varchar& \\
-				Indirizzo&Varchar& \\
-				Telefono&Varchar& \\
-				Bio&Varchar& \\
-				SaldoCoin&Double& \\
-				IsAdmin&Boolean& \\
+				Password&Varchar&null \\				
+				Nome&Varchar&null \\
+				Cognome&Varchar&null \\
+				DataNascita&Date&null \\				
+				Mail&Varchar&null \\
+				NumeroCarta&Varchar&null \\
+				Indirizzo&Varchar&null \\
+				Telefono&Varchar&null \\
+				Bio&Varchar&null \\
+				SaldoCoin&Double&null \\
+				IsAdmin&Boolean&null \\
 				NomeAPI&Varchar&FOREIGN KEY\\
 			\end{tabular}
 			\end{center} \\					
@@ -161,14 +161,14 @@
 			\begin{tabular}{lccc}
 				&Attributo&Tipo&Vincolo\\
 				NomeAPI&Varchar&PRIMARYKEY\\
-				LinkFile&Varchar& \\
-				LinkPdf&Varchar& \\
-				NumeroVoti&Int& \\
-				RatingMedio&Double& \\
-				TempoMedioRisposta&Double& \\
-				TotaleChiamate&Int& \\
-				Traffico&Doule& \\
-				TempoRispostaTotale&Double& \\
+				LinkFile&Varchar&null \\
+				LinkPdf&Varchar&null \\
+				NumeroVoti&Int&null \\
+				RatingMedio&Double&null \\
+				TempoMedioRisposta&Double&null \\
+				TotaleChiamate&Int&null \\
+				Traffico&Doule&null \\
+				TempoRispostaTotale&Double&null \\
 				Username&Varchar&FOREING KEY\\
 				Categoria&Varchar&FOREIGN KEY\\
 			\end{tabular}
@@ -180,8 +180,8 @@
 			\begin{tabular}{lccc}
 				&Attributo&Tipo&Vincolo\\
 				IdCommento&Int&PRIMARY KEY\\
-				Testo&Varchar& \\
-				Rating&Int& \\
+				Testo&Varchar&null \\
+				Rating&Int&null \\
 				Username&Varchar&FOREIGN KEY\\
 				NomeAPI&Varchar&FOREIGN KEY\\
 			\end{tabular}
@@ -193,9 +193,9 @@
 			\begin{tabular}{lccc}
 				&Atttributo&Tipo&Vincolo\\
 				Key&Varchar&PRIMARY KEY\\
-				DataScadenza&Date& \\
-				MaxByte&Double& \\
-				TempoUso&Time& \\
+				DataScadenza&Date&null \\
+				MaxByte&Double&null \\
+				TempoUso&Time&null \\
 				Username&Varchar&FOREIGN KEY\\
 				NomeAPI&Varchar&FOREIGNKEY\\			
 			\end{tabular}
