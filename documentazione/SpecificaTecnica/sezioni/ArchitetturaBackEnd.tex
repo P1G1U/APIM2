@@ -1,4 +1,93 @@
 \section{Architettura Back End}{
+
+  \subsection{Microservizi Jolie}
+Di seguito sono illustrate le varie componenti server, realizzato con architettura a microservizi.
+[figura]
+
+\begin{itemize}
+\item ControllerInterface
+  \begin{itemize}
+  \item \textbf{Descrizione:} Interfaccia che denifisce le operazioni disponibili nel microservizio Controller;
+    \item \textbf{Relazione con altri microservizi:}
+      \begin{itemize}
+      \item Controller;
+      \end{itemize}
+  \end{itemize}
+\item Controller
+  \begin{itemize}
+  \item \textbf{Descrizione:} Microservizio che riceve le chiamate dalla web-app;
+    \item \textbf{Relazione con altri microservizi:}
+      \begin{itemize}
+      \item UserManager;
+        \item KeyManager;
+        \item Analyzer;
+      \end{itemize}
+  \end{itemize}
+\item UserManagerInterface
+  \begin{itemize}
+  \item \textbf{Descrizione:}Interfaccia che denifisce le operazioni disponibili nel microservizio UserManager;
+    \item \textbf{Relazione con altri microservizi:}
+      \begin{itemize}
+      \item UserManager;
+      \end{itemize}
+  \end{itemize}
+\item UserManager
+  \begin{itemize}
+  \item \textbf{Descrizione:} Microservizio responsabile delle operazioni riguardanti gli utenti;
+    \item \textbf{Relazione con altri microservizi:}
+      \begin{itemize}
+        \item KeyManager;
+        \item Analyzer;
+      \end{itemize}
+  \end{itemize}
+\item KeyManagerInterface
+  \begin{itemize}
+  \item \textbf{Descrizione:}Interfaccia che denifisce le operazioni disponibili nel microservizio KeyManager;
+    \item \textbf{Relazione con altri microservizi:}
+      \begin{itemize}
+      \item KeyManager;
+      \end{itemize}
+  \end{itemize}
+\item KeyManager
+  \begin{itemize}
+  \item \textbf{Descrizione:} Microservizio responsabile delle operazioni riguardanti le Key;
+    \item \textbf{Relazione con altri microservizi:}
+  \end{itemize}
+\item AnalyzerInterface
+  \begin{itemize}
+  \item \textbf{Descrizione:}Interfaccia che denifisce le operazioni disponibili nel microservizio Analyzer;
+    \item \textbf{Relazione con altri microservizi:}
+      \begin{itemize}
+      \item Analyzer;
+      \end{itemize}
+  \end{itemize}
+\item Analyzer
+  \begin{itemize}
+  \item \textbf{Descrizione:} Microservizio responsabile delle operazioni di raccolta ed elaborazione dei dati statistici sulle API;
+    \item \textbf{Relazione con altri microservizi:}
+  \end{itemize}
+\item GatewayInterface
+  \begin{itemize}
+  \item \textbf{Descrizione:}Interfaccia che denifisce le operazioni disponibili nel microservizio Gateway;
+    \item \textbf{Relazione con altri microservizi:}
+      \begin{itemize}
+      \item Gateway;
+      \end{itemize}
+  \end{itemize}
+\item Gateway
+  \begin{itemize}
+  \item \textbf{Descrizione:}Microservizio responsabile delle operazioni di verifica, analisi e reindirizzamento delle connessioni da un client verso il server del microservizio associato alla API;
+    \item \textbf{Relazione con altri microservizi:}
+      \begin{itemize}
+      \item Analyzer;
+        \item UserManager;
+        \item KeyManager;
+      \end{itemize}
+  \end{itemize}
+
+\end{itemize}
+
+  
   \begin{figure}[ht]
     %serie figure
     \begin{subfigure}[b]{0.5\textwidth}
@@ -135,7 +224,7 @@
       \begin{itemize} \itemsep1pt
       \item \textbf{ServiceGateway}
       \begin{itemize}
-      \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a verificare la presenza della API invocata nel database;
+      \item \textbf{Descrizione:} Questa classe contiene i metodi necessari a verificare la presenza della API invocata nel database, verificare l'esistenza effettiva del server del microservizio e infine inoltrare la richiesta del client;
       \item \textbf{Relazione con altre classi:}
       \begin{itemize}
       \item com.apim.server.keyManager.*;
@@ -149,10 +238,10 @@
       \end{itemize}
       \subsubsection{Interazioni con altri componenti}
       \begin{itemize}
-      \item com.apim.server.services.controllers;
-      \item com.apim.server.services.entities;
-      \item com.apim.server.services.keyManager;
-      \item com.apim.server.services.dataAnalysis;
+      \item com.apim.server.controllers;
+      \item com.apim.server.entities;
+      \item com.apim.server.keyManager;
+      \item com.apim.server.dataAnalysis;
       \end{itemize}
   }
       \subsection{com.apim.server.dataAnalysis}{
