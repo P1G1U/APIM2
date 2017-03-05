@@ -11,14 +11,14 @@
 		\subsubsection{Microservizi}
 			\begin{itemize}
 				\item\textbf{Scopo dell'utilizzo}: Questo pattern è orientato ai microservizi, cioè permette di implementare unità separate distribuite;
-				\item\textbf{Contesto d'utilizzo}: 
+				\item\textbf{Contesto d'utilizzo}: In tutta la nostra parte di back-end utilizzeremo questo modello a microservizi, cercando quindi di separare le unità permettendo di conoscere solamente come comunicano tra di loro e non invece come sono implementate.
 			\end{itemize}
 			\begin{figure}
 				\centering
-				\includegraphics{ArchitetturaMicroservizi.png}
+				\includegraphics{\docsImg architetturaMicroservizi.png}
 				\caption{Architettura Microservizi}
 				\label{Fig. Architettura a microservizi}
-			\end{figure}
+			\end{fiigure} \\
 
 		\subsubsection{Model View View Model - MVVM}
 			\begin{itemize}
@@ -27,11 +27,12 @@
 			\end{itemize}
 			\begin{figure}[h]{0.5}
 				\centering
-				\includegraphics{mvvm.png}
+				\includegraphics{\docsImg mvvm.png}
 				%\vspace{-40pt}
 				\caption{mvvm}
 				\label{fig. Mvvm}
 			\end{figure}
+			\\
 
 		\subsubsection{Data Access Object - DAO }
 		\begin{itemize}\itemsep1pt
@@ -40,7 +41,7 @@
 		\end{itemize}
 		\begin{figure}[h]{0.5}
 			\centering
-			\includegraphics{dao.png }
+			\includegraphics{\docsImg dao.png }
 			\caption{DAO}
 			\label{fig. Data Access Object - DAO}
 		\end{figure}
@@ -51,10 +52,9 @@
 			\item \textbf{Scopo dell'utilizzo}: Fornisce un'interfaccia per creare famiglie di oggetti connessi o dipendenti fra loro, in modo che non ci sia necessità da parte del client di specificare i nome delle classi concrete all'interno del proprio codice;
 			\item \textbf{Contesto dell'utilizzo}: Questo pattern è stato implementato per permettere di istanziare i data access object adeguati rispetto al database voluto, permettendo quindi una facile espansione futura. 
 		\end{itemize}
-	
 		\begin{figure}[h]{0.5}
 			\centering
-			\incudegraphics{abstractfactory.png}
+			\incudegraphics{\docsImg abstractfactory.png}
 			\caption{Abstract Factory}
 			\label{fig. Abstract Factory}
 		\end{figure}
@@ -62,27 +62,26 @@
 		\subsubsection{Dependency Injection}
 		\begin{itemize}\itemsep1pt
 			\item\textbf{Scopo dell'utilizzo}: Permette di separare il comportamento di una componente dalla risoluzione delle sue dipendenze;
-			\item\textbf{Contesto dell'utilizzo}:
+			\item\textbf{Contesto dell'utilizzo}: Ci permette di interagire facilmente con il framework AngularJS.  
 		\end{itemize}
-	
 		\begin{figure}[h]{0.5}
 			\centering
-			\includegraphics{DependencyInjection.png}
+			\includegraphics{\docsImg DependencyInjection.png}
 			\caption{Dependency Injection}
 			\label{fig. Dependency Injection}
 		\end{figure}
+		\\
 
 	\subsection{Design Pattern Strutturali}
 
 		\subsubsection{Facade} 
 		 \begin{itemize}
 		 		\item\textbf{Scopo dell'utilizzo}: Fornisce un'interfaccia unica semplice per un sottosistema complesso, strutturando il sistema in sottoinsiemi;
-		 		\item\textbf{Contesto dell'utilizzo}: 
-		 \end{itemize}
-	 		 	
+		 		\item\textbf{Contesto dell'utilizzo}: Questo pattern è stato scelto perché è in grado di interfacciarsi con un sistema complesso come può essere il nostro, e facilita le interazioni tra ogni livello del software. 
+		 \end{itemize}		 	
 		\begin{figure}[h]{0.5}
 			\centering
-			\includegraphics{facade.jpeg}
+			\includegraphics{\docsImg facade.jpeg}
 			\caption{Facade}
 			\label{fig. Facade}	
 		\end{figure}
@@ -94,10 +93,9 @@
 			\item \textbf{Scopo dell'utilizzo}: Permette di incapsulare una richiesta in un oggetto, cosicche' i client sia indipendente dalle richieste;
 			\item \textbf{Contesto dell'utilizzo}: Questo pattern ci permette di facilitare il passaggio delle chiavi all'utente.
 		\end{itemize}
-	
 		\begin{figure}[h]{0.5}
 			\centering
-			\includegraphics{command.jpeg}
+			\includegraphics{\docsImg command.jpeg}
 			\caption{Command}
 			\label{fig. Command}
 		\end{figure}
