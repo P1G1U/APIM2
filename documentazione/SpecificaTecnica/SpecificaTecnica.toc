@@ -1,76 +1,77 @@
 \select@language {italian}
 \select@language {italian}
 \contentsline {section}{\numberline {1}Registro Modifiche}{2}{section.1}
-\contentsline {section}{\numberline {2}Introduzione}{6}{section.2}
-\contentsline {subsection}{\numberline {2.1}Scopo del Documento}{6}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Glossario}{6}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Riferimenti}{6}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Normativi}{6}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Informativi}{6}{subsubsection.2.3.2}
-\contentsline {section}{\numberline {3}Tecnologie Utilizzate}{7}{section.3}
-\contentsline {subsection}{\numberline {3.1}Linguaggi}{7}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}HTML5}{7}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}CSS3}{7}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.3}Javascript}{7}{subsubsection.3.1.3}
-\contentsline {subsubsection}{\numberline {3.1.4}Jolie}{8}{subsubsection.3.1.4}
-\contentsline {subsubsection}{\numberline {3.1.5}SQL}{8}{subsubsection.3.1.5}
-\contentsline {subsection}{\numberline {3.2}Frameworks}{9}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}AngularJS}{9}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Spring Framework - Spring Boot}{10}{subsubsection.3.2.2}
-\contentsline {subsection}{\numberline {3.3}Librerie}{11}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Leonardo: il web server di Jolie}{11}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Highcharts}{11}{subsubsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3}Angular Material}{11}{subsubsection.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.4}Highcharts-ng}{12}{subsubsection.3.3.4}
-\contentsline {section}{\numberline {4}Descrizione Architettura}{13}{section.4}
-\contentsline {subsection}{\numberline {4.1}Metodo di specifica}{13}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Architettura generale}{13}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Sottotitolo}{13}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}SottoSottoTitolo}{13}{subsubsection.4.3.1}
-\contentsline {section}{\numberline {5}Titolo}{14}{section.5}
-\contentsline {subsection}{\numberline {5.1}SottoTitolo}{14}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}SottoTitolo}{14}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Sottotitolo}{14}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}SottoSottoTitolo}{14}{subsubsection.5.3.1}
-\contentsline {section}{\numberline {6}Titolo}{15}{section.6}
-\contentsline {subsection}{\numberline {6.1}SottoTitolo}{15}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}SottoTitolo}{15}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Sottotitolo}{15}{subsection.6.3}
-\contentsline {subsubsection}{\numberline {6.3.1}SottoSottoTitolo}{15}{subsubsection.6.3.1}
-\contentsline {section}{\numberline {7}Titolo}{16}{section.7}
-\contentsline {subsection}{\numberline {7.1}SottoTitolo}{16}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}SottoTitolo}{16}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Sottotitolo}{16}{subsection.7.3}
-\contentsline {subsubsection}{\numberline {7.3.1}SottoSottoTitolo}{16}{subsubsection.7.3.1}
-\contentsline {section}{\numberline {8}Titolo}{17}{section.8}
-\contentsline {subsection}{\numberline {8.1}SottoTitolo}{17}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}SottoTitolo}{17}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Sottotitolo}{17}{subsection.8.3}
-\contentsline {subsubsection}{\numberline {8.3.1}SottoSottoTitolo}{17}{subsubsection.8.3.1}
-\contentsline {section}{\numberline {9}Titolo}{18}{section.9}
-\contentsline {subsection}{\numberline {9.1}SottoTitolo}{18}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}SottoTitolo}{18}{subsection.9.2}
-\contentsline {subsection}{\numberline {9.3}Sottotitolo}{18}{subsection.9.3}
-\contentsline {subsubsection}{\numberline {9.3.1}SottoSottoTitolo}{18}{subsubsection.9.3.1}
-\contentsline {section}{\numberline {10}Titolo}{19}{section.10}
-\contentsline {subsection}{\numberline {10.1}SottoTitolo}{19}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}SottoTitolo}{19}{subsection.10.2}
-\contentsline {subsection}{\numberline {10.3}Sottotitolo}{19}{subsection.10.3}
-\contentsline {subsubsection}{\numberline {10.3.1}SottoSottoTitolo}{19}{subsubsection.10.3.1}
-\contentsline {section}{\numberline {11}Descrizione Design Pattern}{20}{section.11}
-\contentsline {subsection}{\numberline {11.1}Design Pattern Architetturali}{20}{subsection.11.1}
-\contentsline {subsubsection}{\numberline {11.1.1}Pattern Architetturale a Microservizi}{20}{subsubsection.11.1.1}
-\contentsline {subsubsection}{\numberline {11.1.2}Data Access Object (DAO)}{21}{subsubsection.11.1.2}
-\contentsline {subsubsection}{\numberline {11.1.3}Model View ViewModel}{22}{subsubsection.11.1.3}
-\contentsline {subsection}{\numberline {11.2}Design Pattern Creazionali}{23}{subsection.11.2}
-\contentsline {subsubsection}{\numberline {11.2.1}Abstract Factory}{23}{subsubsection.11.2.1}
-\contentsline {subsubsection}{\numberline {11.2.2}Dependency Injection}{24}{subsubsection.11.2.2}
-\contentsline {subsection}{\numberline {11.3}Design Pattern Strutturali}{25}{subsection.11.3}
-\contentsline {subsection}{\numberline {11.4}Facade}{25}{subsection.11.4}
-\contentsline {subsection}{\numberline {11.5}Design Pattern Comportamentali}{26}{subsection.11.5}
-\contentsline {subsubsection}{\numberline {11.5.1}Command}{26}{subsubsection.11.5.1}
-\contentsline {section}{\numberline {12}Titolo}{28}{section.12}
-\contentsline {subsection}{\numberline {12.1}SottoTitolo}{28}{subsection.12.1}
-\contentsline {subsection}{\numberline {12.2}SottoTitolo}{28}{subsection.12.2}
-\contentsline {subsection}{\numberline {12.3}Sottotitolo}{28}{subsection.12.3}
-\contentsline {subsubsection}{\numberline {12.3.1}SottoSottoTitolo}{28}{subsubsection.12.3.1}
+\contentsline {section}{\numberline {2}Introduzione}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Scopo del Documento}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Glossario}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Riferimenti}{5}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Normativi}{5}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Informativi}{5}{subsubsection.2.3.2}
+\contentsline {section}{\numberline {3}Tecnologie Utilizzate}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Linguaggi}{6}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}HTML5}{6}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}CSS3}{6}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Javascript}{6}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Jolie}{7}{subsubsection.3.1.4}
+\contentsline {subsubsection}{\numberline {3.1.5}SQL}{7}{subsubsection.3.1.5}
+\contentsline {subsection}{\numberline {3.2}Frameworks}{8}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}AngularJS}{8}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Spring Framework - Spring Boot}{9}{subsubsection.3.2.2}
+\contentsline {subsection}{\numberline {3.3}Librerie}{10}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Leonardo: il web server di Jolie}{10}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Highcharts}{10}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Angular Material}{10}{subsubsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.4}Highcharts-ng}{11}{subsubsection.3.3.4}
+\contentsline {section}{\numberline {4}Descrizione Architettura}{12}{section.4}
+\contentsline {subsection}{\numberline {4.1}Metodo di specifica}{12}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Architettura generale}{12}{subsection.4.2}
+\contentsline {section}{\numberline {5}Titolo}{13}{section.5}
+\contentsline {subsection}{\numberline {5.1}SottoTitolo}{13}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}SottoTitolo}{13}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Sottotitolo}{13}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}SottoSottoTitolo}{13}{subsubsection.5.3.1}
+\contentsline {section}{\numberline {6}Architettura Back End}{14}{section.6}
+\contentsline {subsection}{\numberline {6.1}com.apim.server}{14}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Informazioni sul Package}{14}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}Package contenuti}{14}{subsubsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.3}Relazione tra le componenti interne}{14}{subsubsection.6.1.3}
+\contentsline {subsection}{\numberline {6.2}com.apim.server.controllers}{14}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Informazioni sul Package}{14}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}Classi}{14}{subsubsection.6.2.2}
+\contentsline {subsection}{\numberline {6.3}com.apim.server.services}{14}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {6.3.1}Informazioni sul Package}{14}{subsubsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.2}Packages contenuti}{15}{subsubsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.3}Classi}{15}{subsubsection.6.3.3}
+\contentsline {subsubsection}{\numberline {6.3.4}Interazioni con altri componenti}{15}{subsubsection.6.3.4}
+\contentsline {subsection}{\numberline {6.4}com.apim.server.gateway}{15}{subsection.6.4}
+\contentsline {subsubsection}{\numberline {6.4.1}Informazioni sul Package}{15}{subsubsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.2}Classi}{16}{subsubsection.6.4.2}
+\contentsline {subsubsection}{\numberline {6.4.3}Interazioni con altri componenti}{16}{subsubsection.6.4.3}
+\contentsline {subsection}{\numberline {6.5}com.apim.server.dataAnalysis}{16}{subsection.6.5}
+\contentsline {subsubsection}{\numberline {6.5.1}Informazioni sul Package}{16}{subsubsection.6.5.1}
+\contentsline {subsubsection}{\numberline {6.5.2}Classi}{16}{subsubsection.6.5.2}
+\contentsline {subsubsection}{\numberline {6.5.3}Interazioni con altri componenti}{16}{subsubsection.6.5.3}
+\contentsline {subsection}{\numberline {6.6}com.apim.server.keyManager}{17}{subsection.6.6}
+\contentsline {subsubsection}{\numberline {6.6.1}Informazioni sul Package}{17}{subsubsection.6.6.1}
+\contentsline {subsubsection}{\numberline {6.6.2}Classi}{17}{subsubsection.6.6.2}
+\contentsline {subsubsection}{\numberline {6.6.3}Interazioni con altri componenti}{17}{subsubsection.6.6.3}
+\contentsline {subsection}{\numberline {6.7}com.apim.server.user}{17}{subsection.6.7}
+\contentsline {subsubsection}{\numberline {6.7.1}Informazioni sul Package}{17}{subsubsection.6.7.1}
+\contentsline {subsubsection}{\numberline {6.7.2}Classi}{18}{subsubsection.6.7.2}
+\contentsline {subsubsection}{\numberline {6.7.3}Interazioni con altri componenti}{18}{subsubsection.6.7.3}
+\contentsline {subsection}{\numberline {6.8}com.apim.server.admin}{18}{subsection.6.8}
+\contentsline {subsubsection}{\numberline {6.8.1}Informazioni sul Package}{18}{subsubsection.6.8.1}
+\contentsline {subsubsection}{\numberline {6.8.2}Classi}{18}{subsubsection.6.8.2}
+\contentsline {subsubsection}{\numberline {6.8.3}Interazioni con altri componenti}{20}{subsubsection.6.8.3}
+\contentsline {subsection}{\numberline {6.9}com.apim.server.shared}{20}{subsection.6.9}
+\contentsline {subsubsection}{\numberline {6.9.1}Informazioni sul Package}{20}{subsubsection.6.9.1}
+\contentsline {subsubsection}{\numberline {6.9.2}Classi}{20}{subsubsection.6.9.2}
+\contentsline {subsubsection}{\numberline {6.9.3}Interazioni con altri componenti}{23}{subsubsection.6.9.3}
+\contentsline {subsection}{\numberline {6.10}com.apim.server.dao}{23}{subsection.6.10}
+\contentsline {subsubsection}{\numberline {6.10.1}Informazioni sul Package}{23}{subsubsection.6.10.1}
+\contentsline {subsubsection}{\numberline {6.10.2}Classi}{23}{subsubsection.6.10.2}
+\contentsline {subsubsection}{\numberline {6.10.3}Interazioni con altri componenti}{25}{subsubsection.6.10.3}
+\contentsline {subsection}{\numberline {6.11}com.apim.server.entities}{25}{subsection.6.11}
+\contentsline {subsubsection}{\numberline {6.11.1}Informazioni sul Package}{25}{subsubsection.6.11.1}
+\contentsline {subsubsection}{\numberline {6.11.2}Classi}{25}{subsubsection.6.11.2}
+\contentsline {subsubsection}{\numberline {6.11.3}Interazioni con altri componenti}{27}{subsubsection.6.11.3}
