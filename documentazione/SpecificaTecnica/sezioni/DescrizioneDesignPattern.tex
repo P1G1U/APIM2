@@ -45,7 +45,12 @@
 		\subsubsection{Data Access Object (DAO)}{
 			Il DAO (Data Access Object) è un pattern architetturale per la gestione della persistenza: si tratta fondamentalmente di una classe con relativi metodi che rappresenta un'entità tabellare di un database relazionale.
 			
-			%MANCA GRAFICO
+			\begin{figure}[h]
+				\centering
+				\includegraphics[width=0.7\linewidth]{\docsImg ArchitetturaleDAO.png}
+				\caption{Illustrazione Architettura Data Access Object}
+				\label{Illustrazione Architettura Data Access Object}
+			\end{figure}
 						
 			\begin{itemize}\itemsep1pt
 				\item \textbf{Descrizione Generale} : Usata principalmente in applicazioni web (come ad esempio Java EE), per stratificare e isolare l'accesso ad una tabella tramite query (poste all'interno dei metodi della classe) ovvero al data layer da parte della business logic creando un maggiore livello di astrazione ed una più facile manutenibilità. I metodi del DAO con le rispettive query dentro verranno così richiamati dalle classi della business logic.\\ 
