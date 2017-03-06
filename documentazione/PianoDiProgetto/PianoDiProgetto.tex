@@ -109,7 +109,7 @@
 	
 	{\centering \large 
 		\hfill \textbf{Versione} 2.0.0 \\		
-		\hfill \textbf{Data di Rilascio} 28/02/2017 \\ 
+		\hfill \textbf{Data di Rilascio} 06/03/2017 \\ 
 		\hfill \textbf{Redazione} Sebastiano Marchesini \\
 		\hfill Piergiorgio Danieli \\
 		\hfill \textbf{Verifica} Pietro Lonardi \\
@@ -383,7 +383,7 @@
 		\end{itemize}
 	
 	\subsection{Pianificazione dei rischi}
-		Per ogni rischio analizzato bisogna scegliere la strategia. Sono possibili le seguenti strategie:
+		Per ogni rischio analizzato bisogna scegliere la \textit{strategia di mitigazione}. Sono possibili le seguenti strategie:
 		\begin{itemize}
 			\item \textbf{Trasferire};
 			\item \textbf{Mitigare};
@@ -413,16 +413,24 @@
 			\item \textbf{Inesperienza}: Inesperienza nell'uso della tecnologia e conoscenza generica della progettazione e analisi. Ragionevole in un gruppo di studenti.
 		\end{itemize}
 		\begin{center}
-			\textbf{Livello organizzativo e valutazione dei costi}
+			\textbf{Livello Organizzativo e Valutazione dei Costi}
 		\end{center}
 		\begin{itemize}
 			\item \textbf{Valutazione Efficienza}: Sbagliata la stima delle tempistiche e dei costi nel piano. Provoca uno slittamento generale. Nel caso di dipendenze anche grave per tutto il team.
+			\item \textbf{Rischio di Stress}: Difficile da individuare, il rischio di stress ingloba i principali rischi di origine psico-sociale che colpiscono l'aspetto emotivo del lavoratore.
 		\end{itemize}
 		\begin{center}
-			\textbf{Livello dei requisiti}
+			\textbf{Livello dei Requisiti}
 		\end{center}
 		\begin{itemize}
 			\item \textbf{Comprensione Requisiti}: Errata analisi dei requisiti e visione diversa tra \textit{Analista} e \textit{Proponente} di un obbiettivo. Se tempestiva è facile la soluzione.
+		\end{itemize}
+		\begin{center}
+			\textbf{Livello di Desgin}
+		\end{center}
+		\begin{itemize}
+			\item \textbf{Dipendenze Progettuali}: In corso d'opera, i progettisti con i vari compiti assegnati si ritrovano a dover attendere una conclusione progettuale di un altro componente del team prima di completare il proprio ticket progettuale.
+			\item \textbf{Marketing Grafico}: Difficoltà nel trovare un prototipo grafico accattivante da inserire nel MockUp.
 		\end{itemize}
 
 	\begin{landscape}
@@ -440,7 +448,7 @@
 				Singolo & Responsabile & \multicolumn{5}{|c|}{\minitab[c]{Ciascun membro del team\\ ha il dovere di informarsi con l'ausilio\\ di documentazione anche fornita dal Responsabile}} \\ 
 				\hline
 				\textit{RT2 - Rottura Hardware} & 13/12/2016 & 20\% & 30\% & 6\% & --- & Accettare \\ 
-				Singolo & Singolo & \multicolumn{5}{|c|}{\minitab[c]{Si risolve utilizzando\\ strumenti forniti dall'università\\ in sostituzione a quelli personali}} \\ 
+				Singolo & Singolo & \multicolumn{5}{|c|}{\minitab[c]{Si risolve utilizzando strumenti forniti \\ dall'università in sostituzione a quelli personali}} \\ 
 				\hline
 				\hline
 			\end{tabular} 
@@ -455,11 +463,11 @@
 					\textbf{Ruolo} & \textbf{Owner} & \multicolumn{5}{|c|}{\textbf{Contromisure}} \\ 
 					\hline 
 				\textit{RP1 - Inesperienza} & 12/12/2016 & 80\% & 70\% & 56\% & --- & Mitigare \\ 
-				Singolo & Singolo & \multicolumn{5}{|c|}{\minitab[c]{Impegno del singolo\\ per informarsi e aggiornarsi lasciando\\ libertà di tempo aggiuntivo nel caso vi siano difficoltà}} \\ 
+				Singolo & Singolo & \multicolumn{5}{|c|}{\minitab[c]{Impegno del singolo per informarsi e aggiornarsi lasciando\\ libertà di tempo aggiuntivo nel caso vi siano difficoltà}} \\ 
 				\hline
 				\textit{RP2 - Problemi dei singoli} & 27/01/2017 & 60\% & 60\% & 36\% & Previa comunicazione & Accettare \\ Singolo & Responsabile & \multicolumn{5}{|c|}{\minitab[c]{Subito dopo la comunicazione\\ sarà il Responsabile a rielaborare le mansioni\\ e l'organizzazione del gruppo}}\\ 
 				\hline
-				\textit{RP3 - Problemi tra componenti} & 12/12/2016 & 20\% & 80\% & 16\% & --- & Mitigare \\ \minitab[c]{Responsabile\\Singolo} & Responsabile & \multicolumn{5}{|c|}{\minitab[c]{Il Responsabile può ridistribuire \\i ruoli affinchè non vi sia\\ dipendenze tra i litiganti o dimettersi}} \\ 
+				\textit{RP3 - Problemi tra componenti} & 12/12/2016 & 20\% & 80\% & 16\% & --- & Mitigare \\ \minitab[c]{Responsabile\\Singolo} & Responsabile & \multicolumn{5}{|c|}{\minitab[c]{Il Responsabile può ridistribuire i ruoli affinchè non vi \\ sia dipendenze tra i litiganti o dimettersi}} \\ 
 				\hline 
 				\hline
 			\end{tabular}
@@ -473,7 +481,9 @@
 				\textbf{Nome} & \textbf{Data} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Prodotto} & \textbf{Trigger} & \textbf{Strategia Pianificazione} \\ 
 				\textbf{Ruolo} & \textbf{Owner} & \multicolumn{5}{|c|}{\textbf{Contromisure}} \\ 
 				\hline 
-				\textit{RO1 - Valutazione Efficienza} & 16/12/2016 & 90\% & 50\% & 45\% & Non rispettati tempi pianificati & Trasferimento \\ \minitab[c]{Responsabile\\Analista\\Singolo} & Amministratore & \multicolumn{5}{|c|}{\minitab[c]{Riprogettazione immediata del\\ piano organizzativo. Trasferimento degli oneri al componente\\ meno oberato o al Project Manager}} \\ 
+				\textit{RO1 - Valutazione Efficienza} & 16/12/2016 & 90\% & 50\% & 45\% & Non rispettati tempi pianificati & Trasferimento \\ \minitab[c]{Responsabile\\Analista\\Singolo} & Amministratore & \multicolumn{5}{|c|}{\minitab[c]{Riprogettazione immediata del piano organizzativo.\\ Trasferimento degli oneri al componente meno oberato o al Project Manager}} \\ 
+				\hline
+				\textit{RO2 - Rischio di Stress} & 23/12/2016 & 10\% & 85\% & 8\% & Errori grossolani ultimo periodo & Trasferimento \\ Singolo & Project Manager & \multicolumn{5}{|c|}{\minitab[c]{Programmare una distribuzione più equa \\ o più gratificante del carico delle mansioni da svolgere}} \\ 
 				\hline
 				\hline 
 			\end{tabular}
@@ -484,13 +494,38 @@
 		{\renewcommand\arraystretch{1.2}
 			\begin{tabular}{|c|c|c|c|c|c|c|}
 				\hline 
-				\textbf{Nome} & \textbf{Data} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Prodotto} & \textbf{Trigger} & \textbf{Strategia Pianificazione} \\ 
+				\textbf{Nome} & \textbf{Data} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Prodotto} & \textbf{Trigger} & \textbf{Strategia Pianificazione} \\
+				\textbf{Ruolo} & \textbf{Owner} & \multicolumn{5}{|c|}{\textbf{Contromisure}} \\ 
+				\hline 
 				\textit{RR1 - Comprensione Requisiti} & 22/12/2016 & 40\% & 40\% & 16\% & --- & Accettare \\ \minitab[c]{Progettista\\Verificatore\\Singolo} &
 				Analista & \multicolumn{5}{|c|}{Riunione e comunicazione tra le parti con correzioni al piano} \\ 
+				\hline
+				\textit{RR2 - Frammentazione dei Requisiti} & 22/12/2016 & 70\% & 20\% & 14\% & Trovato requisito molto complesso & Mitigare \\ Analista &
+				Analista & \multicolumn{5}{|c|}{Studio accurato del requisito ed elaborazione in comune col team} \\ 
 				\hline 
+				\hline
 			\end{tabular} 
 		}
 		\normalsize
+		\end{center}
+	\subsubsection{Livello di Design}
+		\begin{center}		
+			{\renewcommand\arraystretch{1.2}
+				\begin{tabular}{|c|c|c|c|c|c|c|}
+					\hline 
+					\textbf{Nome} & \textbf{Data} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Prodotto} & \textbf{Trigger} & \textbf{Strategia Pianificazione} \\
+					\textbf{Ruolo} & \textbf{Owner} & \multicolumn{5}{|c|}{\textbf{Contromisure}} \\ 
+					\hline  
+					\textit{RD1 - Dipendenze Progettuali} & 25/02/2016 & 70\% & 60\% & 42\% & Previa Comunicazione & Mitigare \\ \minitab[c]{Progettista\\Verificatore\\Singolo} &
+					Project Manager & \multicolumn{5}{|c|}{Comunicazioni di riassegnazioni dei ticket} \\ 
+					\hline 
+					\textit{RD2 - Marketing Grafico} & 03/03/2016 & 20\% & 20\% & 4\% & --- & Accettare \\ \minitab[c]{Progettista} &
+					Progettista & \multicolumn{5}{|c|}{Prendere spunto da ulteriori fonti} \\ 
+					\hline
+					\hline
+				\end{tabular} 
+			}
+			\normalsize
 		\end{center}
 	\end{landscape}
 	
