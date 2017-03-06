@@ -282,7 +282,7 @@
 	\subsection{Procedure di controllo di qualità di prodotto}
 	Il controllo di qualità dei prodotti verrà garantito dai seguenti processi:
 	\begin{itemize}
-		\item \textbf{Software Quality Assurance (SQA)}: assicura che i processi siano appropriati per il progetto, che siano correttamente implementati. Prevede l'attuazione di tecniche di analisi statica e dinamica, descritte nel documento \textit{"Norme di Progetto v1.0.0"};
+		\item \textbf{Software Quality Assurance (SQA)}: assicura che i processi siano appropriati per il progetto, che siano correttamente implementati. Prevede l'attuazione di tecniche di analisi statica e dinamica, descritte nel documento \textit{"Norme di Progetto v2.0.0"};
 		\item \textbf{Verifica}: è il procedimento che controlla la coerenza e la correttezza dei prodotti dei processi. La verifica verrà eseguita costantemente durante tutta la durata del progetto;
 		\item \textbf{Validazione}: ovvero la conferma che il sistema soddisfi i requisiti e sia conforme alle attese.
 	\end{itemize}
@@ -292,7 +292,7 @@
 	Viene verificata sia la qualità del processo che del prodotto da esso compiuto.\\
 	Ogni fase del progetto, descritta nel documento \textit{"Piano di progetto v2.0.0"} produce un prodotto diverso, quindi necessita di diverse attività di verifica:
 	\begin{itemize}
-		\item \textbf{Analisi e Analisi di Dettaglio}: in questa fase si verifica che i processi e la documentazione prodotta rispettino le norme definite nel documento \textit{"Norme di Progetto v1.0.0"} e i tempi prestabiliti nel \textit{"Piano di Progetto v2.0.0"};
+		\item \textbf{Analisi e Analisi di Dettaglio}: in questa fase si verifica che i processi e la documentazione prodotta rispettino le norme definite nel documento \textit{"Norme di Progetto v2.0.0"} e i tempi prestabiliti nel \textit{"Piano di Progetto v2.0.0"};
 	    \item \textbf{Progettazzione Achitetturale}; anche in questa fase sono presenti documenti perciò verranno effettuate le stesse verifiche della precedente fase, ovviamente sulle modifiche riportate nei documenti già esistenti e inoltre sui nuovi che vorranno prodotti. In questa fase non viene ancora steso codice perciò non verrà applicata un'analisi dinamica;
 	    \item \textbf{Programmazzione in Dettaglio e Codifica}: in questa fase si effettuerà una verifica sempre sui documenti che verranno stesi, sui vecchi documenti che subiranno modifiche e infine anche al codice che verrà prodotto attravero gli strumenti definiti nel documento \textit{"Norme di Progetto v2.0.0"}.
 	\end{itemize}
@@ -558,12 +558,54 @@
 		\end{itemoze}	
 	}
 	
+	\subsection{Test di integrazione back-end}
+	Per i test  di integrazione della parte back-end\textsubscript{g} si è deciso di raggrupparli per microservizio per rendere anche la descrizione più comprensibile.\\ 
+	\begin{tabular}{|c|c|c|c|}
+	    {\textbf{Test}}&{\textbf{Descrizione}}&{\textbf{Stato}} \\
+	    \hline
+	    TI 1.1 & \minitab[c]{Viene verificato che le classi che saranno incorporate \\ dal microservizio Controller funzionino correttamente \\ quando utilizzate da un Driver} & N.A. \\
+	    \hline
+	    TI 1.2 & \minitab[c]{Viene verificato che il microservizio Controller funzioni \\ correttamente quando incorpora delle classi Stub} & N.A. \\
+	    \hline
+	    TI 1.3 & \minitab[c]{Viene verificato che le classi incorporate dal microservizio \\ Controller ed il microservizio stesso funzionino \\ correttamente una volta integrate} & N.A. \\
+	    \hline
+	    TI 2.1 & \minitab[c]{Viene verificato che le classi che saranno incorporate dal \\ microservizio UserManager funzionino correttamente quando \\ utilizzate da un Driver} & N.A. \\
+	    \hline
+	    TI 2.2 & \minitab[c]{Viene verificato che il microservizio UserManager funzioni \\ correttamente quando incorpora delle classi Stub} & N.A. \\
+	    \hline
+	    TI 2.3 & \minitab[c]{Viene verificato che le classi incorporate dal microservizio \\ UserManager ed il microservizio stesso funzionino correttamente \\ una volta integrate} & N.A. \\
+        \hline
+	    TI 3.1 & \minitab[c]{Viene verificato che le classi che saranno incorporate dal \\ microservizio KeyManager funzionino correttamente quando \\ utilizzate da un Driver} & N.A. \\
+	    \hline
+	    TI 3.2 & \minitab[c]{Viene verificato che il microservizio KeyManager funzioni \\ correttamente quando incorpora delle classi Stub} & N.A. \\
+	    \hline
+	    TI 3.3 & \minitab[c]{Viene verificato che le classi incorporate dal microservizio \\ KeyManager ed il microservizio stesso funzionino correttamente \\ una volta integrate} & N.A. \\
+        \hline
+	    TI 4.1 & \minitab[c]{Viene verificato che le classi che saranno incorporate dal \\ microservizio UserManager funzionino correttamente quando \\ utilizzate da un Drive} & N.A. \\
+	    \hline
+	    TI 4.2 & \minitab[c]{Viene verificato che il microservizio UserManager funzioni \\ correttamente quando incorpora delle classi Stub} & N.A. \\
+	    \hline
+	    TI 4.3 & \minitab[c]{Viene verificato che le classi incorporate dal microservizio \\ UserManager ed il microservizio stesso funzionino \\ correttamente una volta integrate} & N.A. \\
+        \hline
+	    TI 5.1 & \minitab[c]{Viene verificato che le classi che saranno incorporate dal \\ microservizio Gateway funzionino correttamente quando \\ utilizzate da un Driver} & N.A. \\
+	    \hline
+	    TI 5.2 & \minitab[c]{Viene verificato che il microservizio Gateway funzioni \\ correttamente quando incorpora delle classi Stub} & N.A. \\
+	    \hline
+	    TI 5.3 & \minitab[c]{Viene verificato che le classi incorporate dal microservizio \\ Gateway ed il microservizio stesso funzionino correttamente \\ una volta integrate} & N.A. \\
+        \hline
+	    TI 6.1 & \minitab[c]{Viene verificato che le classi che saranno incorporate dal \\ microservizio Analyzer funzionino correttamente quando \\ utilizzate da un Driver} & N.A. \\
+	    \hline
+	    TI 6.2 & \minitab[c]{Viene verificato che il microservizio Analyzer funzioni \\ correttamente quando incorpora delle classi Stub} & N.A. \\
+	    \hline
+	    TI 6.3 & \minitab[c]{Viene verificato che le classi incorporate dal microservizio \\ Analyzer ed il microservizio stesso funzionino correttamente \\ una volta integrate} & N.A. \\
+	 \end{tabular}
+	
 	\newpage
 	\appendix
 	\rhead{Risultati RR}
 	\section{Appendice}
 	\subsection{Risultati al termine delle consegne}
-	In questa ultima sezione verranno riportati i risultati che vengono misurati dalle metriche definite nel documento \textit{"Norme di Progetto v2.0.0"} inoltre verranno contestualizzati secondo i range ottimali e di accettazione definiti in questo documento.\\
+	In questa ultima sezione verranno riportati i risultati che vengono misurati dalle metriche definite nel documento \textit{"Norme di Progetto v1.0.0"} inoltre verranno contestualizzati secondo i range ottimali e di accettazione definiti in questo documento.\\
 	
 	\subsection{Analisi e analisi in dettaglio}
 	
@@ -589,7 +631,7 @@
     Ciò nonostante il gruppo si ritiene soddisfatto dei risultati ottenuti dall'indice anche se non hanno portato ad un range ottimale, considerando che alcuni dei documenti verranno modificati durante il procedere del progetto, i dati ottenuti possono migliorare e questo è ciò che il gruppo si impone di migliorare.\\
     
     \subsubsection{Risultati PDCA}
-    Analizzando il Registro delle modifiche dei documenti rispetto ai grafici di Gantt riguardante la pianificazione di questa fase, presenti nel \textit{Piano di Progetto v.2.0.0}, è possibile notare che si è riusciti a rientrare nelle tempistiche per le consegne previste, questo è stato possibile grazie al fatto che durante la progettazione sono state fatte delle approssimazioni in eccesso delle tempistiche per raggiungere le milestone\textsubscript{g},
+    Analizzando il Registro delle modifiche dei documenti rispetto ai grafici di Gantt riguardante la pianificazione di questa fase, presenti nel \textit{Piano di Progetto v.1.0.0}, è possibile notare che si è riusciti a rientrare nelle tempistiche per le consegne previste, questo è stato possibile grazie al fatto che durante la progettazione sono state fatte delle approssimazioni in eccesso delle tempistiche per raggiungere le milestone\textsubscript{g},
     in questo modo se fossero emersi dei problemi, ci sarebbe stato del tempo in più da utilizzare come cuscinetto per non far ritardare i processi successivi.
     
     \subsection{Progettazzione Architetturale}
