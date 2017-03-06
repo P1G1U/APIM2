@@ -38,7 +38,7 @@
 %\end{itemize}
 %TABELLA
 %\begin{tabular}{|c|c|c|}
-%indica una tabella con 3 colonne e pos. testo centrale. La barra verticale ( | ) indica che vi √® una linea divisoria verticale tra le celle.
+%indica una tabella con 3 colonne e pos. testo centrale. La barra verticale ( | ) indica che vi Ë una linea divisoria verticale tra le celle.
 %\hline	linea separatrice orizzontale
 %testo1& testo2& testo3\\
 % & segna la fine del testo nella cella, \\ indica il fine della riga 
@@ -55,8 +55,6 @@
 \usepackage{fix-cm} % Permette l'incremento del font oltre misura
 \newcommand{\HRule}[1]{\hfill \rule{0.2\linewidth}{#1}} % Horizontal rule at the bottom of the page, adjust width here
 \definecolor{grey}{rgb}{0.9,0.9,0.9} % Colore del box del titolo
-\appendix
-\include{Appendice}
 \begin{document}
 	
 	\thispagestyle{empty} % Toglie il numero della pagina nella prima pagina
@@ -67,7 +65,7 @@
 	
 	\colorbox{grey}{
 		\parbox[t]{1.0\linewidth}{
-			\centering \fontsize{50pt}{80pt}\selectfont % Il primo √® la grandezza del font, il secondo lo spazio lasciato
+			\centering \fontsize{50pt}{80pt}\selectfont % Il primo Ë la grandezza del font, il secondo lo spazio lasciato
 			\vspace*{0.7cm} % Spazio dall'inizio del box al titolo
 			
 			\raggedleft
@@ -88,8 +86,8 @@
 	%----------------------------------------------------------------------------------------
 	
 	{\centering \large 
-		\hfill \textbf{Versione} 1.0.0 \\
-		\hfill \textbf{Data di rilascio} XX/XX/2017
+		\hfill \textbf{Versione} 2.0.0 \\
+		\hfill \textbf{Data di rilascio} 06/03/2017 \\
 		\hfill \textbf{Redazione} Gianluca Crivellaro \\
 		\hfill Piergiorgio Danieli \\
 		\hfill \textbf{Verifica} Pietro Lonardi \\
@@ -103,7 +101,7 @@
 		\HRule{1pt}
 		
 		\textbf{Sommario} \\
-		Questo documento ha l'obiettivo di fornire un metodo per misurare la qualit√† del prodotto.
+		Questo documento ha l'obiettivo di fornire un metodo per misurare la qualit‡ del prodotto.
 		
 	} % Linea orizzontale di estetica
 	
@@ -124,15 +122,16 @@
 	
 	\rhead{Registro Modifiche}
 	\section{Registro Modifiche}
+	\begin{center}
 	\small %rippicciolisce il testo
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
 		\begin{tabular}{|l|c|c|c|}
 			\hline
 			{\textbf{Ver.}}&{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}\\
 			\hline
-			1.0.3 & Stesura Pianificazione Test & Lonardi Pietro & 25/02/2017
+			1.0.3 & Stesura Pianificazione Test & Lonardi Pietro & 25/02/2017 \\
 			\hline
-			1.0.2 & Stesura dell'appendice & Lonardi Pietro & 22/02/2017
+			1.0.2 & Stesura dell'appendice & Lonardi Pietro & 22/02/2017 \\
 			\hline
 			1.0.1 & Correzzione delle metriche e misure & Lonardi Pietro & 21/02/2017 \\
 			\hline
@@ -148,6 +147,7 @@
 			\hline
 		\end{tabular}
 	}
+	\end{center}
 	\normalsize
 	
 	\newpage
@@ -161,14 +161,14 @@
 	\rhead{Introduzione}
 	\section{Introduzione}
 	\subsection{Scopo del documento}
-	Lo scopo del \textit{Piano di Qualifica} √® di descrivere le strategie di verifica e validazione adottate dal gruppo SWEg al fine di perseguire obiettivi qualitativi per il progetto APIMarket\textsubscript{g}.
+	Lo scopo del \textit{Piano di Qualifica} Ë di descrivere le strategie di verifica e validazione adottate dal gruppo SWEg al fine di perseguire obiettivi qualitativi per il progetto APIMarket\textsubscript{g}.
 	
 	\subsection{Scopo del Prodotto}
-	Lo scopo del progetto √® la realizzazione di un applicazione web che gestisca e monitori microservizi, muniti di un'interfaccia Jolie. In particolare APIMarket\textsubscript{g} deve permettere di vendere, acquistare e monitorare microservizi tramite la piattaforma.
+	Lo scopo del progetto Ë la realizzazione di un applicazione web che gestisca e monitori microservizi, muniti di un'interfaccia Jolie. In particolare APIMarket\textsubscript{g} deve permettere di vendere, acquistare e monitorare microservizi tramite la piattaforma.
 	
 	\subsection{Glossario}
-	Al fine di evitare ambiguit√† e ottimizzare la comprensione dei documenti, viene incluso un Glossario, nel quale saranno inseriti i termini tecnici, acronimi e parole che necessitano di essere chiarite.\\
-	Un glossario √® una raccolta di termini di un ambito specifico e circoscritto. In questo caso per raccogliere termini desueti e specialistici inerenti al progetto.
+	Al fine di evitare ambiguit‡ e ottimizzare la comprensione dei documenti, viene incluso un Glossario, nel quale saranno inseriti i termini tecnici, acronimi e parole che necessitano di essere chiarite.\\
+	Un glossario Ë una raccolta di termini di un ambito specifico e circoscritto. In questo caso per raccogliere termini desueti e specialistici inerenti al progetto.
 	
 	\subsection{Riferimenti}
 	\subsubsection{Normativi}
@@ -196,106 +196,106 @@
 	\end{itemize} 
 	
 	\newpage
-	\rhead{Definizione obiettivi di qualit√†}
-	\section{Definizione obiettivi di qualit√†}
-	Il gruppo SWEg si impegna a rispettare il modello di standard definito in ISO/IEC 9126, il quale ha le seguenti qualit√†:
-		\subsection{Funzionalit√†}
-		Il sistema prodotto deve garantire tutte le funzionalit√† indicate nel documento \textit{"Analisi dei Requisiti v1.0.0"}. L'implementazione dei requisiti deve essere pi√π completa ed economica possibile.
+	\rhead{Definizione obiettivi di qualit‡}
+	\section{Definizione obiettivi di qualit‡}
+	Il gruppo SWEg si impegna a rispettare il modello di standard definito in ISO/IEC 9126, il quale ha le seguenti qualit‡:
+		\subsection{Funzionalit‡}
+		Il sistema prodotto deve garantire tutte le funzionalit‡ indicate nel documento \textit{"Analisi dei Requisiti v1.0.0"}. L'implementazione dei requisiti deve essere pi˘ completa ed economica possibile.
 		\begin{itemize}
-			\item \textbf{Misura}: viene usata come unit√† di misura la quantit√† di requisiti mappati in componenti del sistema create e funzionanti;
-			\item \textbf{Metrica}: la sufficienza √® stabilita nel soddisfacimento di tutti i requisiti obbligatori;
-			\item \textbf{Strumenti}: perch√© questa qualit√† sia soddisfatta il sistema deve superare tutti i test previsti.
+			\item \textbf{Misura}: viene usata come unit‡ di misura la quantit‡ di requisiti mappati in componenti del sistema create e funzionanti;
+			\item \textbf{Metrica}: la sufficienza Ë stabilita nel soddisfacimento di tutti i requisiti obbligatori;
+			\item \textbf{Strumenti}: perchË questa qualit‡ sia soddisfatta il sistema deve superare tutti i test previsti.
 		\end{itemize}
 	
-		\subsection{Affidabilit√†}
+		\subsection{Affidabilit‡}
 		Il sistema si deve dimostrare robusto e di facile ripristino in caso di errori.
 		\begin{itemize}
-			\item \textbf{Misura}: l'unit√† di misura sar√† la quantit√† di esecuzioni del sistema andati a buon fine;
-			\item \textbf{Metrica}: le esecuzioni dovranno soddisfare la pi√π ampia gamma di funzionalit√† previste;
+			\item \textbf{Misura}: l'unit‡ di misura sar‡ la quantit‡ di esecuzioni del sistema andati a buon fine;
+			\item \textbf{Metrica}: le esecuzioni dovranno soddisfare la pi˘ ampia gamma di funzionalit‡ previste;
 			\item \textbf{Strumenti}: da definire.
 		\end{itemize}
 	
-		\subsection{Usabilit√†}
-		Il sistema prodotto deve risultare di semplice utilizzo per l'utente. Questo sistema deve allo stesso tempo soddisfare tutte le necessit√† dell'utente.
+		\subsection{Usabilit‡}
+		Il sistema prodotto deve risultare di semplice utilizzo per l'utente. Questo sistema deve allo stesso tempo soddisfare tutte le necessit‡ dell'utente.
 		\begin{itemize}
 			\item \textbf{Misura}: i dieci punti dell'euristica di Nielsen;
-			\item \textbf{Metrica}: la sufficienza √® stabilita dal soddisfacimento del numero minimo di punti;
-			\item \textbf{Strumenti}: perch√© questa qualit√† sia soddisfatta il sistema deve superare tutti i test previsti.
+			\item \textbf{Metrica}: la sufficienza Ë stabilita dal soddisfacimento del numero minimo di punti;
+			\item \textbf{Strumenti}: perchË questa qualit‡ sia soddisfatta il sistema deve superare tutti i test previsti.
 		\end{itemize}
 	
 		\subsection{Efficienza}
-		Il sistema deve fornire tutte le funzionalit√† nel pi√π breve tempo possibile, con il minimo utilizzo di risorse.
+		Il sistema deve fornire tutte le funzionalit‡ nel pi˘ breve tempo possibile, con il minimo utilizzo di risorse.
 		\begin{itemize}
 			\item \textbf{Misura}: tempi di latenza per ottenere una risposta dall'applicazione web in condizioni normali o in caso di sovraccarico della rete;
 			\item \textbf{Metrica}: la sufficienza viene stimata come un tempo di latenza minore del 20\% su rete via cavo o Wi-Fi e del 30\% su reti cellulari rispetto alla media dei tempi di latenza del server web;
 			\item \textbf{Strumenti}: si veda il documento \textit{"Norme di Progetto v1.0.0"}.
 		\end{itemize}
 	
-		\subsection{Manutenibilit√†}
+		\subsection{Manutenibilit‡}
 		Il sistema prodotto deve essere comprensibile ed estensibile in modo facile e verificabile.
 		\begin{itemize}
-			\item \textbf{Misura}: l'unit√† di misura utilizzata saranno le metriche sul codice descritte nel documento \textit{"Norme di Progetto v1.0.0"} ;
+			\item \textbf{Misura}: l'unit‡ di misura utilizzata saranno le metriche sul codice descritte nel documento \textit{"Norme di Progetto v1.0.0"} ;
 			\item \textbf{Metrica}: le metriche che verranno rispettate sono descritte nel documento \textit{"Norme di Progetto v1.0.0"};
 			\item \textbf{Strumenti}: si veda il documento \textit{"Norme di Progetto v1.0.0"}.
 		\end{itemize}
 	
-		\subsection{Portabilit√†}
-		Il sistema deve essere pi√π portabile possibile. Il sito deve essere visitabile da pi√π browser possibili. Il sito deve essere sviluppato con sistemi che abbiano le varie componenti tecnologiche di tipo standard. Con il termine "standard" si intente che i contenuti devono poter essere utilizzati su pi√π sistemi operativi e ambienti di lavoro possibili.
+		\subsection{Portabilit‡}
+		Il sistema deve essere pi˘ portabile possibile. Il sito deve essere visitabile da pi˘ browser possibili. Il sito deve essere sviluppato con sistemi che abbiano le varie componenti tecnologiche di tipo standard. Con il termine "standard" si intente che i contenuti devono poter essere utilizzati su pi˘ sistemi operativi e ambienti di lavoro possibili.
 			\begin{itemize}
 				\item \textbf{Misura}: il front end deve aderire agli standard W3C;
-				\item \textbf{Metrica}: se il software avr√† la sufficienza in tutte le metriche descritte nel documento \textit{"Norme di Progetto v1.0.0"}, allora il sito avr√† le caratteristiche di portabilit√† descritte;
+				\item \textbf{Metrica}: se il software avr‡ la sufficienza in tutte le metriche descritte nel documento \textit{"Norme di Progetto v1.0.0"}, allora il sito avr‡ le caratteristiche di portabilit‡ descritte;
 				\item \textbf{Strumenti}: si veda il documento \textit{"Norme di Progetto v1.0.0"}.
 			\end{itemize}
 		
-		\subsection{Altre qualit√†}
-		Saranno inoltre importanti per il prodotto le seguenti qualit√†:
+		\subsection{Altre qualit‡}
+		Saranno inoltre importanti per il prodotto le seguenti qualit‡:
 		\begin{itemize}
-			\item \textbf{Semplicit√†}: si ottiene tramite la realizzazione del prodotto nel modo pi√π semplice, senza tralasciare la qualit√†;
-			\item \textbf{Incapsulamento}: applicare le tecniche di incapsulamento per aumentare la manutenibilit√† e la possibilit√† di riuso del codice. L'interazione sar√† possibile tramite interfacce;
-			\item \textbf{Coesione}: riguarda le funzionalit√† che collaborano tra di loro per ottenere uno stesso obiettivo. Devono risiedere nello stesso componente, e come scopo hanno quello di ridurre l'indice di dipendenza, favorire la semplicit√† e la manutenibilit√†.
+			\item \textbf{Semplicit‡}: si ottiene tramite la realizzazione del prodotto nel modo pi˘ semplice, senza tralasciare la qualit‡;
+			\item \textbf{Incapsulamento}: applicare le tecniche di incapsulamento per aumentare la manutenibilit‡ e la possibilit‡ di riuso del codice. L'interazione sar‡ possibile tramite interfacce;
+			\item \textbf{Coesione}: riguarda le funzionalit‡ che collaborano tra di loro per ottenere uno stesso obiettivo. Devono risiedere nello stesso componente, e come scopo hanno quello di ridurre l'indice di dipendenza, favorire la semplicit‡ e la manutenibilit‡.
 		\end{itemize}
 	
 	\newpage
 	\rhead{Visione generale delle strategie di verifica}
 	\section{Visione generale delle strategie di verifica}
-	\subsection{Procedure di controllo di qualit√† di processo}
-	La qualit√† dei processi verr√† garantita dall'applicazione del principio PDCA. Grazie a questo principio sar√† possibile garantire non solo il controllo e la correttezza, ma anche il miglioramento costante della qualit√† di tutti i processi. Come conseguenza diretta si otterr√† il miglioramento del prodotto.\\
-	Per avere controllo dei processi, e di conseguenza qualit√†, √® necessario che:
+	\subsection{Procedure di controllo di qualit‡ di processo}
+	La qualit‡ dei processi verr‡ garantita dall'applicazione del principio PDCA. Grazie a questo principio sar‡ possibile garantire non solo il controllo e la correttezza, ma anche il miglioramento costante della qualit‡ di tutti i processi. Come conseguenza diretta si otterr‡ il miglioramento del prodotto.\\
+	Per avere controllo dei processi, e di conseguenza qualit‡, Ë necessario che:
 	\begin{itemize}
 		\item vi sia controllo sull'operato dei membri del team e sui processi;
 		\item i processi siano pianificati in modo dettagliato;
 		\item le risorse siano ripartite in modo chiaro.
 	\end{itemize}
-	L'attuazione di questi punti √® descritta nel documento \textit{"Piano di Progetto v1.0.0"}. Inoltre l'analisi costante della qualit√† del prodotto permette di monitorare in modo indiretto la qualit√† dei processi: se il prodotto √® di bassa qualit√† sicuramente il processo √® migliorabile.\\
-	Per valutare la qualit√† di un processo √® fondamentale che questa sia quantificata, le metriche per fare ci√≤ sono descritte nel documento \textit{"Norme di Progetto v1.0.0"}.\\
+	L'attuazione di questi punti Ë descritta nel documento \textit{"Piano di Progetto v1.0.0"}. Inoltre l'analisi costante della qualit‡ del prodotto permette di monitorare in modo indiretto la qualit‡ dei processi: se il prodotto Ë di bassa qualit‡ sicuramente il processo Ë migliorabile.\\
+	Per valutare la qualit‡ di un processo Ë fondamentale che questa sia quantificata, le metriche per fare ciÚ sono descritte nel documento \textit{"Norme di Progetto v1.0.0"}.\\
 	
-	Per monitorare costantemente lo stato del processo il gruppo fa affidamento alle direttive fornite dallo standard ISO/IEC 15504 che tratta esattamente di come identificare lo stato di maturazione di un processo in modo da poter agire per migliorarlo nel caso sia necessario. Per approfondimenti si riporta alla documentazione linkata ai riferimenti all'inizio di questo documento.\\
+	Per monitorare costantemente lo stato del processo il gruppo fa affidamento alle direttive fornite dallo standard ISO/IEC 15504 che tratta esattamente di come identificare lo stato di maturazione di un processo in modo da poter agire per migliorarlo nel caso sia necessario. Per approfondimenti si riporta alla documentazione presenti di link ai riferimenti all'inizio di questo documento.\\
 	
-	\subsection{Procedure di controllo di qualit√† di prodotto}
-	Il controllo di qualit√† dei prodotti verr√† garantito dai seguenti processi:
+	\subsection{Procedure di controllo di qualit‡ di prodotto}
+	Il controllo di qualit‡ dei prodotti verr‡ garantito dai seguenti processi:
 	\begin{itemize}
 		\item \textbf{Software Quality Assurance (SQA)}: assicura che i processi siano appropriati per il progetto, che siano correttamente implementati. Prevede l'attuazione di tecniche di analisi statica e dinamica, descritte nel documento \textit{"Norme di Progetto v1.0.0"};
-		\item \textbf{Verifica}: √® il procedimento che controlla la coerenza e la correttezza dei prodotti dei processi. La verifica verr√† eseguita costantemente durante tutta la durata del progetto;
+		\item \textbf{Verifica}: Ë il procedimento che controlla la coerenza e la correttezza dei prodotti dei processi. La verifica verr‡ eseguita costantemente durante tutta la durata del progetto;
 		\item \textbf{Validazione}: ovvero la conferma che il sistema soddisfi i requisiti e sia conforme alle attese.
 	\end{itemize}
 
 	\subsection{Organizzazione}
-	Il processo di verifica inizia nel momento in cui la versione del prodotto di un processo cambia. Il diario delle modifiche aiuta a monitorare solo le sezioni che sono state modificate, ottimizzando cos√¨ i tempi di verifica.\\
-	Viene verificata sia la qualit√† del processo che del prodotto da esso compiuto.\\
-	Ogni fase del progetto, descritta nel documento \textit{"Piano di progetto v1.0.0"} produce un prodotto diverso, quindi necessita di diverse attivit√† di verifica:
+	Il processo di verifica inizia nel momento in cui la versione del prodotto di un processo cambia. Il diario delle modifiche aiuta a monitorare solo le sezioni che sono state modificate, ottimizzando cosÏ i tempi di verifica.\\
+	Viene verificata sia la qualit‡ del processo che del prodotto da esso compiuto.\\
+	Ogni fase del progetto, descritta nel documento \textit{"Piano di progetto v1.0.0"} produce un prodotto diverso, quindi necessita di diverse attivit‡ di verifica:
 	\begin{itemize}
 		\item \textbf{Analisi e Analisi di Dettaglio}: in questa fase si verifica che i processi e la documentazione prodotta rispettino le norme definite nel documento \textit{"Norme di Progetto v1.0.0"} e i tempi prestabiliti nel \textit{"Piano di Progetto v1.0.0"};
-	    \item \textbf{Progettazzione Achitetturale}; anche in questa fase sono presenti documenti perci√≤ verranno effettuate le stesse verifiche della precedente fase, ovviamente sulle modifiche riportate nei documenti gi√† esistenti e inoltre sui nuovi che vorranno prodotti. In questa fase non viene ancora steso codice perci√≤ non verr√† applicata un'analisi dinamica;
-	    \item \textbf{Programmazzione in Dettaglio e Codifica}: in questa fase si effettuer√† una verifica sempre sui documenti che verranno stesi, sui vecchi documenti che subiranno modifiche e infine anche al codice che verr√† prodotto attravero gli strumenti definiti nel documento \textit{"Norme di Progetto v1.0.0"}.
+	    \item \textbf{Progettazzione Achitetturale}; anche in questa fase sono presenti documenti perciÚ verranno effettuate le stesse verifiche della precedente fase, ovviamente sulle modifiche riportate nei documenti gi‡ esistenti e inoltre sui nuovi che vorranno prodotti. In questa fase non viene ancora steso codice perciÚ non verr‡ applicata un'analisi dinamica;
+	    \item \textbf{Programmazzione in Dettaglio e Codifica}: in questa fase si effettuer‡ una verifica sempre sui documenti che verranno stesi, sui vecchi documenti che subiranno modifiche e infine anche al codice che verr‡ prodotto attravero gli strumenti definiti nel documento \textit{"Norme di Progetto v1.0.0"}.
 	\end{itemize}
 
 	\subsection{Pianificazione strategica e temporale}
-	√à essenziale che l'attivit√† di verifica sia sistematica ed organizzata, al fine di evitare la propagazione di errori ed ottimizzare i tempi di sviluppo, per rispettare le scadenze elencate nel documento \textit{Piano di Progetto v1.0.0}.\\
-	Ogni fase di redazione di documenti e di codifica deve essere preceduta da una fase di studio preliminare, al fine di ridurre la possibilit√† di errori di natura concettuale o tecnica, e favorendo l'attivit√† dei verificatori.\\
+	» essenziale che l'attivit‡ di verifica sia sistematica ed organizzata, al fine di evitare la propagazione di errori ed ottimizzare i tempi di sviluppo, per rispettare le scadenze elencate nel documento \textit{Piano di Progetto v1.0.0}.\\
+	Ogni fase di redazione di documenti e di codifica deve essere preceduta da una fase di studio preliminare, al fine di ridurre la possibilit‡ di errori di natura concettuale o tecnica, e favorendo l'attivit‡ dei verificatori.\\
 	
-	\subsection{Responsabilit√†}
-	Al fine di garantire un processo di verifica efficace ed efficiente vengono attribuite delle responsabilit√† all'interno del gruppo di progetto.\\
-	I ruoli che intervengono nel processo di verifica sono il \textit{Project Manager} e il \textit{Verificatore}, inoltre l'\txtbf{Ammiistratore} ha il compito di assicurarsi che i processi di verifica vengano fatti in modo ottimale. La suddivisione dei compiti √® descritta nel documento \textit{"Norme di Progetto v1.0.0"}.
+	\subsection{Responsabilit‡}
+	Al fine di garantire un processo di verifica efficace ed efficiente vengono attribuite delle responsabilit‡ all'interno del gruppo di progetto.\\
+	I ruoli che intervengono nel processo di verifica sono il \textit{Project Manager} e il \textit{Verificatore}, inoltre l'\textbf{Ammistratore} ha il compito di assicurarsi che i processi di verifica vengano fatti in modo ottimale. La suddivisione dei compiti Ë descritta nel documento \textit{"Norme di Progetto v1.0.0"}.
 	
 	\subsection{Risorse}
 	Per realizzare il prodotto sono necessarie le seguenti risorse:
@@ -323,18 +323,18 @@
 
 	\subsection{Tecniche di analisi}
 		\subsubsection{Analisi statica}
-		L'analisi statica √® l'analisi eseguita senza una effettiva esecuzione dei programmi. Viene eseguita quindi sia sul codice che sui documenti durante tutta la fase di sviluppo.\\
-		Pu√≤ essere applicata nei seguenti modi:
+		L'analisi statica Ë l'analisi eseguita senza una effettiva esecuzione dei programmi. Viene eseguita quindi sia sul codice che sui documenti durante tutta la fase di sviluppo.\\
+		PuÚ essere applicata nei seguenti modi:
 		\begin{itemize}
-			\item \textbf{Walkthrough}: √® una lettura del documento da verificare cercando errori senza un'idea precisa di cosa si sta cercando. √à utile nelle prime fasi di sviluppo per stilare una lista degli errori pi√π frequenti da condividere con il gruppo,
-			\item \textbf{Inspection}: √® una ricerca mirata degli errori che sono stati evidenziati nella lista di controllo, che pu√≤ essere espansa qualora se ne palesi la necessit√†.
+			\item \textbf{Walkthrough}: Ë una lettura del documento da verificare cercando errori senza un'idea precisa di cosa si sta cercando. » utile nelle prime fasi di sviluppo per stilare una lista degli errori pi˘ frequenti da condividere con il gruppo,
+			\item \textbf{Inspection}: Ë una ricerca mirata degli errori che sono stati evidenziati nella lista di controllo, che puÚ essere espansa qualora se ne palesi la necessit‡.
 		\end{itemize}
 	
 		\subsubsection{Analisi dinamica}
 		L'analisi dinamica viene eseguita sulle componenti software, testando il comportamento dell'applicativo. I test, per essere attendibili, devono essere ripetibili nello stesso ambiente e con gli stessi input.
 		I tipi di test che verranno eseguiti saranno:
 		\begin{itemize}
-			\item \textbf{Test di unit√†}: consiste nel controllo dei moduli che costituiscono l'applicativo;
+			\item \textbf{Test di unit‡}: consiste nel controllo dei moduli che costituiscono l'applicativo;
 			\item \textbf{Test di integrazione}: consiste nella verifica che i moduli, una volta collegati tra loro, diano il risultato previsto. Verifica inoltre il corretto funzionamento di librerie e framework esterni;
 			\item \textbf{Test di sistema}: consiste nella validazione del prodotto software, una volta giunto ad uno stadio definitivo;
 			\item \textbf{Test di regressione}: consiste nell'eseguire a cascata tutti i test collegati ad una componente appena modificata;
@@ -346,8 +346,8 @@
 	Qui di seguito vengono elencate le misure e le metriche che verranno adottate nel processo di verifica. Il processo di verifica deve essere verificabile e quantificato secondo metriche stabilite a priori, che posso essere consultate nelle \textit{Norme di progetto v.1.0.0}.\\
 	Vi possono essere due tipologie di range nell'accettazione dei risultati di un processo di verifica:
 	\begin{itemize}
-		\item \textbf{Accettazione}: √® il livello minimo che il prodotto deve raggiungere per superare il test;
-		\item \textbf{Ottimale}: √® il livello in cui dovrebbe posizionarsi la misurazione. In caso questo valore non venga raggiunto sono necessarie verifiche aggiuntive.
+		\item \textbf{Accettazione}: Ë il livello minimo che il prodotto deve raggiungere per superare il test;
+		\item \textbf{Ottimale}: Ë il livello in cui dovrebbe posizionarsi la misurazione. In caso questo valore non venga raggiunto sono necessarie verifiche aggiuntive.
 	\end{itemize}
 
 		\subsubsection{Metriche per i processi}
@@ -375,7 +375,7 @@
 		
 			\paragraph{Metriche per il software}
 			
-			\paragraph{Complessit√† ciclomatica}
+			\paragraph{Complessit‡ ciclomatica}
 			\textbf{Parametri utilizzati}:
 			\begin{itemize}
 				\item \textbf{Range di accettazione}: [1 - 15];
@@ -421,28 +421,28 @@
 	\rhead{Gestione amministrativa della revisione}
 	\section{Gestione amministrativa della revisione}
 		\subsection{Comunicazione e risoluzione delle anomalie}
-		Quando un verificatore trova un'anomalia dovr√† aprire un nuovo ticket e avvisare il responsabile del documento. Un'anomalia corrisponde a:
+		Quando un verificatore trova un'anomalia dovr‡ aprire un nuovo ticket e avvisare il responsabile del documento. Un'anomalia corrisponde a:
 		\begin{itemize}
 			\item Un errore ortografico;
 			\item Una violazione delle norme tipografiche definite nel documento \textit{"Norme di Progetto v2.0.0"}; 
-			\item Un'incongruenza del prodotto rispetto a determinate funzionalit√† stabilite nel documento \textit{"Analisi dei Requisiti v2.0.0"};
+			\item Un'incongruenza del prodotto rispetto a determinate funzionalit‡ stabilite nel documento \textit{"Analisi dei Requisiti v2.0.0"};
 			\item Un'incongruenza del codice con il design prodotto;
 			\item L'uscita dal range di accettazione degli indici di misurazione.
 		\end{itemize}
 		
-		\subsection{Procedure di controllo di qualit√† del processo}
+		\subsection{Procedure di controllo di qualit‡ del processo}
 		La pianificazione dei processi, durante lo svolgimento delle varie fasi, si basa sul ciclo PDCA\textsubscript{g}. Questo ciclio prende il nome dalle iniziali delle 4 fasi che ne fanno parte:
 		\begin{itemize}
 		    \item \textbf{Plan}: fase di pianificazione, ovvero dove vengono fissati i periodi di tempi per raggiungere determinate milestone\textsubscript{g} utilizzando le risorse che sono state concesse; 
-		    \item \textbf{Do}: si eseguono le attivita secondo il piano prefissato;
+		    \item \textbf{Do}: si eseguono le attivit‡ secondo il piano prefissato;
 		    \item \textbf{Check}: viene effettuata una verifica tra i risultati che si aspettava di ragiungere secondo la fase di Plan e i dati che sono stati effettivamente raggiunti dalla fase di Do, in questo modo si ha un facile confronto tra dati per capire quale processo ha presentato dei problemi;
 		    \item \textbf{Act}: in base ai risultati emersi dalla fase check vengono apportate mofiche per cercare di migliorare i processi che hanno presentato problemi.
 		\end{itemize}
-	    Attraverso l'utilizzo di questo ciclo √® possibile avere un continuo miglioramento dei processi che si espreime direttamente ad un miglioramento del prodotto finale.
+	    Attraverso l'utilizzo di questo ciclo Ë possibile avere un continuo miglioramento dei processi che si esprimere direttamente ad un miglioramento del prodotto finale.
 	
 	\newpage
-	\rhead{Resoconto delle attivit√† di verifica}
-	\section{Resoconto delle attivit√† di verifica}
+	\rhead{Resoconto delle attivit‡ di verifica}
+	\section{Resoconto delle attivit‡ di verifica}
 	Nel periodo antecedente la consegna di ogni revisione i documenti ed i processi vengono verificati e validati. I documenti vengono verificati tramite la procedura del walkthrough; in seguito sono state avviate le procedure per la notifica descritta nel documento \textit{"Norme di Progetto v1.0.0"}.\\
 	Una volta individuati gli errori, vengono trattati nel seguente modo:
 	\begin{itemize}
@@ -455,12 +455,12 @@
 	\newpage
 	\rhead{Pianificazione dei test}
 	\section{Pianificazione dei test}
-	In questa sezione vengono elencati i test di sistema e di integrazione che verranno applicati nella fase successiva alla progettazzione quando si inizier√† a sviluppare il codice effettivo; i test di unit√† verranno aggiunti in seguito.
-	Si vuole utilizzare questa strategia di test perch√® grazie a loro √® possibile effettuare una verifica accurata sulle funzionalit√† che dovr√† avere il prodotto una volta terminato, rispetto ai vincoli identificati nell'\textit{Analisi dei Requisiti v.2.0.0}.
+	In questa sezione vengono elencati i test di sistema e di integrazione che verranno applicati nella fase successiva alla progettazzione quando si inizier‡ a sviluppare il codice effettivo; i test di unit‡ verranno aggiunti in seguito.
+	Si vuole utilizzare questa strategia di test perchË grazie a loro Ë possibile effettuare una verifica accurata sulle funzionalit‡ che dovr‡ avere il prodotto una volta terminato, rispetto ai vincoli identificati nell'\textit{Analisi dei Requisiti v.2.0.0}.
 	Nella seguenti tabelle i test che riportano lo stato \textbf{N.A.} corrispondono a test non ancora appricati e che verranno applicati successivamente.
 	
 	\subsection{Test di sistema}
-	Questi test si focalizzano sui requisiti principali del progetto, per i requisiti pi√π specifici verranno svolti i test di unit√† e di integrazione.
+	Questi test si focalizzano sui requisiti principali del progetto, per i requisiti pi˘ specifici verranno svolti i test di unit‡ e di integrazione.
 	
 	\begin{tabular}{|c|c|c|c|}
 	    {\textbf{Test}}&{\textbf{Descrizione}}&{\textbf{Stato}}&{\textbf{Requisito}} \\
@@ -469,11 +469,11 @@
 	    \hline 
 	    TS 2.1 & \minitab[c]{Viene verificato che il sistema permetta di \\ creare nuovi profili univoci che possano caricare \\ nuove API e acquistare APIKey} & N.A. & R0F1 \\
 	    \hline 
-	    TS 2.2 & \minitab[c]{Viene verificato che il sistema permetta di \\ autenticarsi come utente gi√† presente nell'APIMarket} & N.A. & R0F2 \\
+	    TS 2.2 & \minitab[c]{Viene verificato che il sistema permetta di \\ autenticarsi come utente gi‡ presente nell'APIMarket} & N.A. & R0F2 \\
 	    \hline 
 	    TS 3.1 & \minitab[c]{Viene verificato che il sistema permetta la \\ registrazione di un' API di un microservizio attraverso \\ la registrazione e pubblicazione della sua interfaccia} & N.A. & R0F3 \\
         \hline 
-	    TS 3.2 & \minitab[c]{Viene verificato che il sistema segnali un \\ errore nel caso in cui l'utente tenti di dare un nome \\ gi√† presente nell'APIMarket ad un suo microservizio} & N.A. & R0F3.2.1 \\
+	    TS 3.2 & \minitab[c]{Viene verificato che il sistema segnali un \\ errore nel caso in cui l'utente tenti di dare un nome \\ gi‡ presente nell'APIMarket ad un suo microservizio} & N.A. & R0F3.2.1 \\
 	    \hline 
 	    TS 4.1 & \minitab[c]{Viene verificato che il sistema permetta all'utente \\ di modificare i suoi dati personali, i vari messaggi e \\ le interfacce dei microservizi che ha caricato} & N.A. & R0F4 \\
 	    \hline 
@@ -483,7 +483,7 @@
 	    \hline 
 	    TS 6.1 & \minitab[c]{Viene verificato che la ricerca ritorni il \\ nome del microservizio, dell'utente che l'ha caricato, una \\ breve descrizione dello stesso e il prezzo sia ad \\ un utente autenticato che non} & N.A. & R0F6.1 \\
 	    \hline 
-	    TS 6.2 & \minitab[c]{Viene verificato che se l'utente √® autenticato \\ la ricerca ritorna pi√π informazioni riguardanti il microservizio} & N.A. & R0F6.5 \\
+	    TS 6.2 & \minitab[c]{Viene verificato che se l'utente Ë autenticato \\ la ricerca ritorna pi˘ informazioni riguardanti il microservizio} & N.A. & R0F6.5 \\
         \hline 
 	    TS 6.3 & \minitab[c]{Viene verificato che il sistema permetta ad \\ un utente autenticato di acquistare un'API \\ utilizzando il saldo di APICredits in suo possesso} & N.A. & R0F6.6 \\
         \hline 
@@ -496,21 +496,21 @@
 	    
 	\subsection{Test di integrazione}
 	I test di integrazione vengono fatti per verificare che le varie componenti all'interno del sistema comunichino correttamente tra di loro e che i risultati che il sistema ritorna siano i risultati attesi.
-	Si √® deciso di utilizzare una strategia di integrazione incrementale in modo che sia possibile, nel caso in cui vengano ritornati errori, ripercorrere a ritroso i test per ritornare ad uno stato corretto.
-    Per la formulazione di questi test √® stato utilizzato il metodo bottom-up per poter integrare prima con le parti con minore dipendenza funzionale e maggiore funzionalit√†. Ci siamo concentrati per prima cosa suoi requisiti 
-    obbligatori, in questo modo i vincoli obbligatori saranno i primi ad essere soddisfatti, successivamente si passer√† a testare i vincoli desiderabili ed infine quelli opzionali.
+	Si Ë deciso di utilizzare una strategia di integrazione incrementale in modo che sia possibile, nel caso in cui vengano ritornati errori, ripercorrere a ritroso i test per ritornare ad uno stato corretto.
+    Per la formulazione di questi test Ë stato utilizzato il metodo bottom-up per poter integrare prima con le parti con minore dipendenza funzionale e maggiore funzionalit‡. Ci siamo concentrati per prima cosa suoi requisiti 
+    obbligatori, in questo modo i vincoli obbligatori saranno i primi ad essere soddisfatti, successivamente si passer‡ a testare i vincoli desiderabili ed infine quelli opzionali.
 	
 	\newpage
 	\rhead{Risultati RR}
 	\section{Appendice}
 	\subsection{Risultati al termine delle consegne}
-	In questa ultima sezione verranno riportati i risultati che vengono misurati dalle metriche definite nel documento \textit{"Norme di Progetto v1.0.0"} inoltre verranno contestualizzati secondo i range ottimali e di accettazzione definiti in questo documento.\\
+	In questa ultima sezione verranno riportati i risultati che vengono misurati dalle metriche definite nel documento \textit{"Norme di Progetto v1.0.0"} inoltre verranno contestualizzati secondo i range ottimali e di accettazione definiti in questo documento.\\
 	
-	\subection{Analisi e analisi in dettaglio}
+	\subsection{Analisi e analisi in dettaglio}
 	
 	\subsubsection{Risultati dell'indice di Gulpease}
-	In questa fase √® stata prodotta solo documentazione riguardante il progetto perci√≤ saranno solo presenti esclusivamente metriche e misurazioni riguardanti i documenti.\\
-	Di seguito √® riportata una tabella che contiene i documenti con il rispettivo valore che √® risultato dall'indice di Gulpease:
+	In questa fase Ë stata prodotta solo documentazione riguardante il progetto perciÚ saranno solo presenti esclusivamente metriche e misurazioni riguardanti i documenti.\\
+	Di seguito Ë riportata una tabella che contiene i documenti con il rispettivo valore che Ë risultato dall'indice di Gulpease:
 	\begin{tabular}{|c|c|}
     	{\textbf{Nome documento}}&{\textbf{Valore Indice}}\\
     	\hline
@@ -520,16 +520,16 @@
     	\hline
     	Piano di Progetto & 45\\
     	\hline
-    	Piano di Quaifica & 49\\
+    	Piano di Qualifica & 49\\
     	\hline
-    	Studio di Fattibilit√† & 43\\
+    	Studio di Fattibilit‡ & 43\\
     \end{tabular}
-    Ogni documento rientra nel range di accettazzione, ma solo l'AdR rientra in quello ottimale. Una possibile spiegazione a questo fatto potrebbe essere che i termini utilizzati nei documenti sono molto specifici all'ambiente informatico e quindi il documento in se risulta difficilmente comprensibile 
+    Ogni documento rientra nel range di accettazione, ma solo l'AdR rientra in quello ottimale. Una possibile spiegazione a questo fatto potrebbe essere che i termini utilizzati nei documenti sono molto specifici all'ambiente informatico e quindi il documento in se risulta difficilmente comprensibile 
     per un lettore che non sia abituato a questi termini.\\
-    Ci√≤ nonostante il gruppo si ritiene soddisfatto dei risultati ottenuti dall'indice anche se non hanno protato ad un range ottimale, considerando che alcuni dei documenti verranno modificati durante il procedere del progetto, i dati ottenuti possono migliorare e questo √® ci√≤ che il gruppo si impone di migliorare.\\
+    CiÚ nonostante il gruppo si ritiene soddisfatto dei risultati ottenuti dall'indice anche se non hanno portato ad un range ottimale, considerando che alcuni dei documenti verranno modificati durante il procedere del progetto, i dati ottenuti possono migliorare e questo Ë ciÚ che il gruppo si impone di migliorare.\\
     
     \subsubsection{Risultati PDCA}
-    Analizzando il Registro delle modifiche dei documenti rispetto ai grafici di Gantt riguardante la pianificazione di questa fase, presenti nel \textit{Piano di Progetto v.1.0.0}, √® possibile notare che si √® riusciti a rientrare nelle tempistiche per le consegne previste, questo √® stato possibile grazie al fatto che durante la fase Plan sono state fatte delle approssimazioni in eccesso delle tempistiche per raggiungere le milestone\textsubscript{g},
-    in questo modo se fossero emersi dei problemi, ci sarebbe stato del tempo in pi√π da utilizzare come cuscinetto per non far ritardare i processi successivi.
+    Analizzando il Registro delle modifiche dei documenti rispetto ai grafici di Gantt riguardante la pianificazione di questa fase, presenti nel \textit{Piano di Progetto v.1.0.0}, Ë possibile notare che si Ë riusciti a rientrare nelle tempistiche per le consegne previste, questo Ë stato possibile grazie al fatto che durante la progettazione sono state fatte delle approssimazioni in eccesso delle tempistiche per raggiungere le milestone\textsubscript{g},
+    in questo modo se fossero emersi dei problemi, ci sarebbe stato del tempo in pi˘ da utilizzare come cuscinetto per non far ritardare i processi successivi.
     
 \end{document}
