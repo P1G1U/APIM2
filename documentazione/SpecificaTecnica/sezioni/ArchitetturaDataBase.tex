@@ -16,7 +16,8 @@
 			\textit{User}\\
 			Questa é l'entità che rappresenta tutti gli utenti che utilizzeranno il software, siano essi utenti normali o amministratori. Questa entità come si vede dallo schema é superclasse di Utenti e di Admin. Gli attributi sono: 
 			\begin{center}
-			{\renewcommand\arraystretch{1.2} \begin{tabular}{lcc}
+			\begin{table}[H]\centering{\renewcommand\arraystretch{1.2}  
+				\begin{tabular}{lcc}
 				\textbf{Attributo}&\textbf{Tipo}&\textbf {Vincolo}\\
 				\hline
 				Username&String&PRIMARY KEY\\
@@ -33,6 +34,9 @@
 				SaldoCoin&Double&null \\
 				IsAdmin&Bool&null\\
 			\end{tabular}}
+			\caption{Entità User}
+			\label{EU}
+			\end{table}
 			\end{center}
 		
 			\textit{Utenti}\\
@@ -42,7 +46,7 @@
 			\textit{API}\\
 			Questa entità rappresenta le API presenti nel sistema. Gli attributi sono:
 			\begin{center}
-			{\renewcommand\arraystretch{1.2} \begin{tabular}{lcc}
+			\begin{table}[H]\centering{\renewcommand\arraystretch{1.2}  \begin{tabular}{lcc}
 				\hline
 				\textbf{Attributo}&\textbf{Tipo}&\textbf{Vincolo}\\ \hline
 				Nome API&String&PRIMARY KEY\\
@@ -54,50 +58,60 @@
 				TotaleChiamate&Int&null \\
 				Traffico&Double&null \\
 				TempoRispostaTotale&Double&null \\
-			\end{tabular}}
+			\end{tabular}}\caption{Entità API}
+			\label{EA}
+			\end{table}
 			\end{center}
 			In particolare in questa tabella sono contenute le statistiche di ogni API come il \textbf{Tempo Medio Risposta}, il \textbf{Traffico} di dati che comporta l'tilizzo di quel microservizio, il numero \textbf{Totale Chiamate} e il \textbf{Tempo Risposta Totale}. \\
 			\textit{Key}\\
 			Questa entità rappresenta le chiavi che verranno assegnate ad un utente quando acquista un microservizio per potervi accedere ed utilizzarlo. Gli attributi sono: \\
 			\begin{center}
-			{\renewcommand\arraystretch{1.2} \begin{tabular}{lcc}
+			\begin{table}[H]\centering{\renewcommand\arraystretch{1.2}  \begin{tabular}{lcc}
 				\textbf{Attributo}&\textbf{Tipo}&\textbf{Vincolo}\\ \hline
 				Key&String&PRIMARY KEY\\
 				DataScadenza&Date&null \\
 				MaxByte&Double&null \\
 				TempoUso&Double&null \\
-			\end{tabular}}
+			\end{tabular}}\caption{Entità Key}
+			\label{EK}
+			\end{table}
 			\end{center}
 			In particolare gli attributi \textbf{DataScadenza, MaxByte e TempoUso} sono i limiti entro i quali la chiave può essere utilizzata. Secondo la policy di acquisto di un microservizio, al raggiungimento di tale limite la chiave scadrà e non permetterà più l'utilizzo di tale microservizio.
 			\textit{Commenti}\\
 			Questa entità rappresenta i commenti ed il voto  che gli utenti possono lasciare su ogni microservizio che hanno utilizzato. Gli attributi sono:
 			\begin{center}
-			{\renewcommand\arraystretch{1.2} \begin{tabular}{lcc}
+			\begin{table}[H]\centering{\renewcommand\arraystretch{1.2}  \begin{tabular}{lcc}
 				\textbf{Attributo}&\textbf{Tipo}&\textbf{Vincolo}\\ \hline
 				IdCommento&Int&PRIMARY KEY\\
 				Testo&String&null \\
 				Rating&Int&null \\
-			\end{tabular}}
+			\end{tabular}}\caption{Entità Commenti}
+			\label{EC}
+			\end{table}
 			\end{center}
 			In particolare textbf{Rating} sarà il giudizio che l'utente lascerà del microservizio utilizzato. \\
 			
 			\textit{Categorie}
 			Questa entità rappresenta la suddivisione in categorie dei vari microservizi. L'amministratore può aggiungere o togliere categorie a propria scelta. Gli attributi sono: 
 			\begin{center}
-			{\renewcommand\arraystretch{1.2} \begin{tabular}{lcc}
+			\begin{table}[H]\centering{\renewcommand\arraystretch{1.2}  \begin{tabular}{lcc}
 				\textbf{Attributo}&\textbf{Tipo}&\textbf{Vincolo}\\ \hline
 				IdCategoria&Int&PRIMARY KEY\\
 				Categoria&String&null \\			
-			\end{tabular}}
+			\end{tabular}}\caption{Entità Categorie}
+			\label{ECat}
+			\end{table}
 			\end{center}
 			
 			\textit{Acquisti}
 			Questa entità contiene lo storico degli acquisti effettuati dagli utenti.
 			\begin{center}
-			{\renewcommand\arraystretch{1.2} \begin{tabular}{lcc}
+			\begin{table}[H]\centering{\renewcommand\arraystretch{1.2}  \begin{tabular}{lcc}
 				\textbf{Attributo}&\textbf{Tipo}&\textbf{Vincolo}\\ \hline
 				IdAcquisto&Int&PRIMARY KEY\\
-			\end{tabular}}
+			\end{tabular}}\caption{Entità Storico}
+			\label{ES}
+			\end{table}
 			\end{center}
 	\subsubsection{Associazioni}
 		\begin{itemize}
@@ -121,22 +135,24 @@
 			\label{Fig. Progettazione Logica}
 		\end{figure}
 		\subsubsection{Gerarchie}
-		\textbf{User - Utenti - Admin}: La gerarchia é stat implementata come tabella unica. La due sottoclassi \textbf{Utenti} e \textbf{Admin} sono comprese nella superclasse \textbf{Users}. Viene solamente aggiunto un attributo discriminante per distinguere un utente normale da un amministratore.\\
+		\textbf{User - Utenti - Admin}: La gerarchia é stata implementata come tabella unica. La due sottoclassi \textbf{Utenti} e \textbf{Admin} sono comprese nella superclasse \textbf{Users}. Viene solamente aggiunto un attributo discriminante per distinguere un utente normale da un amministratore.\\
 		\subsubsection{Relazioni}
 		\textbf{Categorie}\\
 		Gli attributi sono: \\
 			\begin{center}
-			{\renewcommand\arraystretch{1.2} \begin{tabular}{lcc}
+			\begin{table}[H]\centering{\renewcommand\arraystretch{1.2}  \begin{tabular}{lcc}
 				\textbf{Attributo}&\textbf{Tipo}&\textbf{Vincolo}\\ \hline
 				IdCategoria&Int&PRIMARY KEY\\
 				Categoria&Varchar&null \\
-			\end{tabular}}
+			\end{tabular}}\caption{Catergoria}
+\label{cat}
+\end{table}
 			\end{center}
 			
 		\textbf{Users}\\
 			Relazione creata dall'implementazione tramite tabella unica della gerarchia User - Utenti - Admin. Gli attributi sono:
 			\begin{center}
-			{\renewcommand\arraystretch{1.2} \begin{tabular}{lcc}
+			\begin{table}[H]\centering{\renewcommand\arraystretch{1.2}  \begin{tabular}{lcc}
 				\textbf{Attributo}&\textbf{Tipo}&\textbf{Vincolo}\\ \hline
 				Username&Varchar&PRIMARY KEY\\
 				Password&Varchar&null \\				
@@ -152,13 +168,15 @@
 				SaldoCoin&Double&null \\
 				IsAdmin&Boolean&null \\
 				NomeAPI&Varchar&FOREIGN KEY\\
-			\end{tabular}}
+			\end{tabular}}\caption{User}
+\label{u}
+\end{table}
 			\end{center}				
 			
 		\textbf{API}\\
 			Gli attributi sono:
 			\begin{center}
-			{\renewcommand\arraystretch{1.2} \begin{tabular}{lcc}
+			\begin{table}[H]\centering{\renewcommand\arraystretch{1.2}  \begin{tabular}{lcc}
 				\textbf{Attributo}&\textbf{Tipo}&\textbf{Vincolo}\\ \hline
 				NomeAPI&Varchar&PRIMARYKEY\\
 				LinkFile&Varchar&null \\
@@ -171,26 +189,30 @@
 				TempoRispostaTotale&Double&null \\
 				Username&Varchar&FOREING KEY\\
 				Categoria&Varchar&FOREIGN KEY\\
-			\end{tabular}}
+			\end{tabular}}\caption{API}
+\label{A}
+\end{table}
 			\end{center}
 			
 		\textbf{Commenti}\\
 			Gli attributi sono:
 			\begin{center}
-			{\renewcommand\arraystretch{1.2} \begin{tabular}{lcc}
+			\begin{table}[H]\centering{\renewcommand\arraystretch{1.2}  \begin{tabular}{lcc}
 				\textbf{Attributo}&\textbf{Tipo}&\textbf{Vincolo}\\ \hline
 				IdCommento&Int&PRIMARY KEY\\
 				Testo&Varchar&null \\
 				Rating&Int&null \\
 				Username&Varchar&FOREIGN KEY\\
 				NomeAPI&Varchar&FOREIGN KEY\\
-			\end{tabular}}
+			\end{tabular}}\caption{Commenti}
+\label{c}
+\end{table}
 			\end{center}
 		
 		\textbf{Key}
 			Questa tabella si crea dalla relazione tra Users e API. Rappresenta l'acquisto da parte di un utente di un microservizio. All'utente viene assegnata una chiave con la quale poter accedere al microservizio. Gli attributi sono:
 			\begin{center}
-			{\renewcommand\arraystretch{1.2} \begin{tabular}{lcc}
+			\begin{table}[H]\centering{\renewcommand\arraystretch{1.2}  \begin{tabular}{lcc}
 				\textbf{Attributo}&\textbf{Tipo}&\textbf{Vincolo}\\ \hline
 				Key&Varchar&PRIMARY KEY\\
 				DataScadenza&Date&null \\
@@ -198,30 +220,36 @@
 				TempoUso&Time&null \\
 				Username&Varchar&FOREIGN KEY\\
 				NomeAPI&Varchar&FOREIGNKEY\\			
-			\end{tabular}}
+			\end{tabular}}\caption{Key}
+\label{k}
+\end{table}
 			\end{center}
 			In perticolare, la \textbf{DataScadenza} indica la data fino alla quale é stato acquistato il microservizio; similmente \textbf{MaxByte} e \textbf{TempoUso} stanno ad indicare rispettivamente il traffico massimo ed il tempo massimo con i quali si può usufruire del microservizio in base al contratto d'acquisto stipulato.\\
 			
 		\textbf{Acquisti}\\
 		Gli attributi sono: \\
 		\begin{center}
-		{\renewcommand\arraystretch{1.2} \begin{tabular}{lcc}
+		\begin{table}[H]\centering{\renewcommand\arraystretch{1.2}  \begin{tabular}{lcc}
 			\textbf{Attributo}&\textbf{Tipo}&\textbf{Vincolo}\\ \hline
 			IdAcquisto&Int&PRIMARY KEY\\
 			Username&Varchar&FOREIGN KEY\\
 			Key&Varchar&FOREIGN KEY\\
-		\end{tabular}}
+		\end{tabular}}\caption{Acquisti}
+\label{a}
+\end{table}
 		\end{center}
 			
 		\textbf{Crea}
 			Questa tabella viene a crearsi dalla relazione tra Users e API. Rappresenta il caricamento nel sistema di un microservizio da parte di un utente. Gli attributi sono:
 			\begin{center}
-			{\renewcommand\arraystretch{1.2} \begin{tabular}{lcc}
+			\begin{table}[H]\centering{\renewcommand\arraystretch{1.2}  \begin{tabular}{lcc}
 				\textbf{Attributo}&\textbf{Tipo}&\textbf{Vincolo}\\ \hline
 				IdMS&Int&PRIMARY KEY\\
 				NomeAPI&Varchar&FOREIGN KEY\\
 				Username&Varchar&FOREIGN KEY\\			
-			\end{tabular}}
+			\end{tabular}}\caption{Crea}
+\label{cr}
+\end{table}
 			\end{center}
 			
 		}

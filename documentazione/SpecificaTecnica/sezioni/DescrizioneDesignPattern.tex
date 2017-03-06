@@ -22,7 +22,7 @@
 
 					\small %rippicciolisce il testo
 					{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-						\begin{center} \begin{tabular}{|l|c|c|}
+						\begin{center} \begin{table} \begin{tabular}{|l|c|c|}
 							\hline
 							{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 							\hline
@@ -38,7 +38,11 @@
 							\hline
 							\textbf{Sviluppo} & + & Piccoli e isolati componenti facilitano lo sviluppo \\
 							\hline
-						\end{tabular} \end{center}
+						\end{tabular}
+					\caption{Analisi Microservizi}
+					\label{AMi}
+					\end{table}
+			 \end{center}
 					}
 				\end{itemize}
 		}
@@ -62,7 +66,7 @@
 				
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-					\begin{center} \begin{tabular}{|l|c|c|}
+					\begin{center} \begin{table} \begin{tabular}{|l|c|c|}
 						\hline
 						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 						\hline
@@ -78,7 +82,11 @@
 						\hline
 						\textbf{Sviluppo} & - &  \minitab[c]{Obbliga gli sviluppatori a innescare query multiple sul\\ database che potrebbero essere recuperate con una unica.} \\
 						\hline
-					\end{tabular} \end{center}
+					\end{tabular}
+				\caption{Analisi DAO}
+				\label{ADAO}
+			\end{table}	
+			 \end{center}
 				}
 			\end{itemize}
 		}
@@ -109,7 +117,7 @@
 				
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-					\begin{center} \begin{tabular}{|l|c|c|}
+					\begin{center} \begin{table} \begin{tabular}{|l|c|c|}
 						\hline
 						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 						\hline
@@ -125,7 +133,11 @@
 						\hline
 						\textbf{Sviluppo} & + &  \minitab[c]{Ogni singolo elemento del team può concentrarsi\\allo sviluppo di ogni diverso elemento.} \\
 						\hline
-					\end{tabular} \end{center}
+					\end{tabular}
+				\caption{Analisi Model View ViewModel}
+				\label{AMVVM}
+				\end{table}	
+			 \end{center}
 				}
 			\end{itemize}
 		}
@@ -149,7 +161,7 @@
 				
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-					\begin{center} \begin{tabular}{|l|c|c|}
+					\begin{center} \begin{table} \begin{tabular}{|l|c|c|}
 						\hline
 						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 						\hline
@@ -165,7 +177,11 @@
 						\hline
 						\textbf{Sviluppo} & + &  \minitab[c]{L'interfaccia di per se è di facile\\implementazione e compare in un unico punto del codice.} \\
 						\hline
-					\end{tabular} \end{center}
+					\end{tabular}
+				\caption{Analisi Abstract Factory}
+				\label{AAF}
+			\end{table}
+			 \end{center}
 				}
 			\end{itemize}
 		}
@@ -188,7 +204,7 @@
 				
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-					\begin{center} \begin{tabular}{|l|c|c|}
+					\begin{center} \begin{table} \begin{tabular}{|l|c|c|}
 						\hline
 						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 						\hline
@@ -204,7 +220,11 @@
 						\hline
 						\textbf{Sviluppo} & - &  \minitab[c]{Sviluppo delle DI associato ad AngularJS\\ è complesso e per niente scontato.}\\
 						\hline
-					\end{tabular} \end{center}
+					\end{tabular}
+				\caption{Analisi Dependency Injection}
+				\label{ADI}
+				\end{table}	
+			 \end{center}
 				}
 			\end{itemize}
 		}	
@@ -228,7 +248,7 @@
 				
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-					\begin{center} \begin{tabular}{|l|c|c|}
+					\begin{center} \begin{table} \begin{tabular}{|l|c|c|}
 						\hline
 						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 						\hline
@@ -244,7 +264,11 @@
 						\hline
 						\textbf{Sviluppo} & n.q. &  \minitab[c]{Interfaccia di facile implementazione;\\dipende dalla complessità del sottosistema lo sviluppo.}\\
 						\hline
-					\end{tabular} \end{center}
+					\end{tabular}
+				\caption{Analisi Facade}
+				\label{AFA}
+			\end{table}	
+			 \end{center}
 				}
 			\end{itemize}
 		}
@@ -273,7 +297,7 @@
 				
 				\small %rippicciolisce il testo
 				{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-					\begin{center} \begin{tabular}{|l|c|c|}
+					\begin{center} \begin{table} \begin{tabular}{|l|c|c|}
 						\hline
 						{\textbf{Caratteristica}}&{\textbf{Valutazione}}&{\textbf{Descrizione}}\\
 						\hline
@@ -289,7 +313,11 @@
 						\hline
 						\textbf{Sviluppo} & - &  \minitab[c]{Lo sviluppo del command richiede una complessa riflessione\\ oltre che alla creazione\\di più classi per implementarlo al meglio.}\\
 						\hline
-					\end{tabular} \end{center}
+					\end{tabular}
+				\caption{Analisi Command}
+				\label{ACo}
+			\end{table}	
+			 \end{center}
 				}
 			\end{itemize}
 		}
