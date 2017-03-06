@@ -59,11 +59,7 @@
 	%----------------------------------------------------------------------------------------
 	
 	{\centering \large 
-<<<<<<< HEAD
-		\hfill \textbf{Versione} 			1.0.0 \\		
-=======
 		\hfill \textbf{Versione} 			2.0.0 \\		
->>>>>>> origin/master
 		\hfill \textbf{Data di Rilascio}	28/02/2017 \\ 
 		\hfill \textbf{Redazione} 			Gianluca Crivellaro \\
 		\hfill								Piergiorgio Danieli \\
@@ -182,7 +178,7 @@
 	\subsubsection{Normativi}
 	\begin{itemize}
 		\item \textbf{Norme di Progetto}:\\	
-		"Norme di Progetto v1.0.0".
+		"Norme di Progetto v2.0.0".
 		\item \textbf{Capitolato d'appalto C1}:	API Market per microservizi \\
 		\textcolor{blue}{\url{www.math.unipd.it/~tullio/IS-1/2016/Progetto/C1.pdf}}. 
 		\item \textbf{Verbali}:\\
@@ -211,7 +207,7 @@
 		\item \textbf{Permetta di consultare le API}: con un sistema di ricerca designato e filtrato anche con dati tecnici. Pure se con minori funzionalità anche un utente non registrato alla piattaforma può vagliare le varie API. Per ogni API sarà inoltre possibile un consulto dei suoi dati tecnici;
 		\item \textbf{Permetta di associare diverse API key}: così da regolare le politiche di scambio dei microservizi. Le API key sono lo strumento principale di collegamento tra la API ed il suo utilizzatore. Grazie a queste l'infrastruttura potrà regolare le scadenze, l'utilizzo ed il procedimento oltre ad avere un ID univoco per la monitorizzazione;
 		\item \textbf{Permetta di monitorare l'utilizzo delle API}:	già accennato nei punti precedenti. Vogliamo che tale infrastruttura tenga conto di particolari dati tecnici di ogni API per renderle così misurabili in termini di efficacia ed efficienza. Oltre che ad avere così un sistema automatizzato per il confronto tra i vari microservizi;
-		\item \textbf{Blocchi le chiamate di utenti in possesso di API key scadute e/o non valide}:	è la sottolineatura di uno dei motivi di esistenza delle API key; Punto focale per la regolamentazione dello scambio è la possibilità di acquisto delle chiavi secondo tempo, mole di scambio di dati , eccetera. I dati tecnici per le policy di durata e validità saranno descritte in seguito, ma queste decideranno se è ancora attiva una chiave o meno;
+		\item \textbf{Blocchi le chiamate di utenti in possesso di API key scadute e/o non valide}:	è la sottolineatura di uno dei motivi di esistenza delle API key; punto focale per la regolamentazione dello scambio è la possibilità di acquisto delle chiavi secondo tempo, mole di scambio di dati , eccetera. I dati tecnici per le policy di durata e validità saranno descritte in seguito, ma queste decideranno se è ancora attiva una chiave o meno;
 		\item \textbf{Permetta di visualizzare i dati tecnici d'uso delle singole API}:	dopo aver monitorato ogni singola API è possibile fare la stima e produrre un elaborato tecnico dei valori di quest'ultima. È compito dell'API Market rendere disponibile questa funzionalità. Da parte nostra vi sarà un vaglio tra le principali caratteristiche di interesse da dover riportare. È desiderabile da parte nostra anche la possibilità di poter visualizzare direttamente il confronto dei risultati delle caratteristiche per scegliere il microservizio migliore;
 		\item \textbf{Permettere di gestire una moneta virtuale per la compravendita delle API}: il metodo di acquisto principale è comunque la moneta reale, la quale può trasformarsi automaticamente in moneta virtuale con un cambio di 1:1. È possibile quindi tenere un conto personale flessibile per poter reinvestire o ritirare il contante virtuale;
 		\item \textbf{Permetta di confrontare i dati tecnici delle API tra loro}: già accennato in uno dei punti precedenti. Per una migliore visione e per scegliere il microservizio più adatto ai nostri scopi vorremmo una sezione specifica di confronto dei dati tecnici. Sarà nostro compito grazie al monitoraggio avere un rapporto aggiornato e reale dell'andamento dell'API;
@@ -224,7 +220,7 @@
 	\subsubsection{Tipologia di Utenti}
 	Saranno tre i principali tipi di utenti che andranno a popolare i nostri casi d'uso a seconda del livello di autenticazione nella piattaforma:
 	\begin{itemize}
-		\item \textit{Utente non Autenticato}: è un utente che può visitare i microservizi in forma anonima a senza registrazione. Sarà limitato nelle impostazioni di ricerca, non potrà accedere alla funzionalità sociali e di compravendita delle API;
+		\item \textit{Utente non Autenticato}: è un utente che può visitare i microservizi in forma anonima senza registrazione. Sarà limitato nelle impostazioni di ricerca, non potrà accedere alla funzionalità sociali e di compravendita delle API;
 		\item \textit{Utente Autenticato}: dopo essersi registrato nel database della piattaforma l'utente autenticato ha accesso completo alle funzionalità offerte al pubblico. Può cambiare le proprie referenze, accumulare monete virtuali e avere pieno accesso alla parte sociale;
 		\item \textit{Amministratore}: l'amministratore può modificare i profili di tutti gli utenti, modificare tutti i microservizi caricati e ha accesso a una pagina sulle statistiche del sito. Ha le funzionalità più estese e si è nominati personalmente. 
 	\end{itemize}
