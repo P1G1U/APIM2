@@ -11,7 +11,7 @@
 \usepackage{eurosym}
 \usepackage{graphicx}
 \usepackage{lastpage}
-\usepackage{emptypage}\textbf{\emph{}}           
+\usepackage{emptypage}         
 % pagine vuote senza testatina e piede di pagina
 %\usepackage{hyperref}                     
 % collegamenti ipertestuali
@@ -66,7 +66,7 @@
 			\vspace*{0.7cm} % Spazio dall'inizio del box al titolo
 			
 			\raggedleft
-			\includegraphics[width=0.7\linewidth]{../LogoSWEgGroupSFONDOVUOTO.png}
+			\includegraphics[width=0.7\linewidth]{../../LogoSWEgGroupSFONDOVUOTO}
 			
 			\hfill Norme di Progetto \\
 			
@@ -106,7 +106,7 @@
 	\clearpage % Parta bianca finale della pagina
 	
 	%----------------------------------------------------------- FINE TEMPLATE TITOLO
-\lhead{\includegraphics[width=0.2\linewidth]{../LogoSWEgGroup}}
+\lhead{\includegraphics[width=0.2\linewidth]{../../LogoSWEgGroup}}
 \chead{}
 \lfoot{Norme Di Progetto}
 \cfoot{}
@@ -120,7 +120,7 @@
 	\begin{center}
 	\begin{tabular}{|l|c|c|c|}
 			\hline
-			{{\textbf{Ver.}}&{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}\\
+			\textbf{Versione}&\textbf{Modifica}&\textbf{Nome}&\textbf{Data}\\
 			\hline
 			2.0.0 & Verifica delle aggiunte & Lonardi Pietro & 22/02/2017 \\
 			\hline
@@ -157,10 +157,12 @@
 }
 \normalsize	%lo riporta a forma normale
 \newpage
+\rhead{Indice}
 \tableofcontents
-%crea indice automaticamente
 \thispagestyle{empty}
+
 \newpage
+
 \rhead{Introduzione}
 \section{Introduzione}
 	\subsection{Scopo del Documento}
@@ -199,7 +201,7 @@ Un glossario è una raccolta di termini di un ambito specifico e circoscritto. I
 \subsubsection{Interne}
 Per le comunicazioni interne è stato creato un gruppo su \textit{Telegram}, un'app di messaggistica istantanea. Questo canale sarà utilizzato solamente per le comunicazioni interne informali.
 \subsubsection{Esterne}
-Per le comunicazioni esterne è stata creata la casella di posta \textit{sweg.group@gmail.com}.\\ 
+Per le comunicazioni esterne è stata creata la casella di posta \textit{SWEg .group@gmail.com}.\\ 
 Questo può essere l'unico canale utilizzabile. Solo il \textit{Project Manager} può avere delle interazioni con l'esterno, sarà poi compito suo riferire il contenuto delle discussioni agli altri componenti del gruppo.
 \subsection{Riunioni}
 \subsubsection{Interne}
@@ -312,7 +314,7 @@ sia l'ultima modifica eseguita, e quindi corrisponda alla versione attuale del d
 \subsubsection{Indice}
 La pagina successiva al diario delle modifiche deve essere l'indice del documento.
 Ogni documento tranne i verbali deve contenere l'indice che serve a dare una visione globale degli argomenti trattati.\\
-L'indice è autogenerato con un comando di \LaTeX .
+L'indice è auto generato con un comando di \LaTeX .
 \subsubsection{Formattazione generale}
 Tutte le altre pagine del documento dovranno rispettare la struttura di base che segue:
 \begin{itemize}
@@ -323,10 +325,10 @@ Tutte le altre pagine del documento dovranno rispettare la struttura di base che
 \end{itemize} 
 Ogni pagina deve rispettare i seguenti margini: 
 \begin{itemize}
-	\item Superiore: 2cm;
-	\item Inferiore: 2cm;
-	\item Destro: 1cm;
-	\item Sinistro: 1cm.
+	\item Superiore: 2 cm;
+	\item Inferiore: 2 cm;
+	\item Destro: 1 cm;
+	\item Sinistro: 1 cm.
 \end{itemize}
 \subsection{Classificazione documenti}
 \subsubsection{Documenti formali}
@@ -523,9 +525,9 @@ Durante questa attività sono completati i seguenti compiti:
 Durante questa attività sono svolte le seguenti mansioni:
 \begin{itemize}
 	\item Vengono definiti i  requisiti di acquisizione come i requisiti di sistema e dei vincoli tecnici;
-	\item Vengono definite le \textit{milestone} del contratto per la revisione ed  \texit{audit} il  progresso.
+	\item Vengono definite le \textit{milestone} del contratto per la revisione ed  \textit{audit} il  progresso.
 \end{itemize}
-\subsubsection {Preparazione contrattto}
+\subsubsection {Preparazione contratto}
 \begin {itemize}
 	\item Viene sviluppata una procedura di selezione per i fornitori;
 	\item Vengono scelti i fornitori sulla base della procedura sviluppata.
@@ -697,7 +699,7 @@ In questa sezione verranno descritti gli standard minimi che dovranno rispettare
 			\item \textbf{Inspection}: è una ricerca mirata degli errori che sono stati evidenziati nella lista di controllo, che può essere espansa qualora se ne palesi la necessità.
 		\end{itemize}
 		\subsubsection{Lista di controllo}	%DA AGGIORNARE
-Durante la fase di \textit{walkthrough} sono stati rilevati questi come errori più frequenti:
+Durante la fase di \textit{Walkthrough} sono stati rilevati questi come errori più frequenti:
 \begin{itemize}
 \item Norme Stilistiche:
 	\begin{itemize}
@@ -829,7 +831,7 @@ Nel controllare i diagrammi \textit{UML}, il \textit{Verificatore} dovrà presta
 			Le euristiche di Nielsen sono 10 euristiche studiate per controllare in modo metodico l'usabilità di un sito web, derivano dall'applicazione di tecniche di analisi fattoriale su 249 problemi di usabilità. Sono semplici da applicare e mostrano benefici nelle fasi iniziali di un progetto, ma sono informali e non sono automatizzabili in quanto richiedono un giudizio umano. Essendo parametri non completamente oggettivi, può capitare che alcune pagine siano usabili anche non rispettando tutte le euristiche, si è quindi posto un limite minimo di 6 euristiche rispettate.\\
 \subsection{Validazione}
 Il principio assoluto è scrivere documenti e programmi verificabili. Dopo una serie di verifiche che seguono tutto il ciclo di vita del prodotto la validazione è il verdetto finale che lo rende pubblicabile senza timore.\\
-Quindi vorremo che la validazione sia  autoavverante. \\
+Quindi vorremo che la validazione sia  auto avverante. \\
 Il \textit{testing}, negli approcci dinamici, prevede esecuzione del software o prototipi al fine di scoprire difetti e assicura quindi la validazione del programma.\\
 Al momento, non avendo prodotto software e quindi impossibile eseguire dell'analisi dinamica, si è scelto come regola generale di utilizzare una doppia revisione. Per doppia revisione si intende:
 \begin{itemize}
@@ -871,20 +873,20 @@ L'editor di testo utilizzato multi-piattaforma è \textit{TexStudio}. Programma 
 È stato aggiunto il dizionario italiano per una correzione immediata e automatica di errori ortografici.
 \subsubsection{Diagrammi UML}
 Per la creazione dei diagrammi \textit{UML} abbiamo deciso di utilizzare due diversi software. Come punto di riferimento abbiamo l'applicazione usata dal professore nelle ore di lezione. Inserendo la mail concessaci dell'università è possibile avere una versione gratuita del software \textit{Astah}.\\
-Progettato per il design dei principali grafici a uso informatico. Oltre a quasto abbiamo deciso di utilizzare il software \textit{Draw.io} che e' disponibile gratuitamente online. Abbiamo deciso di scegliere questo software per i seguenti motivi:
+Progettato per il design dei principali grafici a uso informatico. Oltre a questo abbiamo deciso di utilizzare il software \textit{Draw.io} che e' disponibile gratuitamente online. Abbiamo deciso di scegliere questo software per i seguenti motivi:
 	\begin{itemize}
-		\item Essendo un'applicazione web e' usufruibile sulla maggior parte dei dispositivi;
+		\item Essendo un'applicazione web è usufruibile sulla maggior parte dei dispositivi;
 		\item Consente di utilizzare solo questa applicazione per la costruzione di vari modelli grafici;
-		\item Permette di utilizzare dei template gia' esistenti a secondo dello scopo (informatica, ingegneria ad esempio);
+		\item Permette di utilizzare dei template già' esistenti a secondo dello scopo (informatica, ingegneria ad esempio);
 		\item Ha disponibili molte immagini vettoriali;
-		\item Si puo' esportare in diversi formati compreso HTML.
+		\item Si può esportare in diversi formati compreso HTTP
 	\end{itemize}	 
 \subsubsection{Verifica}
 Tutti i documenti creati con \LaTeX sono automaticamente controllati con uno script per il controllo ortografico.
 \subsection{Pianificazione}
 \subsubsection{Diagrammi}
 Per la pianificazione delle attività è stato scelto il software \textit{Instagantt}. Software web per la pianificazione delle attività tramite diagramma Gantt. \\
-È stata scelta tale applicazione perchè compatibile con il sistema di ticketing offerto da \textit{Asana}. Infatti ogni attività e il suo responsabile è direttamente collegato al diagramma. \\
+È stata scelta tale applicazione perché compatibile con il sistema di ticketing offerto da \textit{Asana}. Infatti ogni attività e il suo responsabile è direttamente collegato al diagramma. \\
 Le principali funzioni sono:
 \begin{itemize}
 	\item data di inizio e fine dell'attività;
@@ -930,7 +932,7 @@ Il software di versionamento scelto è \textit{Git}. Le motivazioni a base della
 	\item È già stato usato da alcuni membri del team.
 \end{itemize}
 All'interno della \textit{repository} vi sono due macro sezioni: la sezione documentazione e la sezione progetto.\\
-Ogni documento è composto dai numeri X.Y.Z. Convenzionalmente abbiamo deciso che il numero Z aumenta di uno ogni qual volta viene effettuata una modifca da parte di un componente del gruppo, il numero Y viene maggiorato di uno tutte le volte che il documento viene verificato, e viene azzerato Z; X invece viene aumentato quando si ritiene che il documento sia pronto per essere sottoposto alla revisione.
+Ogni documento è composto dai numeri X.Y.Z. Convenzionalmente abbiamo deciso che il numero Z aumenta di uno ogni qual volta viene effettuata una modifica da parte di un componente del gruppo, il numero Y viene maggiorato di uno tutte le volte che il documento viene verificato, e viene azzerato Z; X invece viene aumentato quando si ritiene che il documento sia pronto per essere sottoposto alla revisione.\\
 \newpage
 \subsection{Repository}
 \subsubsection{Repository documentazione}
