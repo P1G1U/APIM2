@@ -15,6 +15,13 @@
 \usepackage{subcaption}
 \usepackage{url}
 
+\usepackage{float}
+%forzare il posizionamento
+
+\usepackage{longtable}
+\usepackage{array}
+% librerie per longtable
+
 \usepackage{emptypage} 
 % pagine vuote senza testatina e piede di pagina
 
@@ -172,7 +179,7 @@
 			\hline
 			0.1.3 & \minitab[c]{Tracciamento} & Piergiorgio Danieli & 05/03/2017 \\
 			\hline
-			0.1.2 & \minitab[c]{Design Pattern - Utilizzo dei Design Pattern - Microservizi - Dependency Injection } & Piergiorgio Danieli & 04/03/2017 \\
+			0.1.2 & \minitab[c]{Design Pattern - Utilizzo dei Design Pattern \\ Microservizi - Dependency Injection } & Piergiorgio Danieli & 04/03/2017 \\
 			\hline
 			0.1.1 & \minitab[c]{Creazione Prototipi MockUp} & Sebastiano Marchesini & 03/03/2017 \\
 			\hline
@@ -225,9 +232,6 @@
 	\thispagestyle{empty}
 	\tableofcontents
 	%crea indice automaticamente
-	\appendix
-	\include{APPENDICE - Descrizione Design Pattern}
-	\include{APPENDICE - MockUp}
 	\listoftables
 	\listoffigures
 
@@ -261,6 +265,7 @@
 	\input{\docs Tracciamento.tex}
 	\newpage
 	%Appendice
+
 	\rhead{APPENDICE - Descrizione Design Pattern}
 	\input{\docs DescrizioneDesignPattern.tex}
 	\newpage
