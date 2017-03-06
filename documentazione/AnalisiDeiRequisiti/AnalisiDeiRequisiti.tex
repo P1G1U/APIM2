@@ -13,6 +13,9 @@
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{pgffor}
+\usepackage{lscape}
+\usepackage{caption}
+\usepackage{lastpage}
 \pagestyle{fancy}
 \newcommand{\minitab}[2][1]{\begin{tabular}#1 #2\end{tabular}}
 \newcommand{\uc}[1]{\hyperref[UC#1]{UC#1}}
@@ -34,14 +37,14 @@
 	%----------------------------------------------------------------------------------------
 	
 	\colorbox{grey}{
-		\parbox[t]{1.0\linewidth}{
-			\centering \fontsize{50pt}{80pt}\selectfont % Il primo è la grandezza del font, il secondo lo spazio lasciato
+		\parbox[t]{0.91\linewidth}{
+			\centering \fontsize{50pt}{80pt}\selectfont % Il primo Ã¨ la grandezza del font, il secondo lo spazio lasciato
 			\vspace*{0.7cm} % Spazio dall'inizio del box al titolo
 			
 			\raggedleft
-			\includegraphics[width=0.7\linewidth]{../../LogoSWEgGroupSFONDOVUOTO}
+			\includegraphics[width=\linewidth]{../../LogoSWEgGroupSFONDOVUOTO}
 			
-			\hfill Analisi dei Requisiti \\
+			\hfill Analisi dei requisiti \\
 			
 			\vspace*{0.7cm} % Spazio dalla fine del testo alla fine del box
 		}
@@ -56,19 +59,22 @@
 	%----------------------------------------------------------------------------------------
 	
 	{\centering \large 
-		\hfill \textbf{Versione} 1.0.0 \\
-		\hfill \textbf{Redazione} Gianluca Crivellaro \\
-		\hfill  Pietro Lonardi\\
-		\hfill \textbf{Verifica} Piergiorgio Danieli  \\
-		\hfill \textbf{Validazione} Alberto Gelmi \\
-		\hfill \textbf{Responsabile} Gianluca Crivellaro \\
-		\hfill \textbf{Uso} Interno \\
-		\hfill \textbf{Destinato} SWEg Group \\ 
+		\hfill \textbf{Versione} 			1.0.0 \\		
+		\hfill \textbf{Data di Rilascio}	28/02/2017 \\ 
+		\hfill \textbf{Redazione} 			Gianluca Crivellaro \\
+		\hfill								Piergiorgio Danieli \\
+		\hfill								Sebastiano Marchesini \\
+		\hfill \textbf{Validazione} 		Pietro Lonardi \\
+		\hfill \textbf{Responsabile}		Alberto Gelmi \\
+		\hfill \textbf{Uso} 				Esterno \\
+		\hfill \textbf{Destinato} 			ItalianaSoftware S.r.l \\
+		\hfill								Prof. Vardanega Tullio \\ 
+		\hfill								Prof. Cardin Riccardo \\
 		
 		\HRule{1pt}
 		
 		\textbf{Sommario} \\
-		Questo documento ha l'obiettivo di studiare e modellare concettualmente il problema che si pone con APIM.
+		Questo documento descrive lo studio dei requisiti.
 		
 	} % Linea orizzontale di estetica
 	
@@ -78,57 +84,60 @@
 	\clearpage % Parta bianca finale della pagina
 	
 	%----------------------------------------------------------- FINE TEMPLATE TITOLO
-
+	
 	
 	\lhead{\includegraphics[width=0.2\linewidth]{../../LogoSWEgGroup}}
 	\chead{}
 	\lfoot{Analisi dei Requisiti}
 	\cfoot{}
-	\rfoot{\thepage}
+	\rfoot{\thepage\ di \pageref{LastPage}} %compilare due volte per avere il numero di pagine totali
+	\renewcommand{\headrulewidth}{0.2pt}
+	\renewcommand{\footrulewidth}{0.2pt}
+	\rfoot{\thepage\ di \pageref{LastPage}} %compilare due volte per avere il numero di pagine totali
 	\renewcommand{\headrulewidth}{0.2pt}
 	\renewcommand{\footrulewidth}{0.2pt}
 	\rhead{Registro Modifiche}
 	\section{Registro Modifiche}
 	\small %rippicciolisce il testo
-	
-	{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
+
+		{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
 		\begin{tabular}{|l|c|c|c|}
 			\hline
-			{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}&{\textbf{Ver.}}\\
+			{\textbf{Ver.}}&{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}\\
 			\hline
-			Verifica Documento & Alberto Gelmi & 28/02/17 & 1.1.0 \\
+			2.0.0 & Validazione & Pietro Lonardi & 28/02/2017\\
 			\hline
-			Aggiustamento grafi Use Case & Crivellaro Gianluca & 27/02/17 & 1.0.3 \\
+			1.1.0 & Verifica &  Alberto Gelmi & 26/02/2017 \\
 			\hline
-			Correttura errori pt2 & Crivellaro Gianluca & 26/02/17 & 1.0.2 \\
+			1.0.2 & Aggiustamento grafici Use Case & Crivellaro Gianluca & 25/02/2017 \\
 			\hline
-			Correttura errori & Crivellaro Gianluca & 24/02/17 & 1.0.1 \\
+			1.0.1 &	Correzione di alcuni errori & Crivellaro Gianluca & 24/02/2017 \\
 			\hline
-			Validazione & Alberto Gelmi & 10/01/2017 & 1.0.0 \\
+			1.0.0 & Validazione & Alberto Gelmi & 10/01/2017\\
 			\hline
-			Correzioni Verifica & Gianluca Crivellaro & 09/01/2017 & 0.5.1 \\
+			0.5.1 & Correzioni Verifica & Gianluca Crivellaro & 09/01/2017  \\
 			\hline
-			Verifica Documento & Piergiorgio Danieli & 08/01/2017 & 0.5.0 \\
+			0.5. & Verifica Documento & Piergiorgio Danieli & 08/01/2017 \\
 			\hline
-			Tracciamento Requisiti - Fonti e Fonti -Requisiti & Crivellaro Gianluca & 05/01/2017 & 0.3.0 \\
+			0.3.0 & Tracciamento Requisiti - Fonti e Fonti -Requisiti & Crivellaro Gianluca & 05/01/2017 \\
 			\hline
-			Verifica Documento \& Grafici Use Case & Piergiorgio Danieli & 03/01/2017 & 0.2.0 \\
+			0.2.0 & Verifica Documento \& Grafici Use Case & Piergiorgio Danieli & 03/01/2017 \\
 			\hline
-			Creazione Grafici Use Case & Pietro Lonardi & 02/01/2017 & 0.1.3 \\
+			0.1.3 & Creazione Grafici Use Case & Pietro Lonardi & 02/01/2017 \\
 			\hline
-			Stesura Documento (Descrizione Generale \& Casi d'Uso) & Sebastiano Marchesini & 30/12/2016 & 0.1.2 \\	
+			0.1.2 & Stesura Documento (Descrizione Generale \& Casi d'Uso) & Sebastiano Marchesini & 30/12/2016  \\	
 			\hline
-			Creazione Grafici Use Case & Pietro Lonardi e Gianluca C. & 29/12/2016 & 0.1.1 \\
+			0.1.1 & Creazione Grafici Use Case & Pietro Lonardi e Gianluca C. & 29/12/2016  \\
 			\hline
-			Stesura Documento (Introduzione) & Sebastiano Marchesini &  28/12/2016 & 0.1.0 \\
+			0.1.0 & Stesura Documento (Introduzione) & Sebastiano Marchesini &  28/12/2016  \\
 			\hline
-			Aggiunti Requisiti Estesi Concordati & Gianluca Crivellaro & 27/12/2016 & 0.0.4 \\
+			0.0.4 & Aggiunti Requisiti Estesi Concordati & Gianluca Crivellaro & 27/12/2016  \\
 			\hline
-			Aggiunti Requisiti & Sebastiano Marchesini & 23/12/2016 & 0.0.3 \\
+			0.0.3 & Aggiunti Requisiti & Sebastiano Marchesini & 23/12/2016  \\
 			\hline
-			Modifica Raw & Gianluca Crivellaro & 22/12/2016 & 0.0.2 \\
+			0.0.2 & Modifica Raw & Gianluca Crivellaro & 22/12/2016  \\
 			\hline
-			Creazione Raw Documento & Gianluca Crivellaro & 21/12/2016 & 0.0.1 \\
+			0.0.1 & Creazione Raw Documento & Gianluca Crivellaro & 21/12/2016  \\
 			\hline
 		\end{tabular}
 	}	\normalsize
@@ -138,12 +147,12 @@
 	\thispagestyle{empty}
 	
 	\newpage
-		
+	
 	\rhead{Introduzione}
 	\section{Introduzione}
 	\subsection{Scopo del Documento}
 	Tale documento ha lo scopo di studiare e modellare concettualmente il problema che si pone con APIM. Posizionando le componenti (o ambiti) a scopo di allocazione dei requisiti. Alcuni dei requisiti specificandoli con il diagramma dei casi d'uso.\\
-	Vi deve essere la certezza di non aver dimenticato nessuno tra i bisogno espliciti ed i bisogni impliciti. Inoltre non devono esserci ambiguità tra i requisiti.
+	Vi deve essere la certezza di non aver dimenticato nessuno tra i requisiti espliciti ed i requisiti impliciti. Inoltre non devono esserci ambiguità tra i requisiti.
 	Bisogna sempre tener conto di portare al massimo possibile la granularità del problema, senza però confonderlo e renderlo impossibile da verificare. Questo per rendere il requisito decidibile.\\
 	È infine bene tener presente otto semplici qualità di selezione dei requisiti:
 	\begin{itemize}
@@ -217,7 +226,14 @@
 	\end{itemize}
 	
 	\subsection{Piattaforma di esecuzione}
-	Il prodotto finale è fruibile da qualsiasi piattaforma che disponga di un browser per la navigazione web. Sarà garantito il corretto e perfetto funzionamento con il maggior numero di browser possibili. 
+	Il prodotto finale sarà fruibile dai più recenti browser con javascript abilitato. In particolare sarà garantito il funzionamento dell'applicazione per:
+	\begin{itemize}
+		\item Google Chrome v55;
+		\item Safari v10;
+		\item Firefox v50;
+		\item Internet Explorer 10;
+		\item Microsoft Edge v14.
+	\end{itemize}
 	
 	\subsection{Vincoli generali}
 	Per utilizzare le funzionalità della piattaforma è obbligatorio avere una connessione internet.\\
@@ -233,12 +249,19 @@
 	Ogni caso d'uso ha un codice univoco gerarchico, nella forma: 
 	\[UC[\textit{Codice Univoco del Padre}].[\textit{Codice Progressivo di Livello}]\] 
 	Il codice progressivo può includere diversi livelli di gerarchia separati da un punto.
-	\clearpage
-	\subsection{Caso d'uso Generale: Operazioni ad alto livello}
+	\subsection{Gerarchia degli attori}
+	Nel grafico degli attori, il primo attore, "Utente", rappresenta l'utente che può accedere a funzionalità del sito che sono indipendenti dal grado, come ad esempio la ricerca. "Utente non autenticato" rappresenta un utente che non ha ancora eseguito login, o che non possiede delle credenziali per accedere al sito, "Utente autenticato" rappresenta un utente che ha già eseguito l'accesso al sistema mentre "Utente amministrativo" rappresenta l'utente superuser, responsabile dell'applicazione web.
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[width=0.7\textwidth]{UseCase/APIMarket}
-		\caption{Operazioni ad alto livello}
+		\includegraphics[width=0.5\textwidth]{UseCase/Attori}
+		\caption{Gerarchia degli attori}
+	\end{figure}
+	\clearpage
+	\subsection{Caso d'uso A: Operazioni ad alto livello - Utente non autenticato}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.7\textwidth]{UseCase/A}
+		\caption{Operazioni ad alto livello - Utente non autenticato}
 	\end{figure}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
@@ -247,12 +270,40 @@
 			\item Viene offerta la possibilità di registrarsi al market; 
 			\item Viene offerta la possibilità di identificarsi se già in possesso di un account all'interno del market;
 			\item Viene offerta la possibilità di consultare, solo a scopo informativo, le API all'interno del market (per poter caricare le proprie API, o acquistare APIKey è necessario accedere con il proprio account); 
-			\item Viene offerta la possibilità di consultare le statistiche riferite agli utenti all'interno del market.
 		\end{itemize}
+		\textbf{Scenario principale}:
+			\begin{itemize}
+				\item l'utente non autenticato può accedere alla procedura di registrazione [UC1];
+				\item l'utente non autenticato può accedere alla pagina di login [UC2];
+				\item l'utente non autenticato può effettuare una ricerca [UC3];
+				\item l'utente non autenticato può visualizzare la pagina di una API caricata sul sito [UC6];
+				\item l'utente non autenticato può accedere alla procedura per il recupero password [UC4];
+			\end{itemize}
 		\item \textbf{Precondizione:} Il sistema viene avviato da un utente esterno;
 		\item \textbf{Postcondizione:} Il sistema offre tutti servizi che un utente non autenticato può usufruire.
 	\end{itemize}
-
+	\subsection{Caso d'uso B: Operazioni ad alto livello - Utente autenticato e admin}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.7\textwidth]{UseCase/B}
+		\caption{Operazioni ad alto livello - Utente autenticato e admin}
+	\end{figure}
+	\begin{itemize}
+		\item \textbf{Attori}: Utente autenticato e Utente Admin;
+		\item \textbf{Scopo e descrizione:} La pagina presenta tutti i servizi che sono offerti agli utenti autenticati ed admin.
+		\item \textbf{Scenario principale:} 
+			\begin{itemize}
+				\item gli utenti autenticati e admin possono effettuare ricerche [UC3];
+				\item gli utenti autenticati e admin possono visualizzare le pagine informative delle API [UC6];
+				\item gli utenti autenticati e admin possono effettuare logout [UC7];
+				\item gli utenti autenticati e admin possono  interagire con la propria pagina utente [UC8];
+				\item l'utente admin può effettuare ricerche di altri utenti [UC10];
+				\item l'utente admin può accedere alla pagina di un utente che ha cercato [UC5].
+				\item l'utente admin può accedere alla pagina di statistiche del sito [UC9].
+			\end{itemize}
+		\item \textbf{Precondizione:} Il sistema viene avviato da un utente esterno;
+		\item \textbf{Postcondizione:} Il sistema offre tutti servizi che un utente non autenticato può usufruire.
+	\end{itemize}
 	\subsection{Caso d'uso UC1: Registrazione}
 	\label{UC1}
 	\begin{figure}[ht]
@@ -263,15 +314,26 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente non in possesso di un username inserisce i suoi dati anagrafici da associare al nuovo username. Gli verrà chiesta anche una password che dovrà utilizzare ogni qual volta debba effettuare l'accesso;
+		\item \textbf{Scenario principale}: 
+		\begin{itemize}
+			\item l'utente inserisce i propri dati anagrafici [UC1.1];
+			\item l'utente inserisce il proprio username [UC1.2];
+			\item l'utente inserisce la propria password [UC1.3];
+			\item l'utente inserisce il proprio indirizzo email [UC1.4];
+			\item l'utente inserisce i dati della propria carta di credito [UC1.5];
+			\item l'utente carica il proprio logo [UC1.6];
+		\end{itemize}
 		\item \textbf{Scenari alternativi}: L'inserimento viene annullato per i seguenti motivi:
 		\begin{itemize}
-			\item username già esistente;
-			\item password non soddisfa i criteri esposti. In tal caso viene richiesto all'utente di ripetere l'operazione.
+			\item username già esistente [UC1.7];
+			\item email già esistente oppure non valida [UC1.8];
+			\item carta di credito non valida[UC1.9];
+			\item password non soddisfa i criteri esposti. In tal caso viene richiesto all'utente di ripetere l'operazione [UC1.3.3][UC1.3.4];
+			\item il caricamento del logo è fallito [UC1.10].
 		\end{itemize}
 		\item \textbf{Precondizione}: Il sistema attende l'inserimento dei dati richiesti;
 		\item \textbf{Postcondizione}: Il sistema ha salvato le informazione date dall'utente e ha mostrato all'utente un messaggio di avvenuta registrazione.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC1.1: Inserimento dati anagrafici}
 	\label{UC1.1}
 	\begin{figure}[ht]
@@ -282,35 +344,40 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente non ancora autenticato inserisce i propri dati anagrafici (nome, cognome, nazionalità);
+		\item \textbf{Scenario principale}: 
+		\begin{itemize}
+			\item l'utente inserisce il proprio nome [UC1.1.1];
+			\item l'utente inserisce il proprio cognome [UC1.1.2];
+			\item l'utente inserisce il proprio numero di telefono [UC1.1.3];
+			\item l'utente inserisce il proprio indirizzo [UC1.1.4];
+		\end{itemize}
 		\item \textbf{Precondizione}: Il sistema attende l'inserimento dei dati richiesti;
 		\item \textbf{Postcondizione}: Il sistema salva le informazione date dall'utente.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC1.1.1: Inserimento del nome}
 	\label{UC1.1.1}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato; 
 		\item \textbf{Scopo e descrizione}: L'utente deve inserire il suo nome;
-		\item \textbf{Scenario alternativo}: Il nome inserito dall'utente non è conforme al formato richiesto;
+		\item \textbf{Scenario alternativo}: Il nome inserito dall'utente non è conforme al formato richiesto [UC1.1.5];
 		\item \textbf{Precondizione}: Il sistema attende l'inserimento del nome da parte dell'utente;
 		\item \textbf{Postcondizione}: Il sistema inserisce nel DB il nome dell'utente.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC1.1.2: Inserimento del cognome}
 	\label{UC1.1.2}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente deve inserire il suo nome;
-		\item \textbf{Scenario alternativo}: Il nome inserito dall'utente non è conforme al formato richiesto;
-		\item \textbf{Precondizione}: Il sistema attende l'inserimento del nome da parte dell'utente;
-		\item \textbf{Postcondizione}: Il sistema inserisce nel DB il nome dell'utente.
+		\item \textbf{Scopo e descrizione}: L'utente deve inserire il suo cognome;
+		\item \textbf{Scenario alternativo}: Il cognome inserito dall'utente non è conforme al formato richiesto [UC1.1.6];
+		\item \textbf{Precondizione}: Il sistema attende l'inserimento del cognome da parte dell'utente;
+		\item \textbf{Postcondizione}: Il sistema inserisce nel DB il cognome dell'utente.
 	\end{itemize}
 	\subsection{Caso d'uso UC1.1.3: Inserimento del telefono}
 	\label{UC1.1.3}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente deve inserire il suo numero di telefono;
-		\item \textbf{Scenario alternativo}: Il numero di telefono inserito dall'utente non è valido;
+		\item \textbf{Scenario alternativo}: Il numero di telefono inserito dall'utente non è valido [UC1.1.7];
 		\item \textbf{Precondizione}: Il sistema attende l'inserimento del numero di telefono da parte dell'utente;
 		\item \textbf{Postcondizione}: Il sistema inserisce nel DB il numero di telefono dell'utente.
 	\end{itemize}
@@ -351,17 +418,16 @@
 		\item \textbf{Precondizione}: L'utente ha inserito il numero di telefono errato;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente un messaggio di errore appropriato.
 	\end{itemize}
-	\subsection{Caso d'uso UC1.2: Inserimento nome utente}
+	\subsection{Caso d'uso UC1.2: Inserimento username}
 	\label{UC1.2}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente inserisce lo username che gli servirà ad identificarsi nel sistema nel futuro;
-		\item \textbf{Scenario alternativo}: Il sistema rifiuta lo username dato in quanto già presente nel DB, in tal caso viene chiesto di inserire all'utente un diverso username;
+		\item \textbf{Scenario alternativo}: Il sistema rifiuta lo username dato in quanto già presente nel DB, in tal caso viene chiesto di inserire all'utente un diverso username [UC1.7];
 		\item \textbf{Precondizione}: Il sistema rimane in attesa dell'inserimento dello username;
 		\item \textbf{Postcondizione}: Il sistema associa allo username i dati anagrafici inseriti in precedenza ed inserisce lo username nel DB degli utenti.
 	\end{itemize}
-
-	\subsection{Caso d'uso UC1.3: Inserimento password (Registrazione)}
+	\subsection{Caso d'uso UC1.3: Inserimento password}
 	\label{UC1.3}
 	\begin{figure}[H]
 		\centering
@@ -377,7 +443,12 @@
 			\item Contenere almeno 1 carattere minuscolo;
 		\end{itemize}
 		Inoltre la password inserita deve essere ripetuta come controllo di sicurezza.
-		\item \textbf{Scenario alternativo}: La password inserita dall'utente non è conforme alle richieste, perciò il sistema chiede all'utente di inserire una nuova password che sia conforme, oppure la password ripetuta non combacia;
+		\item \textbf{Scenario principale}:
+		\begin{itemize}
+			\item l'utente inserisce la propria password [UC1.3.1];
+			\item l'utente inserisce nuovamente la sua password [UC1.3.2].
+		\end{itemize}
+		\item \textbf{Scenario alternativo}: La password inserita dall'utente non è conforme alle richieste, perciò il sistema chiede all'utente di inserire una nuova password che sia conforme [UC1.3.3], oppure la password ripetuta non combacia [UC1.3.4];
 		\item \textbf{Precondizione}: Il sistema attende che l'utente inserisca la password da associare al suo username;
 		\item \textbf{Postcondizione}: Il sistema accetta la password inserita dall'utente e la associa allo username nel DB corrispondente.
 	\end{itemize}
@@ -386,7 +457,7 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente deve inserire la sua password con cui accederà al suo account una volta terminata la registrazione;
-		\item \textbf{Scenario alternativo}: La password inserita non rispetta i requisiti minimi, viene quindi mostrato un messaggio d'errore;
+		\item \textbf{Scenario alternativo}: La password inserita non rispetta i requisiti minimi, viene quindi mostrato un messaggio d'errore [UC1.3.3];
 		\item \textbf{Precondizione}: L'utente è nella schermata di registrazione e deve inserire la password;
 		\item \textbf{Postcondizione}: L'utente ha inserito una password valida.
 	\end{itemize}
@@ -395,7 +466,7 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente deve reinserire la password come controllo di sicurezza;
-		\item \textbf{Scenario alternativo}: L'utente ha inserito una password che non combacia con la password inserita in precedenza, viene quindi mostrato un messaggio di errore;
+		\item \textbf{Scenario alternativo}: L'utente ha inserito una password che non combacia con la password inserita in precedenza, viene quindi mostrato un messaggio di errore [UC1.3.4];
 		\item \textbf{Precondizione}: L'utente è nella schermata di registrazione ed ha inserito la password, deve inserire la password una seconda volta;
 		\item \textbf{Postcondizione}: L'utente ha inserito la password per la seconda volta in modo corretto.
 	\end{itemize}
@@ -415,27 +486,24 @@
 		\item \textbf{Precondizione}: L'utente ha inserito la password di conferma errata;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente un errore appropriato.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC1.4: Inserimento email}
 	\label{UC1.4}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
 		\item \textbf{Scopo e descrizione}: In futuro nel caso in cui l'utente si fosse dimenticato la password, è necessario che il sistema abbia a disposizione un'email alla quale fare affidamento a cui poter mandare la password per poter far accedere l'utente;
-		\item \textbf{Scenario alternativo}: L'email inserita non è nel formato valido, o esiste già nel database, quindi il sistema chiede all'utente di inserire un'altra email valida;
+		\item \textbf{Scenario alternativo}: L'email inserita non è nel formato valido, o esiste già nel database, quindi il sistema chiede all'utente di inserire un'altra email valida [UC1.8];
 		\item \textbf{Precondizione}: Il sistema attende una email dall'utente;
 		\item \textbf{Postcondizione}: Il sistema riceve una email che assocerà allo username dell'utente.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC1.5: Inserimento carta di credito}
 	\label{UC1.5}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente deve disporre di un metodo di una carta di credito valida che gli permetta di effettuare acquisti all'interno del market;
-		\item \textbf{Scenario alternativo}: La carta di credito non è valida perciò viene segnalato errore e viene chiesto all'utente di inserirne una diversa;
+		\item \textbf{Scenario alternativo}: La carta di credito non è valida perciò viene segnalato errore e viene chiesto all'utente di inserirne una diversa [UC1.9];
 		\item \textbf{Precondizione}: Il sistema attende che l'utente inserisca una carta di credito valida;
 		\item \textbf{Postcondizione}: Il sistema ha validato la carta di credito inserita dall'utente e l'ha associata al suo account.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC1.6: Caricamento logo utente}
 	\label{UC1.6}
 	\begin{itemize}
@@ -445,11 +513,10 @@
 			\item La dimensione del file deve essere <500kb;
 			\item L'estesione del file deve essere .jpg, .jpeg, .png, .bmp;
 		\end{itemize}
-		\item \textbf{Scenario alternativo}: Il file è troppo grande o non è in un formato supportato, viene quindi mostrato un messaggio di errore;
+		\item \textbf{Scenario alternativo}: Il file è troppo grande o non è in un formato supportato, viene quindi mostrato un messaggio di errore [UC1.10];
 		\item \textbf{Precondizione}: Il sistema attende che l'utente carichi un'immagine di logo;
 		\item \textbf{Postcondizione}: Il sistema ha controllato che l'immagine sia valida e, se è valida, l'ha caricata e associata al profilo.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC1.7: Visualizza errore username}
 	\label{UC1.7}
 	\begin{itemize}
@@ -458,7 +525,6 @@
 		\item \textbf{Precondizione}: L'utente ha tentato di creare un account con uno username già esistente;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente un messaggio di errore appropriato.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC1.8: Visualizza errore email}
 	\label{UC1.8}
 	\begin{itemize}
@@ -467,7 +533,6 @@
 		\item \textbf{Precondizione}: L'utente ha inserito l'indirizzo email errato;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente un messaggio di errore appropriato.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC1.9: Visualizza errore carta di credito}
 	\label{UC1.9}
 	\begin{itemize}
@@ -476,7 +541,6 @@
 		\item \textbf{Precondizione}: L'utente ha inserito la carta di credito non valida;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente un messaggio di errore appropriato.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC1.10: Visualizza errore caricamento logo}
 	\label{UC1.10}
 	\begin{itemize}
@@ -485,8 +549,6 @@
 		\item \textbf{Precondizione}: L'utente ha tentato di caricare il suo logo;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente un messaggio di errore appropriato.
 	\end{itemize}
-
-
 	\subsection{Caso d'uso UC2: Login}
 	\label{UC2}
 	\begin{figure}[H]
@@ -497,31 +559,33 @@
 	\begin{itemize}
 		\item \textbf{Attori:} Utente non autenticato;
 		\item \textbf{Scopo e descrizione:} L'utente che possiede già un username e una password vuole effettuare un accesso;
-		\item \textbf{Scenario alternativo}: Il sistema rifiuta l'accesso all'utente a causa di un errato inserimento di username o di password;
+		\item \textbf{Scenario principale}:
+		\begin{itemize}
+			\item l'utente inserisce il suo username o la sua email [UC2.1];
+			\item l'utente inserisce la sua password [UC2.2].
+		\end{itemize}
+		\item \textbf{Scenario alternativo}: Il sistema rifiuta l'accesso all'utente a causa di un errato inserimento di username o di password [UC2.3];
 		\item \textbf{Precondizione}: Il sistema attende che l'utente inserisca i suoi dati identificativi;
 		\item \textbf{Postcondizione: Il sistema ha accettato i dati e manda l'utente alla sua bacheca personale}.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC2.1: Inserimento username o email}
 	\label{UC2.1}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
 		\item \textbf{Scopo e descrizione}: Viene chiesto all'utente di inserire il suo username o la sua email per poter essere identificato;
-		\item \textbf{Scenario alternativo}: Lo username o l'email non esistono all'interno del DB;
+		\item \textbf{Scenario alternativo}: Lo username o l'email non esistono all'interno del DB [UC2.3];
 		\item \textbf{Precondizione}: Il sistema attende l'inserimento dello username o dell'email da parte dell'utente;
 		\item \textbf{Postcondizione}: Il sistema ha riconosciuto l'utente e attende l'inserimento della password per validare l'accesso.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC2.2: Password}
 	\label{UC2.2}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
 		\item \textbf{Scopo e descrizione}: Viene chiesto all'utente di inserire la password associata allo username (o alla relativa email);
-		\item \textbf{Scenario alternativo}: La password inserita dall'utente non corrisponde alla password associata allo username perciò viene rifiutato l'accesso;
+		\item \textbf{Scenario alternativo}: La password inserita dall'utente non corrisponde alla password associata allo username perciò viene rifiutato l'accesso [UC2.3];
 		\item \textbf{Precondizione}: Il sistema attende l'inserimento della password da parte dell'utente;
 		\item \textbf{Postcondizione}: Il sistema ha verificato che la password inserita dall'utente è corretta perciò permette l'accesso all'utente.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC2.3: Visualizza messaggio di errore credenziali errate}
 	\label{UC2.3}
 	\begin{itemize}
@@ -530,16 +594,6 @@
 		\item \textbf{Precondizione}: L'utente ha inserito le credenziali errate;
 		\item \textbf{Postcondizione}: Il sistema ha controllato le credenziali ed ha restituito un errore.
 	\end{itemize}
-
-	\subsection{Caso d'uso UC2.4: Recupero password}
-	\label{UC2.4}
-	\begin{itemize}
-		\item \textbf{Attori}: Utente non autenticato;
-		\item \textbf{Scopo e descrizione}: Nel caso in cui l'utente si fosse dimenticato la password del suo profilo, il sistema offre un'assistenza di recupero password. Ovvero invierà alla mail associata al profilo una nuova password temporanea da utilizzare per accedervi e modificarla nuovamente;
-		\item \textbf{Precondizione}: Il sistema rimane in attesa della richiesta da parte dell'utente di recuperare la sua password;
-		\item \textbf{Postcondizione}: L'utente ha a disposizione una password temporanea che gli permette di accedere al suo profilo e modificarla nuovamente.
-	\end{itemize}
-
 	\subsection{Caso d'uso UC3: Ricerca}
 	\label{UC3}
 	\begin{figure}[H]
@@ -548,21 +602,26 @@
 		\caption{Ricerca}
 	\end{figure}
 	\begin{itemize}
-		\item \textbf{Attori}: Utente non autenticato e Utente autenticato;
+		\item \textbf{Attori}: Utente;
 		\item \textbf{Scopo e descrizione}: L'utente ricerca nella barra di ricerca il nome di un microservizio e clicca il bottone di conferma;
+		\item \textbf{Scenario principale}:
+		\begin{itemize}
+			\item l'utente inserisce i termini di ricerca [UC3.1];
+			\item l'utente decide come impostare la sua ricerca [UC3.2];
+			\item l'utente avvia la ricerca [UC3.3];
+			\item l'utente visiona la pagina in cui sono elencati i risultati della sua ricerca [UC3.4].
+		\end{itemize}
 		\item \textbf{Precondizione}: Il sistema attende l'invio di una frase di ricerca;
 		\item \textbf{Postcondizione}: Il sistema ha esaminato la frase di ricerca e restituisce una pagina di risultati della ricerca.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC3.1: Inserimento parole di ricerca}
 	\label{UC3.1}
 	\begin{itemize}
-		\item \textbf{Attori}: Utente non autenticato e Utente autenticato;
+		\item \textbf{Attori}: Utente;
 		\item \textbf{Scopo e descrizione}: L'utente scrive nella barra di ricerca la frase che vuole ricercare;
 		\item \textbf{Precondizione}: Il sistema attende l'inserimento di una frase di ricerca;
 		\item \textbf{Postcondizione}: L'utente ha terminato di inserire la frase di ricerca.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC3.2: Configurazione ricerca}
 	\label{UC3.2}
 	\begin{figure}[H]
@@ -571,15 +630,21 @@
 		\caption{Configurazione ricerca}
 	\end{figure}
 	\begin{itemize}
-		\item \textbf{Attori}: Utente non autenticato e Utente autenticato;
+		\item \textbf{Attori}: Utente;
 		\item \textbf{Scopo e descrizione}: L'utente seleziona la modalità con cui vuole eseguire la ricerca;
+		\item \textbf{Scenario principale}:
+			\begin{itemize}
+				\item l'utente può selezionare un tag di ricerca [UC3.2.1];
+				\item l'utente può selezionare il metodo di ricerca per nome dell'API [UC3.2.2];
+				\item l'utente può selezionare il metodo di ricerca per nome utente del creatore [UC3.2.3].
+			\end{itemize}
 		\item \textbf{Precondizione}: L'utente non ha ancora scelto nessun metodo di ricerca;
 		\item \textbf{Postcondizione}: L'utente ha scelto un metodo di ricerca.
 	\end{itemize}
 	\subsection{Caso d'uso UC3.2.1: Ricerca per tag}
 	\label{UC3.2.1}
 	\begin{itemize}
-		\item \textbf{Attori}: Utente non autenticato e Utente autenticato;
+		\item \textbf{Attori}: Utente;
 		\item \textbf{Scopo e descrizione}: L'utente sceglie di cercare all'interno di una categoria precisa di API;
 		\item \textbf{Precondizione}: L'utente non ha ancora scelto la configurazione ricerca;
 		\item \textbf{Postcondizione}: L'utente ha scelto il tag su cui effettuare la ricerca.
@@ -587,7 +652,7 @@
 	\subsection{Caso d'uso UC3.2.2: Ricerca per nome API}
 	\label{UC3.2.2}
 	\begin{itemize}
-		\item \textbf{Attori}: Utente non autenticato e Utente autenticato;
+		\item \textbf{Attori}: Utente;
 		\item \textbf{Scopo e descrizione}: L'utente sceglie di cercare tra tutti i nomi dei microservizi del database;
 		\item \textbf{Precondizione}: L'utente non ha ancora scelto la configurazione ricerca;
 		\item \textbf{Postcondizione}: L'utente ha scelto la modalità di ricerca per nome API.
@@ -595,7 +660,7 @@
 	\subsection{Caso d'uso UC3.2.3: Ricerca per nome utente}
 	\label{UC3.2.3}
 	\begin{itemize}
-		\item \textbf{Attori}: Utente non autenticato e Utente autenticato;
+		\item \textbf{Attori}: Utente;
 		\item \textbf{Scopo e descrizione}: L'utente sceglie di ricercare API tramite il nome utente dell'autore;
 		\item \textbf{Precondizione}: L'utente non ha ancora scelto la configurazione ricerca;
 		\item \textbf{Postcondizione}: L'utente ha scelto la modalità di ricerca per nome dell'autore.
@@ -603,117 +668,27 @@
 	\subsection{Caso d'uso UC3.3: Avvio ricerca}
 	\label{UC3.3}
 	\begin{itemize}
-		\item \textbf{Attori}: Utente non autenticato e Utente autenticato;
+		\item \textbf{Attori}: Utente;
 		\item \textbf{Scopo e descrizione}: L'utente ha impostato la ricerca e preme il tasto per l'avvio della ricerca;
 		\item \textbf{Precondizione}: L'utente ha finito di impostare la ricerca;
 		\item \textbf{Postcondizione}: L'utente ha avviato la ricerca.
 	\end{itemize}
-
-
-	\subsection{Caso d'uso UC4: Visualizzazione risultati ricerca}
+	\subsection{Caso d'uso UC3.4: Visualizza risultati ricerca}
+	\label{UC3.4}
+	\begin{itemize}
+		\item \textbf{Attori}: Utente;
+		\item \textbf{Scopo e descrizione}: L'utente visiona i risultati della sua ricerca in seguito all'avvio della ricerca;
+		\item \textbf{Precondizione}: L'utente ha avviato la ricerca;
+		\item \textbf{Postcondizione}: L'utente ha visionato la pagina dei risultati.
+	\end{itemize}
+	\subsection{Caso d'uso UC4: Recupero password}
 	\label{UC4}
 	\begin{itemize}
-		\item \textbf{Attori}: Utente non autenticato e Utente autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente ha avviato una ricerca e viene reindirizzato alla pagina di visione dei risultati di ricerca. Qui vengono elencate tutti i microservizi attinenti alla sua ricerca, o viene visualizzato un messaggio nel caso la ricerca non abbia prodotto risultati. I risultati devono poter essere ordinati per:
-		\begin{itemize}
-			\item Pertinenza;
-			\item Numero di APIKey vendute;
-			\item Valutazione degli utenti;
-			\item Data di caricamento.
-		\end{itemize}
-		\item \textbf{Precondizione}: L'utente ha avviato una ricerca;
-		\item \textbf{Postcondizione}: L'utente ha accesso a tutti i microservizi attinenti alla ricerca.
+		\item \textbf{Attori}: Utente non autenticato;
+		\item \textbf{Scopo e descrizione}: Nel caso in cui l'utente si fosse dimenticato la password del suo profilo, il sistema offre un'assistenza di recupero password. Ovvero invierà alla mail associata al profilo una nuova password temporanea da utilizzare per accedervi e modificarla nuovamente;
+		\item \textbf{Precondizione}: Il sistema rimane in attesa della richiesta da parte dell'utente di recuperare la sua password;
+		\item \textbf{Postcondizione}: L'utente ha a disposizione una password temporanea che gli permette di accedere al suo profilo e modificarla nuovamente.
 	\end{itemize}
-
-
-	\subsection{Caso d'uso UC5: Visualizzazione pagina altro utente}
-	\label{UC5}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.8\textwidth]{UseCase/VisualizzazionePaginaAltroUtente}
-		\caption{Visualizzazione pagina altro utente}
-	\end{figure}
-	\begin{itemize}
-		\item \textbf{Attori}: Utente non autenticato e Utente Autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente è arrivato sulla pagina profilo di un altro utente e ne visiona i dati personali;
-		\item \textbf{Precondizione}: L'utente vuole visionare i dati di un utente che ha caricato un microservizio;
-		\item \textbf{Postcondizione}: L'utente è sulla pagina utente dell'utente che vuole visionare.
-	\end{itemize}
-
-	\subsection{Caso d'uso UC5.1: Visualizza dati utente}
-	\label{UC5.1}
-	\begin{itemize}
-		\item \textbf{Attori}: Utente non autenticato e Utente autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente vuole visionare i dati di un utente. In particolare il sistema rende visibile:
-		\begin{itemize}
-			\item Username;
-			\item Indirizzo email.
-		\end{itemize}
-		\item \textbf{Precondizione}: L'utente si trova nella pagina di un altro utente;
-		\item \textbf{Postcondizione}: Il sistema ha stampato su schermo il nome di quell'utente e l'utente l'ha visionato.
-	\end{itemize}
-
-	\subsection{Caso d'uso UC5.2: Visualizza commenti scritti}
-	\label{UC5.2}
-	\begin{itemize}
-		\item \textbf{Attori}: Utente non autenticato e Utente autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente vuole visionare gli ultimi commenti scritti da un altro utente;
-		\item \textbf{Precondizione}: L'utente si trova sulla pagina di un altro utente;
-		\item \textbf{Postcondizione}: Il sistema ha mostrato su schermo gli ultimi 30 messaggi scritti dall'utente.
-	\end{itemize}
-
-	\subsection{Caso d'uso UC5.3: Visualizza microservizi pubblicati}
-	\label{UC5.3}
-	\begin{itemize}
-		\item \textbf{Attori}: Utente non autenticato e Utente autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente vuole visionare i microservizi pubblicati da un dato utente, quindi va sulla sua pagina utente e li visiona;
-		\item \textbf{Precondizione}: L'utente è sulla pagina di un altro utente;
-		\item \textbf{Postcondizione}: Il sistema ha stampato su schermo una tabella che indica i microservizi rilasciati dall'utente, la data di rilascio, e approssimativamente il numero di download.
-	\end{itemize}
-
-	\subsection{Caso d'uso UC5.4: Visualizza indice di affidabilità}
-	\label{UC5.4}
-	\begin{itemize}
-		\item \textbf{Attori}: Utente non autenticato e Utente autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente vuole verificare l'attendibilità di un altro utente prima di acquistare un suo microservizio, quindi va sulla sua pagina e legge il suo indice di affidabilità;
-		\item \textbf{Precondizione}: L'utente è sulla pagina di un altro utente;
-		\item \textbf{Postcondizione}: Il sistema calcola un indice di affidabilità per l'utente basato sulla qualità dei microservizi caricati e sulla loro valutazione da parte degli utenti, e lo stampa su schermo.
-	\end{itemize}
-
-	\subsection{Caso d'uso UC5.5: Modifica dati utente (Admin)}
-	\label{UC5.5}
-	\begin{itemize}
-		\item \textbf{Attori}: Utente Admin;
-		\item \textbf{Scopo e descrizione}: L'utente Admin che visiona la pagina di un altro utente decide di cambiare alcuni dati relativi a quell'utente. In particolare l'Utente Admin può modificare:
-		\begin{itemize}
-			\item Nome e Cognome;
-			\item Numero di telefono;
-			\item Indirizzo email;
-			\item Indirizzo;
-			\item Password;
-			\item Carta di credito;
-			\item Commenti scritti dall'utente;
-			\item Microservizi registrati dall'utente.
-		\end{itemize}
-		\item \textbf{Precondizione}: L'utente Admin è sulla pagina di un altro utente;
-		\item \textbf{Postcondizione}: L'utente Admin ha modificato tutto ciò che voleva modificare.
-	\end{itemize}
-
-	\subsection{Caso d'uso UC5.6: Visualizza dati utente (Admin)}
-	\label{UC5.6}
-	\begin{itemize}
-		\item \textbf{Attori}: Utente Admin;
-		\item \textbf{Scopo e descrizione}: L'utente Admin che visiona la pagina di un altro utente vedendo tutti i dati dell'utente. In particolare, oltre a quelli già visti da un semplice Utente autentautenticato, un Utente Admin può visualizzare:
-		\begin{itemize}
-			\item Indirizzo email;
-			\item numero di telefono;
-			\item indirizzo.
-		\end{itemize};
-		\item \textbf{Precondizione}: L'utente Admin è sulla pagina di un altro utente;
-		\item \textbf{Postcondizione}: L'utente Admin ha modificato tutto ciò che voleva modificare.
-	\end{itemize}
-
-
 	\subsection{Caso d'uso UC6: Visualizzazione pagina API}
 	\label{UC6}
 	\begin{figure}[H]
@@ -724,10 +699,17 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato e Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente vuole visionare i dettagli di un microservizio registrato da un utente, apre quindi la pagina relativa a quel microservizio e la legge;
+		\item \textbf{Scenario principale}:
+		\begin{itemize}
+			\item l'utente visiona il le informazioni generali dell'API [UC6.1];
+			\item l'utente visiona i commenti relativi a quell'API [UC6.2];
+			\item l'utente autenticato può visionare le statistiche relative all'API [UC6.3];
+			\item l'utente autenticato può procedere all'acquisto di un'APIKey relativa a quell'API [UC6.4];
+			\item l'utente autenticato può rilasciare un commento relativo all'API [UC6.5].
+		\end{itemize}
 		\item \textbf{Precondizione}: L'utente ha cliccato sul nome di un microservizio;
 		\item \textbf{Postcondizione}: L'utente è arrivato alla pagina di un microservizio e il sistema ha caricato tutte le informazioni relative.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC 6.1: Visualizzazione API}
 	\label{UC6.1}
 	\begin{figure}[H]
@@ -738,6 +720,12 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato e Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente visualizza le informazioni principali relative al microservizio di cui gli interessano i dettagli;
+		\item \textbf{Scenario principale}:
+		\begin{itemize}
+			\item l'utente può visualizzare i dettagli dell'API [UC6.1.1];
+			\item l'utente autenticato può visionare l'interfaccia dell'API [UC6.1.2];
+			\item l'utente autenticato può visionare la documentazione relativa a quell'API [UC6.1.3].
+		\end{itemize}
 		\item \textbf{Precondizione}: L'utente è sulla pagina di un microservizio;
 		\item \textbf{Postcondizione}: Il sistema mostra all'utente le informazioni base su quel microservizio.
 	\end{itemize}
@@ -752,7 +740,7 @@
 			\item Numero approssimativo di APIKey vendute;
 			\item Descrizione del microservizio;
 			\item Rating del microservizio dato dai voti degli utenti.
-		\end{itemize};
+		\end{itemize}
 		\item \textbf{Precondizione}: L'utente sta osservando la parte iniziale della pagina relativa ad un microservizio;
 		\item \textbf{Postcondizione}: Il sistema ha caricato le informazioni di quel microservizio e le ha stampate a schermo.
 	\end{itemize}
@@ -772,7 +760,6 @@
 		\item \textbf{Precondizione}: L'utente sta osservando la parte iniziale della pagina relativa ad un microservizio;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente autenticato un link tramite il quale l'utente può scaricare la documentazione del microservizio.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC6.2: Visualizzazione commenti}
 	\label{UC6.2}
 	\begin{itemize}
@@ -781,7 +768,6 @@
 		\item \textbf{Precondizione}: L'utente è sulla pagina di un microservizio;
 		\item \textbf{Postcondizione}: Il sistema mostra a schermo tutti i commenti relativi a quel microservizio, indicando anche il nome dell'autore del commento la data di pubblicazione.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC6.3: Confronta statistiche}
 	\label{UC6.3}
 	\begin{itemize}
@@ -790,16 +776,68 @@
 		\item \textbf{Precondizione}: L'utente sulla pagina di un microservizio clicca sul bottone "confronta";
 		\item \textbf{Postcondizione}: Il sistema ha restituito all'utente le statistiche confrontate dei due microservizi scelti, oppure ha mantenuto cliccato il pulsante avvisando l'utente di cliccare sul pulsante "confronta" relativo al microservizio che vuole mettere a confronto.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC6.4: Acquisto APIKey}
 	\label{UC6.4}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\textwidth]{UseCase/AcquistoAPIKey}
+		\caption{Acquisto APIKey}
+	\end{figure}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente autenticato vuole acquistare una APIKey, quindi preme sul pulsante di acquisto. Viene reindirizzato nella pagina di conferma di acquisto nel caso abbia un numero di APICredits sufficiente, altrimenti viene condotto nella pagina per l'acquisto di APICredits. Se ha un numero di APICredits sufficiente e conferma l'acquisto allora il sistema scala gli APICredits dal suo account e gli fornisce una APIKey per quel microservizio.
+		\item \textbf{Scenario principale}:
+			\begin{itemize}
+				\item l'utente sceglie la policy che desidera acquistare [UC6.4.1];
+				\item l'utente visiona il prezzo finale del suo acquisto [UC6.4.2];
+				\item l'utente conferma il suo acquisto [UC6.4.3];
+				\item l'utente ottiene una ricevuta via email e la sua APIKey [UC6.4.4].
+			\end{itemize}
 		\item \textbf{Precondizione}: L'utente autenticato ha cliccato sul pulsante per acquistare una APIKey nella pagina di un microservizio;
 		\item \textbf{Postcondizione}: L'utente è in possesso dell'APIKey o è stato condotto nella pagina per l'acquisto di APICredits.
 	\end{itemize}
-
+	\subsection{Caso d'uso UC6.4.1: Scelta policy}
+	\label{UC6.4.1}
+	\begin{itemize}
+		\item \textbf{Attori}: Utente autenticato;
+		\item \textbf{Scopo e descrizione}: L'utente sta acquistando una APIKey e decide secondo quale policy desidera pagare il microservizo.
+		\item \textbf{Precondizione}: L'utente autenticato ha cliccato sul pulsante per acquistare una APIKey nella pagina di un microservizio;
+		\item \textbf{Postcondizione}: L'utente ha scelto la policy del microservizio.
+	\end{itemize}
+	\subsection{Caso d'uso UC6.4.2: Visualizzazione prezzo finale}
+	\label{UC6.4.2}
+	\begin{itemize}
+		\item \textbf{Attori}: Utente autenticato;
+		\item \textbf{Scopo e descrizione}: Viene fornito all'utente un resoconto del prezzo finale prima dell'acquisto. 
+		\item \textbf{Precondizione}: L'utente autenticato ha cliccato sul pulsante per acquistare una APIKey nella pagina di un microservizio;
+		\item \textbf{Postcondizione}: L'utente ha visionato il resoconto sul prezzo finale.
+	\end{itemize}
+	\subsection{Caso d'uso UC6.4.3: Conferma acquisto}
+	\label{UC6.4.3}
+	\begin{itemize}
+		\item \textbf{Attori}: Utente autenticato;
+		\item \textbf{Scopo e descrizione}: L'utente clicca sul pulsante per confermare l'acquisto e pagare con i suoi APICredits.
+		\item \textbf{Scenari alternativi}:
+		L'utente non possiede abbastanza APICredits, viene quindi reindirizzato alla pagina di acquisto di APICredits [UC6.4.5].
+		\item \textbf{Precondizione}: L'utente ha visionato il resoconto della spesa ed è pronto a pagare;
+		\item \textbf{Postcondizione}: L'utente ha premuto il pulsante di conferma acquisto.
+	\end{itemize}
+	\subsection{Caso d'uso UC6.4.4: Visualizzazione APIKey}
+	\label{UC6.4.4}
+	\begin{itemize}
+		\item \textbf{Attori}: Utente autenticato;
+		\item \textbf{Scopo e descrizione}:L'utente viene reindirizzato ad una pagina che conferma la corretta riuscita del pagamento e mostra la APIKey acquistata.
+		\item \textbf{Precondizione}: L'utente ha pagato il microservizio.
+		\item \textbf{Postcondizione}: L'utente è in possesso dell'APIKey.
+	\end{itemize}
+	\subsection{Caso d'uso UC6.4.5: Acquisto APICredits insufficienti}
+	\label{UC6.4.5}
+	\begin{itemize}
+		\item \textbf{Attori}: Utente autenticato;
+		\item \textbf{Scopo e descrizione}: L'utente autenticato ha tentato di eseguire l'acquisto senza gli APICredis necessari, viene quindi mostrato un messaggio di errore e condotto alla pagina di acquisto degli APICredits;
+		\item \textbf{Precondizione}: L'utente autenticato ha cliccato sul pulsante per acquistare una APIKey nella pagina di un microservizio;
+		\item \textbf{Postcondizione}: L'utente è in possesso dell'APIKey o è stato condotto nella pagina per l'acquisto di APICredits.
+	\end{itemize}
 	\subsection{Caso d'uso UC6.5: Inserimento voto e commento}
 	\label{UC6.5}
 	\begin{itemize}
@@ -808,7 +846,6 @@
 		\item \textbf{Precondizione}: L'utente è sulla pagina di un microservizio;
 		\item \textbf{Postcondizione}: Il sistema ricarica la pagina e aggiunge il nuovo commento.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC6.6: Visualizzazione statistiche }
 	\label{UC6.6}
 	\begin{itemize}
@@ -822,8 +859,6 @@
 		\item \textbf{Precondizione}: L'utente è sulla pagina di un microservizio e clicca sul link di visione delle statistiche;
 		\item \textbf{Postcondizione}: L'utente è stato reindirizzato alla pagina di visione delle statistiche del microservizio.
 	\end{itemize}
-
-
 	\subsection{Caso d'uso UC7: Logout}
 	\label{UC7}
 	\begin{itemize}
@@ -832,8 +867,6 @@
 		\item \textbf{Precondizione}: L'utente ha acceduto alla sessione del sistema;
 		\item \textbf{Postcondizione}: Il sistema ha disconnesso l'utente dalla sessione a cui apparteneva.
 	\end{itemize}
-
-
 	\subsection{Caso d'uso UC8: Interazione pagina utente}
 	\label{UC8}
 	\begin{figure}[H]
@@ -844,10 +877,17 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: Un utente autenticato può visitare la sua pagina profilo per visualizzare i suoi dati, modificarli, visionare i suoi commenti scritti, registrare nuovi microservizi e vedere le loro statistiche;
+		\item \textbf{Scenario principale}: 
+			\begin{itemize}
+				\item l'utente visualizza la sua pagina utente [UC8.1];
+				\item l'utente può scegliere di modificare i suoi dati [UC8.2];
+				\item l'utente visiona i commenti che ha scritto [UC8.3];
+				\item l'utente può accedere ad una pagina di gestione delle sue API [UC8.4];
+				\item l'utente può accedere ad una pagina di acquisto di APICredits [UC8.5].
+			\end{itemize}
 		\item \textbf{Precondizione}: L'utente clicca sul suo profilo;
 		\item \textbf{Postcondizione}: Il sistema apre la sua pagina utente.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC 8.1: Visualizzazione pagina utente}
 	\label{UC8.1}
 	\begin{itemize}
@@ -858,15 +898,22 @@
 			\item Nome e cognome;
 			\item Indirizzo email;
 			\item Numero di telefono;
-			\item Paese di provenienza;
+			\item Indirizzo fisico;
 			\item Indice di affidabilità;
 			\item APICredits in suo possesso;
 			\item La lista delle APIKey acquistate e la loro scadenza.
 		\end{itemize}
+		\item \textbf{Scenario Principale}:
+		\begin{itemize}
+			\item l'utente può modificare il proprio nome [UC8.2.1];
+			\item l'utente può modificare il proprio cognome [UC8.2.2];
+			\item l'utente può modificare il proprio indirizzo email [UC8.2.3];
+			\item l'utente può modificare il proprio numero di telefono [UC8.2.4];
+			\item l'utente può modificare il proprio indirizzo [UC8.2.5].
+		\end{itemize}
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina profilo;
 		\item \textbf{Postcondizione}: Il sistema stampa su schermo tutte le informazioni personali dell'utente.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC8.2: Modifica dati utente}
 	\label{UC8.2}
 	\begin{figure}[H]
@@ -885,7 +932,7 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente autenticato può modificare il suo nome;
-		\item \textbf{Scenario alternativo}: Il nome inserito non è nel formato corretto, il sistema quindi fornisce un errore all'utente;
+		\item \textbf{Scenario alternativo}: Il nome inserito non è nel formato corretto, il sistema quindi fornisce un errore all'utente [UC1.1.5];
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina utente ed ha cliccato il pulsante per la modifica dei suoi dati;
 		\item \textbf{Postcondizione}: L'utente ha modificato i suoi dati.
 	\end{itemize}
@@ -894,7 +941,7 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente autenticato può modificare il suo cognome;
-		\item \textbf{Scenario alternativo}: Il cognome inserito non è nel formato corretto, il sistema quindi fornisce un errore all'utente;
+		\item \textbf{Scenario alternativo}: Il cognome inserito non è nel formato corretto, il sistema quindi fornisce un errore all'utente [UC1.1.6];
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina utente ed ha cliccato il pulsante per la modifica dei suoi dati;
 		\item \textbf{Postcondizione}: L'utente ha modificato i suoi dati.
 	\end{itemize}
@@ -903,7 +950,7 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente autenticato può modificare il suo indirizzo email;
-		\item \textbf{Scenario alternativo}: L'indirizzo email inserito non è nel formato corretto o esiste già nel database, il sistema quindi fornisce un errore all'utente;
+		\item \textbf{Scenario alternativo}: L'indirizzo email inserito non è nel formato corretto o esiste già nel database, il sistema quindi fornisce un errore all'utente [UC1.1.8];
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina utente ed ha cliccato il pulsante per la modifica dei suoi dati;
 		\item \textbf{Postcondizione}: L'utente ha modificato i suoi dati.
 	\end{itemize}
@@ -912,7 +959,7 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente autenticato può modificare il suo numero di telefono;
-		\item \textbf{Scenario alternativo}: Il numero di telefono inserito non è nel formato corretto, il sistema quindi fornisce un errore all'utente;
+		\item \textbf{Scenario alternativo}: Il numero di telefono inserito non è nel formato corretto, il sistema quindi fornisce un errore all'utente [UC1.1.7];
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina utente ed ha cliccato il pulsante per la modifica dei suoi dati;
 		\item \textbf{Postcondizione}: L'utente ha modificato i suoi dati.
 	\end{itemize}
@@ -924,7 +971,6 @@
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina utente ed ha cliccato il pulsante per la modifica dei suoi dati;
 		\item \textbf{Postcondizione}: L'utente ha modificato i suoi dati.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC8.3: Visualizza commenti scritti}
 	\label{UC8.3}
 	\begin{itemize}
@@ -933,7 +979,6 @@
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina profilo;
 		\item \textbf{Postcondizione}: Il sistema ha stampato su schermo tutti i commenti scritti dall'utente.
 	\end{itemize}
-
 	\subsection{Caso d'uso: UC8.4 Gestione API}
 	\label{UC8.4}
 	\begin{figure}[H]
@@ -944,6 +989,11 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente autenticato che visiona il suo profilo ha accesso ad una pagina in cui sono elencati tutti i microservizi da lui registrati, e per ciascuno di essi statistiche che descrivano le proprie attività. Può inoltre registrare nuovi microservizi;
+		\item \textbf{Scenario principale}:
+			\begin{itemize}
+				\item l'utente autenticato può decidere di andare in una pagina che elenchi le API da lui registrate [UC8.4.1];
+				\item l'utente autenticato può andare in una pagina che gli permette di registrare una nuova API [UC8.4.2]
+			\end{itemize}
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina profilo;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente tutte le informazioni sui microservizi da lui caricati e gli ha permesso di registrare i microservizi che voleva registrare.
 	\end{itemize}
@@ -951,12 +1001,17 @@
 	\label{UC8.4.1}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{UseCase/VisualizzaAPICaricate}
+		\includegraphics[width=0.5\textwidth]{UseCase/APICaricate}
 		\caption{Visualizza API caricate}
 	\end{figure}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente autenticato nella sua pagina utente può visionare tutti i microservizi;
+		\item \textbf{Scenario principale}:
+			\begin{itemize}
+				\item l'utente visualizza tutte le statistiche relatice all'API;
+				\item l'utente può scegliere di modificare alcuni dati della sua API.
+			\end{itemize}
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina profilo;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente tutti i microservizi da lui registrati.
 	\end{itemize}
@@ -1006,6 +1061,14 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente registrato che vuole registrare una nuova interfaccia di microservizio;
+		\item \textbf{Scenario principale}:
+			\begin{itemize}
+				\item l'utente inserisce il nome della sua AP [UC4.2.1]I;
+				\item l'utente inserisce una breve descrizione per la sua API [UC4.2.2];
+				\item l'utente inserisce i prezzi di vendita in relazione alle policy [UC42.3];
+				\item l'utente carica l'interfaccia della sua API [UC4.2.4];
+				\item l'utente carica la documentazione relativa alla sua API [UC4.2.5].
+			\end{itemize}
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina profilo e ha cliccato sul pulsante per caricare un nuovo microservizio;
 		\item \textbf{Postcondizione}: Il sistema ha permesso all'utente di caricare un nuovo microservizio e ha notificato il risultato dell'operazione.
 	\end{itemize}
@@ -1014,7 +1077,7 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente che vuole caricare un microservizio deve inserire un nome per il suo microservizio che sia univoco all'interno del database di APIMarket;
-		\item \textbf{Scenario alternativo}: Il nome scelto dall'utente esiste già nel database. Viene notificato all'utente l'errore;
+		\item \textbf{Scenario alternativo}: Il nome scelto dall'utente esiste già nel database. Viene notificato all'utente l'errore [UC4.2.7];
 		\item \textbf{Precondizione}: L'utente è nella pagina di registrazione di una nuova interfaccia di microservizio;
 		\item \textbf{Postcondizione}: Il sistema ha permesso all'utente di inserire un nome adeguato per il suo microservizio.
 	\end{itemize}
@@ -1044,7 +1107,7 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente Autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente che vuole caricare un microservizio deve caricare la sua interfaccia;
-		\item \textbf{Scenario alternativo}: Il caricamento dell'interfaccia non è andato a buon fine. Viene notificato all'utente l'errore;
+		\item \textbf{Scenario alternativo}: Il caricamento dell'interfaccia non è andato a buon fine. Viene notificato all'utente l'errore [UC4.2.6];
 		\item \textbf{Precondizione}: L'utente è nella pagina di registrazione di una nuova interfaccia di microservizio;
 		\item \textbf{Postcondizione}: Il sistema ha permesso all'utente di caricare l'interfaccia del suo microservizio.
 	\end{itemize}
@@ -1053,7 +1116,7 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente Autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente che vuole caricare un microservizio deve caricare la sua documentazione;
-		\item \textbf{Scenario alternativo}: Il caricamento della documentazione non è andato a buon fine. Viene notificato all'utente l'errore;
+		\item \textbf{Scenario alternativo}: Il caricamento della documentazione non è andato a buon fine. Viene notificato all'utente l'errore [UC4.2.6];
 		\item \textbf{Precondizione}: L'utente è nella pagina di registrazione di una nuova interfaccia di microservizio;
 		\item \textbf{Postcondizione}: Il sistema ha permesso all'utente di caricare la documentazione del suo microservizio.
 	\end{itemize}
@@ -1073,7 +1136,6 @@
 		\item \textbf{Precondizione}: L'utente ha inserito un nome per il suo microservizio errato o già esistente nel database;
 		\item \textbf{Postcondizione}: Il sistema ha fallito nel caricamento e ha notificato un errore adeguato all'utente.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC8.5: Aggiunta APICredits}
 	\label{UC8.4.5}
 	\begin{itemize}
@@ -1084,6 +1146,12 @@
 		\end{figure}
 		\item \textbf{Attori}: Utente Autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente può decidere di aggiungere al suo profilo APICredits. Viene reindirizzato su una pagina dove può inserire in numero di APICredits che desidera acquistare e può completare la transazione;
+		\item \textbf{Scenario principale}: 
+			\begin{itemize}
+				\item l'utente sceglie l'importo da convertire in APICredits [UC8.5.4];
+				\item l'utente visiona i dati della carta di credito salvata e conferma la loro correttezza [UC8.5.1];
+				\item l'utente conferma il pagamento [UC8.5.2].
+			\end{itemize}
 		\item \textbf{Precondizione}: L'utente clicca sul pulsante per aggiungere APICredits;
 		\item \textbf{Postcondizione}: Il sistema redirige l'utente nella pagina di acquisto e accompagna l'utente fino ad acquisto ultimato.
 	\end{itemize}
@@ -1092,7 +1160,7 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente decide se confermare la sua carta di credito registrata nel suo account o se cambiarla;
-		\item \textbf{Scenario alternativo}: L'utente decide di cambiare la carta di credito con cui effettuare l'acquisto, viene quindi reindirizzato ad una pagina in cui inserire una carta di credito.
+		\item \textbf{Scenario alternativo}: L'utente decide di cambiare la carta di credito con cui effettuare l'acquisto, viene quindi reindirizzato ad una pagina in cui inserire una carta di credito [UC1.5].
 		\item \textbf{Precondizione}: L'utente è nella pagina di conferma di acquisto;
 		\item \textbf{Postcondizione}: L'utente ha una carta di credito valida con cui effettuare il pagamento.
 	\end{itemize}
@@ -1101,7 +1169,7 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente conferma il pagamento cliccando sul pulsante di conferma, viene reindirizzato su una pagina che annuncia l'esito dell'operazione e, se l'operazione è andata a buon fine, visualizza la sua nuova APIkey;
-		\item \textbf{Scenario alternativo}: L'operazione non va a buon fine, viene quindi visualizzato un messaggio di errore transazione non eseguita;
+		\item \textbf{Scenario alternativo}: L'operazione non va a buon fine, viene quindi visualizzato un messaggio di errore transazione non eseguita [UC8.5.3];
 		\item \textbf{Precondizione}: L'utente ha cliccato sul pulsante di conferma pagamento;
 		\item \textbf{Postcondizione}: L'utente viene reindirizzato ad una pagina che descrive l'esito dell'operazione e, nel caso l'operazione sia andata a buon fine, visualizzi la sua APIkey.
 	\end{itemize}
@@ -1113,8 +1181,14 @@
 		\item \textbf{Precondizione}: L'utente ha cliccato sul pulsante di conferma pagamento;
 		\item \textbf{Postcondizione}: Il sistema ha fallito la procedura di pagamento e notifica l'errore all'utente.
 	\end{itemize}
-
-
+	\subsection{Caso d'uso UC8.5.4: Inserimento importo}
+	\label{UC8.5.4}
+	\begin{itemize}
+		\item \textbf{Attori}: Utente autenticato;
+		\item \textbf{Scopo e descrizione}: L'utente che vuole acquistare APICredits inserisce l'importo;
+		\item \textbf{Precondizione}: L'utente è arrivato sulla pagina di acquisto APICredits;
+		\item \textbf{Postcondizione}: L'utente ha scelto l'importo da convertire;
+	\end{itemize}
 	\subsection{Caso d'uso UC9: Statistiche sito}
 	\label{UC9}
 	\begin{itemize}
@@ -1123,7 +1197,6 @@
 		\item \textbf{Precondizione}: L'utente amministratore è nella sua pagina utente;
 		\item \textbf{Postcondizione}: Il sistema mette a disposizione un link per Google Analytics, nella pagina dedicata al suo sito.
 	\end{itemize}
-
 	\subsection{Caso d'uso UC10: Ricerca utente}
 	\label{UC10}
 	\begin{itemize}
@@ -1132,7 +1205,14 @@
 		\item \textbf{Precondizione}: L'utente Admin si trova nella sua pagina utente ed avvia una ricerca nella barra di ricerca utente;
 		\item \textbf{Postcondizione}: Il sistema ha eseguito la ricerca e ha restituito i risultati all'Utente Admin in una pagina di risultati.
 	\end{itemize}
-	
+	\subsection{Caso d'uso UC5: Pagina utente cercato}
+	\label{UC5}
+	\begin{itemize}
+		\item \textbf{Attori}: Utente Admin;
+		\item \textbf{Scopo e descrizione}: L'utente Admin può visionare la pagina dell'utente che ha cercato tramite ricerca, e ha a disposizione tutte le funzionalità come se la pagina fosse la sua;
+		\item \textbf{Precondizione}: L'utente Admin ha visionato i risultati della ricerca;
+		\item \textbf{Postcondizione}: L'utente Admin è entrato nella pagina profilo dell'utente cercato.
+	\end{itemize}
 	\newpage
 	\rhead{Requisiti}
 	\section{Requisiti}
@@ -1192,7 +1272,7 @@
 			\hline
 			R2F1.3.1 & \minitab[c]{Funzionale\\Opzionale} & La password deve essere ripetuta per controllare la sua correttezza. & \uc{1.3.2}\\
 			\hline
-			R0F1.4 & \minitab[c]{Funzionale\\Obbligatorio} & La registrazione di un nuovo utente deve richiedere lo username. & \uc{1.2} \\
+			R0F1.4 & \minitab[c]{Funzionale\\Obbligatorio} & La registrazione di un nuovo utente deve richiedere uno username. & \uc{1.2} \\
 			\hline
 			R0F1.4.1 & \minitab[c]{Funzionale\\Obbligatorio} & Lo username deve essere unico all'interno del sistema. & \shortstack[l]{\\\uc{1.2}\\\uc{1.7}}\\
 			\hline
@@ -1206,9 +1286,29 @@
 			\hline
 			R0F1.5.4 & \minitab[c]{Funzionale\\Obbligatorio} & La registrazione della carta di credito deve richiedere il codice CVV2. & \uc{1.5}\\
 			\hline
-			R1F1.6 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve controllare i dati inseriti in fase di registrazione e deve fornire un messaggio di errore nel caso non siano conformi. & \shortstack[l]{\\\uc{1.1.5}\\\uc{1.1.6}\\\uc{1.1.7}\\\uc{1.3.3}\\\uc{1.3.4}\\\uc{1.10}}\\
+			R1F1.6 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve controllare i dati inseriti in fase di registrazione e deve fornire un messaggio di errore nel caso non siano conformi. & \shortstack[l]{\\\uc{1.1.5}\\\uc{1.1.6}\\\uc{1.1.7}\\\uc{1.3.3}\\\uc{1.3.4}\\\uc{1.9}\\\uc{1.8}\\\uc{1.10}}\\
 			\hline
-			R1F1.7 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve controllare i dati inseriti durante la registrazione di un nuovo utente, e fornire un messaggio di errore in caso di dati già esistenti. & \shortstack[l]{\\\uc{1.7}\\\uc{1.8}\\\uc{1.9}}\\
+			R1F1.6.1 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve fornire un messaggio di errore se il nome inserito in fase di registrazione supera i 50 caratteri o non supera i 3 caratteri. & \uc{1.1.5}\\
+			\hline
+			R1F1.6.2 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve fornire un messaggio di errore se il cognome inserito in fase di registrazione supera i 50 caratteri o non supera i 3 caratteri. & \uc{1.1.6}\\
+			\hline
+			R1F1.6.3 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve fornire un messaggio di errore se il numero di telefono non è in formato numerico o supera i 30 caratteri & \uc{1.1.7}\\
+			\hline
+			R1F1.6.4 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve fornire un messaggio di errore se il numero di carta di credito non è valido & \uc{1.9}\\
+			\hline
+			R1F1.6.5 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve fornire un messaggio di errore se il l'indirizzo email non è in formato corretto & \uc{1.8}\\
+			\hline
+			R1F1.6.7 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve fornire un messaggio di errore se il logo caricato non è in formato jpeg, npg, o bmp, o se la dimensione del file supera i 512kb. & \uc{1.1.10}\\
+			\hline
+			R1F1.6.8 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve fornire un messaggio di errore se la password inserita è inferiore agli 8 caratteri, non contiene un carattere maiuscolo o non contiene un carattere minuscolo. & \uc{1.3.3}\\
+			\hline
+			R1F1.6.9 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve fornire un messaggio di errore la password inserita non concide con quella inserita in precedenza. & \uc{1.3.4}\\
+			\hline
+			R1F1.7 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve controllare i dati inseriti durante la registrazione di un nuovo utente, e fornire un messaggio di errore in caso di dati già esistenti. & \shortstack[l]{\\\uc{1.7}\\\uc{1.8}}\\
+			\hline
+			R1F1.7.1 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve controllare che lo username inserito in fase di registrazione sia unico e in caso contrario deve fornire un messaggio di errore. & \uc{1.7}\\
+			\hline
+			R1F1.7.2 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve controllare che l'indirizzo email inserito in fase di registrazione sia unico e in caso contrario deve fornire un messaggio di errore. & \uc{1.8}\\
 			\hline
 			R1F1.8 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve mostrare un messaggio di conferma per l'avvenuta registrazione. & \uc{1}\\
 			\hline
@@ -1223,17 +1323,17 @@
 			\hline
 			R0F2 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve permettere l'autenticazione di un utente registrato. & \shortstack[l]{\\Capitolato\\\uc{2}}\\
 			\hline
-			R0F2.1 & \minitab[c]{Funzionale\\Obbligatorio} & L'autenticazione di un utente registrato deve richiedere il nome utente o in alternativa la sua email. & \uc{2.1}\\
+			R0F2.1 & \minitab[c]{Funzionale\\Obbligatorio} & L'autenticazione di un utente registrato deve richiedere lo username o in alternativa la sua email. & \uc{2.1}\\
 			\hline
 			R0F2.2 & \minitab[c]{Funzionale\\Obbligatorio} & L'autenticazione di un utente registrato deve richiedere la sua password. & \uc{2.2}\\
 			\hline
 			R1F2.3 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve mostrare un errore all'utente nel caso l'autenticazione non vada a buon fine. & \uc{2.3}\\
 			\hline
-			R1F2.4 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve rendere disponibile una funzionalità per il recupero della password qualora l'utente dimentichi la sua. &\uc{2.4} \\
+			R1F2.4 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve rendere disponibile una funzionalità per il recupero della password qualora l'utente dimentichi la sua. &\uc{4} \\
 			\hline
-			R2F2.4.1 & \minitab[c]{Funzionale\\Opzionale} & APIMarket, nella procedura per il recupero password, deve inviare una password sostitutiva alla mail dell'utente che ne ha fatto richiesta e deve notificarlo all'utente. &\uc{2.4} \\
+			R2F2.4.1 & \minitab[c]{Funzionale\\Opzionale} & APIMarket, nella procedura per il recupero password, deve inviare una password sostitutiva alla mail dell'utente che ne ha fatto richiesta e deve notificarlo all'utente. &\uc{4} \\
 			\hline
-			R2F2.4.2 & \minitab[c]{Funzionale\\Opzionale} & APIMarket deve permettere all'utente di accedere al suo account tramite la password sostitutiva che gli ha fornito via email. & \uc{2.4}\\
+			R2F2.4.2 & \minitab[c]{Funzionale\\Opzionale} & APIMarket deve permettere all'utente di accedere al suo account tramite la password sostitutiva che gli ha fornito via email. & \uc{4}\\
 			\hline
 			R0F2.5 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve permettere all'utente autenticato di effettuare il logout. & \uc{7}\\
 			\hline
@@ -1254,11 +1354,11 @@
 			\hline
 			R0F3.4 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve permettere di impostare i tipi di policy di vendita con cui vuole rendere disponibile il suo microservizio. & \shortstack[l]{\\Capitolato\\\uc{8.4.2.3}}\\
 			\hline
-			R0F3.4.1 & \minitab[c]{Funzionale\\Desiderabile} & L'utente deve avere la possibilità di settare una policy di vendita a consumo di traffico. & \shortstack[l]{\\Capitolato\\\uc{8.4.2.3}}\\
+			R0F3.4.1 & \minitab[c]{Funzionale\\Desiderabile} & L'utente deve avere la possibilità di impostare una policy di vendita a consumo di traffico. & \shortstack[l]{\\Capitolato\\\uc{8.4.2.3}}\\
 			\hline
-			R0F3.4.2 & \minitab[c]{Funzionale\\Desiderabile} & L'utente deve avere la possibilità di settare una policy di vendita a scadenza. &\shortstack[l]{\\Capitolato\\\uc{8.4.2.3}} \\
+			R0F3.4.2 & \minitab[c]{Funzionale\\Desiderabile} & L'utente deve avere la possibilità di impostare una policy di vendita a scadenza. &\shortstack[l]{\\Capitolato\\\uc{8.4.2.3}} \\
 			\hline
-			R0F3.4.3 & \minitab[c]{Funzionale\\Desiderabile} & L'utente deve avere la possibilità di settare una policy di vendita a numero di accessi. & \shortstack[l]{\\Capitolato\\\uc{8.4.2.3}}\\
+			R0F3.4.3 & \minitab[c]{Funzionale\\Desiderabile} & L'utente deve avere la possibilità di impostare una policy di vendita a numero di accessi. & \shortstack[l]{\\Capitolato\\\uc{8.4.2.3}}\\
 			\hline
 			R0F3.5 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve permettere di impostare un testo introduttivo che descriva il suo microservizio al momento del caricamento della sua interfaccia. & \uc{8.4.2.2}\\
 			\hline
@@ -1290,6 +1390,8 @@
 			\hline
 			R1F4.4.2 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve mostrare un messaggio al termine della transazione per notificare all'utente la riuscita o meno dell'operazione. & \shortstack[l]{\\\uc{8.5.2}\\\uc{8.5.3}}\\
 			\hline
+			R1F4.4.3 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve dare la possibilità all'utente di selezionare il numero di APICredits da acquistare. & \uc{8.5.4}\\
+			\hline
 		\end{longtable}
 		\begin{longtable}{|m{5em}|m{6em}|m{28em}|m{5em}|}
 			\hline
@@ -1301,7 +1403,7 @@
 			\hline
 			R2F5.2 & \minitab[c]{Funzionale\\Opzionale} & APIMarket deve fornire una ricerca per tag, nome API e username del creatore dei microservizi caricati. & \shortstack[l]{\\\uc{3.2}\\\uc{3.2.1}\\\uc{3.2.2}\\\uc{3.2.3}}\\
 			\hline
-			R1F5.3 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve permettere di ordinare i risultati della ricerca per pertinenza, numero di APIKey vendute, valutazione degli utenti o data di caricamento. & \uc{4}\\
+			R1F5.3 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve permettere di ordinare i risultati della ricerca per pertinenza, numero di APIKey vendute, valutazione degli utenti o data di caricamento. & \uc{3.4}\\
 			\hline
 		\end{longtable}
 		\begin{longtable}{|m{5em}|m{6em}|m{28em}|m{5em}|}
@@ -1320,7 +1422,15 @@
 			\hline
 			R0F6.5 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve dare la possibilità all'utente autenticato di visionare le statistiche sul microservizio riguardo tempi medi di risposta, numero medio di dati scambiati e numero medio di chiamate mensili. & \shortstack[l]{Capitolato\\\uc{6.6}}\\
 			\hline
-			R0F6.6 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve dare la possibilità agli utenti autenticati di acquistare una APIKey per il microservizio visitato, utilizzando i propri APICredits. & \uc{6.4}\\
+			R0F6.6 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve dare la possibilità agli utenti autenticati di acquistare una APIKey per il microservizio visitato, utilizzando i propri APICredits. & \uc{6.4.3}\\
+			\hline
+			R0F6.6.1 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve dare la possibilità agli utenti autenticati, durante l'acquisto di una APIKey, di selezionare una policy di vendita tra quelle scelte dal venditore. & \uc{6.4.1}\\
+			\hline
+			R0F6.6.2 & \minitab[c]{Funzionale\\Obbligatorio} & La finestra finale di acquisto di una APIKey deve contenere il prezzo totale dell'acquisto. & \uc{6.4.2}\\
+			\hline
+			R0F6.6.3 & \minitab[c]{Funzionale\\Obbligatorio} & Se l'utente non possiede abbastanza APICredits per terminare l'acquisto deve essere rediretto a una pagina di acquisto di APICredits. & \uc{6.4.5}\\
+			\hline
+			R0F6.6.4 & \minitab[c]{Funzionale\\Obbligatorio} & Al termine della transazione deve comparire un messaggio di avvenuta transazione e deve essere resa disponibile la APIKey all'utente. & \uc{6.4.4}\\
 			\hline
 			R0F6.7 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve permettere all'utente autenticato di visionare l'interfaccia e la documentazione del microservizio registrato. & \shortstack[l]{\\\uc{6.1.2}\\\uc{6.1.3}}\\
 			\hline
@@ -1348,26 +1458,15 @@
 			\hline
 			\textbf{Requisito} & \textbf{Tipologia}  & \textbf{Descrizione} & \textbf{Fonti} \\
 			\hline
-			R1F8 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve consentire di visitare le pagine utente. & \shortstack[l]{\\\uc{5}\\\uc{8}}\\
-			\hline
-			R1F8.1 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket nella pagina utente deve rendere visibile alcuni dati personali, commenti scritti e interfacce di microservizi pubblicate. & \shortstack[l]{\\\uc{5.1}\\\uc{5.2}\\\uc{5.3}}\\
-			\hline
-			R2F8.2 & \minitab[c]{Funzionale\\Opzionale} & APIMarket nella pagina utente deve mostrare un indice di affidabilità dell'utente calcolato sulle statistiche dei microservizi da lui pubblicati. & \uc{5.4}\\
-			\hline
-		\end{longtable}
-		\begin{longtable}{|m{5em}|m{6em}|m{28em}|m{5em}|}
-			\hline
-			\textbf{Requisito} & \textbf{Tipologia}  & \textbf{Descrizione} & \textbf{Fonti} \\
-			\hline
-			R1F9 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve fornire al committente del capitolato un account Admin con poteri di Super-User. & \shortstack[l]{\\Interno\\\uc{5.6}\\\uc{9}\\\uc{10}}\\
+			R1F9 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve fornire al committente del capitolato un account Admin con poteri di Super-User. & \shortstack[l]{\\Interno\\\uc{5}\\\uc{9}\\\uc{10}}\\
 			\hline
 			R1F9.1 & \minitab[c]{Funzionale\\Desiderabile} & Un utente Admin deve poter eseguire qualuque funzione che può eseguire un Utente registrato & Interno\\
 			\hline
-			R2F9.2 & \minitab[c]{Funzionale\\Opzionale} & Un utente Admin deve avere la possibilità di modificare i dati anagrafici di qualsiasi utente. & \shortstack[l]{\\\uc{5.5}\\\uc{5.6}}\\
+			R2F9.2 & \minitab[c]{Funzionale\\Opzionale} & Un utente Admin deve avere la possibilità di modificare i dati anagrafici di qualsiasi utente. & \uc{5}\\
 			\hline
-			R2F9.3 & \minitab[c]{Funzionale\\Opzionale} & Un utente Admin deve poter eliminare un commento di qualsiasi utente. & \uc{5.6}\\
+			R2F9.3 & \minitab[c]{Funzionale\\Opzionale} & Un utente Admin deve poter eliminare un commento di qualsiasi utente. & \uc{5}\\
 			\hline
-			R1F9.4 & \minitab[c]{Funzionale\\Desiderabile} & Un utente Admin deve poter modificare i dati di una API la cui interfaccia è stata caricata su APIMarket. & \uc{5.6}\\
+			R1F9.4 & \minitab[c]{Funzionale\\Desiderabile} & Un utente Admin deve poter modificare i dati di una API la cui interfaccia è stata caricata su APIMarket. & \uc{5}\\
 			\hline
 			R1F9.5 & \minitab[c]{Funzionale\\Desiderabile} & Un utente Admin deve poter ricercare qualunque utente tramite una barra di ricerca dedicata. & \uc{10}\\
 			\hline
@@ -1389,13 +1488,15 @@
 			\hline
 			R0V2 & \minitab[c]{Vincolo\\Obbligatorio} & Il sistema di controllo delle APIKey deve essere eseguito tramite modello API Gateway & Capitolato\\
 			\hline
-			R0V3 & \minitab[c]{Vincolo\\Obbligatorio} & L'applicativo dev'essere pubblicato su una repository Git & Capitolato\\
+			R0V3 & \minitab[c]{Vincolo\\Obbligatorio} & APIMarket deve essere funzionante su Chrome v55 con javascript attivato & Interno\\
 			\hline
-			R0V4 & \minitab[c]{Vincolo\\Obbligatorio} & Deve essere presentata per ogni servizio la descrizione del microservizio e delle singole API, l'interfaccia delle API, lo Schema Design relativo all'eventuale base di dati associata. & Capitolato\\
+			R0V4 & \minitab[c]{Vincolo\\Obbligatorio} & APIMarket deve essere funzionante su Firefox v50 con javascript attivato & Interno\\
 			\hline
-			R0V5 & \minitab[c]{Vincolo\\Obbligatorio} & Deve essere presentata per il sistema l'architettura completa dei microservizi usati, il Sequence Chart Diagram delle interazioni tra più microservizi, gli algoritmi per le policy e per la generazione delle APIKey. & Capitolato\\
+			R0V5 & \minitab[c]{Vincolo\\Obbligatorio} & APIMarket deve essere funzionante su Safari v10 con javascript attivato & Interno\\
 			\hline
-			R0V6 & \minitab[c]{Vincolo\\Obbligatorio} & Deve essere presentato un report tecnico che evidenzi gli aspetti positivi e negativi di un'architettura a microservizi. & Capitolato\\
+			R0V6 & \minitab[c]{Vincolo\\Obbligatorio} & APIMarket deve essere funzionante su Internet Explorer 10 con javascript attivato & Interno\\
+			\hline
+			R0V7 & \minitab[c]{Vincolo\\Obbligatorio} & APIMarket deve essere funzionante su Microsoft Edge v14 con javascript attivato & Interno\\
 			\hline
 		\end{longtable}
 	}
@@ -1411,6 +1512,18 @@
 			R0Q2 & \minitab[c]{Qualitativo\\Obbligatorio} & Il codice con cui è composto l'applicativo rispetta le norme riportate nei documenti \textit{"Norme di progetto v1.0.0"} e \textit{"Piano di Qualifica v1.0.0"}. & Interno\\
 			\hline
 			R0Q3 & \minitab[c]{Qualitativo\\Obbligatorio} & La progettazione rispetta le norme e le metriche riportate nei documenti \textit{"Norme di progetto v1.0.0"} e \textit{"Piano di Qualifica v1.0.0"}. & Interno\\
+			\hline
+			R0Q4 & \minitab[c]{Qualitativo\\Obbligatorio} & L'applicativo dev'essere pubblicato su una repository Git & Capitolato\\
+			\hline
+			R0Q5 & \minitab[c]{Qualitativo\\Obbligatorio} & Deve essere presentata per ogni servizio la descrizione del microservizio e delle singole API, l'interfaccia delle API, lo Schema Design relativo all'eventuale base di dati associata. & Capitolato\\
+			\hline
+			R0Q6 & \minitab[c]{Qualitativo\\Obbligatorio} & Deve essere presentata per il sistema l'architettura completa dei microservizi usati, il Sequence Chart Diagram delle interazioni tra più microservizi, gli algoritmi per le policy e per la generazione delle APIKey. & Capitolato\\
+			\hline
+			R0Q7 & \minitab[c]{Qualitativo\\Obbligatorio} & Deve essere presentato un report tecnico che evidenzi gli aspetti positivi e negativi di un'architettura a microservizi. & Capitolato\\
+			\hline
+			R0Q8 & \minitab[c]{Qualitativo\\Obbligatorio} & Deve essere realizzato un manuale utente per il corretto utilizzo dell?applicazione web & Interno\\
+			\hline
+			R0Q9 & \minitab[c]{Qualitativo\\Obbligatorio} & Deve essere realizzato un manuale utente per il corretto utilizzo dell?applicazione web dal lato amministrativo & Interno\\
 			\hline
 		\end{longtable}
 	}
@@ -1454,9 +1567,29 @@
 			\hline
 			R0F1.5.4 & \uc{1.5}\\
 			\hline
-			R1F1.6 & \shortstack[l]{\\\uc{1.1.5}\\\uc{1.1.6}\\\uc{1.1.7}\\\uc{1.3.3}\\\uc{1.3.4}\\\uc{1.10}}\\
+			R1F1.6 & \shortstack[l]{\\\uc{1.1.5}\\\uc{1.1.6}\\\uc{1.1.7}\\\uc{1.3.3}\\\uc{1.3.4}\\\uc{1.8}\\\uc{1.9}\\\uc{1.10}}\\
+			\hline
+			R1F1.6.1 & \uc{1.1.5}\\
+			\hline
+			R1F1.6.2 & \uc{1.1.6}\\
+			\hline
+			R1F1.6.3 & \uc{1.1.7}\\
+			\hline
+			R1F1.6.4 & \uc{1.9}\\
+			\hline
+			R1F1.6.5 & \uc{1.8}\\
+			\hline
+			R1F1.6.7 & \uc{1.10}\\
+			\hline
+			R1F1.6.8 & \uc{1.3.3}\\
+			\hline
+			R1F1.6.9 & \uc{1.3.4}\\
 			\hline
 			R1F1.7 & \shortstack[l]{\\\uc{1.7}\\\uc{1.8}\\\uc{1.9}}\\
+			\hline
+			R1F1.7.1 & \uc{1.7}\\
+			\hline
+			R1F1.7.2 & \uc{1.8}\\
 			\hline
 			R1F1.8 & \uc{1}\\
 			\hline
@@ -1472,11 +1605,11 @@
 			\hline
 			R1F2.3 & \uc{2.3}\\
 			\hline
-			R1F2.4 & \uc{2.4}\\
+			R1F2.4 & \uc{4}\\
 			\hline
-			R2F2.4.1 & \uc{2.4}\\
+			R2F2.4.1 & \uc{4}\\
 			\hline
-			R2F2.4.2 & \uc{2.4}\\
+			R2F2.4.2 & \uc{4}\\
 			\hline
 			R0F2.5 & \uc{7}\\
 			\hline
@@ -1529,268 +1662,284 @@
 			R0F5.1 & \shortstack[l]{\\\uc{3.1}\\\uc{3.3}}\\
 			\hline
 			R2F5.2 & \shortstack[l]{\\\uc{3.2}\\\uc{3.2.1}\\\uc{3.2.2}\\\uc{3.2.3}}\\
-		\hline
-		R1F5.3 & \uc{4}\\
-		\hline
-		R0F6 & \shortstack[l]{\\Capitolato\\\uc{6}}\\
-		\hline
-		R0F6.1 & \shortstack[l]{\\\uc{6.1}\\\uc{6.1.1}}\\
-		\hline
-		R1F6.2 & \uc{6.1.1}\\
-		\hline		
-		R1F6.3 & \shortstack[l]{\\Capitolato\\\uc{6.2}}\\
-		\hline
-		R1F6.4 & \uc{6.1.1}\\
-		\hline
-		R0F6.5 & \shortstack[l]{\\Capitolato\\\uc{6.6}}\\
-		\hline
-		R0F6.6 & \uc{6.4}\\
-		\hline
-		R0F6.7 & \shortstack[l]{\\\uc{6.1.2}\\\uc{6.1.3}}\\
-		\hline
-		R0F6.8 & \uc{6.3}\\
-		\hline 
-		R1F6.9 & \uc{6.5}\\
-		\hline
-		R0F7 & \shortstack[l]{\\Capitolato\\\uc{6.4}}\\
-		\hline
-		R0F7.1 & Capitolato\\
-		\hline
-		R0F7.1.1 & \shortstack{\\Capitolato\\Interno}\\
-		\hline
-		R0F7.2 & Capitolato\\
-		\hline
-		R0F7.3 & \uc{8.1}\\
-		\hline
-		R1F8 & \shortstack[l]{\\\uc{5}\\\uc{8}}\\
-		\hline
-		R1F8.1 & \shortstack[l]{\\\uc{5.1}\\\uc{5.2}\\\uc{5.3}}\\
-		\hline
-		R2F8.2 & \uc{5.4}\\
-		\hline
-		R1F9 & \shortstack[l]{\\Interno\\\uc{5.6}\\\uc{9}\\\uc{10}}\\
-		\hline
-		R1F9.1 & Interno\\
-		\hline
-		R2F9.2 & \shortstack[l]{\\\uc{5.5}\\\uc{5.6}}\\
-		\hline
-		R2F9.3 & \uc{5.6}\\
-		\hline
-		R1F9.4 & \uc{5.6}\\
-		\hline
-		R1F9.5 & \uc{10}\\
-		\hline
-		R1F9.6 & \uc{9}\\
-		\hline
-		R0V1 & Capitolato \\
-		\hline
-		R0V1.1 & Capitolato \\
-		\hline
-		R0V2 & Capitolato \\
-		\hline
-		R0V3 & Capitolato \\
-		\hline
-		R0V4 & Capitolato \\
-		\hline
-		R0V5 & Capitolato \\
-		\hline
-		R0V6 & Capitolato \\
-		\hline
-		R0Q1 & Interno \\
-		\hline
-		R0Q2 & Interno \\
-		\hline
-		R0Q3 & Interno \\
-		\hline
-	\end{longtable}
-}
-\newpage
-\subsection{Tracciamento fonti-requisiti}
-{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
-\small
-\begin{longtable}{|m{10em}|m{10em}|}
-	\hline
-	Capitolato & \shortstack[l]{\\R0F1\\R0F2\\R0F3\\R0F3.1\\R0F3.3\\R0F3.4\\R0F3.4.1\\R0F3.4.1\\R0F3.4.2\\R0F3.4.3\\R0F4\\R0F4.3\\R0F5\\R0F6\\R0F6.3\\R0F6.5\\R0F7\\R0F7.1\\R0F7.1.1\\R0F7.2\\R0V1\\R0V1.1\\R0V2\\R0V3\\R0V4\\R0V5\\R0V6} \\
-	\hline 
-	Interno & \shortstack[l]{\\R0F7.1.1\\R1F9\\R1F9.1R0Q1\\R0Q2\\R0Q3} \\
-	\hline 
-	\uc{1} & \shortstack[l]{\\R0F1\\R1F1.1\\R1F1.8} \\
-	\hline
-	\uc{1.1} & R1F1.1 \\
-	\hline 
-	\uc{1.1.1} & R2F1.1.1 \\
-	\hline 
-	\uc{1.1.2} & R2F1.1.1 \\
-	\hline 
-	\uc{1.1.3} & R2F1.1.2 \\
-	\hline 
-	\uc{1.1.4} & R1F1.1.3 \\
-	\hline 
-	\uc{1.1.5} & R1F1.6 \\
-	\hline 
-	\uc{1.1.6} & R1F1.6\\
-	\hline 
-	\uc{1.1.7} & R1F1.6 \\
-	\hline 
-	\uc{1.2} & \shortstack[l]{\\R0F1.4\\R0F1.4.1} \\
-	\hline 
-	\uc{1.3} & R0F1.3\\
-	\hline 
-	\uc{1.3.1} & R0F1.3\\
-	\hline 
-	\uc{1.3.2} & R2F1.3.1\\
-	\hline 
-	\uc{1.3.3} & R1F1.6\\
-	\hline 
-	\uc{1.3.4} & R1F1.6\\
-	\hline 
-	\uc{1.4} & \shortstack[l]{\\R0F1.2\\R0F1.2.1} \\
-	\hline 
-	\uc{1.5} & \shortstack{\\R0F1.5\\R0F1.5.1\\R0F1.5.2\\R0F1.5.3\\R0F1.5.4} \\
-	\hline 
-	\uc{1.6} & \shortstack[l]{\\R2F1.9\\R2F1.9.1}\\
-	\hline 
-	\uc{1.7} & \shortstack[l]{\\R0F1.4.1\\R1F1.7}\\
-	\hline 
-	\uc{1.8} & \shortstack[l]{\\R0F1.2.1\\R1F1.7} \\
-	\hline 
-	\uc{1.9} & R1F1.7 \\
-	\hline 
-	\uc{1.10} & R1F1.6 \\
-	\hline 
-	\uc{2} & R0F2 \\
-	\hline 
-	\uc{2.1} & R0F2.1 \\
-	\hline 
-	\uc{2.2} & R0F2.2 \\
-	\hline 
-	\uc{2.3} & R1F2.3 \\
-	\hline 
-	\uc{2.4} & \shortstack[l]{\\R1F2.4\\R1F2.4.1\\R1F2.4.2} \\
-	\hline 
-	\uc{3} & R0F5 \\
-	\hline 
-	\uc{3.1} & R0F5.1 \\
-	\hline 
-	\uc{3.2} & R2F5.2 \\
-	\hline 
-	\uc{3.2.1} & R2F5.2 \\
-	\hline 
-	\uc{3.2.2} & R2F5.2\\
-	\hline 
-	\uc{3.2.3} & R2F5.2\\
-	\hline 
-	\uc{3.3} & R0F5.1\\
-	\hline 
-	\uc{4} & R1F5.3 \\
-	\hline 
-	\uc{5} & R1F8 \\
-	\hline 
-	\uc{5.1} & R1F8.1 \\
-	\hline 
-	\uc{5.2} & R1F8.1 \\
-	\hline 
-	\uc{5.3} & R1F8.1 \\
-	\hline 
-	\uc{5.4} & R2F8.2 \\
-	\hline 
-	\uc{5.5} & R2F9.2\\
-	\hline 
-	\uc{5.6} & \shortstack[l]{\\R1F9\\R2F9.2\\R2F9.3\\R1F9.4} \\
-	\hline 
-	\uc{6} & R0F6 \\
-	\hline 
-	\uc{6.1} & R0F6.1 \\
-	\hline 
-	\uc{6.1.1} & \shortstack[l]{\\R0F6.1\\R1F6.2\\R1F6.4} \\
-	\hline 
-	\uc{6.1.2} & R0F6.7\\
-	\hline 
-	\uc{6.1.3} & R0F6.7\\
-	\hline 
-	\uc{6.2} & R1F6.3 \\
-	\hline 
-	\uc{6.3} & R0F6.8\\
-	\hline 
-	\uc{6.4} & \shortstack[l]{\\R0F1\\R0F6.6\\R0F7} \\
-	\hline 
-	\uc{6.5} &  R1F6.9\\
-	\hline 
-	\uc{6.6} & R0F6.5 \\
-	\hline 
-	\uc{7} & R0F2.5\\
-	\hline 
-	\uc{8} & \shortstack[l]{\\R0F4\\R1F8}\\
-	\hline 
-	\uc{8.1} & \shortstack[l]{\\R0F4\\R0F7.3} \\
-	\hline 
-	\uc{8.2} & R1F4.1 \\
-	\hline 
-	\uc{8.2.1} &  R1F4.1\\
-	\hline 
-	\uc{8.2.2} &  R1F4.1\\
-	\hline 
-	\uc{8.2.3} &  R1F4.1\\
-	\hline 
-	\uc{8.2.4} &  R1F4.1\\
-	\hline 
-	\uc{8.2.5} &  R1F4.1\\
-	\hline 
-	\uc{8.3} & \shortstack[l]{\\R0F4\\R1F4.2} \\
-	\hline 
-	\uc{8.4} & \shortstack[l]{\\R0F4\\R0F4.3} \\
-	\hline 
-	\uc{8.4.1} & R0F4.3 \\
-	\hline 
-	\uc{8.4.1.1} & R0F4.3.2 \\
-	\hline 
-	\uc{8.4.1.2} & R2F4.3.1 \\
-	\hline 
-	\uc{8.4.2} & \shortstack[l]{\\R0F1\\R0F3\\R0F3.1\\R0F3.7\\R0F4.3} \\
-	\hline 
-	\uc{8.4.2.1} & R0F3.2 \\
-	\hline 
-	\uc{8.4.2.2} & \shortstack[l]{\\R0F3.5\\R2F3.6} \\
-	\hline 
-	\uc{8.4.2.3} & \shortstack[l]{\\R0F3.3\\R0F3.4\\R0F3.4.1\\R0F3.4.2\\R0F3.4.3} \\
-	\hline 
-	\uc{8.4.2.4} & R0F3 \\
-	\hline 
-	\uc{8.4.2.5} & R0F3.8 \\
-	\hline 
-	\uc{8.4.2.6} &  R0F3.7\\
-	\hline 
-	\uc{8.4.2.7} & \shortstack[l]{\\R0F3.2.1\\R0F3.7} \\
-	\hline 
-	\uc{8.5} & R1F4.4 \\ 
-	\hline
-	\uc{8.5.1} & R1F4.4.1 \\ 
-	\hline
-	\uc{8.5.2} & R1F4.4.2 \\ 
-	\hline
-	\uc{8.5.3} & R1F4.4.2 \\ 
-	\hline
-	\uc{9} & \shortstack[l]{\\R1F9\\R1F9.6} \\
-	\hline 
-	\uc{10} & \shortstack[l]{\\R1F9\\R1F9.5} \\
-	\hline
-\end{longtable}
-}
-\subsection{Riepilogo}
-\begin{center}
-{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
-	\small
-	\begin{tabular}{|l|l|l|l|}
-		\hline
-		\textbf{Categoria} & \textbf{Obbligatori} & \textbf{Desiderabili} & \textbf{Opzionali}\\
-		\hline
-		Funzionali & 44 & 23 & 12 \\
-		\hline
-		Vincolo & 7 & 0 & 0\\
-		\hline
-		Qualitativi & 3 & 0 & 0\\
-		\hline
-	\end{tabular}
-}	
-\end{center}
+			\hline
+			R1F5.3 & \uc{3.4}\\
+			\hline
+			R0F6 & \shortstack[l]{\\Capitolato\\\uc{6}}\\
+			\hline
+			R0F6.1 & \shortstack[l]{\\\uc{6.1}\\\uc{6.1.1}}\\
+			\hline
+			R1F6.2 & \uc{6.1.1}\\
+			\hline		
+			R1F6.3 & \shortstack[l]{\\Capitolato\\\uc{6.2}}\\
+			\hline
+			R1F6.4 & \uc{6.1.1}\\
+			\hline
+			R0F6.5 & \shortstack[l]{\\Capitolato\\\uc{6.6}}\\
+			\hline
+			R0F6.6 & \uc{6.4.3}\\
+			\hline
+			R0F6.6.1 & \uc{6.4.1}\\
+			\hline
+			R0F6.6.2 & \uc{6.4.2}\\
+			\hline
+			R0F6.6.3 & \uc{6.4.5}\\
+			\hline
+			R0F6.6.4 & \uc{6.4.4}\\
+			\hline
+			R0F6.7 & \shortstack[l]{\\\uc{6.1.2}\\\uc{6.1.3}}\\
+			\hline
+			R0F6.8 & \uc{6.3}\\
+			\hline 
+			R1F6.9 & \uc{6.5}\\
+			\hline
+			R0F7 & \shortstack[l]{\\Capitolato\\\uc{6.4}}\\
+			\hline
+			R0F7.1 & Capitolato\\
+			\hline
+			R0F7.1.1 & \shortstack{\\Capitolato\\Interno}\\
+			\hline
+			R0F7.2 & Capitolato\\
+			\hline
+			R0F7.3 & \uc{8.1}\\
+			\hline
+			R1F9 & \shortstack[l]{\\Interno\\\uc{5}\\\uc{9}\\\uc{10}}\\
+			\hline
+			R1F9.1 & Interno\\
+			\hline
+			R2F9.2 & \uc{5}\\
+			\hline
+			R2F9.3 & \uc{5}\\
+			\hline
+			R1F9.4 & \uc{5}\\
+			\hline
+			R1F9.5 & \uc{10}\\
+			\hline
+			R1F9.6 & \uc{9}\\
+			\hline
+			R0V1 & Capitolato \\
+			\hline
+			R0V1.1 & Capitolato \\
+			\hline
+			R0V2 & Capitolato \\
+			\hline
+			R0V3 & Interno \\
+			\hline
+			R0V4 & Interno \\
+			\hline
+			R0V5 & Interno \\
+			\hline
+			R0V6 & Interno \\
+			\hline
+			R0V7 & Interno \\
+			\hline
+			R0Q1 & Interno \\
+			\hline
+			R0Q2 & Interno \\
+			\hline
+			R0Q3 & Interno \\
+			\hline
+			R0Q4 & Capitolato \\
+			\hline
+			R0Q5 & Capitolato \\
+			\hline
+			R0Q6 & Capitolato \\
+			\hline
+			R0Q7 & Capitolato \\
+			\hline
+			R0Q8 & Interno \\
+			\hline
+			R0Q9 & Interno \\
+			\hline
+		\end{longtable}
+	}
+	\newpage
+	\subsection{Tracciamento fonti-requisiti}
+	{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
+		\small
+		\begin{longtable}{|m{10em}|m{10em}|}
+			\hline
+			Capitolato & \shortstack[l]{\\R0F1\\R0F2\\R0F3\\R0F3.1\\R0F3.3\\R0F3.4\\R0F3.4.1\\R0F3.4.1\\R0F3.4.2\\R0F3.4.3\\R0F4\\R0F4.3\\R0F5\\R0F6\\R0F6.3\\R0F6.5\\R0F7\\R0F7.1\\R0F7.1.1\\R0F7.2\\R0V1\\R0V1.1\\R0V2\\R0Q4\\R0Q5\\R0Q6\\R0Q7} \\
+			\hline 
+			Interno & \shortstack[l]{\\R0F7.1.1\\R1F9\\R1F9.1R0Q1\\R0Q2\\R0Q3\\R0V3\\R0V4\\R0V5\\R0V6\\R0V7\\R0Q8\\R0Q9} \\
+			\hline 
+			\uc{1} & \shortstack[l]{\\R0F1\\R1F1.1\\R1F1.8} \\
+			\hline
+			\uc{1.1} & R1F1.1 \\
+			\hline 
+			\uc{1.1.1} & R2F1.1.1 \\
+			\hline 
+			\uc{1.1.2} & R2F1.1.1 \\
+			\hline 
+			\uc{1.1.3} & R2F1.1.2 \\
+			\hline 
+			\uc{1.1.4} & R1F1.1.3 \\
+			\hline 
+			\uc{1.1.5} & \shortstack[l]{\\R1F1.6\\R0F1.6.1} \\
+			\hline 
+			\uc{1.1.6} & \shortstack[l]{\\R1F1.6\\R0F1.6.2} \\
+			\hline 
+			\uc{1.1.7} & \shortstack[l]{\\R1F1.6\\R0F1.6.3} \\
+			\hline 
+			\uc{1.2} & \shortstack[l]{\\R0F1.4\\R0F1.4.1} \\
+			\hline 
+			\uc{1.3} & R0F1.3\\
+			\hline 
+			\uc{1.3.1} & R0F1.3\\
+			\hline 
+			\uc{1.3.2} & R2F1.3.1\\
+			\hline 
+			\uc{1.3.3} & \shortstack[l]{\\R1F1.6\\R1F1.6.8} \\
+			\hline 
+			\uc{1.3.4} & \shortstack[l]{\\R1F1.6\\R1F1.6.9} \\
+			\hline 
+			\uc{1.4} & \shortstack[l]{\\R0F1.2\\R0F1.2.1} \\
+			\hline 
+			\uc{1.5} & \shortstack{\\R0F1.5\\R0F1.5.1\\R0F1.5.2\\R0F1.5.3\\R0F1.5.4} \\
+			\hline 
+			\uc{1.6} & \shortstack[l]{\\R2F1.9\\R2F1.9.1}\\
+			\hline 
+			\uc{1.7} & \shortstack[l]{\\R0F1.4.1\\R1F1.7\\R1F1.7.1}\\
+			\hline 
+			\uc{1.8} & \shortstack[l]{\\R0F1.2.1\\R1F1.7\\R1F1.7.2\\R1F1.6\\R1F1.6.5} \\
+			\hline 
+			\uc{1.9} & \shortstack[l]{\\R1F1.6\\R1F1.6.4} \\
+			\hline 
+			\uc{1.10} & \shortstack[l]{\\R1F1.6\\R1F1.6.7} \\
+			\hline 
+			\uc{2} & R0F2 \\
+			\hline 
+			\uc{2.1} & R0F2.1 \\
+			\hline 
+			\uc{2.2} & R0F2.2 \\
+			\hline 
+			\uc{2.3} & R1F2.3 \\
+			\hline 
+			\uc{3} & R0F5 \\
+			\hline 
+			\uc{3.1} & R0F5.1 \\
+			\hline 
+			\uc{3.2} & R2F5.2 \\
+			\hline 
+			\uc{3.2.1} & R2F5.2 \\
+			\hline 
+			\uc{3.2.2} & R2F5.2\\
+			\hline 
+			\uc{3.2.3} & R2F5.2\\
+			\hline 
+			\uc{3.3} & R0F5.1\\
+			\hline 
+			\uc{3.4} & R1F5.3 \\
+			\hline 
+			\uc{4} & \shortstack[l]{\\R1F2.4\\R1F2.4.1\\R1F2.4.2} \\
+			\hline 
+			\uc{5} & \shortstack[l]{\\R1F9\\R2F9.2\\R2F9.3\\R1F9.4} \\
+			\hline 
+			\uc{6} & R0F6 \\
+			\hline 
+			\uc{6.1} & R0F6.1 \\
+			\hline 
+			\uc{6.1.1} & \shortstack[l]{\\R0F6.1\\R1F6.2\\R1F6.4} \\
+			\hline 
+			\uc{6.1.2} & R0F6.7\\
+			\hline 
+			\uc{6.1.3} & R0F6.7\\
+			\hline 
+			\uc{6.2} & R1F6.3 \\
+			\hline 
+			\uc{6.3} & R0F6.8\\
+			\hline 
+			\uc{6.4} & \shortstack[l]{\\R0F1\\R0F6.6\\R0F7} \\
+			\hline
+			\uc{6.4.1} & R0F6.6.1\\
+			\hline 
+			\uc{6.4.2} & R0F6.6.2\\
+			\hline 
+			\uc{6.4.3} & R0F6.6.5\\
+			\hline 
+			\uc{6.4.4} & R0F6.6.4\\
+			\hline 
+			\uc{6.4.5} & R0F6.6.3\\
+			\hline  
+			\uc{6.5} &  R1F6.9\\
+			\hline 
+			\uc{6.6} & R0F6.5 \\
+			\hline 
+			\uc{7} & R0F2.5\\
+			\hline 
+			\uc{8} & \shortstack[l]{\\R0F4\\R1F8}\\
+			\hline 
+			\uc{8.1} & \shortstack[l]{\\R0F4\\R0F7.3} \\
+			\hline 
+			\uc{8.2} & R1F4.1 \\
+			\hline 
+			\uc{8.2.1} &  R1F4.1\\
+			\hline 
+			\uc{8.2.2} &  R1F4.1\\
+			\hline 
+			\uc{8.2.3} &  R1F4.1\\
+			\hline 
+			\uc{8.2.4} &  R1F4.1\\
+			\hline 
+			\uc{8.2.5} &  R1F4.1\\
+			\hline 
+			\uc{8.3} & \shortstack[l]{\\R0F4\\R1F4.2} \\
+			\hline 
+			\uc{8.4} & \shortstack[l]{\\R0F4\\R0F4.3} \\
+			\hline 
+			\uc{8.4.1} & R0F4.3 \\
+			\hline 
+			\uc{8.4.1.1} & R0F4.3.2 \\
+			\hline 
+			\uc{8.4.1.2} & R2F4.3.1 \\
+			\hline 
+			\uc{8.4.2} & \shortstack[l]{\\R0F1\\R0F3\\R0F3.1\\R0F3.7\\R0F4.3} \\
+			\hline 
+			\uc{8.4.2.1} & R0F3.2 \\
+			\hline 
+			\uc{8.4.2.2} & \shortstack[l]{\\R0F3.5\\R2F3.6} \\
+			\hline 
+			\uc{8.4.2.3} & \shortstack[l]{\\R0F3.3\\R0F3.4\\R0F3.4.1\\R0F3.4.2\\R0F3.4.3} \\
+			\hline 
+			\uc{8.4.2.4} & R0F3 \\
+			\hline 
+			\uc{8.4.2.5} & R0F3.8 \\
+			\hline 
+			\uc{8.4.2.6} &  R0F3.7\\
+			\hline 
+			\uc{8.4.2.7} & \shortstack[l]{\\R0F3.2.1\\R0F3.7} \\
+			\hline 
+			\uc{8.5} & R1F4.4 \\ 
+			\hline
+			\uc{8.5.1} & R1F4.4.1 \\ 
+			\hline
+			\uc{8.5.2} & R1F4.4.2 \\ 
+			\hline
+			\uc{8.5.3} & R1F4.4.2 \\ 
+			\hline
+			\uc{8.5.4} & R1F4.4.3\\
+			\hline
+			\uc{9} & \shortstack[l]{\\R1F9\\R1F9.6} \\
+			\hline 
+			\uc{10} & \shortstack[l]{\\R1F9\\R1F9.5} \\
+			\hline
+		\end{longtable}
+	}
+	\subsection{Riepilogo}
+	\begin{center}
+		{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
+			\small
+			\begin{tabular}{|l|l|l|l|}
+				\hline
+				\textbf{Categoria} & \textbf{Obbligatori} & \textbf{Desiderabili} & \textbf{Opzionali}\\
+				\hline
+				Funzionali & 47 & 32 & 12 \\
+				\hline
+				Vincolo & 8 & 0 & 0\\
+				\hline
+				Qualitativi & 9 & 0 & 0\\
+				\hline
+			\end{tabular}
+		}	
+	\end{center}
 \end{document}
