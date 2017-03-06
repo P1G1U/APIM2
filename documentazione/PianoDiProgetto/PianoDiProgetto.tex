@@ -12,6 +12,8 @@
 \usepackage{graphicx}
 \usepackage{eurosym} %per il simbolo dell' \euro
 
+\usepackage{float}
+%forzare il posizionamento
 
 \usepackage{emptypage} 
 % pagine vuote senza testatina e piede di pagina
@@ -142,7 +144,7 @@
 	\section{Registro Modifiche}
 	\small %rippicciolisce il testo
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\begin{tabular}{|l|c|c|c|}
+		\begin{center}\begin{tabular}{|l|c|c|c|}
 			\hline
 			{\textbf{Ver.}}&{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}\\
 			\hline
@@ -182,7 +184,7 @@
 			\hline
 			0.0.1 & Studio dei riferimenti e impostato il documento & Sebastiano Marchesini & 21/12/2016 \\
 			\hline
-		\end{tabular}
+		\end{tabular}\end{center}
 	}
 	\normalsize
 	
@@ -191,6 +193,10 @@
 	\tableofcontents
 	%crea indice automaticamente
 	\thispagestyle{empty}
+	
+	%\listoftables
+	%DARE CAPTION ALLE TABELLE
+	\listoffigures
 	
 	\newpage
 	
@@ -242,15 +248,15 @@
 	Tali date stanno indicare l'impegno del gruppo e intendono essere rispettate all'unanime.\\
 	
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\begin{tabular}{|l|c|c|c|c|c|}
+		\begin{center}\begin{tabular}{|l|c|c|c|c|c|}
 			\hline
 			& Consegna & \textbf{RR} & \textbf{RP} & \textbf{RQ} & \textbf{RA} \\
 			\hline
-			\textit{IÂ°} & 11/01 & 24/01 & 13/03 & 18/04 & 15/05 \\
+			\textit{Ia} & 11/01 & 24/01 & 13/03 & 18/04 & 15/05 \\
 			\hline
-	\end{tabular}}
+	\end{tabular}\end{center}}
 	\vspace{0.5cm}
-	\\
+
 	Le sigle stanno a indicare rispettivamente:
 	\begin{enumerate}
 		\item \textbf{RR}: Revisione dei Requisiti;
@@ -571,14 +577,14 @@
 	\\
 	I ruoli maggiormente coinvolti sono il \textit{Responsabile}, l'\textit{Amministratore} e l'\textit{Analista}. \\
 	
-	\begin{figure}[p]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{"Gantt Analisi"}
 		\caption{Analisi e Analisi in Dettaglio}
 		\label{fig:gantt-progettazione-architetturale}
 	\end{figure}
 
-	\begin{figure}[p]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.6\linewidth]{"WBSAnalisi"}
 		\caption{Work Breakdown Structure Analisi}
@@ -588,7 +594,7 @@
 	\subsubsection{Distribuzione del lavoro}{
 		\small
 			{\renewcommand\arraystretch{1.1} %aumenta l'altezza di ogni riga
-			\begin{tabular}{|c|l|r|c|}
+			\begin{center}\begin{tabular}{|c|l|r|c|}
 				\hline
 				{\textbf{Codice}}&{\textbf{Attività}}&{\textbf{Ruolo}}&{\textbf{Ore + Verifica}}\\
 				\hline
@@ -678,11 +684,11 @@
 						
 				AN6.3 & Verifica & Verificatore & 1 \\
 				\hline	
-			\end{tabular}
+			\end{tabular}\end{center}
 		}
 		\normalsize
 	}
-	
+	\newpage
 	\subsection{Progettazione Architetturale}
 	\begin{center}\textit{Periodo: dal 25-01-2017 al 13-03-2017}\end{center}
 	Questo punto termina con la pubblicazione dell'esito all'ammissione di progetto, lasciando l'attività successiva lo stato definitivo del prodotto stesso. Le attività in questo caso sono:
@@ -694,14 +700,14 @@
 	Le figure maggiormente coinvolte sono il \textit{Responsabile}, l'\textit{Amministratore}, il \textit{Progettista}, l'\textit{Analista}
 	ed il \textit{Verificatore}. \\
 	
-	\begin{figure}[p]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{"Gantt Progettazione Architetturale"}
 		\caption{Progettazione Architetturale}
 		\label{fig:gantt-progettazione-architetturale}
 	\end{figure}
 
-	\begin{figure}[p]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.8\linewidth]{"WBSArchitetturale"}
 		\caption{Work Breakdown Structure Progettazione Architetturale}
@@ -711,7 +717,7 @@
 	\subsubsection{Distribuzione del lavoro}{
 		\small
 		{\renewcommand\arraystretch{1.1} %aumenta l'altezza di ogni riga
-			\begin{tabular}{|c|l|r|c|}
+			\begin{center}\begin{tabular}{|c|l|r|c|}
 				\hline
 				{\textbf{Codice}}&{\textbf{Attività}}&{\textbf{Ruolo}}&{\textbf{Ore + Verifica}}\\
 				\hline
@@ -771,11 +777,12 @@
 				
 				PA6.2 & Verifica & Verificatore & 0.5 \\
 				\hline	
-			\end{tabular}
+			\end{tabular}\end{center}
 		}
 		\normalsize
 	}
 	
+	\newpage
 	\subsection{Progettazione di Dettaglio e Codifica}
 	\textit{\begin{center} Periodo: dal 14-03-2017 al 17-04-2015 \end{center}}
 	Inizia dopo la \textit{Revisione di Progetto} e termina con la consegna del prodotto alla \textit{Revisione di Qualifica}.\\
@@ -790,14 +797,14 @@
 	I ruoli coinvolti sono il \textit{Responsabile}, l'\textit{Amministratore}, il \textit{Progettista}, il \textit{Verificatore}
 	ed il \textit{Programmatore}.\\
 	
-	\begin{figure}[p]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{"Gantt Progettazione di Dettaglio"}
 		\caption{Progettazione di Dettaglio e Codifica}
 		\label{fig:gantt-progettazione-di-dettaglio}
 	\end{figure}
 
-	\begin{figure}[p]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.9\linewidth]{"WBSCodifica"}
 		\caption{Work Breakdown Structure Progettazione di Dettaglio e Codifica}
@@ -807,7 +814,7 @@
 	\subsubsection{Distribuzione del lavoro}{
 		\small
 		{\renewcommand\arraystretch{1.1} %aumenta l'altezza di ogni riga
-			\begin{tabular}{|c|l|r|c|}
+			\begin{center}\begin{tabular}{|c|l|r|c|}
 				\hline
 				{\textbf{Codice}}&{\textbf{Attività}}&{\textbf{Ruolo}}&{\textbf{Ore + Verifica}}\\
 				\hline
@@ -866,12 +873,12 @@
 				
 				PD8.2 & Verifica & Verificatore & 0.5 \\
 				\hline	
-			\end{tabular}
+			\end{tabular}\end{center}
 		}
 		\normalsize
 	}
 		
-	
+	\newpage
 	\subsection{Validazione e Collaudo}
 	\textit{\begin{center} Periodo: dal 18-04-2017 al 14-05-2015 \end{center}}
 	Questa macro-sequenza riunisce tutti i test dalla più piccola quantità di software che conviene testare da sola al progetto complessivamente.\\
@@ -888,14 +895,14 @@
 	\end{enumerate}
 	I ruoli coinvolti sono il \textit{Responsabile}, l'\textit{Amministratore}, il \textit{Progettista} ed il \textit{Verificatore}.
 	
-	\begin{figure}[p]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{"Gantt Validazione e Collaudo"}
 		\caption{Validazione e Collaudo}
 		\label{fig:gantt-validazione-e-collaudo}
 	\end{figure}
 
-	\begin{figure}[p]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{"WBSValidazione"}
 		\caption{Work Breakdown Structure Validazione e Collaudo}
@@ -905,7 +912,7 @@
 	\subsubsection{Distribuzione del lavoro}{
 		\small
 		{\renewcommand\arraystretch{1.1} %aumenta l'altezza di ogni riga
-			\begin{tabular}{|c|l|r|c|}
+			\begin{center}\begin{tabular}{|c|l|r|c|}
 				\hline
 				{\textbf{Codice}}&{\textbf{Attività}}&{\textbf{Ruolo}}&{\textbf{Ore + Verifica}}\\
 				\hline
@@ -952,7 +959,7 @@
 				\hline
 				\textbf{VA7} & \textbf{Collaudo} & \minitab[l]{ Programmatore \\ Verificatore } & \textbf{5} \\
 				\hline
-			\end{tabular}
+			\end{tabular}\end{center}
 		}
 		\normalsize
 	}
@@ -970,7 +977,7 @@
 	
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
 		\small
-		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
 			\hline 
 			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
 			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
@@ -988,7 +995,7 @@
 			\textbf{Ore Totali per ruolo} & 13 & 14 & 43 & 0 & 0 & 29 & 99 \\  
 			\textbf{Prezzo Totale per ruolo}&\euro 390,00&\euro 280,00&\euro  1.075,00&\euro 0,00&\euro 0,00&\euro 435,00& \textit{\euro 2.180,00} \\
 			\hline  
-	\end{tabular}} 
+	\end{tabular}\end{center}} 
 	
 	\subsection{Analisi Dettaglio}
 	Analisi Dettaglio concentra tutto il team sul documento di \textit{Analisi dei Requisiti v1.0.0}. Ognuno pone la sua attenzione su un particolare argomento del progetto, si analizza, guidati dal \textit{Project Manager}. L'\textit{Amministratore} è a capo delle revisioni . Non vi sono altri compiti da svolgere in questo stadio, quindi non vi sono altre ore rendicontate.\\
@@ -996,7 +1003,7 @@
 	
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
 		\small
-		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
 			\hline 
 			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
 			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
@@ -1015,9 +1022,9 @@
 			\textbf{Ore Totali per ruolo} & 1 & 1 & 13 & 0 & 0 & 10 & 25 \\  
 			\textbf{Prezzo Totale per ruolo}&\euro 30,00&\euro 20,00&\euro 325,00&\euro 0,00&\euro 0,00&\euro 150,00& \textit{\euro 525,00} \\
 			\hline  
-	\end{tabular}} 
+	\end{tabular}\end{center}} 
 
-	\begin{figure}[p]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"CiambellaAnalisi"}
 		\caption{Percentuale Ruoli Analisi e Analisi in Dettaglio}
@@ -1031,7 +1038,7 @@
 	
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
 		\small
-		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
 			\hline 
 			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
 			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
@@ -1050,9 +1057,9 @@
 			\textbf{Ore Totali per ruolo} & 13 & 11 & 18 & 84 & 0 & 46 & 172 \\  
 			\textbf{Prezzo Totale per ruolo}&\euro 390,00&\euro 220,00&\euro 450,00&\euro 1.848,00&\euro 0,00&\euro 690,00& \textit{\euro 3.598,00} \\
 			\hline 
-	\end{tabular}} 
+	\end{tabular}\end{center}} 
 
-	\begin{figure}[p]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"CiambellaProgettazione"}
 		\caption{Percentuale Ruoli Progettazione Architetturale}
@@ -1067,7 +1074,7 @@
 	
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
 		\small
-		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
 			\hline 
 			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
 			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
@@ -1086,9 +1093,9 @@
 			\textbf{Ore Totali per ruolo} & 5 & 12 & 4 & 86 & 104 & 82 & 293 \\  
 			\textbf{Prezzo Totale per ruolo}&\euro 150,00&\euro 240,00&\euro 100,00&\euro 1.898,00&\euro 1.665,00&\euro 1.155,00& \textit{\euro 5.202,00} \\
 			\hline  
-	\end{tabular}} 
+	\end{tabular}\end{center}} 
 
-	\begin{figure}[p]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"CiambellaCodifica"}
 		\caption{Percentuale Ruoli Progettazione in Dettaglio e Codifica}
@@ -1102,7 +1109,7 @@
 	
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
 		\small
-		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
 			\hline 
 			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
 			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
@@ -1121,9 +1128,9 @@
 			\textbf{Ore Totali per ruolo} & 5 & 8 & 0 & 3 & 8 & 30 & 54 \\  
 			\textbf{Prezzo Totale per ruolo}&\euro 150,00&\euro  160,00&\euro 0,00&\euro 66,00&\euro 120,00&\euro 420,00& \textit{\euro 916,00} \\  
 			\hline
-	\end{tabular}}
+	\end{tabular}\end{center}}
 
-	\begin{figure}[p]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"CiambellaValidazioneCollaudo"}
 		\caption{Percentuale Ruoli Validazione e Collaudo}
@@ -1137,7 +1144,7 @@
 	Le ore totali previste per la realizzazione dell'intero progetto, comprese le ore di precedenti alla firma del contratto, sono le seguenti: \\
 	
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
 			\hline 
 			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore per Ruolo Totali}} & \textbf{Ore Totali} \\ 
 			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \\ 
@@ -1153,13 +1160,14 @@
 			Piergiorgio Danieli 	& 6 & 9 & 4 & 34 & 24 & 48 & 125 \\ 
 			\hline 
 			\multicolumn{7}{r|}{TOTALE :} & 634 \\ 
-	\end{tabular}}
+	\end{tabular}\end{center}}
 
 	\subsubsection{Ore rendicontate}
 	Tolto il periodo precedente alla firma del contrattato, l'impegno di ogni singolo si tiene sotto il tetto massimo delle 105 ore ciascuno e sono così distribuite secondo i ruoli :\\
 	
+	\begin{center}
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
 			\hline 
 			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore per Ruolo Totali}} & \textbf{Ore Totali} \\ 
 			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \\ 
@@ -1175,16 +1183,19 @@
 			Piergiorgio Danieli 	& 1 & 4 & 4 & 34 & 24 & 36 & 103 \\ 
 			\hline 
 			Ore Totale per Ruolo & 23 & 31 & 22 & 173 & 112 & 158 & 634 \\ 
-	\end{tabular}}
+	\end{tabular}\end{center}}
+	\end{center}
 
 	Tale progettazione ha portato al seguente grafico percentuale di proporzione dei ruoli:
 	
-	\begin{figure}[p]
+	\begin{center}
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"GraficoTortaRuoliFinale"}
 		\caption{Percentuale Ore Ruoli Totale}
 		\label{fig:percentuale-ore-ruoli-totale}
 	\end{figure} 
+	\end{center}
 	
 	\newpage
 	
@@ -1194,7 +1205,7 @@
 		\subsection{Analisi e Analisi Dettaglio}{
 	
 		{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
-			\begin{tabular}{|c|c|c|c|c|c|c|c|}
+			\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
 				\hline 
 				\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore Effettive per Ruolo}} & \textbf{Ore Totali} \\ 
 				& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \\ 
@@ -1210,9 +1221,9 @@
 				Piergiorgio Danieli & 5 & 5 & 2 &  &  & 5 & 17(+0) \\ 
 				\hline 
 				\multicolumn{7}{r|}{TOTALE  :} & 106(+4) \\ 
-		\end{tabular}} 
+		\end{tabular}\end{center}} 
 		
-		\begin{figure}[p]
+		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.7\linewidth]{"ConsultivoAnalisi"}
 			\caption{Grafico Consultivo di Analisi e Analisi Dettaglio}
@@ -1242,7 +1253,7 @@
 	\subsubsection{Tabella preventiva per Ruolo}
 	\begin{center}
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\begin{tabular}{|c|c|c|}
+		\begin{center}\begin{tabular}{|c|c|c|}
 			\hline 
 			\textbf{Ruolo} & \textbf{Costo orario} & \textbf{Costo Effettivo} \\ 
 			\hline 
@@ -1259,10 +1270,10 @@
 			\textbf{Verificatore} & \euro 15,00 & \euro 2.265,00 \\ 
 			\hline 
 			\multicolumn{2}{r|}{TOTALE :} & \textit{\euro 9.716,00 } \\ 
-		\end{tabular}
+		\end{tabular}\end{center}
 	} 
 	\vspace{0.7cm}
-	\begin{figure}[p]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{"TortaIncisioneCosti"}
 		\caption{Percentuale di Incidenza del Costo di ogni Ruolo}
@@ -1274,7 +1285,7 @@
 	\subsubsection{Tabella preventiva per periodo a finire}
 	\begin{center}
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\begin{tabular}{|c|c|c|}
+		\begin{center}\begin{tabular}{|c|c|c|}
 			\hline 
 			& \textbf{Costo} & \textbf{Costo Effettivo} \\ 
 			\hline 
@@ -1289,7 +1300,7 @@
 			\textbf{Validazine e Collaudo} & \euro 916,00 & \euro 916,00 \\ 
 			\hline 
 			\multicolumn{2}{r|}{TOTALE :} & \textit{\euro 9.716,00 } \\ 
-		\end{tabular}
+		\end{tabular}\end{center}
 	} 
 	\vspace{0.5cm}
 	\end{center}
