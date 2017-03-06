@@ -130,6 +130,8 @@
 			\hline
 			{\textbf{Ver.}}&{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}\\
 			\hline
+			1.0.3 & Stesura Pianificazione Test & Lonardi Pietro & 25/02/2017
+			\hline
 			1.0.2 & Stesura dell'appendice & Lonardi Pietro & 22/02/2017
 			\hline
 			1.0.1 & Correzzione delle metriche e misure & Lonardi Pietro & 21/02/2017 \\
@@ -422,11 +424,21 @@
 		Quando un verificatore trova un'anomalia dovrà aprire un nuovo ticket e avvisare il responsabile del documento. Un'anomalia corrisponde a:
 		\begin{itemize}
 			\item Un errore ortografico;
-			\item Una violazione delle norme tipografiche definite nel documento \textit{"Norme di Progetto v1.0.0"}; 
-			\item Un'incongruenza del prodotto rispetto a determinate funzionalità stabilite nel documento \textit{"Analisi dei Requisiti v1.0.0"};
+			\item Una violazione delle norme tipografiche definite nel documento \textit{"Norme di Progetto v2.0.0"}; 
+			\item Un'incongruenza del prodotto rispetto a determinate funzionalità stabilite nel documento \textit{"Analisi dei Requisiti v2.0.0"};
 			\item Un'incongruenza del codice con il design prodotto;
 			\item L'uscita dal range di accettazione degli indici di misurazione.
 		\end{itemize}
+		
+		\subsection{Procedure di controllo di qualità del processo}
+		La pianificazione dei processi, durante lo svolgimento delle varie fasi, si basa sul ciclo PDCA\textsubscript{g}. Questo ciclio prende il nome dalle iniziali delle 4 fasi che ne fanno parte:
+		\begin{itemize}
+		    \item \textbf{Plan}: fase di pianificazione, ovvero dove vengono fissati i periodi di tempi per raggiungere determinate milestone\textsubscript{g} utilizzando le risorse che sono state concesse; 
+		    \item \textbf{Do}: si eseguono le attivita secondo il piano prefissato;
+		    \item \textbf{Check}: viene effettuata una verifica tra i risultati che si aspettava di ragiungere secondo la fase di Plan e i dati che sono stati effettivamente raggiunti dalla fase di Do, in questo modo si ha un facile confronto tra dati per capire quale processo ha presentato dei problemi;
+		    \item \textbf{Act}: in base ai risultati emersi dalla fase check vengono apportate mofiche per cercare di migliorare i processi che hanno presentato problemi.
+		\end{itemize}
+	    Attraverso l'utilizzo di questo ciclo è possibile avere un continuo miglioramento dei processi che si espreime direttamente ad un miglioramento del prodotto finale.
 	
 	\newpage
 	\rhead{Resoconto delle attività di verifica}
@@ -441,12 +453,62 @@
 	Successivamente viene applicato il metodo inspection ai diagrammi dei casi d'uso.
 	
 	\newpage
+	\rhead{Pianificazione dei test}
+	\section{Pianificazione dei test}
+	In questa sezione vengono elencati i test di sistema e di integrazione che verranno applicati nella fase successiva alla progettazzione quando si inizierà a sviluppare il codice effettivo; i test di unità verranno aggiunti in seguito.
+	Si vuole utilizzare questa strategia di test perchè grazie a loro è possibile effettuare una verifica accurata sulle funzionalità che dovrà avere il prodotto una volta terminato, rispetto ai vincoli identificati nell'\textit{Analisi dei Requisiti v.2.0.0}.
+	Nella seguenti tabelle i test che riportano lo stato \textbf{N.A.} corrispondono a test non ancora appricati e che verranno applicati successivamente.
+	
+	\subsection{Test di sistema}
+	Questi test si focalizzano sui requisiti principali del progetto, per i requisiti più specifici verranno svolti i test di unità e di integrazione.
+	
+	\begin{tabular}{|c|c|c|c|}
+	    {\textbf{Test}}&{\textbf{Descrizione}}&{\textbf{Stato}}&{\textbf{Requisito}} \\
+	    \hline
+	    TS 1 & \minitab[c]{Viene verificato che il sistema sia sviluppato a microservizi} & N.A. & R0V1 \\
+	    \hline 
+	    TS 2.1 & \minitab[c]{Viene verificato che il sistema permetta di \\ creare nuovi profili univoci che possano caricare \\ nuove API e acquistare APIKey} & N.A. & R0F1 \\
+	    \hline 
+	    TS 2.2 & \minitab[c]{Viene verificato che il sistema permetta di \\ autenticarsi come utente già presente nell'APIMarket} & N.A. & R0F2 \\
+	    \hline 
+	    TS 3.1 & \minitab[c]{Viene verificato che il sistema permetta la \\ registrazione di un' API di un microservizio attraverso \\ la registrazione e pubblicazione della sua interfaccia} & N.A. & R0F3 \\
+        \hline 
+	    TS 3.2 & \minitab[c]{Viene verificato che il sistema segnali un \\ errore nel caso in cui l'utente tenti di dare un nome \\ già presente nell'APIMarket ad un suo microservizio} & N.A. & R0F3.2.1 \\
+	    \hline 
+	    TS 4.1 & \minitab[c]{Viene verificato che il sistema permetta all'utente \\ di modificare i suoi dati personali, i vari messaggi e \\ le interfacce dei microservizi che ha caricato} & N.A. & R0F4 \\
+	    \hline 
+	    TS 4.2 & \minitab[c]{Viene verificato che il sistema permetta di \\ monitorare l'andamento dei microservizi che l'utente \\ ha caricato} & N.A. & R0F4.3.2 \\
+	    \hline 
+	    TS 5 & \minitab[c]{Viene verificato che il sistema permetta di \\ effettuare una ricerca di microservizi da parte \\ sia di un utente autenticato che non} & N.A. & R0F5 \\
+	    \hline 
+	    TS 6.1 & \minitab[c]{Viene verificato che la ricerca ritorni il \\ nome del microservizio, dell'utente che l'ha caricato, una \\ breve descrizione dello stesso e il prezzo sia ad \\ un utente autenticato che non} & N.A. & R0F6.1 \\
+	    \hline 
+	    TS 6.2 & \minitab[c]{Viene verificato che se l'utente è autenticato \\ la ricerca ritorna più informazioni riguardanti il microservizio} & N.A. & R0F6.5 \\
+        \hline 
+	    TS 6.3 & \minitab[c]{Viene verificato che il sistema permetta ad \\ un utente autenticato di acquistare un'API \\ utilizzando il saldo di APICredits in suo possesso} & N.A. & R0F6.6 \\
+        \hline 
+	    TS 7.1 & \minitab[c]{Viene verificato che il sistema associ ad \\ ogni API un'APIKey ad un utente autenticato che \\ decide di acquistarla} & N.A. & R0F7 \\
+	    \hline 
+	    TS 7.2 & \minitab[c]{Viene verificato che il sistema permetta di \\ far visualizzare all'utente tutte le APIKey che possiede \\ in quel momento} & N.A. & R0F7.3 \\
+	    \hline 
+	    TS 8 & \minitab[c]{Viene verificato che il sistema permetta di \\ visitare le pagine utente a chiunque} & N.A. & R1F8 \\
+    \end{tabular}
+	    
+	\subsection{Test di integrazione}
+	I test di integrazione vengono fatti per verificare che le varie componenti all'interno del sistema comunichino correttamente tra di loro e che i risultati che il sistema ritorna siano i risultati attesi.
+	Si è deciso di utilizzare una strategia di integrazione incrementale in modo che sia possibile, nel caso in cui vengano ritornati errori, ripercorrere a ritroso i test per ritornare ad uno stato corretto.
+    Per la formulazione di questi test è stato utilizzato il metodo bottom-up per poter integrare prima con le parti con minore dipendenza funzionale e maggiore funzionalità. Ci siamo concentrati per prima cosa suoi requisiti 
+    obbligatori, in questo modo i vincoli obbligatori saranno i primi ad essere soddisfatti, successivamente si passerà a testare i vincoli desiderabili ed infine quelli opzionali.
+	
+	\newpage
 	\rhead{Risultati RR}
 	\section{Appendice}
 	\subsection{Risultati al termine delle consegne}
 	In questa ultima sezione verranno riportati i risultati che vengono misurati dalle metriche definite nel documento \textit{"Norme di Progetto v1.0.0"} inoltre verranno contestualizzati secondo i range ottimali e di accettazzione definiti in questo documento.\\
 	
 	\subection{Analisi e analisi in dettaglio}
+	
+	\subsubsection{Risultati dell'indice di Gulpease}
 	In questa fase è stata prodotta solo documentazione riguardante il progetto perciò saranno solo presenti esclusivamente metriche e misurazioni riguardanti i documenti.\\
 	Di seguito è riportata una tabella che contiene i documenti con il rispettivo valore che è risultato dall'indice di Gulpease:
 	\begin{tabular}{|c|c|}
@@ -466,6 +528,8 @@
     per un lettore che non sia abituato a questi termini.\\
     Ciò nonostante il gruppo si ritiene soddisfatto dei risultati ottenuti dall'indice anche se non hanno protato ad un range ottimale, considerando che alcuni dei documenti verranno modificati durante il procedere del progetto, i dati ottenuti possono migliorare e questo è ciò che il gruppo si impone di migliorare.\\
     
-    Secondo ISO/IEC 15504 il processo di documentazione è allo stadio 1 in quanto i documenti potrebbero non soddisfare le esigenze e richiederebbero un ulteriore rivisitazione e correzione ove richiesto\\ 
+    \subsubsection{Risultati PDCA}
+    Analizzando il Registro delle modifiche dei documenti rispetto ai grafici di Gantt riguardante la pianificazione di questa fase, presenti nel \textit{Piano di Progetto v.1.0.0}, è possibile notare che si è riusciti a rientrare nelle tempistiche per le consegne previste, questo è stato possibile grazie al fatto che durante la fase Plan sono state fatte delle approssimazioni in eccesso delle tempistiche per raggiungere le milestone\textsubscript{g},
+    in questo modo se fossero emersi dei problemi, ci sarebbe stato del tempo in più da utilizzare come cuscinetto per non far ritardare i processi successivi.
     
 \end{document}
