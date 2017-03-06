@@ -148,6 +148,8 @@
 			\hline
 			{\textbf{Ver.}}&{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}\\
 			\hline
+			1.1.1 & Consultivo di Periodo - Progettazione Architetturale & Sebastiano Marchesini & 06/03/2017 \\
+			\hline
 			1.1.0 & Verifica & Lonardi Pietro & 22/02/2017  \\
 			\hline
 			1.0.9 & \minitab[c]{Inserimento e calcolo dei capitoli\\ : Distribuzione del Lavoro} & Sebastiano Marchesini & 31/01/2017  \\
@@ -424,6 +426,7 @@
 		\end{center}
 		\begin{itemize}
 			\item \textbf{Comprensione Requisiti}: Errata analisi dei requisiti e visione diversa tra \textit{Analista} e \textit{Proponente} di un obbiettivo. Se tempestiva è facile la soluzione.
+			\item \textbf{Frammentazione dei Requisiti}: Ogni requisito deve essere scomposto in minime parti, questa operazione richiede attenzione e può presentare difficoltà.
 		\end{itemize}
 		\begin{center}
 			\textbf{Livello di Desgin}
@@ -1239,37 +1242,74 @@
 		Riepiloga i risultati di un dato periodo di attività e verrà aggiornato nel corso del progetto per dare una rendiconto preciso ed effettivo del lavoro svolto. \\
 		\subsection{Analisi e Analisi Dettaglio}{
 	
-		{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
-			\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		{\renewcommand\arraystretch{1.4}  %aumenta l'altezza di ogni riga
+			\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|r|}
 				\hline 
-				\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore Effettive per Ruolo}} & \textbf{Ore Totali} \\ 
-				& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \\ 
+				\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore Effettive per Ruolo}} & \textbf{Ore} & \textbf{Variazione}\\ 
+				& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{Totali} & \textbf{Costo} \\ 
 				\hline
-				Sebastiano Marchesini & 8 & 10(+1) & 5 &  &  & 4(+1) & 27(+2) \\ 
+				Sebastiano Marchesini & 8 & 10(+1) & 5 &  &  & 4(+1) & 27(+2) & \euro +37,00 \\ 
 				\hline 
-				Gianluca Crivellaro & 1 &  & 24(+2) &  &  & 3 & 28(+2) \\ 
+				Gianluca Crivellaro & 1 &  & 24(+2) &  &  & 3 & 28(+2) & \euro +50,00 \\ 
 				\hline 
-				Pietro Lonardi &  & 1 & 6 &  &  & 9(+2) & 17(+2) \\ 
+				Pietro Lonardi &  & 1 & 6 &  &  & 9(+2) & 17(+2) & \euro +30,00 \\ 
 				\hline 
-				Alberto Gelmi &  &  & 9(-2) &  &  & 8 & 17(-2) \\ 
+				Alberto Gelmi &  &  & 9(-2) &  &  & 8 & 17(-2) & \euro -30,00 \\ 
 				\hline 
-				Piergiorgio Danieli & 5 & 5 & 2 &  &  & 5 & 17(+0) \\ 
+				Piergiorgio Danieli & 5 & 5 & 2 &  &  & 5 & 17(+0) & \euro 00,00 \\ 
 				\hline 
-				\multicolumn{7}{r|}{TOTALE  :} & 106(+4) \\ 
+				\multicolumn{7}{|c|}{TOTALE  :} & 173 & \euro +48,00 \\ 
+				\hline
 		\end{tabular}\end{center}} 
-		
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.7\linewidth]{"ConsultivoAnalisi"}
-			\caption{Grafico Consultivo di Analisi e Analisi Dettaglio}
-			\label{fig:consultivo-analisi}
-		\end{figure} 
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{"ConsultivoAnalisi"}
+		\caption{Grafico Consultivo di Analisi e Analisi Dettaglio}
+		\label{fig:consultivo-analisi}
+	\end{figure} 		
 	
 	Si è notato che c'è voluto più tempo del previsto sia nella verifica (fatti su più livelli) sia nell'amministrazione dei documenti. Gianluca si è impegnato molto nella ricerca dei requisiti e nella stesura degli stessi, più di Alberto che causa impegni di studio ha ceduto alcuni compiti. In generale è soddisfacente l'uso delle ore totali progettate per tale periodo.	\\
 	Tale variante non va a impattare sul preventivo a finire in quanto l'analisi e l'analisi specifica non è un costo effettivo che ricade sul cliente finale.
-	}
-		
 
+		
+	\subsection{Progettazione Architetturale}{
+		
+		{\renewcommand\arraystretch{1.4} %aumenta l'altezza di ogni riga
+		\small
+			\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|r|}
+				\hline 
+				\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore Effettive per Ruolo}} & \textbf{Ore} & \textbf{Variazione}\\ 
+				& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{Totali} & \textbf{Costo} \\ 
+				\hline
+				Sebastiano Marchesini & 2(+3) & (+1) & 5(+3) & 13(-4) & & 12 & 36(+3) & \euro +112,00 \\ 
+				\hline 
+				Gianluca Crivellaro & 5(-3) & 3 & 6(-1) & 20(+1) & & 8 & 42(-3) & \euro -93,00 \\ 
+				\hline 
+				Pietro Lonardi & & 8 & & 5(-6) & & 17(+6) & 30 & \euro -42,00 \\ 
+				\hline 
+				Alberto Gelmi & 3 & & 4 & 27 & & 3 & 37 & \euro +37,00 \\ 
+				\hline 
+				Piergiorgio Danieli & & & 4(+2) & 16(+2) & & 8(-4) & 28 & \euro +34,00 \\ 
+				\hline 
+				\multicolumn{7}{|c|}{TOTALE  :} & 173 & \euro +48,00 \\ 
+				\hline 
+	\end{tabular}\end{center}} 
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{"ConsultivoProgettazioneArchitetturale"}
+			\caption{Grafico Consultivo di Progettazione Architetturale}
+			\label{fig:consultivo-progettazioneArchitetturale}
+		\end{figure} 
+		
+		Il consultivo di periodo riporta soprattutto uno scompenso di tempistiche sulla base del tempo impiegato a correggere i documenti in seguito alla revisione. Un notevole incremento di qualità del piano di progetto ha occupato Sebastiano Marchesini più ore di quanto prestabilito, che ha rubato tempo alla progettazione. Inoltre sono state aggiunte a quest'ultimo ora dedicate all'analisi e creazione del prototipo dell'interfaccia del prodotto.\\
+		Le ore sono state riequilibrate da quelle di Gianluca Crivellaro che ha comunque un alta media di ore lavoro.\\
+		Pietro Lonardi si è dedicato alla costate verifica delle modifiche dei passati documenti, infatti il suo contributo è stato prevalentemente di controllo e supervisione delle operazioni del resto del team.\\
+		Non vi sono state variazioni nell'orario progettato per Alberto Gelmi che si è dedicato interamente alla progettazione del back-end del sito, parte complessa che richiede molta attenzione.\\
+		È stata infine ri-progettato il ticketing di Piergiorgio Danieli che l'ha impegnato in un'attenta analisi e progettazione della base di dati  dell'API Market oltre che a un accorto tracciamento nel documento di Specifica Tecnica.\\
+		Ci è sembrato opportuno con un tale incremento lo squilibrio economico provocato, precedentemente non misurato adeguatamente.\\ 
+	}
 	
 	
 	
