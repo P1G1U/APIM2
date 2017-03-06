@@ -7,47 +7,47 @@
 			\hline
 			\textbf{Requisito}&\textbf{Descrizione}&\textbf{Componenti}\\
 			\hline
-			R0F1 & APIMarket deve permettere la creazioni di profili utenti univoci & \shortstack[l]{\\ client.modelView.navigation \\ server.controllers \\ server.user \\  server.dao} \\
+			R0F1 & APIMarket deve permettere la creazioni di profili utenti univoci & \shortstack[l]{\\ client.modelView.navigation \\ server.controllers \\ server.user \\  server.dao \\ server.entities} \\
 			\hline
-			R0F2 & APIMarket deve permettere l'autenticazione di un utente registrato. & \shortstack[l]{\\ client.view \\ client.modelView.navigation \\ server.controllers\\ server.user\\ server.admin\\ server.shared\\ server.dao}\\
+			R0F2 & APIMarket deve permettere l'autenticazione di un utente registrato. & \shortstack[l]{\\ client.view \\ client.modelView.navigation \\ server.controllers\\ server.user\\ server.admin\\ server.shared\\ server.dao \\ server.entities}\\
 			\hline
-			R1F2.4  & APIMarket deve rendere disponibile una funzionalità per il recupero della password qualora l'utente dimentichi la sua. &\shortstack[l]{\\ client.view \\ client.modelView.navigation \\ server.controller \\ server.shared \\ server.admin \\ server.dao } \\
+			R1F2.4  & APIMarket deve rendere disponibile una funzionalità per il recupero della password qualora l'utente dimentichi la sua. &\shortstack[l]{\\ client.view \\ client.modelView.navigation \\ server.controller \\ server.shared \\ server.admin \\ server.dao \\ server.entities} \\
 			\hline
-			R0F2.5 & APIMarket deve permettere all'utente autenticato di effettuare il logout. & \shortstack[l]{\\ client.view \\ client.modelView.navigation \\ server.shared }\\
+			R0F2.5 & APIMarket deve permettere all'utente autenticato di effettuare il logout. & \shortstack[l]{\\ client.view \\ client.modelView.navigation \\ server.shared \\ server.entities }\\
 			\hline
-			R0F3 & APIMarket deve permettere di registrare le API di un microservizio attraverso la registrazione e pubblicazione della sua interfaccia. & \shortstack[l]{\\ client.modelView.user \\ server.shared \\ server.dao }\\
+			R0F3 & APIMarket deve permettere di registrare le API di un microservizio attraverso la registrazione e pubblicazione della sua interfaccia. & \shortstack[l]{\\ client.modelView.user \\ server.shared \\ server.dao \\ server.entities}\\
 			\hline		
-			R0F4 & APIMarket deve fornire una pagina riservata all'utente registrato in cui amministrare il suo account, i suoi messaggi e le interfacce che ha pubblicato. & \shortstack[l]{\\ client.view.user \\ client.modelView.navigation \\ server.controller \\ server.shared\\ server.dao }\\
+			R0F4 & APIMarket deve fornire una pagina riservata all'utente registrato in cui amministrare il suo account, i suoi messaggi e le interfacce che ha pubblicato. & \shortstack[l]{\\ client.view.user \\ client.modelView.navigation \\ server.controller \\ server.shared\\ server.dao \\ server.entities }\\
 			\hline
-			R1F4.1 & APIMarket deve permettere all'utente di modificare i dati del suo profilo.  & \shortstack[l]{\\client.view.user \\ client.modelView.user \\ server.controller \\ server.shared \\ server.dao }\\
+			R1F4.1 & APIMarket deve permettere all'utente di modificare i dati del suo profilo.  & \shortstack[l]{\\client.view.user \\ client.modelView.user \\ server.controller \\ server.shared \\ server.dao \\ server.entities }\\
 			\hline
-			R2F4.3.1 & APIMarket deve fornire all'utente la possibilità di modificare i dati di un microservizio da lui pubblicato. &  \shortstack[l]{\\ client.user.view \\ client.model.user \\ client.modelView.user \\ server.controller \\ server.shared \\ server.dao }\\
+			R2F4.3.1 & APIMarket deve fornire all'utente la possibilità di modificare i dati di un microservizio da lui pubblicato. &  \shortstack[l]{\\ client.user.view \\ client.model.user \\ client.modelView.user \\ server.controller \\ server.shared \\ server.dao \\ server.entities }\\
 			\hline
-			R0F4.3.2 & APIMarket deve fornire all'utente un'area, per ogni microservizio da lui pubblicato, in cui monitorare le sue statistiche. & \shortstack[l]{\\ client.user.view \\ client.modelView.user \\ server.dataAnalysis \\ server.shared \\ server.dao}    \\
+			R0F4.3.2 & APIMarket deve fornire all'utente un'area, per ogni microservizio da lui pubblicato, in cui monitorare le sue statistiche. & \shortstack[l]{\\ client.user.view \\ client.modelView.user \\ server.dataAnalysis \\ server.shared \\ server.dao \\ server.entities}    \\
 			\hline
-			R1F4.4.1 & APIMarket deve dare la possibilità all'utente di modificare la propria carta di credito durante la procedura di acquisto della APICredits, qualora decidesse di utilizzare un'altra carta di credito diversa da quella registrata. & \shortstack[l]{\\ client.view.user \\ server.controller \\ server.shared \\ server.dao }\\
+			R1F4.4.1 & APIMarket deve dare la possibilità all'utente di modificare la propria carta di credito durante la procedura di acquisto della APICredits, qualora decidesse di utilizzare un'altra carta di credito diversa da quella registrata. & \shortstack[l]{\\ client.view.user \\ server.controller \\ server.shared \\ server.dao \\ server.entities }\\
 			\hline
-			R0F5 & APIMarket deve permettere a qualsiasi utente, anche non registrato, di cercare dei microservizi sul sito & \shortstack[l]{\\ client.search \\ server.controller \\ server.gateway \\ server.shared \\ server.dao }\\
+			R0F5 & APIMarket deve permettere a qualsiasi utente, anche non registrato, di cercare dei microservizi sul sito & \shortstack[l]{\\ client.search \\ server.controller \\ server.gateway \\ server.shared \\ server.dao \\server.entities }\\
 			\hline
-			R0F6.6 & APIMarket deve dare la possibilità agli utenti autenticati di acquistare una APIKey per il microservizio visitato, utilizzando i propri APICredits. & \shortstack[l]{\\ client.view.search\\ client.modelView.navigation\\ server.controller\\ server.keyManager\\ server.user\\ server.dao}\\
+			R0F6.6 & APIMarket deve dare la possibilità agli utenti autenticati di acquistare una APIKey per il microservizio visitato, utilizzando i propri APICredits. & \shortstack[l]{\\ client.view.search\\ client.modelView.navigation\\ server.controller\\ server.keyManager\\ server.user\\ server.dao \\ server.entities}\\
 			\hline 
-			R1F6.9 & APIMarket deve permettere all'utente autenticato scrivere un commento e dare un voto al microservizio. & \shortstack[l] {\\ client.model.user \\ client.modelView.navigation \\ server.shared \\ server.dao }\\
+			R1F6.9 & APIMarket deve permettere all'utente autenticato scrivere un commento e dare un voto al microservizio. & \shortstack[l] {\\ client.model.user \\ client.modelView.navigation \\ server.shared \\ server.dao \\ server.entities }\\
 			\hline
-			R0F7 & APIMarket deve associare una APIKey d'uso per ogni API registrata e per ogni utente che decide di acquistarla & \shortstack[l]{\\ client.view.search \\ client.modelView.naviagtion \\ server.keyManager \\ server.user \\ server.dao }\\
+			R0F7 & APIMarket deve associare una APIKey d'uso per ogni API registrata e per ogni utente che decide di acquistarla & \shortstack[l]{\\ client.view.search \\ client.modelView.naviagtion \\ server.keyManager \\ server.user \\ server.dao \\server.entities }\\
 			\hline
-			R0F7.2 & Se la APIKey è contraffatta o non valida allora la chiamata all'API viene bloccata dall'APIMaket. & \shortstack[l] {\\ client.model.rest \\ server.keyManager \\ server.user \\ server.dao } \\
+			R0F7.2 & Se la APIKey è contraffatta o non valida allora la chiamata all'API viene bloccata dall'APIMaket. & \shortstack[l] {\\ client.model.rest \\ server.keyManager \\ server.user \\ server.dao \\ server.entities } \\
 			\hline
-			R1F8.1 & APIMarket nella pagina utente deve rendere visibile alcuni dati personali, commenti scritti e interfacce di microservizi pubblicate. & \shortstack[l]{\\ client.view.user \\ client.model.admin \\ client.modelView.user\\ server.controller \\ server.shared \\ server.dao }\\
+			R1F8.1 & APIMarket nella pagina utente deve rendere visibile alcuni dati personali, commenti scritti e interfacce di microservizi pubblicate. & \shortstack[l]{\\ client.view.user \\ client.model.admin \\ client.modelView.user\\ server.controller \\ server.shared \\ server.dao \\ server.entities }\\
 			\hline
-			R2F8.2 & APIMarket nella pagina utente deve mostrare un indice di affidabilità dell'utente calcolato sulle statistiche dei microservizi da lui pubblicati. & \shortstack[l]{\\client.view.user\\clien.modelView.user\\server.user\\server.dao}\\
+			R2F8.2 & APIMarket nella pagina utente deve mostrare un indice di affidabilità dell'utente calcolato sulle statistiche dei microservizi da lui pubblicati. & \shortstack[l]{\\client.view.user\\clien.modelView.user\\server.user\\server.dao \\ server.entities}\\
 			\hline
-			R2F9.2 & Un utente Admin deve avere la possibilità di modificare i dati anagrafici di qualsiasi utente. & \shortstack[l]{\\ client.model.rest \\ client.modelView.admin \\ server.controller \\ server.admin \\ server.dao }\\
+			R2F9.2 & Un utente Admin deve avere la possibilità di modificare i dati anagrafici di qualsiasi utente. & \shortstack[l]{\\ client.model.rest \\ client.modelView.admin \\ server.controller \\ server.admin \\ server.dao \\ server.entities }\\
 			\hline
-			R2F9.3 & Un utente Admin deve poter eliminare un commento di qualsiasi utente. & \shortstack[l]{\\ client.model.rest \\ client.modelView.admin \\ server.controller \\ server.admin \\ server.dao}\\
+			R2F9.3 & Un utente Admin deve poter eliminare un commento di qualsiasi utente. & \shortstack[l]{\\ client.model.rest \\ client.modelView.admin \\ server.controller \\ server.admin \\ server.dao \\ server.entities}\\
 			\hline
-			R1F9.4 & Un utente Admin deve poter modificare i dati di una API la cui interfaccia è stata caricata su APIMarket. & \shortstack[l]{\\ client.model.rest \\ client.modelView.admin \\ server.controller \\ server.admin \\ server.dao}\\
+			R1F9.4 & Un utente Admin deve poter modificare i dati di una API la cui interfaccia è stata caricata su APIMarket. & \shortstack[l]{\\ client.model.rest \\ client.modelView.admin \\ server.controller \\ server.admin \\ server.dao \\ server.entities}\\
 			\hline
-			R1F9.5 & Un utente Admin deve poter ricercare qualunque utente tramite una barra di ricerca dedicata. & \shortstack[l]{\\ client.view.admin \\ client.modelView.admin \\ server.controller \\ server.admin \\ server.dao}\\
+			R1F9.5 & Un utente Admin deve poter ricercare qualunque utente tramite una barra di ricerca dedicata. & \shortstack[l]{\\ client.view.admin \\ client.modelView.admin \\ server.controller \\ server.admin \\ server.dao \\server.entities}\\
 			\hline
 		\end{longtable}
 		\end{center}
@@ -100,6 +100,7 @@
 			\hline
 			server.dao & \shortstack {\\\ R0F1 \\\ R0F2 \\\ R1F2.4 \\\ R0F3 \\\ R0F4 \\\ R1F4.1 \\\ R2F4.3.1 \\\ R0F4.3.2 \\\ R1F4.4.1 \\\ R0F5 \\\ R0F6.6 \\\ R1F6.9 \\\ R0F7 \\\ R0F7.2 \\\ R1F8.1 \\\ R2F8.2 \\\ R2F9.2 \\\ R2F9.3 \\\ R1F9.4 \\\ R1F9.5 } \\ 
 			\hline
+			server.entities & \shortstack{ R0F1 \\\ R0F2 \\\ R1F2.4 \\\ R0F2.5 \\\ R0F3 \\\ R0F4 \\\ R1F4.1 \\\ R2F4.3.1 \\\ R0F4.3.2 \\\ R1F4.4.1 \\\ R0F5 \\\ R1F6.9 \\\ R0F7 \\\ R0F7.2 \\\ R1F8.1 \\\ R2F8.2 \\\ R2F9.2 \\\ R2F9.3 \\\ R0F9.4 \\\ R0F9.5 }
 		\end{longtable}
 	\end{center}
 }
