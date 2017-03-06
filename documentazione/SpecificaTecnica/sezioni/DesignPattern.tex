@@ -1,9 +1,9 @@
 \section{Design Pattern}
 	I Design Pattern sono soluzioni generali a problemi ricorrenti. Il loro utilizzzo semplifica l'attivita' di progettazione, favorisce il riutilizzo del codice e rende l'architettura piu' manutenibile. Esistono diversi tipi di Design pattern e sono suddivisi in base al problema da risolvere:
 	\begin{itemize}\itemsep1pt
-		\item \textbf{Pattern Architetturali}: definiscono l'architettura dell'applizacione ad un livello piu' elevato rispetto ad altri Design Pattern. Esprimono schemi di base per impostare l'organizzazione di un sistema software. Si descrivono sottoinsiemi predefiniti, i ruoli che assumono e le relaioni reciproche. 
-		\item \textbf{Pattern Creazionali}: permettono di nascondere i costruttori delle classi e mettono dei metodi al loro posto creando un'interfaccia. In questo modo si possono utilizzare oggetti senza sapere come sono implementati.
-		\item \textbf{Pattern Strutturali}: consentono di riutilizzare degli oggetti esistenti fornendo agli utilizzatori un'interfaccia più adatta alle loro esigenze.
+		\item \textbf{Pattern Architetturali}: definiscono l'architettura dell'applizacione ad un livello piu' elevato rispetto ad altri Design Pattern. Esprimono schemi di base per impostare l'organizzazione di un sistema software. Si descrivono sottoinsiemi predefiniti, i ruoli che assumono e le relaioni reciproche; 
+		\item \textbf{Pattern Creazionali}: permettono di nascondere i costruttori delle classi e mettono dei metodi al loro posto creando un'interfaccia. In questo modo si possono utilizzare oggetti senza sapere come sono implementati;
+		\item \textbf{Pattern Strutturali}: consentono di riutilizzare degli oggetti esistenti fornendo agli utilizzatori un'interfaccia più adatta alle loro esigenze;
 		\item \textbf{Pattern Comportamentali}: definiscono soluzioni per le piu' comuni interazioni tra oggetti.
 	\end{itemize} 
 	
@@ -11,7 +11,7 @@
 		\subsubsection{Microservizi}
 			\begin{itemize}
 				\item\textbf{Scopo dell'utilizzo}: Questo pattern è orientato ai microservizi, cioè permette di implementare unità separate distribuite;
-				\item\textbf{Contesto d'utilizzo}: In tutta la nostra parte di back-end utilizzeremo questo modello a microservizi, cercando quindi di separare le unità permettendo di conoscere solamente come comunicano tra di loro e non invece come sono implementate.
+				\item\textbf{Contesto d'utilizzo}: In tutta la nostra parte di back-end\textsubscript{g} utilizzeremo questo modello a microservizi, cercando quindi di separare le unità permettendo di conoscere solamente come comunicano tra di loro e non invece come sono implementate.
 			\end{itemize}
 			\begin{figure}
 				\centering
@@ -23,7 +23,7 @@
 		\subsubsection{Model View View Model - MVVM}
 			\begin{itemize}
 				\item \textbf{Scopo dell'utilizzo}: Permette di separare lo sviluppo della view dal comportamento;
-				\item \textbf{Contesto d'utilizzo}: Verrà usato questo pattern per lo sviluppo del front-end. Abbiamo scelto il framework AngularJS, il quale si presta bene all'adozione della famiglia di pattern MV. L'utilizzo di questi strumenti ci permette di separare la logica di business del front-end dalla sua rappresentazione grafica.
+				\item \textbf{Contesto d'utilizzo}: Verrà usato questo pattern per lo sviluppo del front-end\textsubscript{g}. Abbiamo scelto il framework\textsubscript{g} AngularJS\textsubscript{g}, il quale si presta bene all'adozione della famiglia di pattern MV. L'utilizzo di questi strumenti ci permette di separare la logica di business del front-end\textsubscript{g} dalla sua rappresentazione grafica.
 			\end{itemize}
 			\begin{figure}[h]{0.5}
 				\centering
@@ -62,7 +62,7 @@
 		\subsubsection{Dependency Injection}
 		\begin{itemize}\itemsep1pt
 			\item\textbf{Scopo dell'utilizzo}: Permette di separare il comportamento di una componente dalla risoluzione delle sue dipendenze;
-			\item\textbf{Contesto dell'utilizzo}: Ci permette di interagire facilmente con il framework AngularJS.  
+			\item\textbf{Contesto dell'utilizzo}: Ci permette di interagire facilmente con il framework\textsubscript{g} AngularJS\textsubscript{g}. Verrà utilizzato per sviluppare la parte di front-end\textsubscript{g}. Consente semplicemente ad un componente di AngularJS\textsubscript{g}, che ha bisogno delle funzionalità messe a disposizione da un servizio, di specificare il suo nome tra i parametri della sua definizione.
 		\end{itemize}
 		\begin{figure}[h]{0.5}
 			\centering
@@ -77,7 +77,7 @@
 		\subsubsection{Facade} 
 		 \begin{itemize}
 		 		\item\textbf{Scopo dell'utilizzo}: Fornisce un'interfaccia unica semplice per un sottosistema complesso, strutturando il sistema in sottoinsiemi;
-		 		\item\textbf{Contesto dell'utilizzo}: Questo pattern è stato scelto perché è in grado di interfacciarsi con un sistema complesso come può essere il nostro, e facilita le interazioni tra ogni livello del software. 
+		 		\item\textbf{Contesto dell'utilizzo}: Questo pattern è stato scelto perché è in grado di interfacciarsi con un sistema complesso, come può essere il nostro, e facilita le interazioni tra ogni livello del software. 
 		 \end{itemize}		 	
 		\begin{figure}[h]{0.5}
 			\centering
