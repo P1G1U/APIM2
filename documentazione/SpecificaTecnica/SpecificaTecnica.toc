@@ -1,182 +1,181 @@
 \select@language {italian}
 \select@language {italian}
-\contentsline {section}{\numberline {1}Registro Modifiche}{3}{section.1}
-\contentsline {section}{\numberline {2}Introduzione}{9}{section.2}
-\contentsline {subsection}{\numberline {2.1}Scopo del Documento}{9}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Glossario}{9}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Riferimenti}{9}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Normativi}{9}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Informativi}{9}{subsubsection.2.3.2}
-\contentsline {section}{\numberline {3}Tecnologie Utilizzate}{10}{section.3}
-\contentsline {subsection}{\numberline {3.1}Linguaggi}{10}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}HTML 5}{10}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}CSS3}{10}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.3}Javascript}{10}{subsubsection.3.1.3}
-\contentsline {subsubsection}{\numberline {3.1.4}Jolie}{11}{subsubsection.3.1.4}
-\contentsline {subsubsection}{\numberline {3.1.5}SQL}{11}{subsubsection.3.1.5}
-\contentsline {subsection}{\numberline {3.2}Frameworks}{12}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}AngularJS}{12}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Spring Framework - Spring Boot}{13}{subsubsection.3.2.2}
-\contentsline {subsection}{\numberline {3.3}Librerie}{14}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Leonardo: il web server di Jolie}{14}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Highcharts}{14}{subsubsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3}Angular Material}{14}{subsubsection.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.4}Highcharts-ng}{15}{subsubsection.3.3.4}
-\contentsline {section}{\numberline {4}Descrizione Architettura}{16}{section.4}
-\contentsline {subsection}{\numberline {4.1}Metodo di specifica}{16}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Architettura generale}{16}{subsection.4.2}
-\contentsline {section}{\numberline {5}Architettura Front end}{18}{section.5}
-\contentsline {subsection}{\numberline {5.1}com.apim.client}{18}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Informazioni sul package}{18}{subsubsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.2}Package contenuti}{18}{subsubsection.5.1.2}
-\contentsline {subsection}{\numberline {5.2}com.apim.client.view}{19}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}Informazioni sul package}{19}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2}Package contenuti}{19}{subsubsection.5.2.2}
-\contentsline {subsubsection}{\numberline {5.2.3}Interazione con altri componenti}{19}{subsubsection.5.2.3}
-\contentsline {subsubsection}{\numberline {5.2.4}Classi}{19}{subsubsection.5.2.4}
-\contentsline {subsection}{\numberline {5.3}com.apim.client.view.user}{20}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}Informazione sul package}{20}{subsubsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.2}Interazione con altri componenti}{20}{subsubsection.5.3.2}
-\contentsline {subsubsection}{\numberline {5.3.3}Classi}{20}{subsubsection.5.3.3}
-\contentsline {subsection}{\numberline {5.4}com.apim.client.view.search}{21}{subsection.5.4}
-\contentsline {subsubsection}{\numberline {5.4.1}Informazione sul package}{21}{subsubsection.5.4.1}
-\contentsline {subsubsection}{\numberline {5.4.2}Interazione con altri componenti}{21}{subsubsection.5.4.2}
-\contentsline {subsubsection}{\numberline {5.4.3}Classi}{21}{subsubsection.5.4.3}
-\contentsline {subsection}{\numberline {5.5}com.apim.client.view.admin}{22}{subsection.5.5}
-\contentsline {subsubsection}{\numberline {5.5.1}Informazione sul package}{22}{subsubsection.5.5.1}
-\contentsline {subsubsection}{\numberline {5.5.2}Classi}{22}{subsubsection.5.5.2}
-\contentsline {subsection}{\numberline {5.6}com.apim.client.model}{23}{subsection.5.6}
-\contentsline {subsubsection}{\numberline {5.6.1}Informazione sul package}{23}{subsubsection.5.6.1}
-\contentsline {subsubsection}{\numberline {5.6.2}Package contenuti}{23}{subsubsection.5.6.2}
-\contentsline {subsubsection}{\numberline {5.6.3}Interazione con altri componenti}{23}{subsubsection.5.6.3}
-\contentsline {subsubsection}{\numberline {5.6.4}Classi}{24}{subsubsection.5.6.4}
-\contentsline {subsection}{\numberline {5.7}com.apim.client.search}{24}{subsection.5.7}
-\contentsline {subsubsection}{\numberline {5.7.1}Informazione sul package}{24}{subsubsection.5.7.1}
-\contentsline {subsubsection}{\numberline {5.7.2}Interazione con altri componenti}{24}{subsubsection.5.7.2}
-\contentsline {subsubsection}{\numberline {5.7.3}Classi}{24}{subsubsection.5.7.3}
-\contentsline {subsection}{\numberline {5.8}com.apim.client.model.user}{25}{subsection.5.8}
-\contentsline {subsubsection}{\numberline {5.8.1}Informazione sul package}{25}{subsubsection.5.8.1}
-\contentsline {subsubsection}{\numberline {5.8.2}Interazione con altri componenti}{25}{subsubsection.5.8.2}
-\contentsline {subsubsection}{\numberline {5.8.3}Classi}{25}{subsubsection.5.8.3}
-\contentsline {subsection}{\numberline {5.9}com.apim.client.model.admin}{25}{subsection.5.9}
-\contentsline {subsubsection}{\numberline {5.9.1}Informazione sul package}{25}{subsubsection.5.9.1}
-\contentsline {subsubsection}{\numberline {5.9.2}Interazione con altri componenti}{26}{subsubsection.5.9.2}
-\contentsline {subsubsection}{\numberline {5.9.3}Classi}{26}{subsubsection.5.9.3}
-\contentsline {subsection}{\numberline {5.10}com.apim.client.model.rest}{26}{subsection.5.10}
-\contentsline {subsubsection}{\numberline {5.10.1}Informazione sul package}{26}{subsubsection.5.10.1}
-\contentsline {subsubsection}{\numberline {5.10.2}Interazione con altri componenti}{26}{subsubsection.5.10.2}
-\contentsline {subsubsection}{\numberline {5.10.3}Classi}{26}{subsubsection.5.10.3}
-\contentsline {subsection}{\numberline {5.11}com.apim.client.modelView}{27}{subsection.5.11}
-\contentsline {subsubsection}{\numberline {5.11.1}Informazione sul package}{27}{subsubsection.5.11.1}
-\contentsline {subsubsection}{\numberline {5.11.2}Package\textsubscript {g} contenuti}{28}{subsubsection.5.11.2}
-\contentsline {subsubsection}{\numberline {5.11.3}Interazione con altri componenti}{28}{subsubsection.5.11.3}
-\contentsline {subsubsection}{\numberline {5.11.4}Classi}{28}{subsubsection.5.11.4}
-\contentsline {subsection}{\numberline {5.12}com.apim.client.modelView.navigation}{28}{subsection.5.12}
-\contentsline {subsubsection}{\numberline {5.12.1}Informazione sul package}{28}{subsubsection.5.12.1}
-\contentsline {subsubsection}{\numberline {5.12.2}Classi}{28}{subsubsection.5.12.2}
-\contentsline {subsection}{\numberline {5.13}com.apim.client.modelView.user}{31}{subsection.5.13}
-\contentsline {subsubsection}{\numberline {5.13.1}Informazione sul package}{31}{subsubsection.5.13.1}
-\contentsline {subsubsection}{\numberline {5.13.2}Classi}{31}{subsubsection.5.13.2}
-\contentsline {subsection}{\numberline {5.14}com.apim.client.modelView.admin}{32}{subsection.5.14}
-\contentsline {subsubsection}{\numberline {5.14.1}Informazione sul package}{32}{subsubsection.5.14.1}
-\contentsline {subsubsection}{\numberline {5.14.2}Classi}{32}{subsubsection.5.14.2}
-\contentsline {section}{\numberline {6}Architettura Back End}{34}{section.6}
-\contentsline {subsection}{\numberline {6.1}Microservizi Jolie}{34}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}com.apim.server}{36}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}Informazioni sul Package}{36}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}Package contenuti}{36}{subsubsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.3}Relazione tra le componenti interne}{36}{subsubsection.6.2.3}
-\contentsline {subsection}{\numberline {6.3}com.apim.server.controllers}{37}{subsection.6.3}
-\contentsline {subsubsection}{\numberline {6.3.1}Informazioni sul Package}{37}{subsubsection.6.3.1}
-\contentsline {subsubsection}{\numberline {6.3.2}Classi}{37}{subsubsection.6.3.2}
-\contentsline {subsection}{\numberline {6.4}com.apim.server.services}{39}{subsection.6.4}
-\contentsline {subsubsection}{\numberline {6.4.1}Informazioni sul Package}{39}{subsubsection.6.4.1}
-\contentsline {subsubsection}{\numberline {6.4.2}Packages contenuti}{40}{subsubsection.6.4.2}
-\contentsline {subsubsection}{\numberline {6.4.3}Classi}{40}{subsubsection.6.4.3}
-\contentsline {subsubsection}{\numberline {6.4.4}Interazioni con altri componenti}{40}{subsubsection.6.4.4}
-\contentsline {subsection}{\numberline {6.5}com.apim.server.gateway}{41}{subsection.6.5}
-\contentsline {subsubsection}{\numberline {6.5.1}Informazioni sul Package}{41}{subsubsection.6.5.1}
-\contentsline {subsubsection}{\numberline {6.5.2}Classi}{41}{subsubsection.6.5.2}
-\contentsline {subsubsection}{\numberline {6.5.3}Interazioni con altri componenti}{41}{subsubsection.6.5.3}
-\contentsline {subsection}{\numberline {6.6}com.apim.server.dataAnalysis}{42}{subsection.6.6}
-\contentsline {subsubsection}{\numberline {6.6.1}Informazioni sul Package}{42}{subsubsection.6.6.1}
-\contentsline {subsubsection}{\numberline {6.6.2}Classi}{42}{subsubsection.6.6.2}
-\contentsline {subsubsection}{\numberline {6.6.3}Interazioni con altri componenti}{42}{subsubsection.6.6.3}
-\contentsline {subsection}{\numberline {6.7}com.apim.server.keyManager}{43}{subsection.6.7}
-\contentsline {subsubsection}{\numberline {6.7.1}Informazioni sul Package}{43}{subsubsection.6.7.1}
-\contentsline {subsubsection}{\numberline {6.7.2}Classi}{43}{subsubsection.6.7.2}
-\contentsline {subsubsection}{\numberline {6.7.3}Interazioni con altri componenti}{44}{subsubsection.6.7.3}
-\contentsline {subsection}{\numberline {6.8}com.apim.server.user}{44}{subsection.6.8}
-\contentsline {subsubsection}{\numberline {6.8.1}Informazioni sul Package}{44}{subsubsection.6.8.1}
-\contentsline {subsubsection}{\numberline {6.8.2}Classi}{44}{subsubsection.6.8.2}
-\contentsline {subsubsection}{\numberline {6.8.3}Interazioni con altri componenti}{45}{subsubsection.6.8.3}
-\contentsline {subsection}{\numberline {6.9}com.apim.server.admin}{46}{subsection.6.9}
-\contentsline {subsubsection}{\numberline {6.9.1}Informazioni sul Package}{46}{subsubsection.6.9.1}
-\contentsline {subsubsection}{\numberline {6.9.2}Classi}{46}{subsubsection.6.9.2}
-\contentsline {subsubsection}{\numberline {6.9.3}Interazioni con altri componenti}{48}{subsubsection.6.9.3}
-\contentsline {subsection}{\numberline {6.10}com.apim.server.shared}{49}{subsection.6.10}
-\contentsline {subsubsection}{\numberline {6.10.1}Informazioni sul Package}{49}{subsubsection.6.10.1}
-\contentsline {subsubsection}{\numberline {6.10.2}Classi}{49}{subsubsection.6.10.2}
-\contentsline {subsubsection}{\numberline {6.10.3}Interazioni con altri componenti}{51}{subsubsection.6.10.3}
-\contentsline {subsection}{\numberline {6.11}com.apim.server.dao}{52}{subsection.6.11}
-\contentsline {subsubsection}{\numberline {6.11.1}Informazioni sul Package}{52}{subsubsection.6.11.1}
-\contentsline {subsubsection}{\numberline {6.11.2}Classi}{52}{subsubsection.6.11.2}
-\contentsline {subsubsection}{\numberline {6.11.3}Interazioni con altri componenti}{54}{subsubsection.6.11.3}
-\contentsline {subsection}{\numberline {6.12}com.apim.server.entities}{55}{subsection.6.12}
-\contentsline {subsubsection}{\numberline {6.12.1}Informazioni sul Package}{55}{subsubsection.6.12.1}
-\contentsline {subsubsection}{\numberline {6.12.2}Classi}{55}{subsubsection.6.12.2}
-\contentsline {subsubsection}{\numberline {6.12.3}Interazioni con altri componenti}{57}{subsubsection.6.12.3}
-\contentsline {section}{\numberline {7}Architettura Database}{58}{section.7}
-\contentsline {subsection}{\numberline {7.1}Progettazione concettuale}{58}{subsection.7.1}
-\contentsline {subsubsection}{\numberline {7.1.1}Schema concettuale}{58}{subsubsection.7.1.1}
-\contentsline {subsubsection}{\numberline {7.1.2}Classi}{58}{subsubsection.7.1.2}
-\contentsline {subsubsection}{\numberline {7.1.3}Associazioni}{60}{subsubsection.7.1.3}
-\contentsline {subsection}{\numberline {7.2}Progettazione logico-relazionale}{61}{subsection.7.2}
-\contentsline {subsubsection}{\numberline {7.2.1}Schema logico-relazionale}{61}{subsubsection.7.2.1}
-\contentsline {subsubsection}{\numberline {7.2.2}Gerarchie}{61}{subsubsection.7.2.2}
-\contentsline {subsubsection}{\numberline {7.2.3}Relazioni}{62}{subsubsection.7.2.3}
-\contentsline {section}{\numberline {8}Design Pattern}{64}{section.8}
-\contentsline {subsection}{\numberline {8.1}Design Pattern Architetturali}{64}{subsection.8.1}
-\contentsline {subsubsection}{\numberline {8.1.1}Microservizi}{64}{subsubsection.8.1.1}
-\contentsline {subsubsection}{\numberline {8.1.2}Model View View Model - MVVM}{65}{subsubsection.8.1.2}
-\contentsline {subsubsection}{\numberline {8.1.3}Data Access Object - DAO }{65}{subsubsection.8.1.3}
-\contentsline {subsection}{\numberline {8.2}Design Pattern Creazionali}{66}{subsection.8.2}
-\contentsline {subsubsection}{\numberline {8.2.1}Abstract Factory }{66}{subsubsection.8.2.1}
-\contentsline {subsubsection}{\numberline {8.2.2}Dependency Injection}{67}{subsubsection.8.2.2}
-\contentsline {subsection}{\numberline {8.3}Design Pattern Strutturali}{67}{subsection.8.3}
-\contentsline {subsubsection}{\numberline {8.3.1}Facade}{67}{subsubsection.8.3.1}
-\contentsline {subsection}{\numberline {8.4}Desgin Pattern Comportamentali}{68}{subsection.8.4}
-\contentsline {subsubsection}{\numberline {8.4.1}Command}{68}{subsubsection.8.4.1}
-\contentsline {section}{\numberline {9}Diagrammi di Attivit\IeC {\`a}}{69}{section.9}
-\contentsline {subsection}{\numberline {9.1}Presentazione dei diagrammi}{69}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Attivit\IeC {\`a} principali}{70}{subsection.9.2}
-\contentsline {subsection}{\numberline {9.3}Autenticazione utente}{71}{subsection.9.3}
-\contentsline {subsection}{\numberline {9.4}Recupero password}{72}{subsection.9.4}
-\contentsline {subsection}{\numberline {9.5}Registrazione utente}{73}{subsection.9.5}
-\contentsline {subsection}{\numberline {9.6}Accesso pagina utente}{74}{subsection.9.6}
-\contentsline {subsection}{\numberline {9.7}Visualizza pagina utente}{75}{subsection.9.7}
-\contentsline {subsection}{\numberline {9.8}Modifica dati}{76}{subsection.9.8}
-\contentsline {subsection}{\numberline {9.9}Registrazione nuova API}{77}{subsection.9.9}
-\contentsline {subsection}{\numberline {9.10}Visualizza API caricate}{78}{subsection.9.10}
-\contentsline {subsection}{\numberline {9.11}Ricerca}{79}{subsection.9.11}
-\contentsline {subsection}{\numberline {9.12}Visualizza pagina API}{80}{subsection.9.12}
-\contentsline {subsection}{\numberline {9.13}Utente amministrativo}{81}{subsection.9.13}
-\contentsline {section}{\numberline {10}Tracciamento}{82}{section.10}
-\contentsline {subsection}{\numberline {10.1}Tracciamento requisiti-componenti}{82}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Tracciamento componenti-requisiti}{84}{subsection.10.2}
-\contentsline {section}{\numberline {11}Descrizione Design Pattern}{87}{section.11}
-\contentsline {subsection}{\numberline {11.1}Design Pattern Architetturali}{87}{subsection.11.1}
-\contentsline {subsubsection}{\numberline {11.1.1}Pattern Architetturale a Microservizi}{87}{subsubsection.11.1.1}
-\contentsline {subsubsection}{\numberline {11.1.2}Data Access Object (DAO)}{88}{subsubsection.11.1.2}
-\contentsline {subsubsection}{\numberline {11.1.3}Model View ViewModel}{89}{subsubsection.11.1.3}
-\contentsline {subsection}{\numberline {11.2}Design Pattern Creazionali}{90}{subsection.11.2}
-\contentsline {subsubsection}{\numberline {11.2.1}Abstract Factory}{90}{subsubsection.11.2.1}
-\contentsline {subsubsection}{\numberline {11.2.2}Dependency Injection}{92}{subsubsection.11.2.2}
-\contentsline {subsection}{\numberline {11.3}Design Pattern Strutturali}{93}{subsection.11.3}
-\contentsline {subsection}{\numberline {11.4}Facade}{93}{subsection.11.4}
-\contentsline {subsection}{\numberline {11.5}Design Pattern Comportamentali}{94}{subsection.11.5}
-\contentsline {subsubsection}{\numberline {11.5.1}Command}{94}{subsubsection.11.5.1}
-\contentsline {section}{\numberline {12}MockUp}{97}{section.12}
-\contentsline {subsection}{\numberline {12.1}Home}{97}{subsection.12.1}
-\contentsline {subsection}{\numberline {12.2}Profilo}{99}{subsection.12.2}
-\contentsline {subsection}{\numberline {12.3}Ricerca}{100}{subsection.12.3}
+\contentsline {section}{\numberline {1}Registro Modifiche}{2}{section.1}
+\contentsline {section}{\numberline {2}Introduzione}{8}{section.2}
+\contentsline {subsection}{\numberline {2.1}Scopo del Documento}{8}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Glossario}{8}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Riferimenti}{8}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Normativi}{8}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Informativi}{8}{subsubsection.2.3.2}
+\contentsline {section}{\numberline {3}Tecnologie Utilizzate}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}Linguaggi}{9}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}HTML 5}{9}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}CSS3}{9}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Javascript}{9}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Jolie}{10}{subsubsection.3.1.4}
+\contentsline {subsubsection}{\numberline {3.1.5}SQL}{10}{subsubsection.3.1.5}
+\contentsline {subsection}{\numberline {3.2}Frameworks}{11}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}AngularJS}{11}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Spring Framework - Spring Boot}{12}{subsubsection.3.2.2}
+\contentsline {subsection}{\numberline {3.3}Librerie}{13}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Leonardo: il web server di Jolie}{13}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Highcharts}{13}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Angular Material}{13}{subsubsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.4}Highcharts-ng}{14}{subsubsection.3.3.4}
+\contentsline {section}{\numberline {4}Descrizione Architettura}{15}{section.4}
+\contentsline {subsection}{\numberline {4.1}Metodo di specifica}{15}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Architettura generale}{15}{subsection.4.2}
+\contentsline {section}{\numberline {5}Architettura Front end}{17}{section.5}
+\contentsline {subsection}{\numberline {5.1}com.apim.client}{17}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Informazioni sul package}{17}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Package contenuti}{17}{subsubsection.5.1.2}
+\contentsline {subsection}{\numberline {5.2}com.apim.client.view}{18}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Informazioni sul package}{18}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Package contenuti}{18}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.3}Interazione con altri componenti}{18}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.4}Classi}{18}{subsubsection.5.2.4}
+\contentsline {subsection}{\numberline {5.3}com.apim.client.view.user}{19}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Informazione sul package}{19}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.2}Interazione con altri componenti}{19}{subsubsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.3}Classi}{19}{subsubsection.5.3.3}
+\contentsline {subsection}{\numberline {5.4}com.apim.client.view.search}{20}{subsection.5.4}
+\contentsline {subsubsection}{\numberline {5.4.1}Informazione sul package}{20}{subsubsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.2}Interazione con altri componenti}{20}{subsubsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.3}Classi}{20}{subsubsection.5.4.3}
+\contentsline {subsection}{\numberline {5.5}com.apim.client.view.admin}{21}{subsection.5.5}
+\contentsline {subsubsection}{\numberline {5.5.1}Informazione sul package}{21}{subsubsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.2}Classi}{21}{subsubsection.5.5.2}
+\contentsline {subsection}{\numberline {5.6}com.apim.client.model}{22}{subsection.5.6}
+\contentsline {subsubsection}{\numberline {5.6.1}Informazione sul package}{22}{subsubsection.5.6.1}
+\contentsline {subsubsection}{\numberline {5.6.2}Package contenuti}{22}{subsubsection.5.6.2}
+\contentsline {subsubsection}{\numberline {5.6.3}Interazione con altri componenti}{22}{subsubsection.5.6.3}
+\contentsline {subsubsection}{\numberline {5.6.4}Classi}{23}{subsubsection.5.6.4}
+\contentsline {subsection}{\numberline {5.7}com.apim.client.search}{23}{subsection.5.7}
+\contentsline {subsubsection}{\numberline {5.7.1}Informazione sul package}{23}{subsubsection.5.7.1}
+\contentsline {subsubsection}{\numberline {5.7.2}Interazione con altri componenti}{23}{subsubsection.5.7.2}
+\contentsline {subsubsection}{\numberline {5.7.3}Classi}{23}{subsubsection.5.7.3}
+\contentsline {subsection}{\numberline {5.8}com.apim.client.model.user}{24}{subsection.5.8}
+\contentsline {subsubsection}{\numberline {5.8.1}Informazione sul package}{24}{subsubsection.5.8.1}
+\contentsline {subsubsection}{\numberline {5.8.2}Interazione con altri componenti}{24}{subsubsection.5.8.2}
+\contentsline {subsubsection}{\numberline {5.8.3}Classi}{24}{subsubsection.5.8.3}
+\contentsline {subsection}{\numberline {5.9}com.apim.client.model.admin}{24}{subsection.5.9}
+\contentsline {subsubsection}{\numberline {5.9.1}Informazione sul package}{24}{subsubsection.5.9.1}
+\contentsline {subsubsection}{\numberline {5.9.2}Interazione con altri componenti}{25}{subsubsection.5.9.2}
+\contentsline {subsubsection}{\numberline {5.9.3}Classi}{25}{subsubsection.5.9.3}
+\contentsline {subsection}{\numberline {5.10}com.apim.client.model.rest}{25}{subsection.5.10}
+\contentsline {subsubsection}{\numberline {5.10.1}Informazione sul package}{25}{subsubsection.5.10.1}
+\contentsline {subsubsection}{\numberline {5.10.2}Interazione con altri componenti}{25}{subsubsection.5.10.2}
+\contentsline {subsubsection}{\numberline {5.10.3}Classi}{25}{subsubsection.5.10.3}
+\contentsline {subsection}{\numberline {5.11}com.apim.client.modelView}{26}{subsection.5.11}
+\contentsline {subsubsection}{\numberline {5.11.1}Informazione sul package}{26}{subsubsection.5.11.1}
+\contentsline {subsubsection}{\numberline {5.11.2}Package\textsubscript {g} contenuti}{27}{subsubsection.5.11.2}
+\contentsline {subsubsection}{\numberline {5.11.3}Interazione con altri componenti}{27}{subsubsection.5.11.3}
+\contentsline {subsubsection}{\numberline {5.11.4}Classi}{27}{subsubsection.5.11.4}
+\contentsline {subsection}{\numberline {5.12}com.apim.client.modelView.navigation}{27}{subsection.5.12}
+\contentsline {subsubsection}{\numberline {5.12.1}Informazione sul package}{27}{subsubsection.5.12.1}
+\contentsline {subsubsection}{\numberline {5.12.2}Classi}{27}{subsubsection.5.12.2}
+\contentsline {subsection}{\numberline {5.13}com.apim.client.modelView.user}{30}{subsection.5.13}
+\contentsline {subsubsection}{\numberline {5.13.1}Informazione sul package}{30}{subsubsection.5.13.1}
+\contentsline {subsubsection}{\numberline {5.13.2}Classi}{30}{subsubsection.5.13.2}
+\contentsline {subsection}{\numberline {5.14}com.apim.client.modelView.admin}{31}{subsection.5.14}
+\contentsline {subsubsection}{\numberline {5.14.1}Informazione sul package}{31}{subsubsection.5.14.1}
+\contentsline {subsubsection}{\numberline {5.14.2}Classi}{31}{subsubsection.5.14.2}
+\contentsline {section}{\numberline {6}Architettura Back End}{33}{section.6}
+\contentsline {subsection}{\numberline {6.1}Microservizi Jolie}{33}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}com.apim.server}{35}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Informazioni sul Package}{35}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}Package contenuti}{35}{subsubsection.6.2.2}
+\contentsline {subsection}{\numberline {6.3}com.apim.server.controllers}{36}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {6.3.1}Informazioni sul Package}{36}{subsubsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.2}Classi}{36}{subsubsection.6.3.2}
+\contentsline {subsection}{\numberline {6.4}com.apim.server.services}{38}{subsection.6.4}
+\contentsline {subsubsection}{\numberline {6.4.1}Informazioni sul Package}{38}{subsubsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.2}Packages contenuti}{39}{subsubsection.6.4.2}
+\contentsline {subsubsection}{\numberline {6.4.3}Classi}{39}{subsubsection.6.4.3}
+\contentsline {subsubsection}{\numberline {6.4.4}Interazioni con altri componenti}{39}{subsubsection.6.4.4}
+\contentsline {subsection}{\numberline {6.5}com.apim.server.gateway}{40}{subsection.6.5}
+\contentsline {subsubsection}{\numberline {6.5.1}Informazioni sul Package}{40}{subsubsection.6.5.1}
+\contentsline {subsubsection}{\numberline {6.5.2}Classi}{40}{subsubsection.6.5.2}
+\contentsline {subsubsection}{\numberline {6.5.3}Interazioni con altri componenti}{40}{subsubsection.6.5.3}
+\contentsline {subsection}{\numberline {6.6}com.apim.server.dataAnalysis}{41}{subsection.6.6}
+\contentsline {subsubsection}{\numberline {6.6.1}Informazioni sul Package}{41}{subsubsection.6.6.1}
+\contentsline {subsubsection}{\numberline {6.6.2}Classi}{41}{subsubsection.6.6.2}
+\contentsline {subsubsection}{\numberline {6.6.3}Interazioni con altri componenti}{41}{subsubsection.6.6.3}
+\contentsline {subsection}{\numberline {6.7}com.apim.server.keyManager}{42}{subsection.6.7}
+\contentsline {subsubsection}{\numberline {6.7.1}Informazioni sul Package}{42}{subsubsection.6.7.1}
+\contentsline {subsubsection}{\numberline {6.7.2}Classi}{42}{subsubsection.6.7.2}
+\contentsline {subsubsection}{\numberline {6.7.3}Interazioni con altri componenti}{43}{subsubsection.6.7.3}
+\contentsline {subsection}{\numberline {6.8}com.apim.server.user}{43}{subsection.6.8}
+\contentsline {subsubsection}{\numberline {6.8.1}Informazioni sul Package}{43}{subsubsection.6.8.1}
+\contentsline {subsubsection}{\numberline {6.8.2}Classi}{43}{subsubsection.6.8.2}
+\contentsline {subsubsection}{\numberline {6.8.3}Interazioni con altri componenti}{44}{subsubsection.6.8.3}
+\contentsline {subsection}{\numberline {6.9}com.apim.server.admin}{45}{subsection.6.9}
+\contentsline {subsubsection}{\numberline {6.9.1}Informazioni sul Package}{45}{subsubsection.6.9.1}
+\contentsline {subsubsection}{\numberline {6.9.2}Classi}{45}{subsubsection.6.9.2}
+\contentsline {subsubsection}{\numberline {6.9.3}Interazioni con altri componenti}{47}{subsubsection.6.9.3}
+\contentsline {subsection}{\numberline {6.10}com.apim.server.shared}{48}{subsection.6.10}
+\contentsline {subsubsection}{\numberline {6.10.1}Informazioni sul Package}{48}{subsubsection.6.10.1}
+\contentsline {subsubsection}{\numberline {6.10.2}Classi}{48}{subsubsection.6.10.2}
+\contentsline {subsubsection}{\numberline {6.10.3}Interazioni con altri componenti}{50}{subsubsection.6.10.3}
+\contentsline {subsection}{\numberline {6.11}com.apim.server.dao}{51}{subsection.6.11}
+\contentsline {subsubsection}{\numberline {6.11.1}Informazioni sul Package}{51}{subsubsection.6.11.1}
+\contentsline {subsubsection}{\numberline {6.11.2}Classi}{51}{subsubsection.6.11.2}
+\contentsline {subsubsection}{\numberline {6.11.3}Interazioni con altri componenti}{53}{subsubsection.6.11.3}
+\contentsline {subsection}{\numberline {6.12}com.apim.server.entities}{54}{subsection.6.12}
+\contentsline {subsubsection}{\numberline {6.12.1}Informazioni sul Package}{54}{subsubsection.6.12.1}
+\contentsline {subsubsection}{\numberline {6.12.2}Classi}{54}{subsubsection.6.12.2}
+\contentsline {subsubsection}{\numberline {6.12.3}Interazioni con altri componenti}{56}{subsubsection.6.12.3}
+\contentsline {section}{\numberline {7}Architettura Database}{57}{section.7}
+\contentsline {subsection}{\numberline {7.1}Progettazione concettuale}{57}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Schema concettuale}{57}{subsubsection.7.1.1}
+\contentsline {subsubsection}{\numberline {7.1.2}Classi}{57}{subsubsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.3}Associazioni}{59}{subsubsection.7.1.3}
+\contentsline {subsection}{\numberline {7.2}Progettazione logico-relazionale}{60}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Schema logico-relazionale}{60}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2}Gerarchie}{60}{subsubsection.7.2.2}
+\contentsline {subsubsection}{\numberline {7.2.3}Relazioni}{61}{subsubsection.7.2.3}
+\contentsline {section}{\numberline {8}Design Pattern}{63}{section.8}
+\contentsline {subsection}{\numberline {8.1}Design Pattern Architetturali}{63}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}Microservizi}{63}{subsubsection.8.1.1}
+\contentsline {subsubsection}{\numberline {8.1.2}Model View View Model - MVVM}{64}{subsubsection.8.1.2}
+\contentsline {subsubsection}{\numberline {8.1.3}Data Access Object - DAO }{64}{subsubsection.8.1.3}
+\contentsline {subsection}{\numberline {8.2}Design Pattern Creazionali}{65}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Abstract Factory }{65}{subsubsection.8.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2}Dependency Injection}{66}{subsubsection.8.2.2}
+\contentsline {subsection}{\numberline {8.3}Design Pattern Strutturali}{66}{subsection.8.3}
+\contentsline {subsubsection}{\numberline {8.3.1}Facade}{66}{subsubsection.8.3.1}
+\contentsline {subsection}{\numberline {8.4}Desgin Pattern Comportamentali}{67}{subsection.8.4}
+\contentsline {subsubsection}{\numberline {8.4.1}Command}{67}{subsubsection.8.4.1}
+\contentsline {section}{\numberline {9}Diagrammi di Attivit\IeC {\`a}}{68}{section.9}
+\contentsline {subsection}{\numberline {9.1}Presentazione dei diagrammi}{68}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Attivit\IeC {\`a} principali}{69}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Autenticazione utente}{70}{subsection.9.3}
+\contentsline {subsection}{\numberline {9.4}Recupero password}{71}{subsection.9.4}
+\contentsline {subsection}{\numberline {9.5}Registrazione utente}{72}{subsection.9.5}
+\contentsline {subsection}{\numberline {9.6}Accesso pagina utente}{73}{subsection.9.6}
+\contentsline {subsection}{\numberline {9.7}Visualizza pagina utente}{74}{subsection.9.7}
+\contentsline {subsection}{\numberline {9.8}Modifica dati}{75}{subsection.9.8}
+\contentsline {subsection}{\numberline {9.9}Registrazione nuova API}{76}{subsection.9.9}
+\contentsline {subsection}{\numberline {9.10}Visualizza API caricate}{77}{subsection.9.10}
+\contentsline {subsection}{\numberline {9.11}Ricerca}{78}{subsection.9.11}
+\contentsline {subsection}{\numberline {9.12}Visualizza pagina API}{79}{subsection.9.12}
+\contentsline {subsection}{\numberline {9.13}Utente amministrativo}{80}{subsection.9.13}
+\contentsline {section}{\numberline {10}Tracciamento}{81}{section.10}
+\contentsline {subsection}{\numberline {10.1}Tracciamento requisiti-componenti}{81}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Tracciamento componenti-requisiti}{83}{subsection.10.2}
+\contentsline {section}{\numberline {A}Descrizione Design Pattern}{86}{appendix.Alph1}
+\contentsline {subsection}{\numberline {A.1}Design Pattern Architetturali}{86}{subsection.Alph1.1}
+\contentsline {subsubsection}{\numberline {A.1.1}Pattern Architetturale a Microservizi}{86}{subsubsection.Alph1.1.1}
+\contentsline {subsubsection}{\numberline {A.1.2}Data Access Object (DAO)}{87}{subsubsection.Alph1.1.2}
+\contentsline {subsubsection}{\numberline {A.1.3}Model View ViewModel}{88}{subsubsection.Alph1.1.3}
+\contentsline {subsection}{\numberline {A.2}Design Pattern Creazionali}{89}{subsection.Alph1.2}
+\contentsline {subsubsection}{\numberline {A.2.1}Abstract Factory}{89}{subsubsection.Alph1.2.1}
+\contentsline {subsubsection}{\numberline {A.2.2}Dependency Injection}{91}{subsubsection.Alph1.2.2}
+\contentsline {subsection}{\numberline {A.3}Design Pattern Strutturali}{92}{subsection.Alph1.3}
+\contentsline {subsection}{\numberline {A.4}Facade}{92}{subsection.Alph1.4}
+\contentsline {subsection}{\numberline {A.5}Design Pattern Comportamentali}{93}{subsection.Alph1.5}
+\contentsline {subsubsection}{\numberline {A.5.1}Command}{93}{subsubsection.Alph1.5.1}
+\contentsline {section}{\numberline {B}MockUp}{96}{appendix.Alph2}
+\contentsline {subsection}{\numberline {B.1}Home}{96}{subsection.Alph2.1}
+\contentsline {subsection}{\numberline {B.2}Profilo}{98}{subsection.Alph2.2}
+\contentsline {subsection}{\numberline {B.3}Ricerca}{99}{subsection.Alph2.3}
