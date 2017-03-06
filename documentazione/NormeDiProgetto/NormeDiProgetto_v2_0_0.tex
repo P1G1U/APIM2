@@ -1,0 +1,949 @@
+% !TeX spellcheck = it_IT
+\documentclass[12pt,a4paper,titlepage]{article}
+%va sempre messo article per "program documentation"
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=1cm,right=1cm]{geometry}
+\usepackage{soulutf8,color}
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage{emptypage}\textbf{\emph{}}           
+% pagine vuote senza testatina e piede di pagina
+%\usepackage{hyperref}                     
+% collegamenti ipertestuali
+\usepackage{fancyhdr}
+% pacchetto per intestazione e pie pagina
+\pagestyle{fancy}
+% \\ indica interruzione di riga
+% compilate 2 volte per documenti con indice
+% {\em qui testo in corsivo}
+% {\bfseries qui testo in grossetto}
+%LISTE NUMERATE
+%\begin{enumerate}
+%\item primo
+%\item secondo
+%\item terzo
+%\end{enumerate}
+%LISTE PUNTATE
+%\begin{itemize}
+%\item primo
+%\item secondo
+%\item \dots
+%\end{itemize}
+%TABELLA
+%\begin{tabular}{|c|c|c|}
+%indica una tabella con 3 colonne e pos. testo centrale. La barra verticale ( | ) indica che vi è una linea divisoria verticale tra le celle.
+%\hline	linea separatrice orizzontale
+%testo1& testo2& testo3\\
+% & segna la fine del testo nella cella, \\ indica il fine della riga 
+%GRAFICI
+%\begin{figure}
+%\includegraphics{filegrafico}
+%comando per includere le immagini (controllare i formati)
+%\caption{didascalia}
+%\label{nome}
+%\end{figure}
+%----------------------------------------------------------- INIZIO TEMPLATE TITOLO
+\usepackage{xcolor} % Importa i colori per la prima pagina
+\usepackage{fix-cm} % Permette l'incremento del font oltre misura
+\newcommand{\HRule}[1]{\hfill \rule{0.2\linewidth}{#1}} % Horizontal rule at the bottom of the page, adjust width here
+\definecolor{grey}{rgb}{0.9,0.9,0.9} % Colore del box del titolo
+\begin{document}
+	
+	\thispagestyle{empty} % Toglie il numero della pagina nella prima pagina
+	
+	%----------------------------------------------------------------------------------------
+	%	TITLE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\colorbox{grey}{
+		\parbox[t]{1.0\linewidth}{
+			\centering \fontsize{50pt}{80pt}\selectfont % Il primo è la grandezza del font, il secondo lo spazio lasciato
+			\vspace*{0.7cm} % Spazio dall'inizio del box al titolo
+			
+			\raggedleft
+			\includegraphics[width=0.7\linewidth]{../LogoSWEgGroupSFONDOVUOTO.png}
+			
+			\hfill Norme di Progetto \\
+			
+			\vspace*{0.7cm} % Spazio dalla fine del testo alla fine del box
+		}
+	}
+	
+	%----------------------------------------------------------------------------------------
+	
+	\vfill % Spazio dalla fine del box alle altre informazioni
+	
+	%----------------------------------------------------------------------------------------
+	%	Informazioni sul documento
+	%----------------------------------------------------------------------------------------
+	
+	{\centering \large 
+		\hfill \textbf{Versione} 2.0.0 \\
+		\hfill \textbf{Data di rilascio} 06/03/2017 \\
+		\hfill \textbf{Redazione} Sebastiano Marchesini \\
+		\hfill Piergiorgio Danieli \\
+		\hfill \textbf{Verifica} Alberto Gelmi \\
+		\hfill \textbf{Validazione} Pietro Lonardi \\
+		\hfill \textbf{Responsabile} Sebastiano Marchesini \\
+		\hfill \textbf{Uso} Interno \\
+		\hfill \textbf{Destinato} SWEg Group \\ 
+		
+		\HRule{1pt}
+		
+		\textbf{Sommario} \\
+		Questo documento ha l'obiettivo di definire le regole che i membri del gruppo seguiranno nello sviluppo del progetto.
+		
+	} % Linea orizzontale di estetica
+	
+	
+	%----------------------------------------------------------------------------------------
+	
+	\clearpage % Parta bianca finale della pagina
+	
+	%----------------------------------------------------------- FINE TEMPLATE TITOLO
+\lhead{\includegraphics[width=0.2\linewidth]{../LogoSWEgGroup}}
+\chead{}
+\lfoot{Norme Di Progetto}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+\rhead{Registro Modifiche}
+\section{Registro Modifiche}
+\small %rippicciolisce il testo
+{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
+	\begin{center}
+	\begin{tabular}{|l|c|c|c|}
+			\hline
+			{{\textbf{Ver.}}&{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}\\
+			\hline
+			2.0.0 & Verifica delle aggiunte & Lonardi Pietro & 22/02/2017 \\
+			\hline
+			1.0.1 & Aggiunta procedura di verifica & Piergiorgio Danieli & 22/02/2017 \\
+			\hline
+			1.0.0 & Correzioni & Piergiorgio Danieli & 15/02/2017 \\
+			\hline
+			1.0.1 & Validazione & Pietro Lonardi & 09/01/2017 \\
+			\hline
+			0.5.1 & Correzioni Verifica & Sebastiano Marchesini & 08/01/2017 \\
+			\hline
+			0.5.0 & Verifica & Alberto Gelmi & 06/01/2017 \\
+			\hline
+			0.1.2 & Aggiunti Punti nella Lista di Controllo & Sebastiano Marchesini & 05/01/2017 \\
+			\hline
+			0.1.1 & Stesura Completa & Sebastiano Marchesini & 02/01/2017 \\
+			\hline
+			0.1.0 & Stesura Iniziale & Sebastiano Marchesini & 30/12/2016 \\
+			\hline
+			0.0.6 & Aggiunto Versionamento & Sebastiano Marchesini & 15/12/2016 \\
+			\hline
+			0.0.5 & Aggiunto Ambiente di Lavoro & Piergiorgio Danieli & 15/12/2016 \\
+			\hline
+			0.0.4 & Aggiunti Analisi dei Requisiti & Sebastiano Marchesini & 14/12/2016 \\
+			\hline
+			0.0.3 & Aggiunte Procedure di Sviluppo & Piergiorgio Danieli & 13/12/2016 \\
+			\hline
+			0.0.2 & Aggiunti Ruoli & Sebastiano Marchesini & 12/12/2016 \\
+			\hline
+			0.0.1 & Creazione Documento & Piergiorgio Danieli & 12/12/2016 \\
+			\hline
+	\end{tabular}
+	\end{center}
+}
+\normalsize	%lo riporta a forma normale
+\newpage
+\tableofcontents
+%crea indice automaticamente
+\thispagestyle{empty}
+\newpage
+\rhead{Introduzione}
+\section{Introduzione}
+	\subsection{Scopo del Documento}
+	Questo documento ha l'obiettivo di definire le regole che i membri del gruppo \textit{SWEG} seguiranno nello sviluppo del progetto.\\
+	Ogni componente del team é tenuto a leggere e seguire le norme qui contenute per ottimizzare il lavoro, uniformare tutti i documenti e minimizzare gli errori.\\
+	In particolare verranno specificate le norme per:
+\begin{itemize}
+\item interazioni tra i membri del gruppo e componenti esterni;
+\item stesura dei documenti e relative convenzioni;
+\item ambiente di lavoro;
+\item stesura del codice.
+\end{itemize}
+\subsection{Glossario}
+Al fine di evitare ambiguità e ottimizzare la comprensione dei documenti, viene incluso un Glossario, nel quale saranno inseriti i termini tecnici, acronimi e parole che necessitano di essere chiarite.\\
+Un glossario è una raccolta di termini di un ambito specifico e circoscritto. In questo caso per raccogliere termini desueti e specialistici inerenti al progetto. 
+\subsection{Riferimenti}
+\subsubsection{Normativi}
+\begin{itemize}
+	\item \textbf{Standard ISO/IEC 12207}.
+\end{itemize}
+\subsubsection{Informativi}
+\begin{itemize}
+	\item \textbf{Manuale Latex}:\\
+	\textcolor{blue}{\url{http://www.guit.sssup.it/downloads/LaTeX-facile.pdf}}.\\
+	\textcolor{blue}{\url{http://www.guit.sssup.it/downloads/fig_tut.pdf}}.\\
+	\textcolor{blue}{\url{http://mnnugm.altervista.org/latex/Tabelle.pdf}}.
+	\item \textbf{Piano di Qualifica}:\\
+	"Piano di Qualifica v1.0.0".
+	\item \textbf{Piano di Progetto}:\\
+	"Piano di Progetto v1.0.0".
+\end{itemize}
+\newpage
+\rhead{Comunicazioni e Riunioni}
+\section{Comunicazioni e Riunioni}
+\subsection{Comunicazioni Interne ed Esterne}
+\subsubsection{Interne}
+Per le comunicazioni interne è stato creato un gruppo su \textit{Telegram}, un'app di messaggistica istantanea. Questo canale sarà utilizzato solamente per le comunicazioni interne informali.
+\subsubsection{Esterne}
+Per le comunicazioni esterne è stata creata la casella di posta \textit{sweg.group@gmail.com}.\\ 
+Questo può essere l'unico canale utilizzabile. Solo il \textit{Project Manager} può avere delle interazioni con l'esterno, sarà poi compito suo riferire il contenuto delle discussioni agli altri componenti del gruppo.
+\subsection{Riunioni}
+\subsubsection{Interne}
+Le convocazioni alle riunioni sono notificate dal \textit{Project Manager} e confermate informalmente dai componenti del gruppo. Ogni membro è tenuto a partecipare a meno di una giustificazione valida. Una riunione è fissata per discutere di argomenti di interesse generale di tutti i componenti. È però possibile che ci sia la necessità di effettuare delle riunioni alle quali non è richiesta la presenza di tutti i membri ma solo di alcuni di essi; in questo caso il \textit{Project Manager} autorizza l'incontro e poi vi prenderanno parte solo le persone interessate, le quali dovranno poi informare gli altri componenti del gruppo delle decisioni prese.
+\subsubsection{Esterne}
+È compito del \textit{Project Manager} fissare degli incontri con il proponete ed il committente.\\
+Tutti i membri del gruppo ne devono essere informati. Ad ogni incontro verrà scelto un 
+segretario il quale avrà il compito di redigere un verbale che verrà poi inviato a tutti
+i componenti.\\
+Ogni verbale redatto dovrà avere la seguente composizione: 
+\begin{enumerate}
+\item Data e ora;
+\item Luogo;
+\item Partecipanti interni;
+\item Partecipanti esterni;
+\item Argomenti trattati;
+\item Domande e risposte.
+\end{enumerate}
+\newpage
+\rhead{Documenti}
+\section{Documenti}
+\subsection{Template}
+Per facilitare ed unificare la redazione della documentazione è stato creato un 
+template apposito in \LaTeX.
+\subsubsection{Stile del testo}
+\begin{itemize}
+\item \textbf{Grassetto}: Deve essere applicato alle parole significative che devono essere messe in risalto;
+\item \textbf{Corsivo}: va utilizzato per indicare termini in lingua inglese e nomi dei file;
+\item \textbf{Maiuscolo}: va usato per scrivere gli acronimi;
+\item \textbf{Latex}: ogni riferimento a \LaTeX va scritto utilizzando il comando \verb|\LaTex|.
+\end{itemize}
+\subsection{Convenzioni tipografiche}
+I principali comandi utilizzati in \LaTeX sono indicati sotto per argomento.\\ Per le liste:
+\begin{itemize}
+	\item \verb=\begin{itemize} \end{itemize}= dove tra i due comandi posso mettere i vari punti di una lista;
+	\item gli oggetti della lista si indicano col comando \verb=\item=;
+	\item vi possono essere vari tipi di liste: \verb|itemize| puntata, \verb|enumerate| numerata e \verb|trivlist| vuota.
+\end{itemize}
+Per le tabelle:
+\begin{itemize}
+	\item \verb|\renewcommand\arraystretch{1.2}| allarga ogni riga dello spazio indicato. La tabella va racchiusa tra parentesi graffe;
+	\item \verb=\begin{tabular}{|c|c|c|} \end{tabular}= indica una tabella con 3 colonne e testo centrato. La barra verticale ( | ) indica che vi è una linea divisoria verticale tra le celle;
+	\item \verb|\hline| indica una linea separatrice orizzontale;
+	\item \verb|&| è il simbolo separatore tra le celle orizzontalmente;
+	\item \verb|\\| passa alla riga successiva della tabella.
+\end{itemize}
+Per le immagini:
+\begin{itemize}
+	\item \verb|\begin{figure} \end{figure}| inizio e fine di una sezione con figure;
+	\item \verb|\centering| imposta centrale la figura;
+	\item \verb|\includegraphics{filegrafico}| comando per includere le immagini, è importante controllare il formato;
+	\item \verb|\caption{didascalia}| inserisce una didascalia sotto l'immagine;
+	\item \verb|\label{nome}| imposta il nome della tabella.
+\end{itemize} 
+ 
+\subsection{Formati}
+\begin{itemize}
+	\item \textbf{Date}: saranno espresse nel formato italiano gg/mm/aaaa dove:
+	\begin{itemize}
+		\item gg: indica il giorno, va scritto sempre con 2 cifre;
+		\item mm: rappresenta il mese, va scritto sempre con 2 cifre;
+		\item aaaa: rappresenta l'anno, va scritto sempre con 4 cifre. 
+	\end{itemize}
+	\item \textbf{Anni accademici}: si userà il formato aaaa1-aaaa2 dove:
+	\begin{itemize}
+		\item aaaa1: indica l'anno solare di inizio, va scritto sempre con 4 cifre;
+		\item aaaa2: indica l'anno solare di fine, va scritto sempre con 4 cifre.
+	\end{itemize}
+	\item \textbf{Orari}: verranno espressi secondo lo standard \textit{ISO 8601} HH:MM dove:
+	\begin{itemize}
+		\item HH: indica le ore, va scritto sempre con 2 cifre;
+		\item MM: indica i minuti, va scritto sempre con 2 cifre.
+	\end{itemize}
+	\item \textbf{URL}: collegamento ad un indirizzo web deve essere scritto con un font di colore blu;
+	
+	\item \textbf{Sigle}: i nomi dei documenti potranno essere sostituiti dalle rispettive sigle:
+	\begin{itemize}
+		\item AdR ad indicare il documento "Analisi dei Requisiti";
+		\item PdP ad indicare il documento "Piano di Progetto";
+		\item PdQ ad indicare il documento "Piano di Qualifica";
+		\item NdP ad indicare il documento "Norme di Progetto";
+		\item Gl ad indicare il documento "Glossario";
+		\item ST ad indicare il documento "Specifica Tecnica";
+		\item SdF ad indicare il documento "Studio di Fattibilità".
+	\end{itemize}
+\end{itemize}
+\subsection{Struttura del documento}
+\subsubsection{Frontespizio}
+Il frontespizio di ogni documento dovrà essere così strutturato:
+\begin{itemize}
+	\item Logo-nome del gruppo;
+	\item Titolo del documento;
+	\item Versione del documento;
+	\item Nome e cognome dei redattori del documento;
+	\item Nome e cognome dei revisori del documento;
+	\item Uso del documento;
+	\item Destinatari del documento.
+\end{itemize}
+\subsubsection{Diario delle modifiche}
+La seconda pagina deve essere una tabella contenente i cambiamenti che sono stati 
+effettuati nel documento. Deve essere così strutturata:
+\begin{itemize}
+	\item Modifica: descrizione delle modifiche effettuate;
+	\item Nome: nome e cognome dell'autore delle modifiche;
+	\item Data: il giorno nel quale sono state apportate le modifiche;
+	\item Versione: la versione del documento dopo la modifica.
+\end{itemize}
+La tabella è ordinata per data in ordine decrescente, in modo che la prima riga 
+sia l'ultima modifica eseguita, e quindi corrisponda alla versione attuale del documento.
+\subsubsection{Indice}
+La pagina successiva al diario delle modifiche deve essere l'indice del documento.
+Ogni documento tranne i verbali deve contenere l'indice che serve a dare una visione globale degli argomenti trattati.\\
+L'indice è autogenerato con un comando di \LaTeX .
+\subsubsection{Formattazione generale}
+Tutte le altre pagine del documento dovranno rispettare la struttura di base che segue:
+\begin{itemize}
+	\item Logo del gruppo: sarà posizionato sempre in alto a sinistra;
+	\item Sezione corrente: nell'intestazione deve comparire il numero ed il nome della sezione in cui ci si trova. Questa informazione sarà in alto a destra;
+	\item Nome del documento: compare a piè di pagina, a sinistra;
+	\item Numero di pagina: compare a piè di pagina, a destra.
+\end{itemize} 
+Ogni pagina deve rispettare i seguenti margini: 
+\begin{itemize}
+	\item Superiore: 2cm;
+	\item Inferiore: 2cm;
+	\item Destro: 1cm;
+	\item Sinistro: 1cm.
+\end{itemize}
+\subsection{Classificazione documenti}
+\subsubsection{Documenti formali}
+Tutti i documenti che sono stati approvati dal \textit{Project Manager} sono da ritenersi formali.\\ 
+Se un documento formale viene modificato, deve essere successivamente approvato nuovamente
+dal \textit{Project Manager}. 
+\subsubsection{Documenti informali}
+Sono quei documenti che non sono stati approvati del Project Manager, poiché non lo necessitano e quindi sono ad esclusivo uso interno, o perché sono ancora in fase di sviluppo e verranno 
+approvati successivamente.
+\subsection{Componenti grafiche}
+\subsubsection{Tabelle}
+Tutte le tabelle presenti nella documentazione necessitano di una didascalia che le descrive brevemente e che porta un numero progressivo in modo da identificarla univocamente.
+\subsubsection{Immagini}
+Le immagini come le tabelle dovranno essere accompagnate da una didascalia ed un numero progressivo che le identifica.
+\subsection{Intestazione file di documentazione}
+Ogni file di documentazione dovrà iniziare con la seguente intestazione:
+\begin{itemize}
+	\item \%FILE: nome del file;
+	\item \%PERCORSO: /PercorsoDelFile/NomeDelDocumento/;
+	\item \%DATA CREAZIONE: gg/mm/aa;
+	\item \%AUTORE: SWEg;
+	\item \%EMAIL: sweg.group@gmail.com.
+\end{itemize}
+\newpage
+\rhead{Ruoli}
+\section{Ruoli}
+\subsection{Ruoli all'interno del progetto}
+Ad ogni componente è assegnato un ruolo all'interno del progetto che varia a seconda di regole che sono riportate in seguito. È importante che non vi sia conflitto di interesse, infatti non è possibile validare il processo progettato o realizzato. Può però capitare che si svolgano più compiti nello stesso periodo causa carenza di personale. Importante è la flessibilità all'interno del team per diminuire i tempi di scambio mansione.\\
+Ogni membro, qualunque ruolo svolga, ha il diritto di rafforzare la sua funzione con corsi ed il dovere di specializzarsi con ricerca ed esperienze personali.
+\subsubsection{Project Manager (PM)} 
+Titolare di responsabilità decisionale. Rappresenta il progetto di fronte al fornitore e al committente. Tale figura è garante unico dell'avvio, pianificazione, svolgimento, controllo e chiusura di un progetto. In particolare :
+\begin{itemize}
+	\item Pianifica riunioni e compiti;
+	\item Gestisce i ruoli;
+	\item Ruolo preventivo e consuntivo;
+	\item Capacità tecniche e conosce bene gli strumenti utili;
+	\item Controllo, coordinamento con relazioni esterne;
+	\item Approvazione documenti.
+\end{itemize}
+\subsubsection{Amministratore (AM)} 
+Responsabilità di cura dei processi. In dettaglio: 
+\begin{itemize}
+	\item Gestione delle risorse e delle infrastrutture;
+	\item Ispettore di versioni e configurazioni;
+	\item Risolutore di difficoltà di processi.
+\end{itemize}
+\subsubsection{Analista (AN)} 
+Il ruolo principale dell'analista è l'attuazione dei requisiti, quindi comprendere il problema in ogni sfaccettatura, senza l'obbligo di trovare una soluzione. Tra le sue competenze: 
+\begin{itemize}
+	\item Cogliere il problema;
+	\item Conoscere il dominio del quesito;
+	\item Vasta esperienza professionale.
+\end{itemize}
+\subsubsection{Progettista (PL)} 
+Il compito del progettista è quello di realizzare e seguire la manutenzione del prodotto. È di fatto un attuatore: 
+\begin{itemize}
+	\item Risolve il problema;
+	\item Definisce cosa viene costruito e come;
+	\item Ampia conoscenza nei linguaggi e delle risorse utilizzate;
+	\item Esegue una soluzione attuabile e comprensibile.
+\end{itemize}
+\subsubsection{Programmatore (PR)} 
+Il programmatore è la mano che crea il progetto. Il suo compito principale è infatti la realizzazione e la manutenzione del prodotto. Come il progettista anche nel suo ambito è un attuatore :
+\begin{itemize}
+	\item Segue i piani progettati e attua il disegno previsto;
+	\item Implementa test di verifica automatica per il suo codice;
+	\item Il codice che scrive deve essere versionato, documentato e comprensibile.
+\end{itemize}
+\subsubsection{Verificatore (VR)} 
+Al termine del lavoro eseguito dagli altri membri del team il verificatore esegue un controllo tramite analisi statica del ticket. Questa può essere attuata tramite \textit{Walkthrough} o \textit{Inspection}. Nel secondo caso la check list è concordata insieme al \textit{Project Manager}. 
+\begin{itemize}
+	\item Controlla siano rispettati gli standard aderiti nel progetto;
+	\item Assicura la conformità del prodotto in ogni fase del ciclo di vita.
+\end{itemize}
+\subsubsection{Responsabile Qualità} 
+Non è richiesto tale ruolo all'interno del team e non sarà interpretato nella rotazione. Molto spesso è incaricato un ente esterno all'azienda. In questo caso è compito del committente.
+\subsection{Sistema rotativo dei ruoli}
+Il progetto a scopo didattico ha l'obbligo di far interpretare ogni ruolo a tutti i partecipanti del team. Per il momento assumiamo un modello agile di tipo \textit{scrum} per eseguire i compiti (o \textit{ticket}). Quindi dopo aver costruito una prima check list in gruppo ogni obbiettivo viene risolto da un sottogruppo in cui il primo che preferisce eseguirlo assume il ruolo di \textit{Project Manager} e vaglia oggettivamente ogni sfaccettatura per risolvere il \textit{backlog} richiedendo le risorse di cui ha bisogno.
+\subsection{Costi Ruoli}
+Ciascun ruolo e mansione ha un peso diverso nel progetto e quindi un costo, che deve rientrare nel \textit{budget} pattuito dal committente $9300,00$\footnote{Il calcolo del budget per noi gruppo composto da 5 persone è stato calcolato proporzionalmente al costo di 7 persone arrotondato per eccesso.}. Non specificato nel nostro caso.
+\subsubsection{Tabella Costi}
+{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
+	\begin{tabular}{|l|c|}
+		\hline
+		\textbf{Responsabile/Project Manager} & \euro 30,00 \\
+		\hline
+		\textbf{Amministratore} & \euro 20,00 \\
+		\hline
+		\textbf{Analista} & \euro 25,00 \\
+		\hline
+		\textbf{Progettista} & \euro 22,00 \\
+		\hline
+		\textbf{Programmatore} & \euro 15,00 \\
+		\hline
+		\textbf{Verificatore} & \euro 15,00 \\
+		\hline
+\end{tabular}}
+\vspace{0.5cm}
+\newpage
+\rhead{Analisi dei Requisiti}
+\section{Analisi dei Requisiti}
+\subsection{Studio di Fattibilità e Analisi dei Rischi}
+Dopo aver indetto le riunioni e stabilito i vari ruoli gli \textit{Analisti} valuteranno capacità e preferenze del progetto che gioveranno alla completa realizzazione degli obbiettivi. È quindi compito di questi ultimi, sulla base di quanto deciso, redigere uno \textit{Studio di Fattibilità} con:
+\begin{itemize}
+	\item Motivi della scelta del capitolato;
+	\item Ragioni per le quali sono stati scartati gli altri capitolati;
+	\item Contributi agli obbiettivi dell'organizzazione;
+	\item Ingegnerizzare con la tecnologia corrente entro il \textit{budget};
+	\item Integrazione con altri sistemi usati.
+\end{itemize}
+\subsection{Documento Analisi dei Requisiti}
+Sempre gli \textit{Analisti} hanno compito di redigere l'\textit{Analisi dei Requisiti}. Comunicheranno poi al \textit{Project Manager} il bisogno di negoziare e chiarire con il committente punti meno chiari del capitolato.
+\subsubsection{Classificazione dei requisiti}
+Ogni requisito può essere provvisto di più sotto-requisiti. I requisiti vengono organizzati in forma gerarchica.\\
+Al compimento di tutti i moduli che compongono il requisito padre questo viene soddisfatto.\\
+La notazione da utilizzare è quella che segue:
+\begin{center}
+\textbf{ <0|1|2><F|P|Q|V>-X<.Y<.Z> > }
+\end{center}
+Dove le seguenti sigle indicano:
+\begin{trivlist}
+	\item \textbf{0}: obbligatorio;
+	\item \textbf{1}: desiderabile;
+	\item \textbf{2}: opzionale.
+\end{trivlist} 
+Hanno diverso tipo:
+\begin{trivlist}
+	\item \textbf{F}: requisito funzionale;
+	\item \textbf{P}: requisito prestazionale;
+	\item \textbf{Q}: requisito di qualità;
+	\item \textbf{V}: requisito dichiarativo(vincoli).
+\end{trivlist} 
+Tale parte indica il codice identificativo di ogni requisito.\\
+È espresso in modo gerarchico ed univoco.
+\begin{trivlist}
+	\item \textbf{X}: requisito di primo livello;
+	\item \textbf{Y}: sotto-requisito;
+	\item \textbf{Z}: sotto-requisito di un sotto-requisito.
+\end{trivlist} 
+I campi Y e Z possono essere assenti.\\
+Si ricorda che per ogni requisito c'è bisogno di una descrizione e di riportare le dipendenze che ha verso altri. I requisiti non devono comunque essere in conflitto tra loro.
+\subsubsection{Allocazione e modellazione concettuale del sistema}
+Il team \textit{Analisti}, dopo aver preso visione nello specifico del capitolato e aver fatto emergere i requisiti, procede con la costruzione dei diagrammi dei casi d'uso ( \textit{UC} ).\\
+Nello specifico è richiesto:
+\begin{itemize}
+	\item \textbf{Titolo} del caso d'uso sintetico;
+	\item \textbf{Attori Principali};
+	\item \textbf{Attori Secondari}, nel caso vi fossero.
+\end{itemize}
+Descrizione del caso con:
+\begin{itemize}
+	\item \textbf{Scenario principale};
+	\item \textbf{Scenari/o alternativo}, se presenti;
+	\item \textbf{Precondizione};
+	\item \textbf{Postcondizione};
+	\item \textbf{Requisiti del caso d'uso ricavati}.
+\end{itemize}
+Il caso d'uso sarà sempre associato da un grafico specializzato. Si è scelto uno standard ibrido tra \textit{UML 2.x e 1.x} con le funzioni principali che racchiudono le due versioni di linguaggio.
+\subsection{Tracciamento}
+Il tracciamento dimostra completezza ed economicità della soluzione. Se tracciati tutti i requisiti conseguentemente:
+\begin{itemize}
+	\item Possiamo soddisfarli;
+	\item Nessuna funzionalità è superflua;
+	\item Nessun comportamento è ingiustificato.
+\end{itemize}
+È nostro compito automatizzare il processo con software adeguato.
+\newpage
+\rhead{Processi Primari}
+\section{Processi Primari}
+Si è scelto di seguire e reinterpretare per i processi primari lo \textbf{Standard ISO/IEC 12207}. Tenendo delle basi comuni ma essendo più flessibile su alcuni processi, raggruppandoli e rinominandoli.\\
+I processi primari esistono all'esistenza del processo, contengono il nocciolo dei processi coinvolti nella creazione di un prodotto software. Sono divisi in cinque processi principali:
+\begin{itemize}
+	\item Acquisizione;
+	\item Fornitura;
+	\item Sviluppo;
+	\item Gestione operativa (utilizzo);
+	\item Manutenzione.
+\end{itemize}
+\subsection {Acquisizione}
+L'acquisizione comprende tutte le attività coinvolte nel promuovere un progetto. La fase di acquisizione può essere suddivisa in diverse attività e risultati finali che sono stati completati in ordine cronologico.
+\subsubsection {Obbiettivo}
+In questa fase lo scopo da raggiungere è l'accordo tra le parti per eseguire il lavoro.
+\subsubsection {Iniziazione}
+Durante questa attività sono completati i seguenti compiti:
+\begin{itemize}
+	\item Viene descritto il motivo per acquisire, sviluppare, o migliorare un prodotto;
+	\item I requisiti di sistema sono definiti ed approvati;
+	\item I requisiti software globali sono definiti;
+	\item La valutazione di altre opzioni, come un acquisto prodotto già pronto o il miglioramento di un prodotto esistente;
+	\item Viene sviluppato un piano di acquisizione, questo piano verrà utilizzato più avanti;
+	\item I criteri di accettazione sono definiti.
+\end{itemize}
+\subsubsection {Richiesta di preparazione delle proposte}
+Durante questa attività sono svolte le seguenti mansioni:
+\begin{itemize}
+	\item Vengono definiti i  requisiti di acquisizione come i requisiti di sistema e dei vincoli tecnici;
+	\item Vengono definite le \textit{milestone} del contratto per la revisione ed  \texit{audit} il  progresso.
+\end{itemize}
+\subsubsection {Preparazione contrattto}
+\begin {itemize}
+	\item Viene sviluppata una procedura di selezione per i fornitori;
+	\item Vengono scelti i fornitori sulla base della procedura sviluppata.
+\end {itemize}
+\subsubsection {Negoziare i cambiamenti}
+	In questa fase si svolgono i negoziati con i fornitori scelti.
+\subsubsection {Accettazione e completamento}
+\begin {itemize}
+	\item Vengono sviluppati i test e le procedure di accettazione;
+	\item Viene condotta la gestione della configurazione sul prodotto consegnato.
+\end {itemize} 
+\subsection{Fornitura}
+Formato dai:
+\begin{itemize}
+	\item Bandi del Fornitore;
+	\item Accordo Contrattuale;
+	\item Fornitura di Rilascio del Prodotto;
+	\item Accettazione del Prodotto.
+\end{itemize}
+\subsubsection{Obbiettivo}
+Il processo riguarda le azioni che deve svolgere il \textit{Fornitore}, a partire dalla stesura dell'offerta tecnico-economica dopo aver scelto il capitolato adeguato, sino alla realizzazione ed alla consegna della fornitura.
+\subsubsection{Attivazione del processo}
+Il processo è attivato dal \textit{Fornitore} a fronte della decisione di predisporre un'offerta per rispondere alla richiesta di presentazione di una proposta da parte di un'Amministrazione. Il processo prosegue quindi con la sottoscrizione del contratto con il team, a cui segue la determinazione delle procedure e delle risorse necessarie a gestire ed assicurare la corretta esecuzione del capitolato, con lo svolgimento di tutte le attività previste nell'\textit{"Analisi dei Requisiti v1.0.0"}.
+\subsubsection{Attività e prodotti}
+Nello schema che segue si fornisce una rappresentazione delle attività del processo di Fornitura che riguardano la fase precedente la sottoscrizione del contratto. Le attività che il gruppo deve svolgere a valle della sottoscrizione del contratto, ricadono nell'ambito degli altri processi primari, organizzativi e di supporto del ciclo di vita della fornitura.
+\begin{itemize}
+	\item (Superamento delle materie che creano propedeuticità);
+	\item Studio personale della materia Ingegneria del Software;
+	\item Registrazione e creazione del gruppo tramite documento condiviso;
+	\item Analisi del capitolato scelto in comune accordo.
+\end{itemize}
+\subsubsection{Preparazione della Risposta}
+In risposta alla richiesta di una proposta da parte di un'azienda, il gruppo predispone un'offerta in cui definisce modi, tempi e costi per realizzare il progetto, nel rispetto dei requisiti specificati (offerte tecnico-economiche, organigramma, ecc.).\\
+Il risultato delle attività è l'offerta tecnico-economica che è vincolante per il team e diviene parte integrante della baseline di contratto.
+\subsubsection{Riesame e sottoscrizione del contratto}
+In caso di superamento della Revisione dei Requisiti, il team deve negoziare e sottoscrivere il contratto con l'ente.\\
+È parte integrante dell'attività un riesame del contratto da sottoscrivere, al fine di assicurare che i requisiti siano adeguatamente definiti e documentati, che eventuali scostamenti tra i requisiti riportati nel capitolato e quelli riportati nell'offerta siano risolti.
+\subsubsection{Chiusura del processo}
+Il processo di Fornitura si conclude con il completamento da parte del gruppo di tutte le attività previste in esecuzione del contratto.
+\subsection{Sviluppo}
+Il metodo a \textit{cascata sequenziale} è il modello utilizzato per ogni passaggio nel processo di sviluppo. Il \textit{Responsabile di Progetto} granula ogni attività per poi rendere il modello agile di tipo \textit{scrum}. Si rimanda al \textit{"Piano di Progetto v1.0.0"} per i dettagli.\\
+La specifica data che indica il passaggio tra il medesimo processo ed il successivo è regolata dai giorni di consegna e rilascio della correzione del capitolato. Tranne nella presentazione dei capitolati e inizio delle attività, vi sarà certamente un integrazione su ogni documento dettata dalle correzioni riportate dal \textit{Committente}.\\
+Per processi di sviluppo si è scelto di rielaborare quelli descritti nello standard ISO. Di seguito indichiamo la dichiarazione e le rielaborazioni.\\
+Ricordiamo inoltre che ogni processo ha inevitabilmente una o più fasi di verifica.
+\subsubsection{Analisi}
+È la prima attività di studio e di stesura dei documenti. Dopo un primo incontro con i membri del team e il team concorrente si stabiliscono i ruoli e si dividono i compiti come già menzionato o come descritto nel Piano di Progetto. È un processo lungo e lascia le basi per le future versioni.
+\subsubsection{Analisi in dettaglio}
+Questo processo si concentra sul documento di Analisi dei Requisiti, ed è il punto focale per la stipulazione del contratto con il \textit{Committente}. \\Il gruppo provvederà a una scrematura dei requisiti, con una divisione in accordo con il gruppo concorrente. Potrà inoltre porre delle domande all'azienda per migliorare la comprensione del capitolato e diminuire le possibilità di fallimento.
+\subsubsection{Progettazione Architetturale} 
+Progettazione non specifica e soluzioni dei principali requisiti accordati. \\ Redazione di nuovi documenti volti a illustrare scelte progettuali che il prodotto deve avere. In particolare un documento fondamentale in questa fase è chiamato Specifica Tecnica, il quale deve dare le indicazioni necessarie al programmatore per poter scrivere nel modo corretto il software. 
+\subsubsection{Progettazione di Dettaglio e Codifica}
+Ogni parte del progetto in questa fase è definita e progettata. Il sistema è modulato in ogni minima soluzione. Resta solo la codifica e la verifica del codice. In questa fase viene anche redatto il Manuale Utente, il quale dovrà spiegare il corretto utilizzo e funzionamento del software in modo dettagliato e preciso.
+\subsubsection{Validazione e Collaudo}
+La ricomposizione di ogni parte del progetto e la prova tramite \textit{Analisi Dinamica}. Revisione completa di ogni documento e parte. Collaudo e validazione di ogni struttura e componente progettuale daranno il via libera alla consegna finale del prodotto.
+\subsection {Gestione operativa}
+Le fasi di funzionamento e di manutenzione avvengono simultaneamente.
+Il funzionamento consiste in attività come assistere gli utenti nel lavorare con il prodotto software realizzato.
+\subsection {Manutenzione}
+La fase di manutenzione consiste di tutte quelle attività che servono per mantenere il prodotto installato e funzionante. La manutenzione include qualsiasi miglioramento generale, modifiche ed aggiunte che potrebbero essere richieste dagli utenti finali.Questi, e le carenze, di solito sono documentati in via di sviluppo per consentire soluzioni future in ogni \textit{release} di manutenzione future. Non vi è alcuna fase di smaltimento.
+\newpage
+\rhead{Procedure di sviluppo}
+\section{Procedure di sviluppo}
+In questa sezione verranno descritte le procedure che tutti i componenti del gruppo sono tenuti a seguire
+per ottenere un risultato soddisfacente degli obiettivi stabiliti dal \textit{Piano di qualifica v1.0.0}.
+\subsection{Gestione di progetto}
+Il \textit{Project Manager} ha la responsabilità di gestire l'intero progetto. Dovrà utilizzare gli
+strumenti in suo possesso per:
+\begin{itemize}
+	\item Coordinare e pianificare le attività;
+	\item Coordinare e gestire le risorse umane;
+	\item Analizzare i rischi;
+	\item Elaborare e monitorare i dati d'avanzamento.
+\end{itemize}
+\subsubsection{Pianificazione delle attività}
+Per ogni periodo di lavoro il \textit{Project Manager} deve stabilire le seguenti attività:
+\begin{itemize}
+	\item Creare un calendario lavorativo;
+	\item Inserire le attività da svolgere;
+	\item Inserire eventuali dipendenze delle attività;
+	\item Inserire le \textit{milestone} indicante il termine previsto delle attività;
+	\item Assegnare ad ogni attività le risorse necessarie.
+\end{itemize}
+\subsubsection{Coordinamento delle attività}
+Una volta pianificate le attività, il \textit{Project Manager} le assegna ad ognuno dei membri attraverso
+l'ausilio offerto da \textit{Asana}. Ogni componente può quindi verificare quali attività 
+gli sono state assegnate e modificarne lo stato, facendo in modo che il \textit{Project Manager} possa 
+seguire con facilità i progressi effettuati.
+\subsubsection{Analisi dei rischi}
+Durante tutto l'avanzamento del progetto il \textit{Project Manager} ha il compito di valutare eventuali
+rischi che possono venirsi a creare e che sono descritti nel \textit{Piano di Progetto v1.0.0} attuando 
+le adeguate contromisure descritte.
+\subsubsection{Elaborazione dei dati}
+Il \textit{Project Manager} dovrà creare eventuali grafici esplicativi dell'andamento del progetto, e 
+riportarli nel \textit{"Piano di Progetto v1.0.0"}.
+\subsection{Verifica}
+In questa sezione verranno descritti gli standard minimi che dovranno rispettare i processi, i prodotti ed i documenti per essere adeguati e le tecniche e le strategie che dovranno utilizzare i \textit{Verificatori} durante il loro lavoro per ottenere tali standard,  in modo da uniformare le attività ed ottenere il miglior risultato possibile.
+\subsubsection{Procedure di controllo di qualità del processo}
+	La qualità dei processi verrà garantita dall'applicazione del principio PDCA. Grazie a questo principio sarà possibile garantire non solo il controllo e la correttezza, ma anche il miglioramento costante della qualità di tutti i processi. Come conseguenza diretta si otterrà il miglioramento del prodotto.\\
+	Per avere controllo dei processi, e di conseguenza qualità, è necessario che:
+	\begin{itemize}
+		\item vi sia controllo sull'operato dei membri del team e sui processi;
+		\item i processi siano pianificati in modo dettagliato;
+		\item le risorse siano ripartite in modo chiaro.
+	\end{itemize}
+	L'attuazione di questi punti è descritta nel documento \textit{"Piano di progetto v1.0.0"}. Inoltre l'analisi costante della qualità del prodotto permette di monitorare in modo indiretto la qualità dei processi: se il prodotto è di bassa qualità sicuramente il processo è migliorabile.\\
+	Per valutare la qualità di un processo è fondamentale che questa sia quantificata, le metriche per fare ciò sono descritte nella sezione \nameref{MisureMetriche}.
+	\subsubsection{Procedure di controllo di qualità di prodotto}
+	Il controllo di qualità dei prodotti verrà garantito dai seguenti processi:
+	\begin{itemize}
+		\item \textbf{Software Quality Assurance (SQA)}: assicura che i processi siano appropriati per il progetto, che siano correttamente implementati. Prevede l'attuazione di tecniche di analisi statica e dinamica, descritte in seguito;
+		\item \textbf{Verifica}: è il procedimento che controlla la coerenza e la correttezza dei prodotti dei processi. La verifica verrà eseguita costantemente durante tutta la durata del progetto;
+		\item \textbf{Validazione}: ovvero la conferma che il sistema soddisfi i requisiti e sia conforme alle attese.
+	\end{itemize}
+	\subsubsection{Organizzazione}
+	Il processo di verifica inizia nel momento in cui la versione del prodotto di un processo cambia. Il diario delle modifiche aiuta a monitorare solo le sezioni che sono state modificate, ottimizzando così i tempi di verifica.\\
+	Viene verificata sia la qualità del processo che del prodotto da esso compiuto.\\
+	Ogni fase del progetto, descritta nel documento \textit{"Piano di progetto v1.0.0"} produce un prodotto diverso, quindi necessita di diverse attività di verifica:
+	\begin{itemize}
+		\item \textbf{Analisi e Analisi di Dettaglio}: in questa fase si verifica che i processi e la documentazione prodotta rispettino le norme definite in questo documento e i tempi prestabiliti nel \textit{"Piano di Progetto v1.0.0"}.
+	\end{itemize}
+\subsubsection{Pianificazione strategica e temporale}
+	È essenziale che l'attività di verifica sia sistematica ed organizzata, al fine di evitare la propagazione di errori ed ottimizzare i tempi di sviluppo, per rispettare le scadenze elencate nel documento \textit{Piano di Progetto v1.0.0}.\\
+	Ogni fase di redazione di documenti e di codifica deve essere preceduta da una fase di studio preliminare, al fine di ridurre la possibilità di errori di natura concettuale o tecnica, e favorendo l'attività dei verificatori.\\
+	In seguito vengono riportate le scadenze fissate:
+	\begin{itemize}
+		\item \textbf{Revisioni formali}:
+			\begin{itemize}
+				\item \textbf{Revisione dei Requisiti}: 24/01/2017;
+				\item \textbf{Revisione di Accettazione}: 27/06/2017.
+			\end{itemize}
+		\item \textbf{Revisioni di progresso}:
+			\begin{itemize}
+				\item \textbf{Revisione di Progettazione}: 13/03/2017;
+				\item \textbf{Revisione di Qualifica}: 15/05/2017.
+			\end{itemize}
+	\end{itemize}
+	\subsubsection{Responsabilità}
+	Al fine di garantire un processo di verifica efficace ed efficiente vengono attribuite delle responsabilità all'interno del gruppo di progetto.\\
+	I ruoli che intervengono nel processo di verifica sono il \textit{Project Manager} e il \textit{Verificatore}.
+	
+	\subsubsection{Risorse}
+	Per realizzare il prodotto sono necessarie le seguenti risorse:
+	\begin{itemize}
+		\item \textbf{Risorse umane}: vengono descritte dettagliatamente nel documento \textit{"Piano di Progetto v1.0.0"}. E sono:
+		\begin{itemize}
+			\item Project Manager;
+			\item Amministratore;
+			\item Analista;
+			\item Progettista;
+			\item Programmatore;
+			\item Verificatore.
+		\end{itemize}
+		\item \textbf{Risorse software}: sono necessari strumenti software. In particolare per:
+		\begin{itemize}
+			\item scrivere la documentazione in formato \LaTeX;
+			\item creare diagrammi \textit{UML};
+			\item automatizzare le verifiche;
+			\item sviluppare nei linguaggi di programmazione scelti;
+			\item analizzare il codice scritto;
+			\item gestire i test che effettueremo sul codice.
+		\end{itemize}
+		\item \textbf{Risorse hardware}: sono necessari computer aventi applicativi descritti in questo documento. 
+	\end{itemize}
+\subsubsection{Tecniche di analisi -Analisi statica}
+		L'analisi statica è l'analisi eseguita senza una effettiva esecuzione dei programmi. Viene eseguita quindi sia sul codice che sui documenti durante tutta la fase di sviluppo.\\
+		Può essere applicata nei seguenti modi:
+		\begin{itemize}
+			\item \textbf{Walkthrough}: è una lettura del documento da verificare cercando errori senza un'idea precisa di cosa si sta cercando. È utile nelle prime fasi di sviluppo per stilare una lista degli errori più frequenti da condividere con il gruppo;
+			\item \textbf{Inspection}: è una ricerca mirata degli errori che sono stati evidenziati nella lista di controllo, che può essere espansa qualora se ne palesi la necessità.
+		\end{itemize}
+		\subsubsection{Lista di controllo}	%DA AGGIORNARE
+Durante la fase di \textit{walkthrough} sono stati rilevati questi come errori più frequenti:
+\begin{itemize}
+\item Norme Stilistiche:
+	\begin{itemize}
+		\item un elemento dell'elenco inizia con lettera minuscola;
+		\item usare descrizioni opportune;
+		\item capo riga e spazi prima di ogni sezione, sottosezione e sotto-sottosezione.
+	\end{itemize}
+\item Italiano:
+	\begin{itemize}
+		\item scorretto utilizzo di accenti acuti e gravi;
+		\item punteggiatura nelle liste;
+		\item fluidità delle frasi.
+	\end{itemize}
+\item \LaTeX:
+	\begin{itemize}
+		\item controllo spaziatura delle tabelle (prima, nel mezzo e dopo);
+		\item controllo delle liste;
+		\item termini non evidenziati (corsivo e/o grassetto).
+	\end{itemize}
+\item UML:
+	\begin{itemize}
+		\item direzione delle frecce del diagramma errate;
+		\item specificare la versione;
+		\item evitare interfacce con funzioni.
+	\end{itemize}
+\item Diagrammi dei Package:	
+	\begin{itemize}
+		\item relazioni tra package;
+		\item diagrammi troppo vasti e con troppe specifiche;
+		\item corretti tipi di relazioni;
+		\item utilizzare solo notazioni standard.
+	\end{itemize}
+\item Interfacce:
+	\begin{itemize}
+		\item nomi delle classi specifici;
+		\item colori per gruppi di classi omogenee.
+	\end{itemize}
+\item Diagrammi di attività:
+	\begin{itemize}
+		\item uso dettagliato;
+		\item i verbi devono indicare azioni;
+		\item non usare fork e join insieme.
+	\end{itemize}
+\item Design pattern:
+	\begin{itemize}
+		\item deve essere sempre contestualizzato, la descrizione non basta.
+	\end{itemize}
+\end{itemize}
+\subsubsection{Verifica documenti}
+Il \textit{Verificatore} nei documenti dovrà:
+\begin{itemize}
+	\item Controllare nel diario delle modifiche i cambiamenti avvenuti dall'ultima volta;
+	\item Cercare eventuali errori nelle parti che sono state modificate del documento;
+	\item Fare un resoconto degli errori riscontarti, in modo che il \textit{Project Manager} possa creare un \textit{ticket} per la correzione;
+	\item Aggiornare il registro delle modifiche e la versione del documento.
+\end{itemize}
+\subsubsection{Verifica requisiti}
+Il verificatore, nel controllare i requisiti dovrà porre la propria attenzione su:
+\begin{itemize}
+	\item Correttezza ortografica e lessicale del testo;
+	\item Atomicità dei requisiti foglia.
+\end{itemize}
+\subsubsection{Verifica diagrammi UML}
+Nel controllare i diagrammi \textit{UML}, il \textit{Verificatore} dovrà prestare attenzione a questi elementi:
+\begin{itemize}
+	\item Correttezza ortografica e lessicale del testo;
+	\item Correttezza del formalismo grafico utilizzato;
+	\item Correttezza logica del programma.
+\end{itemize}
+	
+		\subsubsection{Tecniche di analisi -Analisi dinamica}
+		L'analisi dinamica viene eseguita sulle componenti software, testando il comportamento dell'applicativo. I test, per essere attendibili, devono essere ripetibili nello stesso ambiente e con gli stessi input.
+		I tipi di test che verranno eseguiti saranno:
+		\begin{itemize}
+			\item \textbf{Test di unità}: consiste nel controllo dei moduli che costituiscono l'applicativo;
+			\item \textbf{Test di integrazione}: consiste nella verifica che i moduli, una volta collegati tra loro, diano il risultato previsto. Verifica inoltre il corretto funzionamento di librerie e framework esterni;
+			\item \textbf{Test di sistema}: consiste nella validazione del prodotto software, una volta giunto ad uno stadio definitivo;
+			\item \textbf{Test di regressione}: consiste nell'eseguire a cascata tutti i test collegati ad una componente appena modificata;
+			\item \textbf{Test di accettazione}: consiste nel collaudo del software con il proponente prima del rilascio.
+		\end{itemize}
+	
+	\subsubsection{Misure e metriche}
+	\label{MisureMetriche}
+	Qui di seguito vengono elencate le misure e le metriche che verranno adottate nel processo di verifica. Il processo di verifica deve essere verificabile e quantificato secondo metriche stabilite a priori.\\
+		\subsubsection{Misure e metriche - Metriche per i processi}
+			\paragraph{Schedule Variance (SV)}
+			Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella baseline. È un indicatore di efficacia soprattutto nei confronti del Cliente. Se SV > 0 significa che il progetto sta producendo con maggior velocità a quanto pianificato, viceversa se negativo.\\
+		
+			\paragraph{Budget Variance (BV)}
+			Indica se alla data corrente si è speso di più o di meno rispetto a quanto previsto a budget alla data corrente. È un indicatore che ha un valore unicamente contabile e finanziario. Se BV > 0 significa che il progetto sta spendendo il proprio budget con minor velocità di quanto pianificato, viceversa se negativo. \\
+		
+		\subsubsection{Misure e metriche - Metriche per i documenti}
+			\paragraph{Gulpease}
+			L'indice Gulpease è un indice, sviluppato per valutare la lingua italiana, che valuta la complessità e la leggibilità del testo. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. L'indice di Gulpease considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.\\
+			L'indice è calcolato con la seguente formula:
+			\[89+\frac{300*(\textit{numero delle frasi})-10*(\textit{numero delle lettere)}}{(\textit{numero delle parole})}\]
+			
+			I risultati sono compresi tra 0 e 100, dove il valore "100" indica la leggibilità più alta e "0" la leggibilità più bassa. 
+			Va notato che questo indice non considera che il testo sia comprensibile o meno, in effetti anche una frase con parole casuali potrebbe avere un ottimo indice Gulpease. I documenti perciò vanno valutati da un essere umano per rendere le frasi semplici ma comprensibili.\\
+		
+			\subsubsection{Misure e metriche - Metriche per il software}
+			
+			\paragraph{Complessità ciclomatica}
+			La complessità ciclomatica è una metrica software utilizzata per misurare la complessità di un programma. Misura direttamente il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso.\\
+			La complessità ciclomatica è calcolata utilizzando il grafo di controllo di flusso del programma: i nodi del grafo corrispondono a gruppi indivisibili di istruzioni, mentre gli archi connettono due nodi se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo gruppo.\\
+			Alti valori di questo indice indicano che il codice è poco manutenibile e difficile da testare, mentre valori bassi potrebbero indicare una scarsa efficienza nei metodi.\\
+	
+			\paragraph{Rapporto linee di commento su linee di codice}
+			Affinché il codice sia più facilmente comprensibile e manutenibile è necessario che sia adeguatamente commentato.\\
+		
+			\paragraph{Numero di livelli di annidamento}
+			Indica il livello di annidamento delle strutture di controllo. Un numero troppo elevato può comportare difficoltà nella verifica e nella manutenibilità del codice.\\
+		
+			\paragraph{Numero di campi dati per classe}
+			Una classe con troppi campi dati potrebbe essere poco specializzata e quindi mal progettata. Una classe poco specializzata inoltre è anche poco manutenibile.\\
+		
+			\paragraph{Accoppiamento}
+			L'indice di accoppiamento è il risultato di due indici:
+			\begin{itemize}
+				\item \textbf{Accoppiamento afferente}: è il numero di classi esterne ad un package che dipendono da classi interne ad esso. Un valore troppo elevato indica un altro grado di dipendenza, che potrebbe portare a criticità nel caso di modifiche;
+				\item \textbf{Accoppiamento efferente}: è il numero di classi interne al package dipendenti da classi esterne. Un valore troppo alto è sintomo di scarsa progettazione.
+			\end{itemize}			
+			Il calcolo dell'indice di stabilità, ottenuto unendo Accoppiamento afferente e Accoppiamento efferente avviene secondo la seguente formula:
+			\[I=\frac{Ce}{Ca+Ce}\]
+			
+			\paragraph{Validazione W3C}
+			Una pagina web per essere accessibile ed usabile deve essere valida secondo le norme del W3C. L'applicativo web deve superare tutti i test del validatore automatico W3C per quanto riguarda gli errori gravi, deve inoltre evitare quanti più warning possibili.\\
+			\paragraph{Euristica di Nielsen}
+			Le euristiche di Nielsen sono 10 euristiche studiate per controllare in modo metodico l'usabilità di un sito web, derivano dall'applicazione di tecniche di analisi fattoriale su 249 problemi di usabilità. Sono semplici da applicare e mostrano benefici nelle fasi iniziali di un progetto, ma sono informali e non sono automatizzabili in quanto richiedono un giudizio umano. Essendo parametri non completamente oggettivi, può capitare che alcune pagine siano usabili anche non rispettando tutte le euristiche, si è quindi posto un limite minimo di 6 euristiche rispettate.\\
+\subsection{Validazione}
+Il principio assoluto è scrivere documenti e programmi verificabili. Dopo una serie di verifiche che seguono tutto il ciclo di vita del prodotto la validazione è il verdetto finale che lo rende pubblicabile senza timore.\\
+Quindi vorremo che la validazione sia  autoavverante. \\
+Il \textit{testing}, negli approcci dinamici, prevede esecuzione del software o prototipi al fine di scoprire difetti e assicura quindi la validazione del programma.\\
+Al momento, non avendo prodotto software e quindi impossibile eseguire dell'analisi dinamica, si è scelto come regola generale di utilizzare una doppia revisione. Per doppia revisione si intende:
+\begin{itemize}
+	\item Temporale: cioè il documento è revisionato più volte nel corso del tempo se importante, anche se non completato;
+	\item Umana: cioè al completamento ogni atto è controllato da due membri del team diversi e che non l'abbiano redatto (per evitare conflitti d'interesse). 
+\end{itemize}
+Questa scelta è al momento il metodo di validazione del gruppo.
+\newpage
+\rhead{Ambiente di lavoro}
+\section{Ambiente di lavoro}
+\subsection{Sistema operativo}
+Il progetto e l'insieme delle applicazioni di supporto non sono progettate su un particolare sistema operativo. I componenti del team avranno quindi la possibilità di installare i propri \textit{client} dei mezzi in qualunque macchina: \textit{Windows}, \textit{Mac OS X}, \textit{Linux}.
+\subsection{Applicativo Guida}
+Si è scelto per il coordinamento: 
+\begin{itemize}
+	\item Applicativo web Asana;
+	\item Repository Git;
+	\item Comunicazioni tramite Telegram. 
+\end{itemize}
+\subsection{Ticket-ing}
+Il web applicativo Asana è stato scelto per la comunicazione e il ticketing. È stata scelta questa piattaforma per la sua esistenza sia in versione web sia mobile.
+Inoltre è collegata alle email personali dei membri del gruppo così da avere una notifica sui compiti seguiti.\\
+Oltre ovviamente a essere gratuito Asana offre la possibilità di collegare direttamente file e link su ogni singolo ticket. \\
+Cosa infine forse più importante è l'associazione al calendario così da avere sotto controllo migliore gli eventi datati.
+\subsection{Documentazione}
+Per la documentazione inizialmente si redige una prima stesura su un documento semplice in qualsiasi text editor per poi elaborarlo in linguaggio \LaTeX.
+\subsubsection{Latex}
+È stato scelto di scrivere i documenti in linguaggio \LaTeX perché:
+\begin{itemize}
+	\item Inerente al nostro percorso di studi essendo un linguaggio compilabile. Si usa di più la mente logica che serve a costruire un programma informatico;
+	\item I documenti scritti con il mark-up di Latex posso venire composti direttamente in pdf, oltre ad altri formati;
+	\item Sono più precisi gli automatismi di creazione di indice e l'impaginazione;
+	\item È distribuito con una licenza di software libero;
+	\item Permette di definire template;
+	\item Consente di suddividere il documento in file separati.
+\end{itemize} 
+\subsubsection{Editor}
+L'editor di testo utilizzato multi-piattaforma è \textit{TexStudio}. Programma efficiente con compilazione rapida. Offre una insieme di mezzi per velocizzare e facilitare la creazione della documentazione.\\
+È stato aggiunto il dizionario italiano per una correzione immediata e automatica di errori ortografici.
+\subsubsection{Diagrammi UML}
+Per la creazione dei diagrammi \textit{UML} abbiamo deciso di utilizzare due diversi software. Come punto di riferimento abbiamo l'applicazione usata dal professore nelle ore di lezione. Inserendo la mail concessaci dell'università è possibile avere una versione gratuita del software \textit{Astah}.\\
+Progettato per il design dei principali grafici a uso informatico. Oltre a quasto abbiamo deciso di utilizzare il software \textit{Draw.io} che e' disponibile gratuitamente online. Abbiamo deciso di scegliere questo software per i seguenti motivi:
+	\begin{itemize}
+		\item Essendo un'applicazione web e' usufruibile sulla maggior parte dei dispositivi;
+		\item Consente di utilizzare solo questa applicazione per la costruzione di vari modelli grafici;
+		\item Permette di utilizzare dei template gia' esistenti a secondo dello scopo (informatica, ingegneria ad esempio);
+		\item Ha disponibili molte immagini vettoriali;
+		\item Si puo' esportare in diversi formati compreso HTML.
+	\end{itemize}	 
+\subsubsection{Verifica}
+Tutti i documenti creati con \LaTeX sono automaticamente controllati con uno script per il controllo ortografico.
+\subsection{Pianificazione}
+\subsubsection{Diagrammi}
+Per la pianificazione delle attività è stato scelto il software \textit{Instagantt}. Software web per la pianificazione delle attività tramite diagramma Gantt. \\
+È stata scelta tale applicazione perchè compatibile con il sistema di ticketing offerto da \textit{Asana}. Infatti ogni attività e il suo responsabile è direttamente collegato al diagramma. \\
+Le principali funzioni sono:
+\begin{itemize}
+	\item data di inizio e fine dell'attività;
+	\item gruppi e sottogruppi di attività;
+	\item milestone e date importanti;
+	\item segnare lo stato di un'attività;
+	\item colorare attività per suddividerle (es. urgenza o tipologia);
+	\item impostare dipendenze tra le attività.
+\end{itemize}
+\subsubsection{Attività}
+\textit{Asana} è un'applicazione web e mobile che permette la suddivisione delle attività in modo
+strutturato. Offre un'organizzazione ad albero suddivisa in questo modo:
+\begin{itemize}
+	\item Creare più \textit{Workspace};
+	\item Creare \textit{Project} all'interno di \textit{Workspace};
+	\item Creare \textit{Task} all'interno di un \textit{Project};
+	\item Creare \textit{Sub-Task} all'interno di un \textit{Task}.
+\end{itemize}
+Alcune delle funzionalità offerte sono:
+\begin{itemize}
+	\item Assegnare un \textit{Task} ad uno o più individui;
+	\item Assegnare una data di scadenza;
+	\item Vedere le attività in scadenza sul calendario;
+	\item Seguire lo stato di avanzamento dei \textit{Task};
+	\item Avere un riepilogo dei \textit{Task};
+	\item Riceve e-mail automatiche con l'aggiornamento dei \textit{Task} che si seguono.
+\end{itemize}
+I nomi delle etichette relativi ai Task dovranno seguire la seguente forma [elemento di interesse][messaggio]:
+\begin{itemize}
+	\item \textbf{Elemento di interesse}: si riferisce al documento o all'ambito al quale appartiene 
+	il Task. Nel caso un cui si tratti di un documento, dovranno essere messe le iniziali del suo nome.\\
+	Ad esempio NdP, per indicare \textit{Norme di Progetto}. Nel secondo caso si userà il nome completo dell'ambito
+	che si sta trattando. In entrambi i casi viene utilizzata la lettera maiuscola;
+	\item \textbf{Messaggio}: breve messaggio quanto più esaustivo possibile per indicare la problematica da risolvere o il compito da eseguire.
+\end{itemize}
+\subsection{Versionamento}
+Il software di versionamento scelto è \textit{Git}. Le motivazioni a base della scelta è perché \textit{Git}:
+\begin{itemize}
+	\item È strutturato come un File System;
+	\item Salva uno snapshot del progetto a ogni commit;
+	\item È veloce e distribuito avendo in locale la copia della repository per ogni utente;
+	\item Sfrutta facilmente le operazioni di merge e branch;
+	\item È già stato usato da alcuni membri del team.
+\end{itemize}
+All'interno della \textit{repository} vi sono due macro sezioni: la sezione documentazione e la sezione progetto.\\
+Ogni documento è composto dai numeri X.Y.Z. Convenzionalmente abbiamo deciso che il numero Z aumenta di uno ogni qual volta viene effettuata una modifca da parte di un componente del gruppo, il numero Y viene maggiorato di uno tutte le volte che il documento viene verificato, e viene azzerato Z; X invece viene aumentato quando si ritiene che il documento sia pronto per essere sottoposto alla revisione.
+\newpage
+\subsection{Repository}
+\subsubsection{Repository documentazione}
+La \textit{repository} della documentazione è composta dalle varie cartelle :
+\begin{itemize}
+	\item AnalisiDeiRequisiti;
+	\item Glossario;
+	\item NormeDiProgetto;
+	\item PianoDiProgetto;
+	\item PianoDiQualifica;
+	\item StudioDiFattibilità;
+	\item Verbali.
+\end{itemize}
+I file all'interno possono essere di qualsiasi genere, anche appunti. Nella capitolo della documentazione è stato trattato il modo in cui crearli ed elaborarli.
+\subsubsection{Repository progetto}
+Non avendo ancora iniziato il progetto non vi è ancora una sezione dedicata alle cartelle dei file.\\
+\end{document}
