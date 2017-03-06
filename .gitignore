@@ -30,3 +30,7 @@ documentazione/PianoDiProgetto/PianoDiProgetto.toc
 *.gz
 
 documentazione/SpecificaTecnica/SpecificaTecnica.lof
+
+*.bak
+
+*.toc
