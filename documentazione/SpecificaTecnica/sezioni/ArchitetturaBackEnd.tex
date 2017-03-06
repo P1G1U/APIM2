@@ -109,8 +109,6 @@ Di seguito sono illustrate le varie componenti server, realizzato con architettu
         \item *.dao;
         \item *.entities;
         \end{itemize}
-        \subsubsection{Relazione tra le componenti interne}
-        Di seguito sono illustrate le relazioni tra le componenti dell'applicazione.
   }
   \subsection{com.apim.server.controllers}{
     \subsubsection{Informazioni sul Package}
@@ -120,32 +118,21 @@ Di seguito sono illustrate le varie componenti server, realizzato con architettu
           \caption{Controller}
           \label{Controller}
         \end{figure}
-        Package contenente le classi che espongono le funzioni  chiamabili dall'utente;
+        Package contenente le classi che espongono le funzioni  chiamabili dall'utente;\\
+        le classi vengono incorporate nel microservizio Controller.
         \subsubsection{Classi}
         \begin{itemize} \itemsep1pt
         \item \textbf{UserController}
         \begin{itemize}
         \item \textbf{Descrizione:} Questa classe contiene i metodi invocabili da un utente normale;
-        \item \textbf{Relazione con altre classi:}
-        \begin{itemize}
-        \item com.apim.server.services.user.*;
-        \end{itemize}
         \end{itemize}
         \item \textbf{AdminController}
         \begin{itemize}
         \item \textbf{Descrizione:} Questa classe contiene i metodi invocabili da un utente amministratore;
-        \item \textbf{Relazione con altre classi:}
-        \begin{itemize}
-        \item com.apim.server.services.admin.*;
-        \end{itemize}
         \end{itemize}
         \item \textbf{SharedController}
         \begin{itemize}
         \item \textbf{Descrizione:} Questa classe contiene i metodi invocabili sia da un utente normale che da un amministratore;
-        \item \textbf{Relazione con altre classi:}
-        \begin{itemize}
-        \item com.apim.server.services.shared.*;
-        \end{itemize}
         \end{itemize}
         \end{itemize}
   }
