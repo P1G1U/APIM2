@@ -98,14 +98,18 @@
 	\renewcommand{\footrulewidth}{0.2pt}
 	\rhead{Registro Modifiche}
 	\section{Registro Modifiche}
+	 !!!!!!!!AGGIUNGERE LUHN AL GLOSSARIO!!!!!!!! \\
+	 !!!!!!!!RISTAMPARE TUTTI GRAFICI UC!!!!!!!!!
 	\small %rimpicciolisce il testo
-
+		
 		{\renewcommand\arraystretch{1.2}  %aumenta l'altezza di ogni riga
-		\begin{tabular}{|l|c|c|c|}
+		\begin{tabular}{|m{3em}|m{27em}|m{10em}|m{5em}|}
 			\hline
 			{\textbf{Ver.}}&{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}\\
 			\hline 
-			2.0.1 & Rimozione §3.5 & Crivellaro Gianluca & 22/03/2017
+			2.0.2 & Correzioni grammaticali e logiche in §1, §2.1, §2.2, §3.1, §3.2, §4 (e sottoparagrafi), approfondimento UC1.1.1, UC1.1.2, UC1.1.3, UC1.4, UC8.4.2.1, inserimento UC8.4.2.8, piccole modifiche grafici UC, inserimento requisiti R0F3.2.2, R0F3.2.3, R0F3.2.4, R0F3.5.1, aggiornato tracciamento, aggiornata figura relativa a UC8.4.2:Caricamento nuova API, ricalcolato numero totale requisiti & Gianluca Crivellaro & 22/03/2017\\
+			\hline 
+			2.0.1 & Rimozione §3.5 & Crivellaro Gianluca & 21/03/2017\\
 			\hline
 			2.0.0 & Validazione & Pietro Lonardi & 28/02/2017\\
 			\hline
@@ -153,9 +157,9 @@
 	\rhead{Introduzione}
 	\section{Introduzione}
 	\subsection{Scopo del Documento}
-	Tale documento ha lo scopo di studiare e modellare concettualmente il problema che si pone con APIM . Posizionando le componenti (o ambiti) a scopo di allocazione dei requisiti. Alcuni dei requisiti specificandoli con il diagramma dei casi d'uso.\\
+	Tale documento ha lo scopo di studiare e modellare concettualmente il problema che si pone con APIM. Posizionando le componenti (o ambiti) a scopo di allocazione dei requisiti. Alcuni dei requisiti specificandoli con il diagramma dei casi d'uso.\\
 	Vi deve essere la certezza di non aver dimenticato nessuno tra i requisiti espliciti ed i requisiti impliciti. Inoltre non devono esserci ambiguità tra i requisiti.
-	Bisogna sempre tener conto di portare al massimo possibile la granularità del problema, senza però confonderlo e renderlo impossibile da verificare. Questo per rendere il requisito decidibile.\\
+	Bisogna sempre tener conto di portare al massimo possibile la granularità del problema, senza però confonderlo e renderlo impossibile da verificare: questo per rendere il requisito decidibile.\\
 	È infine bene tener presente otto semplici qualità di selezione dei requisiti:
 	\begin{itemize}
 		\item Non Ambigui;
@@ -168,9 +172,9 @@
 		\item Ordinati per Rilevanza.
 	\end{itemize}
 	\subsection{Scopo del Prodotto}
-	L'obiettivo è creare un'infrastruttura che permetta la distribuzione digitale e la gestione dei diritti digitali di microservizi. Creati e importati da diversi utenti che possono interfacciarsi tra loro.\\
-	Viene usata per gestire e distribuire una vasta gamma di microservizi (alcuni esclusivi) ed il loro relativo supporto. Tutte queste operazioni sono effettuate via Internet.\\
-	È inoltre possibile il monitoraggio di ogni API grazie alle tecnologie fornite dal prodotto.\\
+	L'obiettivo è creare un'infrastruttura che permetta la distribuzione digitale e la gestione dei diritti digitali di microservizi, creati e importati da diversi utenti che possono interfacciarsi tra loro.\\
+	Il prodotto verrà usato per gestire e distribuire una vasta gamma di microservizi (alcuni esclusivi) ed il loro relativo supporto. Tutte queste operazioni saranno effettuate via Internet.\\
+	Sarà inoltre possibile il monitoraggio di ogni API grazie alle tecnologie fornite dal prodotto.\\
 	
 	\subsection{Glossario}
 	Alla fine di evitare ambiguità e mantenere la consistenza il Glossario è un documento unico e consultabile separatamente.\\
@@ -199,21 +203,21 @@
 	\rhead{Descrizione Generale}
 	\section{Descrizione Generale}
 	\subsection{Obiettivi del prodotto}
-	L'obiettivo primario del prodotto è di dare ad ogni utente la possibilità di registrare il proprio microservizio in una piattaforma dedicata. In questo modo è possibile la vendita (o condivisione) con gli altri utenti della comunità regolata da politiche di compravendita specifiche e flessibili a seconda dello scopo delle API o del volere del tecnico.\\
+	L'obiettivo primario del prodotto è di dare ad ogni utente la possibilità di registrare il proprio microservizio in una piattaforma dedicata. In questo modo è possibile la vendita (o condivisione) con gli altri utenti della comunità regolata da politiche di compravendita specifiche e flessibili a seconda dello scopo delle API o del volere del venditore.\\
 	L'obiettivo è quindi quello di incentivare la programmazione a microservizi e, oltre a spingere i gruppi più piccoli nel progettare per il mercato virtuale, pensare sempre di più a delle migliori architetture flessibili. Si vogliono abbandonare i vecchi programmi monolitici per entrare in una realtà fatta di sistemi divisi in moduli, la nuova sfida progettuale sarà quindi unire i vari microservizi (o API) per costruire un prodotto completo.
 	
 	\subsection{Funzioni del prodotto}
-	SWEg Group si impegna in particolar modo alle sottoscritte funzioni del prodotto :
+	SWEg Group, nell'analisi e nella realizzazione del prodotto, si impegna a fornire le seguenti funzionalità generali:
 	\begin{enumerate}
 		\item \textbf{Registrare le API di un microservizio}: dando la possibilità di caricare un'interfaccia e documentando la propria progettazione;
-		\item \textbf{Permetta di consultare le API}: con un sistema di ricerca designato e filtrato anche con dati tecnici. Pure se con minori funzionalità anche un utente non registrato alla piattaforma può vagliare le varie API. Per ogni API sarà inoltre possibile un consulto dei suoi dati tecnici;
-		\item \textbf{Permetta di associare diverse API key}: così da regolare le politiche di scambio dei microservizi. Le API key sono lo strumento principale di collegamento tra la API ed il suo utilizzatore. Grazie a queste l'infrastruttura potrà regolare le scadenze, l'utilizzo ed il procedimento oltre ad avere un ID univoco per la monitorizzazione;
-		\item \textbf{Permetta di monitorare l'utilizzo delle API}:	già accennato nei punti precedenti. Vogliamo che tale infrastruttura tenga conto di particolari dati tecnici di ogni API per renderle così misurabili in termini di efficacia ed efficienza. Oltre che ad avere così un sistema automatizzato per il confronto tra i vari microservizi;
-		\item \textbf{Blocchi le chiamate di utenti in possesso di API key scadute e/o non valide}:	è la sottolineatura di uno dei motivi di esistenza delle API key; punto focale per la regolamentazione dello scambio è la possibilità di acquisto delle chiavi secondo tempo, mole di scambio di dati , eccetera. I dati tecnici per le policy di durata e validità saranno descritte in seguito, ma queste decideranno se è ancora attiva una chiave o meno;
-		\item \textbf{Permetta di visualizzare i dati tecnici d'uso delle singole API}:	dopo aver monitorato ogni singola API è possibile fare la stima e produrre un elaborato tecnico dei valori di quest'ultima. È compito dell'API Market rendere disponibile questa funzionalità. Da parte nostra vi sarà un vaglio tra le principali caratteristiche di interesse da dover riportare. È desiderabile da parte nostra anche la possibilità di poter visualizzare direttamente il confronto dei risultati delle caratteristiche per scegliere il microservizio migliore;
-		\item \textbf{Permettere di gestire una moneta virtuale per la compravendita delle API}: il metodo di acquisto principale è comunque la moneta reale, la quale può trasformarsi automaticamente in moneta virtuale con un cambio di 1:1. È possibile quindi tenere un conto personale flessibile per poter reinvestire o ritirare il contante virtuale;
-		\item \textbf{Permetta di confrontare i dati tecnici delle API tra loro}: già accennato in uno dei punti precedenti. Per una migliore visione e per scegliere il microservizio più adatto ai nostri scopi vorremmo una sezione specifica di confronto dei dati tecnici. Sarà nostro compito grazie al monitoraggio avere un rapporto aggiornato e reale dell'andamento dell'API;
-		\item \textbf{Permetta una gestione social}: vogliamo che quindi anche gli utenti abbiano le loro statistiche per essere valutati. Desiderabile un programma di messaggistica interno per una comunicazione diretta e veloce. Tutto è quindi classificabile, la valutazione degli utenti delle API crea delle classifiche stimolando la concorrenza e il desiderio di popolare il market di più microservizi. Vi saranno quindi graduatorie per genere grazie alle personali esperienze e ai dati tecnici, per favorire l'interazione tra gli attori della piattaforma.
+		\item \textbf{Permettere di consultare le API}: con un sistema di ricerca designato e filtrato anche con dati tecnici. Pure se con minori funzionalità anche un utente non registrato alla piattaforma può vagliare le varie API. Per ogni API sarà inoltre possibile un consulto dei suoi dati tecnici;
+		\item \textbf{Permettere di associare diverse APIKey}: così da regolare le politiche di scambio dei microservizi. Le APIKey sono lo strumento principale di collegamento tra la API ed il suo utilizzatore. Grazie a queste l'infrastruttura potrà regolare le scadenze, l'utilizzo ed il procedimento oltre ad avere un ID univoco per la monitorizzazione;
+		\item \textbf{Permettere di monitorare l'utilizzo delle API}: già accennato nei punti precedenti. Vogliamo che tale infrastruttura tenga conto di particolari dati tecnici di ogni API per renderle così misurabili in termini di efficacia ed efficienza. Oltre che ad avere così un sistema automatizzato per il confronto tra i vari microservizi;
+		\item \textbf{Bloccare le chiamate di utenti in possesso di APIKey scadute e/o non valide}:	è la sottolineatura di uno dei motivi di esistenza delle APIKey. Punto focale per la regolamentazione dello scambio è la possibilità di acquisto delle chiavi secondo tempo, mole di scambio di dati, eccetera. I dati tecnici per le policy di durata e validità saranno descritte in seguito, ma queste decideranno se è ancora attiva una chiave o meno;
+		\item \textbf{Permettere di visualizzare i dati tecnici d'uso delle singole API}: dopo aver monitorato ogni singola API è possibile fare la stima e produrre un elaborato tecnico dei valori di quest'ultima. È compito di APIMarket rendere disponibile questa funzionalità. Da parte nostra vi sarà un vaglio tra le principali caratteristiche di interesse da dover riportare. È desiderabile da parte nostra anche la possibilità di poter visualizzare direttamente il confronto dei risultati delle caratteristiche per scegliere il microservizio migliore;
+		\item \textbf{Permettere di gestire una moneta virtuale per la compravendita delle API}: il metodo di acquisto principale è tramite moneta virtuale, che può venire acquistata dall'utente con denaro reali tramite carta di credito;
+		\item \textbf{Permettere di confrontare i dati tecnici delle API tra loro}: già accennato in uno dei punti precedenti. Per una migliore visione e per scegliere il microservizio più adatto ai nostri scopi vorremmo una sezione specifica di confronto dei dati tecnici. Sarà nostro compito grazie al monitoraggio avere un rapporto aggiornato e reale dell'andamento dell'API;
+		\item \textbf{Permettere una gestione social}: vogliamo che quindi anche gli utenti abbiano le loro statistiche per essere valutati. Desiderabile un programma di messaggistica interno per una comunicazione diretta e veloce. Tutto è quindi classificabile, la valutazione degli utenti delle API crea delle classifiche stimolando la concorrenza e il desiderio di popolare il market di più microservizi. Vi saranno quindi graduatorie per genere grazie alle personali esperienze e ai dati tecnici, per favorire l'interazione tra gli attori della piattaforma.
 	\end{enumerate}
 	
 	\subsection{Caratteristiche degli utenti}
@@ -243,7 +247,9 @@
 	L'analisi del capitolato, il dibattito tra gli Analisti e l'incontro con ItalianaSoftware ha portato alla creazione dei casi d'uso che seguono. Si è cercato anche di studiare piattaforme sociali e di scambio simili come \textit{Steam}, \textit{Google Play} e \textit{GitHub}.
 	
 	Le fonti su cui si ricavano quindi i casi d'uso sono sia impliciti, derivanti dallo studio del dominio, sia espliciti, come il capitolato d'appalto.
-	Ogni caso d'uso ha un codice univoco gerarchico, nella forma: 
+	I due casi d'uso principali hanno un codice univoco nella forma:
+	\[UC[\textit{Codice Progressivo Alfabetico}]\]
+	Ogni altro caso d'uso ha un codice univoco gerarchico, nella forma: 
 	\[UC[\textit{Codice Univoco del Padre}].[\textit{Codice Progressivo di Livello}]\] 
 	Il codice progressivo può includere diversi livelli di gerarchia separati da un punto.
 	\subsection{Gerarchia degli attori}
@@ -295,11 +301,11 @@
 				\item gli utenti autenticati e admin possono effettuare logout [UC7];
 				\item gli utenti autenticati e admin possono  interagire con la propria pagina utente [UC8];
 				\item l'utente admin può effettuare ricerche di altri utenti [UC10];
-				\item l'utente admin può accedere alla pagina di un utente che ha cercato [UC5].
-				\item l'utente admin può accedere alla pagina di statistiche del sito [UC9].
+				\item l'utente admin può accedere alla pagina di un utente che ha cercato [UC5];
+				\item l'utente admin può accedere alla pagina di statistiche del sito [UC9];
 			\end{itemize}
 		\item \textbf{Precondizione:} Il sistema viene avviato da un utente esterno;
-		\item \textbf{Postcondizione:} Il sistema offre tutti servizi che un utente non autenticato può usufruire.
+		\item \textbf{Postcondizione:} Il sistema offre tutti servizi di cui gli utenti autenticati o admin possono usufruire.
 	\end{itemize}
 	\subsection{Caso d'uso UC1: Registrazione}
 	\label{UC1}
@@ -310,7 +316,7 @@
 	\end{figure}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente non in possesso di un username inserisce i suoi dati anagrafici da associare al nuovo username. Gli verrà chiesta anche una password che dovrà utilizzare ogni qual volta debba effettuare l'accesso;
+		\item \textbf{Scopo e descrizione}: L'utente non in possesso di un username inserisce i suoi dati anagrafici da associare al nuovo username. Gli verrà chiesta anche una password che dovrà utilizzare ogniqualvolta debba effettuare l'accesso;
 		\item \textbf{Scenario principale}: 
 		\begin{itemize}
 			\item l'utente inserisce i propri dati anagrafici [UC1.1];
@@ -351,34 +357,51 @@
 		\item \textbf{Precondizione}: Il sistema attende l'inserimento dei dati richiesti;
 		\item \textbf{Postcondizione}: Il sistema salva le informazione date dall'utente.
 	\end{itemize}
-	\subsection{Caso d'uso UC1.1.1: Inserimento del nome}
+	\subsection{Caso d'uso UC1.1.1: Nome}
 	\label{UC1.1.1}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato; 
-		\item \textbf{Scopo e descrizione}: L'utente deve inserire il suo nome;
+		\item \textbf{Scopo e descrizione}: L'utente deve inserire il suo nome. Il nome inserito deve soddisfare le seguenti specifiche:
+		\begin{itemize}
+			\item Non deve contenere caratteri numerici o speciali;
+			\item Non deve essere più lungo di 50 caratteri;
+			\item Deve essere più lungo di 3 caratteri.
+		\end{itemize}
+		Se non rispetta queste specifiche viene visualizzato un messaggio di errore e viene bloccata la procedura di registrazione fino al raggiungimento della conformità;
 		\item \textbf{Scenario alternativo}: Il nome inserito dall'utente non è conforme al formato richiesto [UC1.1.5];
 		\item \textbf{Precondizione}: Il sistema attende l'inserimento del nome da parte dell'utente;
 		\item \textbf{Postcondizione}: Il sistema inserisce nel DB il nome dell'utente.
 	\end{itemize}
-	\subsection{Caso d'uso UC1.1.2: Inserimento del cognome}
+	\subsection{Caso d'uso UC1.1.2: Cognome}
 	\label{UC1.1.2}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente deve inserire il suo cognome;
+		\item \textbf{Scopo e descrizione}: L'utente deve inserire il suo cognome. Il cognome inserito deve soddisfare le seguenti specifiche:
+		\begin{itemize}
+			\item Non deve contenere caratteri numerici o speciali;
+			\item Non deve essere più lungo di 50 caratteri;
+			\item Deve essere più lungo di 3 caratteri.
+		\end{itemize}
+		Se non rispetta queste specifiche viene visualizzato un messaggio di errore e viene bloccata la procedura di registrazione fino al raggiungimento della conformità;
 		\item \textbf{Scenario alternativo}: Il cognome inserito dall'utente non è conforme al formato richiesto [UC1.1.6];
 		\item \textbf{Precondizione}: Il sistema attende l'inserimento del cognome da parte dell'utente;
 		\item \textbf{Postcondizione}: Il sistema inserisce nel DB il cognome dell'utente.
 	\end{itemize}
-	\subsection{Caso d'uso UC1.1.3: Inserimento del telefono}
+	\subsection{Caso d'uso UC1.1.3: Telefono}
 	\label{UC1.1.3}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente deve inserire il suo numero di telefono;
+		\item \textbf{Scopo e descrizione}: L'utente deve inserire il suo numero di telefono. Il numero inserito deve soddisfare le seguenti specifiche:
+			\begin{itemize}
+			\item Deve contenere solo caratteri numerici;
+			\item Non deve essere più lungo di 16 caratteri.
+		\end{itemize}
+		Se non rispetta queste specifiche viene visualizzato un messaggio di errore e viene bloccata la procedura di registrazione fino al raggiungimento della conformità;
 		\item \textbf{Scenario alternativo}: Il numero di telefono inserito dall'utente non è valido [UC1.1.7];
 		\item \textbf{Precondizione}: Il sistema attende l'inserimento del numero di telefono da parte dell'utente;
 		\item \textbf{Postcondizione}: Il sistema inserisce nel DB il numero di telefono dell'utente.
 	\end{itemize}
-	\subsection{Caso d'uso UC1.1.4: Inserimento indirizzo}
+	\subsection{Caso d'uso UC1.1.4: Indirizzo}
 	\label{UC1.1.4}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
@@ -386,7 +409,7 @@
 		\begin{itemize}
 			\item Indirizzo;
 			\item CAP;
-			\item Paese.
+			\item Paese;
 		\end{itemize}
 		\item \textbf{Precondizione}: Il sistema attende che l'utente inserisca il proprio indirizzo;
 		\item \textbf{Postcondizione}: Il sistema inserisce nel DB l'indirizzo dell'utente.
@@ -395,7 +418,7 @@
 	\label{UC1.1.5}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente ha inserito un nome non valido. Gli viene quindi notificato l'errore;
+		\item \textbf{Scopo e descrizione}: L'utente ha inserito un nome non valido, gli viene quindi notificato l'errore;
 		\item \textbf{Precondizione}: L'utente ha inserito il nome errato;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente un messaggio di errore appropriato.
 	\end{itemize}
@@ -403,7 +426,7 @@
 	\label{UC1.1.6}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente ha inserito un cognome non valido. Gli viene quindi notificato l'errore;
+		\item \textbf{Scopo e descrizione}: L'utente ha inserito un cognome non valido, gli viene quindi notificato l'errore;
 		\item \textbf{Precondizione}: L'utente ha inserito il cognome errato;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente un messaggio di errore appropriato.
 	\end{itemize}
@@ -411,7 +434,7 @@
 	\label{UC1.1.7}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente ha inserito un numero di telefono non valido. Gli viene quindi notificato l'errore;
+		\item \textbf{Scopo e descrizione}: L'utente ha inserito un numero di telefono non valido, gli viene quindi notificato l'errore;
 		\item \textbf{Precondizione}: L'utente ha inserito il numero di telefono errato;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente un messaggio di errore appropriato.
 	\end{itemize}
@@ -437,7 +460,7 @@
 		\begin{itemize}
 			\item Essere lunga almeno 8 caratteri; 
 			\item Contenere almeno 1 carattere maiuscolo; 
-			\item Contenere almeno 1 carattere minuscolo;
+			\item Contenere almeno 1 carattere minuscolo.
 		\end{itemize}
 		Inoltre la password inserita deve essere ripetuta come controllo di sicurezza.
 		\item \textbf{Scenario principale}:
@@ -479,7 +502,7 @@
 	\label{UC1.3.4}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente ha inserito una password che non corrisponde a quella inserita in precedenza. Il sistema notifica all'utente l'errore.
+		\item \textbf{Scopo e descrizione}: L'utente ha inserito una password che non corrisponde a quella inserita in precedenza. Il sistema notifica all'utente l'errore;
 		\item \textbf{Precondizione}: L'utente ha inserito la password di conferma errata;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente un errore appropriato.
 	\end{itemize}
@@ -487,7 +510,7 @@
 	\label{UC1.4}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
-		\item \textbf{Scopo e descrizione}: In futuro nel caso in cui l'utente si fosse dimenticato la password, è necessario che il sistema abbia a disposizione un'email alla quale fare affidamento a cui poter mandare la password per poter far accedere l'utente;
+		\item \textbf{Scopo e descrizione}: In futuro nel caso in cui l'utente si fosse dimenticato la password, è necessario che il sistema abbia a disposizione un'email alla quale fare affidamento a cui poter mandare la password per poter far accedere l'utente. L'indirizzo email deve essere nel formato valido xxx@yyy.zzz e deve essere unica all'interno del database;
 		\item \textbf{Scenario alternativo}: L'email inserita non è nel formato valido, o esiste già nel database, quindi il sistema chiede all'utente di inserire un'altra email valida [UC1.8];
 		\item \textbf{Precondizione}: Il sistema attende una email dall'utente;
 		\item \textbf{Postcondizione}: Il sistema riceve una email che assocerà allo username dell'utente.
@@ -496,7 +519,7 @@
 	\label{UC1.5}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente non autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente deve disporre di un metodo di una carta di credito valida che gli permetta di effettuare acquisti all'interno del market;
+		\item \textbf{Scopo e descrizione}: L'utente deve disporre di una carta di credito valida che gli permetta di effettuare acquisti all'interno del market. La carta di credito deve essere valida secondo algoritmo Luhn;
 		\item \textbf{Scenario alternativo}: La carta di credito non è valida perciò viene segnalato errore e viene chiesto all'utente di inserirne una diversa [UC1.9];
 		\item \textbf{Precondizione}: Il sistema attende che l'utente inserisca una carta di credito valida;
 		\item \textbf{Postcondizione}: Il sistema ha validato la carta di credito inserita dall'utente e l'ha associata al suo account.
@@ -507,7 +530,7 @@
 		\item \textbf{Attori}: Utente non autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente può caricare un logo per il suo profilo. Deve corrispondere ai seguenti requisiti:
 		\begin{itemize}
-			\item La dimensione del file deve essere <500kb;
+			\item La dimensione del file deve essere <512kb;
 			\item L'estensione del file deve essere .jpg, .jpeg, .png, .bmp;
 		\end{itemize}
 		\item \textbf{Scenario alternativo}: Il file è troppo grande o non è in un formato supportato, viene quindi mostrato un messaggio di errore [UC1.10];
@@ -559,11 +582,11 @@
 		\item \textbf{Scenario principale}:
 		\begin{itemize}
 			\item l'utente inserisce il suo username o la sua email [UC2.1];
-			\item l'utente inserisce la sua password [UC2.2].
+			\item l'utente inserisce la sua password [UC2.2];
 		\end{itemize}
 		\item \textbf{Scenario alternativo}: Il sistema rifiuta l'accesso all'utente a causa di un errato inserimento di username o di password [UC2.3];
 		\item \textbf{Precondizione}: Il sistema attende che l'utente inserisca i suoi dati identificativi;
-		\item \textbf{Postcondizione: Il sistema ha accettato i dati e manda l'utente alla sua bacheca personale}.
+		\item \textbf{Postcondizione}: Il sistema ha accettato i dati e manda l'utente alla sua bacheca personale.
 	\end{itemize}
 	\subsection{Caso d'uso UC2.1: Inserimento username o email}
 	\label{UC2.1}
@@ -606,7 +629,7 @@
 			\item l'utente inserisce i termini di ricerca [UC3.1];
 			\item l'utente decide come impostare la sua ricerca [UC3.2];
 			\item l'utente avvia la ricerca [UC3.3];
-			\item l'utente visiona la pagina in cui sono elencati i risultati della sua ricerca [UC3.4].
+			\item l'utente visiona la pagina in cui sono elencati i risultati della sua ricerca [UC3.4];
 		\end{itemize}
 		\item \textbf{Precondizione}: Il sistema attende l'invio di una frase di ricerca;
 		\item \textbf{Postcondizione}: Il sistema ha esaminato la frase di ricerca e restituisce una pagina di risultati della ricerca.
@@ -617,7 +640,7 @@
 		\item \textbf{Attori}: Utente;
 		\item \textbf{Scopo e descrizione}: L'utente scrive nella barra di ricerca la frase che vuole ricercare;
 		\item \textbf{Precondizione}: Il sistema attende l'inserimento di una frase di ricerca;
-		\item \textbf{Postcondizione}: L'utente ha terminato di inserire la frase di ricerca.
+		\item \textbf{Postcondizione}: L'utente ha terminato di inserire la frase di ricerca;
 	\end{itemize}
 	\subsection{Caso d'uso UC3.2: Configurazione ricerca}
 	\label{UC3.2}
@@ -702,7 +725,7 @@
 			\item l'utente visiona i commenti relativi a quell'API [UC6.2];
 			\item l'utente autenticato può visionare le statistiche relative all'API [UC6.3];
 			\item l'utente autenticato può procedere all'acquisto di un'APIKey relativa a quell'API [UC6.4];
-			\item l'utente autenticato può rilasciare un commento relativo all'API [UC6.5].
+			\item l'utente autenticato può rilasciare un commento relativo all'API [UC6.5];
 		\end{itemize}
 		\item \textbf{Precondizione}: L'utente ha cliccato sul nome di un microservizio;
 		\item \textbf{Postcondizione}: L'utente è arrivato alla pagina di un microservizio e il sistema ha caricato tutte le informazioni relative.
@@ -721,7 +744,7 @@
 		\begin{itemize}
 			\item l'utente può visualizzare i dettagli dell'API [UC6.1.1];
 			\item l'utente autenticato può visionare l'interfaccia dell'API [UC6.1.2];
-			\item l'utente autenticato può visionare la documentazione relativa a quell'API [UC6.1.3].
+			\item l'utente autenticato può visionare la documentazione relativa a quell'API [UC6.1.3];
 		\end{itemize}
 		\item \textbf{Precondizione}: L'utente è sulla pagina di un microservizio;
 		\item \textbf{Postcondizione}: Il sistema mostra all'utente le informazioni base su quel microservizio.
@@ -736,7 +759,7 @@
 			\item Autore del microservizio;
 			\item Numero approssimativo di APIKey vendute;
 			\item Descrizione del microservizio;
-			\item Rating del microservizio dato dai voti degli utenti.
+			\item Rating del microservizio dato dai voti degli utenti;
 		\end{itemize}
 		\item \textbf{Precondizione}: L'utente sta osservando la parte iniziale della pagina relativa ad un microservizio;
 		\item \textbf{Postcondizione}: Il sistema ha caricato le informazioni di quel microservizio e le ha stampate a schermo.
@@ -788,7 +811,7 @@
 				\item l'utente sceglie la policy che desidera acquistare [UC6.4.1];
 				\item l'utente visiona il prezzo finale del suo acquisto [UC6.4.2];
 				\item l'utente conferma il suo acquisto [UC6.4.3];
-				\item l'utente ottiene una ricevuta via email e la sua APIKey [UC6.4.4].
+				\item l'utente ottiene una ricevuta via email e la sua APIKey [UC6.4.4];
 			\end{itemize}
 		\item \textbf{Precondizione}: L'utente autenticato ha cliccato sul pulsante per acquistare una APIKey nella pagina di un microservizio;
 		\item \textbf{Postcondizione}: L'utente è in possesso dell'APIKey o è stato condotto nella pagina per l'acquisto di APICredits.
@@ -815,7 +838,7 @@
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente clicca sul pulsante per confermare l'acquisto e pagare con i suoi APICredits.
 		\item \textbf{Scenari alternativi}:
-		L'utente non possiede abbastanza APICredits, viene quindi reindirizzato alla pagina di acquisto di APICredits [UC6.4.5].
+		L'utente non possiede abbastanza APICredits, viene quindi reindirizzato alla pagina di acquisto di APICredits [UC6.4.5];
 		\item \textbf{Precondizione}: L'utente ha visionato il resoconto della spesa ed è pronto a pagare;
 		\item \textbf{Postcondizione}: L'utente ha premuto il pulsante di conferma acquisto.
 	\end{itemize}
@@ -823,8 +846,8 @@
 	\label{UC6.4.4}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
-		\item \textbf{Scopo e descrizione}:L'utente viene reindirizzato ad una pagina che conferma la corretta riuscita del pagamento e mostra la APIKey acquistata.
-		\item \textbf{Precondizione}: L'utente ha pagato il microservizio.
+		\item \textbf{Scopo e descrizione}:L'utente viene reindirizzato ad una pagina che conferma la corretta riuscita del pagamento e mostra la APIKey acquistata;
+		\item \textbf{Precondizione}: L'utente ha pagato il microservizio;
 		\item \textbf{Postcondizione}: L'utente è in possesso dell'APIKey.
 	\end{itemize}
 	\subsection{Caso d'uso UC6.4.5: Acquisto APICredits insufficienti}
@@ -833,7 +856,7 @@
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente autenticato ha tentato di eseguire l'acquisto senza gli APICredis necessari, viene quindi mostrato un messaggio di errore e condotto alla pagina di acquisto degli APICredits;
 		\item \textbf{Precondizione}: L'utente autenticato ha cliccato sul pulsante per acquistare una APIKey nella pagina di un microservizio;
-		\item \textbf{Postcondizione}: L'utente è in possesso dell'APIKey . o è stato condotto nella pagina per l'acquisto di APICredits.
+		\item \textbf{Postcondizione}: L'utente è in possesso dell'APIKey o è stato condotto nella pagina per l'acquisto di APICredits.
 	\end{itemize}
 	\subsection{Caso d'uso UC6.5: Inserimento voto e commento}
 	\label{UC6.5}
@@ -851,7 +874,7 @@
 		\begin{itemize}
 			\item Tempo medio di risposta;
 			\item Dati medi scambiati mensilmente;
-			\item Numero medio di chiamate mensili.
+			\item Numero medio di chiamate mensili;
 		\end{itemize}
 		\item \textbf{Precondizione}: L'utente è sulla pagina di un microservizio e clicca sul link di visione delle statistiche;
 		\item \textbf{Postcondizione}: L'utente è stato reindirizzato alla pagina di visione delle statistiche del microservizio.
@@ -880,7 +903,7 @@
 				\item l'utente può scegliere di modificare i suoi dati [UC8.2];
 				\item l'utente visiona i commenti che ha scritto [UC8.3];
 				\item l'utente può accedere ad una pagina di gestione delle sue API [UC8.4];
-				\item l'utente può accedere ad una pagina di acquisto di APICredits [UC8.5].
+				\item l'utente può accedere ad una pagina di acquisto di APICredits [UC8.5];
 			\end{itemize}
 		\item \textbf{Precondizione}: L'utente clicca sul suo profilo;
 		\item \textbf{Postcondizione}: Il sistema apre la sua pagina utente.
@@ -898,7 +921,7 @@
 			\item Indirizzo fisico;
 			\item Indice di affidabilità;
 			\item APICredits in suo possesso;
-			\item La lista delle APIKey acquistate e la loro scadenza.
+			\item La lista delle APIKey acquistate e la loro scadenza;
 		\end{itemize}
 		\item \textbf{Scenario Principale}:
 		\begin{itemize}
@@ -906,7 +929,7 @@
 			\item l'utente può modificare il proprio cognome [UC8.2.2];
 			\item l'utente può modificare il proprio indirizzo email [UC8.2.3];
 			\item l'utente può modificare il proprio numero di telefono [UC8.2.4];
-			\item l'utente può modificare il proprio indirizzo [UC8.2.5].
+			\item l'utente può modificare il proprio indirizzo [UC8.2.5];
 		\end{itemize}
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina profilo;
 		\item \textbf{Postcondizione}: Il sistema stampa su schermo tutte le informazioni personali dell'utente.
@@ -989,7 +1012,7 @@
 		\item \textbf{Scenario principale}:
 			\begin{itemize}
 				\item l'utente autenticato può decidere di andare in una pagina che elenchi le API da lui registrate [UC8.4.1];
-				\item l'utente autenticato può andare in una pagina che gli permette di registrare una nuova API [UC8.4.2]
+				\item l'utente autenticato può andare in una pagina che gli permette di registrare una nuova API [UC8.4.2];
 			\end{itemize}
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina profilo;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente tutte le informazioni sui microservizi da lui caricati e gli ha permesso di registrare i microservizi che voleva registrare.
@@ -1007,7 +1030,7 @@
 		\item \textbf{Scenario principale}:
 			\begin{itemize}
 				\item l'utente visualizza tutte le statistiche relative all'API;
-				\item l'utente può scegliere di modificare alcuni dati della sua API.
+				\item l'utente può scegliere di modificare alcuni dati della sua API;
 			\end{itemize}
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina profilo;
 		\item \textbf{Postcondizione}: Il sistema ha mostrato all'utente tutti i microservizi da lui registrati.
@@ -1029,7 +1052,7 @@
 			\item L'elenco dei crash del suo microservizio e notificati dall'API Gateway;
 			\item Il tempo medio di risposta al netto del tempo di risposta dell'API Gateway;
 			\item Il numero di chiamate totali al microservizio tramite APIKeys;
-			\item il numero di chiamate medio mensile al microservizio tramite APIKeys.
+			\item il numero di chiamate medio mensile al microservizio tramite APIKeys;
 		\end{itemize}
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina utente ed ha visionato tutti i suoi microservizi registrati;
 		\item \textbf{Postcondizione}: Il sistema ha fornito all'utente tutte le statistiche relative al microservizio che interessa all'utente.
@@ -1043,7 +1066,7 @@
 			\item Modificare la descrizione;
 			\item Modificare l'interfaccia caricata;
 			\item Modificare il prezzo delle APIKey e relative policy di vendita;
-			\item Modificare la documentazione relativa.
+			\item Modificare la documentazione relativa;
 		\end{itemize}
 		\item \textbf{Precondizione}: L'utente sta visionando un microservizio che ha registrato e clicca sul pulsante di modifica dati;
 		\item \textbf{Postcondizione}: Il sistema ha permesso all'utente di compiere le modifiche richieste.
@@ -1060,11 +1083,11 @@
 		\item \textbf{Scopo e descrizione}: L'utente registrato che vuole registrare una nuova interfaccia di microservizio;
 		\item \textbf{Scenario principale}:
 			\begin{itemize}
-				\item l'utente inserisce il nome della sua API [UC4.2.1]I;
+				\item l'utente inserisce il nome della sua API [UC4.2.1];
 				\item l'utente inserisce una breve descrizione per la sua API [UC4.2.2];
 				\item l'utente inserisce i prezzi di vendita in relazione alle policy [UC42.3];
 				\item l'utente carica l'interfaccia della sua API [UC4.2.4];
-				\item l'utente carica la documentazione relativa alla sua API [UC4.2.5].
+				\item l'utente carica la documentazione relativa alla sua API [UC4.2.5];
 			\end{itemize}
 		\item \textbf{Precondizione}: L'utente è sulla sua pagina profilo e ha cliccato sul pulsante per caricare un nuovo microservizio;
 		\item \textbf{Postcondizione}: Il sistema ha permesso all'utente di caricare un nuovo microservizio e ha notificato il risultato dell'operazione.
@@ -1073,8 +1096,15 @@
 	\label{UC8.4.2.1}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente che vuole caricare un microservizio deve inserire un nome per il suo microservizio che sia univoco all'interno del database di Api Market;
-		\item \textbf{Scenario alternativo}: Il nome scelto dall'utente esiste già nel database. Viene notificato all'utente l'errore [UC4.2.7];
+		\item \textbf{Scopo e descrizione}: L'utente che vuole caricare un microservizio deve inserire un nome per il suo microservizio. Il nome del microservizio deve soddisfare le seguenti condizioni:
+		\begin{itemize}
+			\item Deve essere univoco;
+			\item Deve essere lungo meno di 50 caratteri;
+			\item Non deve contenere caratteri speciali;
+			\item Deve essere lungo almeno 4 caratteri.
+		\end{itemize} 
+		Qualora il nome non soddisfi questi requisiti la procedura deve essere bloccata e deve essere visualizzato un messagio di errore;
+		\item \textbf{Scenario alternativo}: Il nome scelto dall'utente esiste già nel database o non è conforme. Viene notificato all'utente l'errore [UC4.2.7];
 		\item \textbf{Precondizione}: L'utente è nella pagina di registrazione di una nuova interfaccia di microservizio;
 		\item \textbf{Postcondizione}: Il sistema ha permesso all'utente di inserire un nome adeguato per il suo microservizio.
 	\end{itemize}
@@ -1082,7 +1112,8 @@
 	\label{UC8.4.2.2}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
-		\item \textbf{Scopo e descrizione}: L'utente che vuole caricare un microservizio deve scrivere una descrizione che ne illustri lo scopo generale. Deve inoltre scrivere alcuni tag che categorizzino il suo microservizio e ne descrivano lo scopo. Può scrivere da un minimo di tre ad un massimo di dieci tag.
+		\item \textbf{Scopo e descrizione}: L'utente che vuole caricare un microservizio deve scrivere una descrizione che ne illustri lo scopo generale. Deve inoltre scrivere alcuni tag che categorizzino il suo microservizio e ne descrivano lo scopo. Può scrivere da un minimo di tre ad un massimo di dieci tag. La descrizione del microservizio deve essere lunga meno di 1000 caratteri;
+		\item \textbf{Scenario alternativo}: La descrizione è più lunga di 1000 caratteri, viene quindi visualizzato un messaggio di errore [UC8.4.2.8];
 		\item \textbf{Precondizione}: L'utente è nella pagina di registrazione di una nuova interfaccia di microservizio;
 		\item \textbf{Postcondizione}: Il sistema ha permesso all'utente di inserire una descrizione per il suo microservizio.
 	\end{itemize}
@@ -1094,7 +1125,7 @@
 		\begin{itemize}
 			\item A scambio di dati;
 			\item A numero di accessi;
-			\item A scadenza.
+			\item A scadenza;
 		\end{itemize} 
 		\item \textbf{Precondizione}: L'utente è nella pagina di registrazione di una nuova interfaccia di microservizio;
 		\item \textbf{Postcondizione}: Il sistema ha permesso all'utente di inserire le modalità di pagamento per il suo microservizio.
@@ -1133,6 +1164,14 @@
 		\item \textbf{Precondizione}: L'utente ha inserito un nome per il suo microservizio errato o già esistente nel database;
 		\item \textbf{Postcondizione}: Il sistema ha fallito nel caricamento e ha notificato un errore adeguato all'utente.
 	\end{itemize}
+	\subsection{Caso d'uso UC8.4.2.8: Visualizzazione errore descrizione API}
+	\label{UC8.4.2.8}
+	\begin{itemize}
+		\item \textbf{Attori}: Utente Autenticato;
+		\item \textbf{Scopo e descrizione}: L'utente tenta di inserire una descrizione per il microservizio più lunga di 1000 caratteri. Il sistema notifica un errore;
+		\item \textbf{Precondizione}: L'utente ha inserito una descrizione troppo lunga;
+		\item \textbf{Postcondizione}: Il sistema ha fallito nel caricamento e ha notificato un errore adeguato all'utente.
+	\end{itemize}
 	\subsection{Caso d'uso UC8.5: Aggiunta APICredits}
 	\label{UC8.4.5}
 	\begin{itemize}
@@ -1157,7 +1196,7 @@
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente decide se confermare la sua carta di credito registrata nel suo account o se cambiarla;
-		\item \textbf{Scenario alternativo}: L'utente decide di cambiare la carta di credito con cui effettuare l'acquisto, viene quindi reindirizzato ad una pagina in cui inserire una carta di credito [UC1.5].
+		\item \textbf{Scenario alternativo}: L'utente decide di cambiare la carta di credito con cui effettuare l'acquisto, viene quindi reindirizzato ad una pagina in cui inserire una carta di credito [UC1.5];
 		\item \textbf{Precondizione}: L'utente è nella pagina di conferma di acquisto;
 		\item \textbf{Postcondizione}: L'utente ha una carta di credito valida con cui effettuare il pagamento.
 	\end{itemize}
@@ -1168,7 +1207,7 @@
 		\item \textbf{Scopo e descrizione}: L'utente conferma il pagamento cliccando sul pulsante di conferma, viene reindirizzato su una pagina che annuncia l'esito dell'operazione e, se l'operazione è andata a buon fine, visualizza la sua nuova APIKey;
 		\item \textbf{Scenario alternativo}: L'operazione non va a buon fine, viene quindi visualizzato un messaggio di errore transazione non eseguita [UC8.5.3];
 		\item \textbf{Precondizione}: L'utente ha cliccato sul pulsante di conferma pagamento;
-		\item \textbf{Postcondizione}: L'utente viene reindirizzato ad una pagina che descrive l'esito dell'operazione e, nel caso l'operazione sia andata a buon fine, visualizzi la sua APIkey.
+		\item \textbf{Postcondizione}: L'utente viene reindirizzato ad una pagina che descrive l'esito dell'operazione e, nel caso l'operazione sia andata a buon fine, visualizzi la sua APIKey.
 	\end{itemize}
 	\subsection{Caso d'uso UC8.5.3: Visualizza errore pagamento non avvenuto}
 	\label{UC8.5.3}
@@ -1184,7 +1223,7 @@
 		\item \textbf{Attori}: Utente autenticato;
 		\item \textbf{Scopo e descrizione}: L'utente che vuole acquistare APICredits inserisce l'importo;
 		\item \textbf{Precondizione}: L'utente è arrivato sulla pagina di acquisto APICredits;
-		\item \textbf{Postcondizione}: L'utente ha scelto l'importo da convertire;
+		\item \textbf{Postcondizione}: L'utente ha scelto l'importo da convertire.
 	\end{itemize}
 	\subsection{Caso d'uso UC9: Statistiche sito}
 	\label{UC9}
@@ -1289,7 +1328,7 @@
 			\hline
 			R1F1.6.2 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve fornire un messaggio di errore se il cognome inserito in fase di registrazione supera i 50 caratteri o non supera i 3 caratteri. & \uc{1.1.6}\\
 			\hline
-			R1F1.6.3 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve fornire un messaggio di errore se il numero di telefono non è in formato numerico o supera i 30 caratteri & \uc{1.1.7}\\
+			R1F1.6.3 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve fornire un messaggio di errore se il numero di telefono non è in formato numerico o supera i 16 caratteri & \uc{1.1.7}\\
 			\hline
 			R1F1.6.4 & \minitab[c]{Funzionale\\Desiderabile} & APIMarket deve fornire un messaggio di errore se il numero di carta di credito non è valido & \uc{1.9}\\
 			\hline
@@ -1311,7 +1350,7 @@
 			\hline
 			R2F1.9 & \minitab[c]{Funzionale\\Opzionale} & La registrazione può richiedere il caricamento di un logo utente. & \uc{1.6}\\
 			\hline
-			R2F1.9.1 & \minitab[c]{Funzionale\\Opzionale} & Il logo utente deve pesare meno di 500kb e deve essere in formato jpg, jpeg, png o bmp. & \uc{1.6}\\
+			R2F1.9.1 & \minitab[c]{Funzionale\\Opzionale} & Il logo utente deve pesare meno di 512kb e deve essere in formato jpg, jpeg, png o bmp. & \uc{1.6}\\
 			\hline
 		\end{longtable}
 		\begin{longtable}{|m{5em}|m{6em}|m{28em}|m{5em}|}
@@ -1347,6 +1386,12 @@
 			\hline
 			R0F3.2.1 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve mostrare un errore all'utente qualora tenti di impostare un nome già esistente in APIMarket per il suo microservizio. & \uc{8.4.2.7}\\
 			\hline
+			R0F3.2.2 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve mostrare un errore all'utente qualora tenti di impostare un nome più lungo di 50 caratteri. & \uc{8.4.2.7}\\
+			\hline 
+			R0F3.2.3 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve mostrare un errore all'utente qualora tenti di impostare un nome più corto di 4 caratteri. & \uc{8.4.2.7}\\
+			\hline 
+			R0F3.2.4 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve mostrare un errore all'utente qualora tenti di impostare che contiene caratteri speciali. & \uc{8.4.2.7}\\
+			\hline 
 			R0F3.3 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve permettere di impostare un prezzo per il suo microservizio al momento del caricamento della sua interfaccia. & \shortstack[l]{\\Capitolato\\\uc{8.4.2.3}}\\
 			\hline
 			R0F3.4 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve permettere di impostare i tipi di policy di vendita con cui vuole rendere disponibile il suo microservizio. & \shortstack[l]{\\Capitolato\\\uc{8.4.2.3}}\\
@@ -1358,6 +1403,8 @@
 			R0F3.4.3 & \minitab[c]{Funzionale\\Desiderabile} & L'utente deve avere la possibilità di impostare una policy di vendita a numero di accessi. & \shortstack[l]{\\Capitolato\\\uc{8.4.2.3}}\\
 			\hline
 			R0F3.5 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve permettere di impostare un testo introduttivo che descriva il suo microservizio al momento del caricamento della sua interfaccia. & \uc{8.4.2.2}\\
+			\hline
+			R0F3.5.1 & \minitab[c]{Funzionale\\Obbligatorio} & APIMarket deve visualizzare un errore qualora l'utente tenti di inserire un testo descrittivo più lungo di 1000 caratteri. & \uc{8.4.2.8}\\
 			\hline
 			R2F3.6 & \minitab[c]{Funzionale\\Opzionale} & APIMarket deve permettere di impostare dei tag, che descrivano l'utilità del suo microservizio. & \uc{8.4.2.2}\\
 			\hline
@@ -1618,6 +1665,12 @@
 			\hline		
 			R0F3.2.1 & \uc{8.4.2.7}\\
 			\hline
+			R0F3.2.2 & \uc{8.4.2.7}\\
+			\hline
+			R0F3.2.3 & \uc{8.4.2.7}\\
+			\hline
+			R0F3.2.4 & \uc{8.4.2.7}\\
+			\hline
 			R0F3.3 & \shortstack[l]{\\Capitolato\\\uc{8.4.2.3}}\\
 			\hline
 			R0F3.4 & \shortstack[l]{\\Capitolato\\\uc{8.4.2.3}}\\
@@ -1629,6 +1682,8 @@
 			R0F3.4.3 & \shortstack[l]{\\Capitolato\\\uc{8.4.2.3}}\\
 			\hline
 			R0F3.5 & \uc{8.4.2.2}\\
+			\hline
+			R0F3.5.1 & \uc{8.4.2.8}\\
 			\hline
 			R2F3.6 & \uc{8.4.2.2}\\
 			\hline
@@ -1904,7 +1959,9 @@
 			\hline 
 			\uc{8.4.2.6} &  R0F3.7\\
 			\hline 
-			\uc{8.4.2.7} & \shortstack[l]{\\R0F3.2.1\\R0F3.7} \\
+			\uc{8.4.2.7} & \shortstack[l]{\\R0F3.2.1\\R0F3.2.2\\R0F3.2.3\\R0F3.2.4\\R0F3.7} \\
+			\hline 
+			\uc{8.4.2.8} & R0F3.5.1 \\
 			\hline 
 			\uc{8.5} & R1F4.4 \\ 
 			\hline
@@ -1930,7 +1987,7 @@
 				\hline
 				\textbf{Categoria} & \textbf{Obbligatori} & \textbf{Desiderabili} & \textbf{Opzionali}\\
 				\hline
-				Funzionali & 47 & 32 & 12 \\
+				Funzionali & 51 & 32 & 12 \\
 				\hline
 				Vincolo & 8 & 0 & 0\\
 				\hline
