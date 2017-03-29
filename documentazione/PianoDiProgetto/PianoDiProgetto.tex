@@ -52,7 +52,7 @@
 %\end{itemize}
 
 %TABELLA
-%\begin{tabular}{|c|c|c|}
+% \begin{table}[H] \centering \begin{tabular}{|c|c|c|}
 %indica una tabella con 3 colonne e pos. testo centrale. La barra verticale ( | ) indica che vi è una linea divisoria verticale tra le celle.
 %\hline	linea separatrice orizzontale
 %testo1& testo2& testo3\\
@@ -73,7 +73,7 @@
 \usepackage{xcolor} % Importa i colori per la prima pagina
 \usepackage{fix-cm} % Permette l'incremento del font oltre misura
 
-\newcommand{\HRule}[1]{\hfill \rule{0.2\linewidth}{#1}} % Horizontal rule at the bottom of the page, adjust width here
+\newcommand{\HRule}[1]{\hfill \rule{0.2\linewidth}{#1}} % Orizzontale rule at the bottom of the page, adjust width here
 
 \definecolor{grey}{rgb}{0.9,0.9,0.9} % Colore del box del titolo
 
@@ -141,22 +141,29 @@
 	\renewcommand{\footrulewidth}{0.2pt}
 	
 	\rhead{Registro Modifiche}
-	\section{Registro Modifiche}
-	\small %rippicciolisce il testo
+	\section*{Registro Modifiche}
+	\thispagestyle{empty}
+	\small %rimpicciolisce il testo
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\begin{center}\begin{tabular}{|l|c|c|c|}
+		\begin{center} \begin{table}[H] \centering \begin{tabular}{|l|c|c|c|}
 			\hline
 			{\textbf{Ver.}}&{\textbf{Modifica}}&{\textbf{Nome}}&{\textbf{Data}}\\
+			\hline
+			2.0.3 & \minitab[c]{ Capitolo 4 - Modificato titolo 4.2 , Verticalizzate tab.2-3-4-5-6 \\ Capitolazione tutte le tabelle} & Sebastiano Marchesini & 17/03/2017 \\
+			\hline
+			2.0.2 & \minitab[c]{ Capitolo 6 (costi orari tolti) \\ tab.11-12-13-14-15 } & Sebastiano Marchesini & 17/03/2017 \\
+			\hline
+			2.0.1 & \minitab[c]{ Intero documento \\ Correzione Ortografica } & Sebastiano Marchesini & 17/03/2017 \\
 			\hline
 			1.1.1 & Consultivo di Periodo - Progettazione Architetturale & Sebastiano Marchesini & 06/03/2017 \\
 			\hline
 			1.1.0 & Verifica & Lonardi Pietro & 22/02/2017  \\
 			\hline
-			1.0.9 & \minitab[c]{Inserimento e calcolo dei capitoli\\ : Distribuzione del Lavoro} & Sebastiano Marchesini & 31/01/2017  \\
+			1.0.9 & \minitab[c]{Inserimento e calcolo dei capitoli: \\ Distribuzione del Lavoro} & Sebastiano Marchesini & 31/01/2017  \\
 			\hline
 			1.0.8 & \minitab[c]{Inserimento delle WBS e \\ spiegazione di cosa sono e cosa servono capitolo} & Sebastiano Marchesini & 30/01/2017 \\
 			\hline
-			1.0.7 & \minitab[c]{Motivazione del consultivo di periodo\\ non conforme alla progettazione} & Sebastiano Marchesini & 30/01/2017 \\
+			1.0.7 & \minitab[c]{Motivazione del consuntivo di periodo\\ non conforme alla progettazione} & Sebastiano Marchesini & 30/01/2017 \\
 			\hline
 			1.0.6 & \minitab[c]{Approfondimento e correzione del Capitolo 4 \\ Cambio illustrazione e approfondimento} & Sebastiano Marchesini & 28/01/2017 \\
 			\hline
@@ -186,7 +193,7 @@
 			\hline
 			0.0.1 & Studio dei riferimenti e impostato il documento & Sebastiano Marchesini & 21/12/2016 \\
 			\hline
-		\end{tabular}\end{center}
+		\end{tabular}\end{table} \end{center}
 	}
 	\normalsize
 	
@@ -196,13 +203,21 @@
 	%crea indice automaticamente
 	\thispagestyle{empty}
 	
+	\newpage
+	\listoftables
+	\thispagestyle{empty}
+	
+	\newpage
+	\listoffigures
+	\thispagestyle{empty}
+	
 	%\listoftables
 	%DARE CAPTION ALLE TABELLE
 	\listoffigures
 	
 	\newpage
 	
-	
+	\setcounter{page}{1}
 	\rhead{Introduzione}
 	\section{Introduzione}
 	\subsection{Scopo del Documento}
@@ -250,13 +265,16 @@
 	Tali date stanno indicare l'impegno del gruppo e intendono essere rispettate all'unanime.\\
 	
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\begin{center}\begin{tabular}{|l|c|c|c|c|c|}
+		\begin{center} \begin{table}[H] \centering \begin{tabular}{|l|c|c|c|c|c|}
 			\hline
 			& Consegna & \textbf{RR} & \textbf{RP} & \textbf{RQ} & \textbf{RA} \\
 			\hline
 			\textit{Ia} & 11/01 & 24/01 & 13/03 & 18/04 & 15/05 \\
 			\hline
-	\end{tabular}\end{center}}
+	\end{tabular}
+	\caption{Prospetto date di consegna}
+	\label{Pdatec}
+	\end{table} \end{center}}
 	\vspace{0.5cm}
 
 	Le sigle stanno a indicare rispettivamente:
@@ -291,38 +309,38 @@
 	Rispettivamente uno accerta la realizzabilità l'altro accerta le caratteristiche del prodotto da realizzare\\
 	A partire da RPmin, cioè una progettazione di alto livello che presenta tra i prodotti interni:
 	\begin{itemize}
-		\item Norme di Progetto v2.
+		\item Norme di Progetto v 2.
 	\end{itemize}
 	Prodotti esterni valutati: 
 	\begin{itemize}
-		\item Piano di Progetto v2;
-		\item Piano di Qualifica v2;
+		\item Piano di Progetto v 2;
+		\item Piano di Qualifica v 2;
 		\item Specifica tecnica.
 	\end{itemize}
 	Segue la RPmax con una progettazione più a basso livello e l'aggiornamento dei prodotti interni:
 	\begin{itemize}
-		\item Norme di Progetto v3.
+		\item Norme di Progetto v 3.
 	\end{itemize}
 	ed esterni:
 	\begin{itemize}
-		\item Piano di Progetto v3;
-		\item Piano di Qualifica v3;
+		\item Piano di Progetto v 3;
+		\item Piano di Qualifica v 3;
 		\item Definizione del prodotto.
 	\end{itemize}
 	
-	Il nostro team è impegnato alla consegna obbligatoria di uno dei due tipi di revisione e intende sostenere l'RPmin, consegnando il documento di \textit{Specifica Tecnica}.
+	Il nostro team è impegnato alla consegna obbligatoria di uno dei due tipi di revisione e intende sostenere l' RPmin, consegnando il documento di \textit{Specifica Tecnica}.
 	
 	\subsubsection{Revisione di Qualifica}
 	La revisione di qualifica evidenzia che il prodotto sembri funzionare. \\
 	Revisione dell'esito finale di qualifiche delle verifiche e attivazione di validazione \\
 	Prodotti interni valutati:
 	\begin{itemize}
-		\item Norme di Progetto v4.
+		\item Norme di Progetto v 4.
 	\end{itemize}
 	Prodotti esterni valutati:
 	\begin{itemize}
-		\item Piano di Qualifica v4;
-		\item Piano di Progetto v4;
+		\item Piano di Qualifica v 4;
+		\item Piano di Progetto v 4;
 		\item Versione preliminare del Manuale Utente (MU v1).
 	\end{itemize}
 	Prodotti esterni forniti a scopo illustrativo:
@@ -335,9 +353,9 @@
 	Accertamento del soddisfacimento di tutti i requisiti utente pattuiti nella \textit{Revisione dei Requisiti}.\\
 	Prodotti esterni valutati:
 	\begin{itemize}
-		\item Piano di Qualifica v5 con esito finale di verifica validazione;
-		\item Piano di Progetto v5 consuntivo finale;
-		\item Manuale Utente v2.
+		\item Piano di Qualifica v 5 con esito finale di verifica validazione;
+		\item Piano di Progetto v 5 consuntivo finale;
+		\item Manuale Utente v 2.
 	\end{itemize}
 	
 	\newpage
@@ -380,12 +398,12 @@
 			\item \textbf{Trigger} in cui vengono indicati eventuali sintomi anticipatori (se esistono) dell'emergere del rischio che possono favorire una gestione anticipata del rischio;
 			\item \textbf{Ruoli} interessati che colpiscono l'imprevisto;
 			\item \textbf{Contromisure} in cui vengono indicate le strategie di risposta che si intende adottare e che possono riguardare la prevenzione, la mitigazione oppure il trasferimento a terzi del rischio.
-			Rischi residui o secondari in cui vengono indicati i rischi che possono permanere anche a fronte dell'attuazione della strategia prefissata oppure rischi che possono nascere proprio dall?attuazione della strategia;
+			Rischi residui o secondari in cui vengono indicati i rischi che possono permanere anche a fronte dell'attuazione della strategia prefissata oppure rischi che possono nascere proprio dall' attuazione della strategia;
 			\item \textbf{Owner} in cui viene indicata la persona che ha la responsabilità di monitorare l'andamento del rischio corrispondente e di attivare le contromisure stabilite.
 		\end{itemize}
 	
-	\subsection{Pianificazione dei rischi}
-		Per ogni rischio analizzato bisogna scegliere la \textit{strategia di mitigazione}. Sono possibili le seguenti strategie:
+	\subsection{Moderazione dei rischi}
+		Per ogni rischio analizzato bisogna scegliere la \textit{strategia di mitigazione (SdP)}. Sono possibili le seguenti strategie:
 		\begin{itemize}
 			\item \textbf{Trasferire};
 			\item \textbf{Mitigare};
@@ -429,22 +447,21 @@
 			\item \textbf{Frammentazione dei Requisiti}: Ogni requisito deve essere scomposto in minime parti, questa operazione richiede attenzione e può presentare difficoltà.
 		\end{itemize}
 		\begin{center}
-			\textbf{Livello di Desgin}
+			\textbf{Livello di Design}
 		\end{center}
 		\begin{itemize}
 			\item \textbf{Dipendenze Progettuali}: In corso d'opera, i progettisti con i vari compiti assegnati si ritrovano a dover attendere una conclusione progettuale di un altro componente del team prima di completare il proprio ticket progettuale.
 			\item \textbf{Marketing Grafico}: Difficoltà nel trovare un prototipo grafico accattivante da inserire nel MockUp.
 		\end{itemize}
 
-	\begin{landscape}
-	\subsection{Registro dei rischi}
-		\small
+	\subsection{Registro dei rischi}{
 		\subsubsection{Livello Tecnologico}
+		
 		\begin{center}
 		{\renewcommand\arraystretch{1.2}
-			\begin{tabular}{|c|c|c|c|c|c|c|}
+			 \begin{table}[H] \footnotesize \centering \begin{tabular}{|c|c|c|c|c|c|c|}
 				\hline 
-				\textbf{Nome} & \textbf{Data} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Prodotto} & \textbf{Trigger} & \textbf{Strategia Pianificazione} \\ 
+				\textbf{Nome} & \textbf{Data} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Prodotto} & \textbf{Trigger} & \textbf{SdP} \\ 
 				\textbf{Ruolo} & \textbf{Owner} & \multicolumn{5}{|c|}{\textbf{Contromisure}} \\ 
 				\hline 
 				\textit{RT1 - Tecnologie Adottate} & 12/12/2016 & 90\% & 40\% & 36\% & Errori di SO visualizzati & Mitigare \\ 
@@ -455,14 +472,16 @@
 				\hline
 				\hline
 			\end{tabular} 
-		}
-		\end{center}
+		\caption{Rischi livello Tecnologico}
+		\label{RLT}
+		\end{table}} \end{center}
+		
 		\subsubsection{Livello Personale}
 		\begin{center}
 			{\renewcommand\arraystretch{1.2}
-				\begin{tabular}{|c|c|c|c|c|c|c|}
+				 \begin{table}[H] \footnotesize \centering \begin{tabular}{|c|c|c|c|c|c|c|}
 					\hline 
-					\textbf{Nome} & \textbf{Data} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Prodotto} & \textbf{Trigger} & \textbf{Strategia Pianificazione} \\ 
+					\textbf{Nome} & \textbf{Data} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Prodotto} & \textbf{Trigger} & \textbf{SdP} \\ 
 					\textbf{Ruolo} & \textbf{Owner} & \multicolumn{5}{|c|}{\textbf{Contromisure}} \\ 
 					\hline 
 				\textit{RP1 - Inesperienza} & 12/12/2016 & 80\% & 70\% & 56\% & --- & Mitigare \\ 
@@ -474,49 +493,54 @@
 				\hline 
 				\hline
 			\end{tabular}
-		}
-		\end{center}
+		\caption{Rischi Livello Personale}
+		\label{RLP}
+		\end{table}} \end{center}
+	
 	\subsubsection{Livello organizzativo e valutazione dei costi}
 		\begin{center}
 		{\renewcommand\arraystretch{1.2}
-			\begin{tabular}{|c|c|c|c|c|c|c|}
+			 \begin{table}[H] \footnotesize \centering \begin{tabular}{|c|c|c|c|c|c|c|}
 				\hline 
-				\textbf{Nome} & \textbf{Data} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Prodotto} & \textbf{Trigger} & \textbf{Strategia Pianificazione} \\ 
+				\textbf{Nome} & \textbf{Data} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Prodotto} & \textbf{Trigger} & \textbf{SdP} \\ 
 				\textbf{Ruolo} & \textbf{Owner} & \multicolumn{5}{|c|}{\textbf{Contromisure}} \\ 
 				\hline 
-				\textit{RO1 - Valutazione Efficienza} & 16/12/2016 & 90\% & 50\% & 45\% & Non rispettati tempi pianificati & Trasferimento \\ \minitab[c]{Responsabile\\Analista\\Singolo} & Amministratore & \multicolumn{5}{|c|}{\minitab[c]{Riprogettazione immediata del piano organizzativo.\\ Trasferimento degli oneri al componente meno oberato o al Project Manager}} \\ 
+				\textit{RO1 - Valutazione Efficienza} & 16/12/2016 & 90\% & 50\% & 45\% & Ritardi tempistiche & Trasferimento \\ \minitab[c]{Responsabile\\Analista\\Singolo} & Amministratore & \multicolumn{5}{|c|}{\minitab[c]{Riprogettazione immediata del piano organizzativo.\\ Trasferimento degli oneri al componente \\ meno oberato o al Project Manager}} \\ 
 				\hline
-				\textit{RO2 - Rischio di Stress} & 23/12/2016 & 10\% & 85\% & 8\% & Errori grossolani ultimo periodo & Trasferimento \\ Singolo & Project Manager & \multicolumn{5}{|c|}{\minitab[c]{Programmare una distribuzione più equa \\ o più gratificante del carico delle mansioni da svolgere}} \\ 
+				\textit{RO2 - Rischio di Stress} & 23/12/2016 & 10\% & 85\% & 8\% & Errori a conclusione & Trasferimento \\ Singolo & Project Manager & \multicolumn{5}{|c|}{\minitab[c]{Programmare una distribuzione più equa \\ o più gratificante del carico delle mansioni da svolgere}} \\ 
 				\hline
 				\hline 
 			\end{tabular}
-		}
-		\end{center}
+		\caption{Rischi Livello Organizzativo}
+		\label{RLO}
+		\end{table}} \end{center}
+	
 	\subsubsection{Livello dei Requisiti}
 		\begin{center}		
 		{\renewcommand\arraystretch{1.2}
-			\begin{tabular}{|c|c|c|c|c|c|c|}
+			 \begin{table}[H] \footnotesize \centering \begin{tabular}{|c|c|c|c|c|c|c|}
 				\hline 
-				\textbf{Nome} & \textbf{Data} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Prodotto} & \textbf{Trigger} & \textbf{Strategia Pianificazione} \\
+				\textbf{Nome} & \textbf{Data} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Prodotto} & \textbf{Trigger} & \textbf{SdP} \\
 				\textbf{Ruolo} & \textbf{Owner} & \multicolumn{5}{|c|}{\textbf{Contromisure}} \\ 
 				\hline 
 				\textit{RR1 - Comprensione Requisiti} & 22/12/2016 & 40\% & 40\% & 16\% & --- & Accettare \\ \minitab[c]{Progettista\\Verificatore\\Singolo} &
 				Analista & \multicolumn{5}{|c|}{Riunione e comunicazione tra le parti con correzioni al piano} \\ 
 				\hline
-				\textit{RR2 - Frammentazione dei Requisiti} & 22/12/2016 & 70\% & 20\% & 14\% & Trovato requisito molto complesso & Mitigare \\ Analista &
+				\textit{RR2 - Frammentazione dei Requisiti} & 22/12/2016 & 70\% & 20\% & 14\% & Requisito complesso & Mitigare \\ Analista &
 				Analista & \multicolumn{5}{|c|}{Studio accurato del requisito ed elaborazione in comune col team} \\ 
 				\hline 
 				\hline
 			\end{tabular} 
-		}
-		\normalsize
-		\end{center}
+		\caption{Rischi Livello Requisiti}
+		\label{RLR}
+		\end{table}} \end{center}
+	
 	\subsubsection{Livello di Design}
 		\begin{center}		
 			{\renewcommand\arraystretch{1.2}
-				\begin{tabular}{|c|c|c|c|c|c|c|}
+				 \begin{table}[H] \footnotesize \centering \begin{tabular}{|c|c|c|c|c|c|c|}
 					\hline 
-					\textbf{Nome} & \textbf{Data} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Prodotto} & \textbf{Trigger} & \textbf{Strategia Pianificazione} \\
+					\textbf{Nome} & \textbf{Data} & \textbf{Occ.} & \textbf{Peric.} & \textbf{Prodotto} & \textbf{Trigger} & \textbf{SdP} \\
 					\textbf{Ruolo} & \textbf{Owner} & \multicolumn{5}{|c|}{\textbf{Contromisure}} \\ 
 					\hline  
 					\textit{RD1 - Dipendenze Progettuali} & 25/02/2016 & 70\% & 60\% & 42\% & Previa Comunicazione & Mitigare \\ \minitab[c]{Progettista\\Verificatore\\Singolo} &
@@ -527,10 +551,11 @@
 					\hline
 					\hline
 				\end{tabular} 
-			}
-			\normalsize
-		\end{center}
-	\end{landscape}
+			\caption{Rischi Livello Design}
+			\label{RLD}
+		\end{table}} \end{center}
+	
+	}
 	
 	%MODIFICHE DA FARE
 	%Indicare i risti riscontrati e la date
@@ -622,7 +647,7 @@
 		\label{fig:gantt-progettazione-architetturale}
 	\end{figure}
 
-	\begin{figure}[H]
+	\begin{figure}
 		\centering
 		\includegraphics[width=0.6\linewidth]{"WBSAnalisi"}
 		\caption{Work Breakdown Structure Analisi}
@@ -630,9 +655,9 @@
 	\end{figure}
 
 	\subsubsection{Distribuzione del lavoro}{
-		\small
 			{\renewcommand\arraystretch{1.1} %aumenta l'altezza di ogni riga
-			\begin{center}\begin{tabular}{|c|l|r|c|}
+			\begin{center} \begin{table}[H]
+			 \footnotesize \centering \begin{tabular}{|c|l|r|c|}
 				\hline
 				{\textbf{Codice}}&{\textbf{Attività}}&{\textbf{Ruolo}}&{\textbf{Ore + Verifica}}\\
 				\hline
@@ -722,13 +747,15 @@
 						
 				AN6.3 & Verifica & Verificatore & 1 \\
 				\hline	
-			\end{tabular}\end{center}
+			\end{tabular}
+		\caption{Distribuzione Lavoro Analisi}
+		\label{DLA}
+		\end{table} \end{center}
 		}
-		\normalsize
 	}
 	\newpage
 	\subsection{Progettazione Architetturale}
-	\begin{center}\textit{Periodo: dal 25-01-2017 al 13-03-2017}\end{center}
+	\begin{center}\textit{Periodo: dal 25-01-2017 al 13-03-2017} \end{center}
 	Questo punto termina con la pubblicazione dell'esito all'ammissione di progetto, lasciando l'attività successiva lo stato definitivo del prodotto stesso. Le attività in questo caso sono:
 	\begin{enumerate}
 		\item \textbf{Specifica Tecnica}: il \textit{Progettista} espone le scelte progettuali che il prodotto dovrà avere.\\
@@ -755,7 +782,7 @@
 	\subsubsection{Distribuzione del lavoro}{
 		\small
 		{\renewcommand\arraystretch{1.1} %aumenta l'altezza di ogni riga
-			\begin{center}\begin{tabular}{|c|l|r|c|}
+			\begin{center} \begin{table}[H] \centering \begin{tabular}{|c|l|r|c|}
 				\hline
 				{\textbf{Codice}}&{\textbf{Attività}}&{\textbf{Ruolo}}&{\textbf{Ore + Verifica}}\\
 				\hline
@@ -815,7 +842,10 @@
 				
 				PA6.2 & Verifica & Verificatore & 0.5 \\
 				\hline	
-			\end{tabular}\end{center}
+			\end{tabular}
+		\caption{Distribuzione Lavoro Progettazione Architetturale}
+		\label{DLPA}
+		\end{table} \end{center}
 		}
 		\normalsize
 	}
@@ -852,7 +882,7 @@
 	\subsubsection{Distribuzione del lavoro}{
 		\small
 		{\renewcommand\arraystretch{1.1} %aumenta l'altezza di ogni riga
-			\begin{center}\begin{tabular}{|c|l|r|c|}
+			\begin{center} \begin{table}[H] \centering \begin{tabular}{|c|l|r|c|}
 				\hline
 				{\textbf{Codice}}&{\textbf{Attività}}&{\textbf{Ruolo}}&{\textbf{Ore + Verifica}}\\
 				\hline
@@ -911,7 +941,10 @@
 				
 				PD8.2 & Verifica & Verificatore & 0.5 \\
 				\hline	
-			\end{tabular}\end{center}
+			\end{tabular}
+		\caption{Distribuzione Lavoro Progettazione in Dettaglio e Codifica}
+		\label{DLPDeC}
+		\end{table} \end{center}
 		}
 		\normalsize
 	}
@@ -950,7 +983,7 @@
 	\subsubsection{Distribuzione del lavoro}{
 		\small
 		{\renewcommand\arraystretch{1.1} %aumenta l'altezza di ogni riga
-			\begin{center}\begin{tabular}{|c|l|r|c|}
+			\begin{table}[H] \centering \begin{tabular}{|c|l|r|c|}
 				\hline
 				{\textbf{Codice}}&{\textbf{Attività}}&{\textbf{Ruolo}}&{\textbf{Ore + Verifica}}\\
 				\hline
@@ -997,7 +1030,10 @@
 				\hline
 				\textbf{VA7} & \textbf{Collaudo} & \minitab[l]{ Programmatore \\ Verificatore } & \textbf{5} \\
 				\hline
-			\end{tabular}\end{center}
+			\end{tabular}
+		\caption{Distribuzione Lavoro Validazione e Collaudo}
+		\label{DLVC}
+		\end{table}
 		}
 		\normalsize
 	}
@@ -1007,60 +1043,66 @@
 	\section{Preventivo}
 	Qui vengono presentate le ore preventivate di impiego per i vari ruoli coinvolti.\\
 	Si ricorda che il periodo di \textit{Analisi dei Requisiti} e \textit{Analisi Dettaglio} non sono a carico del committente e quindi non saranno considerate nel calcolo delle ore totali da retribuire. \\
-	Costi e sigle delle tabelle fanno riferimento al capitolo \textit{Ruoli} del documento: \textit{Norme di Progetto v2.0.0}.
+	Costi e sigle delle tabelle fanno riferimento al capitolo \textit{Ruoli} del documento: \textit{Norme di Progetto v 2.0.0}.
 	
 	\subsection{Analisi}
-	Nel periodo di analisi non vi sono ore di \textit{Codifica}, eseguite dal \textit{Programmatore}, e di \textit{Progettazione}, eseguite dal \textit{Progettista}. Questo perchè Analisi e Progettazione non sono mai simultaneamente attive. \\
+	Nel periodo di analisi non vi sono ore di \textit{Codifica}, eseguite dal \textit{Programmatore}, e di \textit{Progettazione}, eseguite dal \textit{Progettista}. Questo perché Analisi e Progettazione non sono mai simultaneamente attive. \\
 	Durante il periodo di Analisi le ore tra i ruoli sono state divise nel modo seguente: \\
 	
-	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\small
-		\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
-			\hline 
-			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
-			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
-			\hline
-			Sebastiano Marchesini & 8x30 & 9x20 & 4x25 & & & & 520,00 \\ 
-			\hline 
-			Gianluca Crivellaro & & & 18x25 & & & 3x15 & 495,00 \\ 
-			\hline 
-			Pietro Lonardi & & & 13x25 & & & 7x15 & 430,00 \\ 
-			\hline 
-			Alberto Gelmi & & & 8x25 & & & 7x15 & 305,00 \\ 
-			\hline 
-			Piergiorgio Danieli & 5x30 & 5x20 & & & & 12x15 & 430,00 \\ 
-			\hline
-			\textbf{Ore Totali per ruolo} & 13 & 14 & 43 & 0 & 0 & 29 & 99 \\  
-			\textbf{Prezzo Totale per ruolo}&\euro 390,00&\euro 280,00&\euro  1.075,00&\euro 0,00&\euro 0,00&\euro 435,00& \textit{\euro 2.180,00} \\
-			\hline  
-	\end{tabular}\end{center}} 
+		{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
+			\small
+			\begin{center} \begin{table}[H] \centering \begin{tabular}{|c|c|c|c|c|c|c|c|}
+				\hline 
+				\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
+				& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
+				\hline
+				Sebastiano Marchesini & 8 & 9 & 4 & & & & 520,00 \\ 
+				\hline 
+				Gianluca Crivellaro & & & 18 & & & 3 & 495,00 \\ 
+				\hline 
+				Pietro Lonardi & & & 13 & & & 7 & 430,00 \\ 
+				\hline 
+				Alberto Gelmi & & & 8 & & & 7 & 305,00 \\ 
+				\hline 
+				Piergiorgio Danieli & 5 & 5 & & & & 12 & 430,00 \\ 
+				\hline
+				\textbf{Ore Totali per ruolo} & 13 & 14 & 43 & 0 & 0 & 29 & 99 \\  
+				\textbf{Prezzo Totale per ruolo}&\euro 390,00&\euro 280,00&\euro  1.075,00&\euro 0,00&\euro 0,00&\euro 435,00& \textit{\euro 2.180,00} \\
+				\hline  
+		\end{tabular}
+		\caption{Preventivo Analisi}
+		\label{PA}
+		\end{table} \end{center}} 
 	
 	\subsection{Analisi Dettaglio}
 	Analisi Dettaglio concentra tutto il team sul documento di \textit{Analisi dei Requisiti v1.0.0}. Ognuno pone la sua attenzione su un particolare argomento del progetto, si analizza, guidati dal \textit{Project Manager}. L'\textit{Amministratore} è a capo delle revisioni . Non vi sono altri compiti da svolgere in questo stadio, quindi non vi sono altre ore rendicontate.\\
 	Nel periodo che riguarda l'Analisi Dettaglio, le ore tra i ruoli sono state divise come segue:\\
 	
-	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\small
-		\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
-			\hline 
-			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
-			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
-			\hline
-			Sebastiano Marchesini & & & 1x25 & & & 3x15 & 70,00 \\ 
-			\hline 
-			Gianluca Crivellaro & 1x30 & & 4x25 & & & 1x15 & 145,00 \\ 
-			\hline 
-			Pietro Lonardi & & 1x20 & 3x25 & & & 2x15 & 125,00 \\ 
-			\hline 
-			Alberto Gelmi & & & 3x25 & & & 1x15 & 90,00 \\ 
-			\hline 
-			Piergiorgio Danieli & & & 2x25 & & & 3x15 & 95,00 \\ 
-			\hline
-			\hline
-			\textbf{Ore Totali per ruolo} & 1 & 1 & 13 & 0 & 0 & 10 & 25 \\  
-			\textbf{Prezzo Totale per ruolo}&\euro 30,00&\euro 20,00&\euro 325,00&\euro 0,00&\euro 0,00&\euro 150,00& \textit{\euro 525,00} \\
-			\hline  
-	\end{tabular}\end{center}} 
+		{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
+			\small
+			\begin{center} \begin{table}[H] \centering \begin{tabular}{|c|c|c|c|c|c|c|c|}
+				\hline 
+				\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
+				& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
+				\hline
+				Sebastiano Marchesini & & & 1 & & & 3 & 70,00 \\ 
+				\hline 
+				Gianluca Crivellaro & 1 & & 4 & & & 1 & 145,00 \\ 
+				\hline 
+				Pietro Lonardi & & 1 & 3 & & & 2 & 125,00 \\ 
+				\hline 
+				Alberto Gelmi & & & 3 & & & 1 & 90,00 \\ 
+				\hline 
+				Piergiorgio Danieli & & & 2 & & & 3 & 95,00 \\ 
+				\hline
+				\hline
+				\textbf{Ore Totali per ruolo} & 1 & 1 & 13 & 0 & 0 & 10 & 25 \\  
+				\textbf{Prezzo Totale per ruolo}&\euro 30,00&\euro 20,00&\euro 325,00&\euro 0,00&\euro 0,00&\euro 150,00& \textit{\euro 525,00} \\
+				\hline  
+		\end{tabular}
+		\caption{Preventivo Analisi in Dettaglio}
+		\label{PAD}
+		\end{table} \end{center}} 
 
 	\begin{figure}[H]
 		\centering
@@ -1074,28 +1116,31 @@
 	Anche in questo periodo viene meno un ruolo del team che può svolgere solo una funzione: quella del \textit{Programmatore}. Trovare soluzioni alle analisi rilevate non è suo compito ma solo di tradurre in linguaggio di programmazione le decisioni del \textit{Progettista}.\\
 	Nel periodo riguardante la Progettazione Architetturale le ore tra i ruoli sono stati divisi nel seguente modo:\\
 	
-	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\small
-		\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
-			\hline 
-			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
-			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
-			\hline 
-			Sebastiano Marchesini & 2x30 & & 5x25 & 13x22 & & 12x15 & 651,00 \\ 
-			\hline 
-			Gianluca Crivellaro & 8x30 & 3x20 & 7x25 & 19x22 & & 8x15 & 1.013,00 \\ 
-			\hline 
-			Pietro Lonardi & & 8x20 & & 11x22 & & 11x15 & 467,00 \\ 
-			\hline 
-			Alberto Gelmi & 3x30 & & 4x25 & 27x22 & & 3x15 & 829,00 \\ 
-			\hline 
-			Piergiorgio Danieli & & & 2x25 & 14x22 & & 12x15 & 538,00 \\ 
-			\hline
-			\hline
-			\textbf{Ore Totali per ruolo} & 13 & 11 & 18 & 84 & 0 & 46 & 172 \\  
-			\textbf{Prezzo Totale per ruolo}&\euro 390,00&\euro 220,00&\euro 450,00&\euro 1.848,00&\euro 0,00&\euro 690,00& \textit{\euro 3.598,00} \\
-			\hline 
-	\end{tabular}\end{center}} 
+		{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
+			\small
+			\begin{center} \begin{table}[H] \centering \begin{tabular}{|c|c|c|c|c|c|c|c|}
+				\hline 
+				\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
+				& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
+				\hline 
+				Sebastiano Marchesini & 30 & & 5 & 13 & & 12 & 651,00 \\ 
+				\hline 
+				Gianluca Crivellaro & 8 & 3 & 7 & 19 & & 8 & 1.013,00 \\ 
+				\hline 
+				Pietro Lonardi & & 8 & & 11 & & 11 & 467,00 \\ 
+				\hline 
+				Alberto Gelmi & 3 & & 4 & 27 & & 3 & 829,00 \\ 
+				\hline 
+				Piergiorgio Danieli & & & 2 & 14 & & 12 & 538,00 \\ 
+				\hline
+				\hline
+				\textbf{Ore Totali per ruolo} & 13 & 11 & 18 & 84 & 0 & 46 & 172 \\  
+				\textbf{Prezzo Totale per ruolo}&\euro 390,00&\euro 220,00&\euro 450,00&\euro 1.848,00&\euro 0,00&\euro 690,00& \textit{\euro 3.598,00} \\
+				\hline 
+		\end{tabular}
+		\caption{Preventivo Progettazione Architetturale}
+		\label{PPA}
+		\end{table} \end{center}} 
 
 	\begin{figure}[H]
 		\centering
@@ -1110,28 +1155,31 @@
 	Durante la Progettazione di Dettaglio e Codifica le ore tra i ruoli sono stai divisi come segue:
 	\\
 	
-	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\small
-		\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
-			\hline 
-			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
-			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
-			\hline
-			Sebastiano Marchesini & 2x30 & & & 22x22 & 29x15 & 9x15 & 1.039,00 \\ 
-			\hline 
-			Gianluca Crivellaro & & 5x20 & & 18x22 & 18x15 & 12x15 & 946,00 \\ 
-			\hline 
-			Pietro Lonardi & 3x30 & 3x20 & & 17x22 & 15x15 & 28x15 & 1.169,00 \\ 
-			\hline 
-			Alberto Gelmi & & & 2x25 & 9x22 & 32x15 & 16x15 & 968,00 \\ 
-			\hline 
-			Piergiorgio Danieli & & 4x20 & 2x25 & 20x22 & 22x15 & 12x15 & 1.080,00 \\ 
-			\hline
-			\hline
-			\textbf{Ore Totali per ruolo} & 5 & 12 & 4 & 86 & 104 & 82 & 293 \\  
-			\textbf{Prezzo Totale per ruolo}&\euro 150,00&\euro 240,00&\euro 100,00&\euro 1.898,00&\euro 1.665,00&\euro 1.155,00& \textit{\euro 5.202,00} \\
-			\hline  
-	\end{tabular}\end{center}} 
+		{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
+			\small
+			\begin{center} \begin{table}[H] \centering \begin{tabular}{|c|c|c|c|c|c|c|c|}
+				\hline 
+				\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
+				& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
+				\hline
+				Sebastiano Marchesini & 2 & & & 22 & 29 & 9 & 1.039,00 \\ 
+				\hline 
+				Gianluca Crivellaro & & 5 & & 18 & 18 & 12 & 946,00 \\ 
+				\hline 
+				Pietro Lonardi & 3 & 3 & & 17 & 15 & 28 & 1.169,00 \\ 
+				\hline 
+				Alberto Gelmi & & & 2 & 9 & 32 & 16 & 968,00 \\ 
+				\hline 
+				Piergiorgio Danieli & & 4 & 2 & 20 & 22 & 12 & 1.080,00 \\ 
+				\hline
+				\hline
+				\textbf{Ore Totali per ruolo} & 5 & 12 & 4 & 86 & 104 & 82 & 293 \\  
+				\textbf{Prezzo Totale per ruolo}&\euro 150,00&\euro 240,00&\euro 100,00&\euro 1.898,00&\euro 1.665,00&\euro 1.155,00& \textit{\euro 5.202,00} \\
+				\hline  
+		\end{tabular}
+		\caption{Preventivo Progettazione di Dettaglio e Codifica}
+		\label{PPDC}
+		\end{table} \end{center}} 
 
 	\begin{figure}[H]
 		\centering
@@ -1145,28 +1193,31 @@
 	Nel periodo di Validazione e Collaudo le ore tra i ruoli sono state divise nel seguente modo:
 	\\
 	
-	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\small
-		\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
-			\hline 
-			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
-			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
-			\hline
-			Sebastiano Marchesini & 4x30 & 2x20 & & & 1x15 & 6x15 & 265,00 \\ 
-			\hline 
-			Gianluca Crivellaro & & 1x20 & & & & 6x15 & 110,00 \\ 
-			\hline 
-			Pietro Lonardi & & 3x20 & & 1x22 & 2x15 & 2x15 & 142,00 \\ 
-			\hline 
-			Alberto Gelmi & & 2x20 & & 2x22 & 3x15 & 2x15 & 159,00 \\ 
-			\hline 
-			Piergiorgio Danieli & 1x30 & & & & 2x15 & 12x15 & 240,00 \\ 
-			\hline
-			\hline
-			\textbf{Ore Totali per ruolo} & 5 & 8 & 0 & 3 & 8 & 30 & 54 \\  
-			\textbf{Prezzo Totale per ruolo}&\euro 150,00&\euro  160,00&\euro 0,00&\euro 66,00&\euro 120,00&\euro 420,00& \textit{\euro 916,00} \\  
-			\hline
-	\end{tabular}\end{center}}
+		{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
+			\small
+			\begin{center} \begin{table}[H] \centering \begin{tabular}{|c|c|c|c|c|c|c|c|}
+				\hline 
+				\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore e Costo per Ruolo}} & \textbf{Totale} \\ 
+				& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{} \\ 
+				\hline
+				Sebastiano Marchesini & 4 & 2 & & & 1 & 6 & 265,00 \\ 
+				\hline 
+				Gianluca Crivellaro & & 1 & & & & 6 & 110,00 \\ 
+				\hline 
+				Pietro Lonardi & & 3 & & 1 & 2 & 2 & 142,00 \\ 
+				\hline 
+				Alberto Gelmi & & 2 & & 2 & 3 & 2 & 159,00 \\ 
+				\hline 
+				Piergiorgio Danieli & 1 & & & & 2 & 12 & 240,00 \\ 
+				\hline
+				\hline
+				\textbf{Ore Totali per ruolo} & 5 & 8 & 0 & 3 & 8 & 30 & 54 \\  
+				\textbf{Prezzo Totale per ruolo}&\euro 150,00&\euro  160,00&\euro 0,00&\euro 66,00&\euro 120,00&\euro 420,00& \textit{\euro 916,00} \\  
+				\hline
+		\end{tabular}
+		\caption{Preventivo Validazione e Collaudo}
+		\label{PVC}
+		\end{table} \end{center}}
 
 	\begin{figure}[H]
 		\centering
@@ -1181,31 +1232,33 @@
 	\subsubsection{Ore totali}
 	Le ore totali previste per la realizzazione dell'intero progetto, comprese le ore di precedenti alla firma del contratto, sono le seguenti: \\
 	
-	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
-			\hline 
-			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore per Ruolo Totali}} & \textbf{Ore Totali} \\ 
-			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \\ 
-			\hline
-			Sebastiano Marchesini	& 16 & 12 & 10 & 35 & 22 & 35 & 130 \\ 
-			\hline 
-			Gianluca Crivellaro 	& 9 & 9 & 33 & 37 & 18 & 29 & 135 \\ 
-			\hline 
-			Pietro Lonardi 			& 3 & 14 & 13 & 29 & 17 & 48 & 124 \\ 
-			\hline 
-			Alberto Gelmi 			& 3 & 2 & 14 & 38 & 31 & 32 & 120 \\ 
-			\hline 
-			Piergiorgio Danieli 	& 6 & 9 & 4 & 34 & 24 & 48 & 125 \\ 
-			\hline 
-			\multicolumn{7}{r|}{TOTALE :} & 634 \\ 
-	\end{tabular}\end{center}}
+		{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
+			\begin{center} \begin{table}[H] \centering \begin{tabular}{|c|c|c|c|c|c|c|c|}
+				\hline 
+				\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore per Ruolo Totali}} & \textbf{Ore Totali} \\ 
+				& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \\ 
+				\hline
+				Sebastiano Marchesini	& 16 & 12 & 10 & 35 & 22 & 35 & 130 \\ 
+				\hline 
+				Gianluca Crivellaro 	& 9 & 9 & 33 & 37 & 18 & 29 & 135 \\ 
+				\hline 
+				Pietro Lonardi 			& 3 & 14 & 13 & 29 & 17 & 48 & 124 \\ 
+				\hline 
+				Alberto Gelmi 			& 3 & 2 & 14 & 38 & 31 & 32 & 120 \\ 
+				\hline 
+				Piergiorgio Danieli 	& 6 & 9 & 4 & 34 & 24 & 48 & 125 \\ 
+				\hline 
+				\multicolumn{7}{r|}{TOTALE :} & 634 \\ 
+		\end{tabular}
+		\caption{Riepilogo Ore totali}
+		\label{ROT}
+		\end{table} \end{center}}
 
 	\subsubsection{Ore rendicontate}
 	Tolto il periodo precedente alla firma del contrattato, l'impegno di ogni singolo si tiene sotto il tetto massimo delle 105 ore ciascuno e sono così distribuite secondo i ruoli :\\
 	
-	\begin{center}
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\begin{center} \begin{table}[H] \centering \begin{tabular}{|c|c|c|c|c|c|c|c|}
 			\hline 
 			\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore per Ruolo Totali}} & \textbf{Ore Totali} \\ 
 			& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \\ 
@@ -1221,8 +1274,11 @@
 			Piergiorgio Danieli 	& 1 & 4 & 4 & 34 & 24 & 36 & 103 \\ 
 			\hline 
 			Ore Totale per Ruolo & 23 & 31 & 22 & 173 & 112 & 158 & 634 \\ 
-	\end{tabular}\end{center}}
-	\end{center}
+	\end{tabular}
+	\caption{Riepilogo Ore Rendicontate}
+	\label{ROR}
+	\end{table} \end{center}}
+
 
 	Tale progettazione ha portato al seguente grafico percentuale di proporzione dei ruoli:
 	
@@ -1243,7 +1299,7 @@
 		\subsection{Analisi e Analisi Dettaglio}{
 	
 		{\renewcommand\arraystretch{1.4}  %aumenta l'altezza di ogni riga
-			\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|r|}
+			\begin{center} \begin{table}[H] \centering \begin{tabular}{|c|c|c|c|c|c|c|c|r|}
 				\hline 
 				\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore Effettive per Ruolo}} & \textbf{Ore} & \textbf{Variazione}\\ 
 				& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{Totali} & \textbf{Costo} \\ 
@@ -1260,13 +1316,16 @@
 				\hline 
 				\multicolumn{7}{|c|}{TOTALE  :} & 173 & \euro +48,00 \\ 
 				\hline
-		\end{tabular}\end{center}} 
+		\end{tabular}
+		\caption{Consuntivo di Periodo Analisi}
+		\label{CPA}
+		\end{table} \end{center}} 
 	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{"ConsultivoAnalisi"}
 		\caption{Grafico Consultivo di Analisi e Analisi Dettaglio}
-		\label{fig:consultivo-analisi}
+		\label{fig:consuntivo-analisi}
 	\end{figure} 		
 	
 	Si è notato che c'è voluto più tempo del previsto sia nella verifica (fatti su più livelli) sia nell'amministrazione dei documenti. Gianluca si è impegnato molto nella ricerca dei requisiti e nella stesura degli stessi, più di Alberto che causa impegni di studio ha ceduto alcuni compiti. In generale è soddisfacente l'uso delle ore totali progettate per tale periodo.	\\
@@ -1276,8 +1335,7 @@
 	\subsection{Progettazione Architetturale}{
 		
 		{\renewcommand\arraystretch{1.4} %aumenta l'altezza di ogni riga
-		\small
-			\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|r|}
+			\begin{center} \begin{table}[H] \centering \begin{tabular}{|c|c|c|c|c|c|c|c|r|}
 				\hline 
 				\textbf{Nome} & \multicolumn{6}{c|}{\textbf{Ore Effettive per Ruolo}} & \textbf{Ore} & \textbf{Variazione}\\ 
 				& \textbf{PM} & \textbf{AM} & \textbf{AN} & \textbf{PL} & \textbf{PR} & \textbf{VE} & \textbf{Totali} & \textbf{Costo} \\ 
@@ -1294,20 +1352,23 @@
 				\hline 
 				\multicolumn{7}{|c|}{TOTALE  :} & 173 & \euro +48,00 \\ 
 				\hline 
-	\end{tabular}\end{center}} 
+			\end{tabular}
+			\caption{Consuntivo di Periodo Progettazione Architetturale}
+			\label{CPPA}
+		\end{table} \end{center}} 
 		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.7\linewidth]{"ConsultivoProgettazioneArchitetturale"}
 			\caption{Grafico Consultivo di Progettazione Architetturale}
-			\label{fig:consultivo-progettazioneArchitetturale}
+			\label{fig:consuntivo-progettazioneArchitetturale}
 		\end{figure} 
 		
-		Il consultivo di periodo riporta soprattutto uno scompenso di tempistiche sulla base del tempo impiegato a correggere i documenti in seguito alla revisione. Un notevole incremento di qualità del piano di progetto ha occupato Sebastiano Marchesini più ore di quanto prestabilito, che ha rubato tempo alla progettazione. Inoltre sono state aggiunte a quest'ultimo ora dedicate all'analisi e creazione del prototipo dell'interfaccia del prodotto.\\
+		Il consuntivo di periodo riporta soprattutto uno scompenso di tempistiche sulla base del tempo impiegato a correggere i documenti in seguito alla revisione. Un notevole incremento di qualità del piano di progetto ha occupato Sebastiano Marchesini più ore di quanto prestabilito, che ha rubato tempo alla progettazione. Inoltre sono state aggiunte a quest'ultimo ora dedicate all'analisi e creazione del prototipo dell'interfaccia del prodotto.\\
 		Le ore sono state riequilibrate da quelle di Gianluca Crivellaro che ha comunque un alta media di ore lavoro.\\
 		Pietro Lonardi si è dedicato alla costate verifica delle modifiche dei passati documenti, infatti il suo contributo è stato prevalentemente di controllo e supervisione delle operazioni del resto del team.\\
 		Non vi sono state variazioni nell'orario progettato per Alberto Gelmi che si è dedicato interamente alla progettazione del back-end del sito, parte complessa che richiede molta attenzione.\\
-		È stata infine ri-progettato il ticketing di Piergiorgio Danieli che l'ha impegnato in un'attenta analisi e progettazione della base di dati  dell'API Market oltre che a un accorto tracciamento nel documento di Specifica Tecnica.\\
+		È stata infine deciso di riprogettare il ticketing di Piergiorgio Danieli che l'ha impegnato in un'attenta analisi e progettazione della base di dati  dell'API Market oltre che a un accorto tracciamento nel documento di Specifica Tecnica.\\
 		Ci è sembrato opportuno con un tale incremento lo squilibrio economico provocato, precedentemente non misurato adeguatamente.\\ 
 	}
 	
@@ -1326,9 +1387,10 @@
 		\item correzioni alle inadempienze gravi segnalate nella revisione.
 	\end{itemize}
 	\subsubsection{Tabella preventiva per Ruolo}
-	\begin{center}
-	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\begin{center}\begin{tabular}{|c|c|c|}
+	
+	{\begin{center}
+	\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
+	 	\begin{table}[H] \centering \begin{tabular}{|c|c|c|}
 			\hline 
 			\textbf{Ruolo} & \textbf{Costo orario} & \textbf{Costo Effettivo} \\ 
 			\hline 
@@ -1345,22 +1407,25 @@
 			\textbf{Verificatore} & \euro 15,00 & \euro 2.265,00 \\ 
 			\hline 
 			\multicolumn{2}{r|}{TOTALE :} & \textit{\euro 9.716,00 } \\ 
-		\end{tabular}\end{center}
-	} 
+		\end{tabular}
+		\caption{Preventivo a Finire per Ruolo}
+		\label{PFR}
+		\end{table}
+	
 	\vspace{0.7cm}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1\linewidth]{"TortaIncisioneCosti"}
+		\includegraphics[width=0.8\linewidth]{"TortaIncisioneCosti"}
 		\caption{Percentuale di Incidenza del Costo di ogni Ruolo}
 		\label{fig:torta-incisione-costi}
 	\end{figure}
-		
 	\end{center}
+	}
 
 	\subsubsection{Tabella preventiva per periodo a finire}
 	\begin{center}
 	{\renewcommand\arraystretch{1.2} %aumenta l'altezza di ogni riga
-		\begin{center}\begin{tabular}{|c|c|c|}
+		\begin{center} \begin{table}[H] \centering \begin{tabular}{|c|c|c|}
 			\hline 
 			& \textbf{Costo} & \textbf{Costo Effettivo} \\ 
 			\hline 
@@ -1375,11 +1440,19 @@
 			\textbf{Validazine e Collaudo} & \euro 916,00 & \euro 916,00 \\ 
 			\hline 
 			\multicolumn{2}{r|}{TOTALE :} & \textit{\euro 9.716,00 } \\ 
-		\end{tabular}\end{center}
+		\end{tabular}
+		\caption{Preventivo a Finire per Periodo}
+		\label{PFP}
+		\end{table} \end{center}
 	} 
 	\vspace{0.5cm}
-	\end{center}
+ 	\end{center}
 	
-	In seguito riporteremo i danni economici che vi sono riportati confrontando il preventivo con l'effettivo consuntivo di periodo.
+	
+	\newpage
+	\appendix 
+	\rhead{APPENDICE - Organigramma}
+	%DA FARE
+	
 	
 \end{document}
