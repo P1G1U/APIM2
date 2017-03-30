@@ -1,3 +1,28 @@
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms';
+import { HttpModule }    from '@angular/http';
+
+@NgModule({
+          imports: [
+                    BrowserModule,
+                    FormsModule,
+                    HttpModule,
+                    AppRoutingModule
+                    ],
+          declarations: [
+                         AppComponent,
+                         DashboardComponent,
+                         HeroDetailComponent,
+                         HeroesComponent,
+                         ],
+          providers: [ HeroService ],
+          bootstrap: [ AppComponent ]
+          })
+export class AppModule { }
+
+
+
 //rest application for anglar
 var comunication = angular.module("comunication", [ 'ngResource' ]);
 helloApp.controller("HttpController", [ '$scope', '$resource',
@@ -20,9 +45,8 @@ helloApp.controller("HttpController", [ '$scope', '$resource',
 
 
 
-//esempi di credits card Resource
-
-
+//esempi di credits card Resource (IL PROF HA CONSIGLIATO IL CLASSICO HTTP REST)
+/*
 //User Resursce
 
 var User = $resource('/user/:userId', {userId:'@id'});
@@ -66,5 +90,6 @@ newCard.$save();
 // POST: /user/123/card {number:'0123', name:'Mike Smith'}
 // server returns: {id:789, number:'0123', name: 'Mike Smith'};
 expect(newCard.id).toEqual(789);
+ */
 
 
