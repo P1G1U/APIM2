@@ -8,7 +8,7 @@ console.log('Server running at http://127.0.0.1:8124/');
 
 
 
-angular.module('myApp').controller('AppCtrl', ['$scope', function($scope) {
+angular.module('myApp', ["highcharts-ng"]).controller('AppCtrl', ['$scope', function($scope) {
                                                $scope.$back = function() {
                                                window.history.back();
                                                };
