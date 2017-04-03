@@ -14,7 +14,8 @@ angular.module('myApp').controller('AppCtrl', ['$scope', function($scope) {
                                                };
                                                }]);
 
-//ricordo che profile è la pagina generale con l'immagine e i soldi . user è la "dashboard" della pagina profilo con tutte le sottopagine ApiPaga, ApiStat, UserPage, NewApi, BuyCredits
+//ricordo che profile è la pagina generale con l'immagine e i soldi .
+//user è la "dashboard" della pagina profilo con tutte le sottopagine ApiPaga, ApiStat, UserPage, NewApi, BuyCredits
 angular.module("APIM", ["ngRoute"])
 .config(function($routeProvider) {
         $routeProvider.when("/profile", {...})
