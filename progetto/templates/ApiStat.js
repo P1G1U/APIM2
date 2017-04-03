@@ -29,6 +29,7 @@ myapp.controller('myctrl', function ($scope) {
                                       {"id": "LongDashDotDot", "title": "LongDashDotDot"}
                                       ];
                  
+                 // QUI DOBBIAMO CAMBIARE I DATI CARICANDOLI DAL DB
                  $scope.chartSeries = [
                                        {"name": "Number of Vote", "data": [1, 2, 4, 7, 3], id: 's1'},
                                        {"name": "Rating", "data": [3, 1, null, 5, 2], connectNulls: true, id: 's2'},
