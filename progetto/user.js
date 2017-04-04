@@ -20,7 +20,7 @@ angular.module("APIM", ["ngRoute"])
 .config(function($routeProvider) {
         $routeProvider.when("/profile", {...})
         .when("/profile/:ApiPage", {                        //L’oggetto di configurazione di ciascun URL prevede la possibilità di specificare i dettagli della vista da caricare.
-                                                            //La proprietà templateUrl definisce il file HTML da caricare mentre la proprietà controller definisce il nome del controller da associare alla vista. Il file HTML conterrà esclusivamente il markup necessario da iniettare all’interno della vista e può contenere direttive ed espressioni Angular.
+                                                            //La proprietà templateUrl definisce il file HTML da caricare mentre la proprietà controller definisce il nome del controller da associare alla vista. Il file HTML conterrà esclusivamente il markup necessario da iniettare all’interno della vista e può contenere direttive ed x Angular.
               templateUrl: "templates/ApiPage.html",
               controller: "ApiPageCntrl"
               })
