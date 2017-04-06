@@ -1,0 +1,48 @@
+<!-- input form -->
+<form name="apiForm">
+    <md-input-container>
+    
+        <label>API Name</label>
+        <input name="APIname" ng-model="APIname" required md-maxlength="20" minlength="4">
+            <div ng-messages="apiForm.APIname.$error" ng-show="apiForm.APIname.$dirty">
+                <div ng-message="required">This is required!</div>
+                <div ng-message="md-maxlength">That's too long!</div>
+                <div ng-message="minlength">That's too short!</div>
+            </div>
+    </md-input-container>
+    
+    <!-- Scelta della categoria form MEMO:c'è mezzo css pronto-->
+    <p>Selected Categories: <span class="radioValue">{{ data.categories }}</span> </p>
+    
+    <md-radio-group ng-model="data.group1">
+        <!-- CAMBIARE LE CATEGORIE -->
+        <md-radio-button value="Game" class="md-primary">Game</md-radio-button>
+        <md-radio-button value="Multimedia">Multimedia</md-radio-button>
+        <md-radio-button value="DataBase">DataBase</md-radio-button>
+        <md-radio-button value="Businnes">Businnes</md-radio-button>
+        <md-radio-button value="Comunication">Comunication</md-radio-button>
+        <md-radio-button value="Educational">Educational</md-radio-button>
+        <md-radio-button value="Lifestyle">Lifestyle</md-radio-button>
+        <md-radio-button value="Utility">Utility</md-radio-button>
+        <md-radio-button value="News">News</md-radio-button>
+        <md-radio-button value="Geolocation">Geolocation</md-radio-button>
+
+    </md-radio-group>
+    
+    <md-input-container>
+        <label>Description</label>
+        <textarea name="descr" ng-model="description" required md-maxlength="150"></textarea>
+        <div ng-messages="apiForm.descr.$error" ng-show="apiForm.descr.$dirty">
+            <div ng-message="required">This is required!</div>
+            <div ng-message="md-maxlength">That's too long!</div>
+        </div>
+    </md-input-container>
+    
+</form>
+
+<div ng-controller = "myCtrl">
+    <input type="file" fileread="vm.uploadme" />
+    <input type = "file" file-model = "myFile"/>        <!-- attenzione che Alb ha detto che basterebbe solo il file di documentazione da caricare quindi forse questo input è inutile. Piuttosto mettere un ulteriore parte string -->
+    <button ng-click = "uploadFile()">Upload interface</button>
+</div>
+
