@@ -1,19 +1,26 @@
-<h1>
-  {{title}}
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
 
 
-<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-    <div class="container">
-        <a class="navbar-brand">Angular Router</a>
-        <ul class="nav navbar-nav" routerLinkActive="active">
-            <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" routerLink="category">Category</a></li>
-            <li class="nav-item"><a class="nav-link" routerLink="profile">Profile</a></li>
-            <li class="nav-item"><a class="nav-link" routerLink="upload">Upload</a></li>
-           <li class="nav-item"><a class="nav-link" routerLink="issues">Issues</a></li>
-        </ul>
-    </div>
-</nav>
+<body>
+  <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+      <appmenu></appmenu>
+  </nav>
+  <jumbotron></jumbotron>
+  <div calss="container">
+    <router-outlet></router-outlet>
+  </div>
 
-<router-outlet></router-outlet>
+</body>
+
+</html>
+
+
+
+
+
