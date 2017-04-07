@@ -6,15 +6,15 @@ import { Component } from '@angular/core';
 })
 
 export class JumbotronComponent {
-  private jbtHeading: string;
-  private jbtText: string;
-  private jbtBtnText: string;
-  private jbtBtnUrl: string;
+  public jbtHeading:string;
+  public jbtText:string;
+  public jbtBtnText:string;
+  public jbtBtnUrl:string;
 
   costructor(){
-      this.jbtHeading = "Welcome to API Market of Microservices";
-      this.jbtText = 'qua ci scriviamo qualcosa di descrizione del progetto';
+      this.jbtHeading = ' Welcome to API Market of Microservices ';
+      this.jbtText = "qua ci scriviamo qualcosa di descrizione del progetto";
       this.jbtBtnText = "Read More";
-      this.jbtBtnUrl = 'http://jolie-lang.org';
+      this.jbtBtnUrl = "http://jolie-lang.org";
   }
 }

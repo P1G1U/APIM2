@@ -3,7 +3,7 @@ import { ProfileComponent } from './page/profile.component';
 
 
 import { NgModule }             from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule }  from '@angular/router';
 
 const routes : Routes = [
     { path: 'home', component: HomeComponent },
@@ -11,11 +11,5 @@ const routes : Routes = [
     //{ path: '**', component: PageNotFoundComponent }
 ];
 
-
-@NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
-})
-
-export class AppRoutingModule {}
+export const routing = RouterModule.forRoot(routes);
 
