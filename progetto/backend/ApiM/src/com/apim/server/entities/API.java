@@ -1,3 +1,6 @@
+package com.apim.server.entities;
+
+
 /**
  * Created by Pigiu on 06/04/2017.
  */
