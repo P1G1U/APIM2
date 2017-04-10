@@ -2,7 +2,7 @@ package com.apim.server.entities;
 
 
 /**
- * Created by Pigiu on 06/04/2017.
+ * Created on 06/04/2017.
  */
 public class API {
     String nome, linkFile, linkPDF;
