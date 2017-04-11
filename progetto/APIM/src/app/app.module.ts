@@ -12,6 +12,9 @@ import { JumbotronComponent } from './jumbotron.component';
 
 import { HomeComponent } from './page/home.component';
 import { ProfileComponent } from './page/profile.component';
+import { CategoryComponent } from './page/category.component';
+import { UploadComponent } from './page/upload.component';
+import { IssuesComponent } from './page/issues.component';
 
 import { routing } from './app.routes';
 
@@ -24,7 +27,10 @@ import { AppComponent } from './app.component';
     AppMenu,
     JumbotronComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    CategoryComponent,
+    UploadComponent,
+    IssuesComponent
   ],
   imports: [
     BrowserModule,
