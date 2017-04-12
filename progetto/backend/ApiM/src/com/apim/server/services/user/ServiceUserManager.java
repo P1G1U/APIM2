@@ -1,4 +1,4 @@
-package com.apim.server.services;
+package com.apim.server.services.user;
 
 import  jolie.runtime.JavaService;
 import com.apim.server.entities.User;

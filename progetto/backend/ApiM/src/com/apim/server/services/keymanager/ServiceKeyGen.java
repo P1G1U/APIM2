@@ -1,4 +1,4 @@
-package com.apim.server.services;
+package com.apim.server.services.keymanager;
 
 import com.apim.server.utilities.Encrypter;
 

@@ -1,4 +1,4 @@
-package com.apim.server.services;
+package com.apim.server.services.user;
 
 import com.apim.server.entities.User;
 import com.apim.server.dao;

@@ -1,4 +1,4 @@
-package com.apim.server.services;
+package com.apim.server.services.keymanager;
 
 import jolie.runtime.JavaService;
 
